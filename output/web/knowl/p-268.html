@@ -11,8 +11,23 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para">On the real line 1 is a limit point of either of the sets [0, 1] or (0, 1)</div>
-<span class="incontext"><a href="sec-open-closed.html#p-268" class="internal">in-context</a></span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">Suppose <span class="process-math">\(a_n\geq 0\text{,}\)</span> <span class="process-math">\(\lim_na_n=0, a_{n+1}\leq a_n\)</span> for all <span class="process-math">\(n\geq 1\)</span> and <span class="process-math">\((b_n)_{n=1}^{\infty}\subseteq \mathbb{C}\text{,}\)</span> <span class="process-math">\(C:=\sup_{n\geq 1}|\sum_{k=1}^nb_k|&lt;\infty\text{.}\)</span> Set <span class="process-math">\(S_n=\sum_{k=1}^na_kb_k\)</span> and <span class="process-math">\(r_n=\sum_{k=1}^nb_k\text{.}\)</span> Claim: <span class="process-math">\(S_n=a_nr_n+\sum_{k=1}^{n-1}r_k(a_k-a_{k+1})\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+a_nr_n
+&amp;+r_{n-1}(a_{n-1}-a_n)+r_{n-2}(a_{n-2}-a_{n-1})+\dots+r_1(a_1-a_2)\\
+&amp;=a_n(r_n-r_{n-1})+a_{n-1}(r_{n-1}-r_{n-2})+\dots+a_2(r_2-r_1)+a_1r_1\\
+&amp;=a_nb_n+a_{n-1}b_{n-1}+\dots+a_2b_2+a_1b_1\\
+&amp;=\sum_{k=1}^na_kb_k=S_n.
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">Now it’s enough to show that (i) <span class="process-math">\((a_nr_n)_{n=1}^{\infty}\)</span> converges and (ii) <span class="process-math">\(\sum_{k=1}^{\infty}r_k(a_k-a_{k-1})\)</span> converges. For (i), <span class="process-math">\(|a_nr_n|\leq C|a_n|\rightarrow 0\text{,}\)</span> so <span class="process-math">\(\lim_{n\rightarrow\infty}a_nr_n=0\text{.}\)</span> Note that <span class="process-math">\(\left|{r_k(a_k-a_{k+1})}\right|\leq C(a_k-a_{k+1})\text{.}\)</span> So for <span class="process-math">\(N\geq 1,\sum_{k=1}^N\left|{r_k(a_k-a_{k+1})}\right|\leq C\sum_{k=1}^N(a_k-a_{k+1})\)</span> this is a telescoping sum so <span class="process-math">\(=C(a_1-a_{N+1})\rightarrow_{N\rightarrow \infty} Ca_1\text{.}\)</span> Then <span class="process-math">\(\sum_{k=1}^N\left|{r_k(a_k-a_{k+1})}\right|\)</span> is bounded above so it has to converge and hence <span class="process-math">\(\sum_{k=1}^N r_k(a_k-a_{k+1})\)</span> converges, proving (ii).</div>
+</div>
+<span class="incontext"><a href="sec-convergence-tests.html#p-268" class="internal">in-context</a></span>
 </body>
 </html>

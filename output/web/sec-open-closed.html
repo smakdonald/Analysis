@@ -531,7 +531,7 @@ window.MathJax = {
 <li>
 <div class="toc-item"><a href="ch-compactness.html" class="internal"><span class="codenumber">5</span> <span class="title">Compactness, Connectedness</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-open-covers.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Compactness</span></a></div></li>
+<li><div class="toc-item"><a href="sec-compact.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Compactness</span></a></div></li>
 <li><div class="toc-item"><a href="sec-heine-borel.html" class="internal"><span class="codenumber">5.2</span> <span class="title">The Heine-Borel Theorem</span></a></div></li>
 <li><div class="toc-item"><a href="sec-totally-bounded.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Totally Bounded Metrics</span></a></div></li>
 <li><div class="toc-item"><a href="sec-connected.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Connected Sets</span></a></div></li>
@@ -589,112 +589,118 @@ window.MathJax = {
 <section class="subsection" id="subsec-closed-sets"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Closed Sets</span>
 </h3>
+<blockquote class="blockquote" id="blockquote-16">
+<div class="para" id="p-282">“I can get money with my eyes closed.”</div> <cite class="attribution">―Drake</cite>
+</blockquote>
 <article class="definition definition-like" id="def-limit-point"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.5</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-267">Let M be a metric space, and let X be a subset of M. We say that a point x in M is a limit point of X if there is a sequence {xn} such that x_n\in X for every positive integer n and limn→∞ xn = x.</div></article><article class="exercise exercise-like" id="exercise-4"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-4"><h4 class="heading">
+<div class="para" id="p-283">Let M be a metric space, and let X be a subset of M. We say that a point x in M is a limit point of X if there is a sequence {xn} such that x_n\in X for every positive integer n and limn→∞ xn = x.</div></article><article class="exercise exercise-like" id="exercise-4"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-4"><h4 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">4.6</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-4"><article class="exercise exercise-like"><div class="para" id="p-268">On the real line 1 is a limit point of either of the sets [0, 1] or (0, 1)</div></article></div>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-4"><article class="exercise exercise-like"><div class="para" id="p-284">On the real line 1 is a limit point of either of the sets [0, 1] or (0, 1)</div></article></div>
 <article class="definition definition-like" id="def-closed-set"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.7</span><span class="period">.</span><span class="space"> </span><span class="title">Closed Set.</span>
-</h4> <div class="para" id="p-269">Let M be a metric space, and let X be a subset of M. If every limit point of X belongs to X, we say that X is closed (in M).</div></article><article class="theorem theorem-like" id="thm-closet-sets"><h4 class="heading">
+</h4> <div class="para" id="p-285">Let M be a metric space, and let X be a subset of M. If every limit point of X belongs to X, we say that X is closed (in M).</div></article><article class="theorem theorem-like" id="thm-closet-sets"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.8</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-270">Let M be a metric space and let x\in M. Then M, \es , and {x} are closed subsets of M.</div></article><article class="theorem theorem-like" id="thm-closed-union"><h4 class="heading">
+<div class="para" id="p-286">Let M be a metric space and let x\in M. Then M, \es , and {x} are closed subsets of M.</div></article><article class="theorem theorem-like" id="thm-closed-union"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.9</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-271">Let X and Y be closed subsets of a metric space. Then X\cup Y is closed.</div></article><article class="corollary theorem-like" id="cor-closed-unions"><h4 class="heading">
+<div class="para" id="p-287">Let X and Y be closed subsets of a metric space. Then X\cup Y is closed.</div></article><article class="corollary theorem-like" id="cor-closed-unions"><h4 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">4.10</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-272">If X1, X2, . . . , Xn are closed subsets of a metric space, then X_1\cup X_2\cup\dots\cup X_n is closed.</div></article><article class="example example-like" id="example-10"><h4 class="heading">
+<div class="para" id="p-288">If X1, X2, . . . , Xn are closed subsets of a metric space, then X_1\cup X_2\cup\dots\cup X_n is closed.</div></article><article class="example example-like" id="example-10"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.11</span><span class="period">.</span><span class="space"> </span><span class="title">Infinite Unions Need Not Be Closed.</span>
 </h4>
-<div class="para" id="p-273"></div></article><article class="corollary theorem-like" id="cor-finite-closed"><h4 class="heading">
+<div class="para" id="p-289"></div></article><article class="corollary theorem-like" id="cor-finite-closed"><h4 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">4.12</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-274">Any finite subset of a metric space is closed.</div></article><article class="theorem theorem-like" id="thm-intersections-closed"><h4 class="heading">
+<div class="para" id="p-290">Any finite subset of a metric space is closed.</div></article><article class="theorem theorem-like" id="thm-intersections-closed"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.13</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-275">Let \fC be a collection of closed subsets of a metric space. Then \bigcap\fC is closed.</div></article></section><section class="subsection" id="subsec-open-sets"><h3 class="heading hide-type">
+<div class="para" id="p-291">Let \fC be a collection of closed subsets of a metric space. Then \bigcap\fC is closed.</div></article></section><section class="subsection" id="subsec-open-sets"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Open Sets</span>
 </h3>
+<blockquote class="blockquote" id="blockquote-17">
+<div class="para" id="p-292">“Let yourself be open and life will be easier.”</div> <cite class="attribution">―Buddha</cite>
+</blockquote>
 <article class="definition definition-like" id="def-open-ball"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.14</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-276">Let <span class="process-math">\(X\)</span> be a metric space. The <dfn class="terminology">open ball</dfn> of radius <span class="process-math">\(r&gt;0\)</span> with center <span class="process-math">\(a\in X\)</span> is <span class="process-math">\(B_r(a)=\{{x\in X}\,:\,{d(a,x)&lt;r}\}\text{.}\)</span>
+<div class="para" id="p-293">Let <span class="process-math">\(X\)</span> be a metric space. The <dfn class="terminology">open ball</dfn> of radius <span class="process-math">\(r&gt;0\)</span> with center <span class="process-math">\(a\in X\)</span> is <span class="process-math">\(B_r(a)=\{{x\in X}\,:\,{d(a,x)&lt;r}\}\text{.}\)</span>
 </div></article><article class="example example-like" id="example-11"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.15</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-277">The open ball in R of radius ε centered at x is the open interval (x − ε, x + ε). An open ball in R2 is the interior of a disk and an open ball in R3 is the interior of a sphere.</div></article><article class="warning remark-like" id="warning-3"><h4 class="heading">
+<div class="para" id="p-294">The open ball in R of radius ε centered at x is the open interval (x − ε, x + ε). An open ball in R2 is the interior of a disk and an open ball in R3 is the interior of a sphere.</div></article><article class="warning remark-like" id="warning-3"><h4 class="heading">
 <span class="type">Warning</span><span class="space"> </span><span class="codenumber">4.16</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-278">In general, <span class="process-math">\(\overline{B_r(a)}\neq \{{x\in X}\,:\,{d(a,x)\leq r}\}\)</span> (they are equal in <span class="process-math">\(\mathbb{R}^n\)</span>)</div></article><article class="example example-like" id="example-12"><h4 class="heading">
+<div class="para" id="p-295">In general, <span class="process-math">\(\overline{B_r(a)}\neq \{{x\in X}\,:\,{d(a,x)\leq r}\}\)</span> (they are equal in <span class="process-math">\(\mathbb{R}^n\)</span>)</div></article><article class="example example-like" id="example-12"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.17</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-279">
+<div class="para" id="p-296">
 <span class="process-math">\(X=\mathbb{Z}, d(x,y)=\left|{x-y}\right|\text{.}\)</span> <span class="process-math">\(B_1(0)=\{0\}\)</span> is closed, <span class="process-math">\(\overline{B_1(0)}=\{0\}\text{.}\)</span> But <span class="process-math">\(\{{x\in \mathbb{Z}}\,:\,{d(x,0)\leq 1}\}=\{-1,0,1\}\)</span>
 </div></article><article class="definition definition-like" id="def-open-set"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.18</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-280">Let M be a metric space and let X be a subset of M. We say that X is open if for every x\in X, there exists an open ball Bε(x) (centered at x) such that B_\e(x)\sse X.</div></article><article class="example example-like" id="example-13"><h4 class="heading">
+<div class="para" id="p-297">Let M be a metric space and let X be a subset of M. We say that X is open if for every x\in X, there exists an open ball Bε(x) (centered at x) such that B_\e(x)\sse X.</div></article><article class="example example-like" id="example-13"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.19</span><span class="period">.</span>
 </h4>
-<div class="para logical" id="p-281"><ol class="decimal">
-<li id="li-107"><div class="para" id="p-282">An open interval (a, b) in R is open in R</div></li>
-<li id="li-108"><div class="para" id="p-283">
+<div class="para logical" id="p-298"><ol class="decimal">
+<li id="li-107"><div class="para" id="p-299">An open interval (a, b) in R is open in R</div></li>
+<li id="li-108"><div class="para" id="p-300">
 <span class="process-math">\(A=(0,1]\subseteq \mathbb{R}\text{,}\)</span> <span class="process-math">\(A\)</span> is not open since <span class="process-math">\(1\in A\)</span> but <span class="process-math">\(B_\varepsilon(1)=(1-\varepsilon,1+\varepsilon)\)</span> is not contained in <span class="process-math">\(A\)</span> for any <span class="process-math">\(\varepsilon&gt;0\text{.}\)</span> Also <span class="process-math">\(A\)</span> is not closed since <span class="process-math">\(0\)</span> is a cluster point of <span class="process-math">\(A\)</span> but <span class="process-math">\(0\notin A\text{.}\)</span>
 </div></li>
 </ol></div></article><article class="theorem theorem-like" id="thm-open-sets"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.20</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-284">Let M be a metric space. Then M and \es are open subsets of M.</div></article><article class="theorem theorem-like" id="thm-open-balls-open"><h4 class="heading">
+<div class="para" id="p-301">Let M be a metric space. Then M and \es are open subsets of M.</div></article><article class="theorem theorem-like" id="thm-open-balls-open"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.21</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-285">Open balls are open. That is, if <span class="process-math">\(a\in X\)</span> and <span class="process-math">\(r&gt;0\text{,}\)</span> then <span class="process-math">\(B_r(a)\)</span> is open.</div></article><article class="hiddenproof" id="proof-30"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-30"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-30"><article class="hiddenproof"><div class="para" id="p-286">Fix <span class="process-math">\(x\in B_r(a)\text{.}\)</span> Then <span class="process-math">\(d(x,a)&lt;r\text{.}\)</span> Let <span class="process-math">\(\varepsilon=r-d(x,a)&gt;0\text{.}\)</span> It's enough to show that <span class="process-math">\(B_{\varepsilon}(x)\subseteq B_r(a)\text{.}\)</span> Fix <span class="process-math">\(y\in B_\varepsilon(x)\text{.}\)</span> Then <span class="process-math">\(d(x,y)&lt;\varepsilon\)</span> and so <span class="process-math">\(d(y,a)\leq d(y,x)+d(x,a)&lt;\varepsilon+(r-\varepsilon)=r\text{.}\)</span> So <span class="process-math">\(y\in B_r(a)\)</span> and <span class="process-math">\(B_{\varepsilon}(x)\subseteq B_r(a)\text{.}\)</span>
+<div class="para" id="p-302">Open balls are open. That is, if <span class="process-math">\(a\in X\)</span> and <span class="process-math">\(r&gt;0\text{,}\)</span> then <span class="process-math">\(B_r(a)\)</span> is open.</div></article><article class="hiddenproof" id="proof-30"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-30"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-30"><article class="hiddenproof"><div class="para" id="p-303">Fix <span class="process-math">\(x\in B_r(a)\text{.}\)</span> Then <span class="process-math">\(d(x,a)&lt;r\text{.}\)</span> Let <span class="process-math">\(\varepsilon=r-d(x,a)&gt;0\text{.}\)</span> It's enough to show that <span class="process-math">\(B_{\varepsilon}(x)\subseteq B_r(a)\text{.}\)</span> Fix <span class="process-math">\(y\in B_\varepsilon(x)\text{.}\)</span> Then <span class="process-math">\(d(x,y)&lt;\varepsilon\)</span> and so <span class="process-math">\(d(y,a)\leq d(y,x)+d(x,a)&lt;\varepsilon+(r-\varepsilon)=r\text{.}\)</span> So <span class="process-math">\(y\in B_r(a)\)</span> and <span class="process-math">\(B_{\varepsilon}(x)\subseteq B_r(a)\text{.}\)</span>
 </div></article></div>
 <article class="theorem theorem-like" id="thm-properties-of-open-sets"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.22</span><span class="period">.</span><span class="space"> </span><span class="title">Properties of Open Sets.</span>
 </h4>
-<div class="para logical" id="p-287">
+<div class="para logical" id="p-304">
 <div class="para">If <span class="process-math">\(X\)</span> is a metric space</div>
 <ol class="decimal">
-<li id="li-109"><div class="para" id="p-288">
+<li id="li-109"><div class="para" id="p-305">
 <span class="process-math">\(\emptyset\)</span> and <span class="process-math">\(X\)</span> are open</div></li>
-<li id="li-110"><div class="para" id="p-289">If <span class="process-math">\(U,V\subseteq X\)</span> are open, then <span class="process-math">\(U\cap V\)</span> is open.</div></li>
-<li id="li-111"><div class="para" id="p-290">If <span class="process-math">\((U_i)_{i\in I}\)</span> is a collection of open subsets of <span class="process-math">\(X\text{,}\)</span> then <span class="process-math">\(\cup_{i\in I}U_i\)</span> is open.</div></li>
+<li id="li-110"><div class="para" id="p-306">If <span class="process-math">\(U,V\subseteq X\)</span> are open, then <span class="process-math">\(U\cap V\)</span> is open.</div></li>
+<li id="li-111"><div class="para" id="p-307">If <span class="process-math">\((U_i)_{i\in I}\)</span> is a collection of open subsets of <span class="process-math">\(X\text{,}\)</span> then <span class="process-math">\(\cup_{i\in I}U_i\)</span> is open.</div></li>
 </ol>
-</div></article><article class="hiddenproof" id="proof-31"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-31"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-31"><article class="hiddenproof"><div class="para logical" id="p-291"><ol class="decimal">
-<li id="li-112"><div class="para" id="p-292">1 is clear (already talked through)</div></li>
-<li id="li-113"><div class="para" id="p-293">Fix <span class="process-math">\(x\in U\cap V\text{.}\)</span> Since <span class="process-math">\(U\)</span> and <span class="process-math">\(V\)</span> are open, there are <span class="process-math">\(\varepsilon_1,\varepsilon_2\)</span> such that <span class="process-math">\(B_{\varepsilon_1}(x)\subseteq U\)</span> and <span class="process-math">\(B_{\varepsilon_2}(x)\subseteq V\text{.}\)</span> Let <span class="process-math">\(\varepsilon=\min\{\varepsilon_1,\varepsilon_2\}\text{.}\)</span> Then <span class="process-math">\(B_{\varepsilon}(x)\subseteq B_{\varepsilon_1}(x)\subseteq U\)</span> and <span class="process-math">\(B_{\varepsilon}(x)\subseteq B_{\varepsilon_2}(x)\subseteq V\text{.}\)</span> So <span class="process-math">\(B_{\varepsilon}(x)\subseteq U\cap V\text{.}\)</span>
+</div></article><article class="hiddenproof" id="proof-31"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-31"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-31"><article class="hiddenproof"><div class="para logical" id="p-308"><ol class="decimal">
+<li id="li-112"><div class="para" id="p-309">1 is clear (already talked through)</div></li>
+<li id="li-113"><div class="para" id="p-310">Fix <span class="process-math">\(x\in U\cap V\text{.}\)</span> Since <span class="process-math">\(U\)</span> and <span class="process-math">\(V\)</span> are open, there are <span class="process-math">\(\varepsilon_1,\varepsilon_2\)</span> such that <span class="process-math">\(B_{\varepsilon_1}(x)\subseteq U\)</span> and <span class="process-math">\(B_{\varepsilon_2}(x)\subseteq V\text{.}\)</span> Let <span class="process-math">\(\varepsilon=\min\{\varepsilon_1,\varepsilon_2\}\text{.}\)</span> Then <span class="process-math">\(B_{\varepsilon}(x)\subseteq B_{\varepsilon_1}(x)\subseteq U\)</span> and <span class="process-math">\(B_{\varepsilon}(x)\subseteq B_{\varepsilon_2}(x)\subseteq V\text{.}\)</span> So <span class="process-math">\(B_{\varepsilon}(x)\subseteq U\cap V\text{.}\)</span>
 </div></li>
-<li id="li-114"><div class="para" id="p-294">If <span class="process-math">\(x\in\cup_{i\in I}U_i\text{,}\)</span> then <span class="process-math">\(x\in U_j\)</span> for some <span class="process-math">\(j\in I\text{.}\)</span> As <span class="process-math">\(u_j\)</span> is open, there is an <span class="process-math">\(\varepsilon&gt;0\)</span> such that <span class="process-math">\(B_\varepsilon(x)\subseteq U_j\text{.}\)</span> But then <span class="process-math">\(B_\varepsilon(x)\subseteq \cup_{i\in I}U_i\text{.}\)</span>
+<li id="li-114"><div class="para" id="p-311">If <span class="process-math">\(x\in\cup_{i\in I}U_i\text{,}\)</span> then <span class="process-math">\(x\in U_j\)</span> for some <span class="process-math">\(j\in I\text{.}\)</span> As <span class="process-math">\(u_j\)</span> is open, there is an <span class="process-math">\(\varepsilon&gt;0\)</span> such that <span class="process-math">\(B_\varepsilon(x)\subseteq U_j\text{.}\)</span> But then <span class="process-math">\(B_\varepsilon(x)\subseteq \cup_{i\in I}U_i\text{.}\)</span>
 </div></li>
 </ol></div></article></div>
 <article class="example example-like" id="example-14"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.23</span><span class="period">.</span><span class="space"> </span><span class="title">Arbitrary Intersection Need Not Be Open.</span>
 </h4>
-<div class="para" id="p-295">In <span class="process-math">\(\mathbb{R}, \cap_{n=1}^\infty (1-\frac{1}{n},1+\frac{1}{n})=\{1\}\text{.}\)</span>
+<div class="para" id="p-312">In <span class="process-math">\(\mathbb{R}, \cap_{n=1}^\infty (1-\frac{1}{n},1+\frac{1}{n})=\{1\}\text{.}\)</span>
 </div></article><article class="definition definition-like" id="def-clopen"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.24</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-296">A set could be both open and closed (such sets are often called <dfn class="terminology">clopen</dfn>).</div></article><article class="example example-like" id="example-15"><h4 class="heading">
+<div class="para" id="p-313">A set could be both open and closed (such sets are often called <dfn class="terminology">clopen</dfn>).</div></article><article class="example example-like" id="example-15"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.25</span><span class="period">.</span>
 </h4>
-<div class="para logical" id="p-297"><ol class="decimal">
-<li id="li-115"><div class="para" id="p-298">In any metric space <span class="process-math">\(X\text{,}\)</span> <span class="process-math">\(\emptyset\)</span> and <span class="process-math">\(X\)</span> are both clopen.</div></li>
-<li id="li-116"><div class="para" id="p-299">If <span class="process-math">\(X=\mathbb{Z}\text{,}\)</span> every subset of <span class="process-math">\(X\)</span> is clopen, similarly if <span class="process-math">\(X\)</span> is any set with the discrete metric.</div></li>
-<li id="li-117"><div class="para" id="p-300">
+<div class="para logical" id="p-314"><ol class="decimal">
+<li id="li-115"><div class="para" id="p-315">In any metric space <span class="process-math">\(X\text{,}\)</span> <span class="process-math">\(\emptyset\)</span> and <span class="process-math">\(X\)</span> are both clopen.</div></li>
+<li id="li-116"><div class="para" id="p-316">If <span class="process-math">\(X=\mathbb{Z}\text{,}\)</span> every subset of <span class="process-math">\(X\)</span> is clopen, similarly if <span class="process-math">\(X\)</span> is any set with the discrete metric.</div></li>
+<li id="li-117"><div class="para" id="p-317">
 <span class="process-math">\(X=[0,1]\cup[2,3]\subseteq \mathbb{R}\)</span> then <span class="process-math">\([0,1]\)</span> is open and closed in <span class="process-math">\(X\text{.}\)</span>
 </div></li>
 </ol></div></article><article class="theorem theorem-like" id="thm-open-closed-complement"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.26</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-301">Let M be a metric space and let X\sse M. Then X is open if and only if X^C is closed.</div></article><article class="hiddenproof" id="proof-32"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-32"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-32"><article class="hiddenproof"><div class="para" id="p-302">(<span class="process-math">\(\implies\)</span>) Suppose <span class="process-math">\(U\)</span> is open and <span class="process-math">\((x_n)_{n=1}^\infty\subseteq X\setminus U\)</span> such that <span class="process-math">\(\lim_{x\rightarrow\infty}x_n=x\in X\text{.}\)</span> We need to show that <span class="process-math">\(x\in X\setminus U\text{.}\)</span>
-</div> <div class="para" id="p-303">Suppose <span class="process-math">\(x\in U\text{.}\)</span> Then exists <span class="process-math">\(\varepsilon&gt;0\)</span> so that <span class="process-math">\(B_{\varepsilon}(x)\subseteq U\text{.}\)</span> Since <span class="process-math">\(\lim_{x\rightarrow\infty}x_n=x\text{,}\)</span> there exists <span class="process-math">\(N\in\mathbb{Z},N\geq 1\)</span> such that for all <span class="process-math">\(n\geq N, d(x,x_n)&lt;\varepsilon\text{.}\)</span> But then, in particular, <span class="process-math">\(x_N\in B_\varepsilon(x)\subseteq U\)</span> <span class="process-math">\(x_n\notin U\text{,}\)</span> a contradiction.</div> <div class="para" id="p-304">Thus <span class="process-math">\(x\in X\setminus U\text{.}\)</span>
-</div> <div class="para" id="p-305">(<span class="process-math">\(\impliedby\)</span>) Suppose <span class="process-math">\(U\)</span> is not open. Then there exists an <span class="process-math">\(x\in U\)</span> such that for all <span class="process-math">\(\varepsilon&gt;0,B_\varepsilon(x)\nsubseteq U\text{.}\)</span> For each integer <span class="process-math">\(n\geq 1\text{,}\)</span> there is an <span class="process-math">\(x_n\in B_{\frac{1}{n}}(x)\setminus U\text{.}\)</span> Then <span class="process-math">\((x_n)_{n=1}^\infty\subseteq X\setminus U\)</span> and <span class="process-math">\(d(x_n,x)\leq \frac{1}{n}\)</span> for all <span class="process-math">\(n\geq 1\text{.}\)</span> So <span class="process-math">\(x=\lim_{n\rightarrow\infty}x_n\in U\text{.}\)</span> So <span class="process-math">\(x\)</span> is a cluster point of <span class="process-math">\(X\setminus U\text{,}\)</span> but <span class="process-math">\(x\notin X\setminus U\text{.}\)</span> Hence <span class="process-math">\(X\setminus U\)</span> is not closed.</div></article></div>
+<div class="para" id="p-318">Let M be a metric space and let X\sse M. Then X is open if and only if X^C is closed.</div></article><article class="hiddenproof" id="proof-32"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-32"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-32"><article class="hiddenproof"><div class="para" id="p-319">(<span class="process-math">\(\implies\)</span>) Suppose <span class="process-math">\(U\)</span> is open and <span class="process-math">\((x_n)_{n=1}^\infty\subseteq X\setminus U\)</span> such that <span class="process-math">\(\lim_{x\rightarrow\infty}x_n=x\in X\text{.}\)</span> We need to show that <span class="process-math">\(x\in X\setminus U\text{.}\)</span>
+</div> <div class="para" id="p-320">Suppose <span class="process-math">\(x\in U\text{.}\)</span> Then exists <span class="process-math">\(\varepsilon&gt;0\)</span> so that <span class="process-math">\(B_{\varepsilon}(x)\subseteq U\text{.}\)</span> Since <span class="process-math">\(\lim_{x\rightarrow\infty}x_n=x\text{,}\)</span> there exists <span class="process-math">\(N\in\mathbb{Z},N\geq 1\)</span> such that for all <span class="process-math">\(n\geq N, d(x,x_n)&lt;\varepsilon\text{.}\)</span> But then, in particular, <span class="process-math">\(x_N\in B_\varepsilon(x)\subseteq U\)</span> <span class="process-math">\(x_n\notin U\text{,}\)</span> a contradiction.</div> <div class="para" id="p-321">Thus <span class="process-math">\(x\in X\setminus U\text{.}\)</span>
+</div> <div class="para" id="p-322">(<span class="process-math">\(\impliedby\)</span>) Suppose <span class="process-math">\(U\)</span> is not open. Then there exists an <span class="process-math">\(x\in U\)</span> such that for all <span class="process-math">\(\varepsilon&gt;0,B_\varepsilon(x)\nsubseteq U\text{.}\)</span> For each integer <span class="process-math">\(n\geq 1\text{,}\)</span> there is an <span class="process-math">\(x_n\in B_{\frac{1}{n}}(x)\setminus U\text{.}\)</span> Then <span class="process-math">\((x_n)_{n=1}^\infty\subseteq X\setminus U\)</span> and <span class="process-math">\(d(x_n,x)\leq \frac{1}{n}\)</span> for all <span class="process-math">\(n\geq 1\text{.}\)</span> So <span class="process-math">\(x=\lim_{n\rightarrow\infty}x_n\in U\text{.}\)</span> So <span class="process-math">\(x\)</span> is a cluster point of <span class="process-math">\(X\setminus U\text{,}\)</span> but <span class="process-math">\(x\notin X\setminus U\text{.}\)</span> Hence <span class="process-math">\(X\setminus U\)</span> is not closed.</div></article></div>
 <article class="exercise exercise-like" id="exercise-5"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-5"><h4 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">4.27</span><span class="period">.</span><span class="space"> </span><span class="title">Sequential Characterization of Open Sets.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-5"><article class="exercise exercise-like"><div class="para" id="p-306">Let <span class="process-math">\(X\)</span> be a metric space. A set <span class="process-math">\(U\subseteq X\)</span> is open iff whenever <span class="process-math">\((x_n)_{n=1}^\infty\subseteq X\)</span> converges and <span class="process-math">\(\lim_{x\rightarrow\infty}x_n\in U\text{,}\)</span> then there exists <span class="process-math">\(n\geq 1\)</span> such that for all <span class="process-math">\(n\geq N,x_n\in U\text{.}\)</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-5"><article class="exercise exercise-like"><div class="para" id="p-323">Let <span class="process-math">\(X\)</span> be a metric space. A set <span class="process-math">\(U\subseteq X\)</span> is open iff whenever <span class="process-math">\((x_n)_{n=1}^\infty\subseteq X\)</span> converges and <span class="process-math">\(\lim_{x\rightarrow\infty}x_n\in U\text{,}\)</span> then there exists <span class="process-math">\(n\geq 1\)</span> such that for all <span class="process-math">\(n\geq N,x_n\in U\text{.}\)</span>
 </div></article></div></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-topology-metric.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="ch-compactness.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>

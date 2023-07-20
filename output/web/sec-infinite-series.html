@@ -531,7 +531,7 @@ window.MathJax = {
 <li>
 <div class="toc-item"><a href="ch-compactness.html" class="internal"><span class="codenumber">5</span> <span class="title">Compactness, Connectedness</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-open-covers.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Compactness</span></a></div></li>
+<li><div class="toc-item"><a href="sec-compact.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Compactness</span></a></div></li>
 <li><div class="toc-item"><a href="sec-heine-borel.html" class="internal"><span class="codenumber">5.2</span> <span class="title">The Heine-Borel Theorem</span></a></div></li>
 <li><div class="toc-item"><a href="sec-totally-bounded.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Totally Bounded Metrics</span></a></div></li>
 <li><div class="toc-item"><a href="sec-connected.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Connected Sets</span></a></div></li>
@@ -586,19 +586,22 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-infinite-series"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3.1</span> <span class="title">Infinite Series Basics</span>
 </h2>
+<blockquote class="blockquote" id="blockquote-13">
+<div class="para" id="p-240">“The whole is greater than the sum of its parts.”</div> <cite class="attribution">―Aristotle</cite>
+</blockquote>
 <article class="definition definition-like" id="def-series"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-228">A <dfn class="terminology">series</dfn> is a sequence <span class="process-math">\((\sum_{k=1}^na_k)_{n=1}^{\infty}\)</span> for some sequence <span class="process-math">\((a_k)_{k=1}^{\infty}\subseteq \mathbb{C}\text{.}\)</span> We’ll typically write the series as <span class="process-math">\(\sum_{k=1}^{\infty}a_k\text{.}\)</span> We say <span class="process-math">\(\sum_{k=1}^{\infty}a_k\)</span> converges/diverges when <span class="process-math">\((\sum_{k=1}^na_k)_{n=1}^{\infty}\)</span> converges/diverges. When it converges we write <span class="process-math">\(\sum_{k=1}^{\infty}a_k=\lim_{n\rightarrow\infty}\sum_{k=1}^na_k\in\mathbb{C}\text{.}\)</span>
+<div class="para" id="p-241">A <dfn class="terminology">series</dfn> is a sequence <span class="process-math">\((\sum_{k=1}^na_k)_{n=1}^{\infty}\)</span> for some sequence <span class="process-math">\((a_k)_{k=1}^{\infty}\subseteq \mathbb{C}\text{.}\)</span> We’ll typically write the series as <span class="process-math">\(\sum_{k=1}^{\infty}a_k\text{.}\)</span> We say <span class="process-math">\(\sum_{k=1}^{\infty}a_k\)</span> converges/diverges when <span class="process-math">\((\sum_{k=1}^na_k)_{n=1}^{\infty}\)</span> converges/diverges. When it converges we write <span class="process-math">\(\sum_{k=1}^{\infty}a_k=\lim_{n\rightarrow\infty}\sum_{k=1}^na_k\in\mathbb{C}\text{.}\)</span>
 </div></article><article class="theorem theorem-like" id="thm-cauchy-criterion"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.2</span><span class="period">.</span><span class="space"> </span><span class="title">Cauchy's Criterion.</span>
 </h3>
-<div class="para" id="p-229">A series <span class="process-math">\(\sum_{k=1}^{\infty}a_k\)</span> converges iff for all <span class="process-math">\(\varepsilon&gt;0\,\exists N\geq 1\, \forall n\geq m\geq N\)</span> we have <span class="process-math">\(|\sum_{k=m}^n a_k|&lt;\varepsilon\)</span>
-</div></article><article class="hiddenproof" id="proof-21"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-21"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-21"><article class="hiddenproof"><div class="para" id="p-230">Cauchy’s condition (RHS of iff) is equivalent to saying <span class="process-math">\((\sum_{k=1}^n a_k)_{n=1}^{\infty}\)</span> is Cauchy.</div></article></div>
+<div class="para" id="p-242">A series <span class="process-math">\(\sum_{k=1}^{\infty}a_k\)</span> converges iff for all <span class="process-math">\(\varepsilon&gt;0\,\exists N\geq 1\, \forall n\geq m\geq N\)</span> we have <span class="process-math">\(|\sum_{k=m}^n a_k|&lt;\varepsilon\)</span>
+</div></article><article class="hiddenproof" id="proof-21"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-21"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-21"><article class="hiddenproof"><div class="para" id="p-243">Cauchy’s condition (RHS of iff) is equivalent to saying <span class="process-math">\((\sum_{k=1}^n a_k)_{n=1}^{\infty}\)</span> is Cauchy.</div></article></div>
 <article class="corollary theorem-like" id="cor-cauchy-corollary"><h3 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">3.3</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-231">If <span class="process-math">\(\sum_{n=1}^{\infty} a_n\)</span> converges, then <span class="process-math">\(\lim_{n\rightarrow\infty} a_n=0\text{.}\)</span> (If limit doesn’t go to zero, the sum diverges.)</div></article></section></div>
+<div class="para" id="p-244">If <span class="process-math">\(\sum_{n=1}^{\infty} a_n\)</span> converges, then <span class="process-math">\(\lim_{n\rightarrow\infty} a_n=0\text{.}\)</span> (If limit doesn’t go to zero, the sum diverges.)</div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="ch-series.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sec-convergence-tests.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

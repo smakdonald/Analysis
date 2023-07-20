@@ -531,7 +531,7 @@ window.MathJax = {
 <li>
 <div class="toc-item"><a href="ch-compactness.html" class="internal"><span class="codenumber">5</span> <span class="title">Compactness, Connectedness</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-open-covers.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Compactness</span></a></div></li>
+<li><div class="toc-item"><a href="sec-compact.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Compactness</span></a></div></li>
 <li><div class="toc-item"><a href="sec-heine-borel.html" class="internal"><span class="codenumber">5.2</span> <span class="title">The Heine-Borel Theorem</span></a></div></li>
 <li><div class="toc-item"><a href="sec-totally-bounded.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Totally Bounded Metrics</span></a></div></li>
 <li><div class="toc-item"><a href="sec-connected.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Connected Sets</span></a></div></li>
@@ -590,56 +590,59 @@ window.MathJax = {
 <section class="subsection" id="subsec-ordered-sets"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Ordered Sets</span>
 </h3>
+<blockquote class="blockquote" id="blockquote-2">
+<div class="para" id="p-53">“Order is one of the needs of life, which, when it is satisfied, produces a real happiness.”</div> <cite class="attribution">―Maria Montessori</cite>
+</blockquote>
 <article class="definition definition-like" id="def-order"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.9</span><span class="period">.</span><span class="space"> </span><span class="title">Order Relation.</span>
-</h4> <div class="para logical" id="p-52">
+</h4> <div class="para logical" id="p-54">
 <div class="para">A <dfn class="terminology">total order</dfn> (or <dfn class="terminology">linear order</dfn>) is a relation <span class="process-math">\(\leq\)</span> on a set <span class="process-math">\(S\)</span> that is:</div>
 <ol class="decimal">
-<li id="li-41"><div class="para" id="p-53">Reflexive: <span class="process-math">\(x\leq x\,\forall\, x\in S\)</span>
+<li id="li-41"><div class="para" id="p-55">Reflexive: <span class="process-math">\(x\leq x\,\forall\, x\in S\)</span>
 </div></li>
-<li id="li-42"><div class="para" id="p-54">Transitive: <span class="process-math">\(x\leq y, y\leq z\implies x\leq z \, \forall\, x,y,z\in S\)</span>
+<li id="li-42"><div class="para" id="p-56">Transitive: <span class="process-math">\(x\leq y, y\leq z\implies x\leq z \, \forall\, x,y,z\in S\)</span>
 </div></li>
-<li id="li-43"><div class="para" id="p-55">Antisymetric: <span class="process-math">\(x\leq y, y\leq x\implies x=y\,\forall\, x,y\in S\)</span>
+<li id="li-43"><div class="para" id="p-57">Antisymetric: <span class="process-math">\(x\leq y, y\leq x\implies x=y\,\forall\, x,y\in S\)</span>
 </div></li>
-<li id="li-44"><div class="para" id="p-56">Total: <span class="process-math">\(x\leq y\)</span> or <span class="process-math">\(y\leq x\,\forall\,x,y\in S\)</span>
+<li id="li-44"><div class="para" id="p-58">Total: <span class="process-math">\(x\leq y\)</span> or <span class="process-math">\(y\leq x\,\forall\,x,y\in S\)</span>
 </div></li>
 </ol>
-</div> <div class="para" id="p-57">A <dfn class="terminology">totally ordered set</dfn> is a set <span class="process-math">\(S\)</span> in which an order is defined.</div></article><article class="remark remark-like" id="remark-1"><h4 class="heading">
+</div> <div class="para" id="p-59">A <dfn class="terminology">totally ordered set</dfn> is a set <span class="process-math">\(S\)</span> in which an order is defined.</div></article><article class="remark remark-like" id="remark-1"><h4 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.10</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-58">The statement ''<span class="process-math">\(x &lt; y\)</span>'' may be read as ''<span class="process-math">\(x\)</span> is less than <span class="process-math">\(y\)</span>'' or ''<span class="process-math">\(x\)</span> is smaller than <span class="process-math">\(y\)</span>'' or ''<span class="process-math">\(x\)</span> precedes <span class="process-math">\(y\)</span>''.</div></article><article class="example example-like" id="example-1"><h4 class="heading">
+<div class="para" id="p-60">The statement ''<span class="process-math">\(x &lt; y\)</span>'' may be read as ''<span class="process-math">\(x\)</span> is less than <span class="process-math">\(y\)</span>'' or ''<span class="process-math">\(x\)</span> is smaller than <span class="process-math">\(y\)</span>'' or ''<span class="process-math">\(x\)</span> precedes <span class="process-math">\(y\)</span>''.</div></article><article class="example example-like" id="example-1"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.11</span><span class="period">.</span>
 </h4>
-<div class="para logical" id="p-59"><ol class="decimal">
-<li id="li-45"><div class="para" id="p-60">The usual orders for <span class="process-math">\(\mathbb{Z},\mathbb{Q}\text{.}\)</span> <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-3" id="fn-3"><sup> 1 </sup></a>
+<div class="para logical" id="p-61"><ol class="decimal">
+<li id="li-45"><div class="para" id="p-62">The usual orders for <span class="process-math">\(\mathbb{Z},\mathbb{Q}\text{.}\)</span> <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-3" id="fn-3"><sup> 1 </sup></a>
 </div></li>
-<li id="li-46"><div class="para" id="p-61">
+<li id="li-46"><div class="para" id="p-63">
 <span class="process-math">\(S=\mathbb{Z}^2=\{(a,b)\,|\, a,b\in\mathbb{Z}\}\)</span> having lexiographic order: <span class="process-math">\((a,b)\leq (c,d)\)</span> iff <span class="process-math">\(a&lt;c\)</span> or <span class="process-math">\(a=c,b\leq d\text{.}\)</span>
 </div></li>
 </ol></div></article><article class="definition definition-like" id="def-bounds"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.12</span><span class="period">.</span><span class="space"> </span><span class="title">Bounds.</span>
-</h4> <div class="para logical" id="p-62">
+</h4> <div class="para logical" id="p-64">
 <div class="para">Let <span class="process-math">\(S\)</span> be a totally ordered set, ie <span class="process-math">\(S\)</span> is a set with a total order <span class="process-math">\(\leq\)</span>
 </div>
 <ul class="disc">
-<li id="li-47"><div class="para" id="p-63">A subset <span class="process-math">\(E\subseteq S\)</span> is <dfn class="terminology">bounded above</dfn> if <span class="process-math">\(\exists\, \beta\in S\)</span> such that <span class="process-math">\(\forall\, x\in E, x\leq \beta\text{.}\)</span> Then <span class="process-math">\(\beta\)</span> is called an <dfn class="terminology">upper bound</dfn> for <span class="process-math">\(E\text{.}\)</span>
+<li id="li-47"><div class="para" id="p-65">A subset <span class="process-math">\(E\subseteq S\)</span> is <dfn class="terminology">bounded above</dfn> if <span class="process-math">\(\exists\, \beta\in S\)</span> such that <span class="process-math">\(\forall\, x\in E, x\leq \beta\text{.}\)</span> Then <span class="process-math">\(\beta\)</span> is called an <dfn class="terminology">upper bound</dfn> for <span class="process-math">\(E\text{.}\)</span>
 </div></li>
-<li id="li-48"><div class="para" id="p-64">A subset <span class="process-math">\(E\subseteq S\)</span> is <dfn class="terminology">bounded below</dfn> if <span class="process-math">\(\exists\, \alpha\in S\)</span> such that <span class="process-math">\(\forall\, x\in E, \alpha\leq x\text{.}\)</span> Then <span class="process-math">\(\alpha\)</span> is called a <dfn class="terminology">lower bound</dfn> for <span class="process-math">\(E\text{.}\)</span>
+<li id="li-48"><div class="para" id="p-66">A subset <span class="process-math">\(E\subseteq S\)</span> is <dfn class="terminology">bounded below</dfn> if <span class="process-math">\(\exists\, \alpha\in S\)</span> such that <span class="process-math">\(\forall\, x\in E, \alpha\leq x\text{.}\)</span> Then <span class="process-math">\(\alpha\)</span> is called a <dfn class="terminology">lower bound</dfn> for <span class="process-math">\(E\text{.}\)</span>
 </div></li>
-<li id="li-49"><div class="para" id="p-65">A subset <span class="process-math">\(E\subseteq S\)</span> is <dfn class="terminology">bounded</dfn> if it is bounded from above and below.</div></li>
+<li id="li-49"><div class="para" id="p-67">A subset <span class="process-math">\(E\subseteq S\)</span> is <dfn class="terminology">bounded</dfn> if it is bounded from above and below.</div></li>
 </ul>
 </div></article><article class="remark remark-like" id="remark-2"><h4 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.13</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-66">Note <span class="process-math">\(\emptyset\)</span> is bounded and every element of <span class="process-math">\(S\)</span> is an upper and lower bound for <span class="process-math">\(\emptyset\)</span> (assuming <span class="process-math">\(S\neq\emptyset\)</span>)</div></article><article class="definition definition-like" id="def-supremum-infemum"><h4 class="heading">
+<div class="para" id="p-68">Note <span class="process-math">\(\emptyset\)</span> is bounded and every element of <span class="process-math">\(S\)</span> is an upper and lower bound for <span class="process-math">\(\emptyset\)</span> (assuming <span class="process-math">\(S\neq\emptyset\)</span>)</div></article><article class="definition definition-like" id="def-supremum-infemum"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.14</span><span class="period">.</span><span class="space"> </span><span class="title">Supremum, Infimum.</span>
-</h4> <div class="para logical" id="p-67">
+</h4> <div class="para logical" id="p-69">
 <div class="para">Suppose <span class="process-math">\(S\)</span> is an ordered set, <span class="process-math">\(E\sse S\text{,}\)</span> and <span class="process-math">\(E\)</span> is bounded above. Suppose there exists an <span class="process-math">\(\alpha \in S\)</span> with the following properties:</div>
 <ol class="decimal">
-<li id="li-50"><div class="para" id="p-68">
+<li id="li-50"><div class="para" id="p-70">
 <span class="process-math">\(\a\)</span> is an upper bound of <span class="process-math">\(E\text{.}\)</span>
 </div></li>
-<li id="li-51"><div class="para" id="p-69">If <span class="process-math">\(y &lt; \alpha\)</span> then <span class="process-math">\(y\)</span> is not an upper bound of <span class="process-math">\(E\text{.}\)</span>
+<li id="li-51"><div class="para" id="p-71">If <span class="process-math">\(y &lt; \alpha\)</span> then <span class="process-math">\(y\)</span> is not an upper bound of <span class="process-math">\(E\text{.}\)</span>
 </div></li>
 </ol>
 <div class="para">Then <span class="process-math">\(\alpha\)</span> is called the <dfn class="terminology">least upper bound</dfn> of <span class="process-math">\(E\)</span> [that there is at most one such <span class="process-math">\(\alpha\)</span> is clear from (ii)] or the <dfn class="terminology">supremum</dfn> of <span class="process-math">\(E\text{,}\)</span> and we write <span class="process-math">\(\a= \sup E\text{.}\)</span> The <dfn class="terminology">greatest lower bound</dfn>, or <dfn class="terminology">infimum</dfn>, of a set <span class="process-math">\(E\)</span> which is bounded below is defined in the same manner: The statement <span class="process-math">\(\a= \inf E\)</span> means that <span class="process-math">\(\alpha\)</span> is a lower bound of <span class="process-math">\(E\)</span> and that no <span class="process-math">\(\b\)</span> with <span class="process-math">\(\b &gt; \a\)</span> is a lower bound of <span class="process-math">\(E\text{.}\)</span>
@@ -647,68 +650,71 @@ window.MathJax = {
 </div></article><article class="theorem theorem-like" id="thm-uniqueness-sup-inf"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.15</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-70">When sup and inf exist, they are unique.</div></article><article class="example example-like" id="example-2"><h4 class="heading">
+<div class="para" id="p-72">When sup and inf exist, they are unique.</div></article><article class="example example-like" id="example-2"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.16</span><span class="period">.</span>
 </h4>
-<div class="para logical" id="p-71"><ol class="decimal">
-<li id="li-52"><div class="para" id="p-72">
+<div class="para logical" id="p-73"><ol class="decimal">
+<li id="li-52"><div class="para" id="p-74">
 <span class="process-math">\(S=\mathbb{Q}\)</span> set <span class="process-math">\(E=\{x\in\mathbb{Q}\,|\, x^2&lt;2\}\text{.}\)</span> Has neither sup nor inf (b/c working in <span class="process-math">\(\mathbb{Q}\text{,}\)</span> not <span class="process-math">\(\mathbb{R}\)</span>).</div></li>
-<li id="li-53"><div class="para" id="p-73">
+<li id="li-53"><div class="para" id="p-75">
 <span class="process-math">\(S=\mathbb{Q}\)</span> set <span class="process-math">\(E=\{x\in\mathbb{Q}\,|\, x&gt;0\}\text{.}\)</span> Then <span class="process-math">\(E\)</span> has no sup, since not bounded above. <span class="process-math">\(\inf(E)=0\text{.}\)</span>
 </div></li>
 </ol></div></article><article class="definition definition-like" id="def-least-upper-bound-property"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.17</span><span class="period">.</span><span class="space"> </span><span class="title">Least Upper Bound Property.</span>
-</h4> <div class="para" id="p-74">An ordered set <span class="process-math">\(S\)</span> is said to have the <dfn class="terminology">least-upper-bound property</dfn> if the following is true: If <span class="process-math">\(E\sse S\text{,}\)</span> <span class="process-math">\(E\)</span> is not empty, and <span class="process-math">\(E\)</span> is bounded above, then <span class="process-math">\(\sup E\)</span> exists in <span class="process-math">\(S\text{.}\)</span>
+</h4> <div class="para" id="p-76">An ordered set <span class="process-math">\(S\)</span> is said to have the <dfn class="terminology">least-upper-bound property</dfn> if the following is true: If <span class="process-math">\(E\sse S\text{,}\)</span> <span class="process-math">\(E\)</span> is not empty, and <span class="process-math">\(E\)</span> is bounded above, then <span class="process-math">\(\sup E\)</span> exists in <span class="process-math">\(S\text{.}\)</span>
 </div></article><article class="theorem theorem-like" id="thm-greatest-lower-bound-property"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.18</span><span class="period">.</span><span class="space"> </span><span class="title">Greatest Lower Bound Property.</span>
 </h4>
-<div class="para" id="p-75">Suppose <span class="process-math">\(S\)</span> is an ordered set with the least-upper-bound property, <span class="process-math">\(B\sse S\text{,}\)</span> <span class="process-math">\(B\)</span> is not empty, and <span class="process-math">\(B\)</span> is bounded below. Let <span class="process-math">\(L\)</span> be the set of all lower bounds of <span class="process-math">\(B\text{.}\)</span> Then <span class="process-math">\(\a= \sup L\)</span> exists in <span class="process-math">\(S\text{,}\)</span> and <span class="process-math">\(\a: = \inf B\text{.}\)</span> In particular, <span class="process-math">\(\inf B\)</span> exists in <span class="process-math">\(\S\text{.}\)</span>
-</div></article><article class="hiddenproof" id="proof-2"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-2"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-2"><article class="hiddenproof"><div class="para" id="p-76">Since <span class="process-math">\(B\)</span> is bounded below, <span class="process-math">\(L\)</span> is not empty. Since <span class="process-math">\(L\)</span> consists of exactly those <span class="process-math">\(y \in S\)</span> which satisfy the inequality <span class="process-math">\(y \leq x\)</span> for every <span class="process-math">\(x \in B\text{,}\)</span> we see that every <span class="process-math">\(x \in B\)</span> is an upper bound of <span class="process-math">\(L\text{.}\)</span> Thus <span class="process-math">\(L\)</span> is bounded above. Our hypothesis about <span class="process-math">\(S\)</span> implies the refore that <span class="process-math">\(L\)</span> has a supremum in <span class="process-math">\(S\text{;}\)</span> call it <span class="process-math">\(\a\text{.}\)</span>
-</div> <div class="para" id="p-77">If <span class="process-math">\(\g &lt; \alpha\)</span> then (see Definition 1.8) <span class="process-math">\(\g\)</span> is not an upper bound of <span class="process-math">\(L\text{,}\)</span> hence <span class="process-math">\(\g \not\in B\text{.}\)</span> It follows that <span class="process-math">\(\a\leq x\)</span> for every <span class="process-math">\(x \in B\text{.}\)</span> Thus <span class="process-math">\(\a \in L\text{.}\)</span>
-</div> <div class="para" id="p-78">If <span class="process-math">\(\a &lt; \b\)</span> then <span class="process-math">\(\a \not\in L\text{,}\)</span> since <span class="process-math">\(\alpha\)</span> is an upper bound of <span class="process-math">\(L\text{.}\)</span>
-</div> <div class="para" id="p-79">We have shown that <span class="process-math">\(\alpha \in L\)</span> but <span class="process-math">\(\b\not\in L\)</span> if <span class="process-math">\(\b &gt; \a\text{.}\)</span> In other words, <span class="process-math">\(\a\)</span> is a lower bound of <span class="process-math">\(B\text{,}\)</span> but <span class="process-math">\(\b\)</span> is not if <span class="process-math">\(\b &gt; \a\text{.}\)</span> This means that <span class="process-math">\(\a= \inf B\text{.}\)</span>
+<div class="para" id="p-77">Suppose <span class="process-math">\(S\)</span> is an ordered set with the least-upper-bound property, <span class="process-math">\(B\sse S\text{,}\)</span> <span class="process-math">\(B\)</span> is not empty, and <span class="process-math">\(B\)</span> is bounded below. Let <span class="process-math">\(L\)</span> be the set of all lower bounds of <span class="process-math">\(B\text{.}\)</span> Then <span class="process-math">\(\a= \sup L\)</span> exists in <span class="process-math">\(S\text{,}\)</span> and <span class="process-math">\(\a: = \inf B\text{.}\)</span> In particular, <span class="process-math">\(\inf B\)</span> exists in <span class="process-math">\(\S\text{.}\)</span>
+</div></article><article class="hiddenproof" id="proof-2"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-2"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-2"><article class="hiddenproof"><div class="para" id="p-78">Since <span class="process-math">\(B\)</span> is bounded below, <span class="process-math">\(L\)</span> is not empty. Since <span class="process-math">\(L\)</span> consists of exactly those <span class="process-math">\(y \in S\)</span> which satisfy the inequality <span class="process-math">\(y \leq x\)</span> for every <span class="process-math">\(x \in B\text{,}\)</span> we see that every <span class="process-math">\(x \in B\)</span> is an upper bound of <span class="process-math">\(L\text{.}\)</span> Thus <span class="process-math">\(L\)</span> is bounded above. Our hypothesis about <span class="process-math">\(S\)</span> implies the refore that <span class="process-math">\(L\)</span> has a supremum in <span class="process-math">\(S\text{;}\)</span> call it <span class="process-math">\(\a\text{.}\)</span>
+</div> <div class="para" id="p-79">If <span class="process-math">\(\g &lt; \alpha\)</span> then (see Definition 1.8) <span class="process-math">\(\g\)</span> is not an upper bound of <span class="process-math">\(L\text{,}\)</span> hence <span class="process-math">\(\g \not\in B\text{.}\)</span> It follows that <span class="process-math">\(\a\leq x\)</span> for every <span class="process-math">\(x \in B\text{.}\)</span> Thus <span class="process-math">\(\a \in L\text{.}\)</span>
+</div> <div class="para" id="p-80">If <span class="process-math">\(\a &lt; \b\)</span> then <span class="process-math">\(\a \not\in L\text{,}\)</span> since <span class="process-math">\(\alpha\)</span> is an upper bound of <span class="process-math">\(L\text{.}\)</span>
+</div> <div class="para" id="p-81">We have shown that <span class="process-math">\(\alpha \in L\)</span> but <span class="process-math">\(\b\not\in L\)</span> if <span class="process-math">\(\b &gt; \a\text{.}\)</span> In other words, <span class="process-math">\(\a\)</span> is a lower bound of <span class="process-math">\(B\text{,}\)</span> but <span class="process-math">\(\b\)</span> is not if <span class="process-math">\(\b &gt; \a\text{.}\)</span> This means that <span class="process-math">\(\a= \inf B\text{.}\)</span>
 </div></article></div></section><section class="subsection" id="subsec-ordered-fields"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Ordered Fields</span>
 </h3>
+<blockquote class="blockquote" id="blockquote-3">
+<div class="para" id="p-82">“There is a field beyond all notions of right and wrong. Come, meet me there.”</div> <cite class="attribution">―Rumi</cite>
+</blockquote>
 <article class="definition definition-like" id="def-ordered-field"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.19</span><span class="period">.</span><span class="space"> </span><span class="title">Ordered Field.</span>
-</h4> <div class="para logical" id="p-80">
+</h4> <div class="para logical" id="p-83">
 <div class="para">An <dfn class="terminology">ordered field</dfn> is a field <span class="process-math">\(F\)</span> which is also an ordered set, such that</div>
 <ul class="disc">
-<li id="li-54"><div class="para" id="p-81">
+<li id="li-54"><div class="para" id="p-84">
 <span class="process-math">\(x + y &lt; x + z\)</span> if <span class="process-math">\(x, y, z \in F\)</span> and <span class="process-math">\(y &lt; z\text{,}\)</span>
 </div></li>
-<li id="li-55"><div class="para" id="p-82">
+<li id="li-55"><div class="para" id="p-85">
 <span class="process-math">\(xy &gt; 0\)</span> if <span class="process-math">\(x \in F\text{,}\)</span> <span class="process-math">\(y \in F\text{,}\)</span> <span class="process-math">\(x &gt; 0\text{,}\)</span> and <span class="process-math">\(y &gt; 0\text{.}\)</span>
 </div></li>
 </ul>
 </div></article><article class="definition definition-like" id="def-positive-negative"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.20</span><span class="period">.</span><span class="space"> </span><span class="title">Positive, Negative.</span>
-</h4> <div class="para" id="p-83">If <span class="process-math">\(x &gt; 0\text{,}\)</span> we call <span class="process-math">\(x\)</span> <dfn class="terminology">positive</dfn>; if <span class="process-math">\(x &lt; 0\text{,}\)</span> <span class="process-math">\(x\)</span> is <dfn class="terminology">negative</dfn>.</div></article><article class="theorem theorem-like" id="thm-properties-ordered-fields"><h4 class="heading">
+</h4> <div class="para" id="p-86">If <span class="process-math">\(x &gt; 0\text{,}\)</span> we call <span class="process-math">\(x\)</span> <dfn class="terminology">positive</dfn>; if <span class="process-math">\(x &lt; 0\text{,}\)</span> <span class="process-math">\(x\)</span> is <dfn class="terminology">negative</dfn>.</div></article><article class="theorem theorem-like" id="thm-properties-ordered-fields"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.21</span><span class="period">.</span><span class="space"> </span><span class="title">Properties of Ordered Fields.</span>
 </h4>
-<div class="para logical" id="p-84">
+<div class="para logical" id="p-87">
 <div class="para">The following statements are true in every ordered field.</div>
 <ol class="decimal">
-<li id="li-56"><div class="para" id="p-85">If <span class="process-math">\(x &gt; 0\)</span> then <span class="process-math">\(- x &lt; 0\text{,}\)</span> and vice versa.</div></li>
-<li id="li-57"><div class="para" id="p-86">If <span class="process-math">\(x &gt; 0\)</span> and <span class="process-math">\(y &lt; z\)</span> then <span class="process-math">\(xy &lt; xz\text{.}\)</span>
+<li id="li-56"><div class="para" id="p-88">If <span class="process-math">\(x &gt; 0\)</span> then <span class="process-math">\(- x &lt; 0\text{,}\)</span> and vice versa.</div></li>
+<li id="li-57"><div class="para" id="p-89">If <span class="process-math">\(x &gt; 0\)</span> and <span class="process-math">\(y &lt; z\)</span> then <span class="process-math">\(xy &lt; xz\text{.}\)</span>
 </div></li>
-<li id="li-58"><div class="para" id="p-87">If <span class="process-math">\(x &lt; 0\)</span> and <span class="process-math">\(y &lt; z\)</span> then <span class="process-math">\(xy &gt; xz\text{.}\)</span>
+<li id="li-58"><div class="para" id="p-90">If <span class="process-math">\(x &lt; 0\)</span> and <span class="process-math">\(y &lt; z\)</span> then <span class="process-math">\(xy &gt; xz\text{.}\)</span>
 </div></li>
-<li id="li-59"><div class="para" id="p-88">If <span class="process-math">\(x &gt; 0\)</span> then <span class="process-math">\(x^2 &gt; 0\text{.}\)</span> In particular, <span class="process-math">\(1 &gt; 0\text{.}\)</span>
+<li id="li-59"><div class="para" id="p-91">If <span class="process-math">\(x &gt; 0\)</span> then <span class="process-math">\(x^2 &gt; 0\text{.}\)</span> In particular, <span class="process-math">\(1 &gt; 0\text{.}\)</span>
 </div></li>
-<li id="li-60"><div class="para" id="p-89">If <span class="process-math">\(O &lt; x &lt; y\)</span> then <span class="process-math">\(O &lt; \frac 1/y &lt; \frac 1/x\text{.}\)</span>
+<li id="li-60"><div class="para" id="p-92">If <span class="process-math">\(O &lt; x &lt; y\)</span> then <span class="process-math">\(O &lt; \frac 1/y &lt; \frac 1/x\text{.}\)</span>
 </div></li>
 </ol>
-</div></article><article class="hiddenproof" id="proof-3"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-3"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-3"><article class="hiddenproof"><div class="para logical" id="p-90"><ol class="decimal">
-<li id="li-61"><div class="para" id="p-91">Assume <span class="process-math">\(x\geq 0\text{.}\)</span> Then <span class="process-math">\(x+(-x)\geq 0+(-x)\text{,}\)</span> hence <span class="process-math">\(0\geq -x\text{.}\)</span> (<span class="process-math">\(\impliedby\)</span> similar)</div></li>
-<li id="li-62"><div class="para" id="p-92">Since <span class="process-math">\(y\leq z\text{,}\)</span> have <span class="process-math">\(z-y\geq 0\text{.}\)</span> Since <span class="process-math">\(x\geq 0\text{,}\)</span> have <span class="process-math">\(x(z-y)\geq 0\implies xz-xy\geq 0\)</span> so <span class="process-math">\(xy\leq xz\text{.}\)</span>
+</div></article><article class="hiddenproof" id="proof-3"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-3"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-3"><article class="hiddenproof"><div class="para logical" id="p-93"><ol class="decimal">
+<li id="li-61"><div class="para" id="p-94">Assume <span class="process-math">\(x\geq 0\text{.}\)</span> Then <span class="process-math">\(x+(-x)\geq 0+(-x)\text{,}\)</span> hence <span class="process-math">\(0\geq -x\text{.}\)</span> (<span class="process-math">\(\impliedby\)</span> similar)</div></li>
+<li id="li-62"><div class="para" id="p-95">Since <span class="process-math">\(y\leq z\text{,}\)</span> have <span class="process-math">\(z-y\geq 0\text{.}\)</span> Since <span class="process-math">\(x\geq 0\text{,}\)</span> have <span class="process-math">\(x(z-y)\geq 0\implies xz-xy\geq 0\)</span> so <span class="process-math">\(xy\leq xz\text{.}\)</span>
 </div></li>
-<li id="li-63"><div class="para" id="p-93">If <span class="process-math">\(x\leq 0\)</span> then <span class="process-math">\(-x\geq 0\)</span> by (i) so by (ii) <span class="process-math">\(-xy\leq -xz\)</span> add <span class="process-math">\(xy+xz\)</span> to both sides, get <span class="process-math">\(xz\leq xy\text{.}\)</span>
+<li id="li-63"><div class="para" id="p-96">If <span class="process-math">\(x\leq 0\)</span> then <span class="process-math">\(-x\geq 0\)</span> by (i) so by (ii) <span class="process-math">\(-xy\leq -xz\)</span> add <span class="process-math">\(xy+xz\)</span> to both sides, get <span class="process-math">\(xz\leq xy\text{.}\)</span>
 </div></li>
-<li id="li-64"><div class="para" id="p-94">If <span class="process-math">\(x\geq 0\)</span> then <span class="process-math">\(x^2=x\cdot x\geq 0\text{.}\)</span> If <span class="process-math">\(x&lt;0\)</span> then by (i) <span class="process-math">\(-x&gt;0\text{.}\)</span> Then <span class="process-math">\(x^2=(-x)(-x)\geq 0\text{.}\)</span>
+<li id="li-64"><div class="para" id="p-97">If <span class="process-math">\(x\geq 0\)</span> then <span class="process-math">\(x^2=x\cdot x\geq 0\text{.}\)</span> If <span class="process-math">\(x&lt;0\)</span> then by (i) <span class="process-math">\(-x&gt;0\text{.}\)</span> Then <span class="process-math">\(x^2=(-x)(-x)\geq 0\text{.}\)</span>
 </div></li>
-<li id="li-65"><div class="para" id="p-95">If <span class="process-math">\(\frac{1}{y}&lt;0\text{,}\)</span> then <span class="process-math">\(-\frac{1}{y}&gt;0\)</span> as <span class="process-math">\(y&gt;0\text{.}\)</span> <span class="process-math">\(-1(-\frac{1}{y})y&gt;0\)</span> then <span class="process-math">\(1&lt;0\)</span> by (i), but this contradicts <span class="process-math">\(iv\)</span> so <span class="process-math">\(\frac{1}{y}\geq 0\)</span> since <span class="process-math">\(\frac{1}{y}\neq 0\)</span> have <span class="process-math">\(\frac{1}{y}&gt;0\text{.}\)</span> By same argument <span class="process-math">\(\frac{1}{x}&gt;0\text{.}\)</span> Now <span class="process-math">\(\frac{1}{x}\cdot\frac{1}{y}&gt;0\)</span> and <span class="process-math">\(x\leq y\text{,}\)</span> so by (ii) <span class="process-math">\(\frac{1}{x}\frac{1}{y}x\leq \frac{1}{x}\frac{1}{y}y\implies \frac{1}{x}\leq \frac{1}{y}\text{.}\)</span>
+<li id="li-65"><div class="para" id="p-98">If <span class="process-math">\(\frac{1}{y}&lt;0\text{,}\)</span> then <span class="process-math">\(-\frac{1}{y}&gt;0\)</span> as <span class="process-math">\(y&gt;0\text{.}\)</span> <span class="process-math">\(-1(-\frac{1}{y})y&gt;0\)</span> then <span class="process-math">\(1&lt;0\)</span> by (i), but this contradicts <span class="process-math">\(iv\)</span> so <span class="process-math">\(\frac{1}{y}\geq 0\)</span> since <span class="process-math">\(\frac{1}{y}\neq 0\)</span> have <span class="process-math">\(\frac{1}{y}&gt;0\text{.}\)</span> By same argument <span class="process-math">\(\frac{1}{x}&gt;0\text{.}\)</span> Now <span class="process-math">\(\frac{1}{x}\cdot\frac{1}{y}&gt;0\)</span> and <span class="process-math">\(x\leq y\text{,}\)</span> so by (ii) <span class="process-math">\(\frac{1}{x}\frac{1}{y}x\leq \frac{1}{x}\frac{1}{y}y\implies \frac{1}{x}\leq \frac{1}{y}\text{.}\)</span>
 </div></li>
 </ol></div></article></div></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-3"><div class="fn">or <span class="process-math">\(\mathbb{R}\text{,}\)</span> although we haven't defined that yet</div></div>
 </div>

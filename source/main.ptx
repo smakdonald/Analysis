@@ -476,6 +476,15 @@
 
         <section xml:id="sec-binary-operations-fields"><title>Binary Operations and Fields</title>
 
+          <blockquote>
+            <p>
+              <q>
+                I never say of an operation that it is without danger.
+              </q>
+            </p>
+            <attribution>August Bier</attribution>
+          </blockquote>
+
           <definition xml:id="def-binary-operation"><title>Binary Operation</title>
             <statement>
               <p>
@@ -706,6 +715,15 @@
 
           <subsection xml:id="subsec-ordered-sets"><title>Ordered Sets</title>
 
+            <blockquote>
+              <p>
+                <q>
+                  Order is one of the needs of life, which, when it is satisfied, produces a real happiness.
+                </q>
+              </p>
+              <attribution>Maria Montessori</attribution>
+            </blockquote>
+
             <definition xml:id="def-order"><title>Order Relation</title>
               <statement>
                 <p>
@@ -913,6 +931,15 @@
 
           <subsection xml:id="subsec-ordered-fields"><title>Ordered Fields</title>
 
+            <blockquote>
+              <p>
+                <q>
+                  There is a field beyond all notions of right and wrong. Come, meet me there.
+                </q>
+              </p>
+              <attribution>Rumi</attribution>
+            </blockquote>
+
             <definition xml:id="def-ordered-field"><title>Ordered Field</title>
               <statement>
                 <p>
@@ -1033,6 +1060,15 @@
 
           <subsection xml:id="subsec-existence"><title>Existence and Uniqueness</title>
 
+            <blockquote>
+              <p>
+                <q>
+                  It's always better to be real.
+                </q>
+              </p>
+              <attribution>Selena Gomez</attribution>
+            </blockquote>
+
             <definition xml:id="def-dedekind-cut">
               <statement>
                 <p>
@@ -1102,6 +1138,15 @@
           </subsection>
 
           <subsection xml:id="subsec-real-properties"><title>Properties of the Real Numbers</title>
+
+            <blockquote>
+              <p>
+                <q>
+                  Never apologize for what you feel. It's like being sorry for being real.
+                </q>
+              </p>
+              <attribution>Lil Wayne</attribution>
+            </blockquote>
             
             <theorem xml:id="thm-archimedian-property"><title>Archimedian Property</title>
               <statement>
@@ -1155,6 +1200,15 @@
           </subsection>
 
           <subsection xml:id="subsec-absolute-value"><title>Absolute Values and <m>\C</m></title>
+
+            <blockquote>
+              <p>
+                <q>
+                  True faith is belief in the reality of absolute values.
+                </q>
+              </p>
+              <attribution>William Ralph Inge</attribution>
+            </blockquote>
 
             <definition xml:id="def-complex-numbers">
               <statement>
@@ -1262,6 +1316,15 @@
 
           <subsection xml:id="subsec-sequences-limits"><title>Sequences and Limits</title>
 
+            <blockquote>
+              <p>
+                <q>
+                  A sequence works in a way a collection never can.
+                </q>
+              </p>
+              <attribution>George Murray</attribution>
+            </blockquote>
+
             <definition xml:id="def-sequence"><title>Sequence</title>
               <statement>
                 <p>
@@ -1367,6 +1430,15 @@
           </subsection>
           
           <subsection xml:id="subsec-bounded-sequences"><title>Bounded Sequences</title>
+
+            <blockquote>
+              <p>
+                <q>
+                  I am not bound to win, but I am bound to be true.
+                </q>
+              </p>
+              <attribution>Abraham Lincoln</attribution>
+            </blockquote>
             
             <definition xml:id="def-bounded-sequence"><title>Bounded Sequence</title>
               <statement>
@@ -1525,6 +1597,15 @@
 
           <subsection xml:id="subsec-monotonicity"><title>Monotonicity</title>
 
+            <blockquote>
+              <p>
+                <q>
+                  I'm a stereo and she's just so monotone.
+                </q>
+              </p>
+              <attribution>Nicki Minaj</attribution>
+            </blockquote>
+
             <definition xml:id="def-monotone-sequence"><title>Monotone Sequence</title>
               <statement>
                 <p>
@@ -1676,6 +1757,15 @@
         </section>
 
         <section xml:id="sec-subsequences"><title>Subsequences</title>
+
+          <blockquote>
+            <p>
+              <q>
+                Elegance comes from being as beautiful inside as outside.
+              </q>
+            </p>
+            <attribution>Coco Chanel</attribution>
+          </blockquote>
           
           <definition xml:id="def-subsequence"><title>Subsequence</title>
             <statement>
@@ -1861,6 +1951,15 @@
 
         <section xml:id="sec-lim-inf-sup"><title>Limit Infimums and Limit Supremums</title>
 
+          <blockquote>
+            <p>
+              <q>
+                Only the pure in heart can make a good soup.
+              </q>
+            </p>
+            <attribution>Ludwig Van Beethoven</attribution>
+          </blockquote>
+
           <convention><title>Convergence to <m>\pm\infty</m></title>
             <p>
               A sequence <m>(x_n)_{n=1}^{\infty}\subseteq\mathbb{R}</m> converges to <m>\infty</m> if <m>\forall\, M\in \mathbb{R}</m>, <m>\exists N\in\mathbb{Z}_{\geq 1}</m> such that for all <m>n\in\mathbb{Z}, n\geq N, x_n\geq M</m>. 
@@ -1972,6 +2071,15 @@
         </section>
 
         <section xml:id="sec-cauchy-complete"><title>Cauchy Sequences and Complete Metric Spaces</title>
+
+          <blockquote>
+            <p>
+              <q>
+                Within you, you will find everything you need to be complete.
+              </q>
+            </p>
+            <attribution>Bryant H. McGill</attribution>
+          </blockquote>
           
           <definition xml:id="def-cauchy"><title>Cauchy Sequence</title>
             <statement>
@@ -2093,6 +2201,15 @@
       <chapter xml:id="ch-series"><title>Infinite Series</title>
         
         <section xml:id="sec-infinite-series"><title>Infinite Series Basics</title>
+
+          <blockquote>
+            <p>
+              <q>
+                The whole is greater than the sum of its parts.
+              </q>
+            </p>
+            <attribution>Aristotle</attribution>
+          </blockquote>
           
           <definition xml:id="def-series">
             <statement>
@@ -2131,6 +2248,15 @@
         </section>
 
         <section xml:id="sec-convergence-tests"><title>Convergence Tests</title>
+
+          <blockquote>
+            <p>
+              <q>
+                Everything that rises must converge.
+              </q>
+            </p>
+            <attribution>Pierre Teilhard de Chardin, unaware of <m>(a_n)=n</m></attribution>
+          </blockquote>
           
           <definition xml:id="def-absolute-convergence">
             <statement>
@@ -2359,6 +2485,15 @@
         </section>
 
         <section xml:id="sec-topology-metric"><title>Topology and Metric Spaces</title>
+
+          <blockquote>
+            <p>
+              <q>
+                Keep in mind, measurement is not just in numbers, but stories.
+              </q>
+            </p>
+            <attribution>Pearl Zhu</attribution>
+          </blockquote>
           
           <definition xml:id="def-metric">
             <statement>
@@ -2422,6 +2557,15 @@
         <section xml:id="sec-open-closed"><title>Open and Closed Sets</title>
 
           <subsection xml:id="subsec-closed-sets"><title>Closed Sets</title>
+
+            <blockquote>
+              <p>
+                <q>
+                  I can get money with my eyes closed.
+                </q>
+              </p>
+              <attribution>Drake</attribution>
+            </blockquote>
           
             <definition xml:id="def-limit-point">
               <statement>
@@ -2501,6 +2645,15 @@
           </subsection>
 
           <subsection xml:id="subsec-open-sets"><title>Open Sets</title>
+
+            <blockquote>
+              <p>
+                <q>
+                  Let yourself be open and life will be easier.
+                </q>
+              </p>
+              <attribution>Buddha</attribution>
+            </blockquote>
 
             <definition xml:id="def-open-ball">
               <statement>
@@ -2749,7 +2902,16 @@
 
       <chapter xml:id="ch-compactness"><title>Compactness, Connectedness</title>
         
-        <section xml:id="sec-open-covers"><title>Compactness</title>
+        <section xml:id="sec-compact"><title>Compactness</title>
+
+          <blockquote>
+            <p>
+              <q>
+                The lunatic, the lover, and poet, are of imagination all compact.
+              </q>
+            </p>
+            <attribution>William Shakespeare</attribution>
+          </blockquote>
 
           <definition xml:id="def-compact"><title>Compact</title>
             <statement>
@@ -2845,6 +3007,15 @@
         </section>
 
         <section xml:id="sec-heine-borel"><title>The Heine-Borel Theorem</title>
+
+          <blockquote>
+            <p>
+              <q>
+                A piece of art is a compact form of the universe.
+              </q>
+            </p>
+            <attribution>Thomas Kinkade</attribution>
+          </blockquote>
 
           <definition xml:id="def-bounded-metric"><title>Bounded Metric Space</title>
             <statement>
@@ -2974,6 +3145,15 @@
         </section>
 
         <section xml:id="sec-totally-bounded"><title>Totally Bounded Metrics</title>
+
+          <blockquote>
+            <p>
+              <q>
+                It is totally awesome.
+              </q>
+            </p>
+            <attribution>Rachel Caine</attribution>
+          </blockquote>
 
           <p>
             A version of the Heine-Borel theorem does hold for all metric spaces: 
@@ -3359,6 +3539,15 @@
 
         <section xml:id="sec-connected"><title>Connected Sets</title>
 
+          <blockquote>
+            <p>
+              <q>
+                Connection gives purpose and meaning to our lives.
+              </q>
+            </p>
+            <attribution>Brené Brown</attribution>
+          </blockquote>
+
           <definition xml:id="def-connected"><title>Connected, Disconnected</title>
             <statement>
               <p>
@@ -3623,6 +3812,15 @@
       <chapter xml:id="ch-limits-continuity"><title>Function Limits and Continuity</title>
         
         <section xml:id="sec-function-limits"><title>Function Limits</title>
+
+          <blockquote>
+            <p>
+              <q>
+                To define is to limit.
+              </q>
+            </p>
+            <attribution>Oscar Wilde</attribution>
+          </blockquote>
           
           <definition xml:id="def-limit"><title>Limit of a Function</title>
             <statement>
@@ -3703,6 +3901,15 @@
         </section>
 
         <section xml:id="sec-continuous-functions"><title>Continuous Functions</title>
+
+          <blockquote>
+            <p>
+              <q>
+                Life is continuous, and is infinte.
+              </q>
+            </p>
+            <attribution>Edgar Cayce</attribution>
+          </blockquote>
           
           <definition xml:id="def-continuous-function">
             <statement>
@@ -4063,6 +4270,15 @@
         </section>
 
         <section xml:id="sec-uniform-continuity"><title>Uniform Continuity</title>
+
+          <blockquote>
+            <p>
+              <q>
+                If it requires a uniform, it's a worthless endeavor.
+              </q>
+            </p>
+            <attribution>George Carlin</attribution>
+          </blockquote>
 
           <definition xml:id="def-uniformly-continuous"><title>Uniform Continuity</title>
             <statement>

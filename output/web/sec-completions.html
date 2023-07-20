@@ -531,7 +531,7 @@ window.MathJax = {
 <li>
 <div class="toc-item"><a href="ch-compactness.html" class="internal"><span class="codenumber">5</span> <span class="title">Compactness, Connectedness</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-open-covers.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Compactness</span></a></div></li>
+<li><div class="toc-item"><a href="sec-compact.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Compactness</span></a></div></li>
 <li><div class="toc-item"><a href="sec-heine-borel.html" class="internal"><span class="codenumber">5.2</span> <span class="title">The Heine-Borel Theorem</span></a></div></li>
 <li><div class="toc-item"><a href="sec-totally-bounded.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Totally Bounded Metrics</span></a></div></li>
 <li><div class="toc-item"><a href="sec-connected.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Connected Sets</span></a></div></li>
@@ -588,46 +588,46 @@ window.MathJax = {
 </h2>
 <article class="definition definition-like" id="def-dense"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.1</span><span class="period">.</span><span class="space"> </span><span class="title">Dense.</span>
-</h3> <div class="para" id="p-494">Let <span class="process-math">\(X\)</span> be a metric space. A set <span class="process-math">\(A\subseteq X\)</span> is <dfn class="terminology">dense</dfn> if <span class="process-math">\(\overline{A}=X\text{.}\)</span>
+</h3> <div class="para" id="p-518">Let <span class="process-math">\(X\)</span> be a metric space. A set <span class="process-math">\(A\subseteq X\)</span> is <dfn class="terminology">dense</dfn> if <span class="process-math">\(\overline{A}=X\text{.}\)</span>
 </div></article><article class="definition definition-like" id="def-isometry"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.2</span><span class="period">.</span><span class="space"> </span><span class="title">Isometry.</span>
-</h3> <div class="para" id="p-495">A function <span class="process-math">\(f:X\rightarrow Y\)</span> between metric spaces <span class="process-math">\(X,Y\)</span> is an <dfn class="terminology">isometry</dfn> (or is <dfn class="terminology">isometric</dfn>) if <span class="process-math">\(d(x,x')=d(f(x),f(x'))\)</span> for <span class="process-math">\(x,x'\in X\text{.}\)</span>
+</h3> <div class="para" id="p-519">A function <span class="process-math">\(f:X\rightarrow Y\)</span> between metric spaces <span class="process-math">\(X,Y\)</span> is an <dfn class="terminology">isometry</dfn> (or is <dfn class="terminology">isometric</dfn>) if <span class="process-math">\(d(x,x')=d(f(x),f(x'))\)</span> for <span class="process-math">\(x,x'\in X\text{.}\)</span>
 </div></article><article class="exercise exercise-like" id="exercise-17"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-17"><h3 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">7.3</span><span class="period">.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-17"><article class="exercise exercise-like"><div class="para" id="p-496">An isometry is injective.</div>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-17"><article class="exercise exercise-like"><div class="para" id="p-520">An isometry is injective.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-12" id="solution-12"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-12"><div class="solution solution-like"><div class="para" id="p-497">Suppose <span class="process-math">\(f:X\rightarrow Y\)</span> is an isometry. If <span class="process-math">\(x,x'\in X\)</span> and <span class="process-math">\(x\neq x'\text{,}\)</span> then <span class="process-math">\(d(x,x')&gt;0\text{.}\)</span> So <span class="process-math">\(f(x)\neq f(x')\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-12" id="solution-12"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-12"><div class="solution solution-like"><div class="para" id="p-521">Suppose <span class="process-math">\(f:X\rightarrow Y\)</span> is an isometry. If <span class="process-math">\(x,x'\in X\)</span> and <span class="process-math">\(x\neq x'\text{,}\)</span> then <span class="process-math">\(d(x,x')&gt;0\text{.}\)</span> So <span class="process-math">\(f(x)\neq f(x')\text{.}\)</span>
 </div></div></div>
 </div></article></div>
 <article class="definition definition-like" id="def-iso-iso"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.4</span><span class="period">.</span><span class="space"> </span><span class="title">Isometric Isomorphism.</span>
-</h3> <div class="para" id="p-498">An <dfn class="terminology">isometric isomorphism</dfn> between metric spaces <span class="process-math">\(X\)</span> and <span class="process-math">\(Y\)</span> is a surjective isometry <span class="process-math">\(f:X\rightarrow Y\text{.}\)</span> In this case, <span class="process-math">\(f\)</span> is bijective and <span class="process-math">\(f^{-1}:Y\rightarrow X\)</span> is also an isometry. <span class="process-math">\(X\)</span> and <span class="process-math">\(Y\)</span> are <dfn class="terminology">isometrically isomorphic</dfn> if exists an isometric isomorphism <span class="process-math">\(f:X\rightarrow Y\text{.}\)</span>
+</h3> <div class="para" id="p-522">An <dfn class="terminology">isometric isomorphism</dfn> between metric spaces <span class="process-math">\(X\)</span> and <span class="process-math">\(Y\)</span> is a surjective isometry <span class="process-math">\(f:X\rightarrow Y\text{.}\)</span> In this case, <span class="process-math">\(f\)</span> is bijective and <span class="process-math">\(f^{-1}:Y\rightarrow X\)</span> is also an isometry. <span class="process-math">\(X\)</span> and <span class="process-math">\(Y\)</span> are <dfn class="terminology">isometrically isomorphic</dfn> if exists an isometric isomorphism <span class="process-math">\(f:X\rightarrow Y\text{.}\)</span>
 </div></article><article class="definition definition-like" id="def-completion"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.5</span><span class="period">.</span><span class="space"> </span><span class="title">Completion.</span>
-</h3> <div class="para" id="p-499">A <dfn class="terminology">completion</dfn> of a metric space <span class="process-math">\(X\)</span> is a pair <span class="process-math">\((\hat{X},j)\)</span> where <span class="process-math">\(\hat{X}\)</span> is a complete metric space and <span class="process-math">\(j:X\rightarrow \hat{X}\)</span> is an isometry such that <span class="process-math">\(j(X)\)</span> is dense in <span class="process-math">\(\hat{X}\text{.}\)</span>
+</h3> <div class="para" id="p-523">A <dfn class="terminology">completion</dfn> of a metric space <span class="process-math">\(X\)</span> is a pair <span class="process-math">\((\hat{X},j)\)</span> where <span class="process-math">\(\hat{X}\)</span> is a complete metric space and <span class="process-math">\(j:X\rightarrow \hat{X}\)</span> is an isometry such that <span class="process-math">\(j(X)\)</span> is dense in <span class="process-math">\(\hat{X}\text{.}\)</span>
 </div></article><article class="example example-like" id="example-27"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">7.6</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-500"><ul class="disc">
-<li id="li-153"><div class="para" id="p-501">If <span class="process-math">\(X=\mathbb{Q}\text{,}\)</span> then <span class="process-math">\((\mathbb{R},j:\mathbb{Q}\hookrightarrow\mathbb{R})\)</span> is a completion of <span class="process-math">\(\mathbb{Q}\text{.}\)</span>
+<div class="para logical" id="p-524"><ul class="disc">
+<li id="li-153"><div class="para" id="p-525">If <span class="process-math">\(X=\mathbb{Q}\text{,}\)</span> then <span class="process-math">\((\mathbb{R},j:\mathbb{Q}\hookrightarrow\mathbb{R})\)</span> is a completion of <span class="process-math">\(\mathbb{Q}\text{.}\)</span>
 </div></li>
-<li id="li-154"><div class="para" id="p-502">If <span class="process-math">\(X=(a,b)\subseteq \mathbb{R}\text{,}\)</span> then <span class="process-math">\(([a,b], j:(a,b)\hookrightarrow[a,b])\)</span> is a completion of <span class="process-math">\((a,b)\text{.}\)</span>
+<li id="li-154"><div class="para" id="p-526">If <span class="process-math">\(X=(a,b)\subseteq \mathbb{R}\text{,}\)</span> then <span class="process-math">\(([a,b], j:(a,b)\hookrightarrow[a,b])\)</span> is a completion of <span class="process-math">\((a,b)\text{.}\)</span>
 </div></li>
-<li id="li-155"><div class="para" id="p-503">
+<li id="li-155"><div class="para" id="p-527">
 <span class="process-math">\(X=(a,b)\subseteq \mathbb{R}\text{,}\)</span> then <span class="process-math">\(([a+1,b+1], j)\)</span> where <span class="process-math">\(j(x)=x+1\)</span> is a completion of <span class="process-math">\((a,b)\text{.}\)</span>
 </div></li>
-<li id="li-156"><div class="para" id="p-504">If <span class="process-math">\(X\)</span> is a complete metric space, then <span class="process-math">\((X,\text{id}_X)\)</span> is a completion of <span class="process-math">\(X\text{.}\)</span>
+<li id="li-156"><div class="para" id="p-528">If <span class="process-math">\(X\)</span> is a complete metric space, then <span class="process-math">\((X,\text{id}_X)\)</span> is a completion of <span class="process-math">\(X\text{.}\)</span>
 </div></li>
 </ul></div></article><article class="theorem theorem-like" id="thm-completion"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.7</span><span class="period">.</span><span class="space"> </span><span class="title">Completion Existence.</span>
 </h3>
-<div class="para logical" id="p-505">
+<div class="para logical" id="p-529">
 <div class="para">Let <span class="process-math">\(X\)</span> be a metric space.</div>
 <ol class="decimal">
-<li id="li-157"><div class="para" id="p-506">
+<li id="li-157"><div class="para" id="p-530">
 <span class="process-math">\(X\)</span> has a completion <span class="process-math">\((\hat{X},j)\)</span>
 </div></li>
-<li id="li-158"><div class="para" id="p-507">Let <span class="process-math">\((\hat{X}_1,j_1)\text{,}\)</span> <span class="process-math">\((\hat{X}_2,j_2)\)</span> be completions of <span class="process-math">\(X\text{.}\)</span> Then there is a unique isometric isomorphism <span class="process-math">\(f:\hat{X}_1\rightarrow\hat{X}_2\)</span> such that <span class="process-math">\(f(j_1)=j_2\text{.}\)</span>
+<li id="li-158"><div class="para" id="p-531">Let <span class="process-math">\((\hat{X}_1,j_1)\text{,}\)</span> <span class="process-math">\((\hat{X}_2,j_2)\)</span> be completions of <span class="process-math">\(X\text{.}\)</span> Then there is a unique isometric isomorphism <span class="process-math">\(f:\hat{X}_1\rightarrow\hat{X}_2\)</span> such that <span class="process-math">\(f(j_1)=j_2\text{.}\)</span>
 </div></li>
 </ol>
 </div></article></section></div>
