@@ -12,7 +12,13 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">If <span class="process-math">\(|r|\geq 1\)</span> then <span class="process-math">\(|ar^n|\geq |a|\text{,}\)</span> so <span class="process-math">\(\lim_{n\rightarrow\infty} ar^n\neq 0\)</span> so <span class="process-math">\(\sum_{n=1}^{\infty}ar^n\)</span> diverges. Suppose <span class="process-math">\(|r|&lt;1\text{.}\)</span> Set <span class="process-math">\(S_n=\sum_{k=0}^{n}ar^k\text{.}\)</span> Then <span class="process-math">\(a+rS_n=S_{n+1}=S_n+ar^{n+1}\implies S_n=\frac{a(1-r^{n+1})}{1-r}\text{.}\)</span> Now <span class="process-math">\(|S_n-\frac{a}{1-r}|=|\frac{a(a-r^{n+1})-a}{1-r}|=|\frac{ar^{n+1}}{a-r}|=\frac{|a|}{|a-r|}|r|^{n+1}\rightarrow_{n\rightarrow\infty}0\)</span> (since <span class="process-math">\(|r|&lt;1\)</span>) so <span class="process-math">\(\sum_{n=0}^{\infty}ar^n=\lim_{n\rightarrow\infty} S_n=\frac{a}{1-r}\text{.}\)</span>
+<div class="para logical">
+<div class="para">Suppose <span class="process-math">\((a_n)_{n=1}^{\infty}\subseteq \mathbb{C}\setminus\{0\}\text{.}\)</span>
+</div>
+<ol class="decimal">
+<li><div class="para">If <span class="process-math">\(\limsup_{n\rightarrow\infty}\frac{|a_{n+1}|}{|a_n|}&lt;1\)</span> then <span class="process-math">\(\sum_{n=1}^{\infty}a_n\)</span> converges absolutely.</div></li>
+<li><div class="para">If <span class="process-math">\(\liminf_{n\rightarrow\infty}\frac{|a_{n+1}|}{|a_n|}&gt;1\)</span> then <span class="process-math">\(\sum_{n=1}^{\infty}a_n\)</span> diverges.</div></li>
+</ol>
 </div>
 <span class="incontext"><a href="sec-convergence-tests.html#p-249" class="internal">in-context</a></span>
 </body>

@@ -12,7 +12,35 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Uniform continuity implies continuity.</div>
+<div class="para logical">
+<div class="para">
+<dfn class="terminology">Case 1</dfn>: If <span class="process-math">\(x&lt;\delta\)</span> and <span class="process-math">\(y&lt;\delta\text{,}\)</span> then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+\left|{\sqrt{x}-\sqrt{y}}\right|
+\leq \sqrt{x}+\sqrt{y}
+&lt;2\sqrt{\delta}
+=\varepsilon
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">
+<dfn class="terminology">Case 2</dfn>: Suppose <span class="process-math">\(x\geq \delta\)</span> or <span class="process-math">\(y\geq \delta\text{.}\)</span> Wlog, <span class="process-math">\(x\geq \delta\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+\left|{\sqrt{x}-\sqrt{y}}\right|
+=\left|{\sqrt{x}-\sqrt{y}}\right|\frac{\sqrt{x}+\sqrt{y}}{\sqrt{x}+\sqrt{y}}
+=\frac{\left|{x-y}\right|}{\sqrt{x}+\sqrt{y}}
+&lt;\frac{\delta}{\sqrt{\delta}}
+=\sqrt{\delta}
+=\frac{\varepsilon}{2}
+&lt;\varepsilon.
+\end{aligned}
+\end{equation*}
+</div>
+</div>
 <span class="incontext"><a href="sec-uniform-continuity.html#p-475" class="internal">in-context</a></span>
 </body>
 </html>

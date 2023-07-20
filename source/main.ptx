@@ -346,10 +346,11 @@
         </copyright>
       </colophon>
 
-      <preface><title>How to Use This Book (*)</title>
+      <preface><title>How to Use This Book</title>
 
         <p>
-          I'm still in the process of figuring out exactly what this is for. Some possibilities include:
+          I'm still in the process of figuring out exactly what this is for. 
+          Some possibilities include:
           <ul>
             <li>
               <p>
@@ -359,13 +360,13 @@
 
             <li>
               <p>
-                Current notes for students taking the first year algebra sequence. 
+                Current notes for students taking the first year analysis sequence. 
               </p>
             </li>
 
             <li>
               <p>
-                Assistance in studying for the Algebra Qualifying Exam at UNL.
+                Assistance in studying for the Analysis Qualifying Exam at UNL.
               </p>
             </li>
 
@@ -465,62 +466,6 @@
           
         </paragraphs>
 
-      </preface>
-
-      <preface><title>Guide to Proof Writing</title>
-
-        <p>
-          <ol>
-            <li>
-              <p>
-                Never use the words "obvious", "clearly", "trivial", "of course", or synonyms of these.
-              </p>
-            </li>
-
-            <li>
-              <p>
-                Write words rather than symbols or abbreviations - a long string of symbols isn't as readable as an English sentence. 
-                Specifically: For all proofs you hand in, write out "for all", "there is", "implies", "if and only if", "therefore", "because", "such that", "for example". 
-                (That is, the symbols ∀, ∃, ⇒, ⇔, ∴, ∵, and s.t., should be avoided.)
-              </p>
-            </li>
-
-            <li>
-              <p>
-                Every time you apply a definition, theorem, proposition, lemma, corollary, exercise, etc., in a proof that you are writing up, reference it. 
-                Reference a theorem, lemma, or proposition by its number in the text (for example <xref provisional="thm-lagrange"/>); reference a definition as "the definition of ___" (or by its number in the text, such as <xref provisional="def-group"/>). 
-              </p>
-            </li>
-
-            <li>
-              <p>
-                Write sentences and paragraphs, and use correct grammar and punctuation. 
-                (For example, every sentence should end with a period.)
-              </p>
-            </li>
-
-            <li>
-              <p>
-                Follow the standard mathematical conventions for notation.
-              </p>
-            </li>
-
-            <li>
-              <p>
-                Define every new variable letter at the first point it appears in your proof.
-              </p>
-            </li>
-
-            <li>
-              <p>
-                The first sentence of a proof should suppose the hypotheses, and the last sentence of a proof should conclude the conclusion.
-              </p>
-            </li>
-          </ol>
-        </p>
-      
-      
-        
       </preface>
 
     </frontmatter>
