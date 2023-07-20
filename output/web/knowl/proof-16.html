@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
+<div class="para">Let \{a_n\}^\infty_{n=1} be any sequence. Recall that our goal is to prove it either has an increasing subsequence or it has a decreasing subsequence. This is equivalent to showing that if it has no increasing subsequences, then it does have at least one decreasing subsequence. So, let us assume it has no increasing subsequences.</div> <div class="para">We will prove it has at least one decreasing subsequence by constructing the indices n1 &lt; n2 &lt; · · · of such a subsequence recursively. By the contrapositive of part (1) Lemma 16.4 , since \{a_n\}^\infty_{n=1} does not contain any increasing subsequences, we know that {an | n ∈ N} has a maximum value. That is, there exists a natural number n1 such that an1 ≥ am for all m ≥ 1.</div> <div class="para">For any k, given nk, the subsequence ank +1, ank +2, ank +3, . . . also has no increasing subsequence, since a subsequence of such a sequence is a subsequence of the original sequence too. Thus, it must have a maximum value again by part (1) Lemma 16.4; choose nk+1 such that ank+1 = max{ank +1, ank +2, ank +3, . . . }. By construction, we have nk+1 &gt; nk. Thus, this gives a recursive definition for nk.</div> <div class="para">For any k, note that ank is the maximum of a set that contains ank+1 (since it is later in the sequence). It follows that ank ≥ ank+1. That is, we have constructed a decreasing subsequence of the original sequence.</div></article><span class="incontext"><a href="sec-subsequences.html#proof-16" class="internal">in-context</a></span>
+</body>
+</html>
