@@ -13,19 +13,32 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">For any <span class="process-math">\(f\in\mathcal{B}[a,b]\text{,}\)</span>
-</div>
+<div class="para">For each <span class="process-math">\(k=1,\dots,n\)</span> and <span class="process-math">\(i=1,\dots,m_k\text{,}\)</span> we have <span class="process-math">\([y_{i-1}^{(k)},y_i^{(k)}]\subseteq [x_{k-1},x_k]\)</span> so</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\underline{\int_a^b}f(t)\,dt\leq \overline{\int_a^b}f(t)\,dt.
+\sup\{{f(t)}\,:\,{y_{i-1}^{(k)}\leq t\leq y_{i}^{(k)}}\}\leq \sup\{{f(t)}\,:\,{x_{k-1}\leq t\leq x_k}\}.
 \end{equation*}
 </div>
-<div class="para">In particular, <span class="process-math">\(f\in\mathcal{R}[a,b]\iff\)</span>
-</div>
+<div class="para">That is,</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\underline{\int_a^b}f(t)\,dt\geq \overline{\int_a^b}f(t)\,dt.
+M_i(f,Q_k)\leq M_k(f,P).
 \end{equation*}
+</div>
+<div class="para">Now,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+u(f,Q)
+&amp;=\sum_{k=1}^n\sum_{i=1}^{m_k}M_i(f,Q_k)(y_i^{(k)}-y_{i-1}^{(k)}
+\leq \sum_{k=1}^n\sum_{i=1}^{m_k}M_k(f,P)(y_i^{(k)}-y_{i-1}^{(k)}\\
+&amp;=\sum_{k=1}^n M_k(f,P)(y_{m_k}^{(k)}-y_0^{(k)}
+=\sum_{k=1}^n M_k(f,P)(x_k-x_{k-1})
+=u(f,P).
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">Thus <span class="process-math">\(u(f,Q)\leq u(f,P)\text{.}\)</span>
 </div>
 </div>
 <span class="incontext"><a href="sec-riemann.html#p-580" class="internal">in-context</a></span>

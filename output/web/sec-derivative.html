@@ -582,11 +582,11 @@ window.MathJax = {
 </h2>
 <article class="definition definition-like" id="def-interior-point"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.1</span><span class="period">.</span><span class="space"> </span><span class="title">Interior Point.</span>
-</h3> <div class="para" id="p-544">For a metric <span class="process-math">\(X\)</span> and a set <span class="process-math">\(S\subseteq X\text{,}\)</span> a point <span class="process-math">\(a\in S\)</span> is called an <dfn class="terminology">interior point</dfn> if there is some <span class="process-math">\(\varepsilon&gt;0\)</span> such that <span class="process-math">\(B_\varepsilon(a)\subseteq S\text{.}\)</span>
-</div> <div class="para" id="p-545">In particular, if <span class="process-math">\(S\subseteq \mathbb{R},a\in S\)</span> is an interior point iff exists <span class="process-math">\(\varepsilon&gt;0\)</span> such that <span class="process-math">\((a-\varepsilon,a+\varepsilon)\subseteq S\text{.}\)</span>
+</h3> <div class="para" id="p-546">For a metric <span class="process-math">\(X\)</span> and a set <span class="process-math">\(S\subseteq X\text{,}\)</span> a point <span class="process-math">\(a\in S\)</span> is called an <dfn class="terminology">interior point</dfn> if there is some <span class="process-math">\(\varepsilon&gt;0\)</span> such that <span class="process-math">\(B_\varepsilon(a)\subseteq S\text{.}\)</span>
+</div> <div class="para" id="p-547">In particular, if <span class="process-math">\(S\subseteq \mathbb{R},a\in S\)</span> is an interior point iff exists <span class="process-math">\(\varepsilon&gt;0\)</span> such that <span class="process-math">\((a-\varepsilon,a+\varepsilon)\subseteq S\text{.}\)</span>
 </div></article><article class="definition definition-like" id="def-derivative"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.2</span><span class="period">.</span><span class="space"> </span><span class="title">Derivative.</span>
-</h3> <div class="para logical" id="p-546">
+</h3> <div class="para logical" id="p-548">
 <div class="para">Suppose <span class="process-math">\(S\subseteq \mathbb{R}\)</span> and <span class="process-math">\(a\)</span> is an interior point of <span class="process-math">\(S_0\text{.}\)</span> We’ll say a function <span class="process-math">\(f:S\rightarrow\mathbb{R}\)</span> is <dfn class="terminology">differentiable</dfn> at <span class="process-math">\(a\)</span> if</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -597,8 +597,8 @@ f'(a):=\lim_{x\rightarrow a}\frac{f(x)-f(a)}{x-a}
 </div></article><article class="theorem theorem-like" id="thm-diff-cont"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.3</span><span class="period">.</span><span class="space"> </span><span class="title">Differentiable Implies Continuous.</span>
 </h3>
-<div class="para" id="p-547">If <span class="process-math">\(S\subseteq \mathbb{R}, a\in S\)</span> is an interior point, and <span class="process-math">\(f:S\rightarrow \mathbb{R}\)</span> is differentiable at <span class="process-math">\(a\text{,}\)</span> then <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(a\text{.}\)</span>
-</div></article><article class="hiddenproof" id="proof-59"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-59"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-59"><article class="hiddenproof"><div class="para logical" id="p-548">
+<div class="para" id="p-549">If <span class="process-math">\(S\subseteq \mathbb{R}, a\in S\)</span> is an interior point, and <span class="process-math">\(f:S\rightarrow \mathbb{R}\)</span> is differentiable at <span class="process-math">\(a\text{,}\)</span> then <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(a\text{.}\)</span>
+</div></article><article class="hiddenproof" id="proof-59"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-59"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-59"><article class="hiddenproof"><div class="para logical" id="p-550">
 <div class="para">We need to show that <span class="process-math">\(\lim_{x\rightarrow a}f(x)=f(a)\text{.}\)</span> If <span class="process-math">\(x\in S\setminus\{{a}\}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -616,20 +616,20 @@ f(x)
 <article class="theorem theorem-like" id="thm-derivative-rules"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.4</span><span class="period">.</span><span class="space"> </span><span class="title">Derivative Rules.</span>
 </h3>
-<div class="para logical" id="p-549">
+<div class="para logical" id="p-551">
 <div class="para">If <span class="process-math">\(S\subseteq \mathbb{R},a\in S\)</span> is an interior point, <span class="process-math">\(f,g:S\rightarrow\mathbb{R}\)</span> are differentiable at <span class="process-math">\(a\)</span> and <span class="process-math">\(\alpha\in\mathbb{R}\text{,}\)</span> then</div>
 <ol class="decimal">
-<li id="li-163"><div class="para" id="p-550"><span class="process-math">\((f+g)'(a)=f'(a)+g'(a)\text{;}\)</span></div></li>
-<li id="li-164"><div class="para" id="p-551"><span class="process-math">\((\alpha f)'(a)=\alpha f'(a)\text{;}\)</span></div></li>
-<li id="li-165"><div class="para" id="p-552"><span class="process-math">\((fg)'(a)=f'(a)g(a)+f(a)g'(a)\text{;}\)</span></div></li>
-<li id="li-166"><div class="para" id="p-553">
+<li id="li-163"><div class="para" id="p-552"><span class="process-math">\((f+g)'(a)=f'(a)+g'(a)\text{;}\)</span></div></li>
+<li id="li-164"><div class="para" id="p-553"><span class="process-math">\((\alpha f)'(a)=\alpha f'(a)\text{;}\)</span></div></li>
+<li id="li-165"><div class="para" id="p-554"><span class="process-math">\((fg)'(a)=f'(a)g(a)+f(a)g'(a)\text{;}\)</span></div></li>
+<li id="li-166"><div class="para" id="p-555">
 <span class="process-math">\(\left({\frac{f}{g}}\right)'(a)=\frac{g(a)f'(a)-f(a)g'(a)}{(g(a))^2}\)</span> if <span class="process-math">\(g(a)\neq 0\text{.}\)</span>
 </div></li>
 </ol>
-</div></article><article class="hiddenproof" id="proof-60"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-60"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-60"><article class="hiddenproof"><div class="para logical" id="p-554">
+</div></article><article class="hiddenproof" id="proof-60"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-60"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-60"><article class="hiddenproof"><div class="para logical" id="p-556">
 <div class="para"><dfn class="terminology">(1), (2) are exercises</dfn></div>
 <ol class="decimal">
-<li id="li-167"><div class="para logical" id="p-555">
+<li id="li-167"><div class="para logical" id="p-557">
 <div class="para">For <span class="process-math">\(x\in S\setminus\{{a}\}\text{,}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -669,13 +669,13 @@ f(x)
 \end{equation*}
 </div>
 </div></li>
-<li id="li-168"><div class="para" id="p-556">To make sense of <span class="process-math">\(\left({\frac{f}{g}}\right)(a)\text{,}\)</span> let <span class="process-math">\(T=\{{x\in S}\,:\,{g(x)\neq 0}\}\text{,}\)</span> and we’ll view <span class="process-math">\(\frac{f}{g}\)</span> as a function <span class="process-math">\(\frac{f}{g}:T\rightarrow \mathbb{R}\text{.}\)</span> Since <span class="process-math">\(g(a)\neq 0\)</span> and <span class="process-math">\(g\)</span> is continuous at <span class="process-math">\(a\text{,}\)</span> there exists <span class="process-math">\(\delta&gt;0\)</span> such that <span class="process-math">\(g(x)\neq 0\)</span> whenever <span class="process-math">\(x\in(a-\delta,a+\delta)\text{.}\)</span> So <span class="process-math">\((a-\delta,a+\delta)\subseteq T\)</span> and <span class="process-math">\(a\)</span> is an interior point of <span class="process-math">\(T\text{.}\)</span> The rest of the computation is similar to the one in (3).</div></li>
+<li id="li-168"><div class="para" id="p-558">To make sense of <span class="process-math">\(\left({\frac{f}{g}}\right)(a)\text{,}\)</span> let <span class="process-math">\(T=\{{x\in S}\,:\,{g(x)\neq 0}\}\text{,}\)</span> and we’ll view <span class="process-math">\(\frac{f}{g}\)</span> as a function <span class="process-math">\(\frac{f}{g}:T\rightarrow \mathbb{R}\text{.}\)</span> Since <span class="process-math">\(g(a)\neq 0\)</span> and <span class="process-math">\(g\)</span> is continuous at <span class="process-math">\(a\text{,}\)</span> there exists <span class="process-math">\(\delta&gt;0\)</span> such that <span class="process-math">\(g(x)\neq 0\)</span> whenever <span class="process-math">\(x\in(a-\delta,a+\delta)\text{.}\)</span> So <span class="process-math">\((a-\delta,a+\delta)\subseteq T\)</span> and <span class="process-math">\(a\)</span> is an interior point of <span class="process-math">\(T\text{.}\)</span> The rest of the computation is similar to the one in (3).</div></li>
 </ol>
 </div></article></div>
 <article class="corollary theorem-like" id="cor-power-rule"><h3 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">5.5</span><span class="period">.</span><span class="space"> </span><span class="title">Power Rule.</span>
 </h3>
-<div class="para logical" id="p-557">
+<div class="para logical" id="p-559">
 <div class="para">If <span class="process-math">\(n\in\mathbb{Z}_+\)</span> and <span class="process-math">\(f:\mathbb{R}\rightarrow\mathbb{R}\)</span> is given by <span class="process-math">\(f(x)=x^n\text{,}\)</span> then <span class="process-math">\(f\)</span> is differentiable on <span class="process-math">\(\mathbb{R}\)</span> and</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -686,7 +686,7 @@ nx^{n-1} &amp; n\geq 1.
 \end{equation*}
 </div>
 <div class="para">[Here <span class="process-math">\(0^0=1\text{.}\)</span>]</div>
-</div></article><article class="hiddenproof" id="proof-61"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-61"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-61"><article class="hiddenproof"><div class="para logical" id="p-558">
+</div></article><article class="hiddenproof" id="proof-61"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-61"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-61"><article class="hiddenproof"><div class="para logical" id="p-560">
 <div class="para">
 <span class="process-math">\(n=0,1\)</span> are <dfn class="terminology">exercises</dfn> Assume the result holds for some <span class="process-math">\(n\geq 1\text{.}\)</span> Set <span class="process-math">\(f(x)=x^{n+1},g(x)=x^n,h(x)=x\)</span> so <span class="process-math">\(f=gh\text{.}\)</span> Then</div>
 <div class="displaymath process-math">
@@ -703,7 +703,7 @@ f'(x)
 <article class="remark remark-like" id="remark-14"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">5.6</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-559">
+<div class="para logical" id="p-561">
 <div class="para">We could’ve defined derivatives of functions <span class="process-math">\(f:\mathbb{R}\rightarrow \mathbb{C}\)</span> (or <span class="process-math">\(f:S\rightarrow\mathbb{C},S\subseteq \mathbb{R}\)</span>) in the same way. Then <span class="process-math">\(f\)</span> is differentiable at at point <span class="process-math">\(a\)</span> iff <span class="process-math">\(\text{Re}(f)\)</span> and <span class="process-math">\(\text{Im}(f)\)</span> are, in which case</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -732,7 +732,7 @@ f'(a)
 </div></article><article class="theorem theorem-like" id="thm-chain-rule"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.7</span><span class="period">.</span><span class="space"> </span><span class="title">Chain Rule.</span>
 </h3>
-<div class="para" id="p-560"></div></article></section></div>
+<div class="para" id="p-562"></div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="ch-differentiation.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sec-mvt.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

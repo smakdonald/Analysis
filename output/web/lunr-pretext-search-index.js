@@ -979,23 +979,41 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4.1",
   "title": "Topology and Metric Spaces",
-  "body": "Topology and Metric Spaces    Keep in mind, measurement is not just in numbers, but stories.   Pearl Zhu     Let M be a set. A metric on M is a function d from M × M into [0, ∞) which satisfies  Positive Definite  d(x, y) = 0 if and only if x = y   Symmetric  d(x, y) = d(y, x) for all y\\in M   Triangle Inequality  d(x, z) ≤ d(x, y) + d(y, z) for all z\\in M     A metric space is an ordered pair (M, d), where M is a set and d is a metric for M.    Euclidean Metric   The pair (R, d) is a metric space, where d is defined by d(x, y) = x − y. The metric d is called the usual (or absolute value or Euclidean) metric for R. The space R is understood to have the usual metric unless otherwise specified.    Discrete Metric         Subsets of metric spaces are metric spaces: If (X,d) is a metric space and Y\\subseteq X then (Y,d\\mid_{Y\\times Y}) is a metric space.    "
+  "body": "Topology and Metric Spaces    Keep in mind, measurement is not just in numbers, but stories.   Pearl Zhu     Set and ( )     We’ll often write in place of and in place of      Let be a set. A metric on is a function such that   Positive Definite      Symmetric      Triangle Inequality        A metric space is a pair where is a set and is a metric on . We’ll typically write for a metric space where the metric is understood.    Euclidean Metric   The pair (R, d) is a metric space, where d is defined by d(x, y) = x − y. The metric d is called the usual (or absolute value or Euclidean) metric for R. The space R is understood to have the usual metric unless otherwise specified.    Discrete Metric   For a set , the discrete metric on is .       Subsets of metric spaces are metric spaces: If (X,d) is a metric space and Y\\subseteq X then (Y,d\\mid_{Y\\times Y}) is a metric space.    "
+},
+{
+  "id": "def-cn-rn",
+  "level": "2",
+  "url": "sec-topology-metric.html#def-cn-rn",
+  "type": "Definition",
+  "number": "4.1",
+  "title": "",
+  "body": "  Set and ( )   "
+},
+{
+  "id": "convention-6",
+  "level": "2",
+  "url": "sec-topology-metric.html#convention-6",
+  "type": "Convention",
+  "number": "4.2",
+  "title": "",
+  "body": " We’ll often write in place of and in place of   "
 },
 {
   "id": "def-metric",
   "level": "2",
   "url": "sec-topology-metric.html#def-metric",
   "type": "Definition",
-  "number": "4.1",
+  "number": "4.3",
   "title": "",
-  "body": "  Let M be a set. A metric on M is a function d from M × M into [0, ∞) which satisfies  Positive Definite  d(x, y) = 0 if and only if x = y   Symmetric  d(x, y) = d(y, x) for all y\\in M   Triangle Inequality  d(x, z) ≤ d(x, y) + d(y, z) for all z\\in M     A metric space is an ordered pair (M, d), where M is a set and d is a metric for M.   "
+  "body": "  Let be a set. A metric on is a function such that   Positive Definite      Symmetric      Triangle Inequality        A metric space is a pair where is a set and is a metric on . We’ll typically write for a metric space where the metric is understood.   "
 },
 {
   "id": "example-8",
   "level": "2",
   "url": "sec-topology-metric.html#example-8",
   "type": "Example",
-  "number": "4.2",
+  "number": "4.4",
   "title": "Euclidean Metric.",
   "body": "Euclidean Metric   The pair (R, d) is a metric space, where d is defined by d(x, y) = x − y. The metric d is called the usual (or absolute value or Euclidean) metric for R. The space R is understood to have the usual metric unless otherwise specified.   "
 },
@@ -1004,16 +1022,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-topology-metric.html#example-9",
   "type": "Example",
-  "number": "4.3",
+  "number": "4.5",
   "title": "Discrete Metric.",
-  "body": "Discrete Metric      "
+  "body": "Discrete Metric   For a set , the discrete metric on is .    "
 },
 {
   "id": "thm-metric-subsets",
   "level": "2",
   "url": "sec-topology-metric.html#thm-metric-subsets",
   "type": "Theorem",
-  "number": "4.4",
+  "number": "4.6",
   "title": "",
   "body": "  Subsets of metric spaces are metric spaces: If (X,d) is a metric space and Y\\subseteq X then (Y,d\\mid_{Y\\times Y}) is a metric space.   "
 },
@@ -1031,7 +1049,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-open-closed.html#def-limit-point",
   "type": "Definition",
-  "number": "4.5",
+  "number": "4.7",
   "title": "",
   "body": "  Let M be a metric space, and let X be a subset of M. We say that a point x in M is a limit point of X if there is a sequence {xn} such that x_n\\in X for every positive integer n and limn→∞ xn = x.   "
 },
@@ -1040,7 +1058,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-open-closed.html#exercise-4",
   "type": "Exploration",
-  "number": "4.6",
+  "number": "4.8",
   "title": "",
   "body": " On the real line 1 is a limit point of either of the sets [0, 1] or (0, 1)  "
 },
@@ -1049,7 +1067,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-open-closed.html#def-closed-set",
   "type": "Definition",
-  "number": "4.7",
+  "number": "4.9",
   "title": "Closed Set.",
   "body": "Closed Set   Let M be a metric space, and let X be a subset of M. If every limit point of X belongs to X, we say that X is closed (in M).   "
 },
@@ -1058,7 +1076,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-open-closed.html#thm-closet-sets",
   "type": "Theorem",
-  "number": "4.8",
+  "number": "4.10",
   "title": "",
   "body": "  Let M be a metric space and let x\\in M. Then M, \\es , and {x} are closed subsets of M.   "
 },
@@ -1067,7 +1085,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-open-closed.html#thm-closed-union",
   "type": "Theorem",
-  "number": "4.9",
+  "number": "4.11",
   "title": "",
   "body": "  Let X and Y be closed subsets of a metric space. Then X\\cup Y is closed.   "
 },
@@ -1076,7 +1094,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-open-closed.html#cor-closed-unions",
   "type": "Corollary",
-  "number": "4.10",
+  "number": "4.12",
   "title": "",
   "body": "  If X1, X2, . . . , Xn are closed subsets of a metric space, then X_1\\cup X_2\\cup\\dots\\cup X_n is closed.   "
 },
@@ -1085,7 +1103,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-open-closed.html#example-10",
   "type": "Example",
-  "number": "4.11",
+  "number": "4.13",
   "title": "Infinite Unions Need Not Be Closed.",
   "body": "Infinite Unions Need Not Be Closed      "
 },
@@ -1094,7 +1112,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-open-closed.html#cor-finite-closed",
   "type": "Corollary",
-  "number": "4.12",
+  "number": "4.14",
   "title": "",
   "body": "  Any finite subset of a metric space is closed.   "
 },
@@ -1103,7 +1121,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-open-closed.html#thm-intersections-closed",
   "type": "Theorem",
-  "number": "4.13",
+  "number": "4.15",
   "title": "",
   "body": "  Let \\fC be a collection of closed subsets of a metric space. Then \\bigcap\\fC is closed.   "
 },
@@ -1112,7 +1130,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-open-closed.html#def-open-ball",
   "type": "Definition",
-  "number": "4.14",
+  "number": "4.16",
   "title": "",
   "body": "  Let be a metric space. The open ball of radius with center is .   "
 },
@@ -1121,7 +1139,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-open-closed.html#example-11",
   "type": "Example",
-  "number": "4.15",
+  "number": "4.17",
   "title": "",
   "body": "  The open ball in R of radius ε centered at x is the open interval (x − ε, x + ε). An open ball in R2 is the interior of a disk and an open ball in R3 is the interior of a sphere.   "
 },
@@ -1130,7 +1148,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-open-closed.html#warning-3",
   "type": "Warning",
-  "number": "4.16",
+  "number": "4.18",
   "title": "",
   "body": " In general, (they are equal in )  "
 },
@@ -1139,7 +1157,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-open-closed.html#example-12",
   "type": "Example",
-  "number": "4.17",
+  "number": "4.19",
   "title": "",
   "body": "   . is closed, . But    "
 },
@@ -1148,7 +1166,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-open-closed.html#def-open-set",
   "type": "Definition",
-  "number": "4.18",
+  "number": "4.20",
   "title": "",
   "body": "  Let M be a metric space and let X be a subset of M. We say that X is open if for every x\\in X, there exists an open ball Bε(x) (centered at x) such that B_\\e(x)\\sse X.   "
 },
@@ -1157,7 +1175,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-open-closed.html#example-13",
   "type": "Example",
-  "number": "4.19",
+  "number": "4.21",
   "title": "",
   "body": "     An open interval (a, b) in R is open in R     , is not open since but is not contained in for any . Also is not closed since is a cluster point of but .      "
 },
@@ -1166,7 +1184,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-open-closed.html#thm-open-sets",
   "type": "Theorem",
-  "number": "4.20",
+  "number": "4.22",
   "title": "",
   "body": "  Let M be a metric space. Then M and \\es are open subsets of M.   "
 },
@@ -1175,7 +1193,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-open-closed.html#thm-open-balls-open",
   "type": "Theorem",
-  "number": "4.21",
+  "number": "4.23",
   "title": "",
   "body": "  Open balls are open. That is, if and , then is open.    Fix . Then . Let . It's enough to show that . Fix . Then and so . So and .   "
 },
@@ -1184,7 +1202,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-open-closed.html#thm-properties-of-open-sets",
   "type": "Theorem",
-  "number": "4.22",
+  "number": "4.24",
   "title": "Properties of Open Sets.",
   "body": "Properties of Open Sets   If is a metric space    and are open    If are open, then is open.    If is a collection of open subsets of , then is open.          1 is clear (already talked through)    Fix . Since and are open, there are such that and . Let . Then and . So .    If , then for some . As is open, there is an such that . But then .      "
 },
@@ -1193,7 +1211,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-open-closed.html#example-14",
   "type": "Example",
-  "number": "4.23",
+  "number": "4.25",
   "title": "Arbitrary Intersection Need Not Be Open.",
   "body": "Arbitrary Intersection Need Not Be Open   In .   "
 },
@@ -1202,7 +1220,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-open-closed.html#def-clopen",
   "type": "Definition",
-  "number": "4.24",
+  "number": "4.26",
   "title": "",
   "body": "  A set could be both open and closed (such sets are often called clopen ).   "
 },
@@ -1211,7 +1229,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-open-closed.html#example-15",
   "type": "Example",
-  "number": "4.25",
+  "number": "4.27",
   "title": "",
   "body": "     In any metric space , and are both clopen.    If , every subset of is clopen, similarly if is any set with the discrete metric.     then is open and closed in .      "
 },
@@ -1220,7 +1238,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-open-closed.html#thm-open-closed-complement",
   "type": "Theorem",
-  "number": "4.26",
+  "number": "4.28",
   "title": "",
   "body": "  Let M be a metric space and let X\\sse M. Then X is open if and only if X^C is closed.    ( ) Suppose is open and such that . We need to show that .  Suppose . Then exists so that . Since , there exists such that for all . But then, in particular,  , a contradiction.  Thus .  ( ) Suppose is not open. Then there exists an such that for all . For each integer , there is an . Then and for all . So . So is a cluster point of , but . Hence is not closed.   "
 },
@@ -1229,7 +1247,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-open-closed.html#exercise-5",
   "type": "Exploration",
-  "number": "4.27",
+  "number": "4.29",
   "title": "Sequential Characterization of Open Sets.",
   "body": "Sequential Characterization of Open Sets  Let be a metric space. A set is open iff whenever converges and , then there exists such that for all .  "
 },
@@ -1247,7 +1265,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-compactness.html#def-compact",
   "type": "Definition",
-  "number": "4.28",
+  "number": "4.30",
   "title": "Compact.",
   "body": "Compact   A metric space is compact if every sequence has a convergent subsequence.  A subset is compact if is a compact metric space with the induced metric; ie every sequence has a subsequence which converges in .   "
 },
@@ -1256,7 +1274,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-compactness.html#prop-closer-interval",
   "type": "Proposition",
-  "number": "4.29",
+  "number": "4.31",
   "title": "Closed Intervals are Compact.",
   "body": "Closed Intervals are Compact   A closed interval is compact.    If , there is a subsequence converging to some . (from Bolzano-Weierstrass Theorem, every bounded sequence has a convergent subsequence). Since for all and , we have . So .   "
 },
@@ -1265,7 +1283,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-compactness.html#exercise-6",
   "type": "Exploration",
-  "number": "4.30",
+  "number": "4.32",
   "title": "",
   "body": "  is not compact.    has no subsequence which converges in .  "
 },
@@ -1274,7 +1292,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-compactness.html#thm-compact-subsets-closed",
   "type": "Theorem",
-  "number": "4.31",
+  "number": "4.33",
   "title": "Compactness and Closed Subsets.",
   "body": "Compactness and Closed Subsets   If is a metric space and is compact, then is closed. Conversely, if is closed and is compact, then is also compact.    If is not closed let . Then exists with . Any subsequence of converges to , so no subsequence of converges to a point in .  Further, suppose is closed and is compact. Let be a sequence. There is a subsequence which converges in . Since is closed, .   "
 },
@@ -1283,7 +1301,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-compactness.html#thm-compact-complete",
   "type": "Theorem",
-  "number": "4.32",
+  "number": "4.34",
   "title": "Compact Implies Complete.",
   "body": "Compact Implies Complete   If is a compact metric space, then is complete.    Suppose is Cauchy. Since is compact, has a convergent subsequence. Now, every Cauchy sequence with a convergent subsequence converges. So converges.   "
 },
@@ -1292,7 +1310,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-compactness.html#remark-8",
   "type": "Remark",
-  "number": "4.33",
+  "number": "4.35",
   "title": "",
   "body": " The converse is false! is complete, but not compact. For ex, has no convergent subsequence.  "
 },
@@ -1301,7 +1319,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-compactness.html#def-bounded-metric",
   "type": "Definition",
-  "number": "4.34",
+  "number": "4.36",
   "title": "Bounded Metric Space.",
   "body": "Bounded Metric Space   A metric space is bounded if there exists such that for all . Equivalently (when ), .  A subset is bounded if is bounded as a metric space with the induced metric. ie exists .   "
 },
@@ -1310,7 +1328,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-compactness.html#exercise-7",
   "type": "Exploration",
-  "number": "4.35",
+  "number": "4.37",
   "title": "Discrete Bounds.",
   "body": "Discrete Bounds  Discrete metric is bounded always, but not compact.  "
 },
@@ -1319,7 +1337,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-compactness.html#lem-compact-bounded",
   "type": "Lemma",
-  "number": "4.36",
+  "number": "4.38",
   "title": "Converging Distances.",
   "body": "Converging Distances   If is a metric space and converge, then     Set . Then . So .  Similarly, . So .   "
 },
@@ -1328,7 +1346,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-compactness.html#thm-compact-bounded",
   "type": "Theorem",
-  "number": "4.37",
+  "number": "4.39",
   "title": "Compact Implies Bounded.",
   "body": "Compact Implies Bounded   Every compact metric space is bounded.    Suppose is an unbounded metric space, so . Then for all with . If is compact, there exist convergent subsequences and of . But then converges and hence is bounded, but for all .   "
 },
@@ -1337,7 +1355,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-compactness.html#thm-heine-borel",
   "type": "Theorem",
-  "number": "4.38",
+  "number": "4.40",
   "title": "Heine-Borel Theorem.",
   "body": "Heine-Borel Theorem   If , then is compact iff is closed and bounded.    ( ) Let be a sequence in and write . Note that for any , and any , we have . In particular, since is bounded, is also bounded. By the Bolzano-Weierstrass theorem, has a convergent subsequence. Call it (so by strictly increasing.) Let . Then is a bounded sequence and hence is bounded. So has a convergent subsequence converging to some .  Note that is a subsequence of , so and .  Continue in this way choosing to be a subsequence of for . To arrange for to be convergent and set for . Then set for each . Then is a subsequence of (in fact a subsubsub...subsequence (  subs )).  So converges to for all . Then if , we have . Since is closed and each , we have . So every sequence in has a subsequence converging in . This shows that is compact.   "
 },
@@ -1346,7 +1364,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-compactness.html#cor-heine-borel-real",
   "type": "Corollary",
-  "number": "4.39",
+  "number": "4.41",
   "title": "Heine-Borel for <span class=\"process-math\">\\(\\R^n\\)<\/span>.",
   "body": "Heine-Borel for   If , then is compact iff is closed and bounded.    ( ) same as for .  ( ) is closed, and so if is closed in then is also closed in . So is compact by the Heine-Borel Theorem.   "
 },
@@ -1355,7 +1373,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-compactness.html#def-diameter",
   "type": "Definition",
-  "number": "4.40",
+  "number": "4.42",
   "title": "Diameter.",
   "body": "Diameter   For a metric space , define the diameter of to be .   "
 },
@@ -1364,7 +1382,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-compactness.html#exercise-8",
   "type": "Exploration",
-  "number": "4.41",
+  "number": "4.43",
   "title": "",
   "body": "  is bounded. Similarly, for a subset .  "
 },
@@ -1373,7 +1391,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-compactness.html#def-totally-bounded",
   "type": "Definition",
-  "number": "4.42",
+  "number": "4.44",
   "title": "Totally Bounded Metric.",
   "body": "Totally Bounded Metric   A metric space is totally bounded if for all there exists for some with and .   "
 },
@@ -1382,7 +1400,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-compactness.html#example-16",
   "type": "Example",
-  "number": "4.43",
+  "number": "4.45",
   "title": "Closed Interval is Totally Bounded.",
   "body": "Closed Interval is Totally Bounded    is totally bounded. For all  and for all .   "
 },
@@ -1391,7 +1409,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-compactness.html#exercise-9",
   "type": "Exploration",
-  "number": "4.44",
+  "number": "4.46",
   "title": "Bounded Sets in <span class=\"process-math\">\\(\\R^n\\)<\/span> Totally Bounded.",
   "body": "Bounded Sets in Totally Bounded  Any bounded set in is totally bounded.  "
 },
@@ -1400,7 +1418,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-compactness.html#prop-discrete-totally-bounded",
   "type": "Proposition",
-  "number": "4.45",
+  "number": "4.47",
   "title": "Bounded but not Totally Bounded.",
   "body": "Bounded but not Totally Bounded   If is an infinite set with the discrete metric then is bounded ( ) but not totally bounded.    If , any set with contains at most one point. So if we could write with , then would have at most points. So would be finite.   "
 },
@@ -1409,7 +1427,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-compactness.html#exercise-10",
   "type": "Exploration",
-  "number": "4.46",
+  "number": "4.48",
   "title": "",
   "body": " Let be a metric space.   If is totally bounded, then is bounded.     is totally bounded iff there exist with . (This is the book’s definition of totally bounded.)    A subset of a totally bounded set is totally bounded.     "
 },
@@ -1418,7 +1436,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-compactness.html#thm-totally-bounded-characterization",
   "type": "Theorem",
-  "number": "4.47",
+  "number": "4.49",
   "title": "Totally Bounded and Cauchy Subsequences.",
   "body": "Totally Bounded and Cauchy Subsequences   A metric space is totally bounded iff every sequence in has a Cauchy subsequence.    ( ) [totally bounded implies every sequence has a Cauchy subsequence] Suppose is a totally bounded metric space. Let be a sequence. We’ll first construct a sequence of subsets of such that              is infinite for all .     Let . Assuming has been constructed, note that is totally bounded (subset of totally bounded set is totally bounded). So with and . Since is infinite, there is an such that is infinite. Set . Now construct as follows: Since is infinite, it’s not empty, so there exist with . Now if has been constructed, then is infinite, and hence is non-empty. Choose with and . Then is a subsequence of with for all .  We now show is Cauchy. Fix . Choose with . Fix , . Then and (by condition (i)). So (condition (ii)). So is Cauchy.  ( ) [wts every sequence has a Cauchy subsequence implies totally bounded]  Suppose is not totally bounded. Then exists such that for all with we have . Let . (note: since is totally bounded) Assume we’ve constructed with for all with . Since for all (triangle inequality) we have so exists with . So we’ve constructed a sequence with for all so has no Cauchy subsequence.   "
 },
@@ -1427,7 +1445,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-compactness.html#cor-compact-iff-complete-totally-bounded",
   "type": "Corollary",
-  "number": "4.48",
+  "number": "4.50",
   "title": "Compact iff Complete and Totally Bounded.",
   "body": "Compact iff Complete and Totally Bounded   A metric space is compact iff it is complete and totally bounded.   "
 },
@@ -1436,7 +1454,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-compactness.html#cor-cn-bounded-subsets",
   "type": "Corollary",
-  "number": "4.49",
+  "number": "4.51",
   "title": "Totally Bounded Subsets of <span class=\"process-math\">\\(\\C^n\\)<\/span>.",
   "body": "Totally Bounded Subsets of   If , then is bounded iff it is totally bounded.    ( ) holds for all metric spaces.  ( ) If is bounded, then every sequence is bounded, and so has a subsequence in by the Bolzano-Weierstrass Theorem (or by the Heine-Borel theorem applied to ). So has a Cauchy subsequence.   "
 },
@@ -1445,7 +1463,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-compactness.html#def-finite-intersection-property",
   "type": "Definition",
-  "number": "4.50",
+  "number": "4.52",
   "title": "Finite Intersection Property.",
   "body": "Finite Intersection Property   A collection of sets has the finite intersection property if whenever is finite, .   "
 },
@@ -1454,7 +1472,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-compactness.html#thm-borel-lebesgue",
   "type": "Theorem",
-  "number": "4.51",
+  "number": "4.53",
   "title": "Borel-Lebesgue Theorem.",
   "body": "Borel-Lebesgue Theorem   For a metric space , the following are equivalent:    is compact.     is complete and totally bounded.    Every open cover of has a finite subcover. More often how compactness is defined.    Every family of closed subsets of with the finite intersection property has nonempty intersection.    Every infinite subset of has a cluster point.          (1) (2) already shown    (2) (3) S uppose is totally bounded and complete. Also, suppose (3) fails and fix an open cover of with no finite subcover.   Claim 1 : there is a sequence of points such that for all finite, .  We’ll construct by induction on . To construct : Since is totally bounded, there is a finite set with . Then also, . Suppose ftsoc that for all finite with . Then if then is finite and . So exists such that is not covered by finitely many . Suppose have been constructed so that is not covered by finitely many . Since is totally bounded, exists finite set with . Then   Since is not covered by finitely many and is finite, there is a so that is not covered by finitely many .   Claim 2 : is Cauchy.  Fix . Let be such that . Suppose . Since is not covered by finitely many , we have is not empty. In particular, . Fix . Then .   Claim 3 : Exists , so that .  Note: This implies is covered by finitely many . This contradicts step 1, which will finish the proof.  As is complete (by (2)) and is Cauchy by claim 2, we can define . Then , so exists with . Fix with . Fix such that for all we have . Then fix with . We’ll show that as claimed. Fix . Then and , and so . This shows that and so .  thus (2) (3)    (3) (4) (proved by contrapositive)  Suppose (3) holds. To show (4) suppose is a collection of closed sets with . We want to show that there is a finite set with . Then is open for all and . So is an open cover of . By (3), there is a finite set with . Then and so     Suppose is an infinite set. Let and let for . We’ll show has the finite intersection property. Suppose . Then . Since is infinite and is finite, . We show If then is a cluster point for . Suppose . We need to show . If , then . ( ). As so . If , then . ( ) By (a) and (4), . Then by (b) has a cluster point. Hence (5) holds.    (5) (1) Assume (5) and is a sequence. If has a constant subsequence, then it has a convergent subsequence.  Suppose has no constant subsequence. Therefore is infinite. By (5), has a cluster point . Note first that such that since otherwise there would be a subsequence of such that for all but we’ve assumed has no constant subsequence. Note also that for all , . Then since exists with .  Now since , exists with . Continue inductively to produce with . Then is a subsequence of and .      "
 },
@@ -1472,7 +1490,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-connected.html#def-connected",
   "type": "Definition",
-  "number": "4.52",
+  "number": "4.54",
   "title": "Connected, Disconnected.",
   "body": "Connected, Disconnected   A metric space is disconnected if there are nonempty open sets such that and .  A metric space is connected if it is not disconnected.   "
 },
@@ -1481,7 +1499,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-connected.html#example-17",
   "type": "Example",
-  "number": "4.53",
+  "number": "4.55",
   "title": "",
   "body": "   is disconnected, and the sphere is connected.   "
 },
@@ -1490,7 +1508,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-connected.html#def-path-connected",
   "type": "Definition",
-  "number": "4.54",
+  "number": "4.56",
   "title": "Path Connected.",
   "body": "Path Connected   A metric space is path-connected if for any there is a continuous function so that .   "
 },
@@ -1499,7 +1517,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-connected.html#exercise-11",
   "type": "Exploration",
-  "number": "4.55",
+  "number": "4.57",
   "title": "",
   "body": " Every path-connected metric space is connected, but the converse is false.  "
 },
@@ -1508,7 +1526,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-connected.html#example-18",
   "type": "Example",
-  "number": "4.56",
+  "number": "4.58",
   "title": "",
   "body": "   is connected for .    We’ll show it’s path-connected. Define by . Then is continuous, .   "
 },
@@ -1517,7 +1535,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-connected.html#thm-connected-characterization",
   "type": "Theorem",
-  "number": "4.57",
+  "number": "4.59",
   "title": "Connected Characterization.",
   "body": "Connected Characterization   Let be a metric space, let be a subset, and view as a metric space with the induced metric. Then is disconnected iff exist open sets such that  , and    "
 },
@@ -1526,7 +1544,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-connected.html#prop-connected-real-subsets",
   "type": "Proposition",
-  "number": "4.58",
+  "number": "4.60",
   "title": "Connected Real Subsets.",
   "body": "Connected Real Subsets   If is a nonempty connected set, then either                          Consider , . It suffices to show , since then and . To this end, suppose . Then . Both and are open sets. Since with . Then so nonempty. Similarly, . This shows is disconnected, a contradiction. Hence .   "
 },
@@ -1535,7 +1553,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-connected.html#prop-closed-interval-connected",
   "type": "Proposition",
-  "number": "4.59",
+  "number": "4.61",
   "title": "Closed Unit Interval Connected in <span class=\"process-math\">\\(\\R\\)<\/span>.",
   "body": "Closed Unit Interval Connected in    is connected.    Suppose ftsoc that is disconnected. Then there exist open sets such that and . Wlog, (has to be in one of them). Let . It’s enough to show , since then and , a contradiction. Note that so . Let .  Claim 1: . Suppose not. Then . As so that and . Then for all , and so . This implies (since ). So . Since with . Let . Note that since . Then . Also, . So , and hence .  Claim 2: . Suppose . As such that . Let . Then and . Note that and as . So . Now, and , a contradiction.  This shows . Hence a contradiction   "
 },
@@ -1544,7 +1562,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-connected.html#remark-9",
   "type": "Remark",
-  "number": "4.60",
+  "number": "4.62",
   "title": "",
   "body": " Using this, one can show that every path-connected metric space is connected. Using this, one can then show that all the intervals in the previous example are connected.  "
 },
@@ -1553,7 +1571,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-connected.html#thm-connected-images",
   "type": "Theorem",
-  "number": "4.61",
+  "number": "4.63",
   "title": "Continuous Images of Connected Spaces are Connected..",
   "body": "Continuous Images of Connected Spaces are Connected.   Let be metric spaces and let be continuous and surjective. If is connected then is connected.    Suppose is disconnected. There are open sets such that . Then are open as is continuous. Then and . To show is disconnected, we need to show and . As is nonempty, exists . Since is surjective, exists with . Then . This shows . Similarly, .   "
 },
@@ -1562,7 +1580,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-connected.html#thm-ivt",
   "type": "Theorem",
-  "number": "4.62",
+  "number": "4.64",
   "title": "Intermediate Value Theorem.",
   "body": "Intermediate Value Theorem   Suppose and is continuous. If with either or then exists such that .    WLOG let . As is continuous and is connected, is connected by the previous theorem. So is an interval. So . So if there is with .   "
 },
@@ -1571,7 +1589,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-connected.html#thm-disconnected-subsets",
   "type": "Theorem",
-  "number": "4.63",
+  "number": "4.65",
   "title": "Disconnected Subsets.",
   "body": "Disconnected Subsets   If is a metric space and , then is disconnected in iff is disconnected as a metric space.    ( ) Suppose is disconnected in . So exist open with . Then are open subsets of (open in ). Also, , so is disconnected as a metric space.  ( ) Suppose is disconnected as a metric space. There are open sets with .   Exercise : Exist open sets with , .  Then . (If , we’re done.) Since we have that . As is open, is closed, and so . Therefore, . In particular, . Similarly, . Apply the key lemma with to get open sets with , and . Then . Also, since , we have . Similarly . So is disconnected in . ◻   "
 },
@@ -1589,7 +1607,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-function-limits.html#def-limit",
   "type": "Definition",
-  "number": "4.64",
+  "number": "4.66",
   "title": "Limit of a Function.",
   "body": "Limit of a Function   Let and be metric spaces and let be a subset. If is a function, is a cluster point of , and , we write if for all .   "
 },
@@ -1598,7 +1616,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-function-limits.html#thm-limits-sequences-function",
   "type": "Theorem",
-  "number": "4.65",
+  "number": "4.67",
   "title": "Function Limits and Sequence Limits.",
   "body": "Function Limits and Sequence Limits   Let be metric spaces and let . Suppose is a function, is a cluster point of , and . Then iff for all sequences .    ( ) Suppose . Let . Fix . Fix such that if and then . Now exists such that for all . Then if . So .  ( , contrapositive) Suppose . Then exists such that for all exists and . Fix such an . Then for each such that . Now , and does not converge to . (remark this is maybe a bit pedantic  doesn’t really make sense since the left hand side doesn’t have to exist. If you’re writing you’re assuming it exists.)   "
 },
@@ -1607,7 +1625,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-function-limits.html#example-19",
   "type": "Example",
-  "number": "4.66",
+  "number": "4.68",
   "title": "",
   "body": "   with . We’ll show does not exist by constructing sequences and converging in so that the sequences and converge to different values.  Take then , and take then . So does not exist.  (If then for any sequence converging to ,   .)   "
 },
@@ -1616,7 +1634,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-function-limits.html#example-20",
   "type": "Example",
-  "number": "4.67",
+  "number": "4.69",
   "title": "Topologist's Sine Curve.",
   "body": "Topologist's Sine Curve   Define by (oscillates wildly near origin). Called topologist’s sine curve . For any there is a sequence such that and . In particular does not exist.   "
 },
@@ -1634,16 +1652,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-continuous-functions.html#def-continuous-function",
   "type": "Definition",
-  "number": "4.68",
+  "number": "4.70",
   "title": "",
   "body": "  Let , be metric spaces. Let be a function. We say is continuous at a point  if for all such that for all with we have .  A function is continuous if is continuous at every point .   "
 },
 {
-  "id": "convention-6",
+  "id": "convention-7",
   "level": "2",
-  "url": "sec-continuous-functions.html#convention-6",
+  "url": "sec-continuous-functions.html#convention-7",
   "type": "Convention",
-  "number": "4.69",
+  "number": "4.71",
   "title": "",
   "body": " We'll often use to denote both the metric on and the metric on when it causes no confusion.  "
 },
@@ -1652,7 +1670,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-continuous-functions.html#exercise-12",
   "type": "Exploration",
-  "number": "4.70",
+  "number": "4.72",
   "title": "",
   "body": " If is a cluster point of then is continuous at iff .  "
 },
@@ -1661,7 +1679,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-continuous-functions.html#example-21",
   "type": "Example",
-  "number": "4.71",
+  "number": "4.73",
   "title": "",
   "body": "  If is given by then is continuous.    Fix and . Let . If and then    "
 },
@@ -1670,7 +1688,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-continuous-functions.html#remark-10",
   "type": "Remark",
-  "number": "4.72",
+  "number": "4.74",
   "title": "",
   "body": "  can depend on and , but not on   "
 },
@@ -1679,7 +1697,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-continuous-functions.html#example-22",
   "type": "Example",
-  "number": "4.73",
+  "number": "4.75",
   "title": "",
   "body": "  The function , is continuous.    For and . Let .  Fix with . Since , we have . Now, . Continue (from above): so is continuous.   "
 },
@@ -1688,7 +1706,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-continuous-functions.html#exercise-13",
   "type": "Exploration",
-  "number": "4.74",
+  "number": "4.76",
   "title": "",
   "body": " If and , then is continuous.  "
 },
@@ -1697,7 +1715,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-continuous-functions.html#prop-popcorn-function",
   "type": "Proposition",
-  "number": "4.75",
+  "number": "4.77",
   "title": "The Popcorn Function.",
   "body": "The Popcorn Function   There is a function such that is continuous at every irrational number and discontinuous at every rational number. Note: since .    Fix . We need such that and . Write with so that . Set . Fix . Let be irrational (know exists from next lemma). Then .  Fix and . Let with . Define .  Then is a finite set and hence is closed. Also as and , we have . Since is open, exists such that .  Fix with . We want .   Case 1 : If then .   Case 2 : Suppose . As we have and so and .   "
 },
@@ -1706,7 +1724,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-continuous-functions.html#thm-continuous-characterization",
   "type": "Theorem",
-  "number": "4.76",
+  "number": "4.78",
   "title": "Characterizations of Continuity.",
   "body": "Characterizations of Continuity   Let and be metric spaces and let be a function. TFAE:    is continuous.    For cluster points .    If is a convergent sequence, then .    If is an open set, then is open (where ).    If is a closed set, then is closed.    For all sets , .          (1 6) Suppose is continuous and . We want . Fix . Fix . We want . Since is continuous, exists so that for all . Since . Let . Then . Now .    Suppose is closed. Then . Then . So so is closed.    (5 4) Assume 5 holds. Assume is open. Have is closed, and so by 5 is closed. So is open.    (4 3) Suppose converges and let . Fix . Then is open. By 4, is open. Also , and hence exists with . Since such that for all . If then . So for all . Hence .    (3 2) Let be a cluster point. If , , then by 3 . By earlier result, this implies     (2 1) We know that is continuous at each isolated point in . Suppose then that is a cluster point. Fix . By 2, , and so exists so that for all , we have . Also holds if . So for all so is continuous.      "
 },
@@ -1715,7 +1733,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-continuous-functions.html#example-23",
   "type": "Example",
-  "number": "4.77",
+  "number": "4.79",
   "title": "",
   "body": "  Let is a closed subset of .    Let by is continuous. Also, is closed, so is closed.   "
 },
@@ -1724,7 +1742,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-continuous-functions.html#thm-continuous-compact",
   "type": "Theorem",
-  "number": "4.78",
+  "number": "4.80",
   "title": "",
   "body": "  If and are metric spaces, is compact, and is continuous, then is compact.   "
 },
@@ -1733,7 +1751,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-continuous-functions.html#cor-continuous-compact",
   "type": "Corollary",
-  "number": "4.79",
+  "number": "4.81",
   "title": "",
   "body": "  Let be a continuous function between metric spaces and assume is compact. Then if is closed, we have is also closed.    If is compact and is closed, then is compact (closed subset of a compact space). Then is compact by the previous result. So is closed.   "
 },
@@ -1742,7 +1760,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-continuous-functions.html#cor-continuous-inverses",
   "type": "Corollary",
-  "number": "4.80",
+  "number": "4.82",
   "title": "",
   "body": "  Suppose and are metric spaces and is a continuous bijection. If is compact, then is continuous.    Let . If is closed, then the preimage of under equals . So is closed by the previous corollary. Hence is continuous.   "
 },
@@ -1751,7 +1769,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-continuous-functions.html#thm-extreme-value",
   "type": "Theorem",
-  "number": "4.81",
+  "number": "4.83",
   "title": "Extreme Value Theorem.",
   "body": "Extreme Value Theorem   If is a nonempty compact metric space and is continuous, then there are points such that     We know that is compact and in particular is closed and bounded. Since is bounded and nonempty, . Then there is a sequence with (indeed for , choose with . Then since , we have .) Since is closed and for all we have . Now, fix with . Note that is continuous, so exists with .   "
 },
@@ -1769,7 +1787,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-uniform-continuity.html#def-uniformly-continuous",
   "type": "Definition",
-  "number": "4.82",
+  "number": "4.84",
   "title": "Uniform Continuity.",
   "body": "Uniform Continuity   Let be metric spaces and let be a function. We say is uniformly continuous if for all exists such that for all .   "
 },
@@ -1778,7 +1796,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-uniform-continuity.html#remark-11",
   "type": "Remark",
-  "number": "4.83",
+  "number": "4.85",
   "title": "",
   "body": " For regular continuity, depends on both and , but doesn’t depend on for uniform continuity. We can choose uniformly for all .  "
 },
@@ -1787,7 +1805,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-uniform-continuity.html#exercise-14",
   "type": "Exploration",
-  "number": "4.84",
+  "number": "4.86",
   "title": "",
   "body": " Uniform continuity implies continuity.  "
 },
@@ -1796,7 +1814,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-uniform-continuity.html#example-24",
   "type": "Example",
-  "number": "4.85",
+  "number": "4.87",
   "title": "",
   "body": "   is continuous but not uniformly continuous.     is continuous: Note that for all . Given set . If and , then so is continuous.  Note: If we knew then we could take and we’d have for all . For our choice of .   is not uniformly continuous. We must show exists such that for all exists with and . Set . Fix . Let . Then and .   "
 },
@@ -1805,7 +1823,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-uniform-continuity.html#example-25",
   "type": "Example",
-  "number": "4.86",
+  "number": "4.88",
   "title": "",
   "body": "   is uniformly continuous.    Fix . Set . Fix with .   Case 1 : If and , then  Case 2 : Suppose or . Wlog, . Then    "
 },
@@ -1814,7 +1832,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-uniform-continuity.html#exercise-15",
   "type": "Exploration",
-  "number": "4.87",
+  "number": "4.89",
   "title": "",
   "body": "  is not uniformly continuous, but for all , is uniformly continuous.  "
 },
@@ -1823,7 +1841,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-uniform-continuity.html#thm-uniform-compact",
   "type": "Theorem",
-  "number": "4.88",
+  "number": "4.90",
   "title": "Continuous is Uniform From Compact Spaces.",
   "body": "Continuous is Uniform From Compact Spaces   If are metric spaces with compact, then any continuous function is uniformly continuous.   "
 },
@@ -1832,7 +1850,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-uniform-continuity.html#example-26",
   "type": "Example",
-  "number": "4.89",
+  "number": "4.91",
   "title": "",
   "body": "  Let be given by . Then is continuous but not uniformly continuous.     Continuity : If , fix with either or . Note that if with , then .   Not uniformly continuous : For , let and . Then and .   "
 },
@@ -1841,7 +1859,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-uniform-continuity.html#thm-uniform-cauchy",
   "type": "Theorem",
-  "number": "4.90",
+  "number": "4.92",
   "title": "Uniform Convergence and Cauchy Sequences.",
   "body": "Uniform Convergence and Cauchy Sequences   If is a uniformly continuous function, then for any Cauchy sequence , the sequence is also Cauchy.    Let be Cauchy. Fix . Fix so that whenever with we have (using that is uniformly continuous). Since is Cauchy, exists such that for all , by the choice of .   "
 },
@@ -1850,7 +1868,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-uniform-continuity.html#remark-12",
   "type": "Remark",
-  "number": "4.91",
+  "number": "4.93",
   "title": "",
   "body": " The converse is false! (I think ”converse\" here means just continuous) is a counterexample.  "
 },
@@ -1859,7 +1877,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-uniform-continuity.html#exercise-16",
   "type": "Exploration",
-  "number": "4.92",
+  "number": "4.94",
   "title": "",
   "body": " If is a function between metric spaces and , then preserves Cauchy sequences as in the proposition iff is uniformly continuous on totally bounded sets (ie for all totally bounded is uniformly continuous).  "
 },
@@ -1868,7 +1886,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-uniform-continuity.html#thm-ump-uniform",
   "type": "Theorem",
-  "number": "4.93",
+  "number": "4.95",
   "title": "UMP for Complete Metric Spaces.",
   "body": "UMP for Complete Metric Spaces   Let be metric spaces with complete. Let and let be uniformly continuous. Then continuous function so the for all . Further, is uniformly continuous.     Uniqueness (this won’t require that is uniformly continuous): Suppose are continuous and for all . If such that . So so .   Existence Suppose . Let be such that . Then is Cauchy. Since is uniformly continuous, is Cauchy. Since is complete, converges. Define by .    is well defined, ie if and with , then .  Let . To show we’ll show for any . Let . Since is uniformly continuous, exists such that if . If then exists such that for all . Then for all . So for all , we have . Now, . Since this holds for all we have .     for all .  Note that (constant sequence ) and . So .     is uniformly continuous.  Fix . Since is uniformly continuous, exists such that for all . Now fix with . We’ll show that . Fix sequences and such that and . So and . Note that . So exists such that for all , . So for all . Letting .      "
 },
@@ -1886,7 +1904,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separability-completions.html#def-dense",
   "type": "Definition",
-  "number": "4.94",
+  "number": "4.96",
   "title": "Dense.",
   "body": "Dense   Let be a metric space. A set is dense if .   "
 },
@@ -1895,7 +1913,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separability-completions.html#def-isometry",
   "type": "Definition",
-  "number": "4.95",
+  "number": "4.97",
   "title": "Isometry.",
   "body": "Isometry   A function between metric spaces is an isometry (or is isometric ) if for .   "
 },
@@ -1904,7 +1922,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separability-completions.html#exercise-17",
   "type": "Exploration",
-  "number": "4.96",
+  "number": "4.98",
   "title": "",
   "body": " An isometry is injective.   Suppose is an isometry. If and , then . So .  "
 },
@@ -1913,7 +1931,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separability-completions.html#def-iso-iso",
   "type": "Definition",
-  "number": "4.97",
+  "number": "4.99",
   "title": "Isometric Isomorphism.",
   "body": "Isometric Isomorphism   An isometric isomorphism between metric spaces and is a surjective isometry . In this case, is bijective and is also an isometry. and are isometrically isomorphic if exists an isometric isomorphism .   "
 },
@@ -1922,7 +1940,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separability-completions.html#def-completion",
   "type": "Definition",
-  "number": "4.98",
+  "number": "4.100",
   "title": "Completion.",
   "body": "Completion   A completion of a metric space is a pair where is a complete metric space and is an isometry such that is dense in .   "
 },
@@ -1931,7 +1949,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separability-completions.html#example-27",
   "type": "Example",
-  "number": "4.99",
+  "number": "4.101",
   "title": "",
   "body": "     If , then is a completion of .    If , then is a completion of .     , then where is a completion of .    If is a complete metric space, then is a completion of .      "
 },
@@ -1940,7 +1958,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separability-completions.html#thm-completion",
   "type": "Theorem",
-  "number": "4.100",
+  "number": "4.102",
   "title": "Completion Existence.",
   "body": "Completion Existence   Let be a metric space.    has a completion     Let , be completions of . Then there is a unique isometric isomorphism such that .      "
 },
@@ -1949,7 +1967,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separability-completions.html#def-separable",
   "type": "Definition",
-  "number": "4.101",
+  "number": "4.103",
   "title": "Separable.",
   "body": "Separable   A metric space is seperable if there is a countable dense (recall dense means ) set .   "
 },
@@ -1958,7 +1976,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separability-completions.html#example-28",
   "type": "Example",
-  "number": "4.102",
+  "number": "4.104",
   "title": "",
   "body": "      is separable since is countable and dense in .     is separable. is dense in , and is countable since by .     are separable.    If is an uncountable set with the discrete metric, then is not separable. In fact, is the only dense subset of , and is not countable.      "
 },
@@ -1967,7 +1985,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separability-completions.html#thm-compact-separable",
   "type": "Theorem",
-  "number": "4.103",
+  "number": "4.105",
   "title": "Compact Implies Separable.",
   "body": "Compact Implies Separable   Every compact metric space is separable.   "
 },
@@ -1976,7 +1994,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separability-completions.html#lem-separable",
   "type": "Lemma",
-  "number": "4.104",
+  "number": "4.106",
   "title": "Separable Lemma.",
   "body": "Separable Lemma   A metric space is separable iff there exists a countable set of open sets in such that for all , and all open with , there exists so that .    ( ) Suppose is given. We may assume by replacing with if needed. For each , let , and let The function is surjective, and is countable, so is also countable. I claim that is also dense in . Suppose . Fix . Then by property of taking , we can find with . Then and , a contradiction.  ( ) Let be a countable set with . Let Then there is a surjective function by . Since and are countable, is also countable. Suppose now that is open, and . We need to find with . Fix such that . Now let Since , we have . So exists with . Now Then and , so , set .   "
 },
@@ -1985,7 +2003,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separability-completions.html#remark-13",
   "type": "Remark",
-  "number": "4.105",
+  "number": "4.107",
   "title": "",
   "body": " In the language of topology, this says a metric space is separable iff it is second countable.  "
 },
@@ -1994,7 +2012,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separability-completions.html#thm-separable-subsets",
   "type": "Theorem",
-  "number": "4.106",
+  "number": "4.108",
   "title": "Separable Subsets.",
   "body": "Separable Subsets   If is a separable metric space and , then is separable.    Suppose is separable, and let be given as in the lemma above. Let . Then is a collection of open subsets of and is countable since is countable and the function is surjective. Let be an open set and let with . We need a with . Since is open in , there is an open set such that . Since , there exists such that . Let and note . Apply the lemma again to , and is separable.   "
 },
@@ -2116,18 +2134,18 @@ var ptx_lunr_docs = [
   "body": "Partition   A partition of a closed interval is a finite set so that .   "
 },
 {
-  "id": "convention-7",
+  "id": "convention-8",
   "level": "2",
-  "url": "sec-riemann.html#convention-7",
+  "url": "sec-riemann.html#convention-8",
   "type": "Convention",
   "number": "6.3",
   "title": "",
   "body": " Abusing notation, we’ll often write let be a partition of . Let be the set of all partitions of .  "
 },
 {
-  "id": "convention-8",
+  "id": "convention-9",
   "level": "2",
-  "url": "sec-riemann.html#convention-8",
+  "url": "sec-riemann.html#convention-9",
   "type": "Convention",
   "number": "6.4",
   "title": "",
@@ -2224,9 +2242,9 @@ var ptx_lunr_docs = [
   "body": "Riemann’s Condition   Suppose . Then for all there exists with     Suppose for all there exists with Given , choose . Then . Hence , so .  Conversely, suppose that . Fix . There are so that and . Hence, , or rearranging Set . Then    "
 },
 {
-  "id": "convention-9",
+  "id": "convention-10",
   "level": "2",
-  "url": "sec-riemann.html#convention-9",
+  "url": "sec-riemann.html#convention-10",
   "type": "Convention",
   "number": "6.15",
   "title": "",
@@ -2323,9 +2341,9 @@ var ptx_lunr_docs = [
   "body": "Bounded Variation   Given and a partition , define Then define the variation of over to be We say has bounded variation if .   "
 },
 {
-  "id": "convention-10",
+  "id": "convention-11",
   "level": "2",
-  "url": "sec-bounded-variation.html#convention-10",
+  "url": "sec-bounded-variation.html#convention-11",
   "type": "Convention",
   "number": "6.24",
   "title": "",
@@ -2512,9 +2530,9 @@ var ptx_lunr_docs = [
   "body": "  If are metric spaces and is a sequence of continuous functions, is a function, and uniformly, then is continuous. Further, if each is uniformly continuous, then so is .   "
 },
 {
-  "id": "convention-11",
+  "id": "convention-12",
   "level": "2",
-  "url": "sec-pointwise-uniform.html#convention-11",
+  "url": "sec-pointwise-uniform.html#convention-12",
   "type": "Convention",
   "number": "7.7",
   "title": "",
@@ -2530,9 +2548,9 @@ var ptx_lunr_docs = [
   "body": "  Define by . This is called the -norm of (aka supremum norm or uniform norm    "
 },
 {
-  "id": "convention-12",
+  "id": "convention-13",
   "level": "2",
-  "url": "sec-pointwise-uniform.html#convention-12",
+  "url": "sec-pointwise-uniform.html#convention-13",
   "type": "Convention",
   "number": "7.9",
   "title": "",

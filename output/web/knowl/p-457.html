@@ -13,14 +13,21 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">There is a function <span class="process-math">\(f:\mathbb{R}\rightarrow\mathbb{R}\)</span> such that <span class="process-math">\(f\)</span> is continuous at every irrational number and discontinuous at every rational number.</div>
+<div class="para">Fix <span class="process-math">\(x\in \mathbb{C}^n\setminus\{{0}\}\)</span> with <span class="process-math">\(\left|{\left|{{x-x_0}}\right|}\right|&lt;\delta\text{.}\)</span> Since <span class="process-math">\(\left|{\left|{{x-x_0}}\right|}\right|\leq\frac{\left|{\left|{{x_0}}\right|}\right|}{2}\text{,}\)</span> we have <span class="process-math">\(\left|{\left|{{x}}\right|}\right|\geq \frac{\left|{\left|{{x_0}}\right|}\right|}{2}\text{.}\)</span> Now, <span class="process-math">\(\left|{f(x)-f(x_0)}\right|=\left|{\frac{1}{\left|{\left|{{x}}\right|}\right|}-\frac{1}{\left|{\left|{{x_0}}\right|}\right|}}\right|\text{.}\)</span> Continue (from above):</div>
 <div class="displaymath process-math">
 \begin{equation*}
-f(x)=\begin{cases}0&amp;x\in \mathbb{R}\setminus\mathbb{Q}\\ 1/q &amp; x=\frac{p}{q},p,q\in\mathbb{Z},q\geq 1,\gcd(p,q)=1\end{cases}
+\begin{aligned}
+\left|{\frac{1}{\left|{\left|{{x}}\right|}\right|}-\frac{1}{\left|{\left|{{x_0}}\right|}\right|}}\right|
+&amp;=\frac{\left|{\left|{\left|{{x_0}}\right|}\right|-\left|{\left|{{x}}\right|}\right|}\right|}{\left|{\left|{{x_0}}\right|}\right|\cdot\left|{\left|{{x}}\right|}\right|}
+\leq \frac{\left|{\left|{{x_0-x}}\right|}\right|}{\left|{\left|{{x_0}}\right|}\right|\cdot\left|{\left|{{x}}\right|}\right|}
+= \frac{\left|{\left|{{x-x_0}}\right|}\right|}{\left|{\left|{{x_0}}\right|}\right|\cdot\left|{\left|{{x}}\right|}\right|}\\
+&amp;\leq \frac{2\left|{\left|{{x-x_0}}\right|}\right|}{\left|{\left|{{x_0}}\right|}\right|^2} (\text{as }\left|{\left|{{x}}\right|}\right|\geq \frac{\left|{\left|{{x_0}}\right|}\right|}{2})\\
+&amp;&lt;\frac{2\delta}{\left|{\left|{{x_0}}\right|}\right|^2}
+&lt;\varepsilon
+\end{aligned}
 \end{equation*}
 </div>
-<div class="para">Note: <span class="process-math">\(f(0)=1\)</span> since <span class="process-math">\(0=\frac{0}{1},\gcd(0,1)=1\text{.}\)</span>
-</div>
+<div class="para">so <span class="process-math">\(f\)</span> is continuous.</div>
 </div>
 <span class="incontext"><a href="sec-continuous-functions.html#p-457" class="internal">in-context</a></span>
 </body>

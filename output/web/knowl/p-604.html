@@ -13,15 +13,49 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">For all <span class="process-math">\(x\in[a,b]\text{,}\)</span> either <span class="process-math">\(f(a)\leq f(x)\leq f(b)\)</span> or <span class="process-math">\(f(b)\leq f(x)\leq f(a)\text{.}\)</span> In either case, <span class="process-math">\(f\)</span> is bounded. Replacing <span class="process-math">\(f\)</span> with <span class="process-math">\(-f\)</span> if necessary, we may assume that <span class="process-math">\(f\)</span> is increasing. Let <span class="process-math">\(\varepsilon&gt;0\text{.}\)</span> Fix <span class="process-math">\(n\in\mathbb{Z}, n&gt;\frac{(f(b)+f(a))(b-a)}{\varepsilon}\)</span> and let <span class="process-math">\(x_i=a+\frac{i}{n}(b-a)\)</span> for <span class="process-math">\(i=0,\dots,n\text{.}\)</span> Since <span class="process-math">\(f\)</span> is increasing, <span class="process-math">\(M_i(f,P)=f(x_i)\)</span> and <span class="process-math">\(m_i(f,P)=f(x_{i-1})\text{.}\)</span> So</div>
+<div class="para">We now show <span class="process-math">\(\left|{f}\right|\in\mathcal{R}[a,b]\text{.}\)</span> By Riemann’s Criterion, it’s enough to show that for all partitions <span class="process-math">\(P\in\mathcal{P}[a,b]\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+U(\left|{f}\right|,P)-L(\left|{f}\right|,P)\leq U(f,P)-L(f,P).
+\end{equation*}
+</div>
+<div class="para">To this end, fix <span class="process-math">\(P\in\mathcal{P}[a,b]\)</span> and write <span class="process-math">\(P=\{{a=x_0&lt;x_1&lt;\dots&lt;x_n=b}\}\text{.}\)</span> Fix <span class="process-math">\(i=1,\dots,n\text{.}\)</span> It’s enough to show that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+M-i(\left|{f}\right|,P)-m_i(\left|{f}\right|,P)\leq M_i(f,P)-m_i(f,P).
+\end{equation*}
+</div>
+<div class="para">Fix <span class="process-math">\(s,t\in[x_{i-1},x_i]\text{.}\)</span> Then (with sups and infs taken over <span class="process-math">\(s',t'\in[x_{i-1},x_i]\)</span>)</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \begin{aligned}
-U(f,P)-L(f,P)
-&amp;=\sum_{i=1}^n(M_i(f,P)-m_i(f,P))(x_i-x_{i-1})
-=\sum_{i=1}^n(f(x_i)-f(x_{i-1}))\frac{b-a}{n}\\
-&amp;=(f(b)-f(a))\frac{b-a}{n}
-&lt;\varepsilon.
+\left|{f(s)}\right|-\left|{f(t)}\right|
+&amp;\leq \left|{f(s)-f(t)}\right|
+\leq\sup_{s',t'}\left|{f(s')-f(t')}\right|
+=\sup_{s'}f(s')-\inf_{t'}f(t')\\
+&amp;=M_i(f,P)-m_i(f,P).
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">Now, taking the supremum over <span class="process-math">\(s,t\in[x_{i-1},x_i]\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+\sup_{s,t}\left({\left|{f(s)}\right|-\left|{f(t)}\right|}\right)
+&amp;\leq M_i(f,P)-m_i(f,P),\\
+\sup_{s,t}\left({\left|{f(s)}\right|-\left|{f(t)}\right|}\right)
+&amp;=\sup_s\left|{f(s)}\right|-\inf_t\left|{f(t)}\right|
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">where again sup, inf taken over <span class="process-math">\(s,t\in[x_{i-1},x_i]\text{.}\)</span> So</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+M_i(\left|{f}\right|,P)-m_i(\left|{f}\right|,P)
+\leq M_i(f,P)-m_i(f,P).
 \end{aligned}
 \end{equation*}
 </div>

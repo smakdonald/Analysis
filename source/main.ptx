@@ -2490,34 +2490,49 @@
             </p>
             <attribution>Pearl Zhu</attribution>
           </blockquote>
+
+          <definition xml:id="def-cn-rn">
+            <statement>
+              <p>
+                Set <m>\mathbb{C}^n=\{\begin{bmatrix}x_1\\x^2\\ \vdots\\x_n\end{bmatrix}\,:\, x_i\in\mathbb{C}\}</m> and <m>\mathbb{R}^n=\{\begin{bmatrix}x_1\\x^2\\ \vdots\\x_n\end{bmatrix}\,:\,x_i\in\mathbb{R}\}</m> (<m>n\geq 1</m>)
+              </p>
+            </statement>
+          </definition>
+
+          <convention>
+            <p>
+              We’ll often write <m>(x_1,\dots,x_n)</m> in place of <m>\begin{bmatrix}x_1\\x^2\\ \vdots\\x_n\end{bmatrix}</m> and <m>x\in\mathbb{C}^n</m> in place of <m>\vec{x}\in\mathbb{C}^n</m>
+            </p>
+          </convention>
           
           <definition xml:id="def-metric">
             <statement>
               <p>
-                Let M be a set. A metric on M is a function d from M × M into [0, ∞) which satisfies
-                <ol>
+                Let <m>X</m> be a set. 
+                A <term>metric</term> on <m>X</m> is a function <m>d:X\times X\rightarrow\mathbb{R}_+</m> such that <m>\forall\,x,y,z\in X</m>                <ol>
                   <li><title>Positive Definite</title>
                     <p>
-                      d(x, y) = 0 if and only if x = y
+                      <m>d(x,y)=0\iff x=y</m>
                     </p>
                   </li>
 
                   <li><title>Symmetric</title>
                     <p>
-                      d(x, y) = d(y, x) for all y\in M
+                      <m>d(x,y)=d(y,x)</m>
                     </p>
                   </li>
 
                   <li><title>Triangle Inequality</title>
                     <p>
-                      d(x, z) ≤ d(x, y) + d(y, z) for all z\in M
+                      <m>d(x,z)\leq d(x,y)+d(y,z)</m>
                     </p>
                   </li>
                 </ol>
               </p>
 
               <p>
-                A metric space is an ordered pair (M, d), where M is a set and d is a metric for M.
+                A <term>metric space</term> is a pair <m>(X,d)</m> where <m>X</m> is a set and <m>d</m> is a metric on <m>X</m>. 
+                We’ll typically write <m>X</m> for a metric space where the metric is understood.              
               </p>
             </statement>
           </definition>
@@ -2535,7 +2550,15 @@
           <example><title>Discrete Metric</title>
             <statement>
               <p>
-                
+                For a set <m>X</m>, <term>the discrete metric</term> on <m>X</m> is <m>d{X\times X}\rightarrow\mathbb{R}_+</m>. 
+                <me>
+                  \begin{aligned}
+                  d(x,y)=\begin{cases}
+                      1 &amp;\ \text{ if } x\neq y\\
+                      0 &amp;\ \text{ if } x=y
+                  \end{cases}
+                  \end{aligned}
+                </me>
               </p>
             </statement>
           </example>

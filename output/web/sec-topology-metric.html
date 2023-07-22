@@ -583,32 +583,53 @@ window.MathJax = {
 <blockquote class="blockquote" id="blockquote-15">
 <div class="para" id="p-272">“Keep in mind, measurement is not just in numbers, but stories.”</div> <cite class="attribution">―Pearl Zhu</cite>
 </blockquote>
-<article class="definition definition-like" id="def-metric"><h3 class="heading">
+<article class="definition definition-like" id="def-cn-rn"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.1</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-273">
-<div class="para">Let M be a set. A metric on M is a function d from M × M into [0, ∞) which satisfies</div>
+<div class="para" id="p-273">Set <span class="process-math">\(\mathbb{C}^n=\{\begin{bmatrix}x_1\\x^2\\ \vdots\\x_n\end{bmatrix}\,:\, x_i\in\mathbb{C}\}\)</span> and <span class="process-math">\(\mathbb{R}^n=\{\begin{bmatrix}x_1\\x^2\\ \vdots\\x_n\end{bmatrix}\,:\,x_i\in\mathbb{R}\}\)</span> (<span class="process-math">\(n\geq 1\)</span>)</div></article><article class="convention remark-like" id="convention-6"><h3 class="heading">
+<span class="type">Convention</span><span class="space"> </span><span class="codenumber">4.2</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-274">We’ll often write <span class="process-math">\((x_1,\dots,x_n)\)</span> in place of <span class="process-math">\(\begin{bmatrix}x_1\\x^2\\ \vdots\\x_n\end{bmatrix}\)</span> and <span class="process-math">\(x\in\mathbb{C}^n\)</span> in place of <span class="process-math">\(\vec{x}\in\mathbb{C}^n\)</span>
+</div></article><article class="definition definition-like" id="def-metric"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.3</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-275">
+<div class="para">Let <span class="process-math">\(X\)</span> be a set. A <dfn class="terminology">metric</dfn> on <span class="process-math">\(X\)</span> is a function <span class="process-math">\(d:X\times X\rightarrow\mathbb{R}_+\)</span> such that <span class="process-math">\(\forall\,x,y,z\in X\)</span>
+</div>
 <ol class="decimal">
 <li id="li-104">
-<span class="heading"><span class="title">Positive Definite.</span></span><div class="para" id="p-274">d(x, y) = 0 if and only if x = y</div>
+<span class="heading"><span class="title">Positive Definite.</span></span><div class="para" id="p-276"><span class="process-math">\(\displaystyle d(x,y)=0\iff x=y\)</span></div>
 </li>
 <li id="li-105">
-<span class="heading"><span class="title">Symmetric.</span></span><div class="para" id="p-275">d(x, y) = d(y, x) for all y\in M</div>
+<span class="heading"><span class="title">Symmetric.</span></span><div class="para" id="p-277"><span class="process-math">\(\displaystyle d(x,y)=d(y,x)\)</span></div>
 </li>
 <li id="li-106">
-<span class="heading"><span class="title">Triangle Inequality.</span></span><div class="para" id="p-276">d(x, z) ≤ d(x, y) + d(y, z) for all z\in M</div>
+<span class="heading"><span class="title">Triangle Inequality.</span></span><div class="para" id="p-278"><span class="process-math">\(\displaystyle d(x,z)\leq d(x,y)+d(y,z)\)</span></div>
 </li>
 </ol>
-</div> <div class="para" id="p-277">A metric space is an ordered pair (M, d), where M is a set and d is a metric for M.</div></article><article class="example example-like" id="example-8"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.2</span><span class="period">.</span><span class="space"> </span><span class="title">Euclidean Metric.</span>
+</div> <div class="para" id="p-279">A <dfn class="terminology">metric space</dfn> is a pair <span class="process-math">\((X,d)\)</span> where <span class="process-math">\(X\)</span> is a set and <span class="process-math">\(d\)</span> is a metric on <span class="process-math">\(X\text{.}\)</span> We’ll typically write <span class="process-math">\(X\)</span> for a metric space where the metric is understood.</div></article><article class="example example-like" id="example-8"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.4</span><span class="period">.</span><span class="space"> </span><span class="title">Euclidean Metric.</span>
 </h3>
-<div class="para" id="p-278">The pair (R, d) is a metric space, where d is defined by d(x, y) = x − y. The metric d is called the usual (or absolute value or Euclidean) metric for R. The space R is understood to have the usual metric unless otherwise specified.</div></article><article class="example example-like" id="example-9"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.3</span><span class="period">.</span><span class="space"> </span><span class="title">Discrete Metric.</span>
+<div class="para" id="p-280">The pair (R, d) is a metric space, where d is defined by d(x, y) = x − y. The metric d is called the usual (or absolute value or Euclidean) metric for R. The space R is understood to have the usual metric unless otherwise specified.</div></article><article class="example example-like" id="example-9"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.5</span><span class="period">.</span><span class="space"> </span><span class="title">Discrete Metric.</span>
 </h3>
-<div class="para" id="p-279"></div></article><article class="theorem theorem-like" id="thm-metric-subsets"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.4</span><span class="period">.</span>
+<div class="para logical" id="p-281">
+<div class="para">For a set <span class="process-math">\(X\text{,}\)</span> <dfn class="terminology">the discrete metric</dfn> on <span class="process-math">\(X\)</span> is <span class="process-math">\(d{X\times X}\rightarrow\mathbb{R}_+\text{.}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+d(x,y)=\begin{cases}
+1 &amp;\ \text{ if } x\neq y\\
+0 &amp;\ \text{ if } x=y
+\end{cases}
+\end{aligned}
+\end{equation*}
+</div>
+</div></article><article class="theorem theorem-like" id="thm-metric-subsets"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.6</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-280">Subsets of metric spaces are metric spaces: If (X,d) is a metric space and Y\subseteq X then (Y,d\mid_{Y\times Y}) is a metric space.</div></article></section></div>
+<div class="para" id="p-282">Subsets of metric spaces are metric spaces: If (X,d) is a metric space and Y\subseteq X then (Y,d\mid_{Y\times Y}) is a metric space.</div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="ch-metric-spaces.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sec-open-closed.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>
