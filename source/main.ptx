@@ -2480,10 +2480,6 @@
 
       <chapter xml:id="ch-metric-spaces"><title>Metric Spaces</title>
 
-        <section xml:id="sec-norms-inner-products"><title>Norms and Inner Products</title>
-          <p></p>
-        </section>
-
         <section xml:id="sec-topology-metric"><title>Topology and Metric Spaces</title>
 
           <blockquote>
@@ -2898,642 +2894,642 @@
 
         </section>
 
-      </chapter>
+        <section xml:id="sec-compactness"><title>Compactness</title>
 
-      <chapter xml:id="ch-compactness"><title>Compactness, Connectedness</title>
-        
-        <section xml:id="sec-compact"><title>Compactness</title>
+          <subsection xml:id="subsec-compactness-basics"><title>Compactness Basics</title>
 
-          <blockquote>
-            <p>
-              <q>
-                The lunatic, the lover, and poet, are of imagination all compact.
-              </q>
-            </p>
-            <attribution>William Shakespeare</attribution>
-          </blockquote>
-
-          <definition xml:id="def-compact"><title>Compact</title>
-            <statement>
+            <blockquote>
               <p>
-                A metric space <m>X</m> is <term>compact</term> if every sequence <m>(x_n)_{n=1}^\infty\subseteq X</m> has a convergent subsequence.
+                <q>
+                  The lunatic, the lover, and poet, are of imagination all compact.
+                </q>
               </p>
-
+              <attribution>William Shakespeare</attribution>
+            </blockquote>
+  
+            <definition xml:id="def-compact"><title>Compact</title>
+              <statement>
+                <p>
+                  A metric space <m>X</m> is <term>compact</term> if every sequence <m>(x_n)_{n=1}^\infty\subseteq X</m> has a convergent subsequence.
+                </p>
+  
+                <p>
+                  A subset <m>A\subseteq X</m> is <term>compact</term> if <m>A</m> is a compact metric space with the induced metric; ie every sequence <m>(a_n)_{n=1}^\infty\subseteq A</m> has a subsequence which converges in <m>A</m>.
+                </p>
+              </statement>
+            </definition>
+  
+            <proposition xml:id="prop-closer-interval"><title>Closed Intervals are Compact</title>
+              <statement>
+                <p>
+                  A closed interval <m>[a, b]</m> is compact.
+                </p>
+              </statement>
+  
+              <proof>
+                <p>
+                  If <m>(x_n)_{n=1}^\infty\subseteq [a,b]</m>, there is a subsequence <m>(x_{n_k})_{k=1}^\infty\subseteq (x_n)_{n=1}^\infty</m> converging to some <m>x\in \mathbb{R}</m>. 
+                  (from Bolzano-Weierstrass Theorem, every bounded sequence has a convergent subsequence). 
+                  Since <m>a\leq x_{n_k}\leq b</m> for all <m>k\geq 1</m> and <m>x=\lim_{k\rightarrow\infty}x_{n_k}</m>, we have <m>a\leq x\leq b</m>. 
+                  So <m>x\in[a,b]</m>.
+                </p>
+              </proof>
+            </proposition>
+  
+            <exercise>
+              <statement>
+                <p>
+                  <m>A=(0,1]\subseteq \mathbb{R}</m> is not compact.
+                </p>
+              </statement>
+  
+              <solution>
+                <p>
+                  <m>(\frac{1}{n})_{n=1}^\infty\subseteq A</m> has no subsequence which converges in <m>A</m>.
+                </p>
+              </solution>
+            </exercise>
+  
+            <theorem xml:id="thm-compact-subsets-closed"><title>Compactness and Closed Subsets</title>
+              <statement>
+                <p>
+                  If <m>X</m> is a metric space and <m>A\subseteq X</m> is compact, then <m>A</m> is closed. 
+                  Conversely, if <m>A</m> is closed and <m>X</m> is compact, then <m>A</m> is also compact.
+                </p>
+              </statement>
+  
+              <proof>
+                <p>
+                  If <m>A</m> is not closed let <m>x\in\overline{A}\setminus A</m>. 
+                  Then exists <m>(x_n)_{n=1}^\infty\subseteq A</m> with <m>x=\lim_{n\rightarrow\infty}x_n</m>. 
+                  Any subsequence of <m>(x_n)_{n=1}^\infty</m> converges to <m>x</m>, so no subsequence of <m>(x_n)_{n=1}^\infty</m> converges to a point in <m>A</m>.
+                </p>
+  
+                <p>
+                  Further, suppose <m>A\subseteq X</m> is closed and <m>X</m> is compact. 
+                  Let <m>(x_n)_{n=1}^\infty\subseteq A</m> be a sequence. 
+                  There is a subsequence <m>(x_{n_k})_{k=1}^\infty</m> which converges in <m>X</m>. 
+                  Since <m>A</m> is closed, <m>\lim_{k\rightarrow\infty}x_{n_k}\in A</m>.
+                </p>
+              </proof>
+            </theorem>
+  
+            <theorem xml:id="thm-compact-complete"><title>Compact Implies Complete</title>
+              <statement>
+                <p>
+                  If <m>X</m> is a compact metric space, then <m>X</m> is complete.
+                </p>
+              </statement>
+  
+              <proof>
+                <p>
+                  Suppose <m>(x_n)_{n=1}^\infty\subseteq X</m> is Cauchy. 
+                  Since <m>X</m> is compact, <m>(x_n)_{n=1}^\infty</m> has a convergent subsequence. 
+                  Now, every Cauchy sequence with a convergent subsequence converges. 
+                  So <m>(x_n)_{n=1}^\infty</m> converges.
+                </p>
+              </proof>
+            </theorem>
+  
+            <remark>
               <p>
-                A subset <m>A\subseteq X</m> is <term>compact</term> if <m>A</m> is a compact metric space with the induced metric; ie every sequence <m>(a_n)_{n=1}^\infty\subseteq A</m> has a subsequence which converges in <m>A</m>.
+                The converse is false! <m>\mathbb{R}</m> is complete, but not compact. 
+                For ex, <m>(n)_{n=1}^\infty</m> has no convergent subsequence.
               </p>
-            </statement>
-          </definition>
+            </remark>
+                        
+          </subsection>
 
-          <proposition xml:id="prop-closer-interval"><title>Closed Intervals are Compact</title>
-            <statement>
+          <subsection xml:id="subsec-heine-borel"><title>The Heine-Borel Theorem</title>
+
+            <blockquote>
               <p>
-                A closed interval <m>[a, b]</m> is compact.
+                <q>
+                  A piece of art is a compact form of the universe.
+                </q>
               </p>
-            </statement>
+              <attribution>Thomas Kinkade</attribution>
+            </blockquote>
+  
+            <definition xml:id="def-bounded-metric"><title>Bounded Metric Space</title>
+              <statement>
+                <p>
+                  A metric space is <term>bounded</term> if there exists <m>C&gt;0</m> such that for all <m>x,y\in X,d(x,y)\leq C</m>.
+                  Equivalently (when <m>x\neq \emptyset</m>), <m>\sup_{x,y\in X}d(x,y)&lt;\infty</m>.
+                </p>
+  
+                <p>
+                  A subset <m>A\subseteq X</m> is <term>bounded</term> if <m>A</m> is bounded as a metric space with the induced metric. 
+                  ie exists <m>C&gt;0,\forall x,y\in A, d(x,y)\leq C</m>.
+                </p>
+              </statement>
+            </definition>
+  
+            <exercise><title>Discrete Bounds</title>
+              <statement>
+                <p>
+                  Discrete metric is bounded always, but not compact.
+                </p>
+              </statement>
+            </exercise>
+  
+            <lemma xml:id="lem-compact-bounded"><title>Converging Distances</title>
+              <statement>
+                <p>
+                  If <m>X</m> is a metric space and <m>(x_n)_{n=1}^\infty,(y_n)_{n=1}^\infty\subseteq X</m> converge, then 
+                  <me>
+                    \begin{aligned}
+                    d(\lim_{n\rightarrow\infty}x_n,\lim_{n\rightarrow\infty}y_n)=\lim_{n\rightarrow\infty}d(x_n,y_n)
+                    \end{aligned}
+                  </me>
+                </p>
+              </statement>
+  
+              <proof>
+                <p>
+                  Set <m>x=\lim_{n\rightarrow\infty}x_n, y=\lim_{n\rightarrow\infty}y_n</m>. 
+                  Then <m>d(x,y)\leq d(x,x_n)+d(x_n,y_n)+d(y_n,y)</m>. 
+                  So <m>d(x,y)\leq \liminf_{n\rightarrow\infty}d(x_n,y_n)</m>.
+                </p>
+  
+                <p>
+                  Similarly, <m>d(x_n,y_n)\leq d(x_n,x)+d(x,y)+d(y,y_n)</m>. 
+                  So <m>\limsup_{n\rightarrow\infty}d(x_n,y_n)\leq d(x,y)</m>.
+                </p>
+              </proof>
+            </lemma>
+  
+            <theorem xml:id="thm-compact-bounded"><title>Compact Implies Bounded</title>
+              <statement>
+                <p>
+                  Every compact metric space is bounded.
+                </p>
+              </statement>
+  
+              <proof>
+                <p>
+                  Suppose <m>X</m> is an unbounded metric space, so <m>\sup_{x,y\in X}d(x,y)=\infty</m>. 
+                  Then for all <m>n\geq 1, \exists x_n,y_n\in X</m> with <m>d(x_n,y_n)\geq n</m>. 
+                  If <m>X</m> is compact, there exist convergent subsequences <m>(x_{n_k})_{k=1}^\infty</m> and <m>(y_{n_k})_{k=1}^\infty</m> of <m>(x_n)_{n=1}^\infty,(y_n)_{n=1}^\infty</m>.
+                  But then <m>(d(x_{n_k},y_{n_k}))_{k=1}^\infty</m> converges and hence is bounded, but <m>d(x_{n_k},y_{n_k})\geq n_k</m> for all <m>k\geq 1</m>.
+                </p>
+              </proof>
+            </theorem>
+  
+            <theorem xml:id="thm-heine-borel"><title>Heine-Borel Theorem</title>
+              <statement>
+                <p>
+                  If <m>A\subseteq \mathbb{C}^n</m>, then <m>A</m> is compact iff <m>A</m> is closed and bounded.
+                </p>
+              </statement>
+  
+              <proof>
+                <p>
+                  (<m>\impliedby</m>) 
+                  Let <m>(x_k)_{k=1}^\infty</m> be a sequence in <m>A\subseteq \mathbb{C}^n</m> and write <m>x_k=(x_k^{(1)},x_k^{(2)},\dots,x_k^{(n)}),x_k^{(j)}\in\mathbb{C}</m>. 
+                  Note that for any <m>x=(x^{(1)},\dots, x^{(n)})\in \mathbb{C}^n</m>, and any <m>j=1,\dots, n</m>, we have <m>\left|{x^{(j)}}\right|=(\left|{x^{(j)}}\right|^2)^{\frac{1}{2}}\leq (\sum_{i=1}^n\left|{x^{(i)}}\right|^2)^{\frac{1}{2}}=\left|{\left|{{x}}\right|}\right|^2</m>. 
+                  In particular, since <m>(x_k)_{k=1}^\infty\subseteq\mathbb{C}^n</m> is bounded, <m>(x_k^{(1)})_{k=1}^\infty \subseteq \mathbb{C}</m> is also bounded. 
+                  By the Bolzano-Weierstrass theorem, <m>(x_k^{(1)})_{k=1}^\infty</m> has a convergent subsequence. 
+                  Call it <m>(x_{k(1,l)}^{(1)})_{l=1}^\infty\subseteq \mathbb{C}</m> (so <m>\mathbb{Z}_{\geq 1}\rightarrow \mathbb{Z}_{\geq 1}</m> by <m>l\mapsto k(1,l)</m> strictly increasing.) 
+                  Let <m>x^{(1)}=\lim_{l\rightarrow\infty}x_{k(1,l)}^{(1)}</m>. 
+                  Then <m>(x_{k(1,l)})_{l=1}^\infty\subseteq \mathbb{C}</m> is a bounded sequence and hence <m>(x_{k(1,l)}^{(2)})_{l=1}^\infty\subseteq \mathbb{C}</m> is bounded. 
+                  So <m>(x_{k(1,l)}^{(2)})_{l=1}^\infty\subseteq \mathbb{C}</m> has a convergent subsequence <m>(x_{k(2,l)}^{(2)})_{l=1}^\infty</m> converging to some <m>x^{(2)}\in\mathbb{C}</m>.
+                </p>
+  
+                <p>
+                  Note that <m>(x_{k(2,l)}^{(1)})_{l=1}^\infty</m> is a subsequence of <m>(x_{k(1,l)}^{(1)})_{l=1}^\infty</m>, so <m>\lim_{l\rightarrow\infty}x_{k(2,l)}^{(1)}=x^{(1)}</m> and <m>\lim_{l\rightarrow\infty}x_{k(2,l)}^{(2)}=x^{(2)}</m>.
+                </p>
+              
+                <p>
+                  Continue in this way choosing <m>(x_{k(j+1,l)})_{l=1}^\infty</m> to be a subsequence of <m>(x_{k(j,l)})_{l=1}^\infty</m> for <m>j=1,\dots,n-1</m>. 
+                  To arrange for <m>(x_{k(n,l)})_{l=1}^\infty</m> to be convergent and set <m>x^{(j)}=\lim_{l\rightarrow\infty}x_k^{(i)}</m> for <m>i=1,\dots,n</m>. 
+                  Then set <m>k_l=k(n,l)\geq 1</m> for each <m>l\geq 1</m>. 
+                  Then <m>(x_{k_l})_{l=1}^\infty</m> is a subsequence of <m>(x_k)_{k=1}^\infty</m> (in fact a subsubsub...subsequence (<m>n</m> <q>subs</q>)).
+                </p>
+              
+                <p>
+                  So <m>(x_{k_l}^{(j)})_{l=1}^\infty</m> converges to <m>x^{(j)}\in\mathbb{C}</m> for all <m>j=1,\dots,n</m>. 
+                  Then if <m>x=(x^{(1)},\dots,x^{(n)}</m>, we have <m>\lim_{l\rightarrow\infty}x_{k_l}=x</m>. 
+                  Since <m>A</m> is closed and each <m>x_{k_l}\in A</m>, we have <m>x\in A</m>. 
+                  So every sequence in <m>A</m> has a subsequence converging in <m>A</m>. 
+                  This shows that <m>A</m> is compact.
+                </p>
+              </proof>
+            </theorem>
+  
+            <corollary xml:id="cor-heine-borel-real"><title>Heine-Borel for <m>\R^n</m></title>
+              <statement>
+                <p>
+                  If <m>A\subseteq \mathbb{R}^n</m>, then <m>A</m> is compact iff <m>A</m> is closed and bounded.
+                </p>
+              </statement>
+  
+              <proof>
+                <p>
+                  (<m>\implies</m>) same as for <m>\mathbb{C}^n</m>.
+                </p>
+  
+                <p>
+                  (<m>\impliedby</m>) <m>\mathbb{R}^n\subseteq \mathbb{C}^n</m> is closed, and so if <m>A</m> is closed in <m>\mathbb{R}^n</m> then <m>A</m> is also closed in <m>\mathbb{C}^n</m>. 
+                  So <m>A</m> is compact by the Heine-Borel Theorem.
+                </p>
+              </proof>
+            </corollary>
+                          
+          </subsection>
 
-            <proof>
-              <p>
-                If <m>(x_n)_{n=1}^\infty\subseteq [a,b]</m>, there is a subsequence <m>(x_{n_k})_{k=1}^\infty\subseteq (x_n)_{n=1}^\infty</m> converging to some <m>x\in \mathbb{R}</m>. 
-                (from Bolzano-Weierstrass Theorem, every bounded sequence has a convergent subsequence). 
-                Since <m>a\leq x_{n_k}\leq b</m> for all <m>k\geq 1</m> and <m>x=\lim_{k\rightarrow\infty}x_{n_k}</m>, we have <m>a\leq x\leq b</m>. 
-                So <m>x\in[a,b]</m>.
-              </p>
-            </proof>
-          </proposition>
-
-          <exercise>
-            <statement>
-              <p>
-                <m>A=(0,1]\subseteq \mathbb{R}</m> is not compact.
-              </p>
-            </statement>
-
-            <solution>
-              <p>
-                <m>(\frac{1}{n})_{n=1}^\infty\subseteq A</m> has no subsequence which converges in <m>A</m>.
-              </p>
-            </solution>
-          </exercise>
-
-          <theorem xml:id="thm-compact-subsets-closed"><title>Compactness and Closed Subsets</title>
-            <statement>
-              <p>
-                If <m>X</m> is a metric space and <m>A\subseteq X</m> is compact, then <m>A</m> is closed. 
-                Conversely, if <m>A</m> is closed and <m>X</m> is compact, then <m>A</m> is also compact.
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                If <m>A</m> is not closed let <m>x\in\overline{A}\setminus A</m>. 
-                Then exists <m>(x_n)_{n=1}^\infty\subseteq A</m> with <m>x=\lim_{n\rightarrow\infty}x_n</m>. 
-                Any subsequence of <m>(x_n)_{n=1}^\infty</m> converges to <m>x</m>, so no subsequence of <m>(x_n)_{n=1}^\infty</m> converges to a point in <m>A</m>.
-              </p>
-
-              <p>
-                Further, suppose <m>A\subseteq X</m> is closed and <m>X</m> is compact. 
-                Let <m>(x_n)_{n=1}^\infty\subseteq A</m> be a sequence. 
-                There is a subsequence <m>(x_{n_k})_{k=1}^\infty</m> which converges in <m>X</m>. 
-                Since <m>A</m> is closed, <m>\lim_{k\rightarrow\infty}x_{n_k}\in A</m>.
-              </p>
-            </proof>
-          </theorem>
-
-          <theorem xml:id="thm-compact-complete"><title>Compact Implies Complete</title>
-            <statement>
-              <p>
-                If <m>X</m> is a compact metric space, then <m>X</m> is complete.
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                Suppose <m>(x_n)_{n=1}^\infty\subseteq X</m> is Cauchy. 
-                Since <m>X</m> is compact, <m>(x_n)_{n=1}^\infty</m> has a convergent subsequence. 
-                Now, every Cauchy sequence with a convergent subsequence converges. 
-                So <m>(x_n)_{n=1}^\infty</m> converges.
-              </p>
-            </proof>
-          </theorem>
-
-          <remark>
-            <p>
-              The converse is false! <m>\mathbb{R}</m> is complete, but not compact. 
-              For ex, <m>(n)_{n=1}^\infty</m> has no convergent subsequence.
-            </p>
-          </remark>
-          
-        </section>
-
-        <section xml:id="sec-heine-borel"><title>The Heine-Borel Theorem</title>
-
-          <blockquote>
-            <p>
-              <q>
-                A piece of art is a compact form of the universe.
-              </q>
-            </p>
-            <attribution>Thomas Kinkade</attribution>
-          </blockquote>
-
-          <definition xml:id="def-bounded-metric"><title>Bounded Metric Space</title>
-            <statement>
-              <p>
-                A metric space is <term>bounded</term> if there exists <m>C&gt;0</m> such that for all <m>x,y\in X,d(x,y)\leq C</m>.
-                Equivalently (when <m>x\neq \emptyset</m>), <m>\sup_{x,y\in X}d(x,y)&lt;\infty</m>.
-              </p>
-
-              <p>
-                A subset <m>A\subseteq X</m> is <term>bounded</term> if <m>A</m> is bounded as a metric space with the induced metric. 
-                ie exists <m>C&gt;0,\forall x,y\in A, d(x,y)\leq C</m>.
-              </p>
-            </statement>
-          </definition>
-
-          <exercise><title>Discrete Bounds</title>
-            <statement>
-              <p>
-                Discrete metric is bounded always, but not compact.
-              </p>
-            </statement>
-          </exercise>
-
-          <lemma xml:id="lem-compact-bounded"><title>Converging Distances</title>
-            <statement>
-              <p>
-                If <m>X</m> is a metric space and <m>(x_n)_{n=1}^\infty,(y_n)_{n=1}^\infty\subseteq X</m> converge, then 
-                <me>
-                  \begin{aligned}
-                  d(\lim_{n\rightarrow\infty}x_n,\lim_{n\rightarrow\infty}y_n)=\lim_{n\rightarrow\infty}d(x_n,y_n)
-                  \end{aligned}
-                </me>
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                Set <m>x=\lim_{n\rightarrow\infty}x_n, y=\lim_{n\rightarrow\infty}y_n</m>. 
-                Then <m>d(x,y)\leq d(x,x_n)+d(x_n,y_n)+d(y_n,y)</m>. 
-                So <m>d(x,y)\leq \liminf_{n\rightarrow\infty}d(x_n,y_n)</m>.
-              </p>
-
-              <p>
-                Similarly, <m>d(x_n,y_n)\leq d(x_n,x)+d(x,y)+d(y,y_n)</m>. 
-                So <m>\limsup_{n\rightarrow\infty}d(x_n,y_n)\leq d(x,y)</m>.
-              </p>
-            </proof>
-          </lemma>
-
-          <theorem xml:id="thm-compact-bounded"><title>Compact Implies Bounded</title>
-            <statement>
-              <p>
-                Every compact metric space is bounded.
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                Suppose <m>X</m> is an unbounded metric space, so <m>\sup_{x,y\in X}d(x,y)=\infty</m>. 
-                Then for all <m>n\geq 1, \exists x_n,y_n\in X</m> with <m>d(x_n,y_n)\geq n</m>. 
-                If <m>X</m> is compact, there exist convergent subsequences <m>(x_{n_k})_{k=1}^\infty</m> and <m>(y_{n_k})_{k=1}^\infty</m> of <m>(x_n)_{n=1}^\infty,(y_n)_{n=1}^\infty</m>.
-                But then <m>(d(x_{n_k},y_{n_k}))_{k=1}^\infty</m> converges and hence is bounded, but <m>d(x_{n_k},y_{n_k})\geq n_k</m> for all <m>k\geq 1</m>.
-              </p>
-            </proof>
-          </theorem>
-
-          <theorem xml:id="thm-heine-borel"><title>Heine-Borel Theorem</title>
-            <statement>
-              <p>
-                If <m>A\subseteq \mathbb{C}^n</m>, then <m>A</m> is compact iff <m>A</m> is closed and bounded.
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                (<m>\impliedby</m>) 
-                Let <m>(x_k)_{k=1}^\infty</m> be a sequence in <m>A\subseteq \mathbb{C}^n</m> and write <m>x_k=(x_k^{(1)},x_k^{(2)},\dots,x_k^{(n)}),x_k^{(j)}\in\mathbb{C}</m>. 
-                Note that for any <m>x=(x^{(1)},\dots, x^{(n)})\in \mathbb{C}^n</m>, and any <m>j=1,\dots, n</m>, we have <m>\left|{x^{(j)}}\right|=(\left|{x^{(j)}}\right|^2)^{\frac{1}{2}}\leq (\sum_{i=1}^n\left|{x^{(i)}}\right|^2)^{\frac{1}{2}}=\left|{\left|{{x}}\right|}\right|^2</m>. 
-                In particular, since <m>(x_k)_{k=1}^\infty\subseteq\mathbb{C}^n</m> is bounded, <m>(x_k^{(1)})_{k=1}^\infty \subseteq \mathbb{C}</m> is also bounded. 
-                By the Bolzano-Weierstrass theorem, <m>(x_k^{(1)})_{k=1}^\infty</m> has a convergent subsequence. 
-                Call it <m>(x_{k(1,l)}^{(1)})_{l=1}^\infty\subseteq \mathbb{C}</m> (so <m>\mathbb{Z}_{\geq 1}\rightarrow \mathbb{Z}_{\geq 1}</m> by <m>l\mapsto k(1,l)</m> strictly increasing.) 
-                Let <m>x^{(1)}=\lim_{l\rightarrow\infty}x_{k(1,l)}^{(1)}</m>. 
-                Then <m>(x_{k(1,l)})_{l=1}^\infty\subseteq \mathbb{C}</m> is a bounded sequence and hence <m>(x_{k(1,l)}^{(2)})_{l=1}^\infty\subseteq \mathbb{C}</m> is bounded. 
-                So <m>(x_{k(1,l)}^{(2)})_{l=1}^\infty\subseteq \mathbb{C}</m> has a convergent subsequence <m>(x_{k(2,l)}^{(2)})_{l=1}^\infty</m> converging to some <m>x^{(2)}\in\mathbb{C}</m>.
-              </p>
-
-              <p>
-                Note that <m>(x_{k(2,l)}^{(1)})_{l=1}^\infty</m> is a subsequence of <m>(x_{k(1,l)}^{(1)})_{l=1}^\infty</m>, so <m>\lim_{l\rightarrow\infty}x_{k(2,l)}^{(1)}=x^{(1)}</m> and <m>\lim_{l\rightarrow\infty}x_{k(2,l)}^{(2)}=x^{(2)}</m>.
-              </p>
+          <subsection xml:id="subsec-totally-bounded"><title>Totally Bounded Metrics</title>
             
+            <blockquote>
               <p>
-                Continue in this way choosing <m>(x_{k(j+1,l)})_{l=1}^\infty</m> to be a subsequence of <m>(x_{k(j,l)})_{l=1}^\infty</m> for <m>j=1,\dots,n-1</m>. 
-                To arrange for <m>(x_{k(n,l)})_{l=1}^\infty</m> to be convergent and set <m>x^{(j)}=\lim_{l\rightarrow\infty}x_k^{(i)}</m> for <m>i=1,\dots,n</m>. 
-                Then set <m>k_l=k(n,l)\geq 1</m> for each <m>l\geq 1</m>. 
-                Then <m>(x_{k_l})_{l=1}^\infty</m> is a subsequence of <m>(x_k)_{k=1}^\infty</m> (in fact a subsubsub...subsequence (<m>n</m> <q>subs</q>)).
+                <q>
+                  It is totally awesome.
+                </q>
               </p>
-            
-              <p>
-                So <m>(x_{k_l}^{(j)})_{l=1}^\infty</m> converges to <m>x^{(j)}\in\mathbb{C}</m> for all <m>j=1,\dots,n</m>. 
-                Then if <m>x=(x^{(1)},\dots,x^{(n)}</m>, we have <m>\lim_{l\rightarrow\infty}x_{k_l}=x</m>. 
-                Since <m>A</m> is closed and each <m>x_{k_l}\in A</m>, we have <m>x\in A</m>. 
-                So every sequence in <m>A</m> has a subsequence converging in <m>A</m>. 
-                This shows that <m>A</m> is compact.
-              </p>
-            </proof>
-          </theorem>
-
-          <corollary xml:id="cor-heine-borel-real"><title>Heine-Borel for <m>\R^n</m></title>
-            <statement>
-              <p>
-                If <m>A\subseteq \mathbb{R}^n</m>, then <m>A</m> is compact iff <m>A</m> is closed and bounded.
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                (<m>\implies</m>) same as for <m>\mathbb{C}^n</m>.
-              </p>
-
-              <p>
-                (<m>\impliedby</m>) <m>\mathbb{R}^n\subseteq \mathbb{C}^n</m> is closed, and so if <m>A</m> is closed in <m>\mathbb{R}^n</m> then <m>A</m> is also closed in <m>\mathbb{C}^n</m>. 
-                So <m>A</m> is compact by the Heine-Borel Theorem.
-              </p>
-            </proof>
-          </corollary>
-          
-        </section>
-
-        <section xml:id="sec-totally-bounded"><title>Totally Bounded Metrics</title>
-
-          <blockquote>
+              <attribution>Rachel Caine</attribution>
+            </blockquote>
+  
             <p>
-              <q>
-                It is totally awesome.
-              </q>
+              A version of the Heine-Borel theorem does hold for all metric spaces: 
+              Compact <m>\iff</m> complete and <q>totally bounded</q>
             </p>
-            <attribution>Rachel Caine</attribution>
-          </blockquote>
+  
+            <definition xml:id="def-diameter"><title>Diameter</title>
+              <statement>
+                <p>
+                  For a metric space <m>X</m>, define the <term>diameter</term> of <m>X</m> to be <m>\text{diam}(X)=\sup_{x,y\in X}d(x,y)\in [0,\infty]</m>.
+                </p>
+              </statement>
+            </definition>
+  
+            <exercise>
+              <statement>
+                <p>
+                  <m>\text{diam}(X)&lt;\infty \iff X</m> is bounded. 
+                  Similarly, for a subset <m>A\subseteq X, \text{diam}(A)=\sup_{x,y\in A}d(x,y)\in[0,\infty]</m>.
+                </p>
+              </statement>
+            </exercise>
+  
+            <definition xml:id="def-totally-bounded"><title>Totally Bounded Metric</title>
+              <statement>
+                <p>
+                  A metric space <m>X</m> is <term>totally bounded</term> if for all <m>\varepsilon&gt;0,</m> there exists <m>A_1,\dots,A_n\subseteq X</m> for some <m>n\in \mathbb{Z}_+</m> with <m>X=\cup_{i=1}^n A_i</m> and <m>\text{diam}(A_i)&lt;\varepsilon</m>.
+                </p>
+              </statement>
+            </definition>
+  
+            <example><title>Closed Interval is Totally Bounded</title>
+              <statement>
+                <p>
+                  <m>[0,1]</m> is totally bounded. 
+                  For all <m>n\geq 1,</m> <m>[0,1]=\cup_{k=1}^n[\frac{k-1}{n},\frac{k}{n}]</m> and <m>\text{diam}([\frac{k-1}{n},\frac{k}{n}])=\frac{1}{n}</m> for all <m>k=1,\dots,n</m>.
+                </p>
+              </statement>
+            </example>
+  
+            <exercise><title>Bounded Sets in <m>\R^n</m> Totally Bounded</title>
+              <statement>
+                <p>
+                  Any bounded set in <m>\mathbb{R}^n</m> is totally bounded.
+                </p>
+              </statement>
+            </exercise>
+  
+            <proposition xml:id="prop-discrete-totally-bounded"><title>Bounded but not Totally Bounded</title>
+              <statement>
+                <p>
+                  If <m>X</m> is an infinite set with the discrete metric then <m>X</m> is bounded (<m>\text{diam}(X)=1&lt;\infty</m>) but not totally bounded.
+                </p>
+              </statement>
+  
+              <proof>
+                <p>
+                  If <m>\varepsilon=\frac{1}{2}</m>, any set <m>A\subseteq X</m> with <m>\text{diam}(A)&lt;\varepsilon</m> contains at most one point. 
+                  So if we could write <m>X=\cup_{i=1}^n A_i</m> with <m>\text{diam}(A_i)&lt;\frac{1}{2}</m>, then <m>X</m> would have at most <m>n</m> points. 
+                  So <m>X</m> would be finite.
+                </p>
+              </proof>
+            </proposition>
+  
+            <exercise>
+              <statement>
+                <p>
+                  Let <m>X</m> be a metric space.
+                  <ol>
+                    <li>
+                      <p>
+                        If <m>X</m> is totally bounded, then <m>X</m> is bounded.
+                      </p>
+                    </li>
+  
+                    <li>
+                      <p>
+                        <m>X</m> is totally bounded iff <m>\forall \varepsilon&gt;0</m> there exist <m>a_1,\dots,a_n\in X</m> with <m>X=\cup_{i=1}^n B_\varepsilon(a_i)</m>.
+                        (This is the book’s definition of totally bounded.)
+                      </p>
+                    </li>
+  
+                    <li>
+                      <p>
+                        A subset of a totally bounded set is totally bounded.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+            </exercise>
+  
+            <theorem xml:id="thm-totally-bounded-characterization"><title>Totally Bounded and Cauchy Subsequences</title>
+              <statement>
+                <p>
+                  A metric space <m>X</m> is totally bounded iff every sequence in <m>X</m> has a Cauchy subsequence.
+                </p>
+              </statement>
+  
+              <proof>
+                <p>
+                  (<m>\implies</m>) [totally bounded implies every sequence has a Cauchy subsequence] 
+                  Suppose <m>X</m> is a totally bounded metric space. 
+                  Let <m>(x_n)_{n=1}^\infty\subseteq X</m> be a sequence. 
+                  We’ll first construct a sequence <m>(A_k)_{k=1}^\infty</m> of subsets of <m>X</m> such that
+                  <ol>
+                    <li>
+                      <p>
+                        <m>A_k\supseteq A_{k+1}</m>
+                      </p>
+                    </li>
+  
+                    <li>
+                      <p>
+                        <m>\text{diam}(A_k)\leq \frac{1}{k}</m>
+                      </p>
+                    </li>
+  
+                    <li>
+                      <p>
+                        <m>\{{n\geq 1}\,:\,{x_n\in A_k}\}</m> is infinite for all <m>k\geq 1</m>.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+  
+                <p>
+                  Let <m>A_0=X</m>. 
+                  Assuming <m>k\geq 1, A_{k-1}</m> has been constructed, note that <m>A_{k-1}</m> is totally bounded (subset of totally bounded set is totally bounded). 
+                  So <m>\exists B_1,\dots,B_n\subseteq A_{k-1}</m> with <m>A_{k-1}=\cup_{i=1}^n B_i</m> and <m>\text{diam}(B_i)\leq \frac{1}{k}</m>. 
+                  Since <m>\{{m\geq 1}\,:\,{x_m\in A_{k-1}}\}=\cup_{i=1}^n\{{n\geq 1}\,:\,{x_m\in B_i}\}</m> is infinite, there is an <m>i_0\in\{1,\dots,n\}</m> such that <m>\{{m\geq 1}\,:\,{x_m\in B_{i_0}}\}</m> is infinite. 
+                  Set <m>A_k=B_{i_0}</m>. 
+                  Now construct <m>(x_{n_k})_{k=1}^\infty</m> as follows: 
+                  Since <m>\{{n\geq 1}\,:\,{x_n\in A_1}\}</m> is infinite, it’s not empty, so there exist <m>n_1\geq 1</m> with <m>x_{n_1}\in A_1</m>. 
+                  Now if <m>n_k</m> has been constructed, then <m>\{{n\geq 1}\,:\,{x_n\in A_{k+1}}\}</m> is infinite, and hence <m>\{{n\geq 1}\,:\,{x_n\in A_{k+1}}\}\setminus\{1,2,\dots,n_k\}</m> is non-empty. 
+                  Choose <m>n_{k+1}\in\mathbb{Z}</m> with <m>n_{k+1}&gt;n_k</m> and <m>x_{n_{k+1}}\in A_{k+1}</m>. 
+                  Then <m>(x_{n_k})_{k=1}^\infty</m> is a subsequence of <m>(x_n)_{n=1}^\infty</m> with <m>x_{n_k}\in A_k</m> for all <m>k\geq 1</m>.
+                </p>
+  
+                <p>
+                  We now show <m>(x_{n_k})_{k=1}^\infty</m> is Cauchy. 
+                  Fix <m>\varepsilon&gt;0</m>. 
+                  Choose <m>N\geq 1</m> with <m>\frac{1}{N}&lt;\varepsilon</m>. 
+                  Fix <m>k,l\in \mathbb{Z}</m>, <m>k,l\geq N</m>. 
+                  Then <m>x_{n_k}\in A_k\subseteq A_n</m> and <m>x_{n_l}\in A_l\subseteq A_N</m> (by condition (i)). 
+                  So <m>d(x_{n_k},x_{n_l})\leq \text{diam}(A_N)\leq \frac{1}{N}&lt;\varepsilon</m> (condition (ii)). 
+                  So <m>(x_{n_k})_{k=1}^\infty</m> is Cauchy.
+                </p>
+  
+                <p>
+                  (<m>\impliedby</m>) [wts every sequence has a Cauchy subsequence implies totally bounded]
+                </p>
+  
+                <p>
+                  Suppose <m>X</m> is not totally bounded. 
+                  Then exists <m>\varepsilon&gt;0</m> such that for all <m>B_1,\dots,B_n</m> with <m>\text{diam}(B_i)&lt;\varepsilon</m> we have <m>X\neq \cup_{i=1}^nB_i</m>. 
+                  Let <m>x_i\in X</m>. 
+                  (note: <m>X\neq \emptyset</m> since <m>\emptyset</m> is totally bounded) 
+                  Assume we’ve constructed <m>x_1,\dots x_k\in X</m> with <m>d(x_i,x_j)\geq \varepsilon/2</m> for all <m>i,j=1,\dots,k</m> with <m>i\neq j</m>. 
+                  Since <m>\text{diam}(B_{\frac{\varepsilon}{2}}(x_i))\leq \varepsilon</m> for all <m>i=1,\dots,k</m> (triangle inequality) we have <m>X\neq \cup_{i=1}^kB_{\frac{\varepsilon}{2}}(x_i)</m> so exists <m>x_{k+1}\in X</m> with <m>d(x_i,x_{k+1})\geq \frac{\varepsilon}{2}</m>. 
+                  So we’ve constructed a sequence <m>(x_n)_{n=1}^\infty \subseteq X</m> with <m>d(x_i,x_j)\geq \frac{\varepsilon}{2}</m> for all <m>i\neq j</m> so <m>(x_n)_{n=1}^\infty</m> has no Cauchy subsequence.
+                </p>
+              </proof>
+            </theorem>
+  
+            <corollary xml:id="cor-compact-iff-complete-totally-bounded"><title>Compact iff Complete and Totally Bounded</title>
+              <statement>
+                <p>
+                  A metric space is compact iff it is complete and totally bounded.
+                </p>
+              </statement>
+            </corollary>
+  
+            <corollary xml:id="cor-cn-bounded-subsets"><title>Totally Bounded Subsets of <m>\C^n</m></title>
+              <statement>
+                <p>
+                  If <m>A\subseteq \mathbb{C}^n</m>, then <m>A</m> is bounded iff it is totally bounded.
+                </p>
+              </statement>
+  
+              <proof>
+                <p>
+                  (<m>\impliedby</m>) holds for all metric spaces.
+                </p>
+  
+                <p>
+                  (<m>\implies</m>) If <m>A</m> is bounded, then every sequence <m>(a_n)_{n=2}^\infty \subseteq A</m> is bounded, and so <m>(a_n)_{n=2}^\infty</m> has a subsequence in <m>\mathbb{C}^n</m> by the Bolzano-Weierstrass Theorem (or by the Heine-Borel theorem applied to <m>\overline{A}</m>). 
+                  So <m>(a_n)_{n=2}^\infty</m> has a Cauchy subsequence.
+                </p>
+              </proof>
+            </corollary>
+  
+            <definition xml:id="def-finite-intersection-property"><title>Finite Intersection Property</title>
+              <statement>
+                <p>
+                  A collection of sets <m>(F_i)_{i\in I}</m> has the <term>finite intersection property</term> if whenever <m>J\subseteq I</m> is finite, <m>\cap_{j\in J}F_j\neq \emptyset</m>.
+                </p>
+              </statement>
+            </definition>
+  
+            <theorem xml:id="thm-borel-lebesgue"><title>Borel-Lebesgue Theorem</title>
+              <statement>
+                <p>
+                  For a metric space <m>X</m>, the following are equivalent:
+                  <ol>
+                    <li>
+                      <p>
+                        <m>X</m> is compact.
+                      </p>
+                    </li>
+                
+                    <li>
+                      <p>
+                        <m>X</m> is complete and totally bounded.
+                      </p>
+                    </li>
+                
+                    <li>
+                      <p>
+                        Every open cover of <m>X</m> has a finite subcover. 
+                        More often how compactness is defined.
+                      </p>
+                    </li>
+                
+                    <li>
+                      <p>
+                        Every family of closed subsets of <m>X</m> with the finite intersection property has nonempty intersection.
+                      </p>
+                    </li>
+                
+                    <li>
+                      <p>
+                        Every infinite subset of <m>X</m> has a cluster point.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+  
+              <proof>
+                <p>
+                  <ol>
+                    <li>
+                      <p>
+                        (1)<m>\implies</m>(2) 
+                        already shown
+                      </p>
+                    </li>
+  
+                    <li>
+                      <p>
+                        (2)<m>\implies</m>(3) S
+                        uppose <m>X</m> is totally bounded and complete. 
+                        Also, suppose (3) fails and fix an open cover <m>(U_i)_{i\in I}</m> of <m>X</m> with no finite subcover.
+                      </p>
+  
+                      <p>
+                        <term>Claim 1</term>: there is a sequence of points <m>(y_n)_{n=1}^\infty\subseteq X</m> such that for all <m>n\geq 1,J\subseteq I</m> finite, <m>\cap_{k=1}^n\overline{B_{\frac{1}{k}}(y_k)}\not\subseteq\cup_{i\in J}U_i</m>.
+                      </p>
+                    
+                      <p>
+                        We’ll construct <m>(y_n)_{n=1}^\infty</m> by induction on <m>n</m>. 
+                        To construct <m>y_1</m>: 
+                        Since <m>X</m> is totally bounded, there is a finite set <m>X_1\subseteq X</m> with <m>X=\cup_{y\in X_1}B_1(y)</m>. 
+                        Then also, <m>\cup_{y\in X_1}\overline{B_1(y)}=X</m>. 
+                        Suppose ftsoc that for all <m>y\in X_1 \exists</m> finite <m>J_y\subseteq I</m> with <m>\overline{B_1(y)}\subseteq \cup_{i\in J_y}U_i</m>. 
+                        Then if <m>J=\cup_{y\in X_1}J_y\subseteq I</m> then <m>J</m> is finite and <m>X=\cup_{i\in J}U_i</m>. 
+                        So exists <m>y_1\in X_1</m> such that <m>\overline{B_1(y)}</m> is not covered by finitely many <m>U_i</m>. 
+                        Suppose <m>y_1,\dots,y_n</m> have been constructed so that <m>\cap_{k=1}^n\overline{B_{\frac{1}{k}}(y_k)}</m> is not covered by finitely many <m>U_i</m>. 
+                        Since <m>X</m> is totally bounded, exists finite set <m>X_{n+1}\subseteq X</m> with <m>X=\cup_{y\in X_{n+1}}\overline{B_{\frac{1}{n+1}}(y)}</m>. 
+                        Then <m>\cap_{k=1}^n\overline{B_{\frac{1}{k}}(y_k)}=\cup_{y\in X_{n+1}}((\cap_{k=1}^n\overline{B_{\frac{1}{k}}(y_k)})\cap \overline{B_{\frac{1}{n+1}}(y)})</m>
+                      </p>
+                    
+                      <p>
+                        Since <m>\cup_{y\in X_{n+1}}((\cap_{k=1}^n\overline{B_{\frac{1}{k}}(y_k)})\cap \overline{B_{\frac{1}{n+1}}(y)})</m> is not covered by finitely many <m>U_i</m> and <m>X_{n+1}</m> is finite, there is a <m>y_{n+1}\in X_{n+1}</m> so that <m>\cap_{k=1}^{n+1}\overline{B_{\frac{1}{k}}(y_k)}</m> is not covered by finitely many <m>U_i</m>.
+                      </p>
+                    
+                      <p>
+                        <term>Claim 2</term>: <m>(y_n)_{n=1}^\infty</m> is Cauchy.
+                      </p>
+                    
+                      <p>
+                        Fix <m>\varepsilon&gt;0</m>. 
+                        Let <m>N\geq 1</m> be such that <m>\frac{1}{N}&lt;\frac{\varepsilon}{2}</m>. 
+                        Suppose <m>n,m\geq N</m>. 
+                        Since <m>\cap_{k=1}^{\max\{n,m\}}\overline{B_{\frac{1}{k}}(y_k)}</m> is not covered by finitely many <m>U_i</m>, we have <m>\cap_{k=1}^{\max\{n,m\}}\overline{B_{\frac{1}{k}}(y_k)}</m> is not empty. 
+                        In particular, <m>\overline{B_{\frac{1}{n}}(y_n)}\cap \overline{B_{\frac{1}{m}}(y_m)}</m>. 
+                        Fix <m>z\in\overline{B_{\frac{1}{n}}(y_n)}\cap \overline{B_{\frac{1}{m}}(y_m)}</m>. 
+                        Then <m>d(y_n,y_m)\leq d(y_n,z)+d(z,y_m)\leq \frac{1}{n}+\frac{1}{m}&lt;\varepsilon</m>.
+                      </p>
+                    
+                      <p>
+                        <term>Claim 3</term>: Exists <m>n\geq 1</m>, <m>i_0\in I</m> so that <m>\overline{B_{\frac{1}{n}}(y_n)}\subseteq U_{i_0}</m>.
+                      </p>
+                    
+                      <p>
+                        Note: This implies <m>\cap_{k=1}^n\overline{B_{\frac{1}{k}}(y_k)}</m> is covered by finitely many <m>U_i</m>. 
+                        This contradicts step 1, which will finish the proof.
+                      </p>
+                    
+                      <p>
+                        As <m>X</m> is complete (by (2)) and <m>(y_n)_{n=1}^\infty</m> is Cauchy by claim 2, we can define <m>y=\lim_{n\rightarrow\infty}y_n</m>. 
+                        Then <m>y\in X=\cup_{i\in I}U_i</m>, so exists <m>i_0\in I</m> with <m>y\in U_{i_0}</m>. 
+                        Fix <m>\varepsilon&gt;0</m> with <m>B_\varepsilon(y)\subseteq U_{i_0}</m>. 
+                        Fix <m>N\geq 1</m> such that for all <m>n\geq N,</m> we have <m>d(y_n,y)&lt;\frac{\varepsilon}{2}</m>. 
+                        Then fix <m>n\geq N</m> with <m>\frac{1}{n}&lt;\frac{\varepsilon}{2}</m>. 
+                        We’ll show that <m>\overline{B_{\frac{1}{n}}(y_n)}\subseteq U_{i_0}</m> as claimed. 
+                        Fix <m>z\in B_{\frac{1}{n}}(y_n)</m>. 
+                        Then <m>d(z,y_n)&lt;\frac{1}{n}</m> and <m>d(y_n,y)&lt;\frac{\varepsilon}{2}</m>, and so <m>d(z,y)&lt;\frac{1}{n}+\frac{\varepsilon}{2}(&lt;\varepsilon)</m>. 
+                        This shows that <m>B_{\frac{1}{n}(y_n)}\subseteq B_{\frac{1}{n}+\frac{\varepsilon}{2}}(y)</m> and so <m>\overline{B_{\frac{1}{n}(y_n)}}\subseteq \overline{B_{\frac{1}{n}+\frac{\varepsilon}{2}}(y)}\subseteq \{{z\in X}\,:\,{d(z,y)\leq \frac{1}{n}+\frac{\varepsilon}{2}}\}\subseteq B_{\varepsilon}(y)\subseteq U_{i_0}</m>.
+                      </p>
+  
+                      <p>
+                        thus (2)<m>\implies</m>(3)
+                      </p>
+                    </li>
+  
+                    <li>
+                      <p>
+                        (3)<m>\implies</m>(4) (proved by contrapositive)
+                      </p>
+  
+                      <p>
+                        Suppose (3) holds. 
+                        To show (4) suppose <m>(F_i)_{i\in I}</m> is a collection of closed sets with <m>\cap_{i\in I}F_i= \emptyset</m>. 
+                        We want to show that there is a finite set <m>J\subseteq I</m> with <m>\cap_{j\in J}F_j= \emptyset</m>. 
+                        Then <m>X\setminus F_i\subseteq X</m> is open for all <m>i\in I</m> and <m>\cup_{i\in I}(X\setminus F_i)=X\setminus(\cap_{i\in I}F_i)=X\setminus\emptyset=X</m>. 
+                        So <m>(X\setminus F_i)_{i\in I}</m> is an open cover of <m>X</m>. 
+                        By (3), there is a finite set <m>J\subseteq I</m> with <m>\cup_{i\in J}(X\setminus F_i)=X</m>. 
+                        Then <m>X=\cup_{i\in J}(X\setminus F_i)=X\setminus(\cap_{i\in J}F_i)</m> and so <m>\cap_{i\in J}F_i=\emptyset</m>
+                      </p>
+                    </li>
+  
+                    <li>
+                      <p>
+                        Suppose <m>S\subseteq X</m> is an infinite set. 
+                        Let <m>\mathcal{S}=\{{T\subseteq S}\,:\,{T\text{ is finite}}\}</m> and let <m>F_T=\overline{S\setminus T}\subseteq X</m> for <m>T\in \mathcal{S}</m>. 
+                        We’ll show <m>(F_T)_{T\in \mathcal{S}}</m> has the finite intersection property.
+                        Suppose <m>T_1,\dots,T_n\in\mathcal{S}</m>. 
+                        Then <m>\cap_{i=1}^n F_{T_i}=\cap_{i=1}^n\overline{S\setminus T_i}\supseteq\cap_{i=1}^n{S\setminus T_i}=S\setminus(\cup_{i=1}^n T_i)</m>. 
+                        Since <m>S</m> is infinite and <m>\cup_{i=1}^n T_i</m> is finite, <m>\cap_{i=1}^n F_{T_i}\neq\emptyset</m>.
+                        We show If <m>x\in\cap_{T\in \mathcal{S}}F_T</m> then <m>x</m> is a cluster point for <m>S</m>.
+                        Suppose <m>x\in\cap_{T\in \mathcal{S}}F_T</m>. 
+                        We need to show <m>x\in \overline{S\setminus\{x\}}</m>.
+                        If <m>x\notin S</m>, then <m>x\in\cap_{T\in\mathcal{S}}F_T\subseteq F_\emptyset=\overline{S}</m>. 
+                        (<m>\emptyset\in\mathcal{S}</m>). 
+                        As <m>x\notin S,S\setminus\{{x}\}=S,</m> so <m>x\in \overline{S\setminus \{{x}\}}</m>.
+                        If <m>x\in S</m>, then <m>x\in\cap_{T\in\mathcal{S}}F_T\subseteq F_{\{{x}\}}=\overline{S\setminus\{{x}\}}</m>. 
+                        (<m>\{{x}\}\in\mathcal{S}</m>)
+                        By (a) and (4), <m>\cap_{T\in\mathcal{S}}F_T\neq \emptyset</m>. 
+                        Then by (b) <m>S</m> has a cluster point. Hence (5) holds.
+                      </p>
+                    </li>
+  
+                    <li>
+                      <p>
+                        (5)<m>\implies</m>(1) 
+                        Assume (5) and <m>(x_n)_{n=1}^\infty\subseteq X</m> is a sequence. 
+                        If <m>(x_n)_{n=1}^\infty</m> has a constant subsequence, then it has a convergent subsequence.
+                      </p>
+  
+                      <p>
+                        Suppose <m>(x_n)_{n=1}^\infty</m> has no constant subsequence. 
+                        Therefore <m>\{{x_n}\,:\,{n\geq 1}\}\subseteq X</m> is infinite. 
+                        By (5), <m>\{{x_n}\,:\,{n\geq 1}\}</m> has a cluster point <m>x\in X</m>. 
+                        Note first that <m>\exists N\geq 1</m> such that <m>x_n\neq x\,\forall n\geq N</m> since otherwise there would be a subsequence <m>(x_{n_k})_{k=1}^\infty</m> of <m>(x_n)_{n=1}^\infty</m> such that <m>x_{n_k}=x</m> for all <m>k\geq 1,</m> but we’ve assumed <m>(x_n)_{n=1}^\infty</m> has no constant subsequence. 
+                        Note also that for all <m>M\geq 1</m>, <m>x\in\overline{\{{x_{M+1},x_{M+2},\dots}\}\subseteq X}</m>. 
+                        Then since <m>x\in\overline{\{{x_{N},x_{N+1},\dots}\}}</m> exists <m>n_1\geq N</m> with <m>d(x,x_{n_1})&lt;1</m>.
+                      </p>
+                    
+                      <p>
+                        Now since <m>x\in\overline{\{{x_{n_1+1},x_{n_1+2},\dots}\}}</m>, exists <m>n_2\geq n_1+1</m> with <m>d(x,x_{n_2})&lt;\frac{1}{2}</m>. 
+                        Continue inductively to produce <m>{n_{k+1}}\geq {n_k+1}</m> with <m>d(x,x_{n_{k+1}})&lt;\frac{1}{k+1}</m>. 
+                        Then <m>(x_{n_k})_{k=1}^\infty</m> is a subsequence of <m>(x_n)_{n=1}^\infty</m> and <m>x=\lim_{k\rightarrow\infty}x_{n_k}</m>.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </proof>
+            </theorem>
 
-          <p>
-            A version of the Heine-Borel theorem does hold for all metric spaces: 
-            Compact <m>\iff</m> complete and <q>totally bounded</q>
-          </p>
-
-          <definition xml:id="def-diameter"><title>Diameter</title>
-            <statement>
-              <p>
-                For a metric space <m>X</m>, define the <term>diameter</term> of <m>X</m> to be <m>\text{diam}(X)=\sup_{x,y\in X}d(x,y)\in [0,\infty]</m>.
-              </p>
-            </statement>
-          </definition>
-
-          <exercise>
-            <statement>
-              <p>
-                <m>\text{diam}(X)&lt;\infty \iff X</m> is bounded. 
-                Similarly, for a subset <m>A\subseteq X, \text{diam}(A)=\sup_{x,y\in A}d(x,y)\in[0,\infty]</m>.
-              </p>
-            </statement>
-          </exercise>
-
-          <definition xml:id="def-totally-bounded"><title>Totally Bounded Metric</title>
-            <statement>
-              <p>
-                A metric space <m>X</m> is <term>totally bounded</term> if for all <m>\varepsilon&gt;0,</m> there exists <m>A_1,\dots,A_n\subseteq X</m> for some <m>n\in \mathbb{Z}_+</m> with <m>X=\cup_{i=1}^n A_i</m> and <m>\text{diam}(A_i)&lt;\varepsilon</m>.
-              </p>
-            </statement>
-          </definition>
-
-          <example><title>Closed Interval is Totally Bounded</title>
-            <statement>
-              <p>
-                <m>[0,1]</m> is totally bounded. 
-                For all <m>n\geq 1,</m> <m>[0,1]=\cup_{k=1}^n[\frac{k-1}{n},\frac{k}{n}]</m> and <m>\text{diam}([\frac{k-1}{n},\frac{k}{n}])=\frac{1}{n}</m> for all <m>k=1,\dots,n</m>.
-              </p>
-            </statement>
-          </example>
-
-          <exercise><title>Bounded Sets in <m>\R^n</m> Totally Bounded</title>
-            <statement>
-              <p>
-                Any bounded set in <m>\mathbb{R}^n</m> is totally bounded.
-              </p>
-            </statement>
-          </exercise>
-
-          <proposition xml:id="prop-discrete-totally-bounded"><title>Bounded but not Totally Bounded</title>
-            <statement>
-              <p>
-                If <m>X</m> is an infinite set with the discrete metric then <m>X</m> is bounded (<m>\text{diam}(X)=1&lt;\infty</m>) but not totally bounded.
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                If <m>\varepsilon=\frac{1}{2}</m>, any set <m>A\subseteq X</m> with <m>\text{diam}(A)&lt;\varepsilon</m> contains at most one point. 
-                So if we could write <m>X=\cup_{i=1}^n A_i</m> with <m>\text{diam}(A_i)&lt;\frac{1}{2}</m>, then <m>X</m> would have at most <m>n</m> points. 
-                So <m>X</m> would be finite.
-              </p>
-            </proof>
-          </proposition>
-
-          <exercise>
-            <statement>
-              <p>
-                Let <m>X</m> be a metric space.
-                <ol>
-                  <li>
-                    <p>
-                      If <m>X</m> is totally bounded, then <m>X</m> is bounded.
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      <m>X</m> is totally bounded iff <m>\forall \varepsilon&gt;0</m> there exist <m>a_1,\dots,a_n\in X</m> with <m>X=\cup_{i=1}^n B_\varepsilon(a_i)</m>.
-                      (This is the book’s definition of totally bounded.)
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      A subset of a totally bounded set is totally bounded.
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </statement>
-          </exercise>
-
-          <theorem xml:id="thm-totally-bounded-characterization"><title>Totally Bounded and Cauchy Subsequences</title>
-            <statement>
-              <p>
-                A metric space <m>X</m> is totally bounded iff every sequence in <m>X</m> has a Cauchy subsequence.
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                (<m>\implies</m>) [totally bounded implies every sequence has a Cauchy subsequence] 
-                Suppose <m>X</m> is a totally bounded metric space. 
-                Let <m>(x_n)_{n=1}^\infty\subseteq X</m> be a sequence. 
-                We’ll first construct a sequence <m>(A_k)_{k=1}^\infty</m> of subsets of <m>X</m> such that
-                <ol>
-                  <li>
-                    <p>
-                      <m>A_k\supseteq A_{k+1}</m>
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      <m>\text{diam}(A_k)\leq \frac{1}{k}</m>
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      <m>\{{n\geq 1}\,:\,{x_n\in A_k}\}</m> is infinite for all <m>k\geq 1</m>.
-                    </p>
-                  </li>
-                </ol>
-              </p>
-
-              <p>
-                Let <m>A_0=X</m>. 
-                Assuming <m>k\geq 1, A_{k-1}</m> has been constructed, note that <m>A_{k-1}</m> is totally bounded (subset of totally bounded set is totally bounded). 
-                So <m>\exists B_1,\dots,B_n\subseteq A_{k-1}</m> with <m>A_{k-1}=\cup_{i=1}^n B_i</m> and <m>\text{diam}(B_i)\leq \frac{1}{k}</m>. 
-                Since <m>\{{m\geq 1}\,:\,{x_m\in A_{k-1}}\}=\cup_{i=1}^n\{{n\geq 1}\,:\,{x_m\in B_i}\}</m> is infinite, there is an <m>i_0\in\{1,\dots,n\}</m> such that <m>\{{m\geq 1}\,:\,{x_m\in B_{i_0}}\}</m> is infinite. 
-                Set <m>A_k=B_{i_0}</m>. 
-                Now construct <m>(x_{n_k})_{k=1}^\infty</m> as follows: 
-                Since <m>\{{n\geq 1}\,:\,{x_n\in A_1}\}</m> is infinite, it’s not empty, so there exist <m>n_1\geq 1</m> with <m>x_{n_1}\in A_1</m>. 
-                Now if <m>n_k</m> has been constructed, then <m>\{{n\geq 1}\,:\,{x_n\in A_{k+1}}\}</m> is infinite, and hence <m>\{{n\geq 1}\,:\,{x_n\in A_{k+1}}\}\setminus\{1,2,\dots,n_k\}</m> is non-empty. 
-                Choose <m>n_{k+1}\in\mathbb{Z}</m> with <m>n_{k+1}&gt;n_k</m> and <m>x_{n_{k+1}}\in A_{k+1}</m>. 
-                Then <m>(x_{n_k})_{k=1}^\infty</m> is a subsequence of <m>(x_n)_{n=1}^\infty</m> with <m>x_{n_k}\in A_k</m> for all <m>k\geq 1</m>.
-              </p>
-
-              <p>
-                We now show <m>(x_{n_k})_{k=1}^\infty</m> is Cauchy. 
-                Fix <m>\varepsilon&gt;0</m>. 
-                Choose <m>N\geq 1</m> with <m>\frac{1}{N}&lt;\varepsilon</m>. 
-                Fix <m>k,l\in \mathbb{Z}</m>, <m>k,l\geq N</m>. 
-                Then <m>x_{n_k}\in A_k\subseteq A_n</m> and <m>x_{n_l}\in A_l\subseteq A_N</m> (by condition (i)). 
-                So <m>d(x_{n_k},x_{n_l})\leq \text{diam}(A_N)\leq \frac{1}{N}&lt;\varepsilon</m> (condition (ii)). 
-                So <m>(x_{n_k})_{k=1}^\infty</m> is Cauchy.
-              </p>
-
-              <p>
-                (<m>\impliedby</m>) [wts every sequence has a Cauchy subsequence implies totally bounded]
-              </p>
-
-              <p>
-                Suppose <m>X</m> is not totally bounded. 
-                Then exists <m>\varepsilon&gt;0</m> such that for all <m>B_1,\dots,B_n</m> with <m>\text{diam}(B_i)&lt;\varepsilon</m> we have <m>X\neq \cup_{i=1}^nB_i</m>. 
-                Let <m>x_i\in X</m>. 
-                (note: <m>X\neq \emptyset</m> since <m>\emptyset</m> is totally bounded) 
-                Assume we’ve constructed <m>x_1,\dots x_k\in X</m> with <m>d(x_i,x_j)\geq \varepsilon/2</m> for all <m>i,j=1,\dots,k</m> with <m>i\neq j</m>. 
-                Since <m>\text{diam}(B_{\frac{\varepsilon}{2}}(x_i))\leq \varepsilon</m> for all <m>i=1,\dots,k</m> (triangle inequality) we have <m>X\neq \cup_{i=1}^kB_{\frac{\varepsilon}{2}}(x_i)</m> so exists <m>x_{k+1}\in X</m> with <m>d(x_i,x_{k+1})\geq \frac{\varepsilon}{2}</m>. 
-                So we’ve constructed a sequence <m>(x_n)_{n=1}^\infty \subseteq X</m> with <m>d(x_i,x_j)\geq \frac{\varepsilon}{2}</m> for all <m>i\neq j</m> so <m>(x_n)_{n=1}^\infty</m> has no Cauchy subsequence.
-              </p>
-            </proof>
-          </theorem>
-
-          <corollary xml:id="cor-compact-iff-complete-totally-bounded"><title>Compact iff Complete and Totally Bounded</title>
-            <statement>
-              <p>
-                A metric space is compact iff it is complete and totally bounded.
-              </p>
-            </statement>
-          </corollary>
-
-          <corollary xml:id="cor-cn-bounded-subsets"><title>Totally Bounded Subsets of <m>\C^n</m></title>
-            <statement>
-              <p>
-                If <m>A\subseteq \mathbb{C}^n</m>, then <m>A</m> is bounded iff it is totally bounded.
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                (<m>\impliedby</m>) holds for all metric spaces.
-              </p>
-
-              <p>
-                (<m>\implies</m>) If <m>A</m> is bounded, then every sequence <m>(a_n)_{n=2}^\infty \subseteq A</m> is bounded, and so <m>(a_n)_{n=2}^\infty</m> has a subsequence in <m>\mathbb{C}^n</m> by the Bolzano-Weierstrass Theorem (or by the Heine-Borel theorem applied to <m>\overline{A}</m>). 
-                So <m>(a_n)_{n=2}^\infty</m> has a Cauchy subsequence.
-              </p>
-            </proof>
-          </corollary>
-
-          <definition xml:id="def-finite-intersection-property"><title>Finite Intersection Property</title>
-            <statement>
-              <p>
-                A collection of sets <m>(F_i)_{i\in I}</m> has the <term>finite intersection property</term> if whenever <m>J\subseteq I</m> is finite, <m>\cap_{j\in J}F_j\neq \emptyset</m>.
-              </p>
-            </statement>
-          </definition>
-
-          <theorem xml:id="thm-borel-lebesgue"><title>Borel-Lebesgue Theorem</title>
-            <statement>
-              <p>
-                For a metric space <m>X</m>, the following are equivalent:
-                <ol>
-                  <li>
-                    <p>
-                      <m>X</m> is compact.
-                    </p>
-                  </li>
-              
-                  <li>
-                    <p>
-                      <m>X</m> is complete and totally bounded.
-                    </p>
-                  </li>
-              
-                  <li>
-                    <p>
-                      Every open cover of <m>X</m> has a finite subcover. 
-                      More often how compactness is defined.
-                    </p>
-                  </li>
-              
-                  <li>
-                    <p>
-                      Every family of closed subsets of <m>X</m> with the finite intersection property has nonempty intersection.
-                    </p>
-                  </li>
-              
-                  <li>
-                    <p>
-                      Every infinite subset of <m>X</m> has a cluster point.
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                <ol>
-                  <li>
-                    <p>
-                      (1)<m>\implies</m>(2) 
-                      already shown
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      (2)<m>\implies</m>(3) S
-                      uppose <m>X</m> is totally bounded and complete. 
-                      Also, suppose (3) fails and fix an open cover <m>(U_i)_{i\in I}</m> of <m>X</m> with no finite subcover.
-                    </p>
-
-                    <p>
-                      <term>Claim 1</term>: there is a sequence of points <m>(y_n)_{n=1}^\infty\subseteq X</m> such that for all <m>n\geq 1,J\subseteq I</m> finite, <m>\cap_{k=1}^n\overline{B_{\frac{1}{k}}(y_k)}\not\subseteq\cup_{i\in J}U_i</m>.
-                    </p>
-                  
-                    <p>
-                      We’ll construct <m>(y_n)_{n=1}^\infty</m> by induction on <m>n</m>. 
-                      To construct <m>y_1</m>: 
-                      Since <m>X</m> is totally bounded, there is a finite set <m>X_1\subseteq X</m> with <m>X=\cup_{y\in X_1}B_1(y)</m>. 
-                      Then also, <m>\cup_{y\in X_1}\overline{B_1(y)}=X</m>. 
-                      Suppose ftsoc that for all <m>y\in X_1 \exists</m> finite <m>J_y\subseteq I</m> with <m>\overline{B_1(y)}\subseteq \cup_{i\in J_y}U_i</m>. 
-                      Then if <m>J=\cup_{y\in X_1}J_y\subseteq I</m> then <m>J</m> is finite and <m>X=\cup_{i\in J}U_i</m>. 
-                      So exists <m>y_1\in X_1</m> such that <m>\overline{B_1(y)}</m> is not covered by finitely many <m>U_i</m>. 
-                      Suppose <m>y_1,\dots,y_n</m> have been constructed so that <m>\cap_{k=1}^n\overline{B_{\frac{1}{k}}(y_k)}</m> is not covered by finitely many <m>U_i</m>. 
-                      Since <m>X</m> is totally bounded, exists finite set <m>X_{n+1}\subseteq X</m> with <m>X=\cup_{y\in X_{n+1}}\overline{B_{\frac{1}{n+1}}(y)}</m>. 
-                      Then <m>\cap_{k=1}^n\overline{B_{\frac{1}{k}}(y_k)}=\cup_{y\in X_{n+1}}((\cap_{k=1}^n\overline{B_{\frac{1}{k}}(y_k)})\cap \overline{B_{\frac{1}{n+1}}(y)})</m>
-                    </p>
-                  
-                    <p>
-                      Since <m>\cup_{y\in X_{n+1}}((\cap_{k=1}^n\overline{B_{\frac{1}{k}}(y_k)})\cap \overline{B_{\frac{1}{n+1}}(y)})</m> is not covered by finitely many <m>U_i</m> and <m>X_{n+1}</m> is finite, there is a <m>y_{n+1}\in X_{n+1}</m> so that <m>\cap_{k=1}^{n+1}\overline{B_{\frac{1}{k}}(y_k)}</m> is not covered by finitely many <m>U_i</m>.
-                    </p>
-                  
-                    <p>
-                      <term>Claim 2</term>: <m>(y_n)_{n=1}^\infty</m> is Cauchy.
-                    </p>
-                  
-                    <p>
-                      Fix <m>\varepsilon&gt;0</m>. 
-                      Let <m>N\geq 1</m> be such that <m>\frac{1}{N}&lt;\frac{\varepsilon}{2}</m>. 
-                      Suppose <m>n,m\geq N</m>. 
-                      Since <m>\cap_{k=1}^{\max\{n,m\}}\overline{B_{\frac{1}{k}}(y_k)}</m> is not covered by finitely many <m>U_i</m>, we have <m>\cap_{k=1}^{\max\{n,m\}}\overline{B_{\frac{1}{k}}(y_k)}</m> is not empty. 
-                      In particular, <m>\overline{B_{\frac{1}{n}}(y_n)}\cap \overline{B_{\frac{1}{m}}(y_m)}</m>. 
-                      Fix <m>z\in\overline{B_{\frac{1}{n}}(y_n)}\cap \overline{B_{\frac{1}{m}}(y_m)}</m>. 
-                      Then <m>d(y_n,y_m)\leq d(y_n,z)+d(z,y_m)\leq \frac{1}{n}+\frac{1}{m}&lt;\varepsilon</m>.
-                    </p>
-                  
-                    <p>
-                      <term>Claim 3</term>: Exists <m>n\geq 1</m>, <m>i_0\in I</m> so that <m>\overline{B_{\frac{1}{n}}(y_n)}\subseteq U_{i_0}</m>.
-                    </p>
-                  
-                    <p>
-                      Note: This implies <m>\cap_{k=1}^n\overline{B_{\frac{1}{k}}(y_k)}</m> is covered by finitely many <m>U_i</m>. 
-                      This contradicts step 1, which will finish the proof.
-                    </p>
-                  
-                    <p>
-                      As <m>X</m> is complete (by (2)) and <m>(y_n)_{n=1}^\infty</m> is Cauchy by claim 2, we can define <m>y=\lim_{n\rightarrow\infty}y_n</m>. 
-                      Then <m>y\in X=\cup_{i\in I}U_i</m>, so exists <m>i_0\in I</m> with <m>y\in U_{i_0}</m>. 
-                      Fix <m>\varepsilon&gt;0</m> with <m>B_\varepsilon(y)\subseteq U_{i_0}</m>. 
-                      Fix <m>N\geq 1</m> such that for all <m>n\geq N,</m> we have <m>d(y_n,y)&lt;\frac{\varepsilon}{2}</m>. 
-                      Then fix <m>n\geq N</m> with <m>\frac{1}{n}&lt;\frac{\varepsilon}{2}</m>. 
-                      We’ll show that <m>\overline{B_{\frac{1}{n}}(y_n)}\subseteq U_{i_0}</m> as claimed. 
-                      Fix <m>z\in B_{\frac{1}{n}}(y_n)</m>. 
-                      Then <m>d(z,y_n)&lt;\frac{1}{n}</m> and <m>d(y_n,y)&lt;\frac{\varepsilon}{2}</m>, and so <m>d(z,y)&lt;\frac{1}{n}+\frac{\varepsilon}{2}(&lt;\varepsilon)</m>. 
-                      This shows that <m>B_{\frac{1}{n}(y_n)}\subseteq B_{\frac{1}{n}+\frac{\varepsilon}{2}}(y)</m> and so <m>\overline{B_{\frac{1}{n}(y_n)}}\subseteq \overline{B_{\frac{1}{n}+\frac{\varepsilon}{2}}(y)}\subseteq \{{z\in X}\,:\,{d(z,y)\leq \frac{1}{n}+\frac{\varepsilon}{2}}\}\subseteq B_{\varepsilon}(y)\subseteq U_{i_0}</m>.
-                    </p>
-
-                    <p>
-                      thus (2)<m>\implies</m>(3)
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      (3)<m>\implies</m>(4) (proved by contrapositive)
-                    </p>
-
-                    <p>
-                      Suppose (3) holds. 
-                      To show (4) suppose <m>(F_i)_{i\in I}</m> is a collection of closed sets with <m>\cap_{i\in I}F_i= \emptyset</m>. 
-                      We want to show that there is a finite set <m>J\subseteq I</m> with <m>\cap_{j\in J}F_j= \emptyset</m>. 
-                      Then <m>X\setminus F_i\subseteq X</m> is open for all <m>i\in I</m> and <m>\cup_{i\in I}(X\setminus F_i)=X\setminus(\cap_{i\in I}F_i)=X\setminus\emptyset=X</m>. 
-                      So <m>(X\setminus F_i)_{i\in I}</m> is an open cover of <m>X</m>. 
-                      By (3), there is a finite set <m>J\subseteq I</m> with <m>\cup_{i\in J}(X\setminus F_i)=X</m>. 
-                      Then <m>X=\cup_{i\in J}(X\setminus F_i)=X\setminus(\cap_{i\in J}F_i)</m> and so <m>\cap_{i\in J}F_i=\emptyset</m>
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      Suppose <m>S\subseteq X</m> is an infinite set. 
-                      Let <m>\mathcal{S}=\{{T\subseteq S}\,:\,{T\text{ is finite}}\}</m> and let <m>F_T=\overline{S\setminus T}\subseteq X</m> for <m>T\in \mathcal{S}</m>. 
-                      We’ll show <m>(F_T)_{T\in \mathcal{S}}</m> has the finite intersection property.
-                      Suppose <m>T_1,\dots,T_n\in\mathcal{S}</m>. 
-                      Then <m>\cap_{i=1}^n F_{T_i}=\cap_{i=1}^n\overline{S\setminus T_i}\supseteq\cap_{i=1}^n{S\setminus T_i}=S\setminus(\cup_{i=1}^n T_i)</m>. 
-                      Since <m>S</m> is infinite and <m>\cup_{i=1}^n T_i</m> is finite, <m>\cap_{i=1}^n F_{T_i}\neq\emptyset</m>.
-                      We show If <m>x\in\cap_{T\in \mathcal{S}}F_T</m> then <m>x</m> is a cluster point for <m>S</m>.
-                      Suppose <m>x\in\cap_{T\in \mathcal{S}}F_T</m>. 
-                      We need to show <m>x\in \overline{S\setminus\{x\}}</m>.
-                      If <m>x\notin S</m>, then <m>x\in\cap_{T\in\mathcal{S}}F_T\subseteq F_\emptyset=\overline{S}</m>. 
-                      (<m>\emptyset\in\mathcal{S}</m>). 
-                      As <m>x\notin S,S\setminus\{{x}\}=S,</m> so <m>x\in \overline{S\setminus \{{x}\}}</m>.
-                      If <m>x\in S</m>, then <m>x\in\cap_{T\in\mathcal{S}}F_T\subseteq F_{\{{x}\}}=\overline{S\setminus\{{x}\}}</m>. 
-                      (<m>\{{x}\}\in\mathcal{S}</m>)
-                      By (a) and (4), <m>\cap_{T\in\mathcal{S}}F_T\neq \emptyset</m>. 
-                      Then by (b) <m>S</m> has a cluster point. Hence (5) holds.
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      (5)<m>\implies</m>(1) 
-                      Assume (5) and <m>(x_n)_{n=1}^\infty\subseteq X</m> is a sequence. 
-                      If <m>(x_n)_{n=1}^\infty</m> has a constant subsequence, then it has a convergent subsequence.
-                    </p>
-
-                    <p>
-                      Suppose <m>(x_n)_{n=1}^\infty</m> has no constant subsequence. 
-                      Therefore <m>\{{x_n}\,:\,{n\geq 1}\}\subseteq X</m> is infinite. 
-                      By (5), <m>\{{x_n}\,:\,{n\geq 1}\}</m> has a cluster point <m>x\in X</m>. 
-                      Note first that <m>\exists N\geq 1</m> such that <m>x_n\neq x\,\forall n\geq N</m> since otherwise there would be a subsequence <m>(x_{n_k})_{k=1}^\infty</m> of <m>(x_n)_{n=1}^\infty</m> such that <m>x_{n_k}=x</m> for all <m>k\geq 1,</m> but we’ve assumed <m>(x_n)_{n=1}^\infty</m> has no constant subsequence. 
-                      Note also that for all <m>M\geq 1</m>, <m>x\in\overline{\{{x_{M+1},x_{M+2},\dots}\}\subseteq X}</m>. 
-                      Then since <m>x\in\overline{\{{x_{N},x_{N+1},\dots}\}}</m> exists <m>n_1\geq N</m> with <m>d(x,x_{n_1})&lt;1</m>.
-                    </p>
-                  
-                    <p>
-                      Now since <m>x\in\overline{\{{x_{n_1+1},x_{n_1+2},\dots}\}}</m>, exists <m>n_2\geq n_1+1</m> with <m>d(x,x_{n_2})&lt;\frac{1}{2}</m>. 
-                      Continue inductively to produce <m>{n_{k+1}}\geq {n_k+1}</m> with <m>d(x,x_{n_{k+1}})&lt;\frac{1}{k+1}</m>. 
-                      Then <m>(x_{n_k})_{k=1}^\infty</m> is a subsequence of <m>(x_n)_{n=1}^\infty</m> and <m>x=\lim_{k\rightarrow\infty}x_{n_k}</m>.
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </proof>
-          </theorem>
+          </subsection>
           
         </section>
 
@@ -3807,10 +3803,6 @@
           
         </section>
 
-      </chapter>
-
-      <chapter xml:id="ch-limits-continuity"><title>Function Limits and Continuity</title>
-        
         <section xml:id="sec-function-limits"><title>Function Limits</title>
 
           <blockquote>
@@ -4554,242 +4546,242 @@
 
         </section>
 
-      </chapter>
+        <section xml:id="sec-separability-completions"><title>Completions and Separability</title>
 
-      <chapter xml:id="ch-separability"><title>Completions and Separability</title>
-
-        <section xml:id="sec-completions"><title>Completions</title>
+          <subsection xml:id="subsec-completions"><title>Completions</title>
           
-          <definition xml:id="def-dense"><title>Dense</title>
-            <statement>
+            <definition xml:id="def-dense"><title>Dense</title>
+              <statement>
+                <p>
+                  Let <m>X</m> be a metric space. 
+                  A set <m>A\subseteq X</m> is <term>dense</term> if <m>\overline{A}=X</m>.
+                </p>
+              </statement>
+            </definition>
+  
+            <definition xml:id="def-isometry"><title>Isometry</title>
+              <statement>
+                <p>
+                  A function <m>f:X\rightarrow Y</m> between metric spaces <m>X,Y</m> is an <term>isometry</term> (or is <term>isometric</term>) if <m>d(x,x')=d(f(x),f(x'))</m> for <m>x,x'\in X</m>.
+                </p>
+              </statement>
+            </definition>
+  
+            <exercise>
+              <statement>
+                <p>
+                  An isometry is injective.
+                </p>
+              </statement>
+  
+              <solution>
+                <p>
+                  Suppose <m>f:X\rightarrow Y</m> is an isometry. 
+                  If <m>x,x'\in X</m> and <m>x\neq x'</m>, then <m>d(x,x')&gt;0</m>. 
+                  So <m>f(x)\neq f(x')</m>.
+                </p>
+              </solution>
+            </exercise>
+  
+            <definition xml:id="def-iso-iso"><title>Isometric Isomorphism</title>
+              <statement>
+                <p>
+                  An <term>isometric isomorphism</term> between metric spaces <m>X</m> and <m>Y</m> is a surjective isometry <m>f:X\rightarrow Y</m>. 
+                  In this case, <m>f</m> is bijective and <m>f^{-1}:Y\rightarrow X</m> is also an isometry. 
+                  <m>X</m> and <m>Y</m> are <term>isometrically isomorphic</term> if exists an isometric isomorphism <m>f:X\rightarrow Y</m>.
+                </p>
+              </statement>
+            </definition>
+  
+            <definition xml:id="def-completion"><title>Completion</title>
+              <statement>
+                <p>
+                  A <term>completion</term> of a metric space <m>X</m> is a pair <m>(\hat{X},j)</m> where <m>\hat{X}</m> is a complete metric space and <m>j:X\rightarrow \hat{X}</m> is an isometry such that <m>j(X)</m> is dense in <m>\hat{X}</m>.
+                </p>
+              </statement>
+            </definition>
+  
+            <example>
+              <statement>
+                <p>
+                  <ul>
+                    <li>
+                      <p>
+                        If <m>X=\mathbb{Q}</m>, then <m>(\mathbb{R},j:\mathbb{Q}\hookrightarrow\mathbb{R})</m> is a completion of <m>\mathbb{Q}</m>.
+                      </p>
+                    </li>
+  
+                    <li>
+                      <p>
+                        If <m>X=(a,b)\subseteq \mathbb{R}</m>, then <m>([a,b], j:(a,b)\hookrightarrow[a,b])</m> is a completion of <m>(a,b)</m>.
+                      </p>
+                    </li>
+  
+                    <li>
+                      <p>
+                        <m>X=(a,b)\subseteq \mathbb{R}</m>, then <m>([a+1,b+1], j)</m> where <m>j(x)=x+1</m> is a completion of <m>(a,b)</m>.
+                      </p>
+                    </li>
+  
+                    <li>
+                      <p>
+                        If <m>X</m> is a complete metric space, then <m>(X,\text{id}_X)</m> is a completion of <m>X</m>.
+                      </p>
+                    </li>
+                  </ul>
+                </p>
+              </statement>
+            </example>
+  
+            <theorem xml:id="thm-completion"><title>Completion Existence</title>
+              <statement>
+                <p>
+                  Let <m>X</m> be a metric space.
+                  <ol>
+                    <li>
+                      <p>
+                        <m>X</m> has a completion <m>(\hat{X},j)</m>
+                      </p>
+                    </li>
+  
+                    <li>
+                      <p>
+                        Let <m>(\hat{X}_1,j_1)</m>, <m>(\hat{X}_2,j_2)</m> be completions of <m>X</m>. Then there is a unique isometric isomorphism <m>f:\hat{X}_1\rightarrow\hat{X}_2</m> such that <m>f(j_1)=j_2</m>.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+            </theorem>
+            
+          </subsection>
+  
+          <subsection xml:id="subsec-separability"><title>Separability</title>
+  
+            <definition xml:id="def-separable"><title>Separable</title>
+              <statement>
+                <p>
+                  A metric space <m>X</m> is <term>seperable</term> if there is a countable dense (recall dense means <m>\overline{S}=X</m>) set <m>S\subseteq X</m>.
+                </p>
+              </statement>
+            </definition>
+  
+            <example>
+              <statement>
+                <p>
+                  <ul>
+                    <li>
+                      <p>
+                        <m>\mathbb{R}</m> is separable since <m>\mathbb{Q}\subseteq \mathbb{R}</m> is countable and dense in <m>\mathbb{R}</m>.
+                      </p>
+                    </li>
+  
+                    <li>
+                      <p>
+                        <m>\mathbb{C}</m> is separable. 
+                        <m>\mathbb{Q}[i]=\{{a+ib}\,:\,{a,b\in\mathbb{Q}}\}\subseteq \mathbb{C}</m> is dense in <m>\mathbb{C}</m>, and <m>\mathbb{Q}[i]</m> is countable since <m>\mathbb{Q}[i]\sim\mathbb{Q}\times \mathbb{Q}</m> by <m>(a,b)\mapsto a+ib</m>.
+                      </p>
+                    </li>
+  
+                    <li>
+                      <p>
+                        <m>\mathbb{R}^n,\mathbb{C}^n</m> are separable.
+                      </p>
+                    </li>
+  
+                    <li>
+                      <p>
+                        If <m>X</m> is an uncountable set with the discrete metric, then <m>X</m> is not separable. 
+                        In fact, <m>X</m> is the only dense subset of <m>X</m>, and <m>X</m> is not countable.
+                      </p>
+                    </li>
+                  </ul>
+                </p>
+              </statement>
+            </example>
+  
+            <theorem xml:id="thm-compact-separable"><title>Compact Implies Separable</title>
+              <statement>
+                <p>
+                  Every compact metric space is separable.
+                </p>
+              </statement>
+            </theorem>
+  
+            <lemma xml:id="lem-separable"><title>Separable Lemma</title>
+              <statement>
+                <p>
+                  A metric space <m>X</m> is separable iff there exists a countable set of open sets <m>\mathcal{S}</m> in <m>X</m> such that for all <m>x\in X</m>, and all <m>U\subseteq X</m> open with <m>x\in U</m>, there exists <m>V\in \mathcal{S}</m> so that <m>x\in V\subseteq U</m>.
+                </p>
+              </statement>
+  
+              <proof>
+                <p>
+                  (<m>\impliedby</m>) Suppose <m>\mathcal{S}</m> is given. 
+                  We may assume <m>\emptyset\notin \mathcal{S}</m> by replacing <m>\mathcal{S}</m> with <m>\mathcal{S}\setminus\{{\emptyset}\}</m> if needed. 
+                  For each <m>V\in \mathcal{S}</m>, let <m>x_V\in V</m>, and let <me>S=\{{x_V}\,:\,{V\in \mathcal{S}}\}\subseteq X.</me> 
+                  The function <m>\mathcal{S}\rightarrow S:V\mapsto x_V</m> is surjective, and <m>\mathcal{S}</m> is countable, so <m>S</m> is also countable. 
+                  I claim that <m>S</m> is also dense in <m>X</m>. 
+                  Suppose <m>\overline{S}\neq X</m>. 
+                  Fix <m>x\in X\setminus\overline{S}</m>. 
+                  Then by property of <m>\mathcal{S},</m> taking <m>U=X\setminus\overline{S}</m>, we can find <m>V\in \mathcal{S}</m> with <m>x\in V\subseteq X\setminus\overline{S}</m>. 
+                  Then <m>x_V\in S, x_V\in V,</m> and <m>S\cap V=\emptyset</m>, a contradiction.
+                </p>
+  
+                <p>
+                  (<m>\implies</m>) 
+                  Let <m>S\subseteq X</m> be a countable set with <m>\overline{S}=X</m>. 
+                  Let <m>\mathcal{S}=\{{B_\varepsilon(x)}\,:\,{x\in S,\varepsilon\in \mathbb{Q},\varepsilon&gt;0}\}.</m> 
+                  Then there is a surjective function <m>S\times\mathbb{Q}_{\geq 0}\rightarrow\mathcal{S}</m> by <m>(x,\varepsilon)\mapsto B_\varepsilon(x)</m>. 
+                  Since <m>S</m> and <m>Q_{\geq 0}</m> are countable, <m>\mathcal{S}</m> is also countable. 
+                  Suppose now that <m>x\in X,U\subseteq X</m> is open, and <m>x\in U</m>. 
+                  We need to find <m>V\in\mathcal{S}</m> with <m>x\in V\subseteq U</m>. 
+                  Fix <m>\varepsilon_0&gt;0</m> such that <m>B_{\varepsilon_0}(x)\subseteq U</m>. 
+                  Now let <m>\varepsilon\in(0,\varepsilon_0]\cap \mathbb{Q}</m> 
+                  Since <m>\overline{S}=X</m>, we have <m>x\in\overline{S}</m>. 
+                  So exists <m>y\in S</m> with <m>d(x,y)&lt;\frac{\varepsilon}{2}</m>. 
+                  Now 
+                  <me>
+                    \begin{aligned}
+                    x\in B_{\frac{\varepsilon}{2}}(y)
+                    &amp;\subseteq B_{e}(x) \text{ (triangle inequality)}\\
+                    &amp;\subseteq U
+                    \end{aligned}
+                  </me> 
+                  Then <m>\frac{\varepsilon}{2}\in\mathbb{Q}</m> and <m>y\in S</m>, so <m>B_{\frac{\varepsilon}{2}}(y)\in\mathcal{S}</m>, set <m>V=B_{\frac{\varepsilon}{2}}(y)</m>.
+                </p>
+              </proof>
+            </lemma>
+  
+            <remark>
               <p>
-                Let <m>X</m> be a metric space. 
-                A set <m>A\subseteq X</m> is <term>dense</term> if <m>\overline{A}=X</m>.
+                In the language of topology, this says a metric space is separable iff it is second countable.
               </p>
-            </statement>
-          </definition>
-
-          <definition xml:id="def-isometry"><title>Isometry</title>
-            <statement>
-              <p>
-                A function <m>f:X\rightarrow Y</m> between metric spaces <m>X,Y</m> is an <term>isometry</term> (or is <term>isometric</term>) if <m>d(x,x')=d(f(x),f(x'))</m> for <m>x,x'\in X</m>.
-              </p>
-            </statement>
-          </definition>
-
-          <exercise>
-            <statement>
-              <p>
-                An isometry is injective.
-              </p>
-            </statement>
-
-            <solution>
-              <p>
-                Suppose <m>f:X\rightarrow Y</m> is an isometry. 
-                If <m>x,x'\in X</m> and <m>x\neq x'</m>, then <m>d(x,x')&gt;0</m>. 
-                So <m>f(x)\neq f(x')</m>.
-              </p>
-            </solution>
-          </exercise>
-
-          <definition xml:id="def-iso-iso"><title>Isometric Isomorphism</title>
-            <statement>
-              <p>
-                An <term>isometric isomorphism</term> between metric spaces <m>X</m> and <m>Y</m> is a surjective isometry <m>f:X\rightarrow Y</m>. 
-                In this case, <m>f</m> is bijective and <m>f^{-1}:Y\rightarrow X</m> is also an isometry. 
-                <m>X</m> and <m>Y</m> are <term>isometrically isomorphic</term> if exists an isometric isomorphism <m>f:X\rightarrow Y</m>.
-              </p>
-            </statement>
-          </definition>
-
-          <definition xml:id="def-completion"><title>Completion</title>
-            <statement>
-              <p>
-                A <term>completion</term> of a metric space <m>X</m> is a pair <m>(\hat{X},j)</m> where <m>\hat{X}</m> is a complete metric space and <m>j:X\rightarrow \hat{X}</m> is an isometry such that <m>j(X)</m> is dense in <m>\hat{X}</m>.
-              </p>
-            </statement>
-          </definition>
-
-          <example>
-            <statement>
-              <p>
-                <ul>
-                  <li>
-                    <p>
-                      If <m>X=\mathbb{Q}</m>, then <m>(\mathbb{R},j:\mathbb{Q}\hookrightarrow\mathbb{R})</m> is a completion of <m>\mathbb{Q}</m>.
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      If <m>X=(a,b)\subseteq \mathbb{R}</m>, then <m>([a,b], j:(a,b)\hookrightarrow[a,b])</m> is a completion of <m>(a,b)</m>.
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      <m>X=(a,b)\subseteq \mathbb{R}</m>, then <m>([a+1,b+1], j)</m> where <m>j(x)=x+1</m> is a completion of <m>(a,b)</m>.
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      If <m>X</m> is a complete metric space, then <m>(X,\text{id}_X)</m> is a completion of <m>X</m>.
-                    </p>
-                  </li>
-                </ul>
-              </p>
-            </statement>
-          </example>
-
-          <theorem xml:id="thm-completion"><title>Completion Existence</title>
-            <statement>
-              <p>
-                Let <m>X</m> be a metric space.
-                <ol>
-                  <li>
-                    <p>
-                      <m>X</m> has a completion <m>(\hat{X},j)</m>
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      Let <m>(\hat{X}_1,j_1)</m>, <m>(\hat{X}_2,j_2)</m> be completions of <m>X</m>. Then there is a unique isometric isomorphism <m>f:\hat{X}_1\rightarrow\hat{X}_2</m> such that <m>f(j_1)=j_2</m>.
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </statement>
-          </theorem>
-          
-        </section>
-
-        <section xml:id="sec-separability"><title>Separability</title>
-
-          <definition xml:id="def-separable"><title>Separable</title>
-            <statement>
-              <p>
-                A metric space <m>X</m> is <term>seperable</term> if there is a countable dense (recall dense means <m>\overline{S}=X</m>) set <m>S\subseteq X</m>.
-              </p>
-            </statement>
-          </definition>
-
-          <example>
-            <statement>
-              <p>
-                <ul>
-                  <li>
-                    <p>
-                      <m>\mathbb{R}</m> is separable since <m>\mathbb{Q}\subseteq \mathbb{R}</m> is countable and dense in <m>\mathbb{R}</m>.
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      <m>\mathbb{C}</m> is separable. 
-                      <m>\mathbb{Q}[i]=\{{a+ib}\,:\,{a,b\in\mathbb{Q}}\}\subseteq \mathbb{C}</m> is dense in <m>\mathbb{C}</m>, and <m>\mathbb{Q}[i]</m> is countable since <m>\mathbb{Q}[i]\sim\mathbb{Q}\times \mathbb{Q}</m> by <m>(a,b)\mapsto a+ib</m>.
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      <m>\mathbb{R}^n,\mathbb{C}^n</m> are separable.
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      If <m>X</m> is an uncountable set with the discrete metric, then <m>X</m> is not separable. 
-                      In fact, <m>X</m> is the only dense subset of <m>X</m>, and <m>X</m> is not countable.
-                    </p>
-                  </li>
-                </ul>
-              </p>
-            </statement>
-          </example>
-
-          <theorem xml:id="thm-compact-separable"><title>Compact Implies Separable</title>
-            <statement>
-              <p>
-                Every compact metric space is separable.
-              </p>
-            </statement>
-          </theorem>
-
-          <lemma xml:id="lem-separable"><title>Separable Lemma</title>
-            <statement>
-              <p>
-                A metric space <m>X</m> is separable iff there exists a countable set of open sets <m>\mathcal{S}</m> in <m>X</m> such that for all <m>x\in X</m>, and all <m>U\subseteq X</m> open with <m>x\in U</m>, there exists <m>V\in \mathcal{S}</m> so that <m>x\in V\subseteq U</m>.
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                (<m>\impliedby</m>) Suppose <m>\mathcal{S}</m> is given. 
-                We may assume <m>\emptyset\notin \mathcal{S}</m> by replacing <m>\mathcal{S}</m> with <m>\mathcal{S}\setminus\{{\emptyset}\}</m> if needed. 
-                For each <m>V\in \mathcal{S}</m>, let <m>x_V\in V</m>, and let <me>S=\{{x_V}\,:\,{V\in \mathcal{S}}\}\subseteq X.</me> 
-                The function <m>\mathcal{S}\rightarrow S:V\mapsto x_V</m> is surjective, and <m>\mathcal{S}</m> is countable, so <m>S</m> is also countable. 
-                I claim that <m>S</m> is also dense in <m>X</m>. 
-                Suppose <m>\overline{S}\neq X</m>. 
-                Fix <m>x\in X\setminus\overline{S}</m>. 
-                Then by property of <m>\mathcal{S},</m> taking <m>U=X\setminus\overline{S}</m>, we can find <m>V\in \mathcal{S}</m> with <m>x\in V\subseteq X\setminus\overline{S}</m>. 
-                Then <m>x_V\in S, x_V\in V,</m> and <m>S\cap V=\emptyset</m>, a contradiction.
-              </p>
-
-              <p>
-                (<m>\implies</m>) 
-                Let <m>S\subseteq X</m> be a countable set with <m>\overline{S}=X</m>. 
-                Let <m>\mathcal{S}=\{{B_\varepsilon(x)}\,:\,{x\in S,\varepsilon\in \mathbb{Q},\varepsilon&gt;0}\}.</m> 
-                Then there is a surjective function <m>S\times\mathbb{Q}_{\geq 0}\rightarrow\mathcal{S}</m> by <m>(x,\varepsilon)\mapsto B_\varepsilon(x)</m>. 
-                Since <m>S</m> and <m>Q_{\geq 0}</m> are countable, <m>\mathcal{S}</m> is also countable. 
-                Suppose now that <m>x\in X,U\subseteq X</m> is open, and <m>x\in U</m>. 
-                We need to find <m>V\in\mathcal{S}</m> with <m>x\in V\subseteq U</m>. 
-                Fix <m>\varepsilon_0&gt;0</m> such that <m>B_{\varepsilon_0}(x)\subseteq U</m>. 
-                Now let <m>\varepsilon\in(0,\varepsilon_0]\cap \mathbb{Q}</m> 
-                Since <m>\overline{S}=X</m>, we have <m>x\in\overline{S}</m>. 
-                So exists <m>y\in S</m> with <m>d(x,y)&lt;\frac{\varepsilon}{2}</m>. 
-                Now 
-                <me>
-                  \begin{aligned}
-                  x\in B_{\frac{\varepsilon}{2}}(y)
-                  &amp;\subseteq B_{e}(x) \text{ (triangle inequality)}\\
-                  &amp;\subseteq U
-                  \end{aligned}
-                </me> 
-                Then <m>\frac{\varepsilon}{2}\in\mathbb{Q}</m> and <m>y\in S</m>, so <m>B_{\frac{\varepsilon}{2}}(y)\in\mathcal{S}</m>, set <m>V=B_{\frac{\varepsilon}{2}}(y)</m>.
-              </p>
-            </proof>
-          </lemma>
-
-          <remark>
-            <p>
-              In the language of topology, this says a metric space is separable iff it is second countable.
-            </p>
-          </remark>
-
-          <theorem xml:id="thm-separable-subsets"><title>Separable Subsets</title>
-            <statement>
-              <p>
-                If <m>X</m> is a separable metric space and <m>Y\subseteq X</m>, then <m>Y</m> is separable.
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                Suppose <m>X</m> is separable, and let <m>\mathcal{S}</m> be given as in the lemma above. 
-                Let <m>\mathcal{S}'=\{{V\cap Y}\,:\,{V\in \mathcal{S}}\}</m>. 
-                Then <m>\mathcal{S}'</m> is a collection of open subsets of <m>Y</m> and <m>\mathcal{S}'</m> is countable since <m>\mathcal{S}</m> is countable and the function <m>\mathcal{S}\rightarrow\mathcal{S}':V\rightarrow V\cap Y</m> is surjective. 
-                Let <m>Y'\subseteq Y</m> be an open set and let <m>y\in Y</m> with <m>y\in U'</m>. 
-                We need a <m>V'\in\mathcal{S}'</m> with <m>y\in V'\subseteq U'</m>. 
-                Since <m>U'</m> is open in <m>Y</m>, there is an open set <m>U\subseteq X</m> such that <m>U'=U\cap Y</m>. 
-                Since <m>y\in U</m>, there exists <m>V\in\mathcal{S}</m> such that <m>y\in V\subseteq U</m>. 
-                Let <m>V'=V\cap Y\in \mathcal{S}'</m> and note <m>y\in V'\subseteq U'</m>. 
-                Apply the lemma again to <m>Y</m>, and <m>Y</m> is separable.
-              </p>
-            </proof>
-          </theorem>
+            </remark>
+  
+            <theorem xml:id="thm-separable-subsets"><title>Separable Subsets</title>
+              <statement>
+                <p>
+                  If <m>X</m> is a separable metric space and <m>Y\subseteq X</m>, then <m>Y</m> is separable.
+                </p>
+              </statement>
+  
+              <proof>
+                <p>
+                  Suppose <m>X</m> is separable, and let <m>\mathcal{S}</m> be given as in the lemma above. 
+                  Let <m>\mathcal{S}'=\{{V\cap Y}\,:\,{V\in \mathcal{S}}\}</m>. 
+                  Then <m>\mathcal{S}'</m> is a collection of open subsets of <m>Y</m> and <m>\mathcal{S}'</m> is countable since <m>\mathcal{S}</m> is countable and the function <m>\mathcal{S}\rightarrow\mathcal{S}':V\rightarrow V\cap Y</m> is surjective. 
+                  Let <m>Y'\subseteq Y</m> be an open set and let <m>y\in Y</m> with <m>y\in U'</m>. 
+                  We need a <m>V'\in\mathcal{S}'</m> with <m>y\in V'\subseteq U'</m>. 
+                  Since <m>U'</m> is open in <m>Y</m>, there is an open set <m>U\subseteq X</m> such that <m>U'=U\cap Y</m>. 
+                  Since <m>y\in U</m>, there exists <m>V\in\mathcal{S}</m> such that <m>y\in V\subseteq U</m>. 
+                  Let <m>V'=V\cap Y\in \mathcal{S}'</m> and note <m>y\in V'\subseteq U'</m>. 
+                  Apply the lemma again to <m>Y</m>, and <m>Y</m> is separable.
+                </p>
+              </proof>
+            </theorem>
+            
+          </subsection>
           
         </section>
 
@@ -5011,16 +5003,669 @@
 
       <chapter xml:id="ch-integration"><title>Integration</title>
 
+        <section xml:id="sec-riemann"><title>The Riemann Integral</title>
+          
+          <definition xml:id="def-integral"><title>Integral</title>
+            <statement>
+              <p>
+                For <m>a,b\in\mathbb{R}</m> with <m>a&lt;b</m>, and a function <m>f:[a,b]\rightarrow\mathbb{R}</m>, the <term>integral</term> of <m>f</m> over <m>[a,b],\int_a^b f(x)\,dx</m>, when it exists, will represent the net area enclosed by the graph of <m>f</m>.
+              </p>
+            </statement>
+          </definition>
+
+          <p>
+            We’ll start by approximating the area under the graph by rectangles whose bases form a partition of <m>[a,b]</m> and compute the integral by taking a limit where the width of the rectangles converges to zero.
+          </p>
+
+          <definition xml:id="def-interval-partition"><title>Partition</title>
+            <statement>
+              <p>
+                A <term>partition</term> of a closed interval <m>[a,b]</m> is a finite set <m>P\subseteq[a,b]</m> so that <m>a,b\in P</m>.
+              </p>
+            </statement>
+          </definition>
+
+          <p>
+            Note that any partition <m>P</m> has the form <m>P=\{{x_0,x_1,\dots,x_n}\}</m> with <m>a=x_0&lt;x_1&lt;\dots&lt;x_n=b</m>.
+          </p>
+
+          <convention>
+            <p>
+              Abusing notation, we’ll often write <q>let <m>P=\{{a=x_0&lt;x_1&lt;\dots&lt;x_n=b}\}</m> be a partition of <m>[a,b]</m>.</q> 
+              Let <m>\mathcal{P}[a,b]</m> be the set of all partitions of <m>[a,b]</m>.
+            </p>
+          </convention>
+
+          <convention>
+            <p>
+              Let <m>\mathcal{B}[a,b]</m> denote the set of bounded functions <m>[a,b]\rightarrow\mathbb{R}</m>.
+            </p>
+          </convention>
+
+          <definition xml:id="def-riemann-sum"><title>Riemann Sums</title>
+            <statement>
+              <p>
+                Given a partition <m>P=\{{a=x_0&lt;x_1&lt;\dots&lt;x_n=b}\}\in\mathcal{P}[a,b]</m> and <m>f\in\mathcal{B}[a,b]</m>, define the <term>upper</term> and <term>lower</term> <term>Riemann Sums</term> by 
+                <me>
+                  \begin{aligned}
+                  U(f,P)
+                  &amp;=\sum_{i=1}^n M_i(f,P)(x_i-x_{i-1}),\\
+                  L(f,P)
+                  &amp;=\sum_{i=1}^n m_i(f,P)(x_i-x_{i-1})
+                  \end{aligned}
+                </me> 
+                where 
+                <me>
+                  \begin{aligned}
+                  M_i(f,P)
+                  &amp;=\sup\{{f(x)}\,:\,{x_{i-1}\leq x\leq x_i}\},\\
+                  m_i(f,P)
+                  &amp;=\inf\{{f(x)}\,:\,{x_{i-1}\leq x\leq x_i}\}.
+                  \end{aligned}
+                </me>
+              </p>
+            </statement>
+          </definition>
+
+          <definition xml:id="def-darboux-integral"><title>Darboux Integral</title>
+            <statement>
+              <p>
+                Define the <term>upper (Darboux) integral</term> by <m>\overline{\int_a^b}f(t)\,dt=\inf\{{U(f,p)}\,:\,{P\in \mathcal{P}[a,b]}\}</m> and the <term>lower (Darboux) integral</term> by <m>\underline{\int_a^b}f(t)\,dt=\sup\{{L(f,p)}\,:\,{P\in \mathcal{P}[a,b]}\}</m>.
+              </p>
+            </statement>
+          </definition>
+
+          <definition xml:id="def-riemann-integral"><title>Riemann Integral</title>
+            <statement>
+              <p>
+                A function <m>f\in\mathcal{B}[a,b]</m> is called <term>Riemann integrable</term> if <m>\overline{\int_a^b}f(t)\,dt=\underline{\int_a^b}f(t)\,dt</m>, and we’ll define 
+                <me>
+                  \int_a^bf(t)\,dt=\overline{\int_a^b}f(t)\,dt=\underline{\int_a^b}f(t)\,dt.
+                </me> 
+                We’ll write <m>\mathcal{R}[a,b]</m> for the set of all Riemann integrable functions <m>[a,b]\rightarrow\mathbb{R}</m>.
+              </p>
+            </statement>
+          </definition>
+
+          <exercise>
+            <statement>
+              <p>
+                A bounded function <m>f:[a,b]\rightarrow\mathbb{C}</m> is called Riemann integrable if its real and imaginary parts are, and in this case 
+                <me>
+                  \int_a^bf(x)\,dx=\int_a^b\text{Re}f(x)\,dx+i\int_a^b\text{Im}f(x)\,dx.
+                </me>
+              </p>
+            </statement>
+          </exercise>
+
+          <example>
+            <statement>
+              <p>
+                Let <m>f:[a,b]\rightarrow \mathbb{R}</m>, 
+                <me>
+                  \begin{aligned}
+                  f(x)=\begin{cases}
+                      1 &amp; x\in \mathbb{Q}\\
+                      0 &amp; x\notin \mathbb{Q}
+                  \end{cases}
+                \end{aligned}
+              </me> 
+              Then <m>\overline{\int_a^b}f(t)\,dt=b-a,\underline{\int_a^b}f(t)\,dt=0</m>, so <m>f\notin\mathcal{R}[a,b]</m>.
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Let <m>P\in\mathcal{P}[a,b]</m> and write <m>P=\{{a=x_0&lt;x_1&lt;\dots&lt;x_n=b}\}</m>. 
+                Then <m>M_i(f,P)=\sup\{{f(x)}\,:\,{x_{i-1}\leq x\leq x_i}\}=1</m>, <m>m_i(f,P)=\inf\{{f(x)}\,:\,{x_{i-1}\leq x\leq x_i}\}=0</m>. 
+                Hence <m>U(f,P)=\sum_{i=1}^n M_i(f,P)(x_i-x_j)=x_n-x_0=b-a</m>. 
+                Similarly, <m>L(f,P)=0</m>. 
+                So <m>\overline{\int_a^b}f(t)\,dt=b-a,\underline{\int_a^b}f(t)\,dt=0</m>.
+              </p>
+            </solution>
+          </example>
+
+          <definition xml:id="def-refinement"><title>Refinement</title>
+            <statement>
+              <p>
+                If <m>P\in\mathcal{P}[a,b]</m>, then a <term>refinement</term> of <m>P</m> is a partition <m>Q\in\mathcal{P}[a,b]</m> such that <m>P\subseteq Q</m>.
+              </p>
+            </statement>
+          </definition>
+
+          <theorem xml:id="thm-refinements-sums">
+            <statement>
+              <p>
+                If <m>P,Q\in\mathcal{P}[a,b]</m> with <m>P\subseteq Q</m>, then 
+                <me>
+                  L(f,P)\leq L(f,Q)\leq U(f,Q)\leq U(f,P).
+                </me>
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                Let <m>P=\{{a=x_0&lt;x_1&lt;\dots&lt;x_n=b}\}\in\mathcal{P}[a,b]</m> and let <m>Q</m> be a refinement of <m>P</m>. 
+                Then <m>Q=\cap_{k=1}^n Q_k</m>, where <m>Q_k\in\mathcal{P}[x_{k-1},x_k]</m>. 
+                In fact, <m>Q_k=Q\cap[x_{k-1},x_k]</m>. 
+                Let <m>Q_k=\{{x_{k-1}=y_0^{(k)}&lt;y_1^{(k)}&lt;\dots&lt;y_{m_k}^{(k)}=x_k}\}</m>.
+              </p>
+
+              <p>
+                For each <m>k=1,\dots,n</m> and <m>i=1,\dots,m_k</m>, we have <m>[y_{i-1}^{(k)},y_i^{(k)}]\subseteq [x_{k-1},x_k]</m> so 
+                <me>
+                  \sup\{{f(t)}\,:\,{y_{i-1}^{(k)}\leq t\leq y_{i}^{(k)}}\}\leq \sup\{{f(t)}\,:\,{x_{k-1}\leq t\leq x_k}\}.
+                </me> 
+                That is, 
+                <me>
+                  M_i(f,Q_k)\leq M_k(f,P).
+                </me> 
+                Now, 
+                <me>
+                  \begin{aligned}
+                  u(f,Q)
+                  &amp;=\sum_{k=1}^n\sum_{i=1}^{m_k}M_i(f,Q_k)(y_i^{(k)}-y_{i-1}^{(k)}
+                  \leq \sum_{k=1}^n\sum_{i=1}^{m_k}M_k(f,P)(y_i^{(k)}-y_{i-1}^{(k)}\\
+                  &amp;=\sum_{k=1}^n M_k(f,P)(y_{m_k}^{(k)}-y_0^{(k)}
+                  =\sum_{k=1}^n M_k(f,P)(x_k-x_{k-1})
+                  =u(f,P).
+                  \end{aligned}
+                </me> 
+                Thus <m>u(f,Q)\leq u(f,P)</m>.
+              </p>
+            
+              <p>
+                Similarly, <m>L(f,Q)\geq L(f,P)</m> (swap sups for infs), and it’s clear that <m>L(f,Q)\leq u(f,Q)</m>. ◻
+              </p>
+            </proof>
+          </theorem>
+
+          <corollary xml:id="cor-lower-below-upper"><title>Lower and Upper Darboux Integrals</title>
+            <statement>
+              <p>
+                For any <m>f\in\mathcal{B}[a,b]</m>, 
+                <me>
+                  \underline{\int_a^b}f(t)\,dt\leq \overline{\int_a^b}f(t)\,dt.
+                </me> 
+                In particular, <m>f\in\mathcal{R}[a,b]\iff</m> 
+                <me>
+                  \underline{\int_a^b}f(t)\,dt\geq \overline{\int_a^b}f(t)\,dt.
+                </me>
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                Fix partitions <m>P,Q\in\mathcal{P}[a,b]</m>. 
+                It’s enough to show that 
+                <me>
+                  L(f,P)\leq U(f,Q)
+                </me> 
+                since the result then follows by taking the supremum over <m>P</m> and the infemum over <m>Q</m>. 
+                Note that <m>P\cup Q</m> is a refinement of both <m>P</m> and <m>Q</m>. 
+                So 
+                <me>
+                  L(f,P)\leq L(f,P\cup Q)\leq U(f,P\cup Q)\leq U(f,Q).
+                </me>
+              </p>
+            </proof>
+          </corollary>
+
+          <example>
+            <statement>
+              <p>
+                Define <m>f:[0,1]\rightarrow\mathbb{R}</m> by <m>f(t)=t</m>.
+                Then <m>\int_0^1 f(t)\,dt=\frac{1}{2}</m>.
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Let <m>n\geq 1</m>, and define <m>x_i=\frac{i}{n}</m> for <m>i=0,\dots,n</m>. 
+                Then <m>P=\{{x_0,\dots,x_n}\}\in\mathcal{P}[0,1]</m> and <m>M_i(f,P)=\frac{1}{n}</m>. 
+                Now, <m>U(f,P)=\sum_{i=1}^n M_i(f,P)(x_i-x_{i-1})=\sum_{i=1}^n\frac{i}{n}\frac{1}{n}=\frac{n(n+1)}{2n^2}=\frac{1}{2}+\frac{1}{2n}</m>.
+              </p>
+
+              <p>
+                Similarly, <m>L(f,P)=\frac{(n-1)n}{2n^2}=\frac{1}{2}-\frac{1}{2n}</m>. 
+                Therefore 
+                <me>
+                  \frac{1}{2}-\frac{1}{2n}\leq \underline{\int_a^b}f(t)\,dt\leq \overline{\int_a^b}f(t)\,dt\leq U(f,P)\leq \frac{1}{2}+\frac{1}{2n}.
+                </me> 
+                Letting <m>n\rightarrow\infty</m>, we have 
+                <me>
+                  \underline{\int_a^b}f(t)\,dt= \overline{\int_a^b}f(t)\,dt=\frac{1}{2}.
+                </me>
+              </p>
+            </solution>
+          </example>
+
+          <theorem xml:id="thm-riemann-condition"><title>Riemann’s Condition</title>
+            <statement>
+              <p>
+                Suppose <m>f\in\mathcal{B}[a,b]</m>. 
+                Then <m>f\in\mathcal{R}[a,b]\iff</m> for all <m>\varepsilon&gt;0</m> there exists <m>P\in\mathcal{P}[a,b]</m> with 
+                <me>
+                  U(f,P)-L(f,P)&lt;\varepsilon.
+                </me>
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                Suppose for all <m>\varepsilon&gt;0</m> there exists <m>P\in\mathcal{P}[a,b]</m> with 
+                <me>
+                  U(f,P)-L(f,P)&lt;\varepsilon.
+                </me>
+                Given <m>\varepsilon&gt;0</m>, choose <m>P</m>. 
+                Then <m>\overline{\int_a^b}f(t)\,dt\leq U(f,P)\leq L(f,P)+\varepsilon&lt;\underline{\int_a^b}f(t)\,dt+\varepsilon</m>. 
+                Hence <m>\overline{\int_a^b}f(t)\,dt\leq \underline{\int_a^b}f(t)\,dt</m>, so <m>f\in\mathcal{R}[a,b]</m>.
+              </p>
+
+              <p>
+                Conversely, suppose that <m>f\in\mathcal{R}[a,b]</m>. 
+                Fix <m>\varepsilon&gt;0</m>. 
+                There are <m>P_1,P_2\in\mathcal{P}[a,b]</m> so that <m>\overline{\int_a^b}f(t)\,dt&gt;U(f,P)-\frac{\varepsilon}{2}</m> and <m>\int_a^bf(t)\,dt=\underline{\int_a^b}f(t)\,dt&lt;L(f,P_2)+\frac{\varepsilon}{2}</m>. 
+                Hence, <m>L(f,P_2)+\frac{\varepsilon}{2}&gt;U(f,P_1)-\frac{\varepsilon}{2}</m>, or rearranging 
+                <me>
+                  U(f,P_1)-L(f,P_2)&lt;\varepsilon.
+                </me> 
+                Set <m>P=P_1\cup P_2\in\mathcal{P}[a,b]</m>. 
+                Then 
+                <me>
+                  \begin{aligned}
+                  U(f,P)&amp;\leq U(f,P_1)\\
+                  L(f,P)&amp;\geq L(f,P_2)\\
+                  \implies U(f,P)-L(f,P)&amp;&lt;\varepsilon.      
+                  \end{aligned}
+                </me>
+              </p>
+            </proof>
+          </theorem>
+
+          <convention>
+            <p>
+              Let <m>\mathcal{C}[a,b]=\{{\text{continuous functions } [a,b]\rightarrow \mathbb{R}}\}=\mathcal{C}([a,b])</m>
+            </p>
+          </convention>
+
+          <theorem xml:id="thm-continuous-integrable-bounded"><title>Continuous Implies Integrable Implies Bounded on Closed Interval</title>
+            <statement>
+              <p>
+                <m>\mathcal{C}[a,b]\subseteq \mathcal{R}[a,b]\subseteq \mathcal{B}[a,b]</m>
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                The second inclusion holds by definition. 
+                Also, by extreme value theorem <m>\mathcal{C}[a,b]\subseteq \mathcal{B}[a,b]</m>.
+              </p>
+
+              <p>
+                Suppose that <m>f\in\mathcal{C}[a,b]</m>. 
+                We’ll show <m>f</m> satisfies Riemann’s condition. 
+                Since <m>f</m> is continuous on the compact set <m>[a,b]</m>, we have that <m>f</m> is uniformly continuous. 
+                Fix <m>\varepsilon&gt;0</m>. 
+                As <m>f</m> is uniformly continuous, there is a <m>\delta&gt;0</m> so that if <m>x,y\in[a,b]</m> and <m>\left|{x-y}\right|&lt;\delta</m>, then <m>\left|{f(x)-f(y)}\right|&lt;\frac{\varepsilon}{b-a}</m>. 
+                Fix <m>n\geq 1</m> so that <m>\frac{1}{n}&lt;\frac{\delta}{b-a}</m> and let <m>x_i=a+\frac{i}{n}(b-a)</m> for <m>i=0,\dots,n</m> and note that <m>P=\{{a=x_0&lt;x+1&lt;\dots&lt;x_n=b}\}\in \mathcal{P}[a,b]</m>. 
+                Then <m>x_i-x_{i-1}=\frac{b-a}{n}&lt;\delta</m> for <m>i=1,\dots,n</m>. 
+                As <m>f</m> is continuous on the closed interval <m>[x_{i-1},x_i]</m> (for <m>i=1,\dots,n</m>), the extreme value theorem implies there are <m>x_i^\#,x_i^b\in[x_{i-1},x_i]</m> so that 
+                <me>
+                  \begin{aligned}
+                  f(x_i^\#)
+                  &amp;= M_i(f,P)\\
+                  f(x_i^b)
+                  &amp;= m_i(f,P).
+                  \end{aligned}
+                </me> 
+                Then <m>\left|{x_i^\#-x_i^b}\right|\leq x_i-x_{i-1}&lt;\delta</m>, so <m>M_i(f,P)-m_i(f,P)&lt;\frac{\varepsilon}{b-a}</m> by the choice of <m>\delta</m>. 
+                Then 
+                <me>
+                  \begin{aligned}
+                  U(f,P)-L(f,P)
+                  &amp;=\sum_{i=1}^n(M_i(f,P)-m_i(f,P))(x_i-x_{i-1})
+                  &lt;\sum_{i=1}^n\left({\frac{\varepsilon}{b-a}}\right)(x_i-x_{i-1})\\
+                  &amp;=\frac{\varepsilon}{b-a}(b-a)
+                  =\varepsilon.
+                  \end{aligned}
+                </me>
+              </p>
+            </proof>
+          </theorem>
+
+          <theorem xml:id="thm-integral-algebra"><title>Integral Algebra</title>
+            <statement>
+              <p>
+                If <m>f,g\in\mathcal{B}[a,b],c\in\mathbb{R}</m>
+                <ol>
+                  <li>
+                    <p>
+                      <m>\overline{\int_a^b}(f+g)(t)\,dt\leq \overline{\int_a^b}f(t)\,dt+\overline{\int_a^b}g(t)\,dt</m>
+                    </p>
+                  </li>
+              
+                  <li>
+                    <p>
+                      <m>\overline{\int_a^b}cf(t)\,dt=c\overline{\int_a^b}f(t)\,dt</m>
+                    </p>
+                  </li>
+              
+                  <li>
+                    <p>
+                      <m>\underline{\int_a^b}(f+g)(t)\,dt\geq \underline{\int_a^b}f(t)\,dt+\underline{\int_a^b}g(t)\,dt</m>
+                    </p>
+                  </li>
+              
+                  <li>
+                    <p>
+                      <m>\underline{\int_a^b}cf(t)\,dt=c\underline{\int_a^b}f(t)\,dt</m>
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+          </theorem>
+
+          <corollary xml:id="cor-integral-vector-space"><title>Integrable Functions Form Vector Space</title>
+            <statement>
+              <p>
+                If <m>f,g\in\mathcal{R}[a,b]</m> and <m>c,d\in\mathbb{R}</m>, then <m>cf+dg\in\mathcal{R}[a,b]</m> and 
+                <me>
+                  \int_a^b(cf+dg)(t)\,dt=c\int_a^b f(t)\,dt+d\int_a^bg(t)\,dt.
+                </me> 
+                In other words, <m>\mathcal{R}[a,b]</m> is a vector space (over <m>\mathbb{R}</m>) and the function <m>\mathcal{R}[a,b]\rightarrow\mathbb{R}</m> where <m>f\mapsto\int_a^b f(t)\,dt</m> is linear.
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                Clearly <m>cf+dg</m> is bounded since <m>f</m> and <m>g</m> are. 
+                Also, 
+                <me>
+                  \begin{aligned}
+                  \overline{\int_a^b}(cf+dg)(t)\,dt
+                  &amp;\leq c\overline{\int_a^b}f(t)\,dt+d\overline{\int_a^b}g(t)\,dt\\
+                  &amp;=c\int_a^b f(t)\,dt+d\int_a^b g(t)\,dt\\
+                  &amp;=c\underline{\int_a^b}f(t)\,dt+d\underline{\int_a^b}g(t)\,dt\\
+                  &amp;\leq\underline{\int_a^b} cf(t)+dg(t)\,dt\\
+                  &amp;\leq\overline{\int_a^b}(cf+dg)(t)\,dt.
+                  \end{aligned}
+                </me> 
+                So, all the inequalities are equalities.
+              </p>
+            </proof>
+          </corollary>
+
+          <exercise>
+            <statement>
+              <p>
+                If <m>f,g\in \mathcal{R}[a,b]</m> and <m>f(x)\leq g(x)</m> for all <m>x\in [a,b]</m>, then <m>\int_a^b f(x)\,dx\leq \int_a^b g(x)\,dx</m>.
+              </p>
+            </statement>
+          </exercise>
+
+          <theorem xml:id="thm-integral-triangle-inequality"><title>Integral Triangle Inequality</title>
+            <statement>
+              <p>
+                Suppose that <m>f\in\mathcal{R}[a,b]</m>. 
+                Then <m>\left|{f}\right|\in\mathcal{R}[a,b]</m> and 
+                <me>
+                  \left|{\int_a^b f(x)\, dx}\right|\leq \int_a^b\left|{f(x)}\right|\,dx.
+                </me>
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                Assume <m>\left|{f}\right|\in\mathcal{R}[a,b]</m>. 
+                Then <m>-\left|{f(x)}\right|\leq f(x)\leq\left|{f(x)}\right|</m> for <m>x\in [a,b]</m>. 
+                Then 
+                <me>
+                  -\int_a^b\left|{f(x)}\right|\,dx\leq\int_a^b f(x)\,dx\leq \int_a^b\left|{f(x)}\right|\,dx.
+                </me> 
+                Therefore, 
+                <me>
+                  \left|{\int_a^b f(x)\,dx}\right|\leq\int_a^b\left|{f(x)}\right|\,dx.
+                </me>
+              </p>
+
+              <p>
+                We now show <m>\left|{f}\right|\in\mathcal{R}[a,b]</m>. 
+                By Riemann’s Criterion, it’s enough to show that for all partitions <m>P\in\mathcal{P}[a,b]</m>, 
+                <me>
+                  U(\left|{f}\right|,P)-L(\left|{f}\right|,P)\leq U(f,P)-L(f,P).
+                </me> 
+                To this end, fix <m>P\in\mathcal{P}[a,b]</m> and write <m>P=\{{a=x_0&lt;x_1&lt;\dots&lt;x_n=b}\}</m>. 
+                Fix <m>i=1,\dots,n</m>. 
+                It’s enough to show that 
+                <me>
+                  M-i(\left|{f}\right|,P)-m_i(\left|{f}\right|,P)\leq M_i(f,P)-m_i(f,P).
+                </me> 
+                Fix <m>s,t\in[x_{i-1},x_i]</m>.
+                Then (with sups and infs taken over <m>s',t'\in[x_{i-1},x_i]</m>) 
+                <me>
+                  \begin{aligned}
+                  \left|{f(s)}\right|-\left|{f(t)}\right|
+                  &amp;\leq \left|{f(s)-f(t)}\right|
+                  \leq\sup_{s',t'}\left|{f(s')-f(t')}\right|
+                  =\sup_{s'}f(s')-\inf_{t'}f(t')\\
+                  &amp;=M_i(f,P)-m_i(f,P).
+                  \end{aligned}
+                </me> 
+                Now, taking the supremum over <m>s,t\in[x_{i-1},x_i]</m>, 
+                <me>
+                  \begin{aligned}
+                  \sup_{s,t}\left({\left|{f(s)}\right|-\left|{f(t)}\right|}\right)
+                  &amp;\leq M_i(f,P)-m_i(f,P),\\
+                  \sup_{s,t}\left({\left|{f(s)}\right|-\left|{f(t)}\right|}\right)
+                  &amp;=\sup_s\left|{f(s)}\right|-\inf_t\left|{f(t)}\right|
+                  \end{aligned}
+                </me> 
+                where again sup, inf taken over <m>s,t\in[x_{i-1},x_i]</m>. 
+                So <me>\begin{aligned}
+                  M_i(\left|{f}\right|,P)-m_i(\left|{f}\right|,P)
+                  \leq M_i(f,P)-m_i(f,P).
+                  \end{aligned}
+                </me>
+              </p>
+            </proof>
+          </theorem>
+
+          <theorem xml:id="thm-monotone-integrable"><title>Monotone Implies Integrable</title>
+            <statement>
+              <p>
+                If <m>f\in[a,b]\rightarrow\mathbb{R}</m> is monotone, then <m>f\in\mathcal{R}[a,b]</m>.
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                For all <m>x\in[a,b]</m>, either <m>f(a)\leq f(x)\leq f(b)</m> or <m>f(b)\leq f(x)\leq f(a)</m>. 
+                In either case, <m>f</m> is bounded. 
+                Replacing <m>f</m> with <m>-f</m> if necessary, we may assume that <m>f</m> is increasing. 
+                Let <m>\varepsilon&gt;0</m>. 
+                Fix <m>n\in\mathbb{Z}, n&gt;\frac{(f(b)+f(a))(b-a)}{\varepsilon}</m> and let <m>x_i=a+\frac{i}{n}(b-a)</m> for <m>i=0,\dots,n</m>. 
+                Since <m>f</m> is increasing, <m>M_i(f,P)=f(x_i)</m> and <m>m_i(f,P)=f(x_{i-1})</m>. 
+                So 
+                <me>
+                  \begin{aligned}
+                  U(f,P)-L(f,P)
+                  &amp;=\sum_{i=1}^n(M_i(f,P)-m_i(f,P))(x_i-x_{i-1})
+                  =\sum_{i=1}^n(f(x_i)-f(x_{i-1}))\frac{b-a}{n}\\
+                  &amp;=(f(b)-f(a))\frac{b-a}{n}
+                  &lt;\varepsilon.
+                  \end{aligned}
+                </me>
+              </p>
+            </proof>
+          </theorem>
+
+          <remark>
+            <p>
+              The last result implies all functions of bounded variation are also Riemann integrable.
+            </p>
+          </remark>
+          
+          
+          
+          
+          
+
+
+          
+
+
+        </section>
+
         <section xml:id="sec-riemann-stieltjes"><title>Riemann-Stieltjes Integrals</title>
           <p></p>
         </section>
 
-        <section xml:id="sec-riemann"><title>The Riemann Integral</title>
-          <p></p>
-        </section>
-
         <section xml:id="sec-bounded-variation"><title>Bounded Variation</title>
-          <p></p>
+
+          <definition xml:id="def-bounded-variation"><title>Bounded Variation</title>
+            <statement>
+              <p>
+                Given <m>f:[a,b]\rightarrow \mathbb{R}</m> and a partition <m>P</m>, define 
+                <me>
+                  V(f,P)=\sum_{i=1}^n\left|{f(x_i)-f(x_{i-1})}\right|.
+                </me> 
+                Then define the <term>variation</term> of <m>f</m> over <m>[a,b]</m> to be 
+                <me>
+                  V_{[a,b]}(f)=\sup\{{V(f,P)}\,:\,{P\in\mathcal{P}[a,b]}\}\in[0,\infty].
+                </me> 
+                We say <m>f</m> has <term>bounded variation</term> if <m>V_{[a,b]}(f)&lt;\infty</m>.
+              </p>
+            </statement>
+          </definition>
+
+          <convention>
+            <p>
+              Let <m>\mathcal{BV}[a,b]</m> be the set of all functions on <m>[a,b]</m> with bounded variation.
+            </p>
+          </convention>
+
+          <example>
+            <p>
+              A function not of bounded variation: <m>\begin{cases}
+                x\sin\left({\frac{\pi}{x}}\right) &amp; x\neq 0\\
+                0 &amp; x=0
+                \end{cases}</m>
+            </p>
+          </example>
+
+          <remark>
+            <p>
+              Functions of bounded variation are bounded. 
+              This can be shown directly, but also follows from a later result that all functions in <m>\mathcal{BV}[a,b]</m> are differences of increasing functions. 
+              This will also show <m>\mathcal{BV}[a,b]\subseteq\mathcal{R}[a,b]</m>.
+            </p>
+          </remark>
+
+          <theorem xml:id="thm-bv-vector-space"><title>BV Functions Form Vector Space</title>
+            <statement>
+              <p>
+                If <m>f,g:[a,b]\rightarrow\mathbb{R}</m> and <m>\alpha\in\mathbb{R}</m>, then 
+                <me>
+                  \begin{aligned}
+                  V_{[a,b]}(\alpha f)&amp;=\left|{\alpha}\right|V_{[a,b]}(f);\\
+                  V_{[a,b]}(f+g)&amp;\leq V_{[a,b]}(f)+V_{[a,b]}(g).
+                  \end{aligned}
+                </me> 
+                In particular, <m>\mathcal{BV}[a,b]</m> is a vector space.
+              </p>
+            </statement>
+          </theorem>
+
+          <proposition xml:id="prop-lipschitz-bv"><title>Lipschitz Implies BV</title>
+            <statement>
+              <p>
+                Lipschitz functions have bounded variation.
+              </p>
+            </statement>
+          </proposition>
+
+          <lemma xml:id="lem-bounded-dx-bv">
+            <statement>
+              <p>
+                If <m>f:[a,b]\rightarrow\mathbb{R}</m> is differentiable, and <m>f':[a,b]\rightarrow\mathbb{R}</m> is bounded, then <m>f</m> is Lipschitz and in particular <m>f\in\mathcal{BV}[a,b]</m>.
+              </p>
+            </statement>
+          </lemma>
+
+          <theorem xml:id="thm-continuous-dx-bv">
+            <statement>
+              <p>
+                If <m>f:[a,b]\rightarrow\mathbb{R}</m> is differentiable and <m>f':[a,b]\rightarrow\mathbb{R}</m> is continuous, then <m>f\in\mathcal{BV}[a,b]</m>.
+              </p>
+            </statement>
+          </theorem>
+
+          <p>
+            There are differentiable functions on closed intervals which are not of bounded variation.
+          </p>
+
+          <example>
+            <statement>
+              <p>
+                <me>
+                  \begin{aligned}
+                  f:[0,1]&amp;\rightarrow \mathbb{R}\\
+                  f(x)&amp;=
+                  \begin{cases}
+                      x^2\sin\left({\frac{1}{x^2}}\right) &amp; x\neq 0\\
+                      0 &amp; x=0
+                  \end{cases}.
+                  \end{aligned}
+                </me>
+              </p>
+            </statement>
+          </example>
+
+          <proposition xml:id="prop-monotone-bv">
+            <statement>
+              <p>
+                All monotone functions on a closed interval are of bounded variation.
+              </p>
+            </statement>
+          </proposition>
+
+          <p>
+            We’ll soon show that every function of bounded variation is a difference of two increasing functions. 
+            First, we need the following result.
+          </p>
+
+          <lemma xml:id="lem-increasing-lemma">
+            <statement>
+              <p>
+                If <m>f:[a,b]\rightarrow\mathbb{R}</m> and <m>c\in(a,b)</m>, then <m>V_{[a,b]}(f)=V_{[a,c]}(f)+V_{[c,b]}(f)</m>.
+              </p>
+            </statement>
+          </lemma>
+
+          <theorem xml:id="thm-bv-increasing">
+            <statement>
+              <p>
+                If <m>f\in\mathcal{BV}[a,b]</m>, then there are increasing functions <m>g,h:[a,b]\rightarrow \mathbb{R}</m> such that <m>f=g-h</m>.
+              </p>
+            </statement>
+          </theorem>
+
+          <corollary xml:id="cor-bv-integrable">
+            <statement>
+              <p>
+                <m>\mathcal{BV}[a,b]\subseteq \mathcal{R}[a,b]</m>.
+              </p>
+            </statement>
+          </corollary>
+
+          <theorem xml:id="thm-bv-disontinuities">
+            <statement>
+              <p>
+                Functions of bounded variation have only countably many discontinuities.
+              </p>
+            </statement>
+          </theorem>
+
         </section>
 
         <section xml:id="sec-improper-integrals"><title>Improper Integrals</title>
@@ -5032,18 +5677,356 @@
       <chapter xml:id="ch-function-ss"><title>Sequences and Series of Functions</title>
         
         <section xml:id="sec-pointwise-uniform"><title>Pointwise and Uniform Convergence</title>
+          
+          <definition xml:id="def-pointwise-uniform-convergence">
+            <statement>
+              <p>
+                Let <m>X</m> be a set and let <m>Y</m> be a metric space. For functions <m>(f_n:X\rightarrow Y)_{n=1}^\infty</m> and <m>f:X\rightarrow Y</m>, we say
+                <ul>
+                  <li>
+                    <p>
+                      <m>f_n</m> <term>converges</term> to <m>f</m> <term>point-wise</term> if for all <m>\varepsilon&gt;0</m> and all <m>x\in X</m> there exists <m>N\geq 1</m> such that for all <m>n\geq N</m>: 
+                      <me>
+                        d_Y(f(x),f_n(x))&lt;\varepsilon.
+                      </me>
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>f_n</m> <term>converges</term> to <m>f</m> <term>uniformly</term> if for all <m>\varepsilon&gt;0</m> there exists <m>N\geq 1</m> such that fr all <m>x\in X</m> and <m>n\geq N</m>:
+                      <me>
+                        d_Y(f(x),f_n(x))&lt;\varepsilon.
+                      </me>
+                    </p>
+                  </li>
+                </ul>
+              </p>
+            </statement>
+          </definition>
+
+          <p>
+            In def of uniform convergence, <m>N</m> does not depend on <m>X</m>.
+          </p>
+
+          <exercise>
+            <statement>
+              <p>
+                If <m>f_n\rightarrow f</m> uniformly, then <m>f_n\rightarrow f</m> point-wise.
+              </p>
+            </statement>
+          </exercise>
+
+          <p>
+            A point-wise limit of continuous functions need not be continuous.
+          </p>
+
+          <example>
+            <statement>
+              <p>
+                Let 
+                <me>
+                  \begin{aligned}
+                  f_n:[0,1]&amp;\rightarrow\mathbb{R}\\
+                  f_n(x) &amp;=\begin{cases}
+                      1-nx &amp; 0\leq x\leq \frac{1}{n}\\
+                      0 &amp; \frac{1}{n}&lt;x\leq 1
+                  \end{cases};\\
+                  f:[0,1]&amp;\rightarrow\mathbb{R}\\
+                  f(x) &amp;=\begin{cases}
+                      1 &amp; x=0\\
+                      0 &amp;0&lt;x\leq 1
+                  \end{cases}
+                  \end{aligned}
+                </me>
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Get <m>\lim_{n\rightarrow\infty}f_n(0)=1=f(0)</m> and if <m>x\in(0,1]</m> then for all <m>n\in\mathbb{Z}_+</m> with <m>\frac{1}{n}&lt;x</m>, we have <m>f_n(x)=0</m>. 
+                So <m>\lim_{n\rightarrow\infty}f_n(x)=0=f(x)</m>. 
+                Then <m>f_n\rightarrow f</m> pointwise and <m>f</m> is not continuous.
+              </p>
+            </solution>
+          </example>
+
+          <example>
+            <p>
+              Another example: <m>g,g_n:[0,1]\rightarrow\mathbb{R}</m>, 
+              <me>
+                \begin{aligned}
+                g_n(x)&amp;=x^{\frac{1}{n}}\\
+                g(x)&amp;=\begin{cases}
+                    0 &amp; x=0\\
+                    1 &amp; 0&lt;x\le 1.
+                \end{cases}
+                \end{aligned}
+              </me>
+            </p>
+          </example>
+
+          <p>
+            Pointwise limits of functions often don’t behave well with integrals.
+          </p>
+
+          <example>
+            <statement>
+              <p>
+                Let <m>f_n:[0,1]\rightarrow\mathbb{R}</m> by <m>f_n(x)=\begin{cases}
+                  n &amp; 0&lt;x&lt;\frac{1}{n}\\
+                  0 &amp; \text{otherwise}
+                \end{cases}.</m> 
+                Then 
+                <me>
+                  \lim_{n\rightarrow \infty}f_n(x)=0
+                </me> 
+                for all <m>x\in[0,1]</m> and 
+                <me>
+                  \int_0^1f_n(x)\,dx=1
+                </me> 
+                for all <m>n\geq1</m> so 
+                <me>
+                  1=\lim_{n\rightarrow\infty}\int_0^1f_n(x)\,dx\neq \int_0^1\lim_{n\rightarrow\infty}f_n(x)\,dx=0.
+                </me>
+              </p>
+            </statement>
+          </example>
+
+          <theorem xml:id="thm-uniform-convergence-continuous">
+            <statement>
+              <p>
+                If <m>X,Y</m> are metric spaces and <m>(f_n:X\rightarrow Y)_{n=1}^\infty</m> is a sequence of continuous functions, <m>f:X\rightarrow Y</m> is a function, and <m>f_n\rightarrow f</m> uniformly, then <m>f</m> is continuous. 
+                Further, if each <m>f_n</m> is uniformly continuous, then so is <m>f</m>.
+              </p>
+            </statement>
+          </theorem>
+
+          <convention>
+            <p>
+              For a set <m>X</m>, let <term><m>\mathcal{B}(X)</m></term><m>=\{{\text{bounded functions }X\rightarrow\mathbb{C}}\}</m>. 
+              (If necessary, we’ll use <m>\mathcal{B}(X,\mathbb{C})</m> or <m>\mathcal{B}(X,\mathbb{R})</m> when it is important whether codomain is <m>\mathbb{C}</m> or <m>\mathbb{R}</m>)
+            </p>
+          </convention>
+
+          <definition xml:id="def-infinity-norm">
+            <statement>
+              <p>
+                Define <term><m>\left|{\left|{{\cdot}}\right|}\right|_\infty</m></term><m>:\mathcal{B}(X)\rightarrow[0,\infty)</m> by <m>\left|{\left|{{f}}\right|}\right|_\infty=\sup\{{\left|{f(x)}\right|}\,:\,{x\in X}\}</m>. 
+                This is called the <term><m>\infty</m>-norm</term> of <m>f</m> (aka <term>supremum norm</term> or <term>uniform norm</term>
+              </p>
+            </statement>
+          </definition>
+
+          <convention>
+            <p>
+              For <m>f\in\mathcal{C}[a,b]</m> (or more generally) and <m>1\leq p&lt;\infty</m>, can define <term><m>\left|{\left|{{f}}\right|}\right|_p</m></term><m>=\left({\int_a^b\left|{f(x)}\right|^p\,dx}\right)^{1/p}</m>. 
+              It turns out that <m>\lim_{p\rightarrow\infty}\left|{\left|{{f}}\right|}\right|_p=\left|{\left|{{f}}\right|}\right|_\infty</m> (this is reason for notation; 
+              <m>\left|{\left|{{\cdot}}\right|}\right|_p</m> makes sense for <m>0&lt;p&lt;1</m>, but it doesn’t behave well)
+            </p>
+          </convention>
+
+          <theorem xml:id="thm-properties-of-infinity-norm">
+            <statement>
+              <p>
+                <ol>
+                  <li>
+                    <p>
+                      <m>\mathcal{B}(X)</m> is a vector space
+                    </p>
+                  </li>
+              
+                  <li>
+                    <p>
+                      For <m>f,g\in\mathcal{B}(X),\alpha\in\mathbb{C}</m>,
+                      <ol>
+                        <li>
+                          <p>
+                            <m>\left|{\left|{{f}}\right|}\right|_\infty=0\iff f=0</m>
+                          </p>
+                        </li>
+                    
+                        <li>
+                          <p>
+                            <m>\left|{\left|{{\alpha f}}\right|}\right|_\infty=\left|{\alpha}\right|\left|{\left|{{f}}\right|}\right|_\infty</m>
+                          </p>
+                        </li>
+                    
+                        <li>
+                          <p>
+                            <m>\left|{\left|{{f+g}}\right|}\right|_\infty\leq \left|{\left|{{f}}\right|}\right|_\infty+\left|{\left|{{g}}\right|}\right|_\infty</m> (triangle inequality)
+                          </p>
+                        </li>
+                    
+                        <li>
+                          <p>
+                            <m>\left|{\left|{{\overline{f}}}\right|}\right|_\infty=\left|{\left|{{f}}\right|}\right|_\infty</m>
+                          </p>
+                        </li>
+                    
+                        <li>
+                          <p>
+                            <m>\left|{\left|{{fg}}\right|}\right|_\infty\leq \left|{\left|{{f}}\right|}\right|_\infty\left|{\left|{{g}}\right|}\right|_\infty</m> (since <m>\left|{fg(x)}\right|=\left|{f(x)}\right|\left|{g(x)}\right|\leq \left|{\left|{{f}}\right|}\right|_\infty\left|{\left|{{g}}\right|}\right|_\infty \forall x\in X</m>.)
+                          </p>
+                        </li>
+                      </ol>
+                    </p>
+                  </li>
+              
+                  <li>
+                    <p>
+                      The function <m>d_\infty:\mathcal{B}(x)\times \mathcal{B}(x)\rightarrow[0,\infty)</m> by <m>d_\infty(f,g)=\left|{\left|{{f-g}}\right|}\right|_\infty</m> is a metric on <m>\mathcal{B}(X)</m>.
+                    </p>
+                  </li>
+              
+                  <li>
+                    <p>
+                      if <m>(f_n)_{n=1}^\infty\subseteq\mathcal{B}(X)</m> and <m>f\in\mathcal{B}(X)</m>, then <m>f_n\rightarrow f</m> in the metric <m>d_\infty\iff f_n\rightarrow f</m> uniformly on <m>X</m>. (both conditions mean <me>\lim_{n\rightarrow\infty}d_\infty(f_n,f)=\lim_{n\rightarrow\infty}\sup_{x\in X}\left|{f_n(x)-f(x)}\right|=0)</me>
+                    </p>
+                  </li>
+              
+                  <li>
+                    <p>
+                      Addition, multiplication, and conjugation are continuous on <m>\mathcal{B}(X)</m>: 
+                      ie if <m>(f_n)_{n=1}^\infty,(g_n)_{n=1}^\infty\subseteq\mathcal{B}(X)</m>, <m>f_n\rightarrow f</m> and <m>g_n\rightarrow g</m> uniformly then 
+                      <me>
+                        \begin{aligned}
+                        f_n+g_n&amp;\rightarrow f+g\\
+                        f_ng_n&amp;\rightarrow fg\\
+                        \overline{f_n}&amp;\rightarrow \overline{f}
+                        \end{aligned}
+                      </me> 
+                      all converge uniformly.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+          </theorem>
+
+          <theorem xml:id="thm-infinity-norm-complete">
+            <statement>
+              <p>
+                For any set <m>X</m>, <m>(\mathcal{B}(X),d_\infty)</m> is complete, so every uniformly Cauchy sequence of bounded function converges uniformly.
+              </p>
+            </statement>
+          </theorem>
+          
+          <p>
+            In a few cases we have tests to check uniform convergence.
+          </p>
+
+          <theorem xml:id="thm-dini"><title>Dini's Theorem</title>
+            <statement>
+              <p>
+                Suppose <m>X</m> is a compact metric space <m>(f_n)_{n=1}^\infty\subseteq C(X,\mathbb{R}),f\in C(X,\mathbb{R})</m>, <m>f_n\rightarrow f</m> pointwise and <m>f_1\leq f_2\leq f_3\leq \dots</m> pointwise.
+                Then <m>f_n\rightarrow f</m> uniformly.
+              </p>
+            </statement>
+          </theorem>
+
+          <exercise>
+            <statement>
+              <p>
+                Dini's theorem holds for decreasing functions as well.
+              </p>
+            </statement>
+          </exercise>
+
+          <p>
+            There are increasing sequences of continuous functions <m>f_1\leq f_2\leq f_3\leq \dots</m> which converge pointwise to a function <m>f</m>, but not uniformly. 
+            Dini’s Thm tells us this can’t happen when the limit of <m>f</m> is continuous though.
+          </p>
+
+          <example>
+            <statement>
+              <p>
+                <m>X=[0,1],f_n(x)=x^{1/n},f(x)=\begin{cases}
+                  0 &amp; x=0\\
+                  1 &amp; x&gt;0
+                  \end{cases}.
+                </m>
+              </p>
+            </statement>
+          </example>
+
+          <example>
+            <p>
+              The function <m>f:[0,1]\rightarrow\mathbb{R}, f(t)=\sqrt{t}</m> is a uniform limit of polynomials.
+            </p>
+          </example>
+          
+        </section>
+
+        <section xml:id="sec-series-functions"><title>Series of Functions</title>
+
+          <definition xml:id="def-series-convergence">
+            <statement>
+              <p>
+                Let <m>(f_n)_{n=1}^\infty\subseteq\mathcal{B}(X)</m> for a set <m>X</m>. 
+                We’ll say <m>\sum_{n=1}^\infty f_n</m> <term>converges uniformly (pointwise)</term> if <m>(\sum_{n=1}^N f_n)_{N=1}^\infty \subseteq\mathcal{B}(X)</m> converges uniformly (pointwise).
+              </p>
+            </statement>
+          </definition>
+
+          <theorem xml:id="thm-weierstrass-m-test"><title>Weierstrass M-test</title>
+            <statement>
+              <p>
+                If <m>(f_n)_{n=1}^\infty\subseteq\mathcal{B}(X)</m> for a set <m>X</m> and <m>\sum_{n=1}^\infty \left|{\left|{{f_n}}\right|}\right|_\infty</m> converges, then <m>\sum_{n=1}^\infty f_n</m> converges uniformly (or, equivalently, converges wrt <m>d_\infty</m>).
+              </p>
+            </statement>
+          </theorem>
+
+          <remark>
+            <p>
+              This is a slightly non-standard version of the theorem. 
+              Combining this version with the comparison test gives the usual statement: 
+              If <m>(f_n)_{n=1}^\infty\subseteq\mathcal{B}(X)</m> and <m>(M_n)_{n=1}^\infty\subseteq[0,\infty)</m> so that
+              <ol>
+                <li>
+                  <p>
+                    for all <m>x\in \mathbb{R},n\geq 1</m> have <m>\left|{f_n(x)}\right|\leq M_n</m>
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>\sum_{n=1}^\infty M_n&lt;\infty</m>
+                  </p>
+                </li>
+              </ol>
+              then <m>\sum_{n=1}^\infty f_n</m> converges uniformly.
+            </p>
+          </remark>
+
+          <example>
+            <statement>
+              <p>
+                The series <m>\sum_{n=1}^\infty \frac{1}{n^2+x^2}</m> converges uniformly over <m>x\in\mathbb{R}</m>.
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Let <m>M_n=\frac{1}{n^2}</m>. 
+                Then <m>\left|{\frac{1}{n^2+x^2}}\right|\leq \frac{1}{n^2}</m> for all <m>x\in \mathbb{R}</m> and <m>\sum_{n=1}^\infty\frac{1}{n^2}=\frac{\pi^2}{6}&lt;\infty</m>, so by the Weierstass <m>M</m>-test, <m>\sum_{n=1}^\infty\frac{1}{n^2+x^2}</m> converges uniformly over <m>x\in \mathbb{R}</m>.
+              </p>
+            </solution>
+          </example>
+
+          <exercise>
+            <statement>
+              <p>
+                For any <m>r&gt;0</m>, the series <m>\sum_{n=0}^\infty \frac{z^n}{n!}</m> converges uniformly on <m>\{{z\in\mathbb{C}}\,:\,{\left|{z}\right|\leq r}\}</m>, but <m>\sum_{n=0}^\infty\frac{z^n}{n!}</m> does not converge uniformly on <m>\mathbb{C}</m>.
+              </p>
+            </statement>
+          </exercise>
+
+        </section>
+
+        <section xml:id="sec-power-series"><title>Power Series</title>
           <p></p>
         </section>
 
         <section xml:id="sec-sequence-calculus"><title>Calculus of Uniformly Convergent Sequences</title>
-          <p></p>
-        </section>
-
-        <section xml:id="sec-series-functions"><title>Series of Functions</title>
-          <p></p>
-        </section>
-
-        <section xml:id="sec-power-series"><title>Power Series</title>
           <p></p>
         </section>
 

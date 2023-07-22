@@ -12,32 +12,8 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para logical">
-<div class="para">
-<dfn class="terminology">Existence</dfn> Suppose <span class="process-math">\(a\in\overline{A}\text{.}\)</span> Let <span class="process-math">\((a_n)_{n=1}^\infty\subseteq A\)</span> be such that <span class="process-math">\(a=\lim_{n\rightarrow\infty}a_n\text{.}\)</span> Then <span class="process-math">\((a_n)_{n=1}^\infty\subseteq A\)</span> is Cauchy. Since <span class="process-math">\(f\)</span> is uniformly continuous, <span class="process-math">\((f(a_n))_{n=1}^\infty\subseteq Y\)</span> is Cauchy. Since <span class="process-math">\(Y\)</span> is complete, <span class="process-math">\((f(a_n))_{n=1}^\infty\subseteq A\)</span> converges. Define <span class="process-math">\(\overline{f}:\overline{A}\rightarrow Y\)</span> by <span class="process-math">\(\overline{f}(a)=\lim_{n\rightarrow\infty}f(a_n)\text{.}\)</span>
-</div>
-<ul class="disc">
-<li>
 <div class="para">
 <span class="process-math">\(\overline{f}\)</span> is well defined, ie if <span class="process-math">\((a_n)_{n=1}^\infty\subseteq A\)</span> and <span class="process-math">\((b_n)_{n=1}^\infty\subseteq A\)</span> with <span class="process-math">\(\lim_{n\rightarrow\infty}a_n=\lim_{n\rightarrow\infty}b_n\in\overline{A}\text{,}\)</span> then <span class="process-math">\(\lim_{n\rightarrow\infty}f(a_n)=\lim_{n\rightarrow\infty}f(b_n)\text{.}\)</span>
-</div>
-<div class="para">Let <span class="process-math">\(y_1=\lim_{n\rightarrow\infty}f(a_n),y_2=\lim_{n\rightarrow\infty}f(b_n)\text{.}\)</span> To show <span class="process-math">\(y_1=y_2,\)</span> we’ll show for any <span class="process-math">\(\varepsilon&gt;0,d(y_1,y_2)\leq \varepsilon\text{.}\)</span> Let <span class="process-math">\(\varepsilon&gt;0\text{.}\)</span> Since <span class="process-math">\(f\)</span> is uniformly continuous, exists <span class="process-math">\(\delta&gt;0\)</span> such that if <span class="process-math">\(a,b,\in A,d(a,b)&lt;\delta\implies d(f(a),f(b))&lt;\varepsilon\text{.}\)</span> If <span class="process-math">\(c=\lim_{n\rightarrow\infty}a_n=\lim_{n\rightarrow\infty}b_n\in\overline{A},\)</span> then exists <span class="process-math">\(N\geq 1\)</span> such that for all <span class="process-math">\(n\geq N,d(a_n,c)&lt;\frac{\delta}{2},d(b_n,c)&lt;\frac{\delta}{2}\text{.}\)</span> Then for all <span class="process-math">\(n\geq N, d(a_n,b_n)&lt;\delta\text{.}\)</span> So for all <span class="process-math">\(n\geq N\text{,}\)</span> we have <span class="process-math">\(d(f(a_n),f(b_n))&lt;\varepsilon\text{.}\)</span> Now, <span class="process-math">\(d(y_1,y_2)=\lim_{n\rightarrow\infty}d(f(a_n),f(b_n))\leq \varepsilon\text{.}\)</span> Since this holds for all <span class="process-math">\(\varepsilon&gt;0,\)</span> we have <span class="process-math">\(y_1=y_2\text{.}\)</span>
-</div>
-</li>
-<li>
-<div class="para">
-<span class="process-math">\(\overline{f}(a)=f(a)\)</span> for all <span class="process-math">\(a\in A\text{.}\)</span>
-</div>
-<div class="para">Note that <span class="process-math">\((a)_{n=1}^\infty\subseteq A\)</span> (constant sequence <span class="process-math">\(a\)</span>) and <span class="process-math">\(a=\lim_{n\rightarrow\infty}a\text{.}\)</span> So <span class="process-math">\(\overline{f}(a)=\lim_{n\rightarrow\infty}f(a)=f(a)\text{.}\)</span>
-</div>
-</li>
-<li>
-<div class="para">
-<span class="process-math">\(\overline{f}\)</span> is uniformly continuous.</div>
-<div class="para">Fix <span class="process-math">\(\varepsilon&gt;0\text{.}\)</span> Since <span class="process-math">\(f\)</span> is uniformly continuous, exists <span class="process-math">\(\delta&gt;0\)</span> such that for all <span class="process-math">\(a,b\in A, d(a,b)&lt;\delta\implies d(f(a),f(b))&lt;\varepsilon\text{.}\)</span> Now fix <span class="process-math">\(a,b\in\overline{A}\)</span> with <span class="process-math">\(d(a,b)&lt;\delta\text{.}\)</span> We’ll show that <span class="process-math">\(d(\overline{f}(a),\overline{f}(b))\leq \varepsilon\text{.}\)</span> Fix sequences <span class="process-math">\((a_n)_{n=1}^\infty \subseteq A\)</span> and <span class="process-math">\((b_n)_{n=1}^\infty \subseteq A\)</span> such that <span class="process-math">\(a=\lim_{n\rightarrow\infty}a_n\)</span> and <span class="process-math">\(b=\lim_{n\rightarrow\infty}b_n\text{.}\)</span> So <span class="process-math">\(\overline{f}(a)=\lim_{n\rightarrow\infty}f(a_n)\)</span> and <span class="process-math">\(\overline{f}(b)=\lim_{n\rightarrow\infty}f(b_n)\text{.}\)</span> Note that <span class="process-math">\(\lim_{n\rightarrow\infty}d(a_n,b_n)=d(a,b)&lt;\delta\text{.}\)</span> So exists <span class="process-math">\(N\geq 1\)</span> such that for all <span class="process-math">\(n\geq N\text{,}\)</span> <span class="process-math">\(d(a_n,b_n)&lt;\delta\text{.}\)</span> So for all <span class="process-math">\(n\geq N, d(f(a_n),f(b_n))&lt;\varepsilon\text{.}\)</span> Letting <span class="process-math">\(n\rightarrow\infty, d(\overline{f}(a),\overline{f}(b))\leq \varepsilon\text{.}\)</span>
-</div>
-</li>
-</ul>
 </div>
 <span class="incontext"><a href="sec-uniform-continuity.html#p-511" class="internal">in-context</a></span>
 </body>

@@ -11,8 +11,31 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para"></div>
-<span class="incontext"><a href="sec-sequence-calculus.html#p-569" class="internal">in-context</a></span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">Given a partition <span class="process-math">\(P=\{{a=x_0&lt;x_1&lt;\dots&lt;x_n=b}\}\in\mathcal{P}[a,b]\)</span> and <span class="process-math">\(f\in\mathcal{B}[a,b]\text{,}\)</span> define the <dfn class="terminology">upper</dfn> and <dfn class="terminology">lower</dfn> <dfn class="terminology">Riemann Sums</dfn> by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+U(f,P)
+&amp;=\sum_{i=1}^n M_i(f,P)(x_i-x_{i-1}),\\
+L(f,P)
+&amp;=\sum_{i=1}^n m_i(f,P)(x_i-x_{i-1})
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">where</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+M_i(f,P)
+&amp;=\sup\{{f(x)}\,:\,{x_{i-1}\leq x\leq x_i}\},\\
+m_i(f,P)
+&amp;=\inf\{{f(x)}\,:\,{x_{i-1}\leq x\leq x_i}\}.
+\end{aligned}
+\end{equation*}
+</div>
+</div>
+<span class="incontext"><a href="sec-riemann.html#p-569" class="internal">in-context</a></span>
 </body>
 </html>

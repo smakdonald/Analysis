@@ -12,7 +12,24 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Let <span class="process-math">\(X,Y\)</span> be metric spaces with <span class="process-math">\(Y\)</span> complete. Let <span class="process-math">\(A\subseteq X\)</span> and let <span class="process-math">\(f:A\rightarrow Y\)</span> be uniformly continuous. Then <span class="process-math">\(\exists!\)</span> continuous function <span class="process-math">\(\overline{f}:\overline{A}\rightarrow Y\)</span> so the <span class="process-math">\(\overline{f}(a)=f(a)\)</span> for all <span class="process-math">\(a\in A\text{.}\)</span> Further, <span class="process-math">\(\overline{f}\)</span> is uniformly continuous.</div>
+<div class="para logical">
+<div class="para">
+<dfn class="terminology">Uniqueness</dfn> (this won’t require that <span class="process-math">\(f\)</span> is uniformly continuous): Suppose <span class="process-math">\(g,h:\overline{A}\rightarrow Y\)</span> are continuous and <span class="process-math">\(g(a)=h(a)\)</span> for all <span class="process-math">\(a\in A\text{.}\)</span> If <span class="process-math">\(a\in\overline{A}, \exists \,(a_n)_{n=1}^\infty\subseteq A\)</span> such that <span class="process-math">\(a=\lim_{n\rightarrow\infty}a_n\text{.}\)</span> So</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+g(a)
+&amp;=\lim_{n\rightarrow\infty} g(a_n)
+=\lim_{n\rightarrow\infty}h(a_n)
+\text{ (since } a_n\in A)
+\\
+&amp;=h(a)
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">so <span class="process-math">\(g=h\text{.}\)</span>
+</div>
+</div>
 <span class="incontext"><a href="sec-uniform-continuity.html#p-509" class="internal">in-context</a></span>
 </body>
 </html>
