@@ -2692,6 +2692,177 @@ var ptx_lunr_docs = [
   "body": "Equicontinuity   "
 },
 {
+  "id": "appendix-1",
+  "level": "1",
+  "url": "appendix-1.html",
+  "type": "Appendix",
+  "number": "A",
+  "title": "Qualifying Exams",
+  "body": "Qualifying Exams  Winter 2023    Suppose that is differentiable at . Let and be sequences that both converge to . Prove that (You may assume that ).    Coming (not so) soon!      Let be given.   Assume that . Prove there exists such that , for all .    Suppose the sequence converges in . Must be finite?       Coming (not so) soon!         Suppose that is a Cauchy sequence from . Determine whether must be uniformly equicontinuous.    Suppose that is closed and bounded but not uniformly equicontinuous. Prove that is not compact in .       Coming (not so) soon!      Use the Riemann condition to show that where and Compute the value of the Riemann-Stieltjes integral .    Coming (not so) soon!      Determine all the values of for which the series below converges     Coming (not so) soon!      Let be a metric space. Define the functions by    Show that are both metrics.    Show that are equivalent metrics on the space .       Coming (not so) soon!     Spring 2022       Let for . Prove that converges pointwise and determine if it converges uniformly on . Is equicontinuous? Clearly motivate your answer.    Prove that in general, if is an equicontinuous sequence of functions on a compact interval and pointwise, then the convergence is uniform.       Coming (not so) soon!      Let be a metric space. Suppose that . For each , set Suppose that is continuous and is compact for all . Prove that is compact.    Coming (not so) soon!      Consider the sequence defined by and for  . Show that as . Also, show that .    Coming (not so) soon!      Use the Riemann condition to show that where and Compute the value of the Riemann-Stieltjes integral .    Coming (not so) soon!      Find the domain of convergence and the sum of the series Show how one may use the sum of the series to provide an approximation for up to three decimals. Be sure to provide all technical details.    Coming (not so) soon!      Show that are metrics on , but are not equivalent on .    Coming (not so) soon!     Winter 2022    Suppose with and let be a differentiable function such that is continuous. Show that for every , there is a such that for every with , we have     Coming (not so) soon!      Let and be metric spaces and let be a continuous bijection.   Show by example that need not be continuous.    Show that if is compact, then is continuous.       Coming (not so) soon!      Compute, with proof, .    Coming (not so) soon!         Let be a continuous function. If for all integers , show that .    Let be a differentiable function such that is continuous. If for all integers , show that is constant.       Coming (not so) soon!      Prove the following special case of Dini’s Theorem: if is decreasing sequence of continuous functions such that for all , then converges uniformly to 0. (You should not use any form of Dini’s theorem without proof.)    Coming (not so) soon!      Let be a continuous function.   Show .    If for all , show .       Coming (not so) soon!      "
+},
+{
+  "id": "problem-1",
+  "level": "2",
+  "url": "appendix-1.html#problem-1",
+  "type": "Problem",
+  "number": "A.1",
+  "title": "",
+  "body": "  Suppose that is differentiable at . Let and be sequences that both converge to . Prove that (You may assume that ).    Coming (not so) soon!   "
+},
+{
+  "id": "problem-2",
+  "level": "2",
+  "url": "appendix-1.html#problem-2",
+  "type": "Problem",
+  "number": "A.2",
+  "title": "",
+  "body": "  Let be given.   Assume that . Prove there exists such that , for all .    Suppose the sequence converges in . Must be finite?       Coming (not so) soon!   "
+},
+{
+  "id": "problem-3",
+  "level": "2",
+  "url": "appendix-1.html#problem-3",
+  "type": "Problem",
+  "number": "A.3",
+  "title": "",
+  "body": "     Suppose that is a Cauchy sequence from . Determine whether must be uniformly equicontinuous.    Suppose that is closed and bounded but not uniformly equicontinuous. Prove that is not compact in .       Coming (not so) soon!   "
+},
+{
+  "id": "problem-4",
+  "level": "2",
+  "url": "appendix-1.html#problem-4",
+  "type": "Problem",
+  "number": "A.4",
+  "title": "",
+  "body": "  Use the Riemann condition to show that where and Compute the value of the Riemann-Stieltjes integral .    Coming (not so) soon!   "
+},
+{
+  "id": "problem-5",
+  "level": "2",
+  "url": "appendix-1.html#problem-5",
+  "type": "Problem",
+  "number": "A.5",
+  "title": "",
+  "body": "  Determine all the values of for which the series below converges     Coming (not so) soon!   "
+},
+{
+  "id": "problem-6",
+  "level": "2",
+  "url": "appendix-1.html#problem-6",
+  "type": "Problem",
+  "number": "A.6",
+  "title": "",
+  "body": "  Let be a metric space. Define the functions by    Show that are both metrics.    Show that are equivalent metrics on the space .       Coming (not so) soon!   "
+},
+{
+  "id": "problem-7",
+  "level": "2",
+  "url": "appendix-1.html#problem-7",
+  "type": "Problem",
+  "number": "A.7",
+  "title": "",
+  "body": "     Let for . Prove that converges pointwise and determine if it converges uniformly on . Is equicontinuous? Clearly motivate your answer.    Prove that in general, if is an equicontinuous sequence of functions on a compact interval and pointwise, then the convergence is uniform.       Coming (not so) soon!   "
+},
+{
+  "id": "problem-8",
+  "level": "2",
+  "url": "appendix-1.html#problem-8",
+  "type": "Problem",
+  "number": "A.8",
+  "title": "",
+  "body": "  Let be a metric space. Suppose that . For each , set Suppose that is continuous and is compact for all . Prove that is compact.    Coming (not so) soon!   "
+},
+{
+  "id": "problem-9",
+  "level": "2",
+  "url": "appendix-1.html#problem-9",
+  "type": "Problem",
+  "number": "A.9",
+  "title": "",
+  "body": "  Consider the sequence defined by and for  . Show that as . Also, show that .    Coming (not so) soon!   "
+},
+{
+  "id": "problem-10",
+  "level": "2",
+  "url": "appendix-1.html#problem-10",
+  "type": "Problem",
+  "number": "A.10",
+  "title": "",
+  "body": "  Use the Riemann condition to show that where and Compute the value of the Riemann-Stieltjes integral .    Coming (not so) soon!   "
+},
+{
+  "id": "problem-11",
+  "level": "2",
+  "url": "appendix-1.html#problem-11",
+  "type": "Problem",
+  "number": "A.11",
+  "title": "",
+  "body": "  Find the domain of convergence and the sum of the series Show how one may use the sum of the series to provide an approximation for up to three decimals. Be sure to provide all technical details.    Coming (not so) soon!   "
+},
+{
+  "id": "problem-12",
+  "level": "2",
+  "url": "appendix-1.html#problem-12",
+  "type": "Problem",
+  "number": "A.12",
+  "title": "",
+  "body": "  Show that are metrics on , but are not equivalent on .    Coming (not so) soon!   "
+},
+{
+  "id": "problem-13",
+  "level": "2",
+  "url": "appendix-1.html#problem-13",
+  "type": "Problem",
+  "number": "A.13",
+  "title": "",
+  "body": "  Suppose with and let be a differentiable function such that is continuous. Show that for every , there is a such that for every with , we have     Coming (not so) soon!   "
+},
+{
+  "id": "problem-14",
+  "level": "2",
+  "url": "appendix-1.html#problem-14",
+  "type": "Problem",
+  "number": "A.14",
+  "title": "",
+  "body": "  Let and be metric spaces and let be a continuous bijection.   Show by example that need not be continuous.    Show that if is compact, then is continuous.       Coming (not so) soon!   "
+},
+{
+  "id": "problem-15",
+  "level": "2",
+  "url": "appendix-1.html#problem-15",
+  "type": "Problem",
+  "number": "A.15",
+  "title": "",
+  "body": "  Compute, with proof, .    Coming (not so) soon!   "
+},
+{
+  "id": "problem-16",
+  "level": "2",
+  "url": "appendix-1.html#problem-16",
+  "type": "Problem",
+  "number": "A.16",
+  "title": "",
+  "body": "     Let be a continuous function. If for all integers , show that .    Let be a differentiable function such that is continuous. If for all integers , show that is constant.       Coming (not so) soon!   "
+},
+{
+  "id": "problem-17",
+  "level": "2",
+  "url": "appendix-1.html#problem-17",
+  "type": "Problem",
+  "number": "A.17",
+  "title": "",
+  "body": "  Prove the following special case of Dini’s Theorem: if is decreasing sequence of continuous functions such that for all , then converges uniformly to 0. (You should not use any form of Dini’s theorem without proof.)    Coming (not so) soon!   "
+},
+{
+  "id": "problem-18",
+  "level": "2",
+  "url": "appendix-1.html#problem-18",
+  "type": "Problem",
+  "number": "A.18",
+  "title": "",
+  "body": "  Let be a continuous function.   Show .    If for all , show .       Coming (not so) soon!   "
+},
+{
   "id": "colophon-2",
   "level": "1",
   "url": "colophon-2.html",

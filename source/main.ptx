@@ -6063,6 +6063,1310 @@
 
     <backmatter xml:id="backmatter"><title>Backmatter</title>
 
+      <appendix><title>Qualifying Exams</title>
+
+        <paragraphs><title>Winter 2023</title>
+       
+          <problem>
+            <statement>
+              <p>
+                Suppose that <m>f: \mathbb{R} \rightarrow \mathbb{R}</m> is differentiable at <m>x_{0} \in \mathbb{R}</m>. 
+                Let <m>\left\{a_{n}\right\}_{n=1}^{\infty} \subseteq\left(-\infty, x_{0}\right)</m> and <m>\left\{b_{n}\right\}_{n=1}^{\infty} \subseteq\left(x_{0}, \infty\right)</m> be sequences that both converge to <m>x_{0}</m>. 
+                Prove that
+                <me>
+                  \lim _{n \rightarrow \infty} \frac{f\left(b_{n}\right)-f\left(a_{n}\right)}{b_{n}-a_{n}}=f^{\prime}\left(x_{0}\right).
+                </me>
+                (You may assume that <m>x_{0}=0</m> ).
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                Let <m>\left\{a_{n}\right\}_{n=1}^{\infty},\left\{b_{n}\right\}_{n=1}^{\infty} \subset(0, \infty)</m> be given.
+                <ol>
+                  <li>
+                    <p>
+                      Assume that <m>\limsup _{n \rightarrow \infty}\left(a_{n} / b_{n}\right)&lt;\infty</m>. 
+                      Prove there exists <m>M \in \mathbb{R}</m> such that <m>a_{n} \leq M b_{n}</m>, for all <m>n \in \mathbb{N}</m>.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Suppose the sequence <m>\left\{\frac{a_{n}}{b_{n}}\right\}_{n=1}^{\infty}</m> converges in <m>\mathbb{R}</m>. 
+                      Must <m>\limsup _{n \rightarrow \infty}\left(a_{n} / b_{n}\right)</m> be finite?
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                <ol>
+                  <li>
+                    <p>
+                      Suppose that <m>\left\{f_{n}\right\}_{n=1}^{\infty}</m> is a Cauchy sequence from <m>\left(\mathcal{C}([0,1]), \rho_{\infty}\right)</m>. 
+                      Determine whether <m>\left\{f_{n}\right\}_{n=1}^{\infty}</m> must be uniformly equicontinuous.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Suppose that <m>\mathcal{F} \subseteq\left(\mathcal{C}([0,1]), \rho_{\infty}\right)</m> is closed and bounded but not uniformly equicontinuous. 
+                      Prove that <m>\mathcal{F}</m> is not compact in <m>\left(\mathcal{C}([0,1]), \rho_{\infty}\right)</m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                Use the Riemann condition to show that <m>f \in \mathcal{R}_{\alpha}[0,2]</m> where <m>f(x)=\tan (\pi x / 4)</m> and
+                <me>
+                  \alpha(x)=\begin{cases}
+                  x+1, \quad 0 \leq x \leq 1 \\
+                  4 x, \quad 1&lt;x \leq 2
+                  \end{cases}.
+                </me>
+                Compute the value of the Riemann-Stieltjes integral <m>\int_{0}^{2} f(x) d \alpha</m>.
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                Determine all the values of <m>x \in \mathbb{R}</m> for which the series below converges
+                <me>
+                  \sum_{n=1}^{\infty} \frac{x^{n}}{1+n|x|^{n}}
+                </me>
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                Let <m>(M, d)</m> be a metric space. 
+                Define the functions <m>d^{\prime}, d^{\prime \prime}: M \times M \rightarrow[0, \infty)</m> by
+                <me>
+                  d^{\prime}(x, y)=\frac{d(x, y)}{1+d(x, y)}, \quad \text { and } \quad d^{\prime \prime}(x, y)=\min \{1, d(x, y)\}.
+                </me>
+                <ol>
+                  <li>
+                    <p>
+                      Show that <m>d^{\prime}, d^{\prime \prime}</m> are both metrics.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Show that <m>d, d^{\prime}, d^{\prime \prime}</m> are equivalent metrics on the space <m>M</m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+        </paragraphs>
+
+        <paragraphs><title>Spring 2022</title>
+
+          <problem>
+            <statement>
+              <p>
+                <ol>
+                  <li>
+                    <p>
+                      Let <m>f_{n}(x)=n x(1-x)^{n}</m> for <m>x \in[0,1]</m>. 
+                      Prove that <m>\left\{f_{n}\right\}</m> converges pointwise and determine if it converges uniformly on <m>[0,1]</m>. 
+                      Is <m>\left\{f_{n}\right\}</m> equicontinuous? 
+                      Clearly motivate your answer.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Prove that in general, if <m>\left\{f_{n}\right\}_{n \geq 1}</m> is an equicontinuous sequence of functions on a compact interval and <m>f_{n} \rightarrow f</m> pointwise, then the convergence is uniform.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                Let <m>(X, \rho)</m> be a metric space. 
+                Suppose that <m>x_{0} \in X</m>. 
+                For each <m>\varepsilon&gt;0</m>, set
+                <me>
+                  E_{\varepsilon}:=\left\{x \in X: \rho\left(x, x_{0}\right) \geq \varepsilon\right\}.
+                </me>
+                Suppose that <m>f: X \rightarrow \mathbb{R}</m> is continuous and <m>f\left(E_{\varepsilon}\right)</m> is compact for all <m>\varepsilon&gt;0</m>. 
+                Prove that <m>f(X)</m> is compact.
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                Consider the sequence <m>\left\{x_{n}\right\}_{n \geq 1}</m> defined by <m>0&lt;x_{1}&lt;1</m> and <m>x_{n+1}=1-\sqrt{1-x_{n}}</m> for <m>n=</m> <m>1,2, \ldots</m>. 
+                Show that <m>x_{n} \rightarrow 0</m> as <m>n \rightarrow \infty</m>. 
+                Also, show that <m>\frac{x_{n+1}}{x_{n}} \rightarrow \frac{1}{2}</m>.
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                Use the Riemann condition to show that <m>f \in \mathcal{R}_{\alpha}[0,3]</m> where <m>f(x)=\ln (2 x+1)</m> and
+                <me>
+                  \alpha(x)=\begin{cases}
+                  x+2, &amp; 0 \leq x \leq 2 \\
+                  3 x-1, &amp; 2&lt;x \leq 3
+                  \end{cases}
+                </me>
+                Compute the value of the Riemann-Stieltjes integral <m>\int_{0}^{3} f(x) d \alpha</m>.
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                Find the domain of convergence and the sum of the series
+                <me>
+                  \sum_{n \geq 0}(-1)^{n} \frac{x^{2 n+1}}{2 n+1}
+                </me>
+                Show how one may use the sum of the series to provide an approximation for <m>\pi</m> up to three decimals. 
+                Be sure to provide all technical details.
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                Show that
+                <me>
+                  d_{1}(f, g):=\int_{0}^{1}|f(x)-g(x)| d x \quad \text { and } \quad d_{\infty}(f, g):=\operatorname{lub}_{x \in[0,1]}|f(x)-g(x)|
+                </me>
+                are metrics on <m>C[0,1]</m>, but are not equivalent on <m>C[0,1]</m>.
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+          
+        </paragraphs>
+
+        <paragraphs><title>Winter 2022</title>
+
+          <problem>
+            <statement>
+              <p>
+                Suppose <m>a, b \in \mathbb{R}</m> with <m>a&lt;b</m> and let <m>f:[a, b] \rightarrow \mathbb{R}</m> be a differentiable function such that <m>f^{\prime}:[a, b] \rightarrow \mathbb{R}</m> is continuous. 
+                Show that for every <m>\epsilon&gt;0</m>, there is a <m>\delta&gt;0</m> such that for every <m>x, y \in[a, b]</m> with <m>|x-y|&lt;\delta</m>, we have
+                <me>
+                  \left|\frac{f(x)-f(y)}{x-y}-f^{\prime}(x)\right|&lt;\epsilon.
+                </me>
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                Let <m>X</m> and <m>Y</m> be metric spaces and let <m>f: X \rightarrow Y</m> be a continuous bijection.
+                <ol>
+                  <li>
+                    <p>
+                      Show by example that <m>f^{-1}: Y \rightarrow X</m> need not be continuous.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Show that if <m>X</m> is compact, then <m>f^{-1}: Y \rightarrow X</m> is continuous.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                Compute, with proof, <m>\lim _{k \rightarrow \infty} \sum_{n=1}^{\infty} n^{-k}</m>.
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                <ol>
+                  <li>
+                    <p>
+                      Let <m>f:[1,2] \rightarrow \mathbb{R}</m> be a continuous function. 
+                      If <m>\int_{1}^{2} x^{-n} f(x) d x=0</m> for all integers <m>n \geq 0</m>, show that <m>f=0</m>.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Let <m>g:[1,2] \rightarrow \mathbb{R}</m> be a differentiable function such that <m>g^{\prime}:[1,2] \rightarrow \mathbb{R}</m> is continuous. 
+                      If <m>\int_{1}^{2} x^{-n} d g(x)=0</m> for all integers <m>n \geq 0</m>, show that <m>g</m> is constant.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                Prove the following special case of Dini’s Theorem: 
+                if <m>\left(f_{n}:[0,1] \rightarrow \mathbb{R}\right)_{n=1}^{\infty}</m> is decreasing sequence of continuous functions such that <m>\lim _{n \rightarrow \infty} f_{n}(x)=0</m> for all <m>x \in[0,1]</m>, then <m>\left(f_{n}\right)_{n=1}^{\infty}</m> converges uniformly to 0. 
+                (You should not use any form of Dini’s theorem without proof.)
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                Let <m>f:[0,1] \rightarrow \mathbb{R}</m> be a continuous function.
+                <ol>
+                  <li>
+                    <p>
+                      Show <m>\lim _{n \rightarrow \infty} \int_{0}^{1} f\left(x^{1 / n}\right) d x=f(1)</m>.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      If <m>f(x)&gt;0</m> for all <m>x \in[0,1]</m>, show <m>\lim _{n \rightarrow \infty} \int_{0}^{1} f(x)^{1 / n} d x=1</m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+          
+        </paragraphs>  
+
+        <!--
+
+        <paragraphs><title>Spring 2021</title>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+          
+        </paragraphs>
+
+        <paragraphs><title>Winter 2021</title>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+          
+        </paragraphs>
+
+        <paragraphs><title>Spring 2020</title>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+          
+        </paragraphs>
+
+        <paragraphs><title>Winter 2020</title>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+          
+        </paragraphs>
+        
+        <paragraphs><title>Spring 2019</title>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+          
+        </paragraphs>
+
+        <paragraphs><title>Winter 2019</title>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+          
+        </paragraphs>
+
+        <paragraphs><title>Spring 2018</title>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+          
+        </paragraphs>
+
+        <paragraphs><title>Winter 2018</title>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+          
+        </paragraphs>
+
+        <paragraphs><title>Spring 2017</title>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+          
+        </paragraphs>
+
+        <paragraphs><title>Winter 2017</title>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+          
+        </paragraphs>
+
+        <paragraphs><title>Spring 2016</title>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+          
+        </paragraphs>
+
+        -->
+
+      </appendix>
+
       <colophon>
         <p> This book was authored in <pretext />. </p>
       </colophon>
