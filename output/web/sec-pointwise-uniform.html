@@ -571,6 +571,7 @@ window.MathJax = {
 <li><div class="toc-item"><a href="sec-power-series.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Power Series</span></a></div></li>
 <li><div class="toc-item"><a href="sec-sequence-calculus.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Calculus of Uniformly Convergent Sequences</span></a></div></li>
 <li><div class="toc-item"><a href="sec-equicontinuity.html" class="internal"><span class="codenumber">7.5</span> <span class="title">Equicontinuity</span></a></div></li>
+<li><div class="toc-item"><a href="sec-sw.html" class="internal"><span class="codenumber">7.6</span> <span class="title">The Stone-Weierstrass Theorem</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -589,10 +590,10 @@ window.MathJax = {
 <article class="definition definition-like" id="def-pointwise-uniform-convergence"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.1</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-626">
+<div class="para logical" id="p-640">
 <div class="para">Let <span class="process-math">\(X\)</span> be a set and let <span class="process-math">\(Y\)</span> be a metric space. For functions <span class="process-math">\((f_n:X\rightarrow Y)_{n=1}^\infty\)</span> and <span class="process-math">\(f:X\rightarrow Y\text{,}\)</span> we say</div>
 <ul class="disc">
-<li id="li-173"><div class="para logical" id="p-627">
+<li id="li-173"><div class="para logical" id="p-641">
 <div class="para">
 <span class="process-math">\(f_n\)</span> <dfn class="terminology">converges</dfn> to <span class="process-math">\(f\)</span> <dfn class="terminology">point-wise</dfn> if for all <span class="process-math">\(\varepsilon&gt;0\)</span> and all <span class="process-math">\(x\in X\)</span> there exists <span class="process-math">\(N\geq 1\)</span> such that for all <span class="process-math">\(n\geq N\text{:}\)</span>
 </div>
@@ -602,7 +603,7 @@ d_Y(f(x),f_n(x))&lt;\varepsilon.
 \end{equation*}
 </div>
 </div></li>
-<li id="li-174"><div class="para logical" id="p-628">
+<li id="li-174"><div class="para logical" id="p-642">
 <div class="para">
 <span class="process-math">\(f_n\)</span> <dfn class="terminology">converges</dfn> to <span class="process-math">\(f\)</span> <dfn class="terminology">uniformly</dfn> if for all <span class="process-math">\(\varepsilon&gt;0\)</span> there exists <span class="process-math">\(N\geq 1\)</span> such that fr all <span class="process-math">\(x\in X\)</span> and <span class="process-math">\(n\geq N\text{:}\)</span>
 </div>
@@ -613,16 +614,16 @@ d_Y(f(x),f_n(x))&lt;\varepsilon.
 </div>
 </div></li>
 </ul>
-</div></article><div class="para" id="p-629">In def of uniform convergence, <span class="process-math">\(N\)</span> does not depend on <span class="process-math">\(X\text{.}\)</span>
+</div></article><div class="para" id="p-643">In def of uniform convergence, <span class="process-math">\(N\)</span> does not depend on <span class="process-math">\(X\text{.}\)</span>
 </div>
 <article class="exercise exercise-like" id="exercise-20"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-20"><h3 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">7.2</span><span class="period">.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-20"><article class="exercise exercise-like"><div class="para" id="p-630">If <span class="process-math">\(f_n\rightarrow f\)</span> uniformly, then <span class="process-math">\(f_n\rightarrow f\)</span> point-wise.</div></article></div>
-<div class="para" id="p-631">A point-wise limit of continuous functions need not be continuous.</div>
-<article class="example example-like" id="example-33"><h3 class="heading">
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-20"><article class="exercise exercise-like"><div class="para" id="p-644">If <span class="process-math">\(f_n\rightarrow f\)</span> uniformly, then <span class="process-math">\(f_n\rightarrow f\)</span> point-wise.</div></article></div>
+<div class="para" id="p-645">A point-wise limit of continuous functions need not be continuous.</div>
+<article class="example example-like" id="example-35"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">7.3</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-632">
+<div class="para logical" id="p-646">
 <div class="para">Let</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -642,11 +643,11 @@ f(x) &amp;=\begin{cases}
 </div>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-15" id="solution-15"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-15"><div class="solution solution-like"><div class="para" id="p-633">Get <span class="process-math">\(\lim_{n\rightarrow\infty}f_n(0)=1=f(0)\)</span> and if <span class="process-math">\(x\in(0,1]\)</span> then for all <span class="process-math">\(n\in\mathbb{Z}_+\)</span> with <span class="process-math">\(\frac{1}{n}&lt;x\text{,}\)</span> we have <span class="process-math">\(f_n(x)=0\text{.}\)</span> So <span class="process-math">\(\lim_{n\rightarrow\infty}f_n(x)=0=f(x)\text{.}\)</span> Then <span class="process-math">\(f_n\rightarrow f\)</span> pointwise and <span class="process-math">\(f\)</span> is not continuous.</div></div></div>
-</div></article><article class="example example-like" id="example-34"><h3 class="heading">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-16" id="solution-16"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-16"><div class="solution solution-like"><div class="para" id="p-647">Get <span class="process-math">\(\lim_{n\rightarrow\infty}f_n(0)=1=f(0)\)</span> and if <span class="process-math">\(x\in(0,1]\)</span> then for all <span class="process-math">\(n\in\mathbb{Z}_+\)</span> with <span class="process-math">\(\frac{1}{n}&lt;x\text{,}\)</span> we have <span class="process-math">\(f_n(x)=0\text{.}\)</span> So <span class="process-math">\(\lim_{n\rightarrow\infty}f_n(x)=0=f(x)\text{.}\)</span> Then <span class="process-math">\(f_n\rightarrow f\)</span> pointwise and <span class="process-math">\(f\)</span> is not continuous.</div></div></div>
+</div></article><article class="example example-like" id="example-36"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">7.4</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-634">
+<div class="para logical" id="p-648">
 <div class="para">Another example: <span class="process-math">\(g,g_n:[0,1]\rightarrow\mathbb{R}\text{,}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -660,11 +661,11 @@ g(x)&amp;=\begin{cases}
 \end{aligned}
 \end{equation*}
 </div>
-</div></article><div class="para" id="p-635">Pointwise limits of functions often don’t behave well with integrals.</div>
-<article class="example example-like" id="example-35"><h3 class="heading">
+</div></article><div class="para" id="p-649">Pointwise limits of functions often don't behave well with integrals.</div>
+<article class="example example-like" id="example-37"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">7.5</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-636">
+<div class="para logical" id="p-650">
 <div class="para">Let <span class="process-math">\(f_n:[0,1]\rightarrow\mathbb{R}\)</span> by <span class="process-math">\(f_n(x)=\begin{cases}
 n &amp; 0&lt;x&lt;\frac{1}{n}\\
 0 &amp; \text{otherwise}
@@ -689,39 +690,39 @@ n &amp; 0&lt;x&lt;\frac{1}{n}\\
 </div></article><article class="theorem theorem-like" id="thm-uniform-convergence-continuous"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.6</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-637">If <span class="process-math">\(X,Y\)</span> are metric spaces and <span class="process-math">\((f_n:X\rightarrow Y)_{n=1}^\infty\)</span> is a sequence of continuous functions, <span class="process-math">\(f:X\rightarrow Y\)</span> is a function, and <span class="process-math">\(f_n\rightarrow f\)</span> uniformly, then <span class="process-math">\(f\)</span> is continuous. Further, if each <span class="process-math">\(f_n\)</span> is uniformly continuous, then so is <span class="process-math">\(f\text{.}\)</span>
+<div class="para" id="p-651">If <span class="process-math">\(X,Y\)</span> are metric spaces and <span class="process-math">\((f_n:X\rightarrow Y)_{n=1}^\infty\)</span> is a sequence of continuous functions, <span class="process-math">\(f:X\rightarrow Y\)</span> is a function, and <span class="process-math">\(f_n\rightarrow f\)</span> uniformly, then <span class="process-math">\(f\)</span> is continuous. Further, if each <span class="process-math">\(f_n\)</span> is uniformly continuous, then so is <span class="process-math">\(f\text{.}\)</span>
 </div></article><article class="convention remark-like" id="convention-12"><h3 class="heading">
 <span class="type">Convention</span><span class="space"> </span><span class="codenumber">7.7</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-638">For a set <span class="process-math">\(X\text{,}\)</span> let <dfn class="terminology"><span class="process-math">\(\mathcal{B}(X)\)</span></dfn><span class="process-math">\(=\{{\text{bounded functions }X\rightarrow\mathbb{C}}\}\text{.}\)</span> (If necessary, we’ll use <span class="process-math">\(\mathcal{B}(X,\mathbb{C})\)</span> or <span class="process-math">\(\mathcal{B}(X,\mathbb{R})\)</span> when it is important whether codomain is <span class="process-math">\(\mathbb{C}\)</span> or <span class="process-math">\(\mathbb{R}\)</span>)</div></article><article class="definition definition-like" id="def-infinity-norm"><h3 class="heading">
+<div class="para" id="p-652">For a set <span class="process-math">\(X\text{,}\)</span> let <dfn class="terminology"><span class="process-math">\(\mathcal{B}(X)\)</span></dfn><span class="process-math">\(=\{{\text{bounded functions }X\rightarrow\mathbb{C}}\}\text{.}\)</span> (If necessary, we'll use <span class="process-math">\(\mathcal{B}(X,\mathbb{C})\)</span> or <span class="process-math">\(\mathcal{B}(X,\mathbb{R})\)</span> when it is important whether codomain is <span class="process-math">\(\mathbb{C}\)</span> or <span class="process-math">\(\mathbb{R}\)</span>)</div></article><article class="definition definition-like" id="def-infinity-norm"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.8</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-639">Define <dfn class="terminology"><span class="process-math">\(\left|{\left|{{\cdot}}\right|}\right|_\infty\)</span></dfn><span class="process-math">\(:\mathcal{B}(X)\rightarrow[0,\infty)\)</span> by <span class="process-math">\(\left|{\left|{{f}}\right|}\right|_\infty=\sup\{{\left|{f(x)}\right|}\,:\,{x\in X}\}\text{.}\)</span> This is called the <dfn class="terminology"><span class="process-math">\(\infty\)</span>-norm</dfn> of <span class="process-math">\(f\)</span> (aka <dfn class="terminology">supremum norm</dfn> or <dfn class="terminology">uniform norm</dfn>
+<div class="para" id="p-653">Define <dfn class="terminology"><span class="process-math">\(\left|{\left|{{\cdot}}\right|}\right|_\infty\)</span></dfn><span class="process-math">\(:\mathcal{B}(X)\rightarrow[0,\infty)\)</span> by <span class="process-math">\(\left|{\left|{{f}}\right|}\right|_\infty=\sup\{{\left|{f(x)}\right|}\,:\,{x\in X}\}\text{.}\)</span> This is called the <dfn class="terminology"><span class="process-math">\(\infty\)</span>-norm</dfn> of <span class="process-math">\(f\)</span> (aka <dfn class="terminology">supremum norm</dfn> or <dfn class="terminology">uniform norm</dfn>
 </div></article><article class="convention remark-like" id="convention-13"><h3 class="heading">
 <span class="type">Convention</span><span class="space"> </span><span class="codenumber">7.9</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-640">For <span class="process-math">\(f\in\mathcal{C}[a,b]\)</span> (or more generally) and <span class="process-math">\(1\leq p&lt;\infty\text{,}\)</span> can define <dfn class="terminology"><span class="process-math">\(\left|{\left|{{f}}\right|}\right|_p\)</span></dfn><span class="process-math">\(=\left({\int_a^b\left|{f(x)}\right|^p\,dx}\right)^{1/p}\text{.}\)</span> It turns out that <span class="process-math">\(\lim_{p\rightarrow\infty}\left|{\left|{{f}}\right|}\right|_p=\left|{\left|{{f}}\right|}\right|_\infty\)</span> (this is reason for notation; <span class="process-math">\(\left|{\left|{{\cdot}}\right|}\right|_p\)</span> makes sense for <span class="process-math">\(0&lt;p&lt;1\text{,}\)</span> but it doesn’t behave well)</div></article><article class="theorem theorem-like" id="thm-properties-of-infinity-norm"><h3 class="heading">
+<div class="para" id="p-654">For <span class="process-math">\(f\in\mathcal{C}[a,b]\)</span> (or more generally) and <span class="process-math">\(1\leq p&lt;\infty\text{,}\)</span> can define <dfn class="terminology"><span class="process-math">\(\left|{\left|{{f}}\right|}\right|_p\)</span></dfn><span class="process-math">\(=\left({\int_a^b\left|{f(x)}\right|^p\,dx}\right)^{1/p}\text{.}\)</span> It turns out that <span class="process-math">\(\lim_{p\rightarrow\infty}\left|{\left|{{f}}\right|}\right|_p=\left|{\left|{{f}}\right|}\right|_\infty\)</span> (this is reason for notation; <span class="process-math">\(\left|{\left|{{\cdot}}\right|}\right|_p\)</span> makes sense for <span class="process-math">\(0&lt;p&lt;1\text{,}\)</span> but it doesn't behave well)</div></article><article class="theorem theorem-like" id="thm-properties-of-infinity-norm"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.10</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-641"><ol class="decimal">
-<li id="li-175"><div class="para" id="p-642">
+<div class="para logical" id="p-655"><ol class="decimal">
+<li id="li-175"><div class="para" id="p-656">
 <span class="process-math">\(\mathcal{B}(X)\)</span> is a vector space</div></li>
-<li id="li-176"><div class="para logical" id="p-643">
+<li id="li-176"><div class="para logical" id="p-657">
 <div class="para">For <span class="process-math">\(f,g\in\mathcal{B}(X),\alpha\in\mathbb{C}\text{,}\)</span>
 </div>
 <ol class="lower-alpha">
-<li id="li-177"><div class="para" id="p-644"><span class="process-math">\(\displaystyle \left|{\left|{{f}}\right|}\right|_\infty=0\iff f=0\)</span></div></li>
-<li id="li-178"><div class="para" id="p-645"><span class="process-math">\(\displaystyle \left|{\left|{{\alpha f}}\right|}\right|_\infty=\left|{\alpha}\right|\left|{\left|{{f}}\right|}\right|_\infty\)</span></div></li>
-<li id="li-179"><div class="para" id="p-646">
+<li id="li-177"><div class="para" id="p-658"><span class="process-math">\(\displaystyle \left|{\left|{{f}}\right|}\right|_\infty=0\iff f=0\)</span></div></li>
+<li id="li-178"><div class="para" id="p-659"><span class="process-math">\(\displaystyle \left|{\left|{{\alpha f}}\right|}\right|_\infty=\left|{\alpha}\right|\left|{\left|{{f}}\right|}\right|_\infty\)</span></div></li>
+<li id="li-179"><div class="para" id="p-660">
 <span class="process-math">\(\left|{\left|{{f+g}}\right|}\right|_\infty\leq \left|{\left|{{f}}\right|}\right|_\infty+\left|{\left|{{g}}\right|}\right|_\infty\)</span> (triangle inequality)</div></li>
-<li id="li-180"><div class="para" id="p-647"><span class="process-math">\(\displaystyle \left|{\left|{{\overline{f}}}\right|}\right|_\infty=\left|{\left|{{f}}\right|}\right|_\infty\)</span></div></li>
-<li id="li-181"><div class="para" id="p-648">
+<li id="li-180"><div class="para" id="p-661"><span class="process-math">\(\displaystyle \left|{\left|{{\overline{f}}}\right|}\right|_\infty=\left|{\left|{{f}}\right|}\right|_\infty\)</span></div></li>
+<li id="li-181"><div class="para" id="p-662">
 <span class="process-math">\(\left|{\left|{{fg}}\right|}\right|_\infty\leq \left|{\left|{{f}}\right|}\right|_\infty\left|{\left|{{g}}\right|}\right|_\infty\)</span> (since <span class="process-math">\(\left|{fg(x)}\right|=\left|{f(x)}\right|\left|{g(x)}\right|\leq \left|{\left|{{f}}\right|}\right|_\infty\left|{\left|{{g}}\right|}\right|_\infty \forall x\in X\text{.}\)</span>)</div></li>
 </ol>
 </div></li>
-<li id="li-182"><div class="para" id="p-649">The function <span class="process-math">\(d_\infty:\mathcal{B}(x)\times \mathcal{B}(x)\rightarrow[0,\infty)\)</span> by <span class="process-math">\(d_\infty(f,g)=\left|{\left|{{f-g}}\right|}\right|_\infty\)</span> is a metric on <span class="process-math">\(\mathcal{B}(X)\text{.}\)</span>
+<li id="li-182"><div class="para" id="p-663">The function <span class="process-math">\(d_\infty:\mathcal{B}(x)\times \mathcal{B}(x)\rightarrow[0,\infty)\)</span> by <span class="process-math">\(d_\infty(f,g)=\left|{\left|{{f-g}}\right|}\right|_\infty\)</span> is a metric on <span class="process-math">\(\mathcal{B}(X)\text{.}\)</span>
 </div></li>
-<li id="li-183"><div class="para logical" id="p-650">
+<li id="li-183"><div class="para logical" id="p-664">
 <div class="para">if <span class="process-math">\((f_n)_{n=1}^\infty\subseteq\mathcal{B}(X)\)</span> and <span class="process-math">\(f\in\mathcal{B}(X)\text{,}\)</span> then <span class="process-math">\(f_n\rightarrow f\)</span> in the metric <span class="process-math">\(d_\infty\iff f_n\rightarrow f\)</span> uniformly on <span class="process-math">\(X\text{.}\)</span> (both conditions mean</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -729,7 +730,7 @@ n &amp; 0&lt;x&lt;\frac{1}{n}\\
 \end{equation*}
 </div>
 </div></li>
-<li id="li-184"><div class="para logical" id="p-651">
+<li id="li-184"><div class="para logical" id="p-665">
 <div class="para">Addition, multiplication, and conjugation are continuous on <span class="process-math">\(\mathcal{B}(X)\text{:}\)</span> ie if <span class="process-math">\((f_n)_{n=1}^\infty,(g_n)_{n=1}^\infty\subseteq\mathcal{B}(X)\text{,}\)</span> <span class="process-math">\(f_n\rightarrow f\)</span> and <span class="process-math">\(g_n\rightarrow g\)</span> uniformly then</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -745,24 +746,24 @@ f_ng_n&amp;\rightarrow fg\\
 </ol></div></article><article class="theorem theorem-like" id="thm-infinity-norm-complete"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.11</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-652">For any set <span class="process-math">\(X\text{,}\)</span> <span class="process-math">\((\mathcal{B}(X),d_\infty)\)</span> is complete, so every uniformly Cauchy sequence of bounded function converges uniformly.</div></article><div class="para" id="p-653">In a few cases we have tests to check uniform convergence.</div>
+<div class="para" id="p-666">For any set <span class="process-math">\(X\text{,}\)</span> <span class="process-math">\((\mathcal{B}(X),d_\infty)\)</span> is complete, so every uniformly Cauchy sequence of bounded function converges uniformly.</div></article><div class="para" id="p-667">In a few cases we have tests to check uniform convergence.</div>
 <article class="theorem theorem-like" id="thm-dini"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.12</span><span class="period">.</span><span class="space"> </span><span class="title">Dini's Theorem.</span>
 </h3>
-<div class="para" id="p-654">Suppose <span class="process-math">\(X\)</span> is a compact metric space <span class="process-math">\((f_n)_{n=1}^\infty\subseteq C(X,\mathbb{R}),f\in C(X,\mathbb{R})\text{,}\)</span> <span class="process-math">\(f_n\rightarrow f\)</span> pointwise and <span class="process-math">\(f_1\leq f_2\leq f_3\leq \dots\)</span> pointwise. Then <span class="process-math">\(f_n\rightarrow f\)</span> uniformly.</div></article><article class="exercise exercise-like" id="exercise-21"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-21"><h3 class="heading">
+<div class="para" id="p-668">Suppose <span class="process-math">\(X\)</span> is a compact metric space <span class="process-math">\((f_n)_{n=1}^\infty\subseteq C(X,\mathbb{R}),f\in C(X,\mathbb{R})\text{,}\)</span> <span class="process-math">\(f_n\rightarrow f\)</span> pointwise and <span class="process-math">\(f_1\leq f_2\leq f_3\leq \dots\)</span> pointwise. Then <span class="process-math">\(f_n\rightarrow f\)</span> uniformly.</div></article><article class="exercise exercise-like" id="exercise-21"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-21"><h3 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">7.13</span><span class="period">.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-21"><article class="exercise exercise-like"><div class="para" id="p-655">Dini's theorem holds for decreasing functions as well.</div></article></div>
-<div class="para" id="p-656">There are increasing sequences of continuous functions <span class="process-math">\(f_1\leq f_2\leq f_3\leq \dots\)</span> which converge pointwise to a function <span class="process-math">\(f\text{,}\)</span> but not uniformly. Dini’s Thm tells us this can’t happen when the limit of <span class="process-math">\(f\)</span> is continuous though.</div>
-<article class="example example-like" id="example-36"><h3 class="heading">
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-21"><article class="exercise exercise-like"><div class="para" id="p-669">Dini's theorem holds for decreasing functions as well.</div></article></div>
+<div class="para" id="p-670">There are increasing sequences of continuous functions <span class="process-math">\(f_1\leq f_2\leq f_3\leq \dots\)</span> which converge pointwise to a function <span class="process-math">\(f\text{,}\)</span> but not uniformly. Dini's Thm tells us this can't happen when the limit of <span class="process-math">\(f\)</span> is continuous though.</div>
+<article class="example example-like" id="example-38"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">7.14</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-657"><span class="process-math">\(X=[0,1],f_n(x)=x^{1/n},f(x)=\begin{cases}
+<div class="para" id="p-671"><span class="process-math">\(X=[0,1],f_n(x)=x^{1/n},f(x)=\begin{cases}
 0 &amp; x=0\\
 1 &amp; x&gt;0
-\end{cases}.\)</span></div></article><article class="example example-like" id="example-37"><h3 class="heading">
+\end{cases}.\)</span></div></article><article class="example example-like" id="example-39"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">7.15</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-658">The function <span class="process-math">\(f:[0,1]\rightarrow\mathbb{R}, f(t)=\sqrt{t}\)</span> is a uniform limit of polynomials.</div></article></section></div>
+<div class="para" id="p-672">The function <span class="process-math">\(f:[0,1]\rightarrow\mathbb{R}, f(t)=\sqrt{t}\)</span> is a uniform limit of polynomials.</div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="ch-function-ss.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sec-series-functions.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

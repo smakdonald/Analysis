@@ -571,6 +571,7 @@ window.MathJax = {
 <li><div class="toc-item"><a href="sec-power-series.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Power Series</span></a></div></li>
 <li><div class="toc-item"><a href="sec-sequence-calculus.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Calculus of Uniformly Convergent Sequences</span></a></div></li>
 <li><div class="toc-item"><a href="sec-equicontinuity.html" class="internal"><span class="codenumber">7.5</span> <span class="title">Equicontinuity</span></a></div></li>
+<li><div class="toc-item"><a href="sec-sw.html" class="internal"><span class="codenumber">7.6</span> <span class="title">The Stone-Weierstrass Theorem</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -589,7 +590,7 @@ window.MathJax = {
 <article class="definition definition-like" id="def-integral"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.1</span><span class="period">.</span><span class="space"> </span><span class="title">Integral.</span>
 </h3> <div class="para" id="p-565">For <span class="process-math">\(a,b\in\mathbb{R}\)</span> with <span class="process-math">\(a&lt;b\text{,}\)</span> and a function <span class="process-math">\(f:[a,b]\rightarrow\mathbb{R}\text{,}\)</span> the <dfn class="terminology">integral</dfn> of <span class="process-math">\(f\)</span> over <span class="process-math">\([a,b],\int_a^b f(x)\,dx\text{,}\)</span> when it exists, will represent the net area enclosed by the graph of <span class="process-math">\(f\text{.}\)</span>
-</div></article><div class="para" id="p-566">We’ll start by approximating the area under the graph by rectangles whose bases form a partition of <span class="process-math">\([a,b]\)</span> and compute the integral by taking a limit where the width of the rectangles converges to zero.</div>
+</div></article><div class="para" id="p-566">We'll start by approximating the area under the graph by rectangles whose bases form a partition of <span class="process-math">\([a,b]\)</span> and compute the integral by taking a limit where the width of the rectangles converges to zero.</div>
 <article class="definition definition-like" id="def-interval-partition"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.2</span><span class="period">.</span><span class="space"> </span><span class="title">Partition.</span>
 </h3> <div class="para" id="p-567">A <dfn class="terminology">partition</dfn> of a closed interval <span class="process-math">\([a,b]\)</span> is a finite set <span class="process-math">\(P\subseteq[a,b]\)</span> so that <span class="process-math">\(a,b\in P\text{.}\)</span>
@@ -598,7 +599,7 @@ window.MathJax = {
 <article class="convention remark-like" id="convention-8"><h3 class="heading">
 <span class="type">Convention</span><span class="space"> </span><span class="codenumber">6.3</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-569">Abusing notation, we’ll often write “let <span class="process-math">\(P=\{{a=x_0&lt;x_1&lt;\dots&lt;x_n=b}\}\)</span> be a partition of <span class="process-math">\([a,b]\text{.}\)</span>” Let <span class="process-math">\(\mathcal{P}[a,b]\)</span> be the set of all partitions of <span class="process-math">\([a,b]\text{.}\)</span>
+<div class="para" id="p-569">Abusing notation, we'll often write “let <span class="process-math">\(P=\{{a=x_0&lt;x_1&lt;\dots&lt;x_n=b}\}\)</span> be a partition of <span class="process-math">\([a,b]\text{.}\)</span>” Let <span class="process-math">\(\mathcal{P}[a,b]\)</span> be the set of all partitions of <span class="process-math">\([a,b]\text{.}\)</span>
 </div></article><article class="convention remark-like" id="convention-9"><h3 class="heading">
 <span class="type">Convention</span><span class="space"> </span><span class="codenumber">6.4</span><span class="period">.</span>
 </h3>
@@ -634,13 +635,13 @@ m_i(f,P)
 </div></article><article class="definition definition-like" id="def-riemann-integral"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.7</span><span class="period">.</span><span class="space"> </span><span class="title">Riemann Integral.</span>
 </h3> <div class="para logical" id="p-573">
-<div class="para">A function <span class="process-math">\(f\in\mathcal{B}[a,b]\)</span> is called <dfn class="terminology">Riemann integrable</dfn> if <span class="process-math">\(\overline{\int_a^b}f(t)\,dt=\underline{\int_a^b}f(t)\,dt\text{,}\)</span> and we’ll define</div>
+<div class="para">A function <span class="process-math">\(f\in\mathcal{B}[a,b]\)</span> is called <dfn class="terminology">Riemann integrable</dfn> if <span class="process-math">\(\overline{\int_a^b}f(t)\,dt=\underline{\int_a^b}f(t)\,dt\text{,}\)</span> and we'll define</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \int_a^bf(t)\,dt=\overline{\int_a^b}f(t)\,dt=\underline{\int_a^b}f(t)\,dt.
 \end{equation*}
 </div>
-<div class="para">We’ll write <span class="process-math">\(\mathcal{R}[a,b]\)</span> for the set of all Riemann integrable functions <span class="process-math">\([a,b]\rightarrow\mathbb{R}\text{.}\)</span>
+<div class="para">We'll write <span class="process-math">\(\mathcal{R}[a,b]\)</span> for the set of all Riemann integrable functions <span class="process-math">\([a,b]\rightarrow\mathbb{R}\text{.}\)</span>
 </div>
 </div></article><article class="exercise exercise-like" id="exercise-18"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-18"><h3 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">6.8</span><span class="period">.</span>
@@ -716,7 +717,7 @@ u(f,Q)
 </div>
 <div class="para">Thus <span class="process-math">\(u(f,Q)\leq u(f,P)\text{.}\)</span>
 </div>
-</div> <div class="para" id="p-581">Similarly, <span class="process-math">\(L(f,Q)\geq L(f,P)\)</span> (swap sups for infs), and it’s clear that <span class="process-math">\(L(f,Q)\leq u(f,Q)\text{.}\)</span> ◻</div></article></div>
+</div> <div class="para" id="p-581">Similarly, <span class="process-math">\(L(f,Q)\geq L(f,P)\)</span> (swap sups for infs), and it's clear that <span class="process-math">\(L(f,Q)\leq u(f,Q)\text{.}\)</span> ◻</div></article></div>
 <article class="corollary theorem-like" id="cor-lower-below-upper"><h3 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">6.12</span><span class="period">.</span><span class="space"> </span><span class="title">Lower and Upper Darboux Integrals.</span>
 </h3>
@@ -736,7 +737,7 @@ u(f,Q)
 \end{equation*}
 </div>
 </div></article><article class="hiddenproof" id="proof-63"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-63"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-63"><article class="hiddenproof"><div class="para logical" id="p-583">
-<div class="para">Fix partitions <span class="process-math">\(P,Q\in\mathcal{P}[a,b]\text{.}\)</span> It’s enough to show that</div>
+<div class="para">Fix partitions <span class="process-math">\(P,Q\in\mathcal{P}[a,b]\text{.}\)</span> It's enough to show that</div>
 <div class="displaymath process-math">
 \begin{equation*}
 L(f,P)\leq U(f,Q)
@@ -773,7 +774,7 @@ L(f,P)\leq L(f,P\cup Q)\leq U(f,P\cup Q)\leq U(f,Q).
 </div>
 </div></div>
 </div></article><article class="theorem theorem-like" id="thm-riemann-condition"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.14</span><span class="period">.</span><span class="space"> </span><span class="title">Riemann’s Condition.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.14</span><span class="period">.</span><span class="space"> </span><span class="title">Riemann's Condition.</span>
 </h3>
 <div class="para logical" id="p-587">
 <div class="para">Suppose <span class="process-math">\(f\in\mathcal{B}[a,b]\text{.}\)</span> Then <span class="process-math">\(f\in\mathcal{R}[a,b]\iff\)</span> for all <span class="process-math">\(\varepsilon&gt;0\)</span> there exists <span class="process-math">\(P\in\mathcal{P}[a,b]\)</span> with</div>
@@ -818,7 +819,7 @@ L(f,P)&amp;\geq L(f,P_2)\\
 </h3>
 <div class="para" id="p-591"><span class="process-math">\(\mathcal{C}[a,b]\subseteq \mathcal{R}[a,b]\subseteq \mathcal{B}[a,b]\)</span></div></article><article class="hiddenproof" id="proof-65"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-65"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-65"><article class="hiddenproof"><div class="para" id="p-592">The second inclusion holds by definition. Also, by extreme value theorem <span class="process-math">\(\mathcal{C}[a,b]\subseteq \mathcal{B}[a,b]\text{.}\)</span>
 </div> <div class="para logical" id="p-593">
-<div class="para">Suppose that <span class="process-math">\(f\in\mathcal{C}[a,b]\text{.}\)</span> We’ll show <span class="process-math">\(f\)</span> satisfies Riemann’s condition. Since <span class="process-math">\(f\)</span> is continuous on the compact set <span class="process-math">\([a,b]\text{,}\)</span> we have that <span class="process-math">\(f\)</span> is uniformly continuous. Fix <span class="process-math">\(\varepsilon&gt;0\text{.}\)</span> As <span class="process-math">\(f\)</span> is uniformly continuous, there is a <span class="process-math">\(\delta&gt;0\)</span> so that if <span class="process-math">\(x,y\in[a,b]\)</span> and <span class="process-math">\(\left|{x-y}\right|&lt;\delta\text{,}\)</span> then <span class="process-math">\(\left|{f(x)-f(y)}\right|&lt;\frac{\varepsilon}{b-a}\text{.}\)</span> Fix <span class="process-math">\(n\geq 1\)</span> so that <span class="process-math">\(\frac{1}{n}&lt;\frac{\delta}{b-a}\)</span> and let <span class="process-math">\(x_i=a+\frac{i}{n}(b-a)\)</span> for <span class="process-math">\(i=0,\dots,n\)</span> and note that <span class="process-math">\(P=\{{a=x_0&lt;x+1&lt;\dots&lt;x_n=b}\}\in \mathcal{P}[a,b]\text{.}\)</span> Then <span class="process-math">\(x_i-x_{i-1}=\frac{b-a}{n}&lt;\delta\)</span> for <span class="process-math">\(i=1,\dots,n\text{.}\)</span> As <span class="process-math">\(f\)</span> is continuous on the closed interval <span class="process-math">\([x_{i-1},x_i]\)</span> (for <span class="process-math">\(i=1,\dots,n\)</span>), the extreme value theorem implies there are <span class="process-math">\(x_i^\#,x_i^b\in[x_{i-1},x_i]\)</span> so that</div>
+<div class="para">Suppose that <span class="process-math">\(f\in\mathcal{C}[a,b]\text{.}\)</span> We'll show <span class="process-math">\(f\)</span> satisfies Riemann's condition. Since <span class="process-math">\(f\)</span> is continuous on the compact set <span class="process-math">\([a,b]\text{,}\)</span> we have that <span class="process-math">\(f\)</span> is uniformly continuous. Fix <span class="process-math">\(\varepsilon&gt;0\text{.}\)</span> As <span class="process-math">\(f\)</span> is uniformly continuous, there is a <span class="process-math">\(\delta&gt;0\)</span> so that if <span class="process-math">\(x,y\in[a,b]\)</span> and <span class="process-math">\(\left|{x-y}\right|&lt;\delta\text{,}\)</span> then <span class="process-math">\(\left|{f(x)-f(y)}\right|&lt;\frac{\varepsilon}{b-a}\text{.}\)</span> Fix <span class="process-math">\(n\geq 1\)</span> so that <span class="process-math">\(\frac{1}{n}&lt;\frac{\delta}{b-a}\)</span> and let <span class="process-math">\(x_i=a+\frac{i}{n}(b-a)\)</span> for <span class="process-math">\(i=0,\dots,n\)</span> and note that <span class="process-math">\(P=\{{a=x_0&lt;x+1&lt;\dots&lt;x_n=b}\}\in \mathcal{P}[a,b]\text{.}\)</span> Then <span class="process-math">\(x_i-x_{i-1}=\frac{b-a}{n}&lt;\delta\)</span> for <span class="process-math">\(i=1,\dots,n\text{.}\)</span> As <span class="process-math">\(f\)</span> is continuous on the closed interval <span class="process-math">\([x_{i-1},x_i]\)</span> (for <span class="process-math">\(i=1,\dots,n\)</span>), the extreme value theorem implies there are <span class="process-math">\(x_i^\#,x_i^b\in[x_{i-1},x_i]\)</span> so that</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \begin{aligned}
@@ -909,14 +910,14 @@ U(f,P)-L(f,P)
 \end{equation*}
 </div>
 </div> <div class="para logical" id="p-604">
-<div class="para">We now show <span class="process-math">\(\left|{f}\right|\in\mathcal{R}[a,b]\text{.}\)</span> By Riemann’s Criterion, it’s enough to show that for all partitions <span class="process-math">\(P\in\mathcal{P}[a,b]\text{,}\)</span>
+<div class="para">We now show <span class="process-math">\(\left|{f}\right|\in\mathcal{R}[a,b]\text{.}\)</span> By Riemann's Criterion, it's enough to show that for all partitions <span class="process-math">\(P\in\mathcal{P}[a,b]\text{,}\)</span>
 </div>
 <div class="displaymath process-math">
 \begin{equation*}
 U(\left|{f}\right|,P)-L(\left|{f}\right|,P)\leq U(f,P)-L(f,P).
 \end{equation*}
 </div>
-<div class="para">To this end, fix <span class="process-math">\(P\in\mathcal{P}[a,b]\)</span> and write <span class="process-math">\(P=\{{a=x_0&lt;x_1&lt;\dots&lt;x_n=b}\}\text{.}\)</span> Fix <span class="process-math">\(i=1,\dots,n\text{.}\)</span> It’s enough to show that</div>
+<div class="para">To this end, fix <span class="process-math">\(P\in\mathcal{P}[a,b]\)</span> and write <span class="process-math">\(P=\{{a=x_0&lt;x_1&lt;\dots&lt;x_n=b}\}\text{.}\)</span> Fix <span class="process-math">\(i=1,\dots,n\text{.}\)</span> It's enough to show that</div>
 <div class="displaymath process-math">
 \begin{equation*}
 M-i(\left|{f}\right|,P)-m_i(\left|{f}\right|,P)\leq M_i(f,P)-m_i(f,P).

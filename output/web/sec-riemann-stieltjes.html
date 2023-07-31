@@ -571,6 +571,7 @@ window.MathJax = {
 <li><div class="toc-item"><a href="sec-power-series.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Power Series</span></a></div></li>
 <li><div class="toc-item"><a href="sec-sequence-calculus.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Calculus of Uniformly Convergent Sequences</span></a></div></li>
 <li><div class="toc-item"><a href="sec-equicontinuity.html" class="internal"><span class="codenumber">7.5</span> <span class="title">Equicontinuity</span></a></div></li>
+<li><div class="toc-item"><a href="sec-sw.html" class="internal"><span class="codenumber">7.6</span> <span class="title">The Stone-Weierstrass Theorem</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -586,7 +587,184 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-riemann-stieltjes"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">6.2</span> <span class="title">Riemann-Stieltjes Integrals</span>
 </h2>
-<div class="para" id="p-608"></div></section></div>
+<div class="para logical" id="p-608">
+<div class="para">Given bounded functions <span class="process-math">\(f,g\in\mathcal{B}[a,b]\text{,}\)</span> the Riemann-Stieltjes Integral <span class="process-math">\(\int_a^b f(x)\,dg(x)\text{,}\)</span> when it exists will represent a “weighted sum” of <span class="process-math">\(f\)</span> over <span class="process-math">\([a,b]\)</span> with weights determined by “the derivative” of <span class="process-math">\(g\text{.}\)</span> (although <span class="process-math">\(g\)</span> won't always be differentiable!) Under suitible conditions, we will have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_a^b f(x)\,dg(x)=\int_a^bf(x)g'(x).
+\end{equation*}
+</div>
+<div class="para">Roughly, we'll define <span class="process-math">\(\int_a^b\,dg(X)\)</span> as a limit of “weighted Riemann sums.”</div>
+</div>
+<article class="definition definition-like" id="def-rs-sum"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.23</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-609">
+<div class="para">For functions <span class="process-math">\(f,g\in\mathcal{B}[a,b]\text{,}\)</span> a partition <span class="process-math">\(P=\{{a=x_0&lt;\dots&lt;x_n=b}\}\)</span> and an evaluation sequence <span class="process-math">\(X\)</span> for <span class="process-math">\(P\text{,}\)</span> define the <dfn class="terminology">Riemann-Stieltjes Sum</dfn>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+I(f,P,X,g)=\sum_{i=1}^nf(x_i^*)(g(x_i)-g(x_{i-1})).
+\end{equation*}
+</div>
+</div></article><article class="remark remark-like" id="remark-16"><h3 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">6.24</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-610">If <span class="process-math">\(g(x)=x\text{,}\)</span> then <span class="process-math">\(I(f,P,X,g)=I(f,P,X)\text{.}\)</span>
+</div></article><article class="definition definition-like" id="def-rs-int"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.25</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-611">
+<div class="para">For bounded functions <span class="process-math">\(f,g:[a,b]\rightarrow\mathbb{R}\text{,}\)</span> we say that <span class="process-math">\(f\)</span> is <dfn class="terminology">Riemann-Stieltjes integrable</dfn> over <span class="process-math">\([a,b]\)</span> with respect to <span class="process-math">\(g\)</span> if there is an <span class="process-math">\(A\in\mathbb{R}\)</span> so that for all <span class="process-math">\(\varepsilon&gt;0\)</span> there is a partition <span class="process-math">\(P\in\mathcal{P}[a,b]\)</span> so that for all partitions <span class="process-math">\(Q\in\mathcal{P}[a,b]\)</span> with <span class="process-math">\(P\subseteq Q\)</span> and evaluation sequences <span class="process-math">\(X\)</span> for <span class="process-math">\(Q\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\left|{I(f,P,X,g)-A}\right|&lt;\varepsilon
+\end{equation*}
+</div>
+<div class="para">in which case <span class="process-math">\(A\)</span> is unique and we call this <span class="process-math">\(A\)</span> the <dfn class="terminology">Riemann-Stieltjes integral</dfn> of <span class="process-math">\(f\)</span> over <span class="process-math">\([a,b]\)</span> with respect to <span class="process-math">\(g\)</span> and we write</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A=\int_a^b f(x)\,dg(x).
+\end{equation*}
+</div>
+<div class="para">Let <span class="process-math">\(\mathcal{R}([a,b],g)\)</span> denote all bounded functions <span class="process-math">\(f\)</span> which are Riemann-Stieltjes integrable over <span class="process-math">\([a,b]\)</span> with respect to <span class="process-math">\(g\text{.}\)</span>
+</div>
+</div></article><article class="fact theorem-like" id="fact-rs-fact"><h3 class="heading">
+<span class="type">Fact</span><span class="space"> </span><span class="codenumber">6.26</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-612">
+<div class="para">If <span class="process-math">\(g(x)=x\text{,}\)</span> then <span class="process-math">\(\mathcal{R}[a,b]=\mathcal{R}([a,b],g)\text{,}\)</span> and for all <span class="process-math">\(f\in \mathcal{R}[a,b]\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_a^b f(x)\,dx=\int_a^b f(x)\,dg(x).
+\end{equation*}
+</div>
+</div></article><article class="example example-like" id="example-31"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.27</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-613">
+<div class="para">The <dfn class="terminology">Heaviside function</dfn> is given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+H(x)
+=\begin{cases}
+0 &amp; x\leq 0\\
+1 &amp; x&gt;0.
+\end{cases}
+\end{aligned}
+\end{equation*}
+</div>
+</div></article><div class="para" id="p-614">Recall: a function <span class="process-math">\(f:\mathbb{R}\rightarrow \mathbb{R}\)</span> is <dfn class="terminology">right continuous</dfn> at <span class="process-math">\(c\in \mathbb{R}\)</span> if <span class="process-math">\(\lim_{x\rightarrow c^+}f(x)=f(c)\text{.}\)</span>
+</div>
+<article class="proposition theorem-like" id="prop-rc-prop"><h3 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">6.28</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-615">
+<div class="para">Let <span class="process-math">\(a,b,c\in\mathbb{R}\)</span> with <span class="process-math">\(a\leq C&lt;b\)</span> and let <span class="process-math">\(g(x)=H(x-c)\text{.}\)</span> If <span class="process-math">\(f:[a,b]\rightarrow \mathbb{R}\)</span> is right continuous at <span class="process-math">\(c\text{,}\)</span> then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_a^b f(x)\,dg(x)=f(c).
+\end{equation*}
+</div>
+</div></article><article class="hiddenproof" id="proof-69"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-69"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-69"><article class="hiddenproof"><div class="para logical" id="p-616">
+<div class="para">Let <span class="process-math">\(\varepsilon&gt;0\text{.}\)</span> Fix <span class="process-math">\(\delta&gt;0\)</span> such that for all <span class="process-math">\(x\in(c,c+\delta)\)</span> with <span class="process-math">\(x\in[a,b]\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\left|{f(x)-f(c)}\right|&lt;\varepsilon.
+\end{equation*}
+</div>
+<div class="para">Let <span class="process-math">\(d\in(c,c+\delta)\cap[a,b]\text{,}\)</span> and consider <span class="process-math">\(P=\{{a,c,d,b}\}\in\mathcal{P}[a,b]\text{.}\)</span> Now let <span class="process-math">\(Q\in\mathcal{P}[a,b]\)</span> such that <span class="process-math">\(Q\supseteq P\)</span> and let <span class="process-math">\(X\)</span> be an evaluation sequence for <span class="process-math">\(Q\text{.}\)</span> Then write <span class="process-math">\(Q=\{{a=x_0&lt;\dots&lt;x_n=b}\}\)</span> and <span class="process-math">\(X=(x_1^*,\dots,x_n^*)\text{.}\)</span> Let <span class="process-math">\(k=0,\dots,n-1\)</span> with <span class="process-math">\(x_k=c\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+g(x_i)-g(x_{i-1})
+=\begin{cases}
+0&amp;i\neq k+1\\
+1&amp;i=k+1
+\end{cases}
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">for <span class="process-math">\(i=1,\dots,n\text{.}\)</span> Then <span class="process-math">\(I(f,Q,X,g)=\sum_{i=1}^n f(x_i^*)(g(x_i)-g(x_{i-1}))=f(x_k^*)\text{.}\)</span> Since <span class="process-math">\(C\leq x_{k}^*\leq x_{k+1}\leq d&lt;c+\delta\text{,}\)</span> we have <span class="process-math">\(\left|{f(x_k^*)-f(c)}\right|&lt;\varepsilon\text{.}\)</span> Then <span class="process-math">\(\left|{I(f,Q,X,g)-f(c)}\right|&lt;\varepsilon\text{.}\)</span>
+</div>
+</div></article></div>
+<article class="theorem theorem-like" id="thm-in-by-parts"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.29</span><span class="period">.</span><span class="space"> </span><span class="title">Integration by Parts.</span>
+</h3>
+<div class="para logical" id="p-617">
+<div class="para">Let <span class="process-math">\(f,g\in\mathcal{B}[a,b]\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f\in\mathcal{R}([a,b],g)\iff g\in\mathcal{R}([a,b],f),
+\end{equation*}
+</div>
+<div class="para">and in this case</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_a^b f(x)\,dg(x)=f(b)g(b)-f(a)g(a)-\int_a^b g(x)\,df(x).
+\end{equation*}
+</div>
+</div></article><article class="remark remark-like" id="remark-17"><h3 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">6.30</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-618">
+<div class="para">Continuous functions are not necessarily Riemann-Stieltjes integrable! Let <span class="process-math">\(f(x)=x\)</span> and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+g(x)=\begin{cases}
+1 &amp; x\in \mathbb{Q}\\
+0 &amp; x\notin\mathbb{Q}
+\end{cases}
+\end{equation*}
+</div>
+<div class="para">Then <span class="process-math">\(g\notin\mathcal{R}([0,1])=\mathcal{R}([0,1],f)\)</span> so by ibp <span class="process-math">\(f\notin \mathcal{R}([0,1],g)\text{.}\)</span>
+</div>
+</div></article><article class="theorem theorem-like" id="thm-rsi-thm"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.31</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-619">
+<div class="para">Suppose <span class="process-math">\(f\in\mathcal{R}[a,b],g:[a,b]\rightarrow\mathbb{R}\)</span> is differentiable, and <span class="process-math">\(g'\in\mathcal{R}[a,b]\text{.}\)</span> Then <span class="process-math">\(f\in\mathcal{R}([a,b],g)\)</span> and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_a^b f(x)\,dg(x)=\int_a^b f(x)g'(x)\,dx.
+\end{equation*}
+</div>
+</div></article><article class="example example-like" id="example-32"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.32</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-620">
+<span class="process-math">\(f(x)=x^2, g(x)=\begin{cases}
+x^2 &amp; 0\leq x\le 1\\
+e^x &amp; 1&lt;x\le 2\\
+1 &amp; 2&lt;x\le 3
+\end{cases}\)</span> Compute <span class="process-math">\(\int_0^3 f(x)\,dg(x)\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-15" id="solution-15"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-15"><div class="solution solution-like"><div class="para logical" id="p-621">
+<div class="para">Have <span class="process-math">\(g\in \mathcal{R}[0,3]\)</span> as is bounded and has only finitely many discontinuities. Also <span class="process-math">\(f\)</span> is differentiable and <span class="process-math">\(f'\in \mathcal{R}[0,3]\text{.}\)</span> So <span class="process-math">\(g\in\mathcal{R}([0,3],f)\)</span> and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+\int_0^3 g(x)\,df(x)
+&amp;=\int_0^3 g(x)f'(x)\,dx\\
+&amp;=\int_0^1 x^2 2x\,dx + \int_1^2 e^x 2x\,dx+\int_2^32x\,dx\\
+&amp;=[\frac{1}{2}x^4]_0^1 +[2xe^x]_1^2-\int_1^22e^x\,dx+[x^2]_2^3\\
+&amp;=\frac{1}{2}+4e^2-2e-2e^2+2e+9-4
+=\frac{11}{2}+2e^2\\
+\implies
+\int_0^3 f(x)\,dg(x)
+&amp;=f(3)g(3)-f(0)g(0)-\int_0^3 g(x)\,df(x)\\
+&amp;=9-(\frac{11}{2}+2e^2)
+=\frac{7}{2}-2e^2.        
+\end{aligned}
+\end{equation*}
+</div>
+</div></div></div>
+</div></article><div class="para" id="p-622">To get a reasonable theory of integration, we'll want to impose more conditions on <span class="process-math">\(g\)</span> when defining <span class="process-math">\(\int_a^bf(x)\,dg(x)\text{.}\)</span>
+</div></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-riemann.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sec-bounded-variation.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

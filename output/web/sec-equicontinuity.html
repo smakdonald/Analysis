@@ -177,7 +177,7 @@ window.MathJax = {
 <span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
 </ol>
 </li>
-</ol></div></button><span class="treebuttons"><a class="previous-button button" href="sec-sequence-calculus.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-function-ss.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="sec-sequence-calculus.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-function-ss.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="sec-sw.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
 <input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
 </div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\def\ann{\operatorname{ann}}
 \newcommand{\Ass}{\operatorname{Ass}}
@@ -571,6 +571,7 @@ window.MathJax = {
 <li><div class="toc-item"><a href="sec-power-series.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Power Series</span></a></div></li>
 <li><div class="toc-item"><a href="sec-sequence-calculus.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Calculus of Uniformly Convergent Sequences</span></a></div></li>
 <li class="active"><div class="toc-item"><a href="sec-equicontinuity.html" class="internal"><span class="codenumber">7.5</span> <span class="title">Equicontinuity</span></a></div></li>
+<li><div class="toc-item"><a href="sec-sw.html" class="internal"><span class="codenumber">7.6</span> <span class="title">The Stone-Weierstrass Theorem</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -586,9 +587,48 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-equicontinuity"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">7.5</span> <span class="title">Equicontinuity</span>
 </h2>
-<div class="para" id="p-669"></div></section></div>
+<div class="para" id="p-683">Let <span class="process-math">\(X\)</span> be a compact metric space and let <span class="process-math">\(C(x)\)</span> be viewed as a metric space with the metric <span class="process-math">\(d_{\infty}\text{.}\)</span>
+</div>
+<article class="fact theorem-like" id="fact-fact"><h3 class="heading">
+<span class="type">Fact</span><span class="space"> </span><span class="codenumber">7.21</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-684">Closed bounded sets in <span class="process-math">\(C[0,1]\)</span> need not be compact.</div></article><article class="proposition theorem-like" id="prop-"><h3 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">7.22</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-685">
+<div class="para">For a compact metric space <span class="process-math">\(X\text{,}\)</span> TFAE:</div>
+<ul class="disc">
+<li id="li-187"><div class="para" id="p-686">Every closed bounded subset of <span class="process-math">\(C(X)\)</span> is compact</div></li>
+<li id="li-188"><div class="para" id="p-687">
+<span class="process-math">\(X\)</span> is finite.</div></li>
+</ul>
+</div></article><div class="para" id="p-688">There is a replacement for the Heine-Borel Thm for <span class="process-math">\(C(X)\)</span> known as Arzelá-Ascoli Thm. Definition first</div>
+<article class="definition definition-like" id="def-equicontinuous"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.23</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-689">A set <span class="process-math">\(\mathcal{F}\subseteq C(x)\)</span> is called <dfn class="terminology">(uniformly) equicontinuous</dfn> if for all <span class="process-math">\(\varepsilon&gt;0\)</span> there exists a <span class="process-math">\(\delta&gt;0\)</span> such that for all <span class="process-math">\(x,y\in X\)</span> and for all <span class="process-math">\(f\in\mathcal{F}\text{,}\)</span> <span class="process-math">\(d(x,y)&lt;\delta\implies\left|{f(x)-f(y)}\right|&lt;\varepsilon\)</span> (so <span class="process-math">\(\delta\)</span> doesn't depend on <span class="process-math">\(f!\)</span>).</div> <div class="para" id="p-690">We could define <span class="process-math">\(\mathcal{F}\)</span> to be <dfn class="terminology">equicontinuous at <span class="process-math">\(x\in X\)</span></dfn> if for all <span class="process-math">\(\varepsilon&gt;0\)</span> exists <span class="process-math">\(\delta_x&gt;0\)</span> such that for all <span class="process-math">\(y\in X\)</span> and all <span class="process-math">\(f\in\mathcal{F}\text{,}\)</span> <span class="process-math">\(d(x,y)&lt;\delta_x\implies \left|{f(x)-f(y)}\right|&lt;\varepsilon\text{,}\)</span> and <dfn class="terminology">pointwise equicontinuous</dfn> if <span class="process-math">\(\mathcal{F}\)</span> is equicontinuous at each point in <span class="process-math">\(X\)</span> (so <span class="process-math">\(\delta\)</span> depends on <span class="process-math">\(x\)</span> but not <span class="process-math">\(f\)</span>).</div></article><article class="convention remark-like" id="convention-14"><h3 class="heading">
+<span class="type">Convention</span><span class="space"> </span><span class="codenumber">7.24</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-691">We won't need pointwise equicontinuous, sop we'll only work with uniform version and just call it equicontinuity.</div></article><article class="example example-like" id="example-41"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.25</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-692">If <span class="process-math">\(\mathcal{F}\)</span> is finite, then <span class="process-math">\(\mathcal{F}\)</span> is equicontinuous iff each <span class="process-math">\(f\in\mathcal{F}\)</span> is uniformly continuous (take <span class="process-math">\(\delta=\min_{f\in\mathcal{F}}\delta_f\)</span> in the notation above).</div></article><article class="exercise exercise-like" id="exercise-23"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-23"><h3 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">7.26</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-23"><article class="exercise exercise-like"><div class="para" id="p-693">Suppose <span class="process-math">\(f_n,f:X\rightarrow\mathbb{C}\)</span> are uniformly continuous and <span class="process-math">\(f_n\rightarrow f\)</span> uniformly. Then <span class="process-math">\(\mathcal{F}=\{{f_n}\,:\,{n\geq 1}\}\cup\{{f}\}\)</span> is equicontinuous.</div></article></div>
+<article class="theorem theorem-like" id="thm-aa"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.27</span><span class="period">.</span><span class="space"> </span><span class="title">Arzelá-Ascoli Theorem.</span>
+</h3>
+<div class="para logical" id="p-694">
+<div class="para">Let <span class="process-math">\(X\)</span> be a compact metric space and <span class="process-math">\(\mathcal{F}\subseteq C(X)\text{.}\)</span> Then</div>
+<ul class="disc">
+<li id="li-189"><div class="para" id="p-695">
+<span class="process-math">\(\mathcal{F}\)</span> is compact iff <span class="process-math">\(\mathcal{F}\)</span> is closed, bounded, and equicontinuous.</div></li>
+<li id="li-190"><div class="para" id="p-696">
+<span class="process-math">\(\mathcal{F}\)</span> is totally bounded iff <span class="process-math">\(\mathcal{F}\)</span> is bounded and equicontinuous.</div></li>
+</ul>
+</div></article></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="sec-sequence-calculus.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+<a class="previous-button button" href="sec-sequence-calculus.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sec-sw.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer">

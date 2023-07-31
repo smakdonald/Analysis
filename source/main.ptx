@@ -2215,7 +2215,7 @@
             <statement>
               <p>
                 A <term>series</term> is a sequence <m>(\sum_{k=1}^na_k)_{n=1}^{\infty}</m> for some sequence <m>(a_k)_{k=1}^{\infty}\subseteq \mathbb{C}</m>. 
-                We’ll typically write the series as <m>\sum_{k=1}^{\infty}a_k</m>. 
+                We'll typically write the series as <m>\sum_{k=1}^{\infty}a_k</m>. 
                 We say <m>\sum_{k=1}^{\infty}a_k</m> converges/diverges when <m>(\sum_{k=1}^na_k)_{n=1}^{\infty}</m> converges/diverges. 
                 When it converges we write <m>\sum_{k=1}^{\infty}a_k=\lim_{n\rightarrow\infty}\sum_{k=1}^na_k\in\mathbb{C}</m>.
               </p>
@@ -2231,7 +2231,7 @@
 
             <proof>
               <p>
-                Cauchy’s condition (RHS of iff) is equivalent to saying <m>(\sum_{k=1}^n a_k)_{n=1}^{\infty}</m> is Cauchy.
+                Cauchy's condition (RHS of iff) is equivalent to saying <m>(\sum_{k=1}^n a_k)_{n=1}^{\infty}</m> is Cauchy.
               </p>
             </proof>
           </theorem>
@@ -2240,7 +2240,7 @@
             <statement>
               <p>
                 If <m>\sum_{n=1}^{\infty} a_n</m> converges, then <m>\lim_{n\rightarrow\infty} a_n=0</m>. 
-                (If limit doesn’t go to zero, the sum diverges.)
+                (If limit doesn't go to zero, the sum diverges.)
               </p>
             </statement>
           </corollary>
@@ -2276,11 +2276,11 @@
             <proof>
               <p>
                 Let <m>\sum_{n=1}^{\infty}a_n</m> be an absolutely convergent series. 
-                We’ll verify Cauchy’s criterion. 
+                We'll verify Cauchy's criterion. 
                 Fix <m>\varepsilon&gt;0. 
                 \exists N\geq 1</m> so that if <m>n\geq m\geq N</m> we have <m>\sum_{k-m}^n|a_k|&lt;\varepsilon</m>.
                 Now for all <m>\geq m\geq N,|\sum_{k=m}^n a_k|\leq \sum_{k=m}^n|a_k|&lt;\varepsilon</m>. 
-                So <m>\sum_{n=1}^{\infty}</m> satisfies Cauchy’s criterion and hence converges.
+                So <m>\sum_{n=1}^{\infty}</m> satisfies Cauchy's criterion and hence converges.
               </p>
             </proof>
           </proposition>
@@ -2295,7 +2295,7 @@
 
             <proof>
               <p>
-                Use Cauchy’s criterion as above noting that if <m>n\geq m\geq 1</m>, then <m>\sum_{k=m}^n |a_k|\leq\sum_{k=m}^n |b_k|</m>.
+                Use Cauchy's criterion as above noting that if <m>n\geq m\geq 1</m>, then <m>\sum_{k=m}^n |a_k|\leq\sum_{k=m}^n |b_k|</m>.
               </p>
             </proof>
           </theorem>
@@ -2317,7 +2317,7 @@
 
             <proof>
               <p>
-                It’s enough to produce <m>C&gt;0</m> and <m>N\geq 1</m> so that <m>|a_n|&lt;C|b_n|</m> for all <m>n\geq N</m> (then can use comparison test).
+                It's enough to produce <m>C&gt;0</m> and <m>N\geq 1</m> so that <m>|a_n|&lt;C|b_n|</m> for all <m>n\geq N</m> (then can use comparison test).
                 Let <m>C\in \mathbb{R}, C&gt;\limsup_{n\rightarrow\infty}|\frac{a_n}{b_n}|</m>. 
                 Then <m>\exists N\geq 1</m> so that for all <m>n\geq N, |\frac{a_n}{b_n}|\leq C</m>.
                 So <m>|a_n|\leq C|b_n|</m> for all <m>n\geq N</m>.
@@ -2386,7 +2386,7 @@
                     <p>
                       There is a subsequence <m>(a_{n_k})_{k=1}^{\infty}</m> of <m>(a_{n})_{n=1}^{\infty}</m> such that <m>\lim_{k\rightarrow\infty}|a_{n_k}|^{\frac{1}{n_k}}=\limsup_{n\rightarrow\infty}|a_n|^{\frac{1}{n}}&gt;1</m>. 
                       Then exists <m>K\geq 1</m> such that for all <m>k\geq K</m>, <m>|a_{n_k}|^{\frac{1}{n_k}}&gt;1</m>, and so <m>|a_{n_k}|&gt;1</m> for all <m>k\geq K</m>.
-                      In particular, <m>\limsup_{n\rightarrow\infty}|a_n|&gt;1</m>, so <m>(a_n)_{n=1}^{\infty}</m> doesn’t converge to 0. 
+                      In particular, <m>\limsup_{n\rightarrow\infty}|a_n|&gt;1</m>, so <m>(a_n)_{n=1}^{\infty}</m> doesn't converge to 0. 
                       So <m>\sum_{n=1}^{\infty}a_n</m> diverges.
                     </p>
                   </li>
@@ -2418,7 +2418,7 @@
             <proof>
               <p>
                 Stated without proof because proof is basically the same as the one above.
-                Except here’s a sketch: Fix <m>r\in\mathbb{R}</m>, <m>\limsup_{n\rightarrow\infty}\frac{|a_{n+1}|}{|a_n|}&lt;r&lt;1</m> and then exists <m>N\geq 1</m> such that for all <m>n\geq N,\frac{|a_{n+1}|}{|a_n|}&lt;r</m>. 
+                Except here's a sketch: Fix <m>r\in\mathbb{R}</m>, <m>\limsup_{n\rightarrow\infty}\frac{|a_{n+1}|}{|a_n|}&lt;r&lt;1</m> and then exists <m>N\geq 1</m> such that for all <m>n\geq N,\frac{|a_{n+1}|}{|a_n|}&lt;r</m>. 
                 Use this to show <m>|a_n|\leq |a_N|r^{n-N}\forall n\geq N</m>.
               </p>
             </proof>
@@ -2445,7 +2445,7 @@
                   &amp;=\sum_{k=1}^na_kb_k=S_n.
                   \end{aligned}
                 </me> 
-                Now it’s enough to show that 
+                Now it's enough to show that 
                 (i) <m>(a_nr_n)_{n=1}^{\infty}</m> converges and 
                 (ii) <m>\sum_{k=1}^{\infty}r_k(a_k-a_{k-1})</m> converges.
                 For (i), <m>|a_nr_n|\leq C|a_n|\rightarrow 0</m>, so <m>\lim_{n\rightarrow\infty}a_nr_n=0</m>.
@@ -2456,7 +2456,7 @@
             </proof>
           </theorem>
           
-          <corollary xml:id="cor-alternating-series-test"><title>Leibniz’s Alternating Series Test</title>
+          <corollary xml:id="cor-alternating-series-test"><title>Leibniz's Alternating Series Test</title>
             <statement>
               <p>
                 If <m>(a_n)_{n=1}^{\infty}\subseteq \mathbb{R}_{\geq 0}</m> is decreasing with <m>\lim_{n\rightarrow\infty}a_n=0</m>, then <m>\sum_{n=1}^{\infty}(-1)^na_n</m> converges.
@@ -2465,7 +2465,7 @@
 
             <proof>
               <p>
-                Take <m>b_n=(-1)^n</m> in Dirichlet’s test.
+                Take <m>b_n=(-1)^n</m> in Dirichlet's test.
               </p>
             </proof>
           </corollary>
@@ -2501,7 +2501,7 @@
 
           <convention>
             <p>
-              We’ll often write <m>(x_1,\dots,x_n)</m> in place of <m>\begin{bmatrix}x_1\\x^2\\ \vdots\\x_n\end{bmatrix}</m> and <m>x\in\mathbb{C}^n</m> in place of <m>\vec{x}\in\mathbb{C}^n</m>
+              We'll often write <m>(x_1,\dots,x_n)</m> in place of <m>\begin{bmatrix}x_1\\x^2\\ \vdots\\x_n\end{bmatrix}</m> and <m>x\in\mathbb{C}^n</m> in place of <m>\vec{x}\in\mathbb{C}^n</m>
             </p>
           </convention>
           
@@ -2532,7 +2532,7 @@
 
               <p>
                 A <term>metric space</term> is a pair <m>(X,d)</m> where <m>X</m> is a set and <m>d</m> is a metric on <m>X</m>. 
-                We’ll typically write <m>X</m> for a metric space where the metric is understood.              
+                We'll typically write <m>X</m> for a metric space where the metric is understood.              
               </p>
             </statement>
           </definition>
@@ -3249,7 +3249,7 @@
                     <li>
                       <p>
                         <m>X</m> is totally bounded iff <m>\forall \varepsilon&gt;0</m> there exist <m>a_1,\dots,a_n\in X</m> with <m>X=\cup_{i=1}^n B_\varepsilon(a_i)</m>.
-                        (This is the book’s definition of totally bounded.)
+                        (This is the book's definition of totally bounded.)
                       </p>
                     </li>
   
@@ -3275,7 +3275,7 @@
                   (<m>\implies</m>) [totally bounded implies every sequence has a Cauchy subsequence] 
                   Suppose <m>X</m> is a totally bounded metric space. 
                   Let <m>(x_n)_{n=1}^\infty\subseteq X</m> be a sequence. 
-                  We’ll first construct a sequence <m>(A_k)_{k=1}^\infty</m> of subsets of <m>X</m> such that
+                  We'll first construct a sequence <m>(A_k)_{k=1}^\infty</m> of subsets of <m>X</m> such that
                   <ol>
                     <li>
                       <p>
@@ -3304,7 +3304,7 @@
                   Since <m>\{{m\geq 1}\,:\,{x_m\in A_{k-1}}\}=\cup_{i=1}^n\{{n\geq 1}\,:\,{x_m\in B_i}\}</m> is infinite, there is an <m>i_0\in\{1,\dots,n\}</m> such that <m>\{{m\geq 1}\,:\,{x_m\in B_{i_0}}\}</m> is infinite. 
                   Set <m>A_k=B_{i_0}</m>. 
                   Now construct <m>(x_{n_k})_{k=1}^\infty</m> as follows: 
-                  Since <m>\{{n\geq 1}\,:\,{x_n\in A_1}\}</m> is infinite, it’s not empty, so there exist <m>n_1\geq 1</m> with <m>x_{n_1}\in A_1</m>. 
+                  Since <m>\{{n\geq 1}\,:\,{x_n\in A_1}\}</m> is infinite, it's not empty, so there exist <m>n_1\geq 1</m> with <m>x_{n_1}\in A_1</m>. 
                   Now if <m>n_k</m> has been constructed, then <m>\{{n\geq 1}\,:\,{x_n\in A_{k+1}}\}</m> is infinite, and hence <m>\{{n\geq 1}\,:\,{x_n\in A_{k+1}}\}\setminus\{1,2,\dots,n_k\}</m> is non-empty. 
                   Choose <m>n_{k+1}\in\mathbb{Z}</m> with <m>n_{k+1}&gt;n_k</m> and <m>x_{n_{k+1}}\in A_{k+1}</m>. 
                   Then <m>(x_{n_k})_{k=1}^\infty</m> is a subsequence of <m>(x_n)_{n=1}^\infty</m> with <m>x_{n_k}\in A_k</m> for all <m>k\geq 1</m>.
@@ -3329,9 +3329,9 @@
                   Then exists <m>\varepsilon&gt;0</m> such that for all <m>B_1,\dots,B_n</m> with <m>\text{diam}(B_i)&lt;\varepsilon</m> we have <m>X\neq \cup_{i=1}^nB_i</m>. 
                   Let <m>x_i\in X</m>. 
                   (note: <m>X\neq \emptyset</m> since <m>\emptyset</m> is totally bounded) 
-                  Assume we’ve constructed <m>x_1,\dots x_k\in X</m> with <m>d(x_i,x_j)\geq \varepsilon/2</m> for all <m>i,j=1,\dots,k</m> with <m>i\neq j</m>. 
+                  Assume we've constructed <m>x_1,\dots x_k\in X</m> with <m>d(x_i,x_j)\geq \varepsilon/2</m> for all <m>i,j=1,\dots,k</m> with <m>i\neq j</m>. 
                   Since <m>\text{diam}(B_{\frac{\varepsilon}{2}}(x_i))\leq \varepsilon</m> for all <m>i=1,\dots,k</m> (triangle inequality) we have <m>X\neq \cup_{i=1}^kB_{\frac{\varepsilon}{2}}(x_i)</m> so exists <m>x_{k+1}\in X</m> with <m>d(x_i,x_{k+1})\geq \frac{\varepsilon}{2}</m>. 
-                  So we’ve constructed a sequence <m>(x_n)_{n=1}^\infty \subseteq X</m> with <m>d(x_i,x_j)\geq \frac{\varepsilon}{2}</m> for all <m>i\neq j</m> so <m>(x_n)_{n=1}^\infty</m> has no Cauchy subsequence.
+                  So we've constructed a sequence <m>(x_n)_{n=1}^\infty \subseteq X</m> with <m>d(x_i,x_j)\geq \frac{\varepsilon}{2}</m> for all <m>i\neq j</m> so <m>(x_n)_{n=1}^\infty</m> has no Cauchy subsequence.
                 </p>
               </proof>
             </theorem>
@@ -3432,7 +3432,7 @@
                       </p>
                     
                       <p>
-                        We’ll construct <m>(y_n)_{n=1}^\infty</m> by induction on <m>n</m>. 
+                        We'll construct <m>(y_n)_{n=1}^\infty</m> by induction on <m>n</m>. 
                         To construct <m>y_1</m>: 
                         Since <m>X</m> is totally bounded, there is a finite set <m>X_1\subseteq X</m> with <m>X=\cup_{y\in X_1}B_1(y)</m>. 
                         Then also, <m>\cup_{y\in X_1}\overline{B_1(y)}=X</m>. 
@@ -3477,7 +3477,7 @@
                         Fix <m>\varepsilon&gt;0</m> with <m>B_\varepsilon(y)\subseteq U_{i_0}</m>. 
                         Fix <m>N\geq 1</m> such that for all <m>n\geq N,</m> we have <m>d(y_n,y)&lt;\frac{\varepsilon}{2}</m>. 
                         Then fix <m>n\geq N</m> with <m>\frac{1}{n}&lt;\frac{\varepsilon}{2}</m>. 
-                        We’ll show that <m>\overline{B_{\frac{1}{n}}(y_n)}\subseteq U_{i_0}</m> as claimed. 
+                        We'll show that <m>\overline{B_{\frac{1}{n}}(y_n)}\subseteq U_{i_0}</m> as claimed. 
                         Fix <m>z\in B_{\frac{1}{n}}(y_n)</m>. 
                         Then <m>d(z,y_n)&lt;\frac{1}{n}</m> and <m>d(y_n,y)&lt;\frac{\varepsilon}{2}</m>, and so <m>d(z,y)&lt;\frac{1}{n}+\frac{\varepsilon}{2}(&lt;\varepsilon)</m>. 
                         This shows that <m>B_{\frac{1}{n}(y_n)}\subseteq B_{\frac{1}{n}+\frac{\varepsilon}{2}}(y)</m> and so <m>\overline{B_{\frac{1}{n}(y_n)}}\subseteq \overline{B_{\frac{1}{n}+\frac{\varepsilon}{2}}(y)}\subseteq \{{z\in X}\,:\,{d(z,y)\leq \frac{1}{n}+\frac{\varepsilon}{2}}\}\subseteq B_{\varepsilon}(y)\subseteq U_{i_0}</m>.
@@ -3508,7 +3508,7 @@
                       <p>
                         Suppose <m>S\subseteq X</m> is an infinite set. 
                         Let <m>\mathcal{S}=\{{T\subseteq S}\,:\,{T\text{ is finite}}\}</m> and let <m>F_T=\overline{S\setminus T}\subseteq X</m> for <m>T\in \mathcal{S}</m>. 
-                        We’ll show <m>(F_T)_{T\in \mathcal{S}}</m> has the finite intersection property.
+                        We'll show <m>(F_T)_{T\in \mathcal{S}}</m> has the finite intersection property.
                         Suppose <m>T_1,\dots,T_n\in\mathcal{S}</m>. 
                         Then <m>\cap_{i=1}^n F_{T_i}=\cap_{i=1}^n\overline{S\setminus T_i}\supseteq\cap_{i=1}^n{S\setminus T_i}=S\setminus(\cup_{i=1}^n T_i)</m>. 
                         Since <m>S</m> is infinite and <m>\cup_{i=1}^n T_i</m> is finite, <m>\cap_{i=1}^n F_{T_i}\neq\emptyset</m>.
@@ -3536,7 +3536,7 @@
                         Suppose <m>(x_n)_{n=1}^\infty</m> has no constant subsequence. 
                         Therefore <m>\{{x_n}\,:\,{n\geq 1}\}\subseteq X</m> is infinite. 
                         By (5), <m>\{{x_n}\,:\,{n\geq 1}\}</m> has a cluster point <m>x\in X</m>. 
-                        Note first that <m>\exists N\geq 1</m> such that <m>x_n\neq x\,\forall n\geq N</m> since otherwise there would be a subsequence <m>(x_{n_k})_{k=1}^\infty</m> of <m>(x_n)_{n=1}^\infty</m> such that <m>x_{n_k}=x</m> for all <m>k\geq 1,</m> but we’ve assumed <m>(x_n)_{n=1}^\infty</m> has no constant subsequence. 
+                        Note first that <m>\exists N\geq 1</m> such that <m>x_n\neq x\,\forall n\geq N</m> since otherwise there would be a subsequence <m>(x_{n_k})_{k=1}^\infty</m> of <m>(x_n)_{n=1}^\infty</m> such that <m>x_{n_k}=x</m> for all <m>k\geq 1,</m> but we've assumed <m>(x_n)_{n=1}^\infty</m> has no constant subsequence. 
                         Note also that for all <m>M\geq 1</m>, <m>x\in\overline{\{{x_{M+1},x_{M+2},\dots}\}\subseteq X}</m>. 
                         Then since <m>x\in\overline{\{{x_{N},x_{N+1},\dots}\}}</m> exists <m>n_1\geq N</m> with <m>d(x,x_{n_1})&lt;1</m>.
                       </p>
@@ -3611,7 +3611,7 @@
             </statement>
             <solution>
               <p>
-                We’ll show it’s path-connected. 
+                We'll show it's path-connected. 
                 Define <m>\gamma:[0,1]\rightarrow \mathbb{R}^n</m> by <m>\gamma(t)=(1-t)x+ty</m>. 
                 Then <m>\gamma</m> is continuous, <m>\gamma(0)=x,\gamma(1)=y</m>.
               </p>
@@ -3687,7 +3687,7 @@
                 Then there exist open sets <m>U,V\subseteq [0,1]</m> such that <m>[0,1]=U\cup V, U\cap V=\emptyset, U\neq\emptyset</m> and <m>V\neq \emptyset</m>. 
                 Wlog, <m>0\in U</m> (has to be in one of them). 
                 Let <m>C=\{{t\in[0,1]}\,:\,{[0,t]\subseteq U}\}</m>. 
-                It’s enough to show <m>1\in C</m>, since then <m>U=[0,1]</m> and <m>V=\emptyset</m>, a contradiction. 
+                It's enough to show <m>1\in C</m>, since then <m>U=[0,1]</m> and <m>V=\emptyset</m>, a contradiction. 
                 Note that <m>0\in C</m> so <m>C\neq \emptyset</m>. 
                 Let <m>t_0=\sup C\in [0,1]</m>.
               </p>
@@ -3806,7 +3806,7 @@
             
               <p>
                 Then <m>S\subseteq U'\cup V', U'\cap V'\cap S= \emptyset, U'\cap S\neq\emptyset,V'\cap S\neq\emptyset</m>. 
-                (If <m>U'\cap V'=\emptyset</m>, we’re done.) 
+                (If <m>U'\cap V'=\emptyset</m>, we're done.) 
                 Since <m>U'\cap V'\cap S=\emptyset,</m> we have that <m>U'\cap S\subseteq X\setminus V'</m>. 
                 As <m>V'</m> is open, <m>X\setminus V'</m> is closed, and so <m>\overline{U'\cap S}\subseteq X\setminus V'</m>. 
                 Therefore, <m>(\overline{U'\cap S})\cap V'=\emptyset</m>. 
@@ -3874,8 +3874,8 @@
                 Fix such an <m>\varepsilon&gt;0</m>.
                 Then for each <m>n\in\mathbb{Z}_+,\exists x_n\in S\setminus\{{a}\}</m> such that <m>d(x_n,a)&lt;\frac{1}{n},d(f(x_n),y)\geq \varepsilon</m>. 
                 Now <m>(x_n)_{n=1}^\infty\subseteq S\setminus\{{a}\},\lim_{n\rightarrow\infty}x_n=a</m>, and <m>(f(x_n))_{n=1}^\infty</m> does not converge to <m>y</m>. 
-                (remark <q>this is maybe a bit pedantic</q> <m>\lim_{n\rightarrow\infty}f(x_n)\neq y</m> doesn’t really make sense since the left hand side doesn’t have to exist. 
-                If you’re writing <m>\lim_{n\rightarrow\infty}f(x_n)</m> you’re assuming it exists.)
+                (remark <q>this is maybe a bit pedantic</q> <m>\lim_{n\rightarrow\infty}f(x_n)\neq y</m> doesn't really make sense since the left hand side doesn't have to exist. 
+                If you're writing <m>\lim_{n\rightarrow\infty}f(x_n)</m> you're assuming it exists.)
               </p>
             </proof>
           </theorem>
@@ -3884,7 +3884,7 @@
             <statement>
               <p>
                 <m>f:\mathbb{R}^2\setminus\{{(0,0)}\}\rightarrow\mathbb{R}</m> with <m>f(x,y)=\frac{(x+y)^2}{x^2+y^2}</m>. 
-                We’ll show <m>\lim_{(x,y)\rightarrow (0,0)}f(x,y)</m> does not exist by constructing sequences <m>((x_n,y_n))_{n=1}^\infty</m> and <m>((x_n',y_n'))_{n=1}^\infty</m> converging in <m>\mathbb{R}^2\setminus\{{0}\}</m> so that the sequences <m>(f(x_n,y_n))_{n=1}^\infty</m> and <m>(f(x_n',y_n'))_{n=1}^\infty</m> converge to different values.
+                We'll show <m>\lim_{(x,y)\rightarrow (0,0)}f(x,y)</m> does not exist by constructing sequences <m>((x_n,y_n))_{n=1}^\infty</m> and <m>((x_n',y_n'))_{n=1}^\infty</m> converging in <m>\mathbb{R}^2\setminus\{{0}\}</m> so that the sequences <m>(f(x_n,y_n))_{n=1}^\infty</m> and <m>(f(x_n',y_n'))_{n=1}^\infty</m> converge to different values.
               </p>
             
               <p>
@@ -3906,7 +3906,7 @@
             <statement>
               <p>
                 Define <m>f:(0,\infty)\rightarrow \mathbb{R}</m> by <m>f(x)=\sin(\frac{1}{x}</m> (oscillates wildly near origin). 
-                Called <term><q>topologist’s sine curve</q></term>. 
+                Called <term><q>topologist's sine curve</q></term>. 
                 For any <m>y\in[-1,1]</m> there is a sequence <m>(x_n)_{n=1}^\infty</m> such that <m>\lim_{n\rightarrow\infty}x_n=0</m> and <m>\lim_{n\rightarrow\infty} f(x_n)=y</m>. 
                 In particular <m>\lim_{x\rightarrow 0}f(x)</m> does not exist.
               </p>
@@ -4305,7 +4305,7 @@
 
           <remark>
             <p>
-              For regular continuity, <m>\delta</m> depends on both <m>\varepsilon</m> and <m>x</m>, but doesn’t depend on <m>x</m> for uniform continuity. 
+              For regular continuity, <m>\delta</m> depends on both <m>\varepsilon</m> and <m>x</m>, but doesn't depend on <m>x</m> for uniform continuity. 
               We can choose <m>\delta</m> uniformly for all <m>x</m>.
             </p>
           </remark>
@@ -4348,7 +4348,7 @@
               </p>
 
               <p>
-                Note: If we knew <m>\inf_{x\in\mathbb{R}}\delta_x&gt;0,</m> then we could take <m>\delta=\inf_{x\in \mathbb{R}}\delta_x&gt;0</m> and we’d have for all <m>x,y\in\mathbb{R},\left|{x-y}\right|&lt;\delta\implies\left|{f(x)-f(y)}\right|&lt;\varepsilon</m>. 
+                Note: If we knew <m>\inf_{x\in\mathbb{R}}\delta_x&gt;0,</m> then we could take <m>\delta=\inf_{x\in \mathbb{R}}\delta_x&gt;0</m> and we'd have for all <m>x,y\in\mathbb{R},\left|{x-y}\right|&lt;\delta\implies\left|{f(x)-f(y)}\right|&lt;\varepsilon</m>. 
                 For our choice of <m>\delta_x,\inf_{x\in\mathbb{R}}\delta_x=0</m>.
               </p>
 
@@ -4485,7 +4485,7 @@
             <proof>
               <p>
                 <term>Uniqueness</term> 
-                (this won’t require that <m>f</m> is uniformly continuous): 
+                (this won't require that <m>f</m> is uniformly continuous): 
                 Suppose <m>g,h:\overline{A}\rightarrow Y</m> are continuous and <m>g(a)=h(a)</m> for all <m>a\in A</m>. 
                 If <m>a\in\overline{A}, \exists \,(a_n)_{n=1}^\infty\subseteq A</m> such that <m>a=\lim_{n\rightarrow\infty}a_n</m>. 
                 So 
@@ -4518,7 +4518,7 @@
               
                     <p>
                       Let <m>y_1=\lim_{n\rightarrow\infty}f(a_n),y_2=\lim_{n\rightarrow\infty}f(b_n)</m>. 
-                      To show <m>y_1=y_2,</m> we’ll show for any <m>\varepsilon&gt;0,d(y_1,y_2)\leq \varepsilon</m>. 
+                      To show <m>y_1=y_2,</m> we'll show for any <m>\varepsilon&gt;0,d(y_1,y_2)\leq \varepsilon</m>. 
                       Let <m>\varepsilon&gt;0</m>. 
                       Since <m>f</m> is uniformly continuous, exists <m>\delta&gt;0</m> such that if <m>a,b,\in A,d(a,b)&lt;\delta\implies d(f(a),f(b))&lt;\varepsilon</m>. 
                       If <m>c=\lim_{n\rightarrow\infty}a_n=\lim_{n\rightarrow\infty}b_n\in\overline{A},</m> then exists <m>N\geq 1</m> such that for all <m>n\geq N,d(a_n,c)&lt;\frac{\delta}{2},d(b_n,c)&lt;\frac{\delta}{2}</m>. 
@@ -4549,7 +4549,7 @@
                       Fix <m>\varepsilon&gt;0</m>. 
                       Since <m>f</m> is uniformly continuous, exists <m>\delta&gt;0</m> such that for all <m>a,b\in A, d(a,b)&lt;\delta\implies d(f(a),f(b))&lt;\varepsilon</m>. 
                       Now fix <m>a,b\in\overline{A}</m> with <m>d(a,b)&lt;\delta</m>. 
-                      We’ll show that <m>d(\overline{f}(a),\overline{f}(b))\leq \varepsilon</m>. 
+                      We'll show that <m>d(\overline{f}(a),\overline{f}(b))\leq \varepsilon</m>. 
                       Fix sequences <m>(a_n)_{n=1}^\infty \subseteq A</m> and <m>(b_n)_{n=1}^\infty \subseteq A</m> such that <m>a=\lim_{n\rightarrow\infty}a_n</m> and <m>b=\lim_{n\rightarrow\infty}b_n</m>. 
                       So <m>\overline{f}(a)=\lim_{n\rightarrow\infty}f(a_n)</m> and <m>\overline{f}(b)=\lim_{n\rightarrow\infty}f(b_n)</m>. 
                       Note that <m>\lim_{n\rightarrow\infty}d(a_n,b_n)=d(a,b)&lt;\delta</m>. 
@@ -4830,7 +4830,7 @@
             <statement>
               <p>
                 Suppose <m>S\subseteq \mathbb{R}</m> and <m>a</m> is an interior point of <m>S_0</m>. 
-                We’ll say a function <m>f:S\rightarrow\mathbb{R}</m> is <term>differentiable</term> at <m>a</m> if 
+                We'll say a function <m>f:S\rightarrow\mathbb{R}</m> is <term>differentiable</term> at <m>a</m> if 
                 <me>
                   f'(a):=\lim_{x\rightarrow a}\frac{f(x)-f(a)}{x-a}
                 </me> 
@@ -4935,7 +4935,7 @@
 
                   <li>
                     <p>
-                      To make sense of <m>\left({\frac{f}{g}}\right)(a)</m>, let <m>T=\{{x\in S}\,:\,{g(x)\neq 0}\}</m>, and we’ll view <m>\frac{f}{g}</m> as a function <m>\frac{f}{g}:T\rightarrow \mathbb{R}</m>. 
+                      To make sense of <m>\left({\frac{f}{g}}\right)(a)</m>, let <m>T=\{{x\in S}\,:\,{g(x)\neq 0}\}</m>, and we'll view <m>\frac{f}{g}</m> as a function <m>\frac{f}{g}:T\rightarrow \mathbb{R}</m>. 
                       Since <m>g(a)\neq 0</m> and <m>g</m> is continuous at <m>a</m>, there exists <m>\delta&gt;0</m> such that <m>g(x)\neq 0</m> whenever <m>x\in(a-\delta,a+\delta)</m>. 
                       So <m>(a-\delta,a+\delta)\subseteq T</m> and <m>a</m> is an interior point of <m>T</m>. 
                       The rest of the computation is similar to the one in (3).
@@ -4980,7 +4980,7 @@
 
           <remark>
             <p>
-              We could’ve defined derivatives of functions <m>f:\mathbb{R}\rightarrow \mathbb{C}</m> (or <m>f:S\rightarrow\mathbb{C},S\subseteq \mathbb{R}</m>) in the same way. 
+              We could've defined derivatives of functions <m>f:\mathbb{R}\rightarrow \mathbb{C}</m> (or <m>f:S\rightarrow\mathbb{C},S\subseteq \mathbb{R}</m>) in the same way. 
               Then <m>f</m> is differentiable at at point <m>a</m> iff <m>\text{Re}(f)</m> and <m>\text{Im}(f)</m> are, in which case 
               <me>
                 \begin{aligned}
@@ -5037,7 +5037,7 @@
           </definition>
 
           <p>
-            We’ll start by approximating the area under the graph by rectangles whose bases form a partition of <m>[a,b]</m> and compute the integral by taking a limit where the width of the rectangles converges to zero.
+            We'll start by approximating the area under the graph by rectangles whose bases form a partition of <m>[a,b]</m> and compute the integral by taking a limit where the width of the rectangles converges to zero.
           </p>
 
           <definition xml:id="def-interval-partition"><title>Partition</title>
@@ -5054,7 +5054,7 @@
 
           <convention>
             <p>
-              Abusing notation, we’ll often write <q>let <m>P=\{{a=x_0&lt;x_1&lt;\dots&lt;x_n=b}\}</m> be a partition of <m>[a,b]</m>.</q> 
+              Abusing notation, we'll often write <q>let <m>P=\{{a=x_0&lt;x_1&lt;\dots&lt;x_n=b}\}</m> be a partition of <m>[a,b]</m>.</q> 
               Let <m>\mathcal{P}[a,b]</m> be the set of all partitions of <m>[a,b]</m>.
             </p>
           </convention>
@@ -5101,11 +5101,11 @@
           <definition xml:id="def-riemann-integral"><title>Riemann Integral</title>
             <statement>
               <p>
-                A function <m>f\in\mathcal{B}[a,b]</m> is called <term>Riemann integrable</term> if <m>\overline{\int_a^b}f(t)\,dt=\underline{\int_a^b}f(t)\,dt</m>, and we’ll define 
+                A function <m>f\in\mathcal{B}[a,b]</m> is called <term>Riemann integrable</term> if <m>\overline{\int_a^b}f(t)\,dt=\underline{\int_a^b}f(t)\,dt</m>, and we'll define 
                 <me>
                   \int_a^bf(t)\,dt=\overline{\int_a^b}f(t)\,dt=\underline{\int_a^b}f(t)\,dt.
                 </me> 
-                We’ll write <m>\mathcal{R}[a,b]</m> for the set of all Riemann integrable functions <m>[a,b]\rightarrow\mathbb{R}</m>.
+                We'll write <m>\mathcal{R}[a,b]</m> for the set of all Riemann integrable functions <m>[a,b]\rightarrow\mathbb{R}</m>.
               </p>
             </statement>
           </definition>
@@ -5197,7 +5197,7 @@
               </p>
             
               <p>
-                Similarly, <m>L(f,Q)\geq L(f,P)</m> (swap sups for infs), and it’s clear that <m>L(f,Q)\leq u(f,Q)</m>. ◻
+                Similarly, <m>L(f,Q)\geq L(f,P)</m> (swap sups for infs), and it's clear that <m>L(f,Q)\leq u(f,Q)</m>. ◻
               </p>
             </proof>
           </theorem>
@@ -5219,7 +5219,7 @@
             <proof>
               <p>
                 Fix partitions <m>P,Q\in\mathcal{P}[a,b]</m>. 
-                It’s enough to show that 
+                It's enough to show that 
                 <me>
                   L(f,P)\leq U(f,Q)
                 </me> 
@@ -5261,7 +5261,7 @@
             </solution>
           </example>
 
-          <theorem xml:id="thm-riemann-condition"><title>Riemann’s Condition</title>
+          <theorem xml:id="thm-riemann-condition"><title>Riemann's Condition</title>
             <statement>
               <p>
                 Suppose <m>f\in\mathcal{B}[a,b]</m>. 
@@ -5325,7 +5325,7 @@
 
               <p>
                 Suppose that <m>f\in\mathcal{C}[a,b]</m>. 
-                We’ll show <m>f</m> satisfies Riemann’s condition. 
+                We'll show <m>f</m> satisfies Riemann's condition. 
                 Since <m>f</m> is continuous on the compact set <m>[a,b]</m>, we have that <m>f</m> is uniformly continuous. 
                 Fix <m>\varepsilon&gt;0</m>. 
                 As <m>f</m> is uniformly continuous, there is a <m>\delta&gt;0</m> so that if <m>x,y\in[a,b]</m> and <m>\left|{x-y}\right|&lt;\delta</m>, then <m>\left|{f(x)-f(y)}\right|&lt;\frac{\varepsilon}{b-a}</m>. 
@@ -5453,13 +5453,13 @@
 
               <p>
                 We now show <m>\left|{f}\right|\in\mathcal{R}[a,b]</m>. 
-                By Riemann’s Criterion, it’s enough to show that for all partitions <m>P\in\mathcal{P}[a,b]</m>, 
+                By Riemann's Criterion, it's enough to show that for all partitions <m>P\in\mathcal{P}[a,b]</m>, 
                 <me>
                   U(\left|{f}\right|,P)-L(\left|{f}\right|,P)\leq U(f,P)-L(f,P).
                 </me> 
                 To this end, fix <m>P\in\mathcal{P}[a,b]</m> and write <m>P=\{{a=x_0&lt;x_1&lt;\dots&lt;x_n=b}\}</m>. 
                 Fix <m>i=1,\dots,n</m>. 
-                It’s enough to show that 
+                It's enough to show that 
                 <me>
                   M-i(\left|{f}\right|,P)-m_i(\left|{f}\right|,P)\leq M_i(f,P)-m_i(f,P).
                 </me> 
@@ -5540,7 +5540,155 @@
         </section>
 
         <section xml:id="sec-riemann-stieltjes"><title>Riemann-Stieltjes Integrals</title>
-          <p></p>
+
+          <p>
+            Given bounded functions <m>f,g\in\mathcal{B}[a,b]</m>, the Riemann-Stieltjes Integral <m>\int_a^b f(x)\,dg(x)</m>, when it exists will represent a <q>weighted sum</q> of <m>f</m> over <m>[a,b]</m> with weights determined by <q>the derivative</q> of <m>g</m>. (although <m>g</m> won't always be differentiable!) Under suitible conditions, we will have <me>\int_a^b f(x)\,dg(x)=\int_a^bf(x)g'(x).</me> Roughly, we'll define <m>\int_a^b\,dg(X)</m> as a limit of <q> weighted Riemann sums.</q>
+          </p>
+
+          <definition xml:id="def-rs-sum">
+            <statement>
+              <p>
+                For functions <m>f,g\in\mathcal{B}[a,b]</m>, a partition <m>P=\{{a=x_0&lt;\dots&lt;x_n=b}\}</m> and an evaluation sequence <m>X</m> for <m>P</m>, define the <term>Riemann-Stieltjes Sum</term> 
+                <me>
+                  I(f,P,X,g)=\sum_{i=1}^nf(x_i^*)(g(x_i)-g(x_{i-1})).
+                </me>
+              </p>
+            </statement>
+          </definition>
+
+          <remark>
+            <p>
+              If <m>g(x)=x</m>, then <m>I(f,P,X,g)=I(f,P,X)</m>.
+            </p>
+          </remark>
+
+          <definition xml:id="def-rs-int">
+            <statement>
+              <p>
+                For bounded functions <m>f,g:[a,b]\rightarrow\mathbb{R}</m>, we say that <m>f</m> is <term>Riemann-Stieltjes integrable</term> over <m>[a,b]</m> with respect to <m>g</m> if there is an <m>A\in\mathbb{R}</m> so that for all <m>\varepsilon&gt;0</m> there is a partition <m>P\in\mathcal{P}[a,b]</m> so that for all partitions <m>Q\in\mathcal{P}[a,b]</m> with <m>P\subseteq Q</m> and evaluation sequences <m>X</m> for <m>Q</m>, <me>\left|{I(f,P,X,g)-A}\right|&lt;\varepsilon</me> in which case <m>A</m> is unique and we call this <m>A</m> the <term>Riemann-Stieltjes integral</term> of <m>f</m> over <m>[a,b]</m> with respect to <m>g</m> and we write <me>A=\int_a^b f(x)\,dg(x).</me> Let <m>\mathcal{R}([a,b],g)</m> denote all bounded functions <m>f</m> which are Riemann-Stieltjes integrable over <m>[a,b]</m> with respect to <m>g</m>.
+              </p>
+            </statement>
+          </definition>
+
+          <fact xml:id="fact-rs-fact">
+            <statement>
+              <p>
+                If <m>g(x)=x</m>, then <m>\mathcal{R}[a,b]=\mathcal{R}([a,b],g)</m>, and for all <m>f\in \mathcal{R}[a,b]</m> <me>\int_a^b f(x)\,dx=\int_a^b f(x)\,dg(x).</me>
+              </p>
+            </statement>
+          </fact>
+
+          <example>
+            <statement>
+              <p>
+                The <term>Heaviside function</term> is given by <me>\begin{aligned}
+                  H(x)
+                  =\begin{cases}
+                      0 &amp; x\leq 0\\
+                      1 &amp; x&gt;0.
+                  \end{cases}
+                  \end{aligned}</me> 
+              </p>
+            </statement>
+          </example>
+          
+          <p>
+            Recall: a function <m>f:\mathbb{R}\rightarrow \mathbb{R}</m> is <term>right continuous</term> at <m>c\in \mathbb{R}</m> if <m>\lim_{x\rightarrow c^+}f(x)=f(c)</m>.
+          </p>
+
+          <proposition xml:id="prop-rc-prop">
+            <statement>
+              <p>
+                Let <m>a,b,c\in\mathbb{R}</m> with <m>a\leq C&lt;b</m> and let <m>g(x)=H(x-c)</m>. If <m>f:[a,b]\rightarrow \mathbb{R}</m> is right continuous at <m>c</m>, then <me>\int_a^b f(x)\,dg(x)=f(c).</me>
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                Let <m>\varepsilon&gt;0</m>. 
+                Fix <m>\delta&gt;0</m> such that for all <m>x\in(c,c+\delta)</m> with <m>x\in[a,b]</m> we have 
+                <me>\left|{f(x)-f(c)}\right|&lt;\varepsilon.</me> 
+                Let <m>d\in(c,c+\delta)\cap[a,b]</m>, and consider <m>P=\{{a,c,d,b}\}\in\mathcal{P}[a,b]</m>. 
+                Now let <m>Q\in\mathcal{P}[a,b]</m> such that <m>Q\supseteq P</m> and let <m>X</m> be an evaluation sequence for <m>Q</m>. 
+                Then write <m>Q=\{{a=x_0&lt;\dots&lt;x_n=b}\}</m> and <m>X=(x_1^*,\dots,x_n^*)</m>. 
+                Let <m>k=0,\dots,n-1</m> with <m>x_k=c</m>. 
+                Then 
+                <me>\begin{aligned}
+                  g(x_i)-g(x_{i-1})
+                  =\begin{cases}
+                      0&amp;i\neq k+1\\
+                      1&amp;i=k+1
+                  \end{cases}
+                  \end{aligned}
+                </me> 
+                for <m>i=1,\dots,n</m>. 
+                Then <m>I(f,Q,X,g)=\sum_{i=1}^n f(x_i^*)(g(x_i)-g(x_{i-1}))=f(x_k^*)</m>. 
+                Since <m>C\leq x_{k}^*\leq x_{k+1}\leq d&lt;c+\delta</m>, we have <m>\left|{f(x_k^*)-f(c)}\right|&lt;\varepsilon</m>. 
+                Then <m>\left|{I(f,Q,X,g)-f(c)}\right|&lt;\varepsilon</m>.
+              </p>
+            </proof>
+          </proposition>
+
+          <theorem xml:id="thm-in-by-parts"><title>Integration by Parts</title>
+            <statement>
+              <p>
+                Let <m>f,g\in\mathcal{B}[a,b]</m>. 
+                Then <me>f\in\mathcal{R}([a,b],g)\iff g\in\mathcal{R}([a,b],f),</me> and in this case <me>\int_a^b f(x)\,dg(x)=f(b)g(b)-f(a)g(a)-\int_a^b g(x)\,df(x).</me>
+              </p>
+            </statement>
+          </theorem>
+
+          <remark>
+            <p>
+              Continuous functions are not necessarily Riemann-Stieltjes integrable! Let <m>f(x)=x</m> and <me>g(x)=\begin{cases}
+                1 &amp; x\in \mathbb{Q}\\
+                0 &amp; x\notin\mathbb{Q}
+            \end{cases}</me> Then <m>g\notin\mathcal{R}([0,1])=\mathcal{R}([0,1],f)</m> so by ibp <m>f\notin \mathcal{R}([0,1],g)</m>.
+            </p>
+          </remark>
+
+          <theorem xml:id="thm-rsi-thm">
+            <statement>
+              <p>
+                Suppose <m>f\in\mathcal{R}[a,b],g:[a,b]\rightarrow\mathbb{R}</m> is differentiable, and <m>g'\in\mathcal{R}[a,b]</m>. Then <m>f\in\mathcal{R}([a,b],g)</m> and <me>\int_a^b f(x)\,dg(x)=\int_a^b f(x)g'(x)\,dx.</me>
+              </p>
+            </statement>
+          </theorem>
+
+          <example>
+            <statement>
+              <p>
+                <m>f(x)=x^2, g(x)=\begin{cases}
+                  x^2 &amp; 0\leq x\le 1\\
+                  e^x &amp; 1&lt;x\le 2\\
+                  1 &amp; 2&lt;x\le 3
+              \end{cases}</m>
+              Compute <m>\int_0^3 f(x)\,dg(x)</m>.
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Have <m>g\in \mathcal{R}[0,3]</m> as is bounded and has only finitely many discontinuities. Also <m>f</m> is differentiable and <m>f'\in \mathcal{R}[0,3]</m>. So <m>g\in\mathcal{R}([0,3],f)</m> and <me>\begin{aligned}
+                  \int_0^3 g(x)\,df(x)
+                  &amp;=\int_0^3 g(x)f'(x)\,dx\\
+                  &amp;=\int_0^1 x^2 2x\,dx + \int_1^2 e^x 2x\,dx+\int_2^32x\,dx\\
+                  &amp;=[\frac{1}{2}x^4]_0^1 +[2xe^x]_1^2-\int_1^22e^x\,dx+[x^2]_2^3\\
+                  &amp;=\frac{1}{2}+4e^2-2e-2e^2+2e+9-4
+                  =\frac{11}{2}+2e^2\\
+                  \implies
+                  \int_0^3 f(x)\,dg(x)
+                  &amp;=f(3)g(3)-f(0)g(0)-\int_0^3 g(x)\,df(x)\\
+                  &amp;=9-(\frac{11}{2}+2e^2)
+                  =\frac{7}{2}-2e^2.        
+                  \end{aligned}</me>
+              </p>
+            </solution>
+          </example>
+          
+          <p>
+            To get a reasonable theory of integration, we'll want to impose more conditions on <m>g</m> when defining <m>\int_a^bf(x)\,dg(x)</m>.
+          </p>
+
         </section>
 
         <section xml:id="sec-bounded-variation"><title>Bounded Variation</title>
@@ -5653,7 +5801,7 @@
           </proposition>
 
           <p>
-            We’ll soon show that every function of bounded variation is a difference of two increasing functions. 
+            We'll soon show that every function of bounded variation is a difference of two increasing functions. 
             First, we need the following result.
           </p>
 
@@ -5789,7 +5937,7 @@
           </example>
 
           <p>
-            Pointwise limits of functions often don’t behave well with integrals.
+            Pointwise limits of functions often don't behave well with integrals.
           </p>
 
           <example>
@@ -5827,7 +5975,7 @@
           <convention>
             <p>
               For a set <m>X</m>, let <term><m>\mathcal{B}(X)</m></term><m>=\{{\text{bounded functions }X\rightarrow\mathbb{C}}\}</m>. 
-              (If necessary, we’ll use <m>\mathcal{B}(X,\mathbb{C})</m> or <m>\mathcal{B}(X,\mathbb{R})</m> when it is important whether codomain is <m>\mathbb{C}</m> or <m>\mathbb{R}</m>)
+              (If necessary, we'll use <m>\mathcal{B}(X,\mathbb{C})</m> or <m>\mathcal{B}(X,\mathbb{R})</m> when it is important whether codomain is <m>\mathbb{C}</m> or <m>\mathbb{R}</m>)
             </p>
           </convention>
 
@@ -5844,7 +5992,7 @@
             <p>
               For <m>f\in\mathcal{C}[a,b]</m> (or more generally) and <m>1\leq p&lt;\infty</m>, can define <term><m>\left|{\left|{{f}}\right|}\right|_p</m></term><m>=\left({\int_a^b\left|{f(x)}\right|^p\,dx}\right)^{1/p}</m>. 
               It turns out that <m>\lim_{p\rightarrow\infty}\left|{\left|{{f}}\right|}\right|_p=\left|{\left|{{f}}\right|}\right|_\infty</m> (this is reason for notation; 
-              <m>\left|{\left|{{\cdot}}\right|}\right|_p</m> makes sense for <m>0&lt;p&lt;1</m>, but it doesn’t behave well)
+              <m>\left|{\left|{{\cdot}}\right|}\right|_p</m> makes sense for <m>0&lt;p&lt;1</m>, but it doesn't behave well)
             </p>
           </convention>
 
@@ -5957,7 +6105,7 @@
 
           <p>
             There are increasing sequences of continuous functions <m>f_1\leq f_2\leq f_3\leq \dots</m> which converge pointwise to a function <m>f</m>, but not uniformly. 
-            Dini’s Thm tells us this can’t happen when the limit of <m>f</m> is continuous though.
+            Dini's Thm tells us this can't happen when the limit of <m>f</m> is continuous though.
           </p>
 
           <example>
@@ -5986,7 +6134,7 @@
             <statement>
               <p>
                 Let <m>(f_n)_{n=1}^\infty\subseteq\mathcal{B}(X)</m> for a set <m>X</m>. 
-                We’ll say <m>\sum_{n=1}^\infty f_n</m> <term>converges uniformly (pointwise)</term> if <m>(\sum_{n=1}^N f_n)_{N=1}^\infty \subseteq\mathcal{B}(X)</m> converges uniformly (pointwise).
+                We'll say <m>\sum_{n=1}^\infty f_n</m> <term>converges uniformly (pointwise)</term> if <m>(\sum_{n=1}^N f_n)_{N=1}^\infty \subseteq\mathcal{B}(X)</m> converges uniformly (pointwise).
               </p>
             </statement>
           </definition>
@@ -6054,7 +6202,202 @@
         </section>
 
         <section xml:id="sec-equicontinuity"><title>Equicontinuity</title>
-          <p></p>
+
+          <p>
+            Let <m>X</m> be a compact metric space and let <m>C(x)</m> be viewed as a metric space with the metric <m>d_{\infty}</m>.
+          </p>
+
+          <fact xml:id="fact-fact">
+            <statement>
+              <p>
+                Closed bounded sets in <m>C[0,1]</m> need not be compact.
+              </p>
+            </statement>
+          </fact>
+
+          <proposition xml:id="prop-">
+            <statement>
+              <p>
+                For a compact metric space <m>X</m>, TFAE:
+                <ul>
+                  <li>
+                    <p>
+                  Every closed bounded subset of <m>C(X)</m> is compact
+                </p>
+                  </li>
+              
+                  <li>
+                    <p>
+                  <m>X</m> is finite.
+                </p>
+                  </li>
+              
+                </ul>
+              </p>
+            </statement>
+          </proposition>
+
+          <p>
+            There is a replacement for the Heine-Borel Thm for <m>C(X)</m> known as Arzelá-Ascoli Thm. Definition first
+          </p>
+
+          <definition xml:id="def-equicontinuous">
+            <statement>
+              <p>
+                A set <m>\mathcal{F}\subseteq C(x)</m> is called <term>(uniformly) equicontinuous</term> if for all <m>\varepsilon&gt;0</m> there exists a <m>\delta&gt;0</m> such that for all <m>x,y\in X</m> and for all <m>f\in\mathcal{F}</m>, <m>d(x,y)&lt;\delta\implies\left|{f(x)-f(y)}\right|&lt;\varepsilon</m> (so <m>\delta</m> doesn't depend on <m>f!</m>).
+              </p>
+
+              <p>
+                We could define <m>\mathcal{F}</m> to be <term>equicontinuous at <m>x\in X</m></term> if for all <m>\varepsilon&gt;0</m> exists <m>\delta_x&gt;0</m> such that for all <m>y\in X</m> and all <m>f\in\mathcal{F}</m>, <m>d(x,y)&lt;\delta_x\implies \left|{f(x)-f(y)}\right|&lt;\varepsilon</m>, and <term>pointwise equicontinuous</term> if <m>\mathcal{F}</m> is equicontinuous at each point in <m>X</m> (so <m>\delta</m> depends on <m>x</m> but not <m>f</m>).
+              </p>
+            </statement>
+          </definition>
+
+          <convention>
+            <p>
+              We won't need pointwise equicontinuous, sop we'll only work with uniform version and just call it equicontinuity.
+            </p>
+          </convention>
+
+          <example>
+            <statement>
+              <p>
+                If <m>\mathcal{F}</m> is finite, then <m>\mathcal{F}</m> is equicontinuous iff each <m>f\in\mathcal{F}</m> is uniformly continuous (take <m>\delta=\min_{f\in\mathcal{F}}\delta_f</m> in the notation above).
+              </p>
+            </statement>
+          </example>
+
+          <exercise>
+            <statement>
+              <p>
+                Suppose <m>f_n,f:X\rightarrow\mathbb{C}</m> are uniformly continuous and <m>f_n\rightarrow f</m> uniformly. Then <m>\mathcal{F}=\{{f_n}\,:\,{n\geq 1}\}\cup\{{f}\}</m> is equicontinuous.
+              </p>
+            </statement>
+          </exercise>
+
+         <theorem xml:id="thm-aa"><title>Arzelá-Ascoli Theorem</title>
+          <statement>
+            <p>
+              Let <m>X</m> be a compact metric space and <m>\mathcal{F}\subseteq C(X)</m>. Then
+              <ul>
+                <li>
+                  <p>
+                    <m>\mathcal{F}</m> is compact iff <m>\mathcal{F}</m> is closed, bounded, and equicontinuous.
+                  </p>
+                </li>
+            
+                <li>
+                  <p>
+                    <m>\mathcal{F}</m> is totally bounded iff <m>\mathcal{F}</m> is bounded and equicontinuous.
+                  </p>
+                </li>
+              </ul>
+            </p>
+          </statement>
+         </theorem>
+         
+          
+        </section>
+
+        <section xml:id="sec-sw"><title>The Stone-Weierstrass Theorem</title>
+
+          <p>
+            Basic problem: Approximate a continuous function <m>f:X\rightarrow\mathbb{C}</m> uniformly by a <q>nice</q> sequence of functions <m>f_n:X\rightarrow\mathbb{C}</m>.
+          </p>
+
+          <convention>
+            <p>
+              Let <m>X</m> be a compact metric space. We'll write <m>C(X)</m> for either <m>C(X,\mathbb{C})</m> or <m>C(X,\mathbb{R})</m> and view <m>C(X)</m> as either a complex or real vector space, respectively.
+            </p>
+          </convention>
+
+          <definition xml:id="def-subalgebra">
+            <statement>
+              <p>
+                A vector subspace <m>A\subseteq C(X)</m> is called
+                <ul>
+                  <li>
+                    <p>
+                      A <term>subalgebra</term> if <m>f,g\in A\implies fg\in A</m>
+                    </p>
+                  </li>
+              
+                  <li>
+                    <p>
+                      <term>unital</term> if <m>1\in A</m> (1=constant function <m>x\mapsto 1</m>)
+                    </p>
+                  </li>
+              
+                  <li>
+                    <p>
+                      <term>self-adjoint</term> if <m>f\in A\implies\overline{f}\in A</m>.
+                    </p>
+                  </li>
+                </ul>
+              </p>
+            </statement>
+          </definition>
+
+          <remark>
+            <p>
+              In the real case, every subspace of <m>C(X,\mathbb{R})</m> is self-adjoint.
+            </p>
+          </remark>
+
+          <example>
+            <statement>
+              <p>
+                <ul>
+                  <li>
+                    <p>
+                      <m>A=C(X)</m> is a subalebra of <m>C(X)</m> and is unital, self-adjoint
+                    </p>
+                  </li>
+              
+                  <li>
+                    <p>
+                      <m>\{{\text{constant functions}}\}\subseteq C(X)</m> is a unital self-adjoint subalgebra.
+                    </p>
+                  </li>
+              
+                  <li>
+                    <p>
+                      <m>X=[a,b], \mathbb{F}\in\{{\mathbb{R},\mathbb{C}}\}</m>, <m>A=\{{\text{polynomials }[a,b]\rightarrow \mathbb{F}}\}=\{{x\mapsto\sum_{n=0}^N a_nx^n}\,:\,{a_n\in \mathbb{F}, N\geq 0}\}</m> then <m>A</m> is a unital subalgebra of <m>C(X,\mathbb{F})</m>.
+                    </p>
+                  </li>
+              
+                  <li>
+                    <p>
+                      <m>A_0=\{{\text{polynomials }p:[0,1]\rightarrow \mathbb{F}}\,:\,{p(0)=0}\}=\{{\sum_{n=1}^Na_nx^n}\,:\,{a_n\in F, N\geq 1}\}</m> then <m>A_0</m> is a self-adjoint subalgebra of <m>C(X,\mathbb{F})</m> whic is not unital.
+                    </p>
+                  </li>
+              
+                  <li>
+                    <p>
+                      Let <m>X=\mathbb{T}=\{{z\in \mathbb{C}}\,:\,{\left|{z}\right|=1}\}, \mathbb{F}=\mathbb{C}</m>. Let <m>A=\{{\text{polynomials }\mathbb{T}\rightarrow\mathbb{C}}\}=\{{z\mapsto\sum_{n=0}^Na_nz^n}\,:\,{a_n\in \mathbb{C}, N\geq 0}\}</m>. Then <m>A</m> is a unital subalgebra of <m>C(\mathbb{T})</m>. Claim: <m>A</m> is not self adjoint.
+                    </p>
+                  </li>
+                </ul>
+              </p>
+            </statement>
+          </example>
+
+          <theorem xml:id="thm-sw"><title>Stone-Weierstrass Theorem</title>
+            <statement>
+              <p>
+                If <m>A\subseteq C(X)</m> is a unital self-adjoint subalgebra, then <m>\overline{A}=C(X)</m> (in the metric <m>d_\infty</m>) iff <m>A</m> <term>separates points in <m>X</m></term> ie for all <m>x,y\in X, x\neq y</m>, then exists <m>f\in A</m> such that <m>f(x)\neq f(y)</m>.
+              </p>
+            </statement>
+          </theorem>
+
+          <corollary xml:id="cor-wat"><title>Weierstrass' Approximation Theorem</title>
+            <statement>
+              <p>
+                If <m>f\in C[a,b]</m>, then there is a sequence <m>(p_n[a,b]\rightarrow\mathbb{R})_{n=1}^\infty</m> of polynomial so that <m>p_n\rightarrow f</m> uniformly on <m>[a,b]</m>.
+              </p>
+            </statement>
+          </corollary>
+          
         </section>
 
       </chapter>
@@ -6419,9 +6762,9 @@
           <problem>
             <statement>
               <p>
-                Prove the following special case of Dini’s Theorem: 
+                Prove the following special case of Dini's Theorem: 
                 if <m>\left(f_{n}:[0,1] \rightarrow \mathbb{R}\right)_{n=1}^{\infty}</m> is decreasing sequence of continuous functions such that <m>\lim _{n \rightarrow \infty} f_{n}(x)=0</m> for all <m>x \in[0,1]</m>, then <m>\left(f_{n}\right)_{n=1}^{\infty}</m> converges uniformly to 0. 
-                (You should not use any form of Dini’s theorem without proof.)
+                (You should not use any form of Dini's theorem without proof.)
               </p>
             </statement>
             <solution>
@@ -6459,14 +6802,13 @@
           
         </paragraphs>  
 
-        <!--
-
         <paragraphs><title>Spring 2021</title>
 
           <problem>
             <statement>
               <p>
-                
+                Suppose that <m>X</m> is a compact metric space, <m>\left(x_{n}\right)_{n=1}^{\infty} \subseteq X, x \in X</m>, and every convergent subsequence of <m>\left(x_{n}\right)_{n=1}^{\infty}</m> converges to <m>x</m>. 
+                Show that <m>\left(x_{n}\right)_{n=1}^{\infty}</m> converges to <m>x</m>.
               </p>
             </statement>
             <solution>
@@ -6479,7 +6821,19 @@
           <problem>
             <statement>
               <p>
-                
+                <ol>
+                  <li>
+                    <p>
+                      Show that if <m>f:[a, b] \rightarrow \mathbb{R}</m> is a differentiable function and <m>f^{\prime}:[a, b] \rightarrow \mathbb{R}</m> is bounded, then <m>f</m> has bounded variation.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Construct, with proof, a continuous function <m>g:[a, b] \rightarrow \mathbb{R}</m> which does not have bounded variation.
+                    </p>
+                  </li>
+                </ol>
               </p>
             </statement>
             <solution>
@@ -6492,7 +6846,8 @@
           <problem>
             <statement>
               <p>
-                
+                Suppose that <m>f: \mathbb{R} \rightarrow \mathbb{R}</m> is a differentiable function such that there is no <m>x \in \mathbb{R}</m> with <m>f(x)=f^{\prime}(x)=0</m>. 
+                Show that if <m>a, b \in \mathbb{R}</m> with <m>a&lt;b</m>, then <m>\{x \in[a, b]: f(x)=0\}</m> is a finite set.
               </p>
             </statement>
             <solution>
@@ -6505,7 +6860,31 @@
           <problem>
             <statement>
               <p>
-                
+                Let <m>X</m> be a metric space. 
+                A function <m>f: X \rightarrow \mathbb{R}</m> is called lower semicontinuous if for every convergent sequence <m>\left(x_{n}\right)_{n=1}^{\infty} \subseteq X</m>, we have
+                <me>
+                  f\left(\lim _{n \rightarrow \infty} x_{n}\right) \leq \liminf _{n \rightarrow \infty} f\left(x_{n}\right).
+                </me>
+                <ol>
+                  <li>
+                    <p>
+                      Let <m>A \subseteq X</m> be a set and define
+                      <me>
+                        \chi_{A}: X \rightarrow \mathbb{R}: x \mapsto \begin{cases}1 &amp; x \in A \\ 0 &amp; x \notin A .\end{cases}
+                      </me>
+                      Show that <m>\chi_{A}</m> is lower semicontinuous if and only if <m>A</m> is open.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Show that if <m>X</m> is a compact metric space and <m>f: X \rightarrow \mathbb{R}</m> is lower semicontinuous, then there is a <m>c \in X</m> such that
+                      <me>
+                        f(c)=\inf \{f(x): x \in X\}.
+                      </me>
+                    </p>
+                  </li>
+                </ol>
               </p>
             </statement>
             <solution>
@@ -6518,7 +6897,8 @@
           <problem>
             <statement>
               <p>
-                
+                Suppose that <m>\left(a_{n}\right)_{n=1}^{\infty}</m> and <m>\left(b_{n}\right)_{n=1}^{\infty}</m> are sequences of strictly positive real numbers such that <m>\sum_{n=1}^{\infty} b_{n}</m> converges, and suppose that for each integer <m>n \geq 1</m>, we have <m>\frac{a_{n+1}}{a_{n}} \leq \frac{b_{n+1}}{b_{n}}</m>. 
+                Show that <m>\sum_{n=1}^{\infty} a_{n}</m> converges.
               </p>
             </statement>
             <solution>
@@ -6531,7 +6911,15 @@
           <problem>
             <statement>
               <p>
-                
+                A function <m>f:[0,1] \rightarrow \mathbb{R}</m> is called Lipschitz if there is a constant <m>C&gt;0</m> such that for all <m>x, y \in[0,1]</m>, we have
+                <me>
+                  |f(x)-f(y)| \leq C|x-y|
+                </me>
+                Let <m>\operatorname{Lip}([0,1])</m> denote the set of all Lipschitz functions <m>[0,1] \rightarrow \mathbb{R}</m> with the uniform metric
+                <me>
+                  d_{\infty}(f, g)=\sup \{|f(t)-g(t)|: 0 \leq t \leq 1\}, \quad f, g \in \operatorname{Lip}([0,1]) .
+                </me>
+                Show that <m>\operatorname{Lip}([0,1])</m> is a countable union of compact sets.
               </p>
             </statement>
             <solution>
@@ -6548,7 +6936,22 @@
           <problem>
             <statement>
               <p>
-                
+                Suppose: <m>(X, d)</m> and <m>(Y, \rho)</m> are metric spaces; <m>(Y, \rho)</m> is compact; and <m>\phi: Y \rightarrow X</m> is a continuous and onto function.
+                <ol>
+                  <li>
+                    <p>
+                      A well-known theorem states that if <m>F \subseteq Y</m> is compact, then <m>\phi(F)</m> is also compact. 
+                      Prove this theorem, and conclude that <m>(X, d)</m> is a compact metric space.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Suppose <m>G \subseteq X</m> and <m>\phi^{-1}(G)</m> is an open set. 
+                      Prove that <m>G</m> is an open set.
+                    </p>
+                  </li>
+                </ol>
               </p>
             </statement>
             <solution>
@@ -6561,7 +6964,45 @@
           <problem>
             <statement>
               <p>
-                
+                Let <m>\left(a_{n}\right)_{n=1}^{\infty}</m> be a bounded sequence of real numbers. 
+                Being sure to include all details, prove that
+                <me>
+                  \liminf _{n \rightarrow \infty} a_{n} \leq \liminf _{n \rightarrow \infty} \frac{a_{1}+a_{2}+\cdots+a_{n}}{n} .
+                </me>
+              </p>
+            </statement>
+
+            <hint>
+              <p>
+                Notice that for <m>n, N \in \mathbb{N}</m> and <m>n&gt;N, \frac{a_{1}+\cdots+a_{N}}{n}+\frac{a_{N+1}+\cdots+a_{n}}{n}=\frac{a_{1}+\cdots+a_{n}}{n}</m>.
+                Approximate <m>\frac{a_{N+1}+\cdots+a_{n}}{n}</m> in terms of <m>\liminf _{n \rightarrow \infty} a_{n}</m> and examine what happens if you hold <m>N</m> fixed and let <m>n</m> grow.
+              </p>
+            </hint>
+
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                Suppose <m>f:[a, b] \rightarrow \mathbb{R}</m> is Riemann integrable and <m>\int_{a}^{b}|f(t)| d t=0</m>.
+                <ol>
+                  <li>
+                    <p>
+                      If <m>f</m> is continuous, prove that <m>f(t)=0</m> for every <m>t \in[a, b]</m>.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Give an example (with proof) of a non-zero Riemann integrable function such that <m>\int_{a}^{b}|f(t)| d t=0</m>.
+                    </p>
+                  </li>
+                </ol>
               </p>
             </statement>
             <solution>
@@ -6574,7 +7015,13 @@
           <problem>
             <statement>
               <p>
-                
+                Let <m>Y \subseteq[0,1]</m> be the usual Cantor <m>\operatorname{set}^{1}</m> and let <m>C(Y)</m> be the collection of all continuous complex-valued functions on <m>Y</m>.
+                <fn>Recall this is the set obtained by removing <m>(1 / 3,2 / 3)</m> from <m>[0,1]</m>, then removing the middle third from the remaining intervals, etc.</fn>
+                A function <m>p \in C(Y)</m> is a projection if for every <m>y \in Y, p(y)^{2}=p(y)</m>.
+                Given <m>f \in C(Y)</m> and <m>\varepsilon&gt;0</m>, prove that there exists <m>n \in \mathbb{N}</m>, projections <m>\left\{p_{k}\right\}_{k=1}^{n} \subseteq C(Y)</m> and complex numbers <m>\left\{\alpha_{k}\right\}_{k=1}^{n}</m> such that for every <m>y \in Y</m>,
+                <me>
+                  \left|f(y)-\sum_{k=1}^{n} \alpha_{k} p_{k}(y)\right|&lt;\varepsilon .
+                </me>
               </p>
             </statement>
             <solution>
@@ -6587,7 +7034,8 @@
           <problem>
             <statement>
               <p>
-                
+                Suppose <m>\left(a_{n}\right)</m> is a decreasing sequence of real numbers and <m>\sum_{n=1}^{\infty} a_{n}</m> converges. 
+                Prove that <m>\lim _{n \rightarrow \infty} n a_{n}=0</m>.
               </p>
             </statement>
             <solution>
@@ -6600,20 +7048,22 @@
           <problem>
             <statement>
               <p>
-                
-              </p>
-            </statement>
-            <solution>
-              <p>
-                Coming (not so) soon!
-              </p>
-            </solution>
-          </problem>
+                For <m>x \in \mathbb{R}</m>, consider the series, <m>\sum_{n=1}^{\infty} \frac{1}{n^{2}+x^{2}}</m>.
+                <ol>
+                  <li>
+                    <p>
+                      Prove this series converges for every <m>x \in \mathbb{R}</m>.
+                    </p>
+                  </li>
 
-          <problem>
-            <statement>
-              <p>
-                
+                  <li>
+                    <p>
+                      Set <m>f(x)=\sum_{n=1}^{\infty} \frac{1}{n^{2}+x^{2}}</m>. 
+                      Prove that <m>f</m> is differentiable at each <m>x \in \mathbb{R}</m>. 
+                      Also, find a formula for <m>f^{\prime}(x)</m> (in terms of a series), being sure to justify that your formula is correct.
+                    </p>
+                  </li>
+                </ol>
               </p>
             </statement>
             <solution>
@@ -6623,14 +7073,65 @@
             </solution>
           </problem>
           
-        </paragraphs>
+        </paragraphs>   
 
         <paragraphs><title>Spring 2020</title>
 
           <problem>
             <statement>
               <p>
-                
+                Suppose for each <m>n \in \mathbb{N}, f_{n}:[0,1] \rightarrow \mathbb{R}</m> is continuous and satisfies <m>\sup \left\{\left|f_{n}(x)\right|: x \in[0,1]\right\} \leq 2020</m>. 
+                Put <m>g_{n}(x)=\int_{0}^{x} f_{n}(t) d t</m>. 
+                Prove that there is a subsequence of <m>\left(g_{n}\right)</m> which converges uniformly on <m>[0,1]</m>.
+              </p>
+            </statement>
+            <solution>
+              <p>
+                It's enough to show that <m>\overline{\{{g_n}\,:\,{n\geq 1}\}}\subseteq C[0,1]</m> is compact. 
+                By the Arzelá-Ascoli Theorem, <m>\{{g_n}\,:\,{n\geq 1}\}</m> is bounded and equicontinuous.
+              </p>
+
+              <p>
+                Bounded: If <m>n\geq 1,x\in[0,1]</m>, 
+                <me>
+                  \begin{aligned}
+                    \left|{g_n(x)}\right|
+                    &amp;=\left|{\int_0^x f_n(t)\,dt)}\right|
+                    \leq\int_0^x\left|{f_n(t)}\right|\,dt
+                    \leq 2020x
+                    \leq 2020.
+                  \end{aligned}
+                </me>
+                 Then for all <m>n\geq 1</m>, <m>\left|{\left|{{g_n}}\right|}\right|_\infty\leq 2020</m> so <m>\{{g_n}\,:\,{n\geq 1}\}</m> is bounded by 2020.
+              </p>
+            
+              <p>
+                Equicontinuous: 
+                Fix <m>\varepsilon&gt;0</m> and let <m>\delta=\frac{\varepsilon}{2020}</m>. 
+                Then if <m>x,y\in[0,1]</m> with <m>\left|{x-y}\right|&lt;\delta</m> and <m>n\geq 1</m>, 
+                <me>
+                  \begin{aligned}
+                  \left|{g_n(x)-g_n(y)}\right|
+                  &amp;=\left|{\int_0^x f_n(t)\,dt-\int_0^yf_n(t)\,dt}\right|
+                  =\left|{\int_y^x f_n(t)\,dt}\right|
+                  \leq \int_{\min\{{x,y}\}}^{\max\{{x,y}\}}\left|{f_n(t)}\right|\,dt\\
+                  &amp;\leq 2020\left|{x-y}\right|
+                  &lt;\varepsilon
+                  \end{aligned}
+                </me> 
+                so <m>\{{g_n}\,:\,{n\geq 1}\}</m> is equicontinuous.
+              </p>
+            </solution>
+          </problem>
+
+          <problem>
+            <statement>
+              <p>
+                Suppose <m>f: \mathbb{R} \rightarrow \mathbb{R}</m> is twice differentiable and that <m>f^{\prime \prime}(t)&lt;0</m> for every <m>t \in \mathbb{R}</m>. 
+                Prove that for any real numbers satisfying <m>a&lt;x&lt;b</m>,
+                <me>
+                  (f(x)-f(a))(b-a)&gt;(f(b)-f(a))(x-a).
+                </me>
               </p>
             </statement>
             <solution>
@@ -6643,7 +7144,22 @@
           <problem>
             <statement>
               <p>
-                
+                Suppose <m>(X, d)</m> is a compact metric space.
+                <ol>
+                  <li>
+                    <p>
+                      Let <m>E</m> be a closed subset of <m>X</m> and for <m>x \in X</m>, define <m>\operatorname{dist}(x, E)=\inf \{d(x, e): e \in E\}</m>. 
+                      Show that if <m>x \in X \backslash E</m>, then <m>\operatorname{dist}(x, E)&gt;0</m>.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Suppose <m>f: X \rightarrow X</m> is an isometry, that is, for every <m>x, y \in X, d(x, y)=d(f(x), f(y))</m>. 
+                      Prove that <m>f(X)=X</m>.
+                    </p>
+                  </li>
+                </ol>
               </p>
             </statement>
             <solution>
@@ -6656,7 +7172,11 @@
           <problem>
             <statement>
               <p>
-                
+                Suppose <m>f:[0, \infty) \rightarrow \mathbb{R}</m> is a uniformly continuous function. 
+                Prove there are real numbers <m>A</m> and <m>B</m> such that for every <m>x \in[0, \infty)</m>,
+                <me>
+                  |f(x)| \leq A+B x.
+                </me>
               </p>
             </statement>
             <solution>
@@ -6669,7 +7189,23 @@
           <problem>
             <statement>
               <p>
-                
+                The following questions are not related.
+                <ol>
+                  <li>
+                    <p>
+                      Let <m>\alpha(x)=\left\{\begin{array}{ll}x &amp; x&lt;0 \\ e^{x} &amp; x \geq 0\end{array}\right.</m> 
+                      Evaluate <m>\int_{-1}^{1} x d \alpha</m>
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Suppose <m>f:[0,1] \rightarrow \mathbb{R}</m> is continuous. 
+                      Evaluate <m>\lim _{n \rightarrow \infty} n \int_{0}^{1} x^{n} f(x) d x</m>. 
+                      Give a complete proof of your answer.
+                    </p>
+                  </li>
+                </ol>
               </p>
             </statement>
             <solution>
@@ -6682,20 +7218,8 @@
           <problem>
             <statement>
               <p>
-                
-              </p>
-            </statement>
-            <solution>
-              <p>
-                Coming (not so) soon!
-              </p>
-            </solution>
-          </problem>
-
-          <problem>
-            <statement>
-              <p>
-                
+                Suppose <m>f:[0,1] \rightarrow[0,1]</m> is a function such that <m>f(0)=0, f(1)=1</m>, has a continuous derivative, and <m>f^{\prime}(x)&gt;0</m> for every <m>x \in[0,1]</m>.
+                Prove there exists a sequence <m>P_{n}</m> of polynomials such that <m>P_{n}</m> converges uniformly to <m>f</m> and such that for every <m>n</m>, <m>P_{n}</m> is strictly increasing, <m>P_{n}(0)=0</m>, and <m>P_{n}(1)=1</m>.
               </p>
             </statement>
             <solution>
@@ -6712,7 +7236,9 @@
           <problem>
             <statement>
               <p>
-                
+                Let <m>\left\{a_{n}\right\}_{n=1}^{\infty} \subset(0, \infty)</m> and <m>c&gt;0</m> be given. 
+                Suppose that <m>\lim _{n \rightarrow \infty} a_{n}=0</m> and <m>\sum_{n=1}^{\infty} a_{n}</m> diverges. 
+                Prove that there exists a subsequence <m>\left\{a_{n_{k}}\right\}_{k=1}^{\infty}</m> such that <m>\sum_{k=1}^{\infty} a_{n_{k}}=c</m>.
               </p>
             </statement>
             <solution>
@@ -6725,7 +7251,31 @@
           <problem>
             <statement>
               <p>
-                
+                Let <m>\left\{a_{n}\right\}_{n=1}^{\infty},\left\{b_{n}\right\}_{n=1}^{\infty} \subset \mathbb{R}</m> be bounded sequences, and define the sets
+                <me>
+                  A:=\left\{a_{n}: n=1,2, \ldots\right\}, \quad B:=\left\{b_{n}: n=1,2, \ldots\right\}, \quad \text { and } \quad C:=\left\{a_{n}+b_{n}: n=1,2, \ldots\right\}.
+                </me>
+                Prove or provide a counterexample each of the following statements.
+                <ol>
+                  <li>
+                    <p>
+                      If <m>a \in \mathbb{R}</m> is a limit point for <m>A</m> and <m>b \in \mathbb{R}</m> is a limit point for <m>B</m>, then <m>a+b</m> is a limit point for <m>C</m>. 
+                      (Here limit point means accumulation or cluster point.)
+                    </p>
+                  </li>
+                  
+                  <li>
+                    <p>
+                      If <m>c \in \bar{C}</m>, then there exists <m>a \in \bar{A}</m> and <m>b \in \bar{B}</m> such that <m>a+b=c</m>.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      If <m>a_{n} \geq 0</m> for all <m>n=1,2, \ldots</m>, then <m>\limsup _{n \rightarrow \infty}\left(a_{n}^{2}\right)=\left(\limsup _{n \rightarrow \infty} a_{n}\right)^{2}</m>.
+                    </p>
+                  </li>
+                </ol>
               </p>
             </statement>
             <solution>
@@ -6738,7 +7288,23 @@
           <problem>
             <statement>
               <p>
-                
+                Let <m>(X, \rho)</m> be a metric space and define <m>\sigma: X \times X \rightarrow[0, \infty)</m> by
+                <me>
+                  \sigma(x, y):=\min \{1, \rho(x, y)\} .
+                </me>
+                <ol>
+                  <li>
+                    <p>
+                      Prove that <m>\sigma</m> is a metric on <m>X</m>.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Prove that <m>(X, \rho)</m> is complete if and only if <m>(X, \sigma)</m> is complete.
+                    </p>
+                  </li>
+                </ol>
               </p>
             </statement>
             <solution>
@@ -6751,7 +7317,26 @@
           <problem>
             <statement>
               <p>
-                
+                With <m>a&lt;b</m>, let <m>\mathcal{C}([a, b])</m> denote the family of all <m>\mathbb{R}</m>-valued functions that are continuous on the interval <m>[a, b]</m>.
+                <ol>
+                  <li>
+                    <p>
+                      Let <m>M&lt;\infty</m> and <m>\mathcal{F} \subseteq \mathcal{C}([a, b])</m> be given. 
+                      Assume that each <m>f \in \mathcal{F}</m> is differentiable on <m>(a, b)</m> and satisfies <m>|f(a)| \leq M</m> and <m>\left|f^{\prime}(x)\right| \leq M</m> for all <m>x \in(a, b)</m>. 
+                      Prove that <m>\mathcal{F}</m> is equicontinuous on <m>[a, b]</m>.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Let a uniformly bounded sequence of functions <m>\left\{g_{n}\right\}_{n=1}^{\infty} \subset \mathcal{C}([0,1])</m> be given. For each <m>n=1,2, \ldots</m>, define <m>f_{n}:[0,1] \rightarrow \mathbb{R}</m> by
+                      <me>
+                        f_{n}(x):= \begin{cases}0, &amp; x=0 \\ \frac{1}{x} \int_{0}^{x} s g_{n}(s) \mathrm{d} s, &amp; 0&lt;x \leq 1 .\end{cases}
+                      </me>
+                      Prove that there exists a subsequence of <m>\left\{f_{n}\right\}_{n=1}^{\infty}</m> that converges uniformly on <m>[0,1]</m> to some <m>f \in \mathcal{C}([0,1])</m>.
+                    </p>
+                  </li>
+                </ol>
               </p>
             </statement>
             <solution>
@@ -6764,7 +7349,21 @@
           <problem>
             <statement>
               <p>
-                
+                <ol>
+                  <li>
+                    <p>
+                      Let <m>a, b \in \mathbb{R}</m>, with <m>a&lt;b</m>, be given, and suppose that <m>f:(a, b) \rightarrow \mathbb{R}</m> is differentiable on <m>(a, b)</m> and that <m>\lim _{x \rightarrow c} f^{\prime}(x)</m> both exists and is finite, for all <m>c \in(a, b)</m>. 
+                      Prove that <m>f</m> is continuously differentiable on <m>(a, b)</m>.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Produce a function <m>f:(-1,1) \rightarrow \mathbb{R}</m> that is everywhere differentiable and such that <m>f^{\prime}</m> is discontinuous at some <m>c \in(-1,1)</m>. 
+                      Justify your claim.
+                    </p>
+                  </li>
+                </ol>
               </p>
             </statement>
             <solution>
@@ -6777,7 +7376,26 @@
           <problem>
             <statement>
               <p>
-                
+                The parts of this problem are not connected.
+                <ol>
+                  <li>
+                    <p>
+                      Let <m>\left\{a_{n}\right\}_{n=1}^{\infty} \subset \mathbb{R}</m> and a strictly increasing sequence <m>\left\{x_{n}\right\}_{n=1}^{\infty} \subset(0,1)</m> be given. 
+                      Assume that <m>\sum_{n=1}^{\infty} a_{n}</m> is absolutely convergent, and define <m>\alpha:[0,1] \rightarrow \mathbb{R}</m> by
+                      <me>
+                        \alpha(x):= \begin{cases}a_{n}, &amp; x=x_{n} \\ 0, &amp; \text { otherwise } .\end{cases}
+                      </me>
+                      Prove or disprove: <m>\alpha</m> has bounded variation on <m>[0,1]</m>.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Suppose that <m>f:[0,1] \rightarrow \mathbb{R}</m> is Riemann-Stieltjes integrable with respect to a nondecreasing function <m>\beta:[0,1] \rightarrow[0, \infty)</m>. 
+                      Prove that <m>f</m> is Riemann-Stieltjes integrable with respect to the function <m>\beta^{2}</m>.
+                    </p>
+                  </li>
+                </ol>
               </p>
             </statement>
             <solution>
@@ -6788,6 +7406,8 @@
           </problem>
           
         </paragraphs>
+
+        <!--
         
         <paragraphs><title>Spring 2019</title>
 

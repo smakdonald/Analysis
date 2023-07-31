@@ -12,18 +12,19 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para logical"><div class="displaymath process-math">
+<div class="para logical">
+<div class="para">Continuous functions are not necessarily Riemann-Stieltjes integrable! Let <span class="process-math">\(f(x)=x\)</span> and</div>
+<div class="displaymath process-math">
 \begin{equation*}
-\begin{aligned}
-f:[0,1]&amp;\rightarrow \mathbb{R}\\
-f(x)&amp;=
-\begin{cases}
-x^2\sin\left({\frac{1}{x^2}}\right) &amp; x\neq 0\\
-0 &amp; x=0
-\end{cases}.
-\end{aligned}
+g(x)=\begin{cases}
+1 &amp; x\in \mathbb{Q}\\
+0 &amp; x\notin\mathbb{Q}
+\end{cases}
 \end{equation*}
-</div></div>
-<span class="incontext"><a href="sec-bounded-variation.html#p-618" class="internal">in-context</a></span>
+</div>
+<div class="para">Then <span class="process-math">\(g\notin\mathcal{R}([0,1])=\mathcal{R}([0,1],f)\)</span> so by ibp <span class="process-math">\(f\notin \mathcal{R}([0,1],g)\text{.}\)</span>
+</div>
+</div>
+<span class="incontext"><a href="sec-riemann-stieltjes.html#p-618" class="internal">in-context</a></span>
 </body>
 </html>
