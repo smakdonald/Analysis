@@ -10,5 +10,23 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><div class="solution solution-like"><div class="para">Let <span class="process-math">\(p:\mathbb{R}^3\rightarrow \mathbb{R}\)</span> by <span class="process-math">\(p(x,y,z)=x^2+y^2+z^2\)</span> is continuous. Also, <span class="process-math">\(\{{1}\}\subseteq \mathbb{R}\)</span> is closed, so <span class="process-math">\(S^2=p^{-1}(\{{1}\})\)</span> is closed.</div></div></body>
+<body class="ignore-math"><div class="solution solution-like"><div class="para logical">
+<div class="para">Fix <span class="process-math">\(x_0\in \mathbb{R}\)</span> and <span class="process-math">\(\varepsilon&gt;0\text{.}\)</span> Let <span class="process-math">\(\delta=\min\{{\frac{1}{2},\frac{\varepsilon}{2\left|{x_0}\right|+1}}\}&gt;0\text{.}\)</span> If <span class="process-math">\(x\in\mathbb{R}\)</span> and <span class="process-math">\(d(x,x_0)&lt;\delta\)</span> then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+d(f(x),f(x_0))
+&amp;=\left|{f(x)-f(x_0)}\right|
+=\left|{x^2-x_0^2}\right|
+\leq \left|{x^2-xx_0}\right|+\left|{xx_0-x^2}\right|\\
+&amp;=\left|{x}\right|\left|{x-x_0}\right|+\left|{x-x_0}\right|\left|{x_0}\right|
+\leq (\left|{x}\right|+\left|{x_0}\right|)\delta
+\leq (\left|{x-x_0}\right|+\left|{x_0}\right|+\left|{x_0}\right|)\delta\\
+&amp;\leq (2\left|{x_0}\right|+1)\delta
+(\text{ since }\delta&lt;1)\\
+&amp;&lt;\varepsilon
+\end{aligned}
+\end{equation*}
+</div>
+</div></div></body>
 </html>

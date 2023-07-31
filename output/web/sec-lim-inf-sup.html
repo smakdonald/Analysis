@@ -332,7 +332,15 @@ window.MathJax = {
 \newcommand{\fe}{{\mathfrak e}}
 \newcommand{\fm}{{\mathfrak m}} 
 \newcommand{\fp}{{\mathfrak p}} 
-\newcommand{\fq}{{\mathfrak q}} 
+\newcommand{\fq}{{\mathfrak q}}
+\newcommand{\fA}{{\mathfrak A}} 
+\newcommand{\fB}{{\mathfrak B}} 
+\newcommand{\fC}{{\mathfrak C}} 
+\newcommand{\fD}{{\mathfrak D}} 
+\newcommand{\fE}{{\mathfrak E}} 
+\newcommand{\fF}{{\mathfrak F}} 
+\newcommand{\fG}{{\mathfrak G}} 
+\newcommand{\fH}{{\mathfrak H}} 
 \newcommand{\fK}{{\mathfrak K}} 
 \newcommand{\fR}{{\mathfrak R}} 
 
@@ -517,7 +525,13 @@ window.MathJax = {
 <li>
 <div class="toc-item"><a href="ch-metric-spaces.html" class="internal"><span class="codenumber">4</span> <span class="title">Metric Spaces</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-topology-metric.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Topology and Metric Spaces</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-topology-metric.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Topology and Metric Spaces</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-topology-metric.html#subsec-inner" class="internal"><span class="title">Inner Products and Cauchy-Schwarz</span></a></div></li>
+<li><div class="toc-item"><a href="sec-topology-metric.html#subsec-matric" class="internal"><span class="title">Metric Spaces</span></a></div></li>
+</ul>
+</li>
 <li>
 <div class="toc-item"><a href="sec-open-closed.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Open and Closed Sets</span></a></div>
 <ul class="structural">
@@ -588,55 +602,123 @@ window.MathJax = {
 <span class="type">Section</span> <span class="codenumber">2.3</span> <span class="title">Limit Infimums and Limit Supremums</span>
 </h2>
 <blockquote class="blockquote" id="blockquote-11">
-<div class="para" id="p-210">“Only the pure in heart can make a good soup.”</div> <cite class="attribution">―Ludwig Van Beethoven</cite>
+<div class="para" id="p-202">“Only the pure in heart can make a good soup.”</div> <cite class="attribution">―Ludwig Van Beethoven</cite>
 </blockquote>
-<article class="convention remark-like" id="convention-5"><h3 class="heading">
-<span class="type">Convention</span><span class="space"> </span><span class="codenumber">2.28</span><span class="period">.</span><span class="space"> </span><span class="title">Convergence to <span class="process-math">\(\pm\infty\)</span>.</span>
-</h3> <div class="para" id="p-211">A sequence <span class="process-math">\((x_n)_{n=1}^{\infty}\subseteq\mathbb{R}\)</span> converges to <span class="process-math">\(\infty\)</span> if <span class="process-math">\(\forall\, M\in \mathbb{R}\text{,}\)</span> <span class="process-math">\(\exists N\in\mathbb{Z}_{\geq 1}\)</span> such that for all <span class="process-math">\(n\in\mathbb{Z}, n\geq N, x_n\geq M\text{.}\)</span> In this case we'll write <span class="process-math">\(\lim_{n\rightarrow\infty}x_n=\infty\text{.}\)</span> Similarly <span class="process-math">\(\lim_{n\rightarrow\infty}x_n=-\infty\)</span> iff <span class="process-math">\(\exists N\in\mathbb{Z}{\geq 1}\)</span> such that for all <span class="process-math">\(n\in\mathbb{Z},n\geq N, x_n&lt;M\text{.}\)</span>
-</div></article><article class="remark remark-like" id="remark-5"><h3 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.29</span><span class="period">.</span>
+<article class="convention remark-like" id="convention-6"><h3 class="heading">
+<span class="type">Convention</span><span class="space"> </span><span class="codenumber">2.27</span><span class="period">.</span><span class="space"> </span><span class="title">Convergence to <span class="process-math">\(\pm\infty\)</span>.</span>
+</h3> <div class="para" id="p-203">A sequence <span class="process-math">\((x_n)_{n=1}^{\infty}\subseteq\mathbb{R}\)</span> converges to <span class="process-math">\(\infty\)</span> if <span class="process-math">\(\forall\, M\in \mathbb{R}\text{,}\)</span> <span class="process-math">\(\exists N\in\mathbb{Z}_{\geq 1}\)</span> such that for all <span class="process-math">\(n\in\mathbb{Z}, n\geq N, x_n\geq M\text{.}\)</span> In this case we'll write <span class="process-math">\(\lim_{n\rightarrow\infty}x_n=\infty\text{.}\)</span> Similarly <span class="process-math">\(\lim_{n\rightarrow\infty}x_n=-\infty\)</span> iff <span class="process-math">\(\exists N\in\mathbb{Z}{\geq 1}\)</span> such that for all <span class="process-math">\(n\in\mathbb{Z},n\geq N, x_n&lt;M\text{.}\)</span>
+</div></article><article class="remark remark-like" id="remark-3"><h3 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.28</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-212">If <span class="process-math">\(\lim_{n\rightarrow\infty}x_n=\pm\infty\text{,}\)</span> we'll still call <span class="process-math">\((x_n)_{n=1}^{\infty}\)</span> as a divergent sequence. (might say diverges to infinity)</div></article><article class="exercise exercise-like" id="exercise-2"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-2"><h3 class="heading">
-<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.30</span><span class="period">.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-2"><article class="exercise exercise-like"><div class="para" id="p-213">Every monotone sequence in <span class="process-math">\(\mathbb{R}\)</span> has a limit in <span class="process-math">\(\overline{\mathbb{R}}=\mathbb{R}\cup\{\infty,-\infty\}\text{.}\)</span>
+<div class="para" id="p-204">If <span class="process-math">\(\lim_{n\rightarrow\infty}x_n=\pm\infty\text{,}\)</span> we'll still call <span class="process-math">\((x_n)_{n=1}^{\infty}\)</span> as a divergent sequence. (might say diverges to infinity)</div></article><article class="exercise exercise-like" id="exercise-3"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-3"><h3 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.29</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-3"><article class="exercise exercise-like"><div class="para" id="p-205">Every monotone sequence in <span class="process-math">\(\mathbb{R}\)</span> has a limit in <span class="process-math">\(\overline{\mathbb{R}}=\mathbb{R}\cup\{\infty,-\infty\}\text{.}\)</span>
 </div></article></div>
 <article class="definition definition-like" id="def-lim-sup-inf"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.31</span><span class="period">.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.30</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-214">
+<div class="para logical" id="p-206">
 <div class="para">Let <span class="process-math">\((x_n)_{n=1}^{\infty}\subseteq\mathbb{R}\)</span> be given.</div>
 <ul class="disc">
-<li id="li-93"><div class="para" id="p-215">The <dfn class="terminology">limit superior</dfn> of <span class="process-math">\((x_n)_{n=1}^{\infty}\)</span> is<span class="process-math">\(\limsup_{n\rightarrow\infty}x_n=\lim_{n\rightarrow\infty}(\sup_{k\geq n}x_k)=\inf_{n\geq 1}(\sup_{k\geq n}x_k)\)</span>
+<li id="li-93"><div class="para" id="p-207">The <dfn class="terminology">limit superior</dfn> of <span class="process-math">\((x_n)_{n=1}^{\infty}\)</span> is<span class="process-math">\(\limsup_{n\rightarrow\infty}x_n=\lim_{n\rightarrow\infty}(\sup_{k\geq n}x_k)=\inf_{n\geq 1}(\sup_{k\geq n}x_k)\)</span>
 </div></li>
-<li id="li-94"><div class="para" id="p-216">Similarly the <dfn class="terminology">limit inferior</dfn> of <span class="process-math">\((x_n)_{n=1}^{\infty}\)</span> is<span class="process-math">\(\liminf_{n\rightarrow\infty}x_n=\lim_{n\rightarrow\infty}(\inf_{k\geq n}x_k)=\sup_{n\geq 1}(\inf_{k\geq n}x_k)\)</span>
+<li id="li-94"><div class="para" id="p-208">Similarly the <dfn class="terminology">limit inferior</dfn> of <span class="process-math">\((x_n)_{n=1}^{\infty}\)</span> is<span class="process-math">\(\liminf_{n\rightarrow\infty}x_n=\lim_{n\rightarrow\infty}(\inf_{k\geq n}x_k)=\sup_{n\geq 1}(\inf_{k\geq n}x_k)\)</span>
 </div></li>
 </ul>
-</div></article><article class="exercise exercise-like" id="exercise-3"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-3"><h3 class="heading">
-<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.32</span><span class="period">.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-3"><article class="exercise exercise-like"><div class="para" id="p-217">
+</div></article><article class="exercise exercise-like" id="exercise-4"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-4"><h3 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.31</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-4"><article class="exercise exercise-like"><div class="para" id="p-209">
 <span class="process-math">\(\limsup_{n\rightarrow\infty}x_n\)</span> and <span class="process-math">\(\liminf_{n\rightarrow\infty}x_n\)</span> always exist (so long as we allow <span class="process-math">\(\pm\infty\)</span>)</div></article></div>
 <article class="theorem theorem-like" id="thm-lim-sup-characterization"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.33</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.32</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-218">
+<div class="para logical" id="p-210">
 <div class="para">For a sequence <span class="process-math">\((x_n)_{n=1}^{\infty}\subseteq\mathbb{R}\)</span> and <span class="process-math">\(C\in\mathbb{R}\)</span> the following are equivalent:</div>
 <ol class="decimal">
-<li id="li-95"><div class="para" id="p-219"><span class="process-math">\(\displaystyle \limsup_{n\rightarrow\infty}x_n&lt;C\)</span></div></li>
-<li id="li-96"><div class="para" id="p-220">
+<li id="li-95"><div class="para" id="p-211"><span class="process-math">\(\displaystyle \limsup_{n\rightarrow\infty}x_n&lt;C\)</span></div></li>
+<li id="li-96"><div class="para" id="p-212">
 <span class="process-math">\(\exists\)</span> integer <span class="process-math">\(N\geq 1\)</span> such that <span class="process-math">\(\forall\)</span> int <span class="process-math">\(n\geq N\text{,}\)</span> <span class="process-math">\(x_n&lt;C\text{.}\)</span>
 </div></li>
 </ol>
 </div></article><article class="theorem theorem-like" id="thm-lim-inf-sup-order"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.34</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.33</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-221">For any sequence <span class="process-math">\((x_n)_{n=1}^{\infty}\subseteq \mathbb{R}\text{,}\)</span> <span class="process-math">\(\liminf_{n\rightarrow\infty}x_n\leq \limsup_{n\rightarrow\infty}x_n\)</span> and <span class="process-math">\(\liminf_{n\rightarrow\infty}x_n= \limsup_{n\rightarrow\infty}x_n\)</span> iff <span class="process-math">\(\lim_{n\rightarrow\infty}x_n\)</span> exists and in this case <span class="process-math">\(\lim_{n\rightarrow\infty}x_n=\liminf_{n\rightarrow\infty}x_n= \limsup_{n\rightarrow\infty}x_n\text{.}\)</span>
-</div></article><article class="hiddenproof" id="proof-18"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-18"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-18"><article class="hiddenproof"><div class="para" id="p-222">For each integer <span class="process-math">\(n\geq 1\text{,}\)</span> <span class="process-math">\(\inf_{k\geq n}x_k\leq \sup_{k\geq n}x_k\text{.}\)</span> Now take limit as <span class="process-math">\(n\rightarrow\infty\text{.}\)</span> Now suppose <span class="process-math">\(x=\lim_{n\rightarrow\infty}x_n\)</span> exists. We'll assume <span class="process-math">\(x\in\mathbb{R}\)</span> (Exercise: modify the proof for <span class="process-math">\(x=\pm\infty\)</span>). We'll show <span class="process-math">\(\liminf_{n\rightarrow\infty}x_n\geq x-\varepsilon\)</span> and <span class="process-math">\(\limsup_{n\rightarrow\infty}x_n\leq x+\varepsilon\text{.}\)</span> Let <span class="process-math">\(N\in\mathbb{Z}_{\geq 1}\)</span> be st for all <span class="process-math">\(n\geq N, |x_n-x|&lt;\varepsilon\text{.}\)</span> This implies <span class="process-math">\(x-\varepsilon&lt;x_n&lt;x+\varepsilon\)</span> for all <span class="process-math">\(n\geq N\text{.}\)</span> Now, <span class="process-math">\(\inf_{n\geq N}x_n\geq x-\varepsilon\)</span> and <span class="process-math">\(\sup_{n\geq N}x_n\leq x+\varepsilon\text{.}\)</span> Therefore, <span class="process-math">\(\liminf_{n\rightarrow\infty}x_n=\sup_{m\geq 1}\inf_{n\geq m}x_n\geq \inf_{n\geq N}x_n\geq x-\varepsilon\text{.}\)</span> Similarly, <span class="process-math">\(\limsup_{n\rightarrow\infty}x_n\leq x+\varepsilon\)</span> since (1) and (2) had for all <span class="process-math">\(\varepsilon&gt;0, \liminf_{n\rightarrow\infty}x_n\geq_{(1)} x\geq_{(2)} \limsup_{n\rightarrow\infty}x_n\geq \liminf_{n\rightarrow\infty}x_n\text{.}\)</span> So <span class="process-math">\(x=\liminf_{n\rightarrow\infty}x_n=\limsup_{n\rightarrow\infty}x_n\text{.}\)</span> Conversely, suppose <span class="process-math">\(\liminf_{n\rightarrow\infty}x_n=\limsup_{n\rightarrow\infty}x_n:=x\text{.}\)</span> We'll assume again that <span class="process-math">\(x\in\mathbb{R}\text{.}\)</span> Fix <span class="process-math">\(\varepsilon&gt;0\text{.}\)</span> Since <span class="process-math">\(\limsup_{n\rightarrow\infty}x_n&lt;x+\varepsilon\)</span> and <span class="process-math">\(\liminf_{n\rightarrow\infty}x_n&gt;x-\varepsilon\text{,}\)</span> there is an <span class="process-math">\(N\in\mathbb{Z}, N\geq 1\)</span> such that for all <span class="process-math">\(n\geq N\text{,}\)</span> <span class="process-math">\(x_n&lt;x+\varepsilon\)</span> and <span class="process-math">\(x_n&gt;x-\varepsilon\text{.}\)</span> But this means <span class="process-math">\(|x-x_n|&lt;\varepsilon\)</span> for all <span class="process-math">\(n\geq N\text{,}\)</span> so <span class="process-math">\(\lim_{n\rightarrow\infty}x_n=x\text{.}\)</span>
+<div class="para" id="p-213">For any sequence <span class="process-math">\((x_n)_{n=1}^{\infty}\subseteq \mathbb{R}\text{,}\)</span> <span class="process-math">\(\liminf_{n\rightarrow\infty}x_n\leq \limsup_{n\rightarrow\infty}x_n\)</span> and <span class="process-math">\(\liminf_{n\rightarrow\infty}x_n= \limsup_{n\rightarrow\infty}x_n\)</span> iff <span class="process-math">\(\lim_{n\rightarrow\infty}x_n\)</span> exists and in this case <span class="process-math">\(\lim_{n\rightarrow\infty}x_n=\liminf_{n\rightarrow\infty}x_n= \limsup_{n\rightarrow\infty}x_n\text{.}\)</span>
+</div></article><article class="hiddenproof" id="proof-16"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-16"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-16"><article class="hiddenproof"><div class="para" id="p-214">For each integer <span class="process-math">\(n\geq 1\text{,}\)</span> <span class="process-math">\(\inf_{k\geq n}x_k\leq \sup_{k\geq n}x_k\text{.}\)</span> Now take limit as <span class="process-math">\(n\rightarrow\infty\text{.}\)</span> Now suppose <span class="process-math">\(x=\lim_{n\rightarrow\infty}x_n\)</span> exists. We'll assume <span class="process-math">\(x\in\mathbb{R}\)</span> (Exercise: modify the proof for <span class="process-math">\(x=\pm\infty\)</span>). We'll show <span class="process-math">\(\liminf_{n\rightarrow\infty}x_n\geq x-\varepsilon\)</span> and <span class="process-math">\(\limsup_{n\rightarrow\infty}x_n\leq x+\varepsilon\text{.}\)</span> Let <span class="process-math">\(N\in\mathbb{Z}_{\geq 1}\)</span> be st for all <span class="process-math">\(n\geq N, |x_n-x|&lt;\varepsilon\text{.}\)</span> This implies <span class="process-math">\(x-\varepsilon&lt;x_n&lt;x+\varepsilon\)</span> for all <span class="process-math">\(n\geq N\text{.}\)</span> Now, <span class="process-math">\(\inf_{n\geq N}x_n\geq x-\varepsilon\)</span> and <span class="process-math">\(\sup_{n\geq N}x_n\leq x+\varepsilon\text{.}\)</span> Therefore, <span class="process-math">\(\liminf_{n\rightarrow\infty}x_n=\sup_{m\geq 1}\inf_{n\geq m}x_n\geq \inf_{n\geq N}x_n\geq x-\varepsilon\text{.}\)</span> Similarly, <span class="process-math">\(\limsup_{n\rightarrow\infty}x_n\leq x+\varepsilon\)</span> since (1) and (2) had for all <span class="process-math">\(\varepsilon&gt;0, \liminf_{n\rightarrow\infty}x_n\geq_{(1)} x\geq_{(2)} \limsup_{n\rightarrow\infty}x_n\geq \liminf_{n\rightarrow\infty}x_n\text{.}\)</span> So <span class="process-math">\(x=\liminf_{n\rightarrow\infty}x_n=\limsup_{n\rightarrow\infty}x_n\text{.}\)</span> Conversely, suppose <span class="process-math">\(\liminf_{n\rightarrow\infty}x_n=\limsup_{n\rightarrow\infty}x_n:=x\text{.}\)</span> We'll assume again that <span class="process-math">\(x\in\mathbb{R}\text{.}\)</span> Fix <span class="process-math">\(\varepsilon&gt;0\text{.}\)</span> Since <span class="process-math">\(\limsup_{n\rightarrow\infty}x_n&lt;x+\varepsilon\)</span> and <span class="process-math">\(\liminf_{n\rightarrow\infty}x_n&gt;x-\varepsilon\text{,}\)</span> there is an <span class="process-math">\(N\in\mathbb{Z}, N\geq 1\)</span> such that for all <span class="process-math">\(n\geq N\text{,}\)</span> <span class="process-math">\(x_n&lt;x+\varepsilon\)</span> and <span class="process-math">\(x_n&gt;x-\varepsilon\text{.}\)</span> But this means <span class="process-math">\(|x-x_n|&lt;\varepsilon\)</span> for all <span class="process-math">\(n\geq N\text{,}\)</span> so <span class="process-math">\(\lim_{n\rightarrow\infty}x_n=x\text{.}\)</span>
 </div></article></div>
-<article class="remark remark-like" id="remark-6"><h3 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.35</span><span class="period">.</span>
+<article class="remark remark-like" id="remark-4"><h3 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.34</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-223">Often to show a sequence <span class="process-math">\((x_n)_{n=1}^{\infty}\)</span> converges to <span class="process-math">\(x\)</span> one shows <span class="process-math">\(\limsup_{n\rightarrow\infty}x_n\leq x\)</span> and <span class="process-math">\(\liminf_{n\rightarrow\infty}x_n\geq x\text{.}\)</span>
-</div></article></section></div>
+<div class="para" id="p-215">Often to show a sequence <span class="process-math">\((x_n)_{n=1}^{\infty}\)</span> converges to <span class="process-math">\(x\)</span> one shows <span class="process-math">\(\limsup_{n\rightarrow\infty}x_n\leq x\)</span> and <span class="process-math">\(\liminf_{n\rightarrow\infty}x_n\geq x\text{.}\)</span>
+</div></article><article class="corollary theorem-like" id="cor-lim-inf-sup-order"><h3 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">2.35</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-216">
+<div class="para">If <span class="process-math">\((x_n)_{n=1}^{\infty}\subseteq \mathbb{R}\)</span> is a sequence and <span class="process-math">\((x_{n_k})_{k=1}^{\infty}\subseteq \mathbb{R}\text{,}\)</span> then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\liminf_{n\rightarrow\infty}x_{n}\leq \liminf_{k\rightarrow\infty}x_{n_k}\leq \limsup_{k\rightarrow\infty}x_{n_k}\leq \limsup_{n\rightarrow\infty}x_{n}
+\end{equation*}
+</div>
+</div></article><article class="hiddenproof" id="proof-17"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-17"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-17"><article class="hiddenproof"><div class="para" id="p-217">Second inequality is known (what we ended weds with). We'll prove the first – the third is similar.Note that <span class="process-math">\(n_1\geq 1\)</span> and <span class="process-math">\(n_{k+1}&gt;n_k\text{,}\)</span> and so <span class="process-math">\(n_k\geq k\,\forall\, k\geq 1\text{.}\)</span> This implies that <span class="process-math">\(\forall\,k\geq 1\text{,}\)</span> <span class="process-math">\(\{m\in\mathbb{Z}\,|\,m\geq k\}\supseteq\{n_m\,|\,m\in\mathbb{Z},m\geq k\}\text{,}\)</span> and so <span class="process-math">\(\inf_{m\geq k}x_m\leq \inf_{m\geq k}x_{n_m}\)</span>Taking the limit as <span class="process-math">\(k\rightarrow\infty\text{,}\)</span> we have <span class="process-math">\(\lim_{k\rightarrow\infty}\inf_{m\geq k}x_m\leq \lim_{k\rightarrow\infty}\inf_{m\geq k}x_{n_m}\)</span> and <span class="process-math">\(\liminf_{k\rightarrow\infty}x_k\leq \liminf_{k\rightarrow\infty}x_{n_k}\text{.}\)</span>
+</div></article></div>
+<article class="theorem theorem-like" id="thm-seq-subseq-conv"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.36</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-218">
+<div class="para">If <span class="process-math">\((x_n)_{n=1}^{\infty}\subseteq \mathbb{R}\)</span> is a sequence, then <span class="process-math">\((x_n)_{n=1}^{\infty}\)</span> converges iff every subsequence of <span class="process-math">\((x_n)_{n=1}^{\infty}\)</span> converges. Moreover, in this case, for every subsequence <span class="process-math">\((x_{n_k})_{k=1}^{\infty}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim_{k\rightarrow\infty}x_{n_k}=\lim_{k\rightarrow\infty}x_n
+\end{equation*}
+</div>
+</div></article><article class="hiddenproof" id="proof-18"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-18"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-18"><article class="hiddenproof"><div class="para logical" id="p-219">
+<div class="para">(<span class="process-math">\(\impliedby\)</span>) is trivial. <span class="process-math">\((x_n)_{n=1}^{\infty}\)</span> is a subsequence of itself.(<span class="process-math">\(\implies\)</span>) and “moreover”: assume <span class="process-math">\((x_n)_{n=1}^{\infty}\)</span> converges and write <span class="process-math">\(x=\lim_{n\rightarrow\infty}x_n\text{.}\)</span> Let <span class="process-math">\((x_{n_k})_{k=1}^{\infty}\)</span> be a subsequence. We'll show <span class="process-math">\(\lim_{k\rightarrow\infty}x_{n_k}=x\text{.}\)</span>By the previous result,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x=\liminf_{n\rightarrow\infty}x_{n}\leq \liminf_{k\rightarrow\infty}x_{n_k}\leq \limsup_{k\rightarrow\infty}x_{n_k}\leq \limsup_{n\rightarrow\infty}x_{n}=x.
+\end{equation*}
+</div>
+<div class="para">So <span class="process-math">\(\liminf_{k\rightarrow\infty}x_{n_k}=\limsup_{k\rightarrow\infty}=x\)</span> and hence <span class="process-math">\(\lim_{k\rightarrow\infty}x_{n_k}=x\text{.}\)</span>
+</div>
+</div></article></div>
+<article class="corollary theorem-like" id="cor-seq-subseq-conv"><h3 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">2.37</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-220">The same result holds with <span class="process-math">\(\mathbb{C}\)</span> in place of <span class="process-math">\(\mathbb{R}\text{.}\)</span>
+</div></article><article class="hiddenproof" id="proof-19"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-19"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-19"><article class="hiddenproof"><div class="para" id="p-221">Indeed <span class="process-math">\((\impliedby)\)</span> still trivial. <span class="process-math">\((\implies)\)</span> Suppose <span class="process-math">\(x_n\rightarrow x\in\mathbb{C}\)</span> and <span class="process-math">\((x_{n_k})_{k=1}^{\infty}\subseteq \mathbb{C}\)</span> is a subsequence. We know <span class="process-math">\((\text{Re}(x_n))_{n=1}^{\infty}\subseteq \mathbb{R}\)</span> converges to <span class="process-math">\(\text{Re}(x)\text{,}\)</span> and so the subsequence <span class="process-math">\((\text{Re}(x_{n_k}))_{k=1}^{\infty}\subseteq \mathbb{R}\)</span> converges to <span class="process-math">\(\text{Re}(x)\text{.}\)</span> Similarly <span class="process-math">\((\text{Im}(x_{n_k})_{k=1}^{\infty}\)</span> converges to <span class="process-math">\(\text{Im}(x)\text{.}\)</span> Now <span class="process-math">\(x_{n_k}=\text{Re}(x_{n_k})+i\text{Im}(x_{n_k})\rightarrow\text{Re}(x)+i\text{Im}(x)=x\)</span>
+</div></article></div>
+<article class="lemma theorem-like" id="lem-bolzano"><h3 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">2.38</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-222">
+<div class="para">For every sequence <span class="process-math">\((x_n)_{n=1}^{\infty}\subseteq \mathbb{R}\)</span> there are subsequences <span class="process-math">\((x_{m_k})_{k=1}^{\infty}\)</span> and <span class="process-math">\((x_{n_k})_{k=1}^{\infty}\)</span> of <span class="process-math">\((x_{n})_{n=1}^{\infty}\)</span> so that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim_{k\rightarrow\infty}x_{m_k}=\liminf_{n\rightarrow\infty}x_n
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim_{k\rightarrow\infty}x_{n_k}=\limsup_{n\rightarrow\infty}x_n
+\end{equation*}
+</div>
+<div class="para">(these could be <span class="process-math">\(\pm\infty\)</span>).</div>
+</div></article><article class="hiddenproof" id="proof-20"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-20"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-20"><article class="hiddenproof"><div class="para" id="p-223">Suppose <span class="process-math">\(\limsup_{n\rightarrow\infty}x_n&gt;-\infty\text{.}\)</span> Fix a strictly increasing sequence <span class="process-math">\((C_k)_{k=1}^{\infty}\subseteq\mathbb{R}\)</span> with <span class="process-math">\(\sup_{k\geq 1}C_k=\limsup_{n\rightarrow\infty}x_n\)</span>(eg when <span class="process-math">\(\limsup_{n\rightarrow\infty}x_n&lt;\infty\text{,}\)</span> <span class="process-math">\(C_k=\limsup_{n\rightarrow\infty}x_n-\frac{1}{k}\)</span> and when <span class="process-math">\(\limsup_{n\rightarrow\infty}x_n=\infty, C_k=k\)</span>).Claim: There is a subsequence <span class="process-math">\((x_{n_k})_{k=1}^{\infty}\)</span> of <span class="process-math">\((x_n)_{n=1}^{\infty}\)</span> such that <span class="process-math">\(x_{n_k}&gt;C_k\)</span> for all <span class="process-math">\(k\geq 1\text{.}\)</span>Assume the claim for now (we'll come back to it). Then <span class="process-math">\(\liminf_{k\rightarrow\infty}x_{n_k}\geq \liminf_{k\rightarrow\infty}C_k=\limsup_{n\rightarrow\infty}x_n\geq \limsup_{k\rightarrow\infty}x_{n_k}\text{.}\)</span> So <span class="process-math">\(\lim_{k\rightarrow\infty}x_{n_k}=\limsup_{n\rightarrow\infty}x_n\)</span> as required.<dfn class="terminology">Proof of claim</dfn>: (constructed inductively) First note that <span class="process-math">\(\inf_{n\geq 1}\sup_{l\geq n}x_l=\limsup_{n\rightarrow\infty}x_n&gt;C_1\text{.}\)</span> We have <span class="process-math">\(\sup_{l\geq n}x_l&gt;C_1\)</span> for all <span class="process-math">\(n\geq 1\text{.}\)</span> In particular <span class="process-math">\(\sup_{l\geq 1}x_l&gt;C_1\text{.}\)</span> There is an <span class="process-math">\(n_1\geq 1\)</span> such that <span class="process-math">\(x_{n_1}&gt;C_1\text{.}\)</span>Assume now we've constructed <span class="process-math">\(n_1&lt;n_2&lt;\dots&lt;n_k\)</span> with <span class="process-math">\(x_{n_i} &gt; C_i\)</span> for all <span class="process-math">\(i=1,\dots,k\text{.}\)</span> Since <span class="process-math">\(\limsup_{n\rightarrow\infty}x_n&gt;C_{k+1}\text{,}\)</span> we have <span class="process-math">\(\sup_{n\geq l}x_n&gt;C_{k+1}\)</span> for all <span class="process-math">\(l\geq 1\text{.}\)</span> In particular, taking <span class="process-math">\(l=n_k+1\text{,}\)</span> <span class="process-math">\(\sup_{n\geq n_k+1}x_n&gt;C_{k+1}\text{.}\)</span> There is an <span class="process-math">\(n_{k+1}\geq n_k+1&gt;n_k\)</span> with <span class="process-math">\(x_{n_{k+1}}&gt;C_{k+1}\text{.}\)</span> This proves the claim.</div></article></div>
+<article class="example example-like" id="example-6"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.39</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-224">
+<span class="process-math">\(x_n=\begin{cases}
+\frac{1}{n} &amp; n\text{ odd}\\
+\frac{n+1}{n} &amp; n\text{ even}
+\end{cases}\)</span> has <span class="process-math">\(\limsup_{n\rightarrow\infty}x_n=1\text{,}\)</span> <span class="process-math">\(\liminf_{n\rightarrow\infty}x_n=0\)</span>
+</div></article><article class="theorem theorem-like" id="thm-balzano"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.40</span><span class="period">.</span><span class="space"> </span><span class="title">Bolzano-Weierstrass Theorem.</span>
+</h3>
+<div class="para" id="p-225">If <span class="process-math">\((x_n)_{n=1}^{\infty}\subseteq \mathbb{R}\text{,}\)</span> is bounded, then <span class="process-math">\(\limsup_{n\rightarrow\infty}x_n\in\mathbb{R}\text{.}\)</span> Now apply the previous result.Now if <span class="process-math">\((x_n)_{n=1}^{\infty}\subseteq\mathbb{C}\)</span> is bounded, then <span class="process-math">\((\text{Re}(x_n))_{n=1}^{\infty}\subseteq \mathbb{R}\)</span> is also bounded (as <span class="process-math">\(\left|{\text{Re}(z)}\right|\leq \left|{z}\right|\)</span> for all <span class="process-math">\(z\in\mathbb{C}\text{.}\)</span> So there is a subsequence <span class="process-math">\((x_{n_k})_{k=1}^{\infty}\)</span> of <span class="process-math">\((x_n)_{n=1}^{\infty}\)</span> such that <span class="process-math">\((\text{Re}(x_{n_k}))_{k=1}^{\infty}\)</span> converges. Note that <span class="process-math">\((x_{n_k})_{k=1}^{\infty}\subseteq\mathbb{C}\)</span> is bounded, and hence <span class="process-math">\((\Im(x_{n_k}))_{k=1}^{\infty}\subseteq\mathbb{R}\)</span> is bounded. So there is a subsequence <span class="process-math">\((x_{n_{k_l}})_{l=1}^{\infty}\)</span> of <span class="process-math">\((x_{n_k})_{k=1}^{\infty}\)</span> so that <span class="process-math">\((\Im(x_{n_{k_l}}))_{l=1}^{\infty}\)</span> converges. As <span class="process-math">\((\text{Re}(x_{n_{k_l}}))_{l=1}^{\infty}\)</span> of <span class="process-math">\((\text{Re}(x_{n_k}))_{k=1}^{\infty}\)</span> and the latter sequence converges, so does the former. But now <span class="process-math">\(x_{n_{k_l}}=\text{Re}(x_{n_{k_l}})+i\Im((x_{n_{k_l}}))\text{,}\)</span> so <span class="process-math">\((x_{n_{k_l}})_{l=1}^{\infty}\)</span> converges.</div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-subsequences.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sec-cauchy-complete.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

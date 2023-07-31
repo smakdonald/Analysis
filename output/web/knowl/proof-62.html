@@ -11,36 +11,28 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
-<div class="para">Let <span class="process-math">\(P=\{{a=x_0&lt;x_1&lt;\dots&lt;x_n=b}\}\in\mathcal{P}[a,b]\)</span> and let <span class="process-math">\(Q\)</span> be a refinement of <span class="process-math">\(P\text{.}\)</span> Then <span class="process-math">\(Q=\cap_{k=1}^n Q_k\text{,}\)</span> where <span class="process-math">\(Q_k\in\mathcal{P}[x_{k-1},x_k]\text{.}\)</span> In fact, <span class="process-math">\(Q_k=Q\cap[x_{k-1},x_k]\text{.}\)</span> Let <span class="process-math">\(Q_k=\{{x_{k-1}=y_0^{(k)}&lt;y_1^{(k)}&lt;\dots&lt;y_{m_k}^{(k)}=x_k}\}\text{.}\)</span>
+<article class="hiddenproof"><h4 class="heading"><span class="type">Proof</span></h4>
+<div class="para logical">
+<div class="para">(<span class="process-math">\(\impliedby\)</span>) Suppose <span class="process-math">\(\mathcal{S}\)</span> is given. We may assume <span class="process-math">\(\emptyset\notin \mathcal{S}\)</span> by replacing <span class="process-math">\(\mathcal{S}\)</span> with <span class="process-math">\(\mathcal{S}\setminus\{{\emptyset}\}\)</span> if needed. For each <span class="process-math">\(V\in \mathcal{S}\text{,}\)</span> let <span class="process-math">\(x_V\in V\text{,}\)</span> and let</div>
+<div class="displaymath process-math">
+\begin{equation*}
+S=\{{x_V}\,:\,{V\in \mathcal{S}}\}\subseteq X.
+\end{equation*}
+</div>
+<div class="para">The function <span class="process-math">\(\mathcal{S}\rightarrow S:V\mapsto x_V\)</span> is surjective, and <span class="process-math">\(\mathcal{S}\)</span> is countable, so <span class="process-math">\(S\)</span> is also countable. I claim that <span class="process-math">\(S\)</span> is also dense in <span class="process-math">\(X\text{.}\)</span> Suppose <span class="process-math">\(\overline{S}\neq X\text{.}\)</span> Fix <span class="process-math">\(x\in X\setminus\overline{S}\text{.}\)</span> Then by property of <span class="process-math">\(\mathcal{S},\)</span> taking <span class="process-math">\(U=X\setminus\overline{S}\text{,}\)</span> we can find <span class="process-math">\(V\in \mathcal{S}\)</span> with <span class="process-math">\(x\in V\subseteq X\setminus\overline{S}\text{.}\)</span> Then <span class="process-math">\(x_V\in S, x_V\in V,\)</span> and <span class="process-math">\(S\cap V=\emptyset\text{,}\)</span> a contradiction.</div>
 </div> <div class="para logical">
-<div class="para">For each <span class="process-math">\(k=1,\dots,n\)</span> and <span class="process-math">\(i=1,\dots,m_k\text{,}\)</span> we have <span class="process-math">\([y_{i-1}^{(k)},y_i^{(k)}]\subseteq [x_{k-1},x_k]\)</span> so</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\sup\{{f(t)}\,:\,{y_{i-1}^{(k)}\leq t\leq y_{i}^{(k)}}\}\leq \sup\{{f(t)}\,:\,{x_{k-1}\leq t\leq x_k}\}.
-\end{equation*}
-</div>
-<div class="para">That is,</div>
-<div class="displaymath process-math">
-\begin{equation*}
-M_i(f,Q_k)\leq M_k(f,P).
-\end{equation*}
-</div>
-<div class="para">Now,</div>
+<div class="para">(<span class="process-math">\(\implies\)</span>) Let <span class="process-math">\(S\subseteq X\)</span> be a countable set with <span class="process-math">\(\overline{S}=X\text{.}\)</span> Let <span class="process-math">\(\mathcal{S}=\{{B_\varepsilon(x)}\,:\,{x\in S,\varepsilon\in \mathbb{Q},\varepsilon&gt;0}\}.\)</span> Then there is a surjective function <span class="process-math">\(S\times\mathbb{Q}_{\geq 0}\rightarrow\mathcal{S}\)</span> by <span class="process-math">\((x,\varepsilon)\mapsto B_\varepsilon(x)\text{.}\)</span> Since <span class="process-math">\(S\)</span> and <span class="process-math">\(Q_{\geq 0}\)</span> are countable, <span class="process-math">\(\mathcal{S}\)</span> is also countable. Suppose now that <span class="process-math">\(x\in X,U\subseteq X\)</span> is open, and <span class="process-math">\(x\in U\text{.}\)</span> We need to find <span class="process-math">\(V\in\mathcal{S}\)</span> with <span class="process-math">\(x\in V\subseteq U\text{.}\)</span> Fix <span class="process-math">\(\varepsilon_0&gt;0\)</span> such that <span class="process-math">\(B_{\varepsilon_0}(x)\subseteq U\text{.}\)</span> Now let <span class="process-math">\(\varepsilon\in(0,\varepsilon_0]\cap \mathbb{Q}\)</span> Since <span class="process-math">\(\overline{S}=X\text{,}\)</span> we have <span class="process-math">\(x\in\overline{S}\text{.}\)</span> So exists <span class="process-math">\(y\in S\)</span> with <span class="process-math">\(d(x,y)&lt;\frac{\varepsilon}{2}\text{.}\)</span> Now</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \begin{aligned}
-u(f,Q)
-&amp;=\sum_{k=1}^n\sum_{i=1}^{m_k}M_i(f,Q_k)(y_i^{(k)}-y_{i-1}^{(k)}
-\leq \sum_{k=1}^n\sum_{i=1}^{m_k}M_k(f,P)(y_i^{(k)}-y_{i-1}^{(k)}\\
-&amp;=\sum_{k=1}^n M_k(f,P)(y_{m_k}^{(k)}-y_0^{(k)}
-=\sum_{k=1}^n M_k(f,P)(x_k-x_{k-1})
-=u(f,P).
+x\in B_{\frac{\varepsilon}{2}}(y)
+&amp;\subseteq B_{e}(x) \text{ (triangle inequality)}\\
+&amp;\subseteq U
 \end{aligned}
 \end{equation*}
 </div>
-<div class="para">Thus <span class="process-math">\(u(f,Q)\leq u(f,P)\text{.}\)</span>
+<div class="para">Then <span class="process-math">\(\frac{\varepsilon}{2}\in\mathbb{Q}\)</span> and <span class="process-math">\(y\in S\text{,}\)</span> so <span class="process-math">\(B_{\frac{\varepsilon}{2}}(y)\in\mathcal{S}\text{,}\)</span> set <span class="process-math">\(V=B_{\frac{\varepsilon}{2}}(y)\text{.}\)</span>
 </div>
-</div> <div class="para">Similarly, <span class="process-math">\(L(f,Q)\geq L(f,P)\)</span> (swap sups for infs), and it's clear that <span class="process-math">\(L(f,Q)\leq u(f,Q)\text{.}\)</span> ◻</div></article><span class="incontext"><a href="sec-riemann.html#proof-62" class="internal">in-context</a></span>
+</div></article><span class="incontext"><a href="sec-separability-completions.html#proof-62" class="internal">in-context</a></span>
 </body>
 </html>

@@ -12,7 +12,32 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">Let <span class="process-math">\(E\)</span> be a closed subset of <span class="process-math">\(X\)</span> and for <span class="process-math">\(x \in X\text{,}\)</span> define <span class="process-math">\(\operatorname{dist}(x, E)=\inf \{d(x, e): e \in E\}\text{.}\)</span> Show that if <span class="process-math">\(x \in X \backslash E\text{,}\)</span> then <span class="process-math">\(\operatorname{dist}(x, E)&gt;0\text{.}\)</span>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(X\)</span> be a metric space. A function <span class="process-math">\(f: X \rightarrow \mathbb{R}\)</span> is called lower semicontinuous if for every convergent sequence <span class="process-math">\(\left(x_{n}\right)_{n=1}^{\infty} \subseteq X\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f\left(\lim _{n \rightarrow \infty} x_{n}\right) \leq \liminf _{n \rightarrow \infty} f\left(x_{n}\right).
+\end{equation*}
+</div>
+<ol class="decimal">
+<li><div class="para logical">
+<div class="para">Let <span class="process-math">\(A \subseteq X\)</span> be a set and define</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\chi_{A}: X \rightarrow \mathbb{R}: x \mapsto \begin{cases}1 &amp; x \in A \\ 0 &amp; x \notin A.\end{cases}
+\end{equation*}
+</div>
+<div class="para">Show that <span class="process-math">\(\chi_{A}\)</span> is lower semicontinuous if and only if <span class="process-math">\(A\)</span> is open.</div>
+</div></li>
+<li><div class="para logical">
+<div class="para">Show that if <span class="process-math">\(X\)</span> is a compact metric space and <span class="process-math">\(f: X \rightarrow \mathbb{R}\)</span> is lower semicontinuous, then there is a <span class="process-math">\(c \in X\)</span> such that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(c)=\inf \{f(x): x \in X\}.
+\end{equation*}
+</div>
+</div></li>
+</ol>
 </div>
 <span class="incontext"><a href="appendix-1.html#p-804" class="internal">in-context</a></span>
 </body>

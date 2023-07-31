@@ -332,7 +332,15 @@ window.MathJax = {
 \newcommand{\fe}{{\mathfrak e}}
 \newcommand{\fm}{{\mathfrak m}} 
 \newcommand{\fp}{{\mathfrak p}} 
-\newcommand{\fq}{{\mathfrak q}} 
+\newcommand{\fq}{{\mathfrak q}}
+\newcommand{\fA}{{\mathfrak A}} 
+\newcommand{\fB}{{\mathfrak B}} 
+\newcommand{\fC}{{\mathfrak C}} 
+\newcommand{\fD}{{\mathfrak D}} 
+\newcommand{\fE}{{\mathfrak E}} 
+\newcommand{\fF}{{\mathfrak F}} 
+\newcommand{\fG}{{\mathfrak G}} 
+\newcommand{\fH}{{\mathfrak H}} 
 \newcommand{\fK}{{\mathfrak K}} 
 \newcommand{\fR}{{\mathfrak R}} 
 
@@ -517,7 +525,13 @@ window.MathJax = {
 <li>
 <div class="toc-item"><a href="ch-metric-spaces.html" class="internal"><span class="codenumber">4</span> <span class="title">Metric Spaces</span></a></div>
 <ul class="structural">
-<li class="active"><div class="toc-item"><a href="sec-topology-metric.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Topology and Metric Spaces</span></a></div></li>
+<li class="active">
+<div class="toc-item"><a href="sec-topology-metric.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Topology and Metric Spaces</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-topology-metric.html#subsec-inner" class="internal"><span class="title">Inner Products and Cauchy-Schwarz</span></a></div></li>
+<li><div class="toc-item"><a href="sec-topology-metric.html#subsec-matric" class="internal"><span class="title">Metric Spaces</span></a></div></li>
+</ul>
+</li>
 <li>
 <div class="toc-item"><a href="sec-open-closed.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Open and Closed Sets</span></a></div>
 <ul class="structural">
@@ -587,40 +601,155 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-topology-metric"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">4.1</span> <span class="title">Topology and Metric Spaces</span>
 </h2>
+<section class="subsection" id="subsec-inner"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Inner Products and Cauchy-Schwarz</span>
+</h3>
 <blockquote class="blockquote" id="blockquote-15">
-<div class="para" id="p-272">“Keep in mind, measurement is not just in numbers, but stories.”</div> <cite class="attribution">―Pearl Zhu</cite>
+<div class="para" id="p-274">“Keep in mind, measurement is not just in numbers, but stories.”</div> <cite class="attribution">―Pearl Zhu</cite>
 </blockquote>
-<article class="definition definition-like" id="def-cn-rn"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.1</span><span class="period">.</span>
-</h3>
-<div class="para" id="p-273">Set <span class="process-math">\(\mathbb{C}^n=\{\begin{bmatrix}x_1\\x^2\\ \vdots\\x_n\end{bmatrix}\,:\, x_i\in\mathbb{C}\}\)</span> and <span class="process-math">\(\mathbb{R}^n=\{\begin{bmatrix}x_1\\x^2\\ \vdots\\x_n\end{bmatrix}\,:\,x_i\in\mathbb{R}\}\)</span> (<span class="process-math">\(n\geq 1\)</span>)</div></article><article class="convention remark-like" id="convention-6"><h3 class="heading">
+<article class="definition definition-like" id="def-cn-rn"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.1</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(C^n\)</span> and <span class="process-math">\(R^n\)</span>.</span>
+</h4> <div class="para" id="p-275">Set <span class="process-math">\(\mathbb{C}^n=\left
+\{\begin{bmatrix}x_1 \\ x^2 \\ \vdots \\ x_n \end{bmatrix}\,:\, x_i\in\mathbb{C}\right\}\)</span> and <span class="process-math">\(\mathbb{R}^n=\left\{\begin{bmatrix}x_1\\x^2\\ \vdots\\x_n\end{bmatrix}\,:\,x_i\in\mathbb{R}\right\}\)</span> (<span class="process-math">\(n\geq 1\)</span>)</div></article><article class="convention remark-like" id="convention-7"><h4 class="heading">
 <span class="type">Convention</span><span class="space"> </span><span class="codenumber">4.2</span><span class="period">.</span>
+</h4>
+<div class="para" id="p-276">We'll often write <span class="process-math">\((x_1,\dots,x_n)\)</span> in place of <span class="process-math">\(\begin{bmatrix}x_1\\x^2\\ \vdots\\x_n\end{bmatrix}\)</span> and <span class="process-math">\(x\in\mathbb{C}^n\)</span> in place of <span class="process-math">\(\vec{x}\in\mathbb{C}^n\)</span>
+</div></article><article class="definition definition-like" id="def-c-inner-product"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.3</span><span class="period">.</span><span class="space"> </span><span class="title">Inner Product, Norm.</span>
+</h4> <div class="para" id="p-277">The <dfn class="terminology">inner product</dfn> on <span class="process-math">\(\mathbb{C}^n\)</span> is given by <span class="process-math">\(\langle{x,y}\rangle=\sum_{i=1}^nx_i\bar{y_i}\,\forall\,x,y\in\mathbb{C}^n\text{.}\)</span> Define the <dfn class="terminology">norm</dfn> on <span class="process-math">\(\mathbb{C}^n\)</span> by <span class="process-math">\(\left|{\left|{{x}}\right|}\right|=\langle{x,x}\rangle^{\frac{1}{2}}=(\sum_{i=1}^n\left|{x_i}\right|^2)^{\frac{1}{2}}\text{.}\)</span>
+</div></article><article class="convention remark-like" id="convention-8"><h4 class="heading">
+<span class="type">Convention</span><span class="space"> </span><span class="codenumber">4.4</span><span class="period">.</span>
+</h4>
+<div class="para" id="p-278">Sometimes people define <span class="process-math">\(\langle{x,y}\rangle=\sum_{i=1}^n\bar{x_i}y_i\text{.}\)</span> (especially physicists)</div></article><article class="theorem theorem-like" id="thm-inner-product-properties"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.5</span><span class="period">.</span><span class="space"> </span><span class="title">Properties of Inner Products.</span>
+</h4>
+<div class="para logical" id="p-279">
+<div class="para"><span class="process-math">\(\forall\,x,y,z\in\mathbb{C}^n,a,b\in\mathbb{C}\)</span></div>
+<ul class="disc">
+<li id="li-104"><div class="para" id="p-280">
+<dfn class="terminology">Positive definite</dfn>: <span class="process-math">\(\langle{x,x}\rangle\geq 0\)</span> and (<span class="process-math">\(\langle{x,x}\rangle=0\iff x=0\)</span>).</div></li>
+<li id="li-105"><div class="para" id="p-281">
+<dfn class="terminology">Conjugate symmetric</dfn>: <span class="process-math">\(\langle{x,y}\rangle=\overline{\langle{y,x}\rangle}\)</span>
+</div></li>
+<li id="li-106"><div class="para logical" id="p-282">
+<div class="para">
+<dfn class="terminology">Sesquilinearity</dfn>:</div>
+<ul class="circle">
+<li id="li-107"><div class="para" id="p-283"><span class="process-math">\(\displaystyle \langle{ax+by,z}\rangle=a\langle{x,z}\rangle+b\langle{y,z}\rangle\)</span></div></li>
+<li id="li-108"><div class="para" id="p-284"><span class="process-math">\(\displaystyle \langle{x,ay+bz}\rangle=\bar{a}\langle{x,y}\rangle+\bar{b}\langle{x,z}\rangle\)</span></div></li>
+</ul>
+</div></li>
+</ul>
+</div></article><article class="remark remark-like" id="remark-6"><h4 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">4.6</span><span class="period">.</span>
+</h4>
+<div class="para" id="p-285">Sesquilinearity means “1 and a half linear.” In real case it's bilinear.</div></article><article class="theorem theorem-like" id="thm-norm-properties"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.7</span><span class="period">.</span><span class="space"> </span><span class="title">Properties of Norms.</span>
+</h4>
+<div class="para logical" id="p-286">
+<div class="para"><span class="process-math">\(\forall\,x,y\in\mathbb{C}^n,a\in\mathbb{C}\)</span></div>
+<ul class="disc">
+<li id="li-109"><div class="para" id="p-287">
+<dfn class="terminology">Positive definite</dfn> <span class="process-math">\(\left|{\left|{{x}}\right|}\right|\geq 0\)</span> and (<span class="process-math">\(\left|{\left|{{x}}\right|}\right|=0\iff x=0\)</span>).</div></li>
+<li id="li-110"><div class="para" id="p-288">
+<dfn class="terminology">Homogeneous</dfn>: <span class="process-math">\(\left|{\left|{{ax}}\right|}\right|=\left|{a}\right|\left|{\left|{{x}}\right|}\right|\)</span>
+</div></li>
+<li id="li-111"><div class="para" id="p-289">
+<dfn class="terminology">Triangle inequality</dfn> <span class="process-math">\(\left|{\left|{{x+y}}\right|}\right|\leq \left|{\left|{{x}}\right|}\right|+\left|{\left|{{y}}\right|}\right|\text{.}\)</span> draw triangle w/ x and y as vectors/sides, vector going to <span class="process-math">\(x+y\)</span> is leq the other two added together</div></li>
+</ul>
+</div></article><article class="lemma theorem-like" id="lem-cauchy"><h4 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">4.8</span><span class="period">.</span>
+</h4>
+<div class="para" id="p-290">For <span class="process-math">\(a,b\in\mathbb{R}, ab\leq \frac{1}{2}(a^2+b^2)\)</span>
+</div></article><article class="hiddenproof" id="proof-32"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-32"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-32"><article class="hiddenproof"><div class="para" id="p-291"><span class="process-math">\((a-b)^2\geq 0\rightarrow a^2-2ab+b^2\geq 0\rightarrow ab\leq \frac{1}{2}(a^2+b^2)\)</span></div></article></div>
+<article class="theorem theorem-like" id="thm-cauchy-schwarz"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.9</span><span class="period">.</span><span class="space"> </span><span class="title">Cauchy-Schwarz Inequality.</span>
+</h4>
+<div class="para" id="p-292">For <span class="process-math">\(x,y\in\mathbb{C}^n,\left|{\langle{x,y}\rangle}\right|\leq \left|{\left|{{x}}\right|}\right|\cdot\left|{\left|{{y}}\right|}\right|\)</span>
+</div></article><article class="hiddenproof" id="proof-33"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-33"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-33"><article class="hiddenproof"><div class="para logical" id="p-293">
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+\left|{\langle{x,y}\rangle}\right|
+&amp;=\left|{\sum_{i=1}^nx_i\bar{y_i}}\right|\\
+&amp;\leq \sum_{i=1}^n\left|{x_i}\right|\cdot{\left|{y_i}\right|}\\
+&amp;\leq \sum_{i=1}^n\frac{1}{2}(\left|{x_i}\right|^2+\left|{y_i}\right|^2)\\
+&amp;=\frac{1}{2}(\left|{\left|{{x}}\right|}\right|^2+\left|{\left|{{y}}\right|}\right|^2)
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">If <span class="process-math">\(x,y\neq 0\)</span> then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\left|{\langle{\frac{x}{\left|{\left|{{x}}\right|}\right|},\frac{y}{\left|{\left|{{y}}\right|}\right|}}\rangle}\right|\leq \frac{1}{2}(\left|{\left|{{\frac{x}{\left|{\left|{{x}}\right|}\right|}}}\right|}\right|^2+\left|{\left|{{\frac{y}{\left|{\left|{{y}}\right|}\right|}}}\right|}\right|^2=\frac{1}{2}(1^2+1^2)=1.
+\end{equation*}
+</div>
+<div class="para">Multiply by <span class="process-math">\(\left|{\left|{{x}}\right|}\right|\left|{\left|{{y}}\right|}\right|\)</span> to get <span class="process-math">\(\left|{\langle{x,y}\rangle}\right|\leq \left|{\left|{{x}}\right|}\right|\cdot\left|{\left|{{y}}\right|}\right|\text{.}\)</span>
+</div>
+</div> <div class="para" id="p-294">If <span class="process-math">\(x=0\)</span> or <span class="process-math">\(y=0\)</span> then <span class="process-math">\(\left|{\langle{x,y}\rangle}\right|=0=\left|{\left|{{x}}\right|}\right|\cdot\left|{\left|{{y}}\right|}\right|\)</span>
+</div></article></div>
+<article class="lemma theorem-like" id="lem-triangle"><h4 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">4.10</span><span class="period">.</span>
+</h4>
+<div class="para" id="p-295"><span class="process-math">\(\left|{\left|{{x+y}}\right|}\right|^2=\left|{\left|{{x}}\right|}\right|^2+\left|{\left|{{y}}\right|}\right|^2+2\text{Re}(\langle{x,y}\rangle)\)</span></div></article><article class="hiddenproof" id="proof-34"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-34"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-34"><article class="hiddenproof"><div class="para logical" id="p-296"><div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+\left|{\left|{{x+y}}\right|}\right|^2
+&amp;=\langle{x+y,x+y}\rangle\\
+&amp;=\langle{x,x}\rangle+\langle{x,y}\rangle+\langle{y,x}\rangle+\langle{y,y}\rangle\\
+&amp;=\left|{\left|{{x}}\right|}\right|^2+\langle{x,y}\rangle+\overline{\langle{x,y}\rangle}+\left|{\left|{{y}}\right|}\right|^2\\
+&amp;=\left|{\left|{{x}}\right|}\right|^2+2\text{Re}(\langle{x,y}\rangle)+\left|{\left|{{y}}\right|}\right|^2
+\end{aligned}
+\end{equation*}
+</div></div></article></div>
+<article class="theorem theorem-like" id="thm-triangle"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.11</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="p-297">
+<div class="para">If <span class="process-math">\(x,y\in\mathbb{C}^n\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+\left|{\left|{{x+y}}\right|}\right|^2
+&amp;=\left|{\left|{{x}}\right|}\right|^2+2\text{Re}(\langle{x,y}\rangle)+\left|{\left|{{y}}\right|}\right|^2\\
+&amp;\leq \left|{\left|{{x}}\right|}\right|^2+2\left|{\langle{x,y}\rangle}\right|+\left|{\left|{{y}}\right|}\right|^2\\
+&amp;\leq \left|{\left|{{x}}\right|}\right|^2+2\left|{\left|{{x}}\right|}\right|\left|{\left|{{y}}\right|}\right|+\left|{\left|{{y}}\right|}\right|^2\\
+&amp;=(\left|{\left|{{x}}\right|}\right|+\left|{\left|{{y}}\right|}\right|)^2
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">Square roots preserve inequalities so <span class="process-math">\(\left|{\left|{{x+y}}\right|}\right|\leq \left|{\left|{{x}}\right|}\right|+\left|{\left|{{y}}\right|}\right|\)</span>
+</div>
+</div></article></section><section class="subsection" id="subsec-matric"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Metric Spaces</span>
 </h3>
-<div class="para" id="p-274">We'll often write <span class="process-math">\((x_1,\dots,x_n)\)</span> in place of <span class="process-math">\(\begin{bmatrix}x_1\\x^2\\ \vdots\\x_n\end{bmatrix}\)</span> and <span class="process-math">\(x\in\mathbb{C}^n\)</span> in place of <span class="process-math">\(\vec{x}\in\mathbb{C}^n\)</span>
-</div></article><article class="definition definition-like" id="def-metric"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.3</span><span class="period">.</span>
-</h3>
-<div class="para logical" id="p-275">
+<div class="para" id="p-298">We can use the norm to define a notion of distance: the distance from <span class="process-math">\(x\)</span> to <span class="process-math">\(y\)</span> is <span class="process-math">\(\left|{\left|{{x-y}}\right|}\right|\text{.}\)</span>
+</div>
+<article class="definition definition-like" id="def-metric"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.12</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="p-299">
 <div class="para">Let <span class="process-math">\(X\)</span> be a set. A <dfn class="terminology">metric</dfn> on <span class="process-math">\(X\)</span> is a function <span class="process-math">\(d:X\times X\rightarrow\mathbb{R}_+\)</span> such that <span class="process-math">\(\forall\,x,y,z\in X\)</span>
 </div>
 <ol class="decimal">
-<li id="li-104">
-<span class="heading"><span class="title">Positive Definite.</span></span><div class="para" id="p-276"><span class="process-math">\(\displaystyle d(x,y)=0\iff x=y\)</span></div>
+<li id="li-112">
+<span class="heading"><span class="title">Positive Definite.</span></span><div class="para" id="p-300"><span class="process-math">\(\displaystyle d(x,y)=0\iff x=y\)</span></div>
 </li>
-<li id="li-105">
-<span class="heading"><span class="title">Symmetric.</span></span><div class="para" id="p-277"><span class="process-math">\(\displaystyle d(x,y)=d(y,x)\)</span></div>
+<li id="li-113">
+<span class="heading"><span class="title">Symmetric.</span></span><div class="para" id="p-301"><span class="process-math">\(\displaystyle d(x,y)=d(y,x)\)</span></div>
 </li>
-<li id="li-106">
-<span class="heading"><span class="title">Triangle Inequality.</span></span><div class="para" id="p-278"><span class="process-math">\(\displaystyle d(x,z)\leq d(x,y)+d(y,z)\)</span></div>
+<li id="li-114">
+<span class="heading"><span class="title">Triangle Inequality.</span></span><div class="para" id="p-302"><span class="process-math">\(\displaystyle d(x,z)\leq d(x,y)+d(y,z)\)</span></div>
 </li>
 </ol>
-</div> <div class="para" id="p-279">A <dfn class="terminology">metric space</dfn> is a pair <span class="process-math">\((X,d)\)</span> where <span class="process-math">\(X\)</span> is a set and <span class="process-math">\(d\)</span> is a metric on <span class="process-math">\(X\text{.}\)</span> We'll typically write <span class="process-math">\(X\)</span> for a metric space where the metric is understood.</div></article><article class="example example-like" id="example-8"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.4</span><span class="period">.</span><span class="space"> </span><span class="title">Euclidean Metric.</span>
-</h3>
-<div class="para" id="p-280">The pair (R, d) is a metric space, where d is defined by d(x, y) = x − y. The metric d is called the usual (or absolute value or Euclidean) metric for R. The space R is understood to have the usual metric unless otherwise specified.</div></article><article class="example example-like" id="example-9"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.5</span><span class="period">.</span><span class="space"> </span><span class="title">Discrete Metric.</span>
-</h3>
-<div class="para logical" id="p-281">
+</div> <div class="para" id="p-303">A <dfn class="terminology">metric space</dfn> is a pair <span class="process-math">\((X,d)\)</span> where <span class="process-math">\(X\)</span> is a set and <span class="process-math">\(d\)</span> is a metric on <span class="process-math">\(X\text{.}\)</span> We'll typically write <span class="process-math">\(X\)</span> for a metric space where the metric is understood.</div></article><article class="example example-like" id="example-10"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.13</span><span class="period">.</span><span class="space"> </span><span class="title">Euclidean Metric.</span>
+</h4>
+<div class="para" id="p-304">The pair (R, d) is a metric space, where d is defined by d(x, y) = x − y. The metric d is called the usual (or absolute value or Euclidean) metric for R. The space R is understood to have the usual metric unless otherwise specified.</div></article><article class="example example-like" id="example-11"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.14</span><span class="period">.</span><span class="space"> </span><span class="title">Discrete Metric.</span>
+</h4>
+<div class="para logical" id="p-305">
 <div class="para">For a set <span class="process-math">\(X\text{,}\)</span> <dfn class="terminology">the discrete metric</dfn> on <span class="process-math">\(X\)</span> is <span class="process-math">\(d{X\times X}\rightarrow\mathbb{R}_+\text{.}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -633,10 +762,10 @@ d(x,y)=\begin{cases}
 \end{aligned}
 \end{equation*}
 </div>
-</div></article><article class="theorem theorem-like" id="thm-metric-subsets"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.6</span><span class="period">.</span>
-</h3>
-<div class="para" id="p-282">Subsets of metric spaces are metric spaces: If (X,d) is a metric space and Y\subseteq X then (Y,d\mid_{Y\times Y}) is a metric space.</div></article></section></div>
+</div></article><article class="theorem theorem-like" id="thm-metric-subsets"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.15</span><span class="period">.</span>
+</h4>
+<div class="para" id="p-306">Subsets of metric spaces are metric spaces: If (X,d) is a metric space and Y\subseteq X then (Y,d\mid_{Y\times Y}) is a metric space.</div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="ch-metric-spaces.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sec-open-closed.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

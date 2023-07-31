@@ -12,8 +12,47 @@
 </head>
 <body class="ignore-math">
 <article class="li"><h4 class="heading">
-<span class="type">Item</span><span class="space"> </span><span class="codenumber">2.b</span><span class="period">.</span>
+<span class="type">Item</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span>
 </h4>
-<div class="para"><span class="process-math">\(\displaystyle \left|{\left|{{\alpha f}}\right|}\right|_\infty=\left|{\alpha}\right|\left|{\left|{{f}}\right|}\right|_\infty\)</span></div></article><span class="incontext"><a href="sec-pointwise-uniform.html#li-178" class="internal">in-context</a></span>
+<div class="para logical">
+<div class="para">For <span class="process-math">\(x\in S\setminus\{{a}\}\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+\frac{(fg)(x)-(fg)(a)}{x-a}
+=\frac{f(x)g(x)-f(a)g(a)}{x-a}
+=\left({\frac{f(x)-f(a)}{x-a}}\right)g(x)+f(a)\left({\frac{g(x)-g(a)}{x-a}}\right)
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">Know</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+\lim_{x\rightarrow a}\frac{f(x)-f(a)}{x-a}
+&amp;=f'(a);\\
+\lim_{x\rightarrow a}\frac{g(x)-g(a)}{x-a}
+&amp;=g'(a)
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">and since <span class="process-math">\(g\)</span> is continuous at <span class="process-math">\(a\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim_{x\rightarrow a}g(x)=g(a).
+\end{equation*}
+</div>
+<div class="para">Therefore</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+\lim_{x\rightarrow a}\frac{(fg)(x)-(fg)(a)}{x-a}
+=f'(a)g(a)+f(a)g'(a).
+\end{aligned}
+\end{equation*}
+</div>
+</div></article><span class="incontext"><a href="sec-derivative.html#li-178" class="internal">in-context</a></span>
 </body>
 </html>

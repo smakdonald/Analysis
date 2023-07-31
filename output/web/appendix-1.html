@@ -332,7 +332,15 @@ window.MathJax = {
 \newcommand{\fe}{{\mathfrak e}}
 \newcommand{\fm}{{\mathfrak m}} 
 \newcommand{\fp}{{\mathfrak p}} 
-\newcommand{\fq}{{\mathfrak q}} 
+\newcommand{\fq}{{\mathfrak q}}
+\newcommand{\fA}{{\mathfrak A}} 
+\newcommand{\fB}{{\mathfrak B}} 
+\newcommand{\fC}{{\mathfrak C}} 
+\newcommand{\fD}{{\mathfrak D}} 
+\newcommand{\fE}{{\mathfrak E}} 
+\newcommand{\fF}{{\mathfrak F}} 
+\newcommand{\fG}{{\mathfrak G}} 
+\newcommand{\fH}{{\mathfrak H}} 
 \newcommand{\fK}{{\mathfrak K}} 
 \newcommand{\fR}{{\mathfrak R}} 
 
@@ -517,7 +525,13 @@ window.MathJax = {
 <li>
 <div class="toc-item"><a href="ch-metric-spaces.html" class="internal"><span class="codenumber">4</span> <span class="title">Metric Spaces</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-topology-metric.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Topology and Metric Spaces</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-topology-metric.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Topology and Metric Spaces</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-topology-metric.html#subsec-inner" class="internal"><span class="title">Inner Products and Cauchy-Schwarz</span></a></div></li>
+<li><div class="toc-item"><a href="sec-topology-metric.html#subsec-matric" class="internal"><span class="title">Metric Spaces</span></a></div></li>
+</ul>
+</li>
 <li>
 <div class="toc-item"><a href="sec-open-closed.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Open and Closed Sets</span></a></div>
 <ul class="structural">
@@ -588,10 +602,9 @@ window.MathJax = {
 <section class="appendix" id="appendix-1"><h2 class="heading">
 <span class="type">Appendix</span> <span class="codenumber">A</span> <span class="title">Qualifying Exams</span>
 </h2>
-<section class="paragraphs" id="paragraphs-2"><h1 class="heading"><span class="title">Winter 2023.</span></h1> <article class="problem example-like" id="problem-1"><h2 class="heading">
+<section class="paragraphs" id="paragraphs-2"><h1 class="heading"><span class="title">Winter 2023.</span></h1> <article class="exploration project-like" id="exploration-1"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-1"><h2 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.1</span><span class="period">.</span>
-</h2>
-<div class="para logical" id="p-712">
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-1"><article class="exploration project-like"><div class="para logical" id="p-746">
 <div class="para">Suppose that <span class="process-math">\(f: \mathbb{R} \rightarrow \mathbb{R}\)</span> is differentiable at <span class="process-math">\(x_{0} \in \mathbb{R}\text{.}\)</span> Let <span class="process-math">\(\left\{a_{n}\right\}_{n=1}^{\infty} \subseteq\left(-\infty, x_{0}\right)\)</span> and <span class="process-math">\(\left\{b_{n}\right\}_{n=1}^{\infty} \subseteq\left(x_{0}, \infty\right)\)</span> be sequences that both converge to <span class="process-math">\(x_{0}\text{.}\)</span> Prove that</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -601,34 +614,31 @@ window.MathJax = {
 <div class="para">(You may assume that <span class="process-math">\(x_{0}=0\)</span> ).</div>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-18" id="solution-18"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-18"><div class="solution solution-like"><div class="para" id="p-713">Coming (not so) soon!</div></div></div>
-</div></article> <article class="problem example-like" id="problem-2"><h2 class="heading">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-20" id="solution-20"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-20"><div class="solution solution-like"><div class="para" id="p-747">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-2"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-2"><h2 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.2</span><span class="period">.</span>
-</h2>
-<div class="para logical" id="p-714">
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-2"><article class="exploration project-like"><div class="para logical" id="p-748">
 <div class="para">Let <span class="process-math">\(\left\{a_{n}\right\}_{n=1}^{\infty},\left\{b_{n}\right\}_{n=1}^{\infty} \subset(0, \infty)\)</span> be given.</div>
 <ol class="decimal">
-<li id="li-199"><div class="para" id="p-715">Assume that <span class="process-math">\(\limsup _{n \rightarrow \infty}\left(a_{n} / b_{n}\right)&lt;\infty\text{.}\)</span> Prove there exists <span class="process-math">\(M \in \mathbb{R}\)</span> such that <span class="process-math">\(a_{n} \leq M b_{n}\text{,}\)</span> for all <span class="process-math">\(n \in \mathbb{N}\text{.}\)</span>
+<li id="li-210"><div class="para" id="p-749">Assume that <span class="process-math">\(\limsup _{n \rightarrow \infty}\left(a_{n} / b_{n}\right)&lt;\infty\text{.}\)</span> Prove there exists <span class="process-math">\(M \in \mathbb{R}\)</span> such that <span class="process-math">\(a_{n} \leq M b_{n}\text{,}\)</span> for all <span class="process-math">\(n \in \mathbb{N}\text{.}\)</span>
 </div></li>
-<li id="li-200"><div class="para" id="p-716">Suppose the sequence <span class="process-math">\(\left\{\frac{a_{n}}{b_{n}}\right\}_{n=1}^{\infty}\)</span> converges in <span class="process-math">\(\mathbb{R}\text{.}\)</span> Must <span class="process-math">\(\limsup _{n \rightarrow \infty}\left(a_{n} / b_{n}\right)\)</span> be finite?</div></li>
+<li id="li-211"><div class="para" id="p-750">Suppose the sequence <span class="process-math">\(\left\{\frac{a_{n}}{b_{n}}\right\}_{n=1}^{\infty}\)</span> converges in <span class="process-math">\(\mathbb{R}\text{.}\)</span> Must <span class="process-math">\(\limsup _{n \rightarrow \infty}\left(a_{n} / b_{n}\right)\)</span> be finite?</div></li>
 </ol>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-19" id="solution-19"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-19"><div class="solution solution-like"><div class="para" id="p-717">Coming (not so) soon!</div></div></div>
-</div></article> <article class="problem example-like" id="problem-3"><h2 class="heading">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-21" id="solution-21"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-21"><div class="solution solution-like"><div class="para" id="p-751">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-3"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-3"><h2 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.3</span><span class="period">.</span>
-</h2>
-<div class="para logical" id="p-718"><ol class="decimal">
-<li id="li-201"><div class="para" id="p-719">Suppose that <span class="process-math">\(\left\{f_{n}\right\}_{n=1}^{\infty}\)</span> is a Cauchy sequence from <span class="process-math">\(\left(\mathcal{C}([0,1]), \rho_{\infty}\right)\text{.}\)</span> Determine whether <span class="process-math">\(\left\{f_{n}\right\}_{n=1}^{\infty}\)</span> must be uniformly equicontinuous.</div></li>
-<li id="li-202"><div class="para" id="p-720">Suppose that <span class="process-math">\(\mathcal{F} \subseteq\left(\mathcal{C}([0,1]), \rho_{\infty}\right)\)</span> is closed and bounded but not uniformly equicontinuous. Prove that <span class="process-math">\(\mathcal{F}\)</span> is not compact in <span class="process-math">\(\left(\mathcal{C}([0,1]), \rho_{\infty}\right)\text{.}\)</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-3"><article class="exploration project-like"><div class="para logical" id="p-752"><ol class="decimal">
+<li id="li-212"><div class="para" id="p-753">Suppose that <span class="process-math">\(\left\{f_{n}\right\}_{n=1}^{\infty}\)</span> is a Cauchy sequence from <span class="process-math">\(\left(\mathcal{C}([0,1]), \rho_{\infty}\right)\text{.}\)</span> Determine whether <span class="process-math">\(\left\{f_{n}\right\}_{n=1}^{\infty}\)</span> must be uniformly equicontinuous.</div></li>
+<li id="li-213"><div class="para" id="p-754">Suppose that <span class="process-math">\(\mathcal{F} \subseteq\left(\mathcal{C}([0,1]), \rho_{\infty}\right)\)</span> is closed and bounded but not uniformly equicontinuous. Prove that <span class="process-math">\(\mathcal{F}\)</span> is not compact in <span class="process-math">\(\left(\mathcal{C}([0,1]), \rho_{\infty}\right)\text{.}\)</span>
 </div></li>
 </ol></div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-20" id="solution-20"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-20"><div class="solution solution-like"><div class="para" id="p-721">Coming (not so) soon!</div></div></div>
-</div></article> <article class="problem example-like" id="problem-4"><h2 class="heading">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-22" id="solution-22"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-22"><div class="solution solution-like"><div class="para" id="p-755">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-4"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-4"><h2 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.4</span><span class="period">.</span>
-</h2>
-<div class="para logical" id="p-722">
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-4"><article class="exploration project-like"><div class="para logical" id="p-756">
 <div class="para">Use the Riemann condition to show that <span class="process-math">\(f \in \mathcal{R}_{\alpha}[0,2]\)</span> where <span class="process-math">\(f(x)=\tan (\pi x / 4)\)</span> and</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -642,11 +652,10 @@ x+1, \quad 0 \leq x \leq 1 \\
 </div>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-21" id="solution-21"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-21"><div class="solution solution-like"><div class="para" id="p-723">Coming (not so) soon!</div></div></div>
-</div></article> <article class="problem example-like" id="problem-5"><h2 class="heading">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-23" id="solution-23"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-23"><div class="solution solution-like"><div class="para" id="p-757">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-5"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-5"><h2 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.5</span><span class="period">.</span>
-</h2>
-<div class="para logical" id="p-724">
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-5"><article class="exploration project-like"><div class="para logical" id="p-758">
 <div class="para">Determine all the values of <span class="process-math">\(x \in \mathbb{R}\)</span> for which the series below converges</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -655,11 +664,10 @@ x+1, \quad 0 \leq x \leq 1 \\
 </div>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-22" id="solution-22"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-22"><div class="solution solution-like"><div class="para" id="p-725">Coming (not so) soon!</div></div></div>
-</div></article> <article class="problem example-like" id="problem-6"><h2 class="heading">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-24" id="solution-24"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-24"><div class="solution solution-like"><div class="para" id="p-759">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-6"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-6"><h2 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.6</span><span class="period">.</span>
-</h2>
-<div class="para logical" id="p-726">
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-6"><article class="exploration project-like"><div class="para logical" id="p-760">
 <div class="para">Let <span class="process-math">\((M, d)\)</span> be a metric space. Define the functions <span class="process-math">\(d^{\prime}, d^{\prime \prime}: M \times M \rightarrow[0, \infty)\)</span> by</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -667,26 +675,24 @@ d^{\prime}(x, y)=\frac{d(x, y)}{1+d(x, y)}, \quad \text { and } \quad d^{\prime 
 \end{equation*}
 </div>
 <ol class="decimal">
-<li id="li-203"><div class="para" id="p-727">Show that <span class="process-math">\(d^{\prime}, d^{\prime \prime}\)</span> are both metrics.</div></li>
-<li id="li-204"><div class="para" id="p-728">Show that <span class="process-math">\(d, d^{\prime}, d^{\prime \prime}\)</span> are equivalent metrics on the space <span class="process-math">\(M\text{.}\)</span>
+<li id="li-214"><div class="para" id="p-761">Show that <span class="process-math">\(d^{\prime}, d^{\prime \prime}\)</span> are both metrics.</div></li>
+<li id="li-215"><div class="para" id="p-762">Show that <span class="process-math">\(d, d^{\prime}, d^{\prime \prime}\)</span> are equivalent metrics on the space <span class="process-math">\(M\text{.}\)</span>
 </div></li>
 </ol>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-23" id="solution-23"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-23"><div class="solution solution-like"><div class="para" id="p-729">Coming (not so) soon!</div></div></div>
-</div></article></section><section class="paragraphs" id="paragraphs-3"><h1 class="heading"><span class="title">Spring 2022.</span></h1> <article class="problem example-like" id="problem-7"><h2 class="heading">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-25" id="solution-25"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-25"><div class="solution solution-like"><div class="para" id="p-763">Coming (not so) soon!</div></div></div>
+</div></article></div></section><section class="paragraphs" id="paragraphs-3"><h1 class="heading"><span class="title">Spring 2022.</span></h1> <article class="exploration project-like" id="exploration-7"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-7"><h2 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.7</span><span class="period">.</span>
-</h2>
-<div class="para logical" id="p-730"><ol class="decimal">
-<li id="li-205"><div class="para" id="p-731">Let <span class="process-math">\(f_{n}(x)=n x(1-x)^{n}\)</span> for <span class="process-math">\(x \in[0,1]\text{.}\)</span> Prove that <span class="process-math">\(\left\{f_{n}\right\}\)</span> converges pointwise and determine if it converges uniformly on <span class="process-math">\([0,1]\text{.}\)</span> Is <span class="process-math">\(\left\{f_{n}\right\}\)</span> equicontinuous? Clearly motivate your answer.</div></li>
-<li id="li-206"><div class="para" id="p-732">Prove that in general, if <span class="process-math">\(\left\{f_{n}\right\}_{n \geq 1}\)</span> is an equicontinuous sequence of functions on a compact interval and <span class="process-math">\(f_{n} \rightarrow f\)</span> pointwise, then the convergence is uniform.</div></li>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-7"><article class="exploration project-like"><div class="para logical" id="p-764"><ol class="decimal">
+<li id="li-216"><div class="para" id="p-765">Let <span class="process-math">\(f_{n}(x)=n x(1-x)^{n}\)</span> for <span class="process-math">\(x \in[0,1]\text{.}\)</span> Prove that <span class="process-math">\(\left\{f_{n}\right\}\)</span> converges pointwise and determine if it converges uniformly on <span class="process-math">\([0,1]\text{.}\)</span> Is <span class="process-math">\(\left\{f_{n}\right\}\)</span> equicontinuous? Clearly motivate your answer.</div></li>
+<li id="li-217"><div class="para" id="p-766">Prove that in general, if <span class="process-math">\(\left\{f_{n}\right\}_{n \geq 1}\)</span> is an equicontinuous sequence of functions on a compact interval and <span class="process-math">\(f_{n} \rightarrow f\)</span> pointwise, then the convergence is uniform.</div></li>
 </ol></div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-24" id="solution-24"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-24"><div class="solution solution-like"><div class="para" id="p-733">Coming (not so) soon!</div></div></div>
-</div></article> <article class="problem example-like" id="problem-8"><h2 class="heading">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-26" id="solution-26"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-26"><div class="solution solution-like"><div class="para" id="p-767">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-8"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-8"><h2 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.8</span><span class="period">.</span>
-</h2>
-<div class="para logical" id="p-734">
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-8"><article class="exploration project-like"><div class="para logical" id="p-768">
 <div class="para">Let <span class="process-math">\((X, \rho)\)</span> be a metric space. Suppose that <span class="process-math">\(x_{0} \in X\text{.}\)</span> For each <span class="process-math">\(\varepsilon&gt;0\text{,}\)</span> set</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -696,18 +702,16 @@ E_{\varepsilon}:=\left\{x \in X: \rho\left(x, x_{0}\right) \geq \varepsilon\righ
 <div class="para">Suppose that <span class="process-math">\(f: X \rightarrow \mathbb{R}\)</span> is continuous and <span class="process-math">\(f\left(E_{\varepsilon}\right)\)</span> is compact for all <span class="process-math">\(\varepsilon&gt;0\text{.}\)</span> Prove that <span class="process-math">\(f(X)\)</span> is compact.</div>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-25" id="solution-25"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-25"><div class="solution solution-like"><div class="para" id="p-735">Coming (not so) soon!</div></div></div>
-</div></article> <article class="problem example-like" id="problem-9"><h2 class="heading">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-27" id="solution-27"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-27"><div class="solution solution-like"><div class="para" id="p-769">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-9"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-9"><h2 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.9</span><span class="period">.</span>
-</h2>
-<div class="para" id="p-736">Consider the sequence <span class="process-math">\(\left\{x_{n}\right\}_{n \geq 1}\)</span> defined by <span class="process-math">\(0&lt;x_{1}&lt;1\)</span> and <span class="process-math">\(x_{n+1}=1-\sqrt{1-x_{n}}\)</span> for <span class="process-math">\(n=\)</span> <span class="process-math">\(1,2, \ldots\text{.}\)</span> Show that <span class="process-math">\(x_{n} \rightarrow 0\)</span> as <span class="process-math">\(n \rightarrow \infty\text{.}\)</span> Also, show that <span class="process-math">\(\frac{x_{n+1}}{x_{n}} \rightarrow \frac{1}{2}\text{.}\)</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-9"><article class="exploration project-like"><div class="para" id="p-770">Consider the sequence <span class="process-math">\(\left\{x_{n}\right\}_{n \geq 1}\)</span> defined by <span class="process-math">\(0&lt;x_{1}&lt;1\)</span> and <span class="process-math">\(x_{n+1}=1-\sqrt{1-x_{n}}\)</span> for <span class="process-math">\(n=\)</span> <span class="process-math">\(1,2, \ldots\text{.}\)</span> Show that <span class="process-math">\(x_{n} \rightarrow 0\)</span> as <span class="process-math">\(n \rightarrow \infty\text{.}\)</span> Also, show that <span class="process-math">\(\frac{x_{n+1}}{x_{n}} \rightarrow \frac{1}{2}\text{.}\)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-26" id="solution-26"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-26"><div class="solution solution-like"><div class="para" id="p-737">Coming (not so) soon!</div></div></div>
-</div></article> <article class="problem example-like" id="problem-10"><h2 class="heading">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-28" id="solution-28"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-28"><div class="solution solution-like"><div class="para" id="p-771">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-10"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-10"><h2 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.10</span><span class="period">.</span>
-</h2>
-<div class="para logical" id="p-738">
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-10"><article class="exploration project-like"><div class="para logical" id="p-772">
 <div class="para">Use the Riemann condition to show that <span class="process-math">\(f \in \mathcal{R}_{\alpha}[0,3]\)</span> where <span class="process-math">\(f(x)=\ln (2 x+1)\)</span> and</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -721,11 +725,10 @@ x+2, &amp; 0 \leq x \leq 2 \\
 </div>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-27" id="solution-27"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-27"><div class="solution solution-like"><div class="para" id="p-739">Coming (not so) soon!</div></div></div>
-</div></article> <article class="problem example-like" id="problem-11"><h2 class="heading">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-29" id="solution-29"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-29"><div class="solution solution-like"><div class="para" id="p-773">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-11"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-11"><h2 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.11</span><span class="period">.</span>
-</h2>
-<div class="para logical" id="p-740">
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-11"><article class="exploration project-like"><div class="para logical" id="p-774">
 <div class="para">Find the domain of convergence and the sum of the series</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -735,11 +738,10 @@ x+2, &amp; 0 \leq x \leq 2 \\
 <div class="para">Show how one may use the sum of the series to provide an approximation for <span class="process-math">\(\pi\)</span> up to three decimals. Be sure to provide all technical details.</div>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-28" id="solution-28"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-28"><div class="solution solution-like"><div class="para" id="p-741">Coming (not so) soon!</div></div></div>
-</div></article> <article class="problem example-like" id="problem-12"><h2 class="heading">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-30" id="solution-30"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-30"><div class="solution solution-like"><div class="para" id="p-775">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-12"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-12"><h2 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.12</span><span class="period">.</span>
-</h2>
-<div class="para logical" id="p-742">
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-12"><article class="exploration project-like"><div class="para logical" id="p-776">
 <div class="para">Show that</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -750,11 +752,10 @@ d_{1}(f, g):=\int_{0}^{1}|f(x)-g(x)| d x \quad \text { and } \quad d_{\infty}(f,
 </div>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-29" id="solution-29"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-29"><div class="solution solution-like"><div class="para" id="p-743">Coming (not so) soon!</div></div></div>
-</div></article></section><section class="paragraphs" id="paragraphs-4"><h1 class="heading"><span class="title">Winter 2022.</span></h1> <article class="problem example-like" id="problem-13"><h2 class="heading">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-31" id="solution-31"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-31"><div class="solution solution-like"><div class="para" id="p-777">Coming (not so) soon!</div></div></div>
+</div></article></div></section><section class="paragraphs" id="paragraphs-4"><h1 class="heading"><span class="title">Winter 2022.</span></h1> <article class="exploration project-like" id="exploration-13"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-13"><h2 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.13</span><span class="period">.</span>
-</h2>
-<div class="para logical" id="p-744">
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-13"><article class="exploration project-like"><div class="para logical" id="p-778">
 <div class="para">Suppose <span class="process-math">\(a, b \in \mathbb{R}\)</span> with <span class="process-math">\(a&lt;b\)</span> and let <span class="process-math">\(f:[a, b] \rightarrow \mathbb{R}\)</span> be a differentiable function such that <span class="process-math">\(f^{\prime}:[a, b] \rightarrow \mathbb{R}\)</span> is continuous. Show that for every <span class="process-math">\(\epsilon&gt;0\text{,}\)</span> there is a <span class="process-math">\(\delta&gt;0\)</span> such that for every <span class="process-math">\(x, y \in[a, b]\)</span> with <span class="process-math">\(|x-y|&lt;\delta\text{,}\)</span> we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -763,82 +764,73 @@ d_{1}(f, g):=\int_{0}^{1}|f(x)-g(x)| d x \quad \text { and } \quad d_{\infty}(f,
 </div>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-30" id="solution-30"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-30"><div class="solution solution-like"><div class="para" id="p-745">Coming (not so) soon!</div></div></div>
-</div></article> <article class="problem example-like" id="problem-14"><h2 class="heading">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-32" id="solution-32"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-32"><div class="solution solution-like"><div class="para" id="p-779">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-14"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-14"><h2 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.14</span><span class="period">.</span>
-</h2>
-<div class="para logical" id="p-746">
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-14"><article class="exploration project-like"><div class="para logical" id="p-780">
 <div class="para">Let <span class="process-math">\(X\)</span> and <span class="process-math">\(Y\)</span> be metric spaces and let <span class="process-math">\(f: X \rightarrow Y\)</span> be a continuous bijection.</div>
 <ol class="decimal">
-<li id="li-207"><div class="para" id="p-747">Show by example that <span class="process-math">\(f^{-1}: Y \rightarrow X\)</span> need not be continuous.</div></li>
-<li id="li-208"><div class="para" id="p-748">Show that if <span class="process-math">\(X\)</span> is compact, then <span class="process-math">\(f^{-1}: Y \rightarrow X\)</span> is continuous.</div></li>
+<li id="li-218"><div class="para" id="p-781">Show by example that <span class="process-math">\(f^{-1}: Y \rightarrow X\)</span> need not be continuous.</div></li>
+<li id="li-219"><div class="para" id="p-782">Show that if <span class="process-math">\(X\)</span> is compact, then <span class="process-math">\(f^{-1}: Y \rightarrow X\)</span> is continuous.</div></li>
 </ol>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-31" id="solution-31"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-31"><div class="solution solution-like"><div class="para" id="p-749">Coming (not so) soon!</div></div></div>
-</div></article> <article class="problem example-like" id="problem-15"><h2 class="heading">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-33" id="solution-33"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-33"><div class="solution solution-like"><div class="para" id="p-783">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-15"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-15"><h2 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.15</span><span class="period">.</span>
-</h2>
-<div class="para" id="p-750">Compute, with proof, <span class="process-math">\(\lim _{k \rightarrow \infty} \sum_{n=1}^{\infty} n^{-k}\text{.}\)</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-15"><article class="exploration project-like"><div class="para" id="p-784">Compute, with proof, <span class="process-math">\(\lim _{k \rightarrow \infty} \sum_{n=1}^{\infty} n^{-k}\text{.}\)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-32" id="solution-32"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-32"><div class="solution solution-like"><div class="para" id="p-751">Coming (not so) soon!</div></div></div>
-</div></article> <article class="problem example-like" id="problem-16"><h2 class="heading">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-34" id="solution-34"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-34"><div class="solution solution-like"><div class="para" id="p-785">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-16"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-16"><h2 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.16</span><span class="period">.</span>
-</h2>
-<div class="para logical" id="p-752"><ol class="decimal">
-<li id="li-209"><div class="para" id="p-753">Let <span class="process-math">\(f:[1,2] \rightarrow \mathbb{R}\)</span> be a continuous function. If <span class="process-math">\(\int_{1}^{2} x^{-n} f(x) d x=0\)</span> for all integers <span class="process-math">\(n \geq 0\text{,}\)</span> show that <span class="process-math">\(f=0\text{.}\)</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-16"><article class="exploration project-like"><div class="para logical" id="p-786"><ol class="decimal">
+<li id="li-220"><div class="para" id="p-787">Let <span class="process-math">\(f:[1,2] \rightarrow \mathbb{R}\)</span> be a continuous function. If <span class="process-math">\(\int_{1}^{2} x^{-n} f(x) d x=0\)</span> for all integers <span class="process-math">\(n \geq 0\text{,}\)</span> show that <span class="process-math">\(f=0\text{.}\)</span>
 </div></li>
-<li id="li-210"><div class="para" id="p-754">Let <span class="process-math">\(g:[1,2] \rightarrow \mathbb{R}\)</span> be a differentiable function such that <span class="process-math">\(g^{\prime}:[1,2] \rightarrow \mathbb{R}\)</span> is continuous. If <span class="process-math">\(\int_{1}^{2} x^{-n} d g(x)=0\)</span> for all integers <span class="process-math">\(n \geq 0\text{,}\)</span> show that <span class="process-math">\(g\)</span> is constant.</div></li>
+<li id="li-221"><div class="para" id="p-788">Let <span class="process-math">\(g:[1,2] \rightarrow \mathbb{R}\)</span> be a differentiable function such that <span class="process-math">\(g^{\prime}:[1,2] \rightarrow \mathbb{R}\)</span> is continuous. If <span class="process-math">\(\int_{1}^{2} x^{-n} d g(x)=0\)</span> for all integers <span class="process-math">\(n \geq 0\text{,}\)</span> show that <span class="process-math">\(g\)</span> is constant.</div></li>
 </ol></div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-33" id="solution-33"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-33"><div class="solution solution-like"><div class="para" id="p-755">Coming (not so) soon!</div></div></div>
-</div></article> <article class="problem example-like" id="problem-17"><h2 class="heading">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-35" id="solution-35"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-35"><div class="solution solution-like"><div class="para" id="p-789">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-17"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-17"><h2 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.17</span><span class="period">.</span>
-</h2>
-<div class="para" id="p-756">Prove the following special case of Dini's Theorem: if <span class="process-math">\(\left(f_{n}:[0,1] \rightarrow \mathbb{R}\right)_{n=1}^{\infty}\)</span> is decreasing sequence of continuous functions such that <span class="process-math">\(\lim _{n \rightarrow \infty} f_{n}(x)=0\)</span> for all <span class="process-math">\(x \in[0,1]\text{,}\)</span> then <span class="process-math">\(\left(f_{n}\right)_{n=1}^{\infty}\)</span> converges uniformly to 0. (You should not use any form of Dini's theorem without proof.)</div>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-17"><article class="exploration project-like"><div class="para" id="p-790">Prove the following special case of Dini's Theorem: if <span class="process-math">\(\left(f_{n}:[0,1] \rightarrow \mathbb{R}\right)_{n=1}^{\infty}\)</span> is decreasing sequence of continuous functions such that <span class="process-math">\(\lim _{n \rightarrow \infty} f_{n}(x)=0\)</span> for all <span class="process-math">\(x \in[0,1]\text{,}\)</span> then <span class="process-math">\(\left(f_{n}\right)_{n=1}^{\infty}\)</span> converges uniformly to 0. (You should not use any form of Dini's theorem without proof.)</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-34" id="solution-34"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-34"><div class="solution solution-like"><div class="para" id="p-757">Coming (not so) soon!</div></div></div>
-</div></article> <article class="problem example-like" id="problem-18"><h2 class="heading">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-36" id="solution-36"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-36"><div class="solution solution-like"><div class="para" id="p-791">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-18"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-18"><h2 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.18</span><span class="period">.</span>
-</h2>
-<div class="para logical" id="p-758">
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-18"><article class="exploration project-like"><div class="para logical" id="p-792">
 <div class="para">Let <span class="process-math">\(f:[0,1] \rightarrow \mathbb{R}\)</span> be a continuous function.</div>
 <ol class="decimal">
-<li id="li-211"><div class="para" id="p-759">Show <span class="process-math">\(\lim _{n \rightarrow \infty} \int_{0}^{1} f\left(x^{1 / n}\right) d x=f(1)\text{.}\)</span>
+<li id="li-222"><div class="para" id="p-793">Show <span class="process-math">\(\lim _{n \rightarrow \infty} \int_{0}^{1} f\left(x^{1 / n}\right) d x=f(1)\text{.}\)</span>
 </div></li>
-<li id="li-212"><div class="para" id="p-760">If <span class="process-math">\(f(x)&gt;0\)</span> for all <span class="process-math">\(x \in[0,1]\text{,}\)</span> show <span class="process-math">\(\lim _{n \rightarrow \infty} \int_{0}^{1} f(x)^{1 / n} d x=1\text{.}\)</span>
+<li id="li-223"><div class="para" id="p-794">If <span class="process-math">\(f(x)&gt;0\)</span> for all <span class="process-math">\(x \in[0,1]\text{,}\)</span> show <span class="process-math">\(\lim _{n \rightarrow \infty} \int_{0}^{1} f(x)^{1 / n} d x=1\text{.}\)</span>
 </div></li>
 </ol>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-35" id="solution-35"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-35"><div class="solution solution-like"><div class="para" id="p-761">Coming (not so) soon!</div></div></div>
-</div></article></section><section class="paragraphs" id="paragraphs-5"><h1 class="heading"><span class="title">Spring 2021.</span></h1> <article class="problem example-like" id="problem-19"><h2 class="heading">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-37" id="solution-37"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-37"><div class="solution solution-like"><div class="para" id="p-795">Coming (not so) soon!</div></div></div>
+</div></article></div></section><section class="paragraphs" id="paragraphs-5"><h1 class="heading"><span class="title">Spring 2021.</span></h1> <article class="exploration project-like" id="exploration-19"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-19"><h2 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.19</span><span class="period">.</span>
-</h2>
-<div class="para" id="p-762">Suppose that <span class="process-math">\(X\)</span> is a compact metric space, <span class="process-math">\(\left(x_{n}\right)_{n=1}^{\infty} \subseteq X, x \in X\text{,}\)</span> and every convergent subsequence of <span class="process-math">\(\left(x_{n}\right)_{n=1}^{\infty}\)</span> converges to <span class="process-math">\(x\text{.}\)</span> Show that <span class="process-math">\(\left(x_{n}\right)_{n=1}^{\infty}\)</span> converges to <span class="process-math">\(x\text{.}\)</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-19"><article class="exploration project-like"><div class="para" id="p-796">Suppose that <span class="process-math">\(X\)</span> is a compact metric space, <span class="process-math">\(\left(x_{n}\right)_{n=1}^{\infty} \subseteq X, x \in X\text{,}\)</span> and every convergent subsequence of <span class="process-math">\(\left(x_{n}\right)_{n=1}^{\infty}\)</span> converges to <span class="process-math">\(x\text{.}\)</span> Show that <span class="process-math">\(\left(x_{n}\right)_{n=1}^{\infty}\)</span> converges to <span class="process-math">\(x\text{.}\)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-36" id="solution-36"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-36"><div class="solution solution-like"><div class="para" id="p-763">Coming (not so) soon!</div></div></div>
-</div></article> <article class="problem example-like" id="problem-20"><h2 class="heading">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-38" id="solution-38"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-38"><div class="solution solution-like"><div class="para" id="p-797">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-20"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-20"><h2 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.20</span><span class="period">.</span>
-</h2>
-<div class="para logical" id="p-764"><ol class="decimal">
-<li id="li-213"><div class="para" id="p-765">Show that if <span class="process-math">\(f:[a, b] \rightarrow \mathbb{R}\)</span> is a differentiable function and <span class="process-math">\(f^{\prime}:[a, b] \rightarrow \mathbb{R}\)</span> is bounded, then <span class="process-math">\(f\)</span> has bounded variation.</div></li>
-<li id="li-214"><div class="para" id="p-766">Construct, with proof, a continuous function <span class="process-math">\(g:[a, b] \rightarrow \mathbb{R}\)</span> which does not have bounded variation.</div></li>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-20"><article class="exploration project-like"><div class="para logical" id="p-798"><ol class="decimal">
+<li id="li-224"><div class="para" id="p-799">Show that if <span class="process-math">\(f:[a, b] \rightarrow \mathbb{R}\)</span> is a differentiable function and <span class="process-math">\(f^{\prime}:[a, b] \rightarrow \mathbb{R}\)</span> is bounded, then <span class="process-math">\(f\)</span> has bounded variation.</div></li>
+<li id="li-225"><div class="para" id="p-800">Construct, with proof, a continuous function <span class="process-math">\(g:[a, b] \rightarrow \mathbb{R}\)</span> which does not have bounded variation.</div></li>
 </ol></div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-37" id="solution-37"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-37"><div class="solution solution-like"><div class="para" id="p-767">Coming (not so) soon!</div></div></div>
-</div></article> <article class="problem example-like" id="problem-21"><h2 class="heading">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-39" id="solution-39"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-39"><div class="solution solution-like"><div class="para" id="p-801">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-21"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-21"><h2 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.21</span><span class="period">.</span>
-</h2>
-<div class="para" id="p-768">Suppose that <span class="process-math">\(f: \mathbb{R} \rightarrow \mathbb{R}\)</span> is a differentiable function such that there is no <span class="process-math">\(x \in \mathbb{R}\)</span> with <span class="process-math">\(f(x)=f^{\prime}(x)=0\text{.}\)</span> Show that if <span class="process-math">\(a, b \in \mathbb{R}\)</span> with <span class="process-math">\(a&lt;b\text{,}\)</span> then <span class="process-math">\(\{x \in[a, b]: f(x)=0\}\)</span> is a finite set.</div>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-21"><article class="exploration project-like"><div class="para" id="p-802">Suppose that <span class="process-math">\(f: \mathbb{R} \rightarrow \mathbb{R}\)</span> is a differentiable function such that there is no <span class="process-math">\(x \in \mathbb{R}\)</span> with <span class="process-math">\(f(x)=f^{\prime}(x)=0\text{.}\)</span> Show that if <span class="process-math">\(a, b \in \mathbb{R}\)</span> with <span class="process-math">\(a&lt;b\text{,}\)</span> then <span class="process-math">\(\{x \in[a, b]: f(x)=0\}\)</span> is a finite set.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-38" id="solution-38"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-38"><div class="solution solution-like"><div class="para" id="p-769">Coming (not so) soon!</div></div></div>
-</div></article> <article class="problem example-like" id="problem-22"><h2 class="heading">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-40" id="solution-40"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-40"><div class="solution solution-like"><div class="para" id="p-803">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-22"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-22"><h2 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.22</span><span class="period">.</span>
-</h2>
-<div class="para logical" id="p-770">
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-22"><article class="exploration project-like"><div class="para logical" id="p-804">
 <div class="para">Let <span class="process-math">\(X\)</span> be a metric space. A function <span class="process-math">\(f: X \rightarrow \mathbb{R}\)</span> is called lower semicontinuous if for every convergent sequence <span class="process-math">\(\left(x_{n}\right)_{n=1}^{\infty} \subseteq X\text{,}\)</span> we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -846,16 +838,16 @@ f\left(\lim _{n \rightarrow \infty} x_{n}\right) \leq \liminf _{n \rightarrow \i
 \end{equation*}
 </div>
 <ol class="decimal">
-<li id="li-215"><div class="para logical" id="p-771">
+<li id="li-226"><div class="para logical" id="p-805">
 <div class="para">Let <span class="process-math">\(A \subseteq X\)</span> be a set and define</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\chi_{A}: X \rightarrow \mathbb{R}: x \mapsto \begin{cases}1 &amp; x \in A \\ 0 &amp; x \notin A .\end{cases}
+\chi_{A}: X \rightarrow \mathbb{R}: x \mapsto \begin{cases}1 &amp; x \in A \\ 0 &amp; x \notin A.\end{cases}
 \end{equation*}
 </div>
 <div class="para">Show that <span class="process-math">\(\chi_{A}\)</span> is lower semicontinuous if and only if <span class="process-math">\(A\)</span> is open.</div>
 </div></li>
-<li id="li-216"><div class="para logical" id="p-772">
+<li id="li-227"><div class="para logical" id="p-806">
 <div class="para">Show that if <span class="process-math">\(X\)</span> is a compact metric space and <span class="process-math">\(f: X \rightarrow \mathbb{R}\)</span> is lower semicontinuous, then there is a <span class="process-math">\(c \in X\)</span> such that</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -866,17 +858,15 @@ f(c)=\inf \{f(x): x \in X\}.
 </ol>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-39" id="solution-39"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-39"><div class="solution solution-like"><div class="para" id="p-773">Coming (not so) soon!</div></div></div>
-</div></article> <article class="problem example-like" id="problem-23"><h2 class="heading">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-41" id="solution-41"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-41"><div class="solution solution-like"><div class="para" id="p-807">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-23"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-23"><h2 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.23</span><span class="period">.</span>
-</h2>
-<div class="para" id="p-774">Suppose that <span class="process-math">\(\left(a_{n}\right)_{n=1}^{\infty}\)</span> and <span class="process-math">\(\left(b_{n}\right)_{n=1}^{\infty}\)</span> are sequences of strictly positive real numbers such that <span class="process-math">\(\sum_{n=1}^{\infty} b_{n}\)</span> converges, and suppose that for each integer <span class="process-math">\(n \geq 1\text{,}\)</span> we have <span class="process-math">\(\frac{a_{n+1}}{a_{n}} \leq \frac{b_{n+1}}{b_{n}}\text{.}\)</span> Show that <span class="process-math">\(\sum_{n=1}^{\infty} a_{n}\)</span> converges.</div>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-23"><article class="exploration project-like"><div class="para" id="p-808">Suppose that <span class="process-math">\(\left(a_{n}\right)_{n=1}^{\infty}\)</span> and <span class="process-math">\(\left(b_{n}\right)_{n=1}^{\infty}\)</span> are sequences of strictly positive real numbers such that <span class="process-math">\(\sum_{n=1}^{\infty} b_{n}\)</span> converges, and suppose that for each integer <span class="process-math">\(n \geq 1\text{,}\)</span> we have <span class="process-math">\(\frac{a_{n+1}}{a_{n}} \leq \frac{b_{n+1}}{b_{n}}\text{.}\)</span> Show that <span class="process-math">\(\sum_{n=1}^{\infty} a_{n}\)</span> converges.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-40" id="solution-40"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-40"><div class="solution solution-like"><div class="para" id="p-775">Coming (not so) soon!</div></div></div>
-</div></article> <article class="problem example-like" id="problem-24"><h2 class="heading">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-42" id="solution-42"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-42"><div class="solution solution-like"><div class="para" id="p-809">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-24"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-24"><h2 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.24</span><span class="period">.</span>
-</h2>
-<div class="para logical" id="p-776">
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-24"><article class="exploration project-like"><div class="para logical" id="p-810">
 <div class="para">A function <span class="process-math">\(f:[0,1] \rightarrow \mathbb{R}\)</span> is called Lipschitz if there is a constant <span class="process-math">\(C&gt;0\)</span> such that for all <span class="process-math">\(x, y \in[0,1]\text{,}\)</span> we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -886,97 +876,90 @@ f(c)=\inf \{f(x): x \in X\}.
 <div class="para">Let <span class="process-math">\(\operatorname{Lip}([0,1])\)</span> denote the set of all Lipschitz functions <span class="process-math">\([0,1] \rightarrow \mathbb{R}\)</span> with the uniform metric</div>
 <div class="displaymath process-math">
 \begin{equation*}
-d_{\infty}(f, g)=\sup \{|f(t)-g(t)|: 0 \leq t \leq 1\}, \quad f, g \in \operatorname{Lip}([0,1]) .
+d_{\infty}(f, g)=\sup \{|f(t)-g(t)|: 0 \leq t \leq 1\}, \quad f, g \in \operatorname{Lip}([0,1]).
 \end{equation*}
 </div>
 <div class="para">Show that <span class="process-math">\(\operatorname{Lip}([0,1])\)</span> is a countable union of compact sets.</div>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-41" id="solution-41"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-41"><div class="solution solution-like"><div class="para" id="p-777">Coming (not so) soon!</div></div></div>
-</div></article></section><section class="paragraphs" id="paragraphs-6"><h1 class="heading"><span class="title">Winter 2021.</span></h1> <article class="problem example-like" id="problem-25"><h2 class="heading">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-43" id="solution-43"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-43"><div class="solution solution-like"><div class="para" id="p-811">Coming (not so) soon!</div></div></div>
+</div></article></div></section><section class="paragraphs" id="paragraphs-6"><h1 class="heading"><span class="title">Winter 2021.</span></h1> <article class="exploration project-like" id="exploration-25"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-25"><h2 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.25</span><span class="period">.</span>
-</h2>
-<div class="para logical" id="p-778">
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-25"><article class="exploration project-like"><div class="para logical" id="p-812">
 <div class="para">Suppose: <span class="process-math">\((X, d)\)</span> and <span class="process-math">\((Y, \rho)\)</span> are metric spaces; <span class="process-math">\((Y, \rho)\)</span> is compact; and <span class="process-math">\(\phi: Y \rightarrow X\)</span> is a continuous and onto function.</div>
 <ol class="decimal">
-<li id="li-217"><div class="para" id="p-779">A well-known theorem states that if <span class="process-math">\(F \subseteq Y\)</span> is compact, then <span class="process-math">\(\phi(F)\)</span> is also compact. Prove this theorem, and conclude that <span class="process-math">\((X, d)\)</span> is a compact metric space.</div></li>
-<li id="li-218"><div class="para" id="p-780">Suppose <span class="process-math">\(G \subseteq X\)</span> and <span class="process-math">\(\phi^{-1}(G)\)</span> is an open set. Prove that <span class="process-math">\(G\)</span> is an open set.</div></li>
+<li id="li-228"><div class="para" id="p-813">A well-known theorem states that if <span class="process-math">\(F \subseteq Y\)</span> is compact, then <span class="process-math">\(\phi(F)\)</span> is also compact. Prove this theorem, and conclude that <span class="process-math">\((X, d)\)</span> is a compact metric space.</div></li>
+<li id="li-229"><div class="para" id="p-814">Suppose <span class="process-math">\(G \subseteq X\)</span> and <span class="process-math">\(\phi^{-1}(G)\)</span> is an open set. Prove that <span class="process-math">\(G\)</span> is an open set.</div></li>
 </ol>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-42" id="solution-42"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-42"><div class="solution solution-like"><div class="para" id="p-781">Coming (not so) soon!</div></div></div>
-</div></article> <article class="problem example-like" id="problem-26"><h2 class="heading">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-44" id="solution-44"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-44"><div class="solution solution-like"><div class="para" id="p-815">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-26"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-26"><h2 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.26</span><span class="period">.</span>
-</h2>
-<div class="para logical" id="p-782">
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-26"><article class="exploration project-like"><div class="para logical" id="p-816">
 <div class="para">Let <span class="process-math">\(\left(a_{n}\right)_{n=1}^{\infty}\)</span> be a bounded sequence of real numbers. Being sure to include all details, prove that</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\liminf _{n \rightarrow \infty} a_{n} \leq \liminf _{n \rightarrow \infty} \frac{a_{1}+a_{2}+\cdots+a_{n}}{n} .
+\liminf _{n \rightarrow \infty} a_{n} \leq \liminf _{n \rightarrow \infty} \frac{a_{1}+a_{2}+\cdots+a_{n}}{n}.
 \end{equation*}
 </div>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-1" id="hint-1"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-1"><div class="hint solution-like"><div class="para" id="p-783">Notice that for <span class="process-math">\(n, N \in \mathbb{N}\)</span> and <span class="process-math">\(n&gt;N, \frac{a_{1}+\cdots+a_{N}}{n}+\frac{a_{N+1}+\cdots+a_{n}}{n}=\frac{a_{1}+\cdots+a_{n}}{n}\text{.}\)</span> Approximate <span class="process-math">\(\frac{a_{N+1}+\cdots+a_{n}}{n}\)</span> in terms of <span class="process-math">\(\liminf _{n \rightarrow \infty} a_{n}\)</span> and examine what happens if you hold <span class="process-math">\(N\)</span> fixed and let <span class="process-math">\(n\)</span> grow.</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-43" id="solution-43"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-43"><div class="solution solution-like"><div class="para" id="p-784">Coming (not so) soon!</div></div></div>
-</div></article> <article class="problem example-like" id="problem-27"><h2 class="heading">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-1" id="hint-1"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-1"><div class="hint solution-like"><div class="para" id="p-817">Notice that for <span class="process-math">\(n, N \in \mathbb{N}\)</span> and <span class="process-math">\(n&gt;N, \frac{a_{1}+\cdots+a_{N}}{n}+\frac{a_{N+1}+\cdots+a_{n}}{n}=\frac{a_{1}+\cdots+a_{n}}{n}\text{.}\)</span> Approximate <span class="process-math">\(\frac{a_{N+1}+\cdots+a_{n}}{n}\)</span> in terms of <span class="process-math">\(\liminf _{n \rightarrow \infty} a_{n}\)</span> and examine what happens if you hold <span class="process-math">\(N\)</span> fixed and let <span class="process-math">\(n\)</span> grow.</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-45" id="solution-45"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-45"><div class="solution solution-like"><div class="para" id="p-818">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-27"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-27"><h2 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.27</span><span class="period">.</span>
-</h2>
-<div class="para logical" id="p-785">
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-27"><article class="exploration project-like"><div class="para logical" id="p-819">
 <div class="para">Suppose <span class="process-math">\(f:[a, b] \rightarrow \mathbb{R}\)</span> is Riemann integrable and <span class="process-math">\(\int_{a}^{b}|f(t)| d t=0\text{.}\)</span>
 </div>
 <ol class="decimal">
-<li id="li-219"><div class="para" id="p-786">If <span class="process-math">\(f\)</span> is continuous, prove that <span class="process-math">\(f(t)=0\)</span> for every <span class="process-math">\(t \in[a, b]\text{.}\)</span>
+<li id="li-230"><div class="para" id="p-820">If <span class="process-math">\(f\)</span> is continuous, prove that <span class="process-math">\(f(t)=0\)</span> for every <span class="process-math">\(t \in[a, b]\text{.}\)</span>
 </div></li>
-<li id="li-220"><div class="para" id="p-787">Give an example (with proof) of a non-zero Riemann integrable function such that <span class="process-math">\(\int_{a}^{b}|f(t)| d t=0\text{.}\)</span>
+<li id="li-231"><div class="para" id="p-821">Give an example (with proof) of a non-zero Riemann integrable function such that <span class="process-math">\(\int_{a}^{b}|f(t)| d t=0\text{.}\)</span>
 </div></li>
 </ol>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-44" id="solution-44"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-44"><div class="solution solution-like"><div class="para" id="p-788">Coming (not so) soon!</div></div></div>
-</div></article> <article class="problem example-like" id="problem-28"><h2 class="heading">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-46" id="solution-46"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-46"><div class="solution solution-like"><div class="para" id="p-822">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-28"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-28"><h2 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.28</span><span class="period">.</span>
-</h2>
-<div class="para logical" id="p-789">
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-28"><article class="exploration project-like"><div class="para logical" id="p-823">
 <div class="para">Let <span class="process-math">\(Y \subseteq[0,1]\)</span> be the usual Cantor <span class="process-math">\(\operatorname{set}^{1}\)</span> and let <span class="process-math">\(C(Y)\)</span> be the collection of all continuous complex-valued functions on <span class="process-math">\(Y\text{.}\)</span> <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-4" id="fn-4"><sup> 1 </sup></a> A function <span class="process-math">\(p \in C(Y)\)</span> is a projection if for every <span class="process-math">\(y \in Y, p(y)^{2}=p(y)\text{.}\)</span> Given <span class="process-math">\(f \in C(Y)\)</span> and <span class="process-math">\(\varepsilon&gt;0\text{,}\)</span> prove that there exists <span class="process-math">\(n \in \mathbb{N}\text{,}\)</span> projections <span class="process-math">\(\left\{p_{k}\right\}_{k=1}^{n} \subseteq C(Y)\)</span> and complex numbers <span class="process-math">\(\left\{\alpha_{k}\right\}_{k=1}^{n}\)</span> such that for every <span class="process-math">\(y \in Y\text{,}\)</span>
 </div>
 <div class="displaymath process-math">
 \begin{equation*}
-\left|f(y)-\sum_{k=1}^{n} \alpha_{k} p_{k}(y)\right|&lt;\varepsilon .
+\left|f(y)-\sum_{k=1}^{n} \alpha_{k} p_{k}(y)\right|&lt;\varepsilon.
 \end{equation*}
 </div>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-45" id="solution-45"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-45"><div class="solution solution-like"><div class="para" id="p-790">Coming (not so) soon!</div></div></div>
-</div></article> <article class="problem example-like" id="problem-29"><h2 class="heading">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-47" id="solution-47"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-47"><div class="solution solution-like"><div class="para" id="p-824">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-29"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-29"><h2 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.29</span><span class="period">.</span>
-</h2>
-<div class="para" id="p-791">Suppose <span class="process-math">\(\left(a_{n}\right)\)</span> is a decreasing sequence of real numbers and <span class="process-math">\(\sum_{n=1}^{\infty} a_{n}\)</span> converges. Prove that <span class="process-math">\(\lim _{n \rightarrow \infty} n a_{n}=0\text{.}\)</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-29"><article class="exploration project-like"><div class="para" id="p-825">Suppose <span class="process-math">\(\left(a_{n}\right)\)</span> is a decreasing sequence of real numbers and <span class="process-math">\(\sum_{n=1}^{\infty} a_{n}\)</span> converges. Prove that <span class="process-math">\(\lim _{n \rightarrow \infty} n a_{n}=0\text{.}\)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-46" id="solution-46"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-46"><div class="solution solution-like"><div class="para" id="p-792">Coming (not so) soon!</div></div></div>
-</div></article> <article class="problem example-like" id="problem-30"><h2 class="heading">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-48" id="solution-48"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-48"><div class="solution solution-like"><div class="para" id="p-826">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-30"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-30"><h2 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.30</span><span class="period">.</span>
-</h2>
-<div class="para logical" id="p-793">
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-30"><article class="exploration project-like"><div class="para logical" id="p-827">
 <div class="para">For <span class="process-math">\(x \in \mathbb{R}\text{,}\)</span> consider the series, <span class="process-math">\(\sum_{n=1}^{\infty} \frac{1}{n^{2}+x^{2}}\text{.}\)</span>
 </div>
 <ol class="decimal">
-<li id="li-221"><div class="para" id="p-794">Prove this series converges for every <span class="process-math">\(x \in \mathbb{R}\text{.}\)</span>
+<li id="li-232"><div class="para" id="p-828">Prove this series converges for every <span class="process-math">\(x \in \mathbb{R}\text{.}\)</span>
 </div></li>
-<li id="li-222"><div class="para" id="p-795">Set <span class="process-math">\(f(x)=\sum_{n=1}^{\infty} \frac{1}{n^{2}+x^{2}}\text{.}\)</span> Prove that <span class="process-math">\(f\)</span> is differentiable at each <span class="process-math">\(x \in \mathbb{R}\text{.}\)</span> Also, find a formula for <span class="process-math">\(f^{\prime}(x)\)</span> (in terms of a series), being sure to justify that your formula is correct.</div></li>
+<li id="li-233"><div class="para" id="p-829">Set <span class="process-math">\(f(x)=\sum_{n=1}^{\infty} \frac{1}{n^{2}+x^{2}}\text{.}\)</span> Prove that <span class="process-math">\(f\)</span> is differentiable at each <span class="process-math">\(x \in \mathbb{R}\text{.}\)</span> Also, find a formula for <span class="process-math">\(f^{\prime}(x)\)</span> (in terms of a series), being sure to justify that your formula is correct.</div></li>
 </ol>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-47" id="solution-47"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-47"><div class="solution solution-like"><div class="para" id="p-796">Coming (not so) soon!</div></div></div>
-</div></article></section><section class="paragraphs" id="paragraphs-7"><h1 class="heading"><span class="title">Spring 2020.</span></h1> <article class="problem example-like" id="problem-31"><h2 class="heading">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-49" id="solution-49"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-49"><div class="solution solution-like"><div class="para" id="p-830">Coming (not so) soon!</div></div></div>
+</div></article></div></section><section class="paragraphs" id="paragraphs-7"><h1 class="heading"><span class="title">Spring 2020.</span></h1> <article class="exploration project-like" id="exploration-31"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-31"><h2 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.31</span><span class="period">.</span>
-</h2>
-<div class="para" id="p-797">Suppose for each <span class="process-math">\(n \in \mathbb{N}, f_{n}:[0,1] \rightarrow \mathbb{R}\)</span> is continuous and satisfies <span class="process-math">\(\sup \left\{\left|f_{n}(x)\right|: x \in[0,1]\right\} \leq 2020\text{.}\)</span> Put <span class="process-math">\(g_{n}(x)=\int_{0}^{x} f_{n}(t) d t\text{.}\)</span> Prove that there is a subsequence of <span class="process-math">\(\left(g_{n}\right)\)</span> which converges uniformly on <span class="process-math">\([0,1]\text{.}\)</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-31"><article class="exploration project-like"><div class="para" id="p-831">Suppose for each <span class="process-math">\(n \in \mathbb{N}, f_{n}:[0,1] \rightarrow \mathbb{R}\)</span> is continuous and satisfies <span class="process-math">\(\sup \left\{\left|f_{n}(x)\right|: x \in[0,1]\right\} \leq 2020\text{.}\)</span> Put <span class="process-math">\(g_{n}(x)=\int_{0}^{x} f_{n}(t) d t\text{.}\)</span> Prove that there is a subsequence of <span class="process-math">\(\left(g_{n}\right)\)</span> which converges uniformly on <span class="process-math">\([0,1]\text{.}\)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-48" id="solution-48"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-48"><div class="solution solution-like">
-<div class="para" id="p-798">It's enough to show that <span class="process-math">\(\overline{\{{g_n}\,:\,{n\geq 1}\}}\subseteq C[0,1]\)</span> is compact. By the Arzelá-Ascoli Theorem, <span class="process-math">\(\{{g_n}\,:\,{n\geq 1}\}\)</span> is bounded and equicontinuous.</div> <div class="para logical" id="p-799">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-50" id="solution-50"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-50"><div class="solution solution-like">
+<div class="para" id="p-832">It's enough to show that <span class="process-math">\(\overline{\{{g_n}\,:\,{n\geq 1}\}}\subseteq C[0,1]\)</span> is compact. By the Arzelá-Ascoli Theorem, <span class="process-math">\(\{{g_n}\,:\,{n\geq 1}\}\)</span> is bounded and equicontinuous.</div> <div class="para logical" id="p-833">
 <div class="para">Bounded: If <span class="process-math">\(n\geq 1,x\in[0,1]\text{,}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -991,7 +974,7 @@ d_{\infty}(f, g)=\sup \{|f(t)-g(t)|: 0 \leq t \leq 1\}, \quad f, g \in \operator
 \end{equation*}
 </div>
 <div class="para">Then for all <span class="process-math">\(n\geq 1\text{,}\)</span> <span class="process-math">\(\left|{\left|{{g_n}}\right|}\right|_\infty\leq 2020\)</span> so <span class="process-math">\(\{{g_n}\,:\,{n\geq 1}\}\)</span> is bounded by 2020.</div>
-</div> <div class="para logical" id="p-800">
+</div> <div class="para logical" id="p-834">
 <div class="para">Equicontinuous: Fix <span class="process-math">\(\varepsilon&gt;0\)</span> and let <span class="process-math">\(\delta=\frac{\varepsilon}{2020}\text{.}\)</span> Then if <span class="process-math">\(x,y\in[0,1]\)</span> with <span class="process-math">\(\left|{x-y}\right|&lt;\delta\)</span> and <span class="process-math">\(n\geq 1\text{,}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -1009,10 +992,9 @@ d_{\infty}(f, g)=\sup \{|f(t)-g(t)|: 0 \leq t \leq 1\}, \quad f, g \in \operator
 <div class="para">so <span class="process-math">\(\{{g_n}\,:\,{n\geq 1}\}\)</span> is equicontinuous.</div>
 </div>
 </div></div>
-</div></article> <article class="problem example-like" id="problem-32"><h2 class="heading">
+</div></article></div> <article class="exploration project-like" id="exploration-32"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-32"><h2 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.32</span><span class="period">.</span>
-</h2>
-<div class="para logical" id="p-801">
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-32"><article class="exploration project-like"><div class="para logical" id="p-835">
 <div class="para">Suppose <span class="process-math">\(f: \mathbb{R} \rightarrow \mathbb{R}\)</span> is twice differentiable and that <span class="process-math">\(f^{\prime \prime}(t)&lt;0\)</span> for every <span class="process-math">\(t \in \mathbb{R}\text{.}\)</span> Prove that for any real numbers satisfying <span class="process-math">\(a&lt;x&lt;b\text{,}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -1022,25 +1004,23 @@ d_{\infty}(f, g)=\sup \{|f(t)-g(t)|: 0 \leq t \leq 1\}, \quad f, g \in \operator
 </div>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-49" id="solution-49"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-49"><div class="solution solution-like"><div class="para" id="p-802">Coming (not so) soon!</div></div></div>
-</div></article> <article class="problem example-like" id="problem-33"><h2 class="heading">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-51" id="solution-51"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-51"><div class="solution solution-like"><div class="para" id="p-836">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-33"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-33"><h2 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.33</span><span class="period">.</span>
-</h2>
-<div class="para logical" id="p-803">
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-33"><article class="exploration project-like"><div class="para logical" id="p-837">
 <div class="para">Suppose <span class="process-math">\((X, d)\)</span> is a compact metric space.</div>
 <ol class="decimal">
-<li id="li-223"><div class="para" id="p-804">Let <span class="process-math">\(E\)</span> be a closed subset of <span class="process-math">\(X\)</span> and for <span class="process-math">\(x \in X\text{,}\)</span> define <span class="process-math">\(\operatorname{dist}(x, E)=\inf \{d(x, e): e \in E\}\text{.}\)</span> Show that if <span class="process-math">\(x \in X \backslash E\text{,}\)</span> then <span class="process-math">\(\operatorname{dist}(x, E)&gt;0\text{.}\)</span>
+<li id="li-234"><div class="para" id="p-838">Let <span class="process-math">\(E\)</span> be a closed subset of <span class="process-math">\(X\)</span> and for <span class="process-math">\(x \in X\text{,}\)</span> define <span class="process-math">\(\operatorname{dist}(x, E)=\inf \{d(x, e): e \in E\}\text{.}\)</span> Show that if <span class="process-math">\(x \in X \backslash E\text{,}\)</span> then <span class="process-math">\(\operatorname{dist}(x, E)&gt;0\text{.}\)</span>
 </div></li>
-<li id="li-224"><div class="para" id="p-805">Suppose <span class="process-math">\(f: X \rightarrow X\)</span> is an isometry, that is, for every <span class="process-math">\(x, y \in X, d(x, y)=d(f(x), f(y))\text{.}\)</span> Prove that <span class="process-math">\(f(X)=X\text{.}\)</span>
+<li id="li-235"><div class="para" id="p-839">Suppose <span class="process-math">\(f: X \rightarrow X\)</span> is an isometry, that is, for every <span class="process-math">\(x, y \in X, d(x, y)=d(f(x), f(y))\text{.}\)</span> Prove that <span class="process-math">\(f(X)=X\text{.}\)</span>
 </div></li>
 </ol>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-50" id="solution-50"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-50"><div class="solution solution-like"><div class="para" id="p-806">Coming (not so) soon!</div></div></div>
-</div></article> <article class="problem example-like" id="problem-34"><h2 class="heading">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-52" id="solution-52"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-52"><div class="solution solution-like"><div class="para" id="p-840">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-34"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-34"><h2 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.34</span><span class="period">.</span>
-</h2>
-<div class="para logical" id="p-807">
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-34"><article class="exploration project-like"><div class="para logical" id="p-841">
 <div class="para">Suppose <span class="process-math">\(f:[0, \infty) \rightarrow \mathbb{R}\)</span> is a uniformly continuous function. Prove there are real numbers <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> such that for every <span class="process-math">\(x \in[0, \infty)\text{,}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -1050,38 +1030,34 @@ d_{\infty}(f, g)=\sup \{|f(t)-g(t)|: 0 \leq t \leq 1\}, \quad f, g \in \operator
 </div>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-51" id="solution-51"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-51"><div class="solution solution-like"><div class="para" id="p-808">Coming (not so) soon!</div></div></div>
-</div></article> <article class="problem example-like" id="problem-35"><h2 class="heading">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-53" id="solution-53"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-53"><div class="solution solution-like"><div class="para" id="p-842">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-35"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-35"><h2 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.35</span><span class="period">.</span>
-</h2>
-<div class="para logical" id="p-809">
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-35"><article class="exploration project-like"><div class="para logical" id="p-843">
 <div class="para">The following questions are not related.</div>
 <ol class="decimal">
-<li id="li-225"><div class="para" id="p-810">Let <span class="process-math">\(\alpha(x)=\left\{\begin{array}{ll}x &amp; x&lt;0 \\ e^{x} &amp; x \geq 0\end{array}\right.\)</span> Evaluate <span class="process-math">\(\int_{-1}^{1} x d \alpha\)</span>
+<li id="li-236"><div class="para" id="p-844">Let <span class="process-math">\(\alpha(x)=\left\{\begin{array}{ll}x &amp; x&lt;0 \\ e^{x} &amp; x \geq 0\end{array}\right.\)</span> Evaluate <span class="process-math">\(\int_{-1}^{1} x d \alpha\)</span>
 </div></li>
-<li id="li-226"><div class="para" id="p-811">Suppose <span class="process-math">\(f:[0,1] \rightarrow \mathbb{R}\)</span> is continuous. Evaluate <span class="process-math">\(\lim _{n \rightarrow \infty} n \int_{0}^{1} x^{n} f(x) d x\text{.}\)</span> Give a complete proof of your answer.</div></li>
+<li id="li-237"><div class="para" id="p-845">Suppose <span class="process-math">\(f:[0,1] \rightarrow \mathbb{R}\)</span> is continuous. Evaluate <span class="process-math">\(\lim _{n \rightarrow \infty} n \int_{0}^{1} x^{n} f(x) d x\text{.}\)</span> Give a complete proof of your answer.</div></li>
 </ol>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-52" id="solution-52"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-52"><div class="solution solution-like"><div class="para" id="p-812">Coming (not so) soon!</div></div></div>
-</div></article> <article class="problem example-like" id="problem-36"><h2 class="heading">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-54" id="solution-54"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-54"><div class="solution solution-like"><div class="para" id="p-846">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-36"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-36"><h2 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.36</span><span class="period">.</span>
-</h2>
-<div class="para" id="p-813">Suppose <span class="process-math">\(f:[0,1] \rightarrow[0,1]\)</span> is a function such that <span class="process-math">\(f(0)=0, f(1)=1\text{,}\)</span> has a continuous derivative, and <span class="process-math">\(f^{\prime}(x)&gt;0\)</span> for every <span class="process-math">\(x \in[0,1]\text{.}\)</span> Prove there exists a sequence <span class="process-math">\(P_{n}\)</span> of polynomials such that <span class="process-math">\(P_{n}\)</span> converges uniformly to <span class="process-math">\(f\)</span> and such that for every <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(P_{n}\)</span> is strictly increasing, <span class="process-math">\(P_{n}(0)=0\text{,}\)</span> and <span class="process-math">\(P_{n}(1)=1\text{.}\)</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-36"><article class="exploration project-like"><div class="para" id="p-847">Suppose <span class="process-math">\(f:[0,1] \rightarrow[0,1]\)</span> is a function such that <span class="process-math">\(f(0)=0, f(1)=1\text{,}\)</span> has a continuous derivative, and <span class="process-math">\(f^{\prime}(x)&gt;0\)</span> for every <span class="process-math">\(x \in[0,1]\text{.}\)</span> Prove there exists a sequence <span class="process-math">\(P_{n}\)</span> of polynomials such that <span class="process-math">\(P_{n}\)</span> converges uniformly to <span class="process-math">\(f\)</span> and such that for every <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(P_{n}\)</span> is strictly increasing, <span class="process-math">\(P_{n}(0)=0\text{,}\)</span> and <span class="process-math">\(P_{n}(1)=1\text{.}\)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-53" id="solution-53"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-53"><div class="solution solution-like"><div class="para" id="p-814">Coming (not so) soon!</div></div></div>
-</div></article></section><section class="paragraphs" id="paragraphs-8"><h1 class="heading"><span class="title">Winter 2020.</span></h1> <article class="problem example-like" id="problem-37"><h2 class="heading">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-55" id="solution-55"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-55"><div class="solution solution-like"><div class="para" id="p-848">Coming (not so) soon!</div></div></div>
+</div></article></div></section><section class="paragraphs" id="paragraphs-8"><h1 class="heading"><span class="title">Winter 2020.</span></h1> <article class="exploration project-like" id="exploration-37"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-37"><h2 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.37</span><span class="period">.</span>
-</h2>
-<div class="para" id="p-815">Let <span class="process-math">\(\left\{a_{n}\right\}_{n=1}^{\infty} \subset(0, \infty)\)</span> and <span class="process-math">\(c&gt;0\)</span> be given. Suppose that <span class="process-math">\(\lim _{n \rightarrow \infty} a_{n}=0\)</span> and <span class="process-math">\(\sum_{n=1}^{\infty} a_{n}\)</span> diverges. Prove that there exists a subsequence <span class="process-math">\(\left\{a_{n_{k}}\right\}_{k=1}^{\infty}\)</span> such that <span class="process-math">\(\sum_{k=1}^{\infty} a_{n_{k}}=c\text{.}\)</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-37"><article class="exploration project-like"><div class="para" id="p-849">Let <span class="process-math">\(\left\{a_{n}\right\}_{n=1}^{\infty} \subset(0, \infty)\)</span> and <span class="process-math">\(c&gt;0\)</span> be given. Suppose that <span class="process-math">\(\lim _{n \rightarrow \infty} a_{n}=0\)</span> and <span class="process-math">\(\sum_{n=1}^{\infty} a_{n}\)</span> diverges. Prove that there exists a subsequence <span class="process-math">\(\left\{a_{n_{k}}\right\}_{k=1}^{\infty}\)</span> such that <span class="process-math">\(\sum_{k=1}^{\infty} a_{n_{k}}=c\text{.}\)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-54" id="solution-54"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-54"><div class="solution solution-like"><div class="para" id="p-816">Coming (not so) soon!</div></div></div>
-</div></article> <article class="problem example-like" id="problem-38"><h2 class="heading">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-56" id="solution-56"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-56"><div class="solution solution-like"><div class="para" id="p-850">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-38"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-38"><h2 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.38</span><span class="period">.</span>
-</h2>
-<div class="para logical" id="p-817">
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-38"><article class="exploration project-like"><div class="para logical" id="p-851">
 <div class="para">Let <span class="process-math">\(\left\{a_{n}\right\}_{n=1}^{\infty},\left\{b_{n}\right\}_{n=1}^{\infty} \subset \mathbb{R}\)</span> be bounded sequences, and define the sets</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1090,47 +1066,45 @@ A:=\left\{a_{n}: n=1,2, \ldots\right\}, \quad B:=\left\{b_{n}: n=1,2, \ldots\rig
 </div>
 <div class="para">Prove or provide a counterexample each of the following statements.</div>
 <ol class="decimal">
-<li id="li-227"><div class="para" id="p-818">If <span class="process-math">\(a \in \mathbb{R}\)</span> is a limit point for <span class="process-math">\(A\)</span> and <span class="process-math">\(b \in \mathbb{R}\)</span> is a limit point for <span class="process-math">\(B\text{,}\)</span> then <span class="process-math">\(a+b\)</span> is a limit point for <span class="process-math">\(C\text{.}\)</span> (Here limit point means accumulation or cluster point.)</div></li>
-<li id="li-228"><div class="para" id="p-819">If <span class="process-math">\(c \in \bar{C}\text{,}\)</span> then there exists <span class="process-math">\(a \in \bar{A}\)</span> and <span class="process-math">\(b \in \bar{B}\)</span> such that <span class="process-math">\(a+b=c\text{.}\)</span>
+<li id="li-238"><div class="para" id="p-852">If <span class="process-math">\(a \in \mathbb{R}\)</span> is a limit point for <span class="process-math">\(A\)</span> and <span class="process-math">\(b \in \mathbb{R}\)</span> is a limit point for <span class="process-math">\(B\text{,}\)</span> then <span class="process-math">\(a+b\)</span> is a limit point for <span class="process-math">\(C\text{.}\)</span> (Here limit point means accumulation or cluster point.)</div></li>
+<li id="li-239"><div class="para" id="p-853">If <span class="process-math">\(c \in \bar{C}\text{,}\)</span> then there exists <span class="process-math">\(a \in \bar{A}\)</span> and <span class="process-math">\(b \in \bar{B}\)</span> such that <span class="process-math">\(a+b=c\text{.}\)</span>
 </div></li>
-<li id="li-229"><div class="para" id="p-820">If <span class="process-math">\(a_{n} \geq 0\)</span> for all <span class="process-math">\(n=1,2, \ldots\text{,}\)</span> then <span class="process-math">\(\limsup _{n \rightarrow \infty}\left(a_{n}^{2}\right)=\left(\limsup _{n \rightarrow \infty} a_{n}\right)^{2}\text{.}\)</span>
+<li id="li-240"><div class="para" id="p-854">If <span class="process-math">\(a_{n} \geq 0\)</span> for all <span class="process-math">\(n=1,2, \ldots\text{,}\)</span> then <span class="process-math">\(\limsup _{n \rightarrow \infty}\left(a_{n}^{2}\right)=\left(\limsup _{n \rightarrow \infty} a_{n}\right)^{2}\text{.}\)</span>
 </div></li>
 </ol>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-55" id="solution-55"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-55"><div class="solution solution-like"><div class="para" id="p-821">Coming (not so) soon!</div></div></div>
-</div></article> <article class="problem example-like" id="problem-39"><h2 class="heading">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-57" id="solution-57"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-57"><div class="solution solution-like"><div class="para" id="p-855">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-39"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-39"><h2 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.39</span><span class="period">.</span>
-</h2>
-<div class="para logical" id="p-822">
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-39"><article class="exploration project-like"><div class="para logical" id="p-856">
 <div class="para">Let <span class="process-math">\((X, \rho)\)</span> be a metric space and define <span class="process-math">\(\sigma: X \times X \rightarrow[0, \infty)\)</span> by</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\sigma(x, y):=\min \{1, \rho(x, y)\} .
+\sigma(x, y):=\min \{1, \rho(x, y)\}.
 \end{equation*}
 </div>
 <ol class="decimal">
-<li id="li-230"><div class="para" id="p-823">Prove that <span class="process-math">\(\sigma\)</span> is a metric on <span class="process-math">\(X\text{.}\)</span>
+<li id="li-241"><div class="para" id="p-857">Prove that <span class="process-math">\(\sigma\)</span> is a metric on <span class="process-math">\(X\text{.}\)</span>
 </div></li>
-<li id="li-231"><div class="para" id="p-824">Prove that <span class="process-math">\((X, \rho)\)</span> is complete if and only if <span class="process-math">\((X, \sigma)\)</span> is complete.</div></li>
+<li id="li-242"><div class="para" id="p-858">Prove that <span class="process-math">\((X, \rho)\)</span> is complete if and only if <span class="process-math">\((X, \sigma)\)</span> is complete.</div></li>
 </ol>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-56" id="solution-56"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-56"><div class="solution solution-like"><div class="para" id="p-825">Coming (not so) soon!</div></div></div>
-</div></article> <article class="problem example-like" id="problem-40"><h2 class="heading">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-58" id="solution-58"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-58"><div class="solution solution-like"><div class="para" id="p-859">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-40"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-40"><h2 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.40</span><span class="period">.</span>
-</h2>
-<div class="para logical" id="p-826">
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-40"><article class="exploration project-like"><div class="para logical" id="p-860">
 <div class="para">With <span class="process-math">\(a&lt;b\text{,}\)</span> let <span class="process-math">\(\mathcal{C}([a, b])\)</span> denote the family of all <span class="process-math">\(\mathbb{R}\)</span>-valued functions that are continuous on the interval <span class="process-math">\([a, b]\text{.}\)</span>
 </div>
 <ol class="decimal">
-<li id="li-232"><div class="para" id="p-827">Let <span class="process-math">\(M&lt;\infty\)</span> and <span class="process-math">\(\mathcal{F} \subseteq \mathcal{C}([a, b])\)</span> be given. Assume that each <span class="process-math">\(f \in \mathcal{F}\)</span> is differentiable on <span class="process-math">\((a, b)\)</span> and satisfies <span class="process-math">\(|f(a)| \leq M\)</span> and <span class="process-math">\(\left|f^{\prime}(x)\right| \leq M\)</span> for all <span class="process-math">\(x \in(a, b)\text{.}\)</span> Prove that <span class="process-math">\(\mathcal{F}\)</span> is equicontinuous on <span class="process-math">\([a, b]\text{.}\)</span>
+<li id="li-243"><div class="para" id="p-861">Let <span class="process-math">\(M&lt;\infty\)</span> and <span class="process-math">\(\mathcal{F} \subseteq \mathcal{C}([a, b])\)</span> be given. Assume that each <span class="process-math">\(f \in \mathcal{F}\)</span> is differentiable on <span class="process-math">\((a, b)\)</span> and satisfies <span class="process-math">\(|f(a)| \leq M\)</span> and <span class="process-math">\(\left|f^{\prime}(x)\right| \leq M\)</span> for all <span class="process-math">\(x \in(a, b)\text{.}\)</span> Prove that <span class="process-math">\(\mathcal{F}\)</span> is equicontinuous on <span class="process-math">\([a, b]\text{.}\)</span>
 </div></li>
-<li id="li-233"><div class="para logical" id="p-828">
+<li id="li-244"><div class="para logical" id="p-862">
 <div class="para">Let a uniformly bounded sequence of functions <span class="process-math">\(\left\{g_{n}\right\}_{n=1}^{\infty} \subset \mathcal{C}([0,1])\)</span> be given. For each <span class="process-math">\(n=1,2, \ldots\text{,}\)</span> define <span class="process-math">\(f_{n}:[0,1] \rightarrow \mathbb{R}\)</span> by</div>
 <div class="displaymath process-math">
 \begin{equation*}
-f_{n}(x):= \begin{cases}0, &amp; x=0 \\ \frac{1}{x} \int_{0}^{x} s g_{n}(s) \mathrm{d} s, &amp; 0&lt;x \leq 1 .\end{cases}
+f_{n}(x):= \begin{cases}0, &amp; x=0 \\ \frac{1}{x} \int_{0}^{x} s g_{n}(s) \mathrm{d} s, &amp; 0&lt;x \leq 1.\end{cases}
 \end{equation*}
 </div>
 <div class="para">Prove that there exists a subsequence of <span class="process-math">\(\left\{f_{n}\right\}_{n=1}^{\infty}\)</span> that converges uniformly on <span class="process-math">\([0,1]\)</span> to some <span class="process-math">\(f \in \mathcal{C}([0,1])\text{.}\)</span>
@@ -1139,40 +1113,605 @@ f_{n}(x):= \begin{cases}0, &amp; x=0 \\ \frac{1}{x} \int_{0}^{x} s g_{n}(s) \mat
 </ol>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-57" id="solution-57"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-57"><div class="solution solution-like"><div class="para" id="p-829">Coming (not so) soon!</div></div></div>
-</div></article> <article class="problem example-like" id="problem-41"><h2 class="heading">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-59" id="solution-59"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-59"><div class="solution solution-like"><div class="para" id="p-863">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-41"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-41"><h2 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.41</span><span class="period">.</span>
-</h2>
-<div class="para logical" id="p-830"><ol class="decimal">
-<li id="li-234"><div class="para" id="p-831">Let <span class="process-math">\(a, b \in \mathbb{R}\text{,}\)</span> with <span class="process-math">\(a&lt;b\text{,}\)</span> be given, and suppose that <span class="process-math">\(f:(a, b) \rightarrow \mathbb{R}\)</span> is differentiable on <span class="process-math">\((a, b)\)</span> and that <span class="process-math">\(\lim _{x \rightarrow c} f^{\prime}(x)\)</span> both exists and is finite, for all <span class="process-math">\(c \in(a, b)\text{.}\)</span> Prove that <span class="process-math">\(f\)</span> is continuously differentiable on <span class="process-math">\((a, b)\text{.}\)</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-41"><article class="exploration project-like"><div class="para logical" id="p-864"><ol class="decimal">
+<li id="li-245"><div class="para" id="p-865">Let <span class="process-math">\(a, b \in \mathbb{R}\text{,}\)</span> with <span class="process-math">\(a&lt;b\text{,}\)</span> be given, and suppose that <span class="process-math">\(f:(a, b) \rightarrow \mathbb{R}\)</span> is differentiable on <span class="process-math">\((a, b)\)</span> and that <span class="process-math">\(\lim _{x \rightarrow c} f^{\prime}(x)\)</span> both exists and is finite, for all <span class="process-math">\(c \in(a, b)\text{.}\)</span> Prove that <span class="process-math">\(f\)</span> is continuously differentiable on <span class="process-math">\((a, b)\text{.}\)</span>
 </div></li>
-<li id="li-235"><div class="para" id="p-832">Produce a function <span class="process-math">\(f:(-1,1) \rightarrow \mathbb{R}\)</span> that is everywhere differentiable and such that <span class="process-math">\(f^{\prime}\)</span> is discontinuous at some <span class="process-math">\(c \in(-1,1)\text{.}\)</span> Justify your claim.</div></li>
+<li id="li-246"><div class="para" id="p-866">Produce a function <span class="process-math">\(f:(-1,1) \rightarrow \mathbb{R}\)</span> that is everywhere differentiable and such that <span class="process-math">\(f^{\prime}\)</span> is discontinuous at some <span class="process-math">\(c \in(-1,1)\text{.}\)</span> Justify your claim.</div></li>
 </ol></div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-58" id="solution-58"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-58"><div class="solution solution-like"><div class="para" id="p-833">Coming (not so) soon!</div></div></div>
-</div></article> <article class="problem example-like" id="problem-42"><h2 class="heading">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-60" id="solution-60"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-60"><div class="solution solution-like"><div class="para" id="p-867">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-42"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-42"><h2 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.42</span><span class="period">.</span>
-</h2>
-<div class="para logical" id="p-834">
-<div class="para">The parts of this problem are not connected.</div>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-42"><article class="exploration project-like"><div class="para logical" id="p-868">
+<div class="para">The parts of this exploration are not connected.</div>
 <ol class="decimal">
-<li id="li-236"><div class="para logical" id="p-835">
+<li id="li-247"><div class="para logical" id="p-869">
 <div class="para">Let <span class="process-math">\(\left\{a_{n}\right\}_{n=1}^{\infty} \subset \mathbb{R}\)</span> and a strictly increasing sequence <span class="process-math">\(\left\{x_{n}\right\}_{n=1}^{\infty} \subset(0,1)\)</span> be given. Assume that <span class="process-math">\(\sum_{n=1}^{\infty} a_{n}\)</span> is absolutely convergent, and define <span class="process-math">\(\alpha:[0,1] \rightarrow \mathbb{R}\)</span> by</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\alpha(x):= \begin{cases}a_{n}, &amp; x=x_{n} \\ 0, &amp; \text { otherwise } .\end{cases}
+\alpha(x):= \begin{cases}a_{n}, &amp; x=x_{n} \\ 0, &amp; \text { otherwise }.\end{cases}
 \end{equation*}
 </div>
 <div class="para">Prove or disprove: <span class="process-math">\(\alpha\)</span> has bounded variation on <span class="process-math">\([0,1]\text{.}\)</span>
 </div>
 </div></li>
-<li id="li-237"><div class="para" id="p-836">Suppose that <span class="process-math">\(f:[0,1] \rightarrow \mathbb{R}\)</span> is Riemann-Stieltjes integrable with respect to a nondecreasing function <span class="process-math">\(\beta:[0,1] \rightarrow[0, \infty)\text{.}\)</span> Prove that <span class="process-math">\(f\)</span> is Riemann-Stieltjes integrable with respect to the function <span class="process-math">\(\beta^{2}\text{.}\)</span>
+<li id="li-248"><div class="para" id="p-870">Suppose that <span class="process-math">\(f:[0,1] \rightarrow \mathbb{R}\)</span> is Riemann-Stieltjes integrable with respect to a nondecreasing function <span class="process-math">\(\beta:[0,1] \rightarrow[0, \infty)\text{.}\)</span> Prove that <span class="process-math">\(f\)</span> is Riemann-Stieltjes integrable with respect to the function <span class="process-math">\(\beta^{2}\text{.}\)</span>
 </div></li>
 </ol>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-59" id="solution-59"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-59"><div class="solution solution-like"><div class="para" id="p-837">Coming (not so) soon!</div></div></div>
-</div></article></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-4"><div class="fn">Recall this is the set obtained by removing <span class="process-math">\((1 / 3,2 / 3)\)</span> from <span class="process-math">\([0,1]\text{,}\)</span> then removing the middle third from the remaining intervals, etc.</div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-61" id="solution-61"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-61"><div class="solution solution-like"><div class="para" id="p-871">Coming (not so) soon!</div></div></div>
+</div></article></div></section><section class="paragraphs" id="paragraphs-9"><h1 class="heading"><span class="title">Spring 2019.</span></h1> <article class="exploration project-like" id="exploration-43"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-43"><h2 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.43</span><span class="period">.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-43"><article class="exploration project-like"><div class="para logical" id="p-872">
+<div class="para">Let <span class="process-math">\(\left(M, d_{M}\right)\)</span> and <span class="process-math">\(\left(N, d_{N}\right)\)</span> be metric spaces. Define <span class="process-math">\(d_{M \times N}:(M \times N) \times(M \times N) \rightarrow \mathbb{R}\)</span> by <span class="process-math">\(d_{M \times N}\left(\left(x_{1}, y_{1}\right),\left(x_{2}, y_{2}\right)\right):=d_{M}\left(x_{1}, x_{2}\right)+d_{N}\left(y_{1}, y_{2}\right), \quad\)</span> for all <span class="process-math">\(x_{1}, x_{2} \in M\)</span> and <span class="process-math">\(y_{1}, y_{2} \in N\text{.}\)</span>
+</div>
+<ol class="decimal">
+<li id="li-249"><div class="para" id="p-873">Prove that <span class="process-math">\(\left(M \times N, d_{M \times N}\right)\)</span> is a metric space.</div></li>
+<li id="li-250"><div class="para" id="p-874">Let <span class="process-math">\(S \subseteq M\)</span> and <span class="process-math">\(T \subseteq N\)</span> be compact sets in <span class="process-math">\(\left(M, d_{M}\right)\)</span> and <span class="process-math">\(\left(N, d_{N}\right)\text{,}\)</span> respectively. Prove that <span class="process-math">\(S \times T\)</span> is a compact set in <span class="process-math">\(\left(M \times N, d_{M \times N}\right)\text{.}\)</span>
+</div></li>
+</ol>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-62" id="solution-62"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-62"><div class="solution solution-like"><div class="para" id="p-875">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-44"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-44"><h2 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.44</span><span class="period">.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-44"><article class="exploration project-like"><div class="para logical" id="p-876">
+<div class="para">Let <span class="process-math">\(\left\{a_{n}\right\}_{n=1}^{\infty} \subset(0, \infty)\)</span> be given, and assume that <span class="process-math">\(\sum_{n=1}^{\infty} a_{n}\)</span> converges.</div>
+<ol class="decimal">
+<li id="li-251"><div class="para logical" id="p-877">
+<div class="para">Show that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sum_{n=1}^{\infty} \frac{a_{n}}{1+a_{n}} \text { converges and } \sum_{n=1}^{\infty} \frac{1}{1+a_{n}} \text { diverges. }
+\end{equation*}
+</div>
+</div></li>
+<li id="li-252"><div class="para" id="p-878">Suppose that <span class="process-math">\(\left\{b_{n}\right\}_{n=1}^{\infty} \subset \mathbb{R}\)</span> satisfies <span class="process-math">\(\left|b_{n+1}-b_{n}\right| \leq a_{n}\text{,}\)</span> for every <span class="process-math">\(n \in \mathbb{N}\text{.}\)</span> Prove <span class="process-math">\(\left\{b_{n}\right\}_{n=1}^{\infty}\)</span> is convergent.</div></li>
+</ol>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-63" id="solution-63"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-63"><div class="solution solution-like"><div class="para" id="p-879">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-45"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-45"><h2 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.45</span><span class="period">.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-45"><article class="exploration project-like"><div class="para logical" id="p-880">
+<div class="para">Let <span class="process-math">\(f:[0, \infty) \rightarrow \mathbb{R}\)</span> be continuous on <span class="process-math">\([0, \infty)\text{,}\)</span> and define <span class="process-math">\(F:(0, \infty) \rightarrow \mathbb{R}\)</span> by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+F(x):=\sup _{0 \leq s&lt;x} f(s)=\operatorname{lub}\{f(s): 0 \leq s&lt;x\}.
+\end{equation*}
+</div>
+<ol class="decimal">
+<li id="li-253"><div class="para" id="p-881">Show that <span class="process-math">\(\lim _{x \rightarrow 0^{+}} F(x)\)</span> exists.</div></li>
+<li id="li-254"><div class="para" id="p-882">Prove that <span class="process-math">\(F\)</span> is continuous on <span class="process-math">\((0, \infty)\text{.}\)</span>
+</div></li>
+<li id="li-255"><div class="para" id="p-883">Suppose that <span class="process-math">\(f\)</span> is bounded, as well as continuous, on <span class="process-math">\([0, \infty)\text{.}\)</span> Prove that <span class="process-math">\(F\)</span> is uniformly continuous on <span class="process-math">\([0, \infty)\text{.}\)</span>
+</div></li>
+</ol>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-64" id="solution-64"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-64"><div class="solution solution-like"><div class="para" id="p-884">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-46"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-46"><h2 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.46</span><span class="period">.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-46"><article class="exploration project-like"><div class="para logical" id="p-885">
+<div class="para">Consider the formal series</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sum_{n=0}^{\infty} \mathrm{e}^{-2 n x}\left(1-\mathrm{e}^{-x}\right).
+\end{equation*}
+</div>
+<div class="para">Prove or disprove each of the following statements.</div>
+<ol class="decimal">
+<li id="li-256"><div class="para" id="p-886">The series converges uniformly on the interval <span class="process-math">\([1, \infty)\text{.}\)</span>
+</div></li>
+<li id="li-257"><div class="para" id="p-887">The series converges uniformly on the interval <span class="process-math">\([0,1]\text{.}\)</span>
+</div></li>
+</ol>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-65" id="solution-65"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-65"><div class="solution solution-like"><div class="para" id="p-888">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-47"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-47"><h2 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.47</span><span class="period">.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-47"><article class="exploration project-like"><div class="para logical" id="p-889"><ol class="decimal">
+<li id="li-258"><div class="para" id="p-890">Let <span class="process-math">\(\alpha:[0,1] \rightarrow \mathbb{R}\)</span> be an increasing function that is continuous at 0, and let <span class="process-math">\(f:[0,1] \rightarrow \mathbb{R}\)</span> be a bounded function. Suppose that, for each <span class="process-math">\(0&lt;c&lt;1\text{,}\)</span> the function <span class="process-math">\(f\)</span> is Riemann-Stieltjes integrable with respect to <span class="process-math">\(\alpha\)</span> over <span class="process-math">\([c, 1]\text{.}\)</span> Prove that <span class="process-math">\(f\)</span> is Riemann-Stieljes integrable with respect to <span class="process-math">\(\alpha\)</span> over <span class="process-math">\([0,1]\text{.}\)</span>
+</div></li>
+<li id="li-259"><div class="para logical" id="p-891">
+<div class="para">Let <span class="process-math">\(\left\{q_{n}\right\}_{n=1}^{\infty} \subset[0,1]\)</span> be an enumeration of <span class="process-math">\(\mathbb{Q} \cap[0,1]\text{,}\)</span> the rational numbers in <span class="process-math">\([0,1]\text{.}\)</span> Define <span class="process-math">\(\beta:[0,1] \rightarrow \mathbb{R}\)</span> by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\beta(x):= \begin{cases}\frac{1}{n}, &amp; x=q_{n}, \\ 0, &amp; x \notin \mathbb{Q} \cap[0,1].\end{cases}
+\end{equation*}
+</div>
+<div class="para">Prove or disprove: <span class="process-math">\(\beta\)</span> has bounded variation on <span class="process-math">\([0,1]\text{.}\)</span>
+</div>
+</div></li>
+</ol></div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-66" id="solution-66"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-66"><div class="solution solution-like"><div class="para" id="p-892">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-48"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-48"><h2 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.48</span><span class="period">.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-48"><article class="exploration project-like"><div class="para logical" id="p-893">
+<div class="para">Suppose that <span class="process-math">\(f:[0,2] \rightarrow \mathbb{R}\)</span> has the following properties:</div>
+<ul class="disc">
+<li id="li-260"><div class="para" id="p-894">
+<span class="process-math">\(f\)</span> is continuous on <span class="process-math">\([0,2]\)</span> and differentiable on <span class="process-math">\((0,2)\text{;}\)</span>
+</div></li>
+<li id="li-261"><div class="para" id="p-895"><span class="process-math">\(\displaystyle f(0)=f(2)=0\)</span></div></li>
+<li id="li-262"><div class="para" id="p-896">there exists <span class="process-math">\(x_{0} \in(0,2)\)</span> such that <span class="process-math">\(\left|f\left(x_{0}\right)\right| \geq 1\text{.}\)</span>
+</div></li>
+</ul>
+<ol class="decimal">
+<li id="li-263"><div class="para" id="p-897">Prove that there exists <span class="process-math">\(c \in(0,2)\)</span> such that <span class="process-math">\(\left|f^{\prime}(c)\right| \geq 1\text{.}\)</span>
+</div></li>
+<li id="li-264"><div class="para" id="p-898">There exists <span class="process-math">\(k&gt;1\)</span> such that for each <span class="process-math">\(\gamma \in[0, k]\text{,}\)</span> there exists some <span class="process-math">\(c_{\gamma} \in(0,2)\)</span> such that <span class="process-math">\(\left|f^{\prime}\left(c_{\gamma}\right)\right|=\gamma\text{.}\)</span>
+</div></li>
+</ol>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-67" id="solution-67"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-67"><div class="solution solution-like"><div class="para" id="p-899">Coming (not so) soon!</div></div></div>
+</div></article></div></section><section class="paragraphs" id="paragraphs-10"><h1 class="heading"><span class="title">Winter 2019.</span></h1> <article class="exploration project-like" id="exploration-49"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-49"><h2 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.49</span><span class="period">.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-49"><article class="exploration project-like"><div class="para logical" id="p-900"><ol class="decimal">
+<li id="li-265"><div class="para" id="p-901">Let <span class="process-math">\(f_{n}(x)=\frac{1}{1+n^{2} x^{2}}\)</span> and <span class="process-math">\(g_{n}(x)=n x(1-x)^{n}\)</span> for <span class="process-math">\(x \in[0,1]\text{.}\)</span> Prove that <span class="process-math">\(\left\{f_{n}\right\}\)</span> and <span class="process-math">\(\left\{g_{n}\right\}\)</span> converge pointwise but not uniformly on <span class="process-math">\([0,1]\text{.}\)</span>
+</div></li>
+<li id="li-266"><div class="para" id="p-902">Are the families <span class="process-math">\(\left\{f_{n}\right\}\text{,}\)</span> respectively <span class="process-math">\(\left\{g_{n}\right\}\)</span> given in part (a) equicontinuous? Clearly motivate your answer.</div></li>
+</ol></div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-68" id="solution-68"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-68"><div class="solution solution-like"><div class="para" id="p-903">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-50"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-50"><h2 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.50</span><span class="period">.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-50"><article class="exploration project-like"><div class="para logical" id="p-904">
+<div class="para">Consider the following subset of the metric space <span class="process-math">\(\left(\mathcal{C}_{\mathrm{b}}([0,1]), \rho_{\infty}\right)\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A:=\left\{f \in \mathcal{C}_{\mathrm{b}}([0,1]): f([0,1]) \subseteq[0,1]\right\}.
+\end{equation*}
+</div>
+<ol class="decimal">
+<li id="li-267"><div class="para" id="p-905">Determine whether <span class="process-math">\(A\)</span> is bounded, and if so what is its diameter.</div></li>
+<li id="li-268"><div class="para" id="p-906">Determine whether <span class="process-math">\(A\)</span> is closed in <span class="process-math">\(\mathcal{C}_{\mathrm{b}}([0,1])\text{.}\)</span>
+</div></li>
+<li id="li-269"><div class="para" id="p-907">Determine whether <span class="process-math">\(A\)</span> is compact in <span class="process-math">\(\mathcal{C}_{\mathrm{b}}([0,1])\text{.}\)</span>
+</div></li>
+</ol>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-69" id="solution-69"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-69"><div class="solution solution-like"><div class="para" id="p-908">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-51"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-51"><h2 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.51</span><span class="period">.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-51"><article class="exploration project-like"><div class="para logical" id="p-909">
+<div class="para">Determine the values of <span class="process-math">\(x \in \mathbb{R}\)</span> for which</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sum_{n=1}^{\infty} \frac{x^{n}}{1+n|x|^{n}}
+\end{equation*}
+</div>
+<div class="para">converges.</div>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-70" id="solution-70"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-70"><div class="solution solution-like"><div class="para" id="p-910">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-52"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-52"><h2 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.52</span><span class="period">.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-52"><article class="exploration project-like"><div class="para logical" id="p-911">
+<div class="para">Suppose that <span class="process-math">\(f:[0,1] \rightarrow \mathbb{R}\)</span> is differentiable and <span class="process-math">\(f(0)=0\text{.}\)</span> Assume that there is a <span class="process-math">\(k&gt;0\)</span> such that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\left|f^{\prime}(x)\right| \leq k|f(x)|
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(x \in[0,1]\text{.}\)</span> Prove that <span class="process-math">\(f(x)=0\)</span> for all <span class="process-math">\(x \in[0,1]\text{.}\)</span>
+</div>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-71" id="solution-71"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-71"><div class="solution solution-like"><div class="para" id="p-912">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-53"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-53"><h2 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.53</span><span class="period">.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-53"><article class="exploration project-like"><div class="para logical" id="p-913">
+<div class="para">Use the Riemann condition to show that <span class="process-math">\(f \in \mathcal{R}_{\alpha}[0,4]\)</span> where <span class="process-math">\(f(x)=e^{2 x}\)</span> and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\alpha(x)=\left\{\begin{array}{lc}
+x+1, &amp; 0 \leq x \leq 2 \\
+3 x-2, &amp; 2&lt;x \leq 4
+\end{array}\right.
+\end{equation*}
+</div>
+<div class="para">Compute the value of the Riemann-Stieltjes integral <span class="process-math">\(\int_{0}^{4} f(x) d \alpha\text{.}\)</span>
+</div>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-72" id="solution-72"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-72"><div class="solution solution-like"><div class="para" id="p-914">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-54"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-54"><h2 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.54</span><span class="period">.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-54"><article class="exploration project-like"><div class="para" id="p-915">Use the Heine-Borel Theorem to prove that if <span class="process-math">\(f\)</span> is continuous on <span class="process-math">\([a, b]\)</span> and <span class="process-math">\(f(x)&gt;0\)</span> for every <span class="process-math">\(x \in[a, b]\)</span> then there exists <span class="process-math">\(\varepsilon&gt;0\)</span> such that <span class="process-math">\(f(x) \geq \varepsilon\)</span> for every <span class="process-math">\(x \in[a, b]\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-73" id="solution-73"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-73"><div class="solution solution-like"><div class="para" id="p-916">Coming (not so) soon!</div></div></div>
+</div></article></div></section><section class="paragraphs" id="paragraphs-11"><h1 class="heading"><span class="title">Spring 2018.</span></h1> <article class="exploration project-like" id="exploration-55"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-55"><h2 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.55</span><span class="period">.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-55"><article class="exploration project-like"><div class="para logical" id="p-917">
+<div class="para">Determine whether the following sequences converge and carefully justify your claims:</div>
+<ol class="decimal">
+<li id="li-270"><div class="para" id="p-918"><span class="process-math">\(\displaystyle x_{n}=\frac{2 n \cdot n !}{n^{n}} ;\)</span></div></li>
+<li id="li-271"><div class="para" id="p-919"><span class="process-math">\(y_{n}=\sum_{k=1}^{n} \frac{\cos (k !)}{k(k+1)}\text{.}\)</span></div></li>
+</ol>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-74" id="solution-74"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-74"><div class="solution solution-like"><div class="para" id="p-920">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-56"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-56"><h2 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.56</span><span class="period">.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-56"><article class="exploration project-like"><div class="para logical" id="p-921">
+<div class="para">Find the domain of convergence and the sum of the series</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sum_{n \geq 0}(-1)^{n} \frac{x^{2 n+1}}{2 n+1}
+\end{equation*}
+</div>
+<div class="para">Show how one may use the sum of the series to provide an approximation for <span class="process-math">\(\pi\)</span> up to three decimals. Be sure to provide all technical details.</div>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-75" id="solution-75"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-75"><div class="solution solution-like"><div class="para" id="p-922">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-57"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-57"><h2 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.57</span><span class="period">.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-57"><article class="exploration project-like"><div class="para logical" id="p-923">
+<div class="para">Define <span class="process-math">\(f, \alpha \in \mathcal{B}([-2,2])\)</span> by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x):=\left\{\begin{array}{ll}
+-1, &amp; x \in[-2,0) ; \\
+3, &amp; x \in[0,2]
+\end{array} \quad \text { and } \quad \alpha(x):= \begin{cases}-2, &amp; x \in[-2,0] \\
+1, &amp; x \in(0,2]\end{cases}\right.
+\end{equation*}
+</div>
+<div class="para">Determine whether <span class="process-math">\(f\)</span> is Riemann-Stieltjes integrable with respect to <span class="process-math">\(\alpha\)</span> over <span class="process-math">\([-1,1]\text{.}\)</span> If it is, evaluate <span class="process-math">\(\int_{-1}^{1} f(x) \mathrm{d} \alpha(x)\)</span>
+</div>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-76" id="solution-76"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-76"><div class="solution solution-like"><div class="para" id="p-924">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-58"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-58"><h2 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.58</span><span class="period">.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-58"><article class="exploration project-like"><div class="para logical" id="p-925"><ol class="decimal">
+<li id="li-272"><div class="para logical" id="p-926">
+<div class="para">Given a set <span class="process-math">\(S\text{,}\)</span> show that the function <span class="process-math">\(\rho_{\infty}: \mathcal{B}(S) \times \mathcal{B}(S) \rightarrow \mathbb{R}\)</span> defined by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\rho_{\infty}(f, g):=\operatorname{lub}(\{|f(x)-g(x)|: x \in S\})
+\end{equation*}
+</div>
+<div class="para">is a metric on <span class="process-math">\(\mathcal{B}(S)\text{.}\)</span>
+</div>
+</div></li>
+<li id="li-273"><div class="para logical" id="p-927">
+<div class="para">Let <span class="process-math">\(M&gt;0\)</span> be given. Set</div>
+<div class="displaymath process-math">
+\begin{equation*}
+S:=\left\{f \in \mathcal{C}_{\mathrm{b}}([0,1]): f(0)=0, f \text { is differentiable on }(0,1) \text {, and }\left|f^{\prime}(x)\right| \leq M \text { for each } x \in(0,1)\right\}
+\end{equation*}
+</div>
+<div class="para">Determine whether the set <span class="process-math">\(S\)</span> is compact in <span class="process-math">\(\left(\mathcal{C}_{\mathrm{b}}([0,1]), \rho_{\infty}\right)\text{.}\)</span>
+</div>
+</div></li>
+</ol></div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-77" id="solution-77"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-77"><div class="solution solution-like"><div class="para" id="p-928">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-59"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-59"><h2 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.59</span><span class="period">.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-59"><article class="exploration project-like"><div class="para logical" id="p-929"><ol class="decimal">
+<li id="li-274"><div class="para" id="p-930">If <span class="process-math">\(\left\{f_{n}\right\}_{n \geq 1}\)</span> is an equicontinuous sequence of functions on a compact interval and <span class="process-math">\(f_{n} \rightarrow f\)</span> pointwise, prove that the convergence is uniform.</div></li>
+<li id="li-275"><div class="para" id="p-931">Let <span class="process-math">\(\alpha, M&gt;0\)</span> be given, and suppose that <span class="process-math">\(\left\{f_{n}\right\}_{n \geq 1}\)</span> satisfies <span class="process-math">\(\left|f_{n}(x)-f_{n}(y)\right| \leq M|x-y|^{\alpha}\text{,}\)</span> for all <span class="process-math">\(n \geq 1\)</span> and all <span class="process-math">\(x, y\)</span> in an interval <span class="process-math">\([a, b]\text{.}\)</span> Show that <span class="process-math">\(\left\{f_{n}\right\}_{n \geq 1}\)</span> is equicontinuous.</div></li>
+</ol></div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-78" id="solution-78"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-78"><div class="solution solution-like"><div class="para logical" id="p-932"><ol class="decimal">
+<li id="li-276">
+<div class="para logical" id="p-933">
+<div class="para">Claim: <span class="process-math">\((f_n)_{n=1}^\infty\)</span> is bounded. If not, there is a subsequence <span class="process-math">\((f_{n_k})_{k=1}^\infty\)</span> of <span class="process-math">\((f_n)_{n=1}^\infty\)</span> so that <span class="process-math">\(\lim_{k\rightarrow\infty}\left|{\left|{{f_{n_k}}}\right|}\right|=\infty\text{.}\)</span> By the extreme value theroem, exists <span class="process-math">\(x_k\in[a,b]\)</span> with <span class="process-math">\(\left|{f_{n_k}(x_k)}\right|=\left|{\left|{{f_{n_k}}}\right|}\right|_\infty\text{.}\)</span> Using that <span class="process-math">\([a,b]\)</span> is compact and passing to a subsequence, we may assume <span class="process-math">\((x_k)_{k=1}^\infty\)</span> converges to some <span class="process-math">\(x\in[a,b]\text{.}\)</span> We'll show that <span class="process-math">\(\left|{f_{n_k}(x_k)}\right|\rightarrow\left|{f(x)}\right|\text{.}\)</span> To this end, fix <span class="process-math">\(\varepsilon&gt;0\text{.}\)</span> Let <span class="process-math">\(\delta&gt;0\)</span> be such that for all <span class="process-math">\(k\geq 1, x,y\in[a,b]\)</span> with <span class="process-math">\(\left|{x-y}\right|&lt;\delta,\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\left|{f_{n_k}(x)-f_{n_k}(y)}\right|&lt;\varepsilon.
+\end{equation*}
+</div>
+<div class="para">Then choose <span class="process-math">\(L\geq 1\)</span> so that for all <span class="process-math">\(k\geq L\text{,}\)</span> we have <span class="process-math">\(d(x_k,x)&lt;\delta\)</span> and <span class="process-math">\(\left|{f_{n_k}(X)-f(x)}\right|&lt;\varepsilon\text{.}\)</span> Then if <span class="process-math">\(k\geq L\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+\left|{f(x_k)-f(x)}\right|
+&lt;\left|{f_{n_k}(x_k)-f_{n_k}(x)}\right|+\left|{f_{n_k}(x)-f(x)}\right|
+&lt;2\varepsilon
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(\left|{f_{n_k}(x_k)-f_{n_k}(x)}\right|&lt;\varepsilon\)</span> since <span class="process-math">\(d(x_k,x)&lt;\delta\)</span> (as <span class="process-math">\(k\geq L\)</span>) and <span class="process-math">\(\left|{f_{n_k}(x)-f(x)}\right|&lt;\varepsilon\)</span> since <span class="process-math">\(k\geq L\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+f(x)
+=\lim_{k\rightarrow\infty}f_{n_k}(x_k).
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">In particular,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+\left|{f(x)}\right|
+=\lim_{k\rightarrow\infty}\left|{f_{n_k}(x_k)}\right|
+=\lim_{k\rightarrow\infty}\left|{\left|{{f_{n_k}}}\right|}\right|_\infty
+=\infty,     
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">a contradiction.</div>
+</div>
+<div class="para" id="p-934">Suppose <span class="process-math">\((f_n)_{n=1}^\infty\)</span> does not converge uniformly to <span class="process-math">\(f\text{.}\)</span> Then exists <span class="process-math">\(\varepsilon&gt;0\)</span> such that for all <span class="process-math">\(N\geq 1,\exists n\geq N\)</span> such that <span class="process-math">\(\left|{\left|{{f-f_n}}\right|}\right|_\infty\geq \varepsilon\text{.}\)</span> Let <span class="process-math">\(\varepsilon&gt;0\)</span> as above. Then exists subsequence <span class="process-math">\((f_{n_k})_{k=1}^\infty\)</span> so that for all <span class="process-math">\(k\geq 1\text{,}\)</span> <span class="process-math">\(\left|{\left|{{f-f_{n_k}}}\right|}\right|_\infty\geq \varepsilon\text{.}\)</span> Then <span class="process-math">\((f_{n_k})_{k=1}^\infty\)</span> is bounded and equicontinuous. By the Arzelá-Ascoli Theorem, <span class="process-math">\((f_{n_k})_{k=1}^\infty\)</span> has a subsequence <span class="process-math">\((f_{n_{k_l}})_{l=1}^\infty\)</span> converging to some <span class="process-math">\(g\in C[a,b]\text{.}\)</span> Then by above, we have <span class="process-math">\(\left|{\left|{{f-g}}\right|}\right|_\infty\geq \varepsilon\text{.}\)</span> But <span class="process-math">\((f_{n_{k_l}})_{l=1}^\infty\)</span> converge pointwise to both <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> so <span class="process-math">\(f=g\)</span> and <span class="process-math">\(\left|{\left|{{f-g}}\right|}\right|_\infty=0\text{,}\)</span> a contradiction.</div>
+</li>
+<li id="li-277"><div class="para" id="p-935"></div></li>
+</ol></div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-60"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-60"><h2 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.60</span><span class="period">.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-60"><article class="exploration project-like"><div class="para logical" id="p-936">
+<div class="para">Let <span class="process-math">\(f: \mathbb{R} \rightarrow \mathbb{R}\)</span> be a continuous function, and for all <span class="process-math">\(n \geq 1\text{,}\)</span> put <span class="process-math">\(f_{n}(x)=f\left(x+\frac{1}{n}\right)\text{.}\)</span>
+</div>
+<ol class="decimal">
+<li id="li-278"><div class="para" id="p-937">Show that <span class="process-math">\(f_{n}\)</span> converges uniformly, as <span class="process-math">\(n \rightarrow \infty\text{,}\)</span> over any closed interval <span class="process-math">\([a, b]\text{.}\)</span>
+</div></li>
+<li id="li-279"><div class="para" id="p-938">Give an example of a continuous function <span class="process-math">\(f\)</span> for which the convergence is not uniform on <span class="process-math">\(\mathbb{R}\text{.}\)</span>
+</div></li>
+</ol>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-79" id="solution-79"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-79"><div class="solution solution-like"><div class="para" id="p-939">Coming (not so) soon!</div></div></div>
+</div></article></div></section><section class="paragraphs" id="paragraphs-12"><h1 class="heading"><span class="title">Winter 2018.</span></h1> <article class="exploration project-like" id="exploration-61"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-61"><h2 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.61</span><span class="period">.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-61"><article class="exploration project-like"><div class="para logical" id="p-940">
+<div class="para">Let <span class="process-math">\(\alpha\)</span> be a monotonically increasing function on an interval <span class="process-math">\([a, b]\)</span> and assume <span class="process-math">\(\alpha^{\prime}\)</span> is Riemann integrable in <span class="process-math">\([a, b]\text{.}\)</span> Let <span class="process-math">\(f\)</span> be a bounded real function on <span class="process-math">\([a, b]\text{.}\)</span> Prove that <span class="process-math">\(f \in \mathcal{R}(\alpha)\)</span> implies <span class="process-math">\(f \alpha^{\prime} \in \mathcal{R}[a, b]\text{,}\)</span> and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_{a}^{b} f d \alpha=\int_{a}^{b} f \alpha^{\prime} d x
+\end{equation*}
+</div>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-80" id="solution-80"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-80"><div class="solution solution-like"><div class="para" id="p-941">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-62"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-62"><h2 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.62</span><span class="period">.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-62"><article class="exploration project-like"><div class="para" id="p-942">Let <span class="process-math">\(X\)</span> be a metric space in which every infinite subset has a limit point. Prove that there is a countable subset <span class="process-math">\(D\)</span> of <span class="process-math">\(X\)</span> that is dense in <span class="process-math">\(X\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-81" id="solution-81"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-81"><div class="solution solution-like"><div class="para" id="p-943">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-63"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-63"><h2 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.63</span><span class="period">.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-63"><article class="exploration project-like"><div class="para" id="p-944">Let <span class="process-math">\(\left\{a_{n}^{\prime}\right\}\)</span> be any rearrangement of an infinite sequence <span class="process-math">\(\left\{a_{n}\right\}\text{.}\)</span> Assume <span class="process-math">\(\sum_{n=1}^{\infty} a_{n}\)</span> converges absolutely. Prove <span class="process-math">\(\sum_{n=1}^{\infty} a_{n}^{\prime}=\sum_{n=1}^{\infty} a_{n}\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-82" id="solution-82"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-82"><div class="solution solution-like"><div class="para" id="p-945">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-64"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-64"><h2 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.64</span><span class="period">.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-64"><article class="exploration project-like"><div class="para logical" id="p-946">
+<div class="para">Suppose <span class="process-math">\(f_{n} \rightarrow f\)</span> uniformly on <span class="process-math">\([0, \infty)\)</span> and <span class="process-math">\(\lim _{x \rightarrow \infty} f_{n}(x)\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim _{x \rightarrow \infty} \lim _{n \rightarrow \infty} f_{n}(x)=\lim _{n \rightarrow \infty} \lim _{x \rightarrow \infty} f_{n}(x)
+\end{equation*}
+</div>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-83" id="solution-83"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-83"><div class="solution solution-like"><div class="para" id="p-947">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-65"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-65"><h2 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.65</span><span class="period">.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-65"><article class="exploration project-like"><div class="para" id="p-948">Let <span class="process-math">\(f:[a, b] \rightarrow \mathbb{R}\text{.}\)</span> Suppose <span class="process-math">\(f \in B V[a, b]\text{.}\)</span> Prove <span class="process-math">\(f\)</span> is the difference of two increasing functions.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-84" id="solution-84"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-84"><div class="solution solution-like"><div class="para" id="p-949">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-66"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-66"><h2 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.66</span><span class="period">.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-66"><article class="exploration project-like"><div class="para" id="p-950">Suppose that <span class="process-math">\(f:[0,2] \rightarrow \mathbb{R}\)</span> is continuous on <span class="process-math">\([0,2]\text{,}\)</span> differentiable on <span class="process-math">\((0,2)\text{,}\)</span> satisfying <span class="process-math">\(f(0)=\)</span> <span class="process-math">\(f(2)=0\)</span> and <span class="process-math">\(f(c)=1\)</span> for some <span class="process-math">\(c \in(0,2)\text{.}\)</span> Prove that there is an <span class="process-math">\(x \in(0,2)\)</span> such that <span class="process-math">\(\left|f^{\prime}(x)\right|&gt;1\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-85" id="solution-85"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-85"><div class="solution solution-like"><div class="para" id="p-951">Coming (not so) soon!</div></div></div>
+</div></article></div></section><section class="paragraphs" id="paragraphs-13"><h1 class="heading"><span class="title">Spring 2017.</span></h1> <article class="exploration project-like" id="exploration-67"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-67"><h2 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.67</span><span class="period">.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-67"><article class="exploration project-like"><div class="para" id="p-952">Suppose that <span class="process-math">\(f: \mathbb{R} \rightarrow \mathbb{R}\)</span> is given by: <span class="process-math">\(f(x)=\frac{x^{3}}{1+x^{2}}\text{.}\)</span> By using the <span class="process-math">\(\epsilon-\delta\)</span> definition only, prove that <span class="process-math">\(f\)</span> is uniformly continuous on <span class="process-math">\(\mathbb{R}\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-2" id="hint-2"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-2"><div class="hint solution-like"><div class="para" id="p-953">Hint: write <span class="process-math">\(f(x)=x-\frac{x}{1+x^{2}}\text{.}\)</span>
+</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-86" id="solution-86"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-86"><div class="solution solution-like"><div class="para" id="p-954">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-68"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-68"><h2 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.68</span><span class="period">.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-68"><article class="exploration project-like"><div class="para" id="p-955">Let <span class="process-math">\((X, d)\)</span> be a metric space. A function <span class="process-math">\(f: X \rightarrow \mathbb{R}\)</span> is said to be lower semicontinuous at <span class="process-math">\(x_{0} \in X\)</span> if, for every <span class="process-math">\(\epsilon&gt;0\)</span> there exists <span class="process-math">\(\delta&gt;0\)</span> such that for all <span class="process-math">\(x \in X\)</span> with <span class="process-math">\(d\left(x, x_{0}\right)&lt;\delta\text{,}\)</span> then <span class="process-math">\(f(x)-f\left(x_{0}\right)&gt;-\epsilon\text{.}\)</span> Prove: <span class="process-math">\(f\)</span> is lower semicontinuous at <span class="process-math">\(x_{0} \in X\)</span> if and only if <span class="process-math">\(\liminf _{n \rightarrow \infty} f\left(x_{n}\right) \geq f\left(x_{0}\right)\)</span> whenever <span class="process-math">\(\left\{x_{n}\right\}_{n=1}^{\infty} \subset X\)</span> satisfies <span class="process-math">\(\lim _{n \rightarrow \infty} x_{n}=x_{0}\)</span> in <span class="process-math">\(X\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-87" id="solution-87"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-87"><div class="solution solution-like"><div class="para" id="p-956">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-69"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-69"><h2 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.69</span><span class="period">.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-69"><article class="exploration project-like"><div class="para" id="p-957">Let <span class="process-math">\((X, d)\)</span> be a compact metric space. Suppose that <span class="process-math">\(f_{n}: X \rightarrow[0, \infty)\)</span> is a sequence of continuous functions with <span class="process-math">\(f_{n}(x) \geq f_{n+1}(x)\text{,}\)</span> for all <span class="process-math">\(n \in \mathbb{N}\)</span> and all <span class="process-math">\(x \in X\text{,}\)</span> and such that <span class="process-math">\(f_{n} \longrightarrow 0\)</span> point-wise on <span class="process-math">\(X\text{.}\)</span> Prove <span class="process-math">\(\left\{f_{n}\right\}_{n=1}^{\infty}\)</span> converges to zero uniformly on <span class="process-math">\(X\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-88" id="solution-88"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-88"><div class="solution solution-like"><div class="para" id="p-958">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-70"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-70"><h2 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.70</span><span class="period">.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-70"><article class="exploration project-like"><div class="para logical" id="p-959">
+<div class="para">Let <span class="process-math">\(f:[-1,1] \longrightarrow \mathbb{R}\)</span> be a function such that <span class="process-math">\(f \in C^{2}([-1,1])\text{,}\)</span> i.e., <span class="process-math">\(f\)</span> is twice-continuously differentiable on <span class="process-math">\([-1,1]\text{,}\)</span> and <span class="process-math">\(f^{\prime \prime \prime}\)</span> exists on <span class="process-math">\((-1,1)\)</span> with <span class="process-math">\(\left|f^{\prime \prime \prime}(x)\right| \leq 1\)</span> for all <span class="process-math">\(x \in(-1,1)\text{.}\)</span> Let:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+a_{n}=n\left(f\left(\frac{1}{n}\right)-f\left(\frac{-1}{n}\right)\right)-2 f^{\prime}(0).
+\end{equation*}
+</div>
+<div class="para">Prove that the series <span class="process-math">\(\sum_{n=1}^{\infty} a_{n}\)</span> converges absolutely.</div>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-89" id="solution-89"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-89"><div class="solution solution-like"><div class="para" id="p-960">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-71"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-71"><h2 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.71</span><span class="period">.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-71"><article class="exploration project-like"><div class="para logical" id="p-961">
+<div class="para">Suppose that <span class="process-math">\(f:[0,1] \rightarrow \mathbb{R}\)</span> is a continuous function which satisfies, for <span class="process-math">\(n=0,1,2, \ldots\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_{0}^{1} f(\sqrt[2 n+1]{x}) d x=0
+\end{equation*}
+</div>
+<div class="para">Prove that <span class="process-math">\(f(x)=0\)</span> for all <span class="process-math">\(x \in[0,1]\text{.}\)</span>
+</div>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-90" id="solution-90"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-90"><div class="solution solution-like"><div class="para" id="p-962">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-72"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-72"><h2 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.72</span><span class="period">.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-72"><article class="exploration project-like"><div class="para logical" id="p-963">
+<div class="para">For each <span class="process-math">\(n \in \mathbb{N}\text{,}\)</span> let <span class="process-math">\(f_{n}:[0, \infty) \longrightarrow \mathbb{R}\)</span> be given by: <span class="process-math">\(f_{n}(x)=\frac{\sin (n x)}{1+n x}\text{.}\)</span>
+</div>
+<ol class="decimal">
+<li id="li-280"><div class="para" id="p-964">Prove <span class="process-math">\(f_{n}\)</span> converges point-wise on <span class="process-math">\([0, \infty)\)</span> and find the point-wise limit <span class="process-math">\(f\text{.}\)</span>
+</div></li>
+<li id="li-281"><div class="para" id="p-965">Show that <span class="process-math">\(f_{n} \longrightarrow f\)</span> uniformly on <span class="process-math">\([a, \infty)\)</span> for every <span class="process-math">\(a&gt;0\text{,}\)</span> but the convergence is not uniform on <span class="process-math">\([0, \infty)\text{.}\)</span>
+</div></li>
+</ol>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-91" id="solution-91"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-91"><div class="solution solution-like"><div class="para" id="p-966">Coming (not so) soon!</div></div></div>
+</div></article></div></section><section class="paragraphs" id="paragraphs-14"><h1 class="heading"><span class="title">Winter 2017.</span></h1> <article class="exploration project-like" id="exploration-73"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-73"><h2 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.73</span><span class="period">.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-73"><article class="exploration project-like"><div class="para logical" id="p-967">
+<div class="para">Consider the series <span class="process-math">\(\sum_{n=1}^{\infty} \frac{(-1)^{n}}{1+n x}, x \in \mathbb{R}\text{.}\)</span> Justify your answers to the following questions:</div>
+<ol class="decimal">
+<li id="li-282"><div class="para" id="p-968">Does the series converge at <span class="process-math">\(x=0\text{?}\)</span>
+</div></li>
+<li id="li-283"><div class="para" id="p-969">Does the series converge on <span class="process-math">\((0, \infty)\text{?}\)</span>
+</div></li>
+<li id="li-284"><div class="para" id="p-970">Does the series converge uniformly on <span class="process-math">\((0, \infty)\text{?}\)</span>
+</div></li>
+<li id="li-285"><div class="para" id="p-971">Does the series converge uniformly on <span class="process-math">\([a, \infty)\)</span> for any <span class="process-math">\(a&gt;0\text{.}\)</span>
+</div></li>
+</ol>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-92" id="solution-92"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-92"><div class="solution solution-like"><div class="para" id="p-972">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-74"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-74"><h2 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.74</span><span class="period">.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-74"><article class="exploration project-like"><div class="para logical" id="p-973">
+<div class="para">Prove: <span class="process-math">\(f \in \mathcal{R}(\alpha)\)</span> on <span class="process-math">\([a, b] \Longleftrightarrow\)</span> For any <span class="process-math">\(a&lt;c&lt;b, f \in \mathcal{R}(\alpha)\)</span> on <span class="process-math">\([a, c]\)</span> and on <span class="process-math">\([c, b]\text{.}\)</span> In addition, if either condition holds, then we always have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_{a}^{c} f d \alpha+\int_{c}^{b} f d \alpha=\int_{a}^{b} f d \alpha
+\end{equation*}
+</div>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-93" id="solution-93"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-93"><div class="solution solution-like"><div class="para" id="p-974">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-75"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-75"><h2 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.75</span><span class="period">.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-75"><article class="exploration project-like"><div class="para logical" id="p-975">
+<div class="para">Let <span class="process-math">\(f(x)=\sum_{n=0}^{\infty} a_{n}(1-x) x^{n}\text{,}\)</span> where <span class="process-math">\(\left\{a_{n}\right\}_{n=0}^{\infty} \subset \mathbb{R}\text{.}\)</span> Assume <span class="process-math">\(\lim _{n \rightarrow \infty} a_{n}=a \in \mathbb{R}\text{.}\)</span>
+</div>
+<ol class="decimal">
+<li id="li-286"><div class="para" id="p-976">Prove: <span class="process-math">\(f(x)\)</span> converges absolutely for <span class="process-math">\(|x|&lt;1\text{.}\)</span>
+</div></li>
+<li id="li-287"><div class="para" id="p-977">Prove: <span class="process-math">\(\lim _{x \rightarrow 1^{-}} f(x)=a\text{.}\)</span>
+</div></li>
+</ol>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-94" id="solution-94"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-94"><div class="solution solution-like"><div class="para" id="p-978">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-76"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-76"><h2 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.76</span><span class="period">.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-76"><article class="exploration project-like"><div class="para" id="p-979">Let <span class="process-math">\(f \in C[0,1]\text{.}\)</span> Prove that there is a sequence of polynomials, <span class="process-math">\(\left\{p_{n}\right\}\text{,}\)</span> of even degree monomials (i.e. every term in <span class="process-math">\(p_{n}\)</span> is of the form <span class="process-math">\(a_{k} x^{2 k}\)</span> for integer <span class="process-math">\(k \geq 0\)</span> ) that converges to <span class="process-math">\(f\)</span> uniformly on <span class="process-math">\([0,1]\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-95" id="solution-95"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-95"><div class="solution solution-like"><div class="para" id="p-980">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-77"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-77"><h2 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.77</span><span class="period">.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-77"><article class="exploration project-like"><div class="para" id="p-981">Assume <span class="process-math">\(\left\{f_{n}\right\}\)</span> is a sequence of monotonically increasing functions on <span class="process-math">\([a, b]\text{,}\)</span> and <span class="process-math">\(f_{n} \rightarrow f\)</span> point-wise. Prove that if <span class="process-math">\(f\)</span> is continuous then the convergence <span class="process-math">\(f_{n} \rightarrow f\)</span> is uniform on <span class="process-math">\([a, b]\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-96" id="solution-96"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-96"><div class="solution solution-like"><div class="para" id="p-982">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-78"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-78"><h2 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.78</span><span class="period">.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-78"><article class="exploration project-like"><div class="para logical" id="p-983">
+<div class="para">Let <span class="process-math">\((X, d)\)</span> be a metric space. A function <span class="process-math">\(f: X \rightarrow \mathbb{R}\)</span> is said to be lower semi-continuous (l.s.c.) if <span class="process-math">\(f^{-1}(a, \infty)=\{x \in X: f(x)&gt;a\}\)</span> is open in <span class="process-math">\(X\)</span> for every <span class="process-math">\(a \in \mathbb{R}\text{.}\)</span> Analogously, <span class="process-math">\(f\)</span> is upper semi-continuous (u.s.c.) if <span class="process-math">\(f^{-1}(-\infty, b)=\{x \in X: f(x)&lt;b\}\)</span> is open in <span class="process-math">\(X\)</span> for every <span class="process-math">\(b \in \mathbb{R}\text{.}\)</span>
+</div>
+<ol class="decimal">
+<li id="li-288"><div class="para" id="p-984">Prove that a function <span class="process-math">\(f: X \rightarrow \mathbb{R}\)</span> is continuous <span class="process-math">\(\Longleftrightarrow f\)</span> is both l.s.c and u.s.c.</div></li>
+<li id="li-289"><div class="para" id="p-985">Prove that <span class="process-math">\(f\)</span> is lower semi-continuous (l.s.c.) <span class="process-math">\(\Longleftrightarrow \liminf _{n \rightarrow \infty} f\left(x_{n}\right) \geq f(x)\)</span> whenever <span class="process-math">\(\left\{x_{n}\right\}_{n=1}^{\infty} \subset X\)</span> such that <span class="process-math">\(x_{n} \rightarrow x\)</span> in <span class="process-math">\(X\text{.}\)</span>
+</div></li>
+</ol>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-97" id="solution-97"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-97"><div class="solution solution-like"><div class="para" id="p-986">Coming (not so) soon!</div></div></div>
+</div></article></div></section><section class="paragraphs" id="paragraphs-15"><h1 class="heading"><span class="title">Spring 2016.</span></h1> <article class="exploration project-like" id="exploration-79"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-79"><h2 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.79</span><span class="period">.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-79"><article class="exploration project-like"><div class="para logical" id="p-987">
+<div class="para">Consider the function: <span class="process-math">\(f(x)=\frac{x}{1-x^{2}}, \quad x \in(0,1)\text{.}\)</span>
+</div>
+<ol class="decimal">
+<li id="li-290"><div class="para" id="p-988">By using the <span class="process-math">\(\epsilon-\delta\)</span> definition of the limit only, prove that <span class="process-math">\(f\)</span> is continuous on <span class="process-math">\((0,1)\text{.}\)</span> (Note: You are not allowed to trivialize the problem by using properties of limits).</div></li>
+<li id="li-291"><div class="para" id="p-989">Is <span class="process-math">\(f\)</span> uniformly continuous on <span class="process-math">\((0,1)\text{?}\)</span> Justify your answer.</div></li>
+</ol>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-98" id="solution-98"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-98"><div class="solution solution-like"><div class="para" id="p-990">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-80"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-80"><h2 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.80</span><span class="period">.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-80"><article class="exploration project-like"><div class="para logical" id="p-991">
+<div class="para">Let <span class="process-math">\(\left\{a_{k}\right\}_{k=1}^{\infty}\)</span> be a bounded sequence of real numbers and <span class="process-math">\(E\)</span> be given by:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+E:=\left\{s \in \mathbb{R}: \text { the set }\left\{k \in \mathbb{N}: a_{k} \geq s\right\} \text { has at most finitely many elements }\right\}.
+\end{equation*}
+</div>
+<div class="para">Prove that <span class="process-math">\(\limsup _{k \rightarrow \infty} a_{k}=\inf E\text{.}\)</span>
+</div>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-99" id="solution-99"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-99"><div class="solution solution-like"><div class="para" id="p-992">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-81"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-81"><h2 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.81</span><span class="period">.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-81"><article class="exploration project-like"><div class="para logical" id="p-993">
+<div class="para">Assume <span class="process-math">\((X, d)\)</span> is a compact metric space.</div>
+<ol class="decimal">
+<li id="li-292"><div class="para" id="p-994">Prove that <span class="process-math">\(X\)</span> is both complete and separable.</div></li>
+<li id="li-293"><div class="para" id="p-995">Suppose <span class="process-math">\(\left\{x_{k}\right\}_{k=1}^{\infty} \subset X\)</span> is a sequence such that the series <span class="process-math">\(\sum_{k=1}^{\infty} d\left(x_{k}, x_{k+1}\right)\)</span> is convergent. Prove that the sequence <span class="process-math">\(\left\{x_{k}\right\}_{k=1}^{\infty}\)</span> converges in <span class="process-math">\(X\text{.}\)</span>
+</div></li>
+</ol>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-100" id="solution-100"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-100"><div class="solution solution-like"><div class="para" id="p-996">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-82"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-82"><h2 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.82</span><span class="period">.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-82"><article class="exploration project-like"><div class="para" id="p-997">Suppose that <span class="process-math">\(f:[0,2] \rightarrow \mathbb{R}\)</span> is continuous on <span class="process-math">\([0,2]\text{,}\)</span> differentiable on <span class="process-math">\((0,2)\text{,}\)</span> and such that <span class="process-math">\(f(0)=f(2)=0, f(c)=1\text{,}\)</span> for some <span class="process-math">\(c \in(0,2)\text{.}\)</span> Prove that there is an <span class="process-math">\(x \in(0,2)\)</span> such that <span class="process-math">\(\left|f^{\prime}(x)\right|&gt;1\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-101" id="solution-101"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-101"><div class="solution solution-like"><div class="para" id="p-998">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-83"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-83"><h2 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.83</span><span class="period">.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-83"><article class="exploration project-like"><div class="para logical" id="p-999">
+<div class="para">Let <span class="process-math">\(f_{n}(x)=n^{\beta} x\left(1-x^{2}\right)^{n}, x \in[0,1], n \in \mathbb{N}\text{.}\)</span>
+</div>
+<ol class="decimal">
+<li id="li-294"><div class="para" id="p-1000">Prove that <span class="process-math">\(\left\{f_{n}\right\}_{n=1}^{\infty}\)</span> converges point-wise on <span class="process-math">\([0,1]\)</span> for every <span class="process-math">\(\beta \in \mathbb{R}\text{.}\)</span>
+</div></li>
+<li id="li-295"><div class="para" id="p-1001">Show that the convergence in part (a) is uniform on <span class="process-math">\([0,1]\)</span> for all <span class="process-math">\(\beta&lt;\frac{1}{2}\text{,}\)</span> but not uniform for any <span class="process-math">\(\beta \geq \frac{1}{2}\text{.}\)</span>
+</div></li>
+</ol>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-102" id="solution-102"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-102"><div class="solution solution-like"><div class="para" id="p-1002">Coming (not so) soon!</div></div></div>
+</div></article></div> <article class="exploration project-like" id="exploration-84"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-84"><h2 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">A.84</span><span class="period">.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-84"><article class="exploration project-like"><div class="para logical" id="p-1003"><ol class="decimal">
+<li id="li-296"><div class="para" id="p-1004">Suppose <span class="process-math">\(f:[-1,1] \longrightarrow \mathbb{R}\)</span> is a bounded function that is continuous at 0. Let <span class="process-math">\(\alpha(x)=-1\)</span> for <span class="process-math">\(x \in[-1,0]\)</span> and <span class="process-math">\(\alpha(x)=1\)</span> for <span class="process-math">\(x \in(0,1]\text{.}\)</span> Prove that <span class="process-math">\(f \in \mathcal{R}(\alpha)[-1,1]\text{,}\)</span> i.e., <span class="process-math">\(f\)</span> is Riemann integrable with respect to <span class="process-math">\(\alpha\)</span> on <span class="process-math">\([-1,1]\text{,}\)</span> and <span class="process-math">\(\int_{-1}^{1} f d \alpha=2 f(0)\text{.}\)</span>
+</div></li>
+<li id="li-297"><div class="para" id="p-1005">Let <span class="process-math">\(g:[0,1] \longrightarrow \mathbb{R}\)</span> be a continuous function such that <span class="process-math">\(\int_{0}^{1} g(x) x^{3 k+2} d x=0\text{,}\)</span> for all <span class="process-math">\(k=0,1,2, \cdots\text{.}\)</span> Prove that <span class="process-math">\(g(x)=0\)</span> for all <span class="process-math">\(x \in[0,1]\text{.}\)</span>
+</div></li>
+</ol></div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-103" id="solution-103"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-103"><div class="solution solution-like"><div class="para" id="p-1006">Coming (not so) soon!</div></div></div>
+</div></article></div></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-4"><div class="fn">Recall this is the set obtained by removing <span class="process-math">\((1 / 3,2 / 3)\)</span> from <span class="process-math">\([0,1]\text{,}\)</span> then removing the middle third from the remaining intervals, etc.</div></div>
 </div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="backmatter.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="colophon-2.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>

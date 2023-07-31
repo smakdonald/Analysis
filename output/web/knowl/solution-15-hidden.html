@@ -10,24 +10,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><div class="solution solution-like"><div class="para logical">
-<div class="para">Have <span class="process-math">\(g\in \mathcal{R}[0,3]\)</span> as is bounded and has only finitely many discontinuities. Also <span class="process-math">\(f\)</span> is differentiable and <span class="process-math">\(f'\in \mathcal{R}[0,3]\text{.}\)</span> So <span class="process-math">\(g\in\mathcal{R}([0,3],f)\)</span> and</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{aligned}
-\int_0^3 g(x)\,df(x)
-&amp;=\int_0^3 g(x)f'(x)\,dx\\
-&amp;=\int_0^1 x^2 2x\,dx + \int_1^2 e^x 2x\,dx+\int_2^32x\,dx\\
-&amp;=[\frac{1}{2}x^4]_0^1 +[2xe^x]_1^2-\int_1^22e^x\,dx+[x^2]_2^3\\
-&amp;=\frac{1}{2}+4e^2-2e-2e^2+2e+9-4
-=\frac{11}{2}+2e^2\\
-\implies
-\int_0^3 f(x)\,dg(x)
-&amp;=f(3)g(3)-f(0)g(0)-\int_0^3 g(x)\,df(x)\\
-&amp;=9-(\frac{11}{2}+2e^2)
-=\frac{7}{2}-2e^2.        
-\end{aligned}
-\end{equation*}
-</div>
+<body class="ignore-math"><div class="solution solution-like"><div class="para">Let <span class="process-math">\(P\in\mathcal{P}[a,b]\)</span> and write <span class="process-math">\(P=\{{a=x_0&lt;x_1&lt;\dots&lt;x_n=b}\}\text{.}\)</span> Then <span class="process-math">\(M_i(f,P)=\sup\{{f(x)}\,:\,{x_{i-1}\leq x\leq x_i}\}=1\text{,}\)</span> <span class="process-math">\(m_i(f,P)=\inf\{{f(x)}\,:\,{x_{i-1}\leq x\leq x_i}\}=0\text{.}\)</span> Hence <span class="process-math">\(U(f,P)=\sum_{i=1}^n M_i(f,P)(x_i-x_j)=x_n-x_0=b-a\text{.}\)</span> Similarly, <span class="process-math">\(L(f,P)=0\text{.}\)</span> So <span class="process-math">\(\overline{\int_a^b}f(t)\,dt=b-a,\underline{\int_a^b}f(t)\,dt=0\text{.}\)</span>
 </div></div></body>
 </html>

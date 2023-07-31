@@ -13,25 +13,13 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Have <span class="process-math">\(g\in \mathcal{R}[0,3]\)</span> as is bounded and has only finitely many discontinuities. Also <span class="process-math">\(f\)</span> is differentiable and <span class="process-math">\(f'\in \mathcal{R}[0,3]\text{.}\)</span> So <span class="process-math">\(g\in\mathcal{R}([0,3],f)\)</span> and</div>
+<div class="para">Suppose <span class="process-math">\(f\in\mathcal{B}[a,b]\text{.}\)</span> Then <span class="process-math">\(f\in\mathcal{R}[a,b]\iff\)</span> for all <span class="process-math">\(\varepsilon&gt;0\)</span> there exists <span class="process-math">\(P\in\mathcal{P}[a,b]\)</span> with</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\begin{aligned}
-\int_0^3 g(x)\,df(x)
-&amp;=\int_0^3 g(x)f'(x)\,dx\\
-&amp;=\int_0^1 x^2 2x\,dx + \int_1^2 e^x 2x\,dx+\int_2^32x\,dx\\
-&amp;=[\frac{1}{2}x^4]_0^1 +[2xe^x]_1^2-\int_1^22e^x\,dx+[x^2]_2^3\\
-&amp;=\frac{1}{2}+4e^2-2e-2e^2+2e+9-4
-=\frac{11}{2}+2e^2\\
-\implies
-\int_0^3 f(x)\,dg(x)
-&amp;=f(3)g(3)-f(0)g(0)-\int_0^3 g(x)\,df(x)\\
-&amp;=9-(\frac{11}{2}+2e^2)
-=\frac{7}{2}-2e^2.        
-\end{aligned}
+U(f,P)-L(f,P)&lt;\varepsilon.
 \end{equation*}
 </div>
 </div>
-<span class="incontext"><a href="sec-riemann-stieltjes.html#p-621" class="internal">in-context</a></span>
+<span class="incontext"><a href="sec-riemann.html#p-621" class="internal">in-context</a></span>
 </body>
 </html>

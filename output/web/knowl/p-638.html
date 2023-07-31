@@ -12,7 +12,54 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Functions of bounded variation have only countably many discontinuities.</div>
-<span class="incontext"><a href="sec-bounded-variation.html#p-638" class="internal">in-context</a></span>
+<div class="para logical">
+<div class="para">We now show <span class="process-math">\(\left|{f}\right|\in\mathcal{R}[a,b]\text{.}\)</span> By Riemann's Criterion, it's enough to show that for all partitions <span class="process-math">\(P\in\mathcal{P}[a,b]\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+U(\left|{f}\right|,P)-L(\left|{f}\right|,P)\leq U(f,P)-L(f,P).
+\end{equation*}
+</div>
+<div class="para">To this end, fix <span class="process-math">\(P\in\mathcal{P}[a,b]\)</span> and write <span class="process-math">\(P=\{{a=x_0&lt;x_1&lt;\dots&lt;x_n=b}\}\text{.}\)</span> Fix <span class="process-math">\(i=1,\dots,n\text{.}\)</span> It's enough to show that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+M-i(\left|{f}\right|,P)-m_i(\left|{f}\right|,P)\leq M_i(f,P)-m_i(f,P).
+\end{equation*}
+</div>
+<div class="para">Fix <span class="process-math">\(s,t\in[x_{i-1},x_i]\text{.}\)</span> Then (with sups and infs taken over <span class="process-math">\(s',t'\in[x_{i-1},x_i]\)</span>)</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+\left|{f(s)}\right|-\left|{f(t)}\right|
+&amp;\leq \left|{f(s)-f(t)}\right|
+\leq\sup_{s',t'}\left|{f(s')-f(t')}\right|
+=\sup_{s'}f(s')-\inf_{t'}f(t')\\
+&amp;=M_i(f,P)-m_i(f,P).
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">Now, taking the supremum over <span class="process-math">\(s,t\in[x_{i-1},x_i]\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+\sup_{s,t}\left({\left|{f(s)}\right|-\left|{f(t)}\right|}\right)
+&amp;\leq M_i(f,P)-m_i(f,P),\\
+\sup_{s,t}\left({\left|{f(s)}\right|-\left|{f(t)}\right|}\right)
+&amp;=\sup_s\left|{f(s)}\right|-\inf_t\left|{f(t)}\right|
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">where again sup, inf taken over <span class="process-math">\(s,t\in[x_{i-1},x_i]\text{.}\)</span> So</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+M_i(\left|{f}\right|,P)-m_i(\left|{f}\right|,P)
+\leq M_i(f,P)-m_i(f,P).
+\end{aligned}
+\end{equation*}
+</div>
+</div>
+<span class="incontext"><a href="sec-riemann.html#p-638" class="internal">in-context</a></span>
 </body>
 </html>

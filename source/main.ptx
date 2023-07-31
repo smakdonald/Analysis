@@ -23,279 +23,287 @@
     -->
 
     <macros>
-        <!-- Operators     -->
-        \def\ann{\operatorname{ann}}
-        \newcommand{\Ass}{\operatorname{Ass}}
-        \def\Aut{\operatorname{Aut}}
-        \def\can{{\mathrm {can}}}
-        \def\char{\operatorname{char}}
-        \def\cp{\operatorname{CharPoly}}
-        \def\codim{\operatorname{codim}} 
-        \def\coker{\operatorname{coker}}
-        \DeclareMathOperator*{\colim}{colim} 
-        \def\cont{\operatorname{cont}} 
-        \def\diam{\operatorname{diam}} 
-        \def\dm{\operatorname{dim}} 
-        \DeclareMathOperator{\edim}{embdim} 
-        \def\End{\operatorname{End}} 
-        \def\eval{\operatorname{eval}} 
-        \def\Ext{\operatorname{Ext}} 
-        \def\Frac{\operatorname{Frac}}
-        \def\Fun{\operatorname{Fun}}
-        \def\Gal{\operatorname{Gal}}
-        \def\gcd{\operatorname{gcd}}
-        \newcommand{\GL}{\operatorname{GL}} 
-        \newcommand{\ht}{\operatorname{height}} 
-        \def\Hom{\operatorname{Hom}} 
-        \def\id{\operatorname{id}} 
-        \def\im{\operatorname{im}} 
-        \def\Inn{\operatorname{Inn}}
-        \def\ker{\operatorname{ker}}
-        \def\lcm{\operatorname{lcm}} 
-        \def\Mat{\operatorname{Mat}}
-        \newcommand{\Min}{\operatorname{Min}}
-        \def\mp{\operatorname{MinPoly}}
-        \def\mSpec{\operatorname{mSpec}}
-        \def\MSpec{\operatorname{MSpec}}
-        \def\null{\operatorname{Nul}}
-        \DeclareMathOperator{\ns}{nullspace}
-        \newcommand{\opp}{\operatorname{opp}}
-        \def\Orb{\operatorname{Orb}} 
-        \def\Out{\operatorname{Out}}
-        \def\Perm{\operatorname{Perm}}
-        \def\ptstab{\operatorname{PtStab}} 
-        \def\rad{\operatorname{rad}}
-        \DeclareMathOperator{\range}{range}
-        \def\rank{\operatorname{rank}}
-        \def\res{\operatorname{res}}
-        \def\setstab{\operatorname{SetStab}}
-        \def\sign{{\operatorname{sign}}}
-        \newcommand{\SL}{\operatorname{SL}}
-        \def\Span{\operatorname{Span}}
-        \def\Spec{\operatorname{Spec}}
-        \def\Stab{\operatorname{Stab}} 
-        \DeclareMathOperator{\Supp}{Supp}
-        \def\Syl{\operatorname{Syl}}
-        \def\Tor{\operatorname{Tor}}
-        \def\trace{\operatorname{trace}}
-        \def\uSpec{\operatorname{\underline{Spec}}}
-        <!-- Categories     -->
-        \newcommand{\Ob}{\mathrm{Ob}}
-        \newcommand{\Set}{\mathbf{Set}}
-        \newcommand{\Grp}{\mathbf{Grp}}
-        \newcommand{\Ab}{\mathbf{Ab}}
-        \newcommand{\Sgrp}{\mathbf{Sgrp}}
-        \newcommand{\Ring}{\mathbf{Ring}} 
-        \newcommand{\Fld}{\mathbf{Fld}}
-        \newcommand{\cRing}{\mathbf{cRing}}
-        \newcommand{\Mod}[1]{#1-\mathbf{Mod}} 
-        \newcommand{\Cx}[1]{#1-\mathbf{Comp}} 
-        \newcommand{\vs}[1]{#1-\mathbf{vect}}
-        \newcommand{\Vs}[1]{#1-\mathbf{Vect}}
-        \newcommand{\vsp}[1]{#1-\mathbf{vect}^+} 
-        \newcommand{\Top}{\mathbf{Top}} 
-        \newcommand{\Setp}{\mathbf{Set}_*} 
-        \newcommand{\Alg}[1]{#1-\mathbf{Alg}} 
-        \newcommand{\cAlg}[1]{#1-\mathbf{cAlg}} 
-        \newcommand{\PO}{\mathbf{PO}}
-        \newcommand{\Cont}{\mathrm{Cont}}
-        \newcommand{\MaT}[1]{\mathbf{Mat}_{#1}}
-        \newcommand{\Rep}[2]{\mathbf{Rep}_{#1}(#2)}
-        <!-- Greek     -->
-        \def\l{\lambda}
-        \def\lx{\lambda_x}
-        \newcommand{\a}{\alpha}
-        \def\b{\beta}
-        \def\d{\delta}
-        \def\e{\varepsilon}
-        \def\g{\gamma}
-        \def\t{\theta}
-        \def\s{\sigma}
-        \def\z{\zeta}
-        \def\vp{\varphi}
-        <!-- Letters     -->
-        <!-- MathBB     -->
-        \newcommand{\A}{\mathbb{A}}
-        \newcommand{\B}{\mathbb{B}}
-        \newcommand{\C}{\mathbb{C}}
-        \newcommand{\D}{\mathbb{D}}
-        \newcommand{\E}{\mathbb{E}}
-        \newcommand{\F}{\mathbb{F}}
-        \newcommand{\G}{\mathbb{G}}
-        \newcommand{\H}{\mathbb{H}}
-        \newcommand{\I}{\mathbb{I}}
-        \newcommand{\J}{\mathbb{J}}
-        \newcommand{\K}{\mathbb{K}}
-        \newcommand{\L}{\mathbb{L}} 
-        \newcommand{\M}{\mathbb{M}}
-        \newcommand{\N}{\mathbb{N}}
-        \newcommand{\O}{\mathbb{O}}
-        \newcommand{\P}{\mathbb{P}}
-        \newcommand{\Q}{\mathbb{Q}} 
-        \newcommand{\R}{\mathbb{R}} 
-        \newcommand{\S}{\mathbb{S}}
-        \newcommand{\T}{\mathbb{T}}
-        \newcommand{\U}{\mathbb{U}}
-        \newcommand{\V}{\mathbb{V}}
-        \newcommand{\W}{\mathbb{W}}
-        \newcommand{\X}{\mathbb{X}}
-        \newcommand{\Y}{\mathbb{Y}}
-        \newcommand{\Z}{\mathbb{Z}} 
-        \newcommand{\ON}{\mathbb{ON}}
-        <!-- MathCal     -->
-        \def\cA{\mathcal A} 
-        \def\cB{\mathcal B} 
-        \def\cC{\mathcal C} 
-        \def\cD{\mathcal D} 
-        \def\cE{\mathcal E} 
-        \def\cF{\mathcal F} 
-        \def\cG{\mathcal G} 
-        \def\cH{\mathcal H} 
-        \def\cI{\mathcal I} 
-        \def\cJ{\mathcal J} 
-        \def\cK{\mathcal K} 
-        \def\cL{\mathcal L}
-        \def\cM{\mathcal M} 
-        \def\cN{\mathcal N} 
-        \def\cO{\mathcal O} 
-        \def\cP{\mathcal P} 
-        \def\cQ{\mathcal Q} 
-        \def\cR{\mathcal R} 
-        \def\cS{\mathcal S} 
-        \def\cT{\mathcal T} 
-        \def\cU{\mathcal U} 
-        \def\cV{\mathcal V} 
-        \def\cW{\mathcal W} 
-        \def\cX{\mathcal X} 
-        \def\cY{\mathcal Y} 
-        \def\cZ{\mathcal Z} 
-        <!-- MathFrak     -->
-        \newcommand{\fa}{{\mathfrak a}} 
-        \newcommand{\fb}{{\mathfrak b}} 
-        \newcommand{\fc}{{\mathfrak c}} 
-        \newcommand{\fd}{{\mathfrak d}} 
-        \newcommand{\fe}{{\mathfrak e}}
-        \newcommand{\fm}{{\mathfrak m}} 
-        \newcommand{\fp}{{\mathfrak p}} 
-        \newcommand{\fq}{{\mathfrak q}} 
-        \newcommand{\fK}{{\mathfrak K}} 
-        \newcommand{\fR}{{\mathfrak R}} 
-        <!-- MathScr     -->
-        \def\sA{\mathscr A} 
-        \def\sB{\mathscr B} 
-        \def\sC{\mathscr C} 
-        \def\sD{\mathscr D} 
-        \def\sE{\mathscr E} 
-        \def\sF{\mathscr F} 
-        \def\sG{\mathscr G} 
-        \def\sH{\mathscr H} 
-        \def\sI{\mathscr I} 
-        \def\sJ{\mathscr J} 
-        \def\sK{\mathscr K} 
-        \def\sL{\mathscr L}
-        \def\sM{\mathscr M}
-        \def\sN{\mathscr N}
-        \def\sO{\mathscr O}
-        \def\sP{\mathscr P}
-        \def\sQ{\mathscr Q}
-        \def\sR{\mathscr R}
-        \def\sS{\mathscr S}
-        \def\sT{\mathscr T}
-        \def\sU{\mathscr U}
-        \def\sV{\mathscr V}
-        \def\sW{\mathscr W}
-        \def\sX{\mathscr X}
-        \def\sY{\mathscr Y}
-        \def\sZ{\mathscr Z}
-        <!-- Tildes     -->
-        \def\tS{\tilde{S}}
-        <!-- Algebra     -->
-        \def\sdp{\rtimes}
-        \newcommand{\tensor}{\otimes} 
-        \newcommand{\igen}[1]{\langle #1 \rangle} 
-        \def\nsg{\unlhd} 
-        \def\kval{{k-\mathrm{valued}}} 
-        \def\kalg{{k-\mathrm{alg}}}
-        \newcommand\GG[2]{\Gal(#1/#2)}
-        <!-- Matrices     -->
-        \newcommand{\MF}[3]{\Mat_{#1\times #2}(#3)}
-        \newcommand{\vectwo}[2]{\begin{bmatrix} #1 \\ #2 \end{bmatrix}} 
-        \newcommand{\vecthree}[3]{\begin{bmatrix} #1 \\ #2 \\ #3\end{bmatrix}} 
-        \def\ob{{\mathfrak{ob}} }
-        <!-- Misc     -->
-        \def\qed{\square}
-        \def\sse{\subseteq}
-        \def\ss{\subset} 
-        \def\ssne{\subsetneq}
-        \def\sm{\setminus}
-        \def\inv{^{-1}} 
-        \newcommand{\es}{\emptyset} 
-        \newcommand{\Zm}[1]{\Z/({#1})} 
-        \def\ov#1{\overline{#1}} 
-        \def\xdots{x_1, \dots, x_n} 
-        \def\adots{a_1, \dots, a_n} 
-        \def\bdots{b_1, \dots, b_n} 
-        \def\udots{u_1, \dots, u_n} 
-        \newcommand{\leg}[2]{\left(\frac{{#1}}{{#2}}\right)} 
-        \def\th{^{th}} 
-        \def\htpy{\simeq_{\mathrm{htpc}}} 
-        <!-- Math Text     -->
-        \def\textand{ \, \text{and} \, } 
-        \def\textor{ \, \text{or} \, } 
-        \def\textfor{ \, \text{for} \, } 
-        \def\textfa{ \, \text{for all} \, } 
-        \def\textst{ \, \text{such that} \, } 
-        \def\textin{ \, \text{in} \, } 
-        \def\fg{ \, \text{finitely generated} \, }
-        \newcommand{\op}{\mathrm{op}}
-        <!-- Arrows     -->
-        \newcommand{\xra}[1]{\xrightarrow{#1}} 
-        \newcommand{\xora}[1]{\xtwoheadrightarrow{#1}} 
-        \newcommand{\xira}[1]{\xhookrightarrow{#1}} 
-        \newcommand{\xla}[1]{\xleftarrow{#1}} 
-        \def\lra{\longrightarrow}
-        \def\into{\hookrightarrow}
-        \def\onto{\twoheadrightarrow}
-        <!-- Vectors     -->
-        \newcommand{\vv}[1]{\mathbf{#1}}
-        \newcommand{\lm}[2]{{#1}\,\l + {#2}\,\mu} 
-        \renewcommand{\v}{\vv{v}}
-        \renewcommand{\u}{\vv{u}}
-        \newcommand{\w}{\vv{w}}
-        \newcommand{\x}{\vv{x}}
-        \renewcommand{\k}{\vv{k}}
-        \newcommand{\0}{\vv{0}}
-        \newcommand{\1}{\vv{1}}
-        \newcommand{\vecs}[2]{#1_1,#1_2,\dots,#1_{#2}}
-        \newcommand{\us}[1][n]{\vecs{\u}{#1}}
-        \newcommand{\vs}[1][n]{\vecs{\v}{#1}}
-        \newcommand{\ws}[1][n]{\vecs{\w}{#1}}
-        \newcommand{\vps}[1][n']{\vecs{\v'}{#1}}
-        \newcommand{\ls}[1][n]{\vecs{\l}{#1}}
-        \newcommand{\mus}[1][n]{\vecs{\mu}{#1}} 
-        \newcommand{\lps}[1][n]{\vecs{\l'}{#1}}
-        \def\td{\tilde{\delta}}
-        \def\oo{\overline{\omega}}
-        \def\ctJ{\tilde{\mathcal J}}
-        \def\tPhi{\tilde{\Phi}}
-        \def\te{\tilde{e}}
-        \def\M{\operatorname{M}}
-        \newcommand{\homotopic}{\simeq}
-        \newcommand{\homeq}{\cong}
-        \newcommand{\iso}{\approx}
-        \newcommand{\dual}{\vee} 
-        \DeclarePairedDelimiter{\abs}{|}{|}
-        \newcommand{\bv}{{\bar{v}}}
-        \newcommand{\bu}{{\bar{u}}}
-        \newcommand{\bw}{{\bar{w}}}
-        \newcommand{\by}{{\bar{y}}}
-        \newcommand{\ba}{{\bar{a}}}
-        \newcommand{\bb}{{\bar{b}}}
-        \newcommand{\bx}{{\bar{x}}}
-        \DeclarePairedDelimiterX\setof[2]{\{}{\}}{#1\,|\,#2}
-        \newcommand{\vx}{\underline{x}}
-        \renewcommand{mod}[1]{\text{(mod }{#1})}
-        \newcommand{\Slv}[3]{\sum_{{#2}=1}^{{#3}} {#1}_{{#2}} \v_{{#2}}}
+      <!-- Operators     -->
+      \def\ann{\operatorname{ann}}
+      \newcommand{\Ass}{\operatorname{Ass}}
+      \def\Aut{\operatorname{Aut}}
+      \def\can{{\mathrm {can}}}
+      \def\char{\operatorname{char}}
+      \def\cp{\operatorname{CharPoly}}
+      \def\codim{\operatorname{codim}} 
+      \def\coker{\operatorname{coker}}
+      \DeclareMathOperator*{\colim}{colim} 
+      \def\cont{\operatorname{cont}} 
+      \def\diam{\operatorname{diam}} 
+      \def\dm{\operatorname{dim}} 
+      \DeclareMathOperator{\edim}{embdim} 
+      \def\End{\operatorname{End}} 
+      \def\eval{\operatorname{eval}} 
+      \def\Ext{\operatorname{Ext}} 
+      \def\Frac{\operatorname{Frac}}
+      \def\Fun{\operatorname{Fun}}
+      \def\Gal{\operatorname{Gal}}
+      \def\gcd{\operatorname{gcd}}
+      \newcommand{\GL}{\operatorname{GL}} 
+      \newcommand{\ht}{\operatorname{height}} 
+      \def\Hom{\operatorname{Hom}} 
+      \def\id{\operatorname{id}} 
+      \def\im{\operatorname{im}} 
+      \def\Inn{\operatorname{Inn}}
+      \def\ker{\operatorname{ker}}
+      \def\lcm{\operatorname{lcm}} 
+      \def\Mat{\operatorname{Mat}}
+      \newcommand{\Min}{\operatorname{Min}}
+      \def\mp{\operatorname{MinPoly}}
+      \def\mSpec{\operatorname{mSpec}}
+      \def\MSpec{\operatorname{MSpec}}
+      \def\null{\operatorname{Nul}}
+      \DeclareMathOperator{\ns}{nullspace}
+      \newcommand{\opp}{\operatorname{opp}}
+      \def\Orb{\operatorname{Orb}} 
+      \def\Out{\operatorname{Out}}
+      \def\Perm{\operatorname{Perm}}
+      \def\ptstab{\operatorname{PtStab}} 
+      \def\rad{\operatorname{rad}}
+      \DeclareMathOperator{\range}{range}
+      \def\rank{\operatorname{rank}}
+      \def\res{\operatorname{res}}
+      \def\setstab{\operatorname{SetStab}}
+      \def\sign{{\operatorname{sign}}}
+      \newcommand{\SL}{\operatorname{SL}}
+      \def\Span{\operatorname{Span}}
+      \def\Spec{\operatorname{Spec}}
+      \def\Stab{\operatorname{Stab}} 
+      \DeclareMathOperator{\Supp}{Supp}
+      \def\Syl{\operatorname{Syl}}
+      \def\Tor{\operatorname{Tor}}
+      \def\trace{\operatorname{trace}}
+      \def\uSpec{\operatorname{\underline{Spec}}}
+      <!-- Categories     -->
+      \newcommand{\Ob}{\mathrm{Ob}}
+      \newcommand{\Set}{\mathbf{Set}}
+      \newcommand{\Grp}{\mathbf{Grp}}
+      \newcommand{\Ab}{\mathbf{Ab}}
+      \newcommand{\Sgrp}{\mathbf{Sgrp}}
+      \newcommand{\Ring}{\mathbf{Ring}} 
+      \newcommand{\Fld}{\mathbf{Fld}}
+      \newcommand{\cRing}{\mathbf{cRing}}
+      \newcommand{\Mod}[1]{#1-\mathbf{Mod}} 
+      \newcommand{\Cx}[1]{#1-\mathbf{Comp}} 
+      \newcommand{\vs}[1]{#1-\mathbf{vect}}
+      \newcommand{\Vs}[1]{#1-\mathbf{Vect}}
+      \newcommand{\vsp}[1]{#1-\mathbf{vect}^+} 
+      \newcommand{\Top}{\mathbf{Top}} 
+      \newcommand{\Setp}{\mathbf{Set}_*} 
+      \newcommand{\Alg}[1]{#1-\mathbf{Alg}} 
+      \newcommand{\cAlg}[1]{#1-\mathbf{cAlg}} 
+      \newcommand{\PO}{\mathbf{PO}}
+      \newcommand{\Cont}{\mathrm{Cont}}
+      \newcommand{\MaT}[1]{\mathbf{Mat}_{#1}}
+      \newcommand{\Rep}[2]{\mathbf{Rep}_{#1}(#2)}
+      <!-- Greek     -->
+      \def\l{\lambda}
+      \def\lx{\lambda_x}
+      \newcommand{\a}{\alpha}
+      \def\b{\beta}
+      \def\d{\delta}
+      \def\e{\varepsilon}
+      \def\g{\gamma}
+      \def\t{\theta}
+      \def\s{\sigma}
+      \def\z{\zeta}
+      \def\vp{\varphi}
+      <!-- Letters     -->
+      <!-- MathBB     -->
+      \newcommand{\A}{\mathbb{A}}
+      \newcommand{\B}{\mathbb{B}}
+      \newcommand{\C}{\mathbb{C}}
+      \newcommand{\D}{\mathbb{D}}
+      \newcommand{\E}{\mathbb{E}}
+      \newcommand{\F}{\mathbb{F}}
+      \newcommand{\G}{\mathbb{G}}
+      \newcommand{\H}{\mathbb{H}}
+      \newcommand{\I}{\mathbb{I}}
+      \newcommand{\J}{\mathbb{J}}
+      \newcommand{\K}{\mathbb{K}}
+      \newcommand{\L}{\mathbb{L}} 
+      \newcommand{\M}{\mathbb{M}}
+      \newcommand{\N}{\mathbb{N}}
+      \newcommand{\O}{\mathbb{O}}
+      \newcommand{\P}{\mathbb{P}}
+      \newcommand{\Q}{\mathbb{Q}} 
+      \newcommand{\R}{\mathbb{R}} 
+      \newcommand{\S}{\mathbb{S}}
+      \newcommand{\T}{\mathbb{T}}
+      \newcommand{\U}{\mathbb{U}}
+      \newcommand{\V}{\mathbb{V}}
+      \newcommand{\W}{\mathbb{W}}
+      \newcommand{\X}{\mathbb{X}}
+      \newcommand{\Y}{\mathbb{Y}}
+      \newcommand{\Z}{\mathbb{Z}} 
+      \newcommand{\ON}{\mathbb{ON}}
+      <!-- MathCal     -->
+      \def\cA{\mathcal A} 
+      \def\cB{\mathcal B} 
+      \def\cC{\mathcal C} 
+      \def\cD{\mathcal D} 
+      \def\cE{\mathcal E} 
+      \def\cF{\mathcal F} 
+      \def\cG{\mathcal G} 
+      \def\cH{\mathcal H} 
+      \def\cI{\mathcal I} 
+      \def\cJ{\mathcal J} 
+      \def\cK{\mathcal K} 
+      \def\cL{\mathcal L}
+      \def\cM{\mathcal M} 
+      \def\cN{\mathcal N} 
+      \def\cO{\mathcal O} 
+      \def\cP{\mathcal P} 
+      \def\cQ{\mathcal Q} 
+      \def\cR{\mathcal R} 
+      \def\cS{\mathcal S} 
+      \def\cT{\mathcal T} 
+      \def\cU{\mathcal U} 
+      \def\cV{\mathcal V} 
+      \def\cW{\mathcal W} 
+      \def\cX{\mathcal X} 
+      \def\cY{\mathcal Y} 
+      \def\cZ{\mathcal Z} 
+      <!-- MathFrak     -->
+      \newcommand{\fa}{{\mathfrak a}} 
+      \newcommand{\fb}{{\mathfrak b}} 
+      \newcommand{\fc}{{\mathfrak c}} 
+      \newcommand{\fd}{{\mathfrak d}} 
+      \newcommand{\fe}{{\mathfrak e}}
+      \newcommand{\fm}{{\mathfrak m}} 
+      \newcommand{\fp}{{\mathfrak p}} 
+      \newcommand{\fq}{{\mathfrak q}}
+      \newcommand{\fA}{{\mathfrak A}} 
+      \newcommand{\fB}{{\mathfrak B}} 
+      \newcommand{\fC}{{\mathfrak C}} 
+      \newcommand{\fD}{{\mathfrak D}} 
+      \newcommand{\fE}{{\mathfrak E}} 
+      \newcommand{\fF}{{\mathfrak F}} 
+      \newcommand{\fG}{{\mathfrak G}} 
+      \newcommand{\fH}{{\mathfrak H}} 
+      \newcommand{\fK}{{\mathfrak K}} 
+      \newcommand{\fR}{{\mathfrak R}} 
+      <!-- MathScr     -->
+      \def\sA{\mathscr A} 
+      \def\sB{\mathscr B} 
+      \def\sC{\mathscr C} 
+      \def\sD{\mathscr D} 
+      \def\sE{\mathscr E} 
+      \def\sF{\mathscr F} 
+      \def\sG{\mathscr G} 
+      \def\sH{\mathscr H} 
+      \def\sI{\mathscr I} 
+      \def\sJ{\mathscr J} 
+      \def\sK{\mathscr K} 
+      \def\sL{\mathscr L}
+      \def\sM{\mathscr M}
+      \def\sN{\mathscr N}
+      \def\sO{\mathscr O}
+      \def\sP{\mathscr P}
+      \def\sQ{\mathscr Q}
+      \def\sR{\mathscr R}
+      \def\sS{\mathscr S}
+      \def\sT{\mathscr T}
+      \def\sU{\mathscr U}
+      \def\sV{\mathscr V}
+      \def\sW{\mathscr W}
+      \def\sX{\mathscr X}
+      \def\sY{\mathscr Y}
+      \def\sZ{\mathscr Z}
+      <!-- Tildes     -->
+      \def\tS{\tilde{S}}
+      <!-- Algebra     -->
+      \def\sdp{\rtimes}
+      \newcommand{\tensor}{\otimes} 
+      \newcommand{\igen}[1]{\langle #1 \rangle} 
+      \def\nsg{\unlhd} 
+      \def\kval{{k-\mathrm{valued}}} 
+      \def\kalg{{k-\mathrm{alg}}}
+      \newcommand\GG[2]{\Gal(#1/#2)}
+      <!-- Matrices     -->
+      \newcommand{\MF}[3]{\Mat_{#1\times #2}(#3)}
+      \newcommand{\vectwo}[2]{\begin{bmatrix} #1 \\ #2 \end{bmatrix}} 
+      \newcommand{\vecthree}[3]{\begin{bmatrix} #1 \\ #2 \\ #3\end{bmatrix}} 
+      \def\ob{{\mathfrak{ob}} }
+      <!-- Misc     -->
+      \def\qed{\square}
+      \def\sse{\subseteq}
+      \def\ss{\subset} 
+      \def\ssne{\subsetneq}
+      \def\sm{\setminus}
+      \def\inv{^{-1}} 
+      \newcommand{\es}{\emptyset} 
+      \newcommand{\Zm}[1]{\Z/({#1})} 
+      \def\ov#1{\overline{#1}} 
+      \def\xdots{x_1, \dots, x_n} 
+      \def\adots{a_1, \dots, a_n} 
+      \def\bdots{b_1, \dots, b_n} 
+      \def\udots{u_1, \dots, u_n} 
+      \newcommand{\leg}[2]{\left(\frac{{#1}}{{#2}}\right)} 
+      \def\th{^{th}} 
+      \def\htpy{\simeq_{\mathrm{htpc}}} 
+      <!-- Math Text     -->
+      \def\textand{ \, \text{and} \, } 
+      \def\textor{ \, \text{or} \, } 
+      \def\textfor{ \, \text{for} \, } 
+      \def\textfa{ \, \text{for all} \, } 
+      \def\textst{ \, \text{such that} \, } 
+      \def\textin{ \, \text{in} \, } 
+      \def\fg{ \, \text{finitely generated} \, }
+      \newcommand{\op}{\mathrm{op}}
+      <!-- Arrows     -->
+      \newcommand{\xra}[1]{\xrightarrow{#1}} 
+      \newcommand{\xora}[1]{\xtwoheadrightarrow{#1}} 
+      \newcommand{\xira}[1]{\xhookrightarrow{#1}} 
+      \newcommand{\xla}[1]{\xleftarrow{#1}} 
+      \def\lra{\longrightarrow}
+      \def\into{\hookrightarrow}
+      \def\onto{\twoheadrightarrow}
+      <!-- Vectors     -->
+      \newcommand{\vv}[1]{\mathbf{#1}}
+      \newcommand{\lm}[2]{{#1}\,\l + {#2}\,\mu} 
+      \renewcommand{\v}{\vv{v}}
+      \renewcommand{\u}{\vv{u}}
+      \newcommand{\w}{\vv{w}}
+      \newcommand{\x}{\vv{x}}
+      \renewcommand{\k}{\vv{k}}
+      \newcommand{\0}{\vv{0}}
+      \newcommand{\1}{\vv{1}}
+      \newcommand{\vecs}[2]{#1_1,#1_2,\dots,#1_{#2}}
+      \newcommand{\us}[1][n]{\vecs{\u}{#1}}
+      \newcommand{\vs}[1][n]{\vecs{\v}{#1}}
+      \newcommand{\ws}[1][n]{\vecs{\w}{#1}}
+      \newcommand{\vps}[1][n']{\vecs{\v'}{#1}}
+      \newcommand{\ls}[1][n]{\vecs{\l}{#1}}
+      \newcommand{\mus}[1][n]{\vecs{\mu}{#1}} 
+      \newcommand{\lps}[1][n]{\vecs{\l'}{#1}}
+      \def\td{\tilde{\delta}}
+      \def\oo{\overline{\omega}}
+      \def\ctJ{\tilde{\mathcal J}}
+      \def\tPhi{\tilde{\Phi}}
+      \def\te{\tilde{e}}
+      \def\M{\operatorname{M}}
+      \newcommand{\homotopic}{\simeq}
+      \newcommand{\homeq}{\cong}
+      \newcommand{\iso}{\approx}
+      \newcommand{\dual}{\vee} 
+      \DeclarePairedDelimiter{\abs}{|}{|}
+      \newcommand{\bv}{{\bar{v}}}
+      \newcommand{\bu}{{\bar{u}}}
+      \newcommand{\bw}{{\bar{w}}}
+      \newcommand{\by}{{\bar{y}}}
+      \newcommand{\ba}{{\bar{a}}}
+      \newcommand{\bb}{{\bar{b}}}
+      \newcommand{\bx}{{\bar{x}}}
+      \DeclarePairedDelimiterX\setof[2]{\{}{\}}{#1\,|\,#2}
+      \newcommand{\vx}{\underline{x}}
+      \renewcommand{mod}[1]{\text{(mod }{#1})}
+      \newcommand{\Slv}[3]{\sum_{{#2}=1}^{{#3}} {#1}_{{#2}} \v_{{#2}}}
     </macros>
 
     <!-- this is the default, but supresses a warning -->
@@ -303,15 +311,15 @@
 
     <!-- tikz package and libraries for images -->
     <latex-image-preamble>
-    \usepackage{tikz}
-    \usetikzlibrary{backgrounds}
-    \usetikzlibrary{arrows,matrix}
-    \usetikzlibrary{snakes}
+      \usepackage{tikz}
+      \usetikzlibrary{backgrounds}
+      \usetikzlibrary{arrows,matrix}
+      \usetikzlibrary{snakes}
     </latex-image-preamble>
 
     <rename element="insight">Mark</rename>  
     <rename element="inlineexercise">Exploration</rename>
-    <rename element="exploration">Discussion</rename> 
+    <rename element="exploration">Problem</rename> 
 
   </docinfo>
 
@@ -377,7 +385,6 @@
             </li>
           </ul>
         </p>
-
 
         <paragraphs><title>Blocks</title>
           <p>
@@ -1328,33 +1335,22 @@
             <definition xml:id="def-sequence"><title>Sequence</title>
               <statement>
                 <p>
-                  Let <m>X</m> be a set. 
-                  A sequence of elements of <m>X</m> is a function from the set of positive integers into <m>X</m>.
-                </p>
-
-                <p>
-                  In particular, a real sequence (or sequence of real numbers) is a function from <m>P</m> into <m>R</m>. 
-                  The usual notation for a real sequence is {an}  , where a denotes the function from <m>P</m> into <m>R</m> and <m>a_n</m> is the value of the function at the positive integer <m>n</m>. 
-                  The notations a1, a2, . . . and {an} are also used to denote a real sequence. 
-                  The number an is called the nth term of the sequence.
+                  A <term>sequence</term> in a set <m>S</m> is a function <m>x:\mathbb{Z}_{\geq 1}\rightarrow S</m>.
                 </p>
               </statement>
             </definition>
 
             <convention>
               <p>
-                A sequence may be defined by giving an explicit formula for the <m>n\th</m> term. 
-                For example, the formula
-                <me>a_n=\frac 1n</me>
-                defines the sequence whose value at the positive integer <m>n</m> is <m>\frac 1n</m>.
+                We'll usually write <m>x_n</m> not <m>x(n)</m>, and <m>(x_n)_{n=1}^{\infty}\subseteq S</m> in place of <m>x:\mathbb{Z}_{\geq 1}\rightarrow S</m>.
               </p>
             </convention>
 
-            <remark>
+            <convention>
               <p>
-                Sometimes we'll want a different index set for <m>k\in\mathbb{Z}</m> also refer to a function <m>x:\mathbb{Z}_{\geq k}=\{n\in\mathbb{Z}\,|\,n\geq k\}\rightarrow S</m> as a sequence and we'll write <m>x</m> as <m>(x_n)_{n=k}^{\infty}\subseteq S</m>.
+                Sometimes we'll want a different index set for <m>k\in\mathbb{Z}</m> also refer to a function <m>x:\mathbb{Z}_{\geq k}=\{n\in\mathbb{Z}\,|\,n\geq k\}\rightarrow S</m> as a sequence and we'll write <m>x</m> as <m>(x_n)_{n=k}^{\infty}\subseteq S</m>
               </p>
-            </remark>
+            </convention>
 
             <definition xml:id="def-sequence-limit"><title>Limit of a Sequence</title>
               <statement>
@@ -1380,7 +1376,7 @@
             <theorem xml:id="thm-unique-sequence-limit"><title>Uniqueness of Sequence Limits</title>
               <statement>
                 <p>
-                  The limit of a sequence is unique.
+                  The limit of a sequence is unique. 
                 </p>
               </statement>
 
@@ -1396,14 +1392,6 @@
                 </p>
               </proof>
             </theorem>
-
-            <convention>
-              <p>
-                From now on, given a sequence \{a_n\}^\infty_{n=1} and a real number <m>L</m>, will we use the short-hand notation
-                lim n→∞ an = L
-                to mean that the given sequence converges to the given number.
-              </p>
-            </convention>
 
             <exercise>
               <statement>
@@ -1447,40 +1435,6 @@
                 </p>
               </statement>
             </definition>
-
-            <theorem xml:id="thm-convergent-bounded"><title>Convergent Sequences are Bounded</title>
-              <statement>
-                <p>
-                  If a sequence {an}∞n=1 converges then it is bounded.
-                </p>
-              </statement>
-
-              <proof>
-                <p>
-                  Suppose the sequence {an}∞n=1 converges to the number L. 
-                  Applying the definition of “converges to L” using the particular value ε = 1 gives the following fact: 
-                  There is a real number N such that if n ∈ N and n &gt; N , then |an −L| &lt; 1. 
-                  The latter inequality is equivalent to L − 1 &lt; an &lt; L + 1 for all n &gt; N.
-                </p>
-
-                <p>
-                  Let m be any natural number such that m &gt; N , and consider the finite list of numbers
-                  a1, a2, . . . , am−1, L + 1.
-                  Let b be the largest element of this list. 
-                  I claim the sequence is bounded above by b. 
-                  For any n ∈ N, if 1 ≤ n ≤ m − 1, then an ≤ b since in this case an is a member of the above list and b is the largest element of this list. 
-                  If n ≥ m then since m &gt; N , we have n &gt; N and hence an &lt; L + 1 from above. 
-                  We also have L + 1 ≤ b (since L + 1 is in the list) and thus an &lt; b. 
-                  This proves an ≤ b for all n as claimed.
-                </p>
-
-                <p>
-                  Now take p to be the smallest number in the list
-                  a1, a2, . . . , am−1, L − 1.
-                  A similar argument shows that an ≥ p for all n ∈ N. 
-                </p>
-              </proof>
-            </theorem>
 
             <lemma xml:id="lem-reverse-triangle-inequality">
               <statement>
@@ -1567,8 +1521,8 @@
                   Since \{a_n\}^\infty_{n=1} converges to L there is a number N1 such that if n ∈ N and n &gt; N1 then |an−L| &lt; ε and hence L−ε &lt; an &lt; L+ε.
                   Likewise, since {cn}∞ n=1 converges to L there is a number N2 such that if n ∈ N and n &gt; N2 then L − ε &lt; cn &lt; L + ε. 
                   Let N = max{N1, N2}.
-                  If n ∈ N and n &gt; N , then n &gt; N1 and hence L − ε &lt; an, and n &gt; N2 and hence cn &lt; L + ε, and also an ≤ bn ≤ cn. 
-                  Combining these facts gives that for n ∈ N such that n &gt; N , we have
+                  If n ∈ N and n &gt; N, then n &gt; N1 and hence L − ε &lt; an, and n &gt; N2 and hence cn &lt; L + ε, and also an ≤ bn ≤ cn. 
+                  Combining these facts gives that for n ∈ N such that n &gt; N, we have
                   L − ε &lt; bn &lt; L + ε
                   and hence |bn − L| &lt; ε. 
                   This proves {bn}∞ n=1 converges to L. 
@@ -1644,46 +1598,6 @@
               </p>
             </warning>
 
-            <theorem xml:id="thm-increasing-bounded-sequence-converging"><title>Increasing and Bounded Sequence Converges</title>
-              <statement>
-                <p>
-                  Every increasing, bounded above sequence converges.
-                </p>
-              </statement>
-
-              <proof>
-                <p>
-                  Let S be the set of those real numbers that occur in this sequence. (This is technically different that the sequence itself, since sequences are allowed to have repetitions but sets are not. 
-                  Also, sequences have an ordering to them, but sets do not.) 
-                  The set S is clearly nonempty, and it is bounded above since we assume the sequence is bounded above.
-                  Therefore, by the Completeness Axiom, S has a supremum L. 
-                  We will prove the sequence converges to L.
-                </p>
-
-                <p>
-                  Pick ε &gt; 0. 
-                  Then L − ε &lt; L and, since L is the supremum, L − ε is not an upper bound of S. 
-                  This means that there is an element of S that is strictly bigger than L−ε. 
-                  Every element of S is a member of the sequence, and so we get that there is an N ∈ N such that aN &gt; L − ε.
-                </p>
-
-                <p>
-                  (We will next show that this is the N that “works”. 
-                  Note that, in the general definition of convergence of a sequence, N can be any real number, but in this proof it turns out to be a natural number.)
-                </p>
-
-                <p>
-                  Let n be any natural number such that n &gt; N. 
-                  Since the sequence is increasing, aN ≤ an and hence
-                  L − ε &lt; aN ≤ an.
-                  Also, an ≤ L since L is an upper bound for the sequence, and thus we have
-                  L − ε &lt; an ≤ L.
-                  It follows that |an − L| &lt; ε. 
-                  We have proven the sequence converges to L. 
-                </p>
-              </proof>
-            </theorem>
-
             <theorem xml:id="thm-monotone-convergence"><title>Monotone Convergence</title>
               <statement>
                 <p>
@@ -1693,12 +1607,21 @@
 
               <proof>
                 <p>
-                  If \{a_n\}^\infty_{n=1} is increasing, then this is the content of Theorem 11.3.
-                  If \{a_n\}^\infty_{n=1} is decreasing and bounded, consider the sequence {−an}∞ n=1.
-                  If an ≤ M for all n, then −an ≥ −M for all n, so {−an}∞ n=1 is bounded below. 
-                  Also, since an ≥ an+1 for all n, we have −an ≤ −an+1 for all n, so {−an}∞ n=1 is increasing. 
-                  Thus, by Theorem 11.3, {−an}∞ n=1 converges, say to L. 
-                  Then by Theorem 10.2(1), \{a_n\}^\infty_{n=1} = {−(−an)}∞ n=1 converges to −L. 
+                  It's enough to show every bounded increasing sequence converges. 
+                  Indeed, if <m>(x_n)_{n=1}^{\infty}</m> is bounded, decreasing, then <m>(-x_n)_{n=1}^{\infty}</m> is bounded and increasing. 
+                  Also, if <m>(-x_n)_{n=1}^{\infty}</m> then so does <m>(x_n)_{n=1}^{\infty}</m>.
+                </p>
+
+                <p>
+                  Now suppose <m>(x_n)_{n=1}^{\infty}\subseteq \mathbb{R}</m> is increasing and bounded. 
+                  Since <m>\{x_n\,|\,n\geq 1\}\subseteq \mathbb{R}</m> is bounded, it has a supremum. 
+                  Set <m>x=\sup\{x_n\,|\,n\geq 1\}\in \mathbb{R}</m>. 
+                  Show <m>x</m> is limit. 
+                  (Remark: we'll often write <m>\sup\{x_n\,|\,n\geq 1\}=\sum_{n\geq 1}x_n</m>)
+                  We'll show <m>x_n\rightarrow x</m>. 
+                  Fix <m>\varepsilon&gt;0</m>. 
+                  Since <m>x-\varepsilon&lt;\sup_{n\geq 1}x_n</m>, there is an integer <m>N\geq 1</m> such that <m>x-\varepsilon&lt;x_N</m>. 
+                  Now for all <m>n\geq N</m>, <m>x-\varepsilon&lt;x_N\leq x_n\leq x</m> so <m>|x-x_n|&lt;\varepsilon\,\forall\,n\geq N</m> so <m>\lim_{n\rightarrow\infty}x_n=x</m>.
                 </p>
               </proof>
             </theorem>
@@ -1741,8 +1664,8 @@
                 <p>
                   We will construct a sequence of rational numbers {qn}∞ n=1 such that r− 1 n &lt; qn &lt; r for every n that is strictly increasing, and then show that this sequence converges to r. 
                   By Density of Rational Numbers, there exists a rational number q1 such that r − 1 &lt; q &lt; r. 
-                  Given q1, . . . , qn, we define qn+1 recursively to be a rational number such that max{r − 1 n+1 , qn} &lt; qn+1 &lt; r again using Density of Rational Numbers.
-                  To see that this rule makes sense, we observe that if we have constructed q1, . . . , qn by this rule, then qn &lt; r, so max{r − 1 n+1 , qn} &lt; r, and hence Density of Rational number applies, so we can construct qn+1 (and hence we can construct qn for any n by this rule). 
+                  Given q1,..., qn, we define qn+1 recursively to be a rational number such that max{r − 1 n+1, qn} &lt; qn+1 &lt; r again using Density of Rational Numbers.
+                  To see that this rule makes sense, we observe that if we have constructed q1,..., qn by this rule, then qn &lt; r, so max{r − 1 n+1, qn} &lt; r, and hence Density of Rational number applies, so we can construct qn+1 (and hence we can construct qn for any n by this rule). 
                   Since 
                   qn ≤ max{r − 1 n + 1, qn} &lt; qn+1
                   for every n, the sequence we obtain is strictly increasing. 
@@ -1770,26 +1693,37 @@
           <definition xml:id="def-subsequence"><title>Subsequence</title>
             <statement>
               <p>
-                A subsequence of a given sequence \{a_n\}^\infty_{n=1} is any sequence of the form
-                {ank }∞ k=1
-                where
-                n1, n2, n3, . . .
-                is any strictly increasing sequence of natural numbers — that is nk ∈ N and nk+1 &gt; nk for all k ∈ N, so that n1 &lt; n2 &lt; n3 &lt; · · · .
+                Let <m>(x_n)_{n=1}^{\infty}</m> be a sequence (in any set <m>S</m>). A <term>subsequence</term> of <m>(x_n)_{n=1}^{\infty}</m> is a sequence <m>(x_{f(n)})_{n=1}^{\infty}</m> where <m>f:\mathbb{Z}_{\geq 1}\rightarrow\mathbb{Z}_{\geq 1}</m> is a strictly increasing function
               </p>
             </statement>
           </definition>
 
-          <remark>
+          <example>
+            <statement>
+              <p>
+                <m>(x_{2n})_{n=1}^{\infty}</m> and <m>(x_{2n+1})_{n=1}^{\infty}</m> are subsequences of <m>(x_n)_{n=1}^{\infty}</m>.
+              </p>
+            </statement>
+          </example>
+
+          <convention>
             <p>
-              Note that k is the index of the subsequence; i.e., the first term in the subsequence is when k = 1, the second is when k = 2 and so on.
-              The integer sequence {nk}∞ k=1 is the sequence of indices of the original sequence we choose to make the subsequence.
+              We'll usually write <m>(x_{n_k})_{k=1}^{\infty}</m> for a subsequence of <m>(x_n)_{n=1}^{\infty}</m>. (Here <m>({n_k})_{k=1}^{\infty}</m> is a strictly increasing set of positive integers)
             </p>
-          </remark>
+          </convention>
+
+          <exercise>
+            <statement>
+              <p>
+                A subsequence of a subsequence of <m>(x_n)_{n=1}^{\infty}</m> is a subseqeuence of <m>(x_n)_{n=1}^{\infty}</m>.
+              </p>
+            </statement>
+          </exercise>
 
           <lemma xml:id="lem-subsequence-lemma">
             <statement>
               <p>
-                Let b1, b2, . . . be any strictly increasing sequence of natural numbers; 
+                Let b1, b2,... be any strictly increasing sequence of natural numbers; 
                 that is, assume bk ∈ N for all k ∈ N and that bk &lt; bk+1 for all k ∈ N. 
                 Then bk ≥ k for all k.
               </p>
@@ -1797,7 +1731,7 @@
 
             <proof>
               <p>
-                Suppose b1, b2, . . . is a strictly increasing sequence of natural numbers. 
+                Suppose b1, b2,... is a strictly increasing sequence of natural numbers. 
                 We prove bn ≥ n for all n by induction on n. 
                 That is, for each n ∈ N, let Pn be the statement that bn ≥ n.
               </p>
@@ -1828,7 +1762,7 @@
                 Let ε &gt; 0. 
                 Since \{a_n\}^\infty_{n=1} converges to L, there is some N ∈ R such that for all natural numbers n &gt; N we have |an − L| &lt; ε. 
                 We claim that the same N works to verify the definition of {ank }∞ k=1 converges to L for this ε. 
-                Indeed, if k &gt; N , then nk &gt; N , so |ank − L| &lt; ε. 
+                Indeed, if k &gt; N, then nk &gt; N, so |ank − L| &lt; ε. 
                 Thus, {ank }∞ k=1 converges to L. 
               </p>
             </proof>
@@ -1864,7 +1798,7 @@
 
                     <p>
                       We define a subsequence recursively. 
-                      We will recursively choose natural numbers n1, n2, n3, . . . so that nk &lt; nk+1 for all k and ank ≤ ank+1 .
+                      We will recursively choose natural numbers n1, n2, n3,... so that nk &lt; nk+1 for all k and ank ≤ ank+1.
                     </p>
 
                     <p>
@@ -1872,7 +1806,7 @@
                     </p>
 
                     <p>
-                      If we have chosen nk, then let b = max{a1, . . . , ank }.
+                      If we have chosen nk, then let b = max{a1,..., ank }.
                     </p>
 
                     <p>
@@ -1912,14 +1846,14 @@
 
               <p>
                 We will prove it has at least one decreasing subsequence by constructing the indices n1 &lt; n2 &lt; · · · of such a subsequence recursively.
-                By the contrapositive of part (1) Lemma 16.4 , since \{a_n\}^\infty_{n=1} does not contain any increasing subsequences, we know that {an | n ∈ N} has a maximum value. 
+                By the contrapositive of part (1) Lemma 16.4, since \{a_n\}^\infty_{n=1} does not contain any increasing subsequences, we know that {an | n ∈ N} has a maximum value. 
                 That is, there exists a natural number n1 such that an1 ≥ am for all m ≥ 1.
               </p>
 
               <p>
-                For any k, given nk, the subsequence ank +1, ank +2, ank +3, . . . also has no increasing subsequence, since a subsequence of such a sequence is a subsequence of the original sequence too. 
+                For any k, given nk, the subsequence ank +1, ank +2, ank +3,... also has no increasing subsequence, since a subsequence of such a sequence is a subsequence of the original sequence too. 
                 Thus, it must have a maximum value again by part (1) Lemma 16.4; 
-                choose nk+1 such that ank+1 = max{ank +1, ank +2, ank +3, . . . }. 
+                choose nk+1 such that ank+1 = max{ank +1, ank +2, ank +3,... }. 
                 By construction, we have nk+1 &gt; nk. Thus, this gives a recursive definition for nk.
               </p>
 
@@ -2067,6 +2001,82 @@
               Often to show a sequence <m>(x_n)_{n=1}^{\infty}</m> converges to <m>x</m> one shows <m>\limsup_{n\rightarrow\infty}x_n\leq x</m> and <m>\liminf_{n\rightarrow\infty}x_n\geq x</m>.
             </p>
           </remark>
+
+          <corollary xml:id="cor-lim-inf-sup-order">
+            <statement>
+              <p>
+                If <m>(x_n)_{n=1}^{\infty}\subseteq \mathbb{R}</m> is a sequence and <m>(x_{n_k})_{k=1}^{\infty}\subseteq \mathbb{R}</m>, then <me>\liminf_{n\rightarrow\infty}x_{n}\leq \liminf_{k\rightarrow\infty}x_{n_k}\leq \limsup_{k\rightarrow\infty}x_{n_k}\leq \limsup_{n\rightarrow\infty}x_{n}</me>
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                Second inequality is known (what we ended weds with). We'll prove the first – the third is similar.<!-- linebreak -->Note that <m>n_1\geq 1</m> and <m>n_{k+1}&gt;n_k</m>, and so <m>n_k\geq k\,\forall\, k\geq 1</m>. This implies that <m>\forall\,k\geq 1</m>, <m>\{m\in\mathbb{Z}\,|\,m\geq k\}\supseteq\{n_m\,|\,m\in\mathbb{Z},m\geq k\}</m>, and so <m>\inf_{m\geq k}x_m\leq \inf_{m\geq k}x_{n_m}</m><!-- linebreak -->Taking the limit as <m>k\rightarrow\infty</m>, we have <m>\lim_{k\rightarrow\infty}\inf_{m\geq k}x_m\leq \lim_{k\rightarrow\infty}\inf_{m\geq k}x_{n_m}</m> and <m>\liminf_{k\rightarrow\infty}x_k\leq \liminf_{k\rightarrow\infty}x_{n_k}</m>.
+              </p>
+            </proof>
+          </corollary>
+
+          <theorem xml:id="thm-seq-subseq-conv">
+            <statement>
+              <p>
+                If <m>(x_n)_{n=1}^{\infty}\subseteq \mathbb{R}</m> is a sequence, then <m>(x_n)_{n=1}^{\infty}</m> converges iff every subsequence of <m>(x_n)_{n=1}^{\infty}</m> converges. Moreover, in this case, for every subsequence <m>(x_{n_k})_{k=1}^{\infty}</m> <me>\lim_{k\rightarrow\infty}x_{n_k}=\lim_{k\rightarrow\infty}x_n</me>
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                (<m>\impliedby</m>) is trivial. <m>(x_n)_{n=1}^{\infty}</m> is a subsequence of itself.<!-- linebreak -->(<m>\implies</m>) and <q>moreover</q>: assume <m>(x_n)_{n=1}^{\infty}</m> converges and write <m>x=\lim_{n\rightarrow\infty}x_n</m>. Let <m>(x_{n_k})_{k=1}^{\infty}</m> be a subsequence. We'll show <m>\lim_{k\rightarrow\infty}x_{n_k}=x</m>.<!-- linebreak -->By the previous result, <me>x=\liminf_{n\rightarrow\infty}x_{n}\leq \liminf_{k\rightarrow\infty}x_{n_k}\leq \limsup_{k\rightarrow\infty}x_{n_k}\leq \limsup_{n\rightarrow\infty}x_{n}=x.</me> So <m>\liminf_{k\rightarrow\infty}x_{n_k}=\limsup_{k\rightarrow\infty}=x</m> and hence <m>\lim_{k\rightarrow\infty}x_{n_k}=x</m>.
+              </p>
+            </proof>
+          </theorem>
+
+          <corollary xml:id="cor-seq-subseq-conv">
+            <statement>
+              <p>
+                The same result holds with <m>\mathbb{C}</m> in place of <m>\mathbb{R}</m>.
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                Indeed <m>(\impliedby)</m> still trivial. <m>(\implies)</m> Suppose <m>x_n\rightarrow x\in\mathbb{C}</m> and <m>(x_{n_k})_{k=1}^{\infty}\subseteq \mathbb{C}</m> is a subsequence. We know <m>(\text{Re}(x_n))_{n=1}^{\infty}\subseteq \mathbb{R}</m> converges to <m>\text{Re}(x)</m>, and so the subsequence <m>(\text{Re}(x_{n_k}))_{k=1}^{\infty}\subseteq \mathbb{R}</m> converges to <m>\text{Re}(x)</m>. Similarly <m>(\text{Im}(x_{n_k})_{k=1}^{\infty}</m> converges to <m>\text{Im}(x)</m>. Now <m>x_{n_k}=\text{Re}(x_{n_k})+i\text{Im}(x_{n_k})\rightarrow\text{Re}(x)+i\text{Im}(x)=x</m>
+              </p>
+            </proof>
+          </corollary>
+
+          <lemma xml:id="lem-bolzano">
+            <statement>
+              <p>
+                For every sequence <m>(x_n)_{n=1}^{\infty}\subseteq \mathbb{R}</m> there are subsequences <m>(x_{m_k})_{k=1}^{\infty}</m> and <m>(x_{n_k})_{k=1}^{\infty}</m> of <m>(x_{n})_{n=1}^{\infty}</m> so that <me>\lim_{k\rightarrow\infty}x_{m_k}=\liminf_{n\rightarrow\infty}x_n</me> and <me>\lim_{k\rightarrow\infty}x_{n_k}=\limsup_{n\rightarrow\infty}x_n</me> (these could be <m>\pm\infty</m>).
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                Suppose <m>\limsup_{n\rightarrow\infty}x_n&gt;-\infty</m>. Fix a strictly increasing sequence <m>(C_k)_{k=1}^{\infty}\subseteq\mathbb{R}</m> with <m>\sup_{k\geq 1}C_k=\limsup_{n\rightarrow\infty}x_n</m><!-- linebreak -->(eg when <m>\limsup_{n\rightarrow\infty}x_n&lt;\infty</m>, <m>C_k=\limsup_{n\rightarrow\infty}x_n-\frac{1}{k}</m> and when <m>\limsup_{n\rightarrow\infty}x_n=\infty, C_k=k</m>).<!-- linebreak -->Claim: There is a subsequence <m>(x_{n_k})_{k=1}^{\infty}</m> of <m>(x_n)_{n=1}^{\infty}</m> such that <m>x_{n_k}&gt;C_k</m> for all <m>k\geq 1</m>.<!-- linebreak -->Assume the claim for now (we'll come back to it). Then <m>\liminf_{k\rightarrow\infty}x_{n_k}\geq \liminf_{k\rightarrow\infty}C_k=\limsup_{n\rightarrow\infty}x_n\geq \limsup_{k\rightarrow\infty}x_{n_k}</m>. So <m>\lim_{k\rightarrow\infty}x_{n_k}=\limsup_{n\rightarrow\infty}x_n</m> as required.<!-- linebreak --><term>Proof of claim</term>: (constructed inductively) First note that <m>\inf_{n\geq 1}\sup_{l\geq n}x_l=\limsup_{n\rightarrow\infty}x_n&gt;C_1</m>. We have <m>\sup_{l\geq n}x_l&gt;C_1</m> for all <m>n\geq 1</m>. In particular <m>\sup_{l\geq 1}x_l&gt;C_1</m>. There is an <m>n_1\geq 1</m> such that <m>x_{n_1}&gt;C_1</m>.<!-- linebreak -->Assume now we've constructed <m>n_1&lt;n_2&lt;\dots&lt;n_k</m> with <m>x_{n_i} &gt; C_i</m> for all <m>i=1,\dots,k</m>. Since <m>\limsup_{n\rightarrow\infty}x_n&gt;C_{k+1}</m>, we have <m>\sup_{n\geq l}x_n&gt;C_{k+1}</m> for all <m>l\geq 1</m>. In particular, taking <m>l=n_k+1</m>, <m>\sup_{n\geq n_k+1}x_n&gt;C_{k+1}</m>. There is an <m>n_{k+1}\geq n_k+1&gt;n_k</m> with <m>x_{n_{k+1}}&gt;C_{k+1}</m>. This proves the claim.
+              </p>
+            </proof>
+          </lemma>
+
+          <example>
+            <statement>
+              <p>
+                <m>x_n=\begin{cases}
+                  \frac{1}{n} &amp; n\text{ odd}\\
+                  \frac{n+1}{n} &amp; n\text{ even}
+              \end{cases}</m> has <m>\limsup_{n\rightarrow\infty}x_n=1</m>, <m>\liminf_{n\rightarrow\infty}x_n=0</m>
+              </p>
+            </statement>
+          </example>
+
+          <theorem xml:id="thm-balzano"><title>Bolzano-Weierstrass Theorem</title>
+            <statement>
+              <p>
+                If <m>(x_n)_{n=1}^{\infty}\subseteq \mathbb{R}</m>, is bounded, then <m>\limsup_{n\rightarrow\infty}x_n\in\mathbb{R}</m>. Now apply the previous result.<!-- linebreak -->Now if <m>(x_n)_{n=1}^{\infty}\subseteq\mathbb{C}</m> is bounded, then <m>(\text{Re}(x_n))_{n=1}^{\infty}\subseteq \mathbb{R}</m> is also bounded (as <m>\left|{\text{Re}(z)}\right|\leq \left|{z}\right|</m> for all <m>z\in\mathbb{C}</m>. So there is a subsequence <m>(x_{n_k})_{k=1}^{\infty}</m> of <m>(x_n)_{n=1}^{\infty}</m> such that <m>(\text{Re}(x_{n_k}))_{k=1}^{\infty}</m> converges. Note that <m>(x_{n_k})_{k=1}^{\infty}\subseteq\mathbb{C}</m> is bounded, and hence <m>(\Im(x_{n_k}))_{k=1}^{\infty}\subseteq\mathbb{R}</m> is bounded. So there is a subsequence <m>(x_{n_{k_l}})_{l=1}^{\infty}</m> of <m>(x_{n_k})_{k=1}^{\infty}</m> so that <m>(\Im(x_{n_{k_l}}))_{l=1}^{\infty}</m> converges. As <m>(\text{Re}(x_{n_{k_l}}))_{l=1}^{\infty}</m> of <m>(\text{Re}(x_{n_k}))_{k=1}^{\infty}</m> and the latter sequence converges, so does the former. But now <m>x_{n_{k_l}}=\text{Re}(x_{n_{k_l}})+i\Im((x_{n_{k_l}}))</m>, so <m>(x_{n_{k_l}})_{l=1}^{\infty}</m> converges.
+              </p>
+            </statement>
+          </theorem>
+          
 
         </section>
 
@@ -2482,94 +2492,282 @@
 
         <section xml:id="sec-topology-metric"><title>Topology and Metric Spaces</title>
 
-          <blockquote>
+          <subsection xml:id="subsec-inner"><title>Inner Products and Cauchy-Schwarz</title>
+
+            <blockquote>
+              <p>
+                <q>
+                  Keep in mind, measurement is not just in numbers, but stories.
+                </q>
+              </p>
+              <attribution>Pearl Zhu</attribution>
+            </blockquote>
+
+            <definition xml:id="def-cn-rn"><title><m>C^n</m> and <m>R^n</m></title>
+              <statement>
+                <p>
+                  Set <m>\mathbb{C}^n=\left
+                    \{\begin{bmatrix}x_1 \\ x^2 \\ \vdots \\ x_n \end{bmatrix}\,:\, x_i\in\mathbb{C}\right\}</m> and <m>\mathbb{R}^n=\left\{\begin{bmatrix}x_1\\x^2\\ \vdots\\x_n\end{bmatrix}\,:\,x_i\in\mathbb{R}\right\}</m> (<m>n\geq 1</m>)
+                </p>
+              </statement>
+            </definition>
+
+            <convention>
+              <p>
+                We'll often write <m>(x_1,\dots,x_n)</m> in place of <m>\begin{bmatrix}x_1\\x^2\\ \vdots\\x_n\end{bmatrix}</m> and <m>x\in\mathbb{C}^n</m> in place of <m>\vec{x}\in\mathbb{C}^n</m>
+              </p>
+            </convention>
+
+            <definition xml:id="def-c-inner-product"><title>Inner Product, Norm</title>
+              <statement>
+                <p>
+                  The <term>inner product</term> on <m>\mathbb{C}^n</m> is given by <m>\langle{x,y}\rangle=\sum_{i=1}^nx_i\bar{y_i}\,\forall\,x,y\in\mathbb{C}^n</m>.
+                  Define the <term>norm</term> on <m>\mathbb{C}^n</m> by <m>\left|{\left|{{x}}\right|}\right|=\langle{x,x}\rangle^{\frac{1}{2}}=(\sum_{i=1}^n\left|{x_i}\right|^2)^{\frac{1}{2}}</m>.
+                </p>
+              </statement>
+            </definition>
+
+            <convention>
+              <p>
+                Sometimes people define <m>\langle{x,y}\rangle=\sum_{i=1}^n\bar{x_i}y_i</m>. (especially physicists)
+              </p>
+            </convention>
+
+            <theorem xml:id="thm-inner-product-properties"><title>Properties of Inner Products</title>
+              <statement>
+                <p>
+                  <m>\forall\,x,y,z\in\mathbb{C}^n,a,b\in\mathbb{C}</m>
+                  <ul>
+                    <li>
+                      <p>
+                        <term>Positive definite</term>: <m>\langle{x,x}\rangle\geq 0</m> and (<m>\langle{x,x}\rangle=0\iff x=0</m>).
+                      </p>
+                    </li>
+                
+                    <li>
+                      <p>
+                        <term>Conjugate symmetric</term>: <m>\langle{x,y}\rangle=\overline{\langle{y,x}\rangle}</m>
+                      </p>
+                    </li>
+                
+                    <li>
+                      <p>
+                        <term>Sesquilinearity</term>:
+                          <ul>
+                            <li>
+                              <p>
+                                <m>\langle{ax+by,z}\rangle=a\langle{x,z}\rangle+b\langle{y,z}\rangle</m>
+                              </p>
+                            </li>
+                
+                            <li>
+                              <p>
+                                <m>\langle{x,ay+bz}\rangle=\bar{a}\langle{x,y}\rangle+\bar{b}\langle{x,z}\rangle</m>
+                              </p>
+                            </li>
+                          </ul>
+                        </p>
+                    </li>
+                  </ul>
+                </p>
+              </statement>
+            </theorem>
+
+            <remark>
+              <p>
+                Sesquilinearity means <q>1 and a half linear.</q> 
+                In real case it's bilinear.
+              </p>
+            </remark>
+
+            <theorem xml:id="thm-norm-properties"><title>Properties of Norms</title>
+              <statement>
+                <p>
+                  <m>\forall\,x,y\in\mathbb{C}^n,a\in\mathbb{C}</m>
+                  <ul>
+                    <li>
+                      <p>
+                    <term>Positive definite</term> <m>\left|{\left|{{x}}\right|}\right|\geq 0</m> and (<m>\left|{\left|{{x}}\right|}\right|=0\iff x=0</m>).
+                  </p>
+                    </li>
+                
+                    <li>
+                      <p>
+                    <term>Homogeneous</term>: <m>\left|{\left|{{ax}}\right|}\right|=\left|{a}\right|\left|{\left|{{x}}\right|}\right|</m>
+                  </p>
+                    </li>
+                
+                    <li>
+                      <p>
+                    <term>Triangle inequality</term> <m>\left|{\left|{{x+y}}\right|}\right|\leq \left|{\left|{{x}}\right|}\right|+\left|{\left|{{y}}\right|}\right|</m>. draw triangle w/ x and y as vectors/sides, vector going to <m>x+y</m> is leq the other two added together
+                  </p>
+                    </li>
+                
+                  </ul>
+                </p>
+              </statement>
+            </theorem>
+
+            <lemma xml:id="lem-cauchy">
+              <statement>
+                <p>
+                  For <m>a,b\in\mathbb{R}, ab\leq \frac{1}{2}(a^2+b^2)</m>
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  <m>(a-b)^2\geq 0\rightarrow a^2-2ab+b^2\geq 0\rightarrow ab\leq \frac{1}{2}(a^2+b^2)</m>
+                </p>
+              </proof>
+            </lemma>
+
+            <theorem xml:id="thm-cauchy-schwarz"><title>Cauchy-Schwarz Inequality</title>
+              <statement>
+                <p>
+                  For <m>x,y\in\mathbb{C}^n,\left|{\langle{x,y}\rangle}\right|\leq \left|{\left|{{x}}\right|}\right|\cdot\left|{\left|{{y}}\right|}\right|</m>
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  <me>
+                    \begin{aligned}
+                      \left|{\langle{x,y}\rangle}\right|
+                      &amp;=\left|{\sum_{i=1}^nx_i\bar{y_i}}\right|\\
+                      &amp;\leq \sum_{i=1}^n\left|{x_i}\right|\cdot{\left|{y_i}\right|}\\
+                      &amp;\leq \sum_{i=1}^n\frac{1}{2}(\left|{x_i}\right|^2+\left|{y_i}\right|^2)\\
+                      &amp;=\frac{1}{2}(\left|{\left|{{x}}\right|}\right|^2+\left|{\left|{{y}}\right|}\right|^2)
+                    \end{aligned}
+                  </me> 
+                  If <m>x,y\neq 0</m> then 
+                  <me>
+                    \left|{\langle{\frac{x}{\left|{\left|{{x}}\right|}\right|},\frac{y}{\left|{\left|{{y}}\right|}\right|}}\rangle}\right|\leq \frac{1}{2}(\left|{\left|{{\frac{x}{\left|{\left|{{x}}\right|}\right|}}}\right|}\right|^2+\left|{\left|{{\frac{y}{\left|{\left|{{y}}\right|}\right|}}}\right|}\right|^2=\frac{1}{2}(1^2+1^2)=1.
+                  </me> 
+                  Multiply by <m>\left|{\left|{{x}}\right|}\right|\left|{\left|{{y}}\right|}\right|</m> to get <m>\left|{\langle{x,y}\rangle}\right|\leq \left|{\left|{{x}}\right|}\right|\cdot\left|{\left|{{y}}\right|}\right|</m>.                
+                </p>
+
+                <p>
+                  If <m>x=0</m> or <m>y=0</m> then <m>\left|{\langle{x,y}\rangle}\right|=0=\left|{\left|{{x}}\right|}\right|\cdot\left|{\left|{{y}}\right|}\right|</m>
+                </p>
+              </proof>
+            </theorem>
+
+            <lemma xml:id="lem-triangle">
+              <statement>
+                <p>
+                  <m>\left|{\left|{{x+y}}\right|}\right|^2=\left|{\left|{{x}}\right|}\right|^2+\left|{\left|{{y}}\right|}\right|^2+2\text{Re}(\langle{x,y}\rangle)</m>
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  <me>
+                    \begin{aligned}
+                    \left|{\left|{{x+y}}\right|}\right|^2
+                    &amp;=\langle{x+y,x+y}\rangle\\
+                    &amp;=\langle{x,x}\rangle+\langle{x,y}\rangle+\langle{y,x}\rangle+\langle{y,y}\rangle\\
+                    &amp;=\left|{\left|{{x}}\right|}\right|^2+\langle{x,y}\rangle+\overline{\langle{x,y}\rangle}+\left|{\left|{{y}}\right|}\right|^2\\
+                    &amp;=\left|{\left|{{x}}\right|}\right|^2+2\text{Re}(\langle{x,y}\rangle)+\left|{\left|{{y}}\right|}\right|^2
+                    \end{aligned}
+                  </me>
+                </p>
+              </proof>
+            </lemma>
+
+            <theorem xml:id="thm-triangle">
+              <statement>
+                <p>
+                  If <m>x,y\in\mathbb{C}^n</m> 
+                  <me>
+                    \begin{aligned}
+                    \left|{\left|{{x+y}}\right|}\right|^2
+                    &amp;=\left|{\left|{{x}}\right|}\right|^2+2\text{Re}(\langle{x,y}\rangle)+\left|{\left|{{y}}\right|}\right|^2\\
+                    &amp;\leq \left|{\left|{{x}}\right|}\right|^2+2\left|{\langle{x,y}\rangle}\right|+\left|{\left|{{y}}\right|}\right|^2\\
+                    &amp;\leq \left|{\left|{{x}}\right|}\right|^2+2\left|{\left|{{x}}\right|}\right|\left|{\left|{{y}}\right|}\right|+\left|{\left|{{y}}\right|}\right|^2\\
+                    &amp;=(\left|{\left|{{x}}\right|}\right|+\left|{\left|{{y}}\right|}\right|)^2
+                    \end{aligned}
+                  </me> 
+                  Square roots preserve inequalities so <m>\left|{\left|{{x+y}}\right|}\right|\leq \left|{\left|{{x}}\right|}\right|+\left|{\left|{{y}}\right|}\right|</m>
+                </p>
+              </statement>
+            </theorem>
+            
+          </subsection>
+
+          <subsection xml:id="subsec-matric"><title>Metric Spaces</title>
+
             <p>
-              <q>
-                Keep in mind, measurement is not just in numbers, but stories.
-              </q>
+              We can use the norm to define a notion of distance: the distance from <m>x</m> to <m>y</m> is <m>\left|{\left|{{x-y}}\right|}\right|</m>.
             </p>
-            <attribution>Pearl Zhu</attribution>
-          </blockquote>
-
-          <definition xml:id="def-cn-rn">
-            <statement>
-              <p>
-                Set <m>\mathbb{C}^n=\{\begin{bmatrix}x_1\\x^2\\ \vdots\\x_n\end{bmatrix}\,:\, x_i\in\mathbb{C}\}</m> and <m>\mathbb{R}^n=\{\begin{bmatrix}x_1\\x^2\\ \vdots\\x_n\end{bmatrix}\,:\,x_i\in\mathbb{R}\}</m> (<m>n\geq 1</m>)
-              </p>
-            </statement>
-          </definition>
-
-          <convention>
-            <p>
-              We'll often write <m>(x_1,\dots,x_n)</m> in place of <m>\begin{bmatrix}x_1\\x^2\\ \vdots\\x_n\end{bmatrix}</m> and <m>x\in\mathbb{C}^n</m> in place of <m>\vec{x}\in\mathbb{C}^n</m>
-            </p>
-          </convention>
-          
-          <definition xml:id="def-metric">
-            <statement>
-              <p>
-                Let <m>X</m> be a set. 
-                A <term>metric</term> on <m>X</m> is a function <m>d:X\times X\rightarrow\mathbb{R}_+</m> such that <m>\forall\,x,y,z\in X</m>                <ol>
-                  <li><title>Positive Definite</title>
-                    <p>
-                      <m>d(x,y)=0\iff x=y</m>
-                    </p>
-                  </li>
-
-                  <li><title>Symmetric</title>
-                    <p>
-                      <m>d(x,y)=d(y,x)</m>
-                    </p>
-                  </li>
-
-                  <li><title>Triangle Inequality</title>
-                    <p>
-                      <m>d(x,z)\leq d(x,y)+d(y,z)</m>
-                    </p>
-                  </li>
-                </ol>
-              </p>
-
-              <p>
-                A <term>metric space</term> is a pair <m>(X,d)</m> where <m>X</m> is a set and <m>d</m> is a metric on <m>X</m>. 
-                We'll typically write <m>X</m> for a metric space where the metric is understood.              
-              </p>
-            </statement>
-          </definition>
-
-          <example><title>Euclidean Metric</title>
-            <statement>
-              <p>
-                The pair (R, d) is a metric space, where d is defined by d(x, y) = x − y. 
-                The metric d is called the usual (or absolute value or Euclidean) metric for R. 
-                The space R is understood to have the usual metric unless otherwise specified.
-              </p>
-            </statement>
-          </example>
-
-          <example><title>Discrete Metric</title>
-            <statement>
-              <p>
-                For a set <m>X</m>, <term>the discrete metric</term> on <m>X</m> is <m>d{X\times X}\rightarrow\mathbb{R}_+</m>. 
-                <me>
-                  \begin{aligned}
-                  d(x,y)=\begin{cases}
-                      1 &amp;\ \text{ if } x\neq y\\
-                      0 &amp;\ \text{ if } x=y
-                  \end{cases}
-                  \end{aligned}
-                </me>
-              </p>
-            </statement>
-          </example>
-
-          <theorem xml:id="thm-metric-subsets">
-            <statement>
-              <p>
-                Subsets of metric spaces are metric spaces: If (X,d) is a metric space and Y\subseteq X then (Y,d\mid_{Y\times Y}) is a metric space.
-              </p>
-            </statement>
-          </theorem>
+            
+            <definition xml:id="def-metric">
+              <statement>
+                <p>
+                  Let <m>X</m> be a set. 
+                  A <term>metric</term> on <m>X</m> is a function <m>d:X\times X\rightarrow\mathbb{R}_+</m> such that <m>\forall\,x,y,z\in X</m>                <ol>
+                    <li><title>Positive Definite</title>
+                      <p>
+                        <m>d(x,y)=0\iff x=y</m>
+                      </p>
+                    </li>
+  
+                    <li><title>Symmetric</title>
+                      <p>
+                        <m>d(x,y)=d(y,x)</m>
+                      </p>
+                    </li>
+  
+                    <li><title>Triangle Inequality</title>
+                      <p>
+                        <m>d(x,z)\leq d(x,y)+d(y,z)</m>
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+  
+                <p>
+                  A <term>metric space</term> is a pair <m>(X,d)</m> where <m>X</m> is a set and <m>d</m> is a metric on <m>X</m>. 
+                  We'll typically write <m>X</m> for a metric space where the metric is understood.              
+                </p>
+              </statement>
+            </definition>
+  
+            <example><title>Euclidean Metric</title>
+              <statement>
+                <p>
+                  The pair (R, d) is a metric space, where d is defined by d(x, y) = x − y. 
+                  The metric d is called the usual (or absolute value or Euclidean) metric for R. 
+                  The space R is understood to have the usual metric unless otherwise specified.
+                </p>
+              </statement>
+            </example>
+  
+            <example><title>Discrete Metric</title>
+              <statement>
+                <p>
+                  For a set <m>X</m>, <term>the discrete metric</term> on <m>X</m> is <m>d{X\times X}\rightarrow\mathbb{R}_+</m>. 
+                  <me>
+                    \begin{aligned}
+                    d(x,y)=\begin{cases}
+                        1 &amp;\ \text{ if } x\neq y\\
+                        0 &amp;\ \text{ if } x=y
+                    \end{cases}
+                    \end{aligned}
+                  </me>
+                </p>
+              </statement>
+            </example>
+  
+            <theorem xml:id="thm-metric-subsets">
+              <statement>
+                <p>
+                  Subsets of metric spaces are metric spaces: If (X,d) is a metric space and Y\subseteq X then (Y,d\mid_{Y\times Y}) is a metric space.
+                </p>
+              </statement>
+            </theorem>
+            
+          </subsection>
           
         </section>
 
@@ -2586,19 +2784,88 @@
               <attribution>Drake</attribution>
             </blockquote>
           
-            <definition xml:id="def-limit-point">
+            <definition xml:id="def-cluster-point">
               <statement>
                 <p>
-                  Let M be a metric space, and let X be a subset of M. 
-                  We say that a point x in M is a limit point of X if there is a sequence {xn} such that x_n\in X for every positive integer n and limn→∞ xn = x.
+                  A <term>cluster point</term> of a subset <m>A</m> in a metric space <m>X</m> is an element <m>x\in X</m> such that there is a sequence <m>(x_n)_{n=1}^\infty\subseteq A\setminus \{x\}</m> with <m>\lim_{n\rightarrow\infty}x_n=x</m>.
                 </p>
               </statement>
             </definition>
 
+            <remark>
+              <p>
+                <m>x</m> need not be in <m>A</m>
+              </p>
+            </remark>
+
+            <convention>
+              <p>
+                Cluster points are often called <term>limit points</term> but the book uses the term limit point slightly differently allowing <m>(x_n)_{n=1}^\infty\subseteq A</m> instead of <m>(x_n)_{n=1}^\infty\subseteq A\setminus \{x\}</m>.
+              </p>
+            </convention>
+
+            <example>
+              <statement>
+                <p>
+                  Fix <m>a,b\in \mathbb{R}, a&lt;b</m>. Set <m>[a,b]=\{{x\in\mathbb{R}}\,:\,{a\leq x\leq b}\}</m>. The set of cluster points of <m>[a,b]</m> is <m>[a,b]</m>.
+                </p>
+              </statement>
+              <solution>
+                <p>
+                  Suppose first <m>x\in [a,b]</m>. We’ll show <m>x</m> is a cluster point.
+                  Suppose <m>x\neq b</m>. Fix an integer <m>N\geq 1</m> so that <m>\frac{1}{N}&lt;b-x</m>. Then <m>(x+\frac{1}{n})_{n=N}^\infty\subseteq [a,b]\setminus\{x\}</m> and <m>x=\lim_{n\rightarrow\infty}(x+\frac{1}{n})</m>, so <m>x</m> is a cluster point. For <m>x=b</m>, consider <m>(x-\frac{1}{n})_{n=M}^\infty\subseteq [a,b]</m> where <m>\frac{1}{M}&lt;b-a</m>.
+                </p>
+
+                <p>
+                  Now suppose <m>x\in \mathbb{R}</m> is a cluster point of <m>[a,b]</m>. We’ll show <m>x\in [a,b]</m>. We know <m>\exists (x_n)_{n=1}^\infty\subseteq [a,b]\setminus\{x\}</m> such that <m>\lim_{n\rightarrow\infty}x_n=x</m>. Since <m>a\leq x_n\leq b</m> for all <m>n\geq 1</m>, we have <m>a\leq x\leq b</m>. So <m>x\in[a,b]</m>.
+                </p>
+              </solution>
+            </example>
+
+            <example>
+              <statement>
+                <p>
+                  For <m>a,b\in \mathbb{R}</m> with <m>a&lt;b</m>, <m>[a,b]</m> is the set of cluster points of
+                  <ol>
+                    <li>
+                      <p>
+                        <m>(a,b)=\{{x\in\mathbb{R}}\,:\,{a&lt; x&lt; b}\}</m> (basically same proof)
+                      </p>
+                    </li>
+                
+                    <li>
+                      <p>
+                        <m>(a,b]=\{{x\in\mathbb{R}}\,:\,{a&lt; x\leq b}\}</m>
+                      </p>
+                    </li>
+                
+                    <li>
+                      <p>
+                        <m>[a,b)=\{{x\in\mathbb{R}}\,:\,{a\leq x&lt; b}\}</m>
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+            </example>
+
+            <example>
+              <statement>
+                <p>
+                  Let <m>X</m> be a metric space and let <m>F\subseteq X</m> be a finite set. Then <m>F</m> has no cluster points.
+                </p>
+              </statement>
+              <solution>
+                <p>
+                  Suppose <m>x\in X</m> is a cluster point of <m>F</m>. Then <m>\exists (x_n)_{n=1}^\infty\subseteq F\setminus \{x\}</m> such that <m>\lim_{n\rightarrow\infty} x_n=x</m>. Note that <m>(x_n)_{n=1}^\infty</m> converges so it’s Cauchy. Let <m>\varepsilon=\min\{{d(y,z)}\,:\,{y,z\in F, y\neq z}\}&gt;0</m>. Fix <m>N\in\mathbb{Z},N\geq 1</m> such that for all <m>k,l\geq N</m>, <m>d(x_k,x_l)&lt;\varepsilon</m>. But then <m>x_k=x_l</m> for all <m>k,l\geq N</m> and in particular <m>x_k=x_N</m> for all <m>k\geq N</m>. Then <m>x=\lim_{n\rightarrow\infty}x_n=x_N\in F\setminus\{x\}</m>, contradiction.
+                </p>
+              </solution>
+            </example>
+
             <exercise>
               <statement>
                 <p>
-                  On the real line 1 is a limit point of either of the sets [0, 1] or (0, 1)
+                  Almost the same proof as (3) shows that <m>\mathbb{Z}\subseteq \mathbb{R}</m> has no cluster points and if <m>X</m> is a discrete metric space then <m>X</m> has no cluster points.
                 </p>
               </statement>
             </exercise>
@@ -2606,25 +2873,15 @@
             <definition xml:id="def-closed-set"><title>Closed Set</title>
               <statement>
                 <p>
-                  Let M be a metric space, and let X be a subset of M. 
-                  If every limit point of X belongs to X, we say that X is closed (in M).
+                  If <m>X</m> is a metric space and <m>A\subseteq X</m> is a subset, then <m>A</m> is <term>closed</term> if every cluster point of <m>A</m> belongs to <m>A</m>.
                 </p>
               </statement>
             </definition>
 
-            <theorem xml:id="thm-closet-sets">
-              <statement>
-                <p>
-                  Let M be a metric space and let x\in M. 
-                  Then M, \es , and {x} are closed subsets of M.
-                </p>
-              </statement>
-            </theorem>
-
             <theorem xml:id="thm-closed-union">
               <statement>
                 <p>
-                  Let X and Y be closed subsets of a metric space. Then X\cup Y is closed.
+                  Let <m>X</m> and <m>Y</m> be closed subsets of a metric space. Then <m>X\cup Y</m> is closed.
                 </p>
               </statement>
             </theorem>
@@ -2632,7 +2889,7 @@
             <corollary xml:id="cor-closed-unions">
               <statement>
                 <p>
-                  If X1, X2, . . . , Xn are closed subsets of a metric space, then X_1\cup X_2\cup\dots\cup X_n is closed.
+                  If <m>X_1, X_2,..., X_n</m> are closed subsets of a metric space, then <m>X_1\cup X_2\cup\dots\cup X_n</m> is closed.
                 </p>
               </statement>
             </corollary>
@@ -2656,7 +2913,7 @@
             <theorem xml:id="thm-intersections-closed">
               <statement>
                 <p>
-                  Let \fC be a collection of closed subsets of a metric space. Then \bigcap\fC is closed.
+                  Let <m>\cC</m> be a collection of closed subsets of a metric space. Then <m>\bigcap\cC</m> is closed.
                 </p>
               </statement>
             </theorem>
@@ -2686,7 +2943,7 @@
             <example>
               <statement>
                 <p>
-                  The open ball in R of radius ε centered at x is the open interval (x − ε, x + ε).
+                  The open ball in <m>R</m> of radius ε centered at x is the open interval (x − ε, x + ε).
                   An open ball in R2 is the interior of a disk and an open ball in R3 is the interior of a sphere.
                 </p>
               </statement>
@@ -6410,7 +6667,7 @@
 
         <paragraphs><title>Winter 2023</title>
        
-          <problem>
+          <exploration>
             <statement>
               <p>
                 Suppose that <m>f: \mathbb{R} \rightarrow \mathbb{R}</m> is differentiable at <m>x_{0} \in \mathbb{R}</m>. 
@@ -6427,9 +6684,9 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
                 Let <m>\left\{a_{n}\right\}_{n=1}^{\infty},\left\{b_{n}\right\}_{n=1}^{\infty} \subset(0, \infty)</m> be given.
@@ -6455,9 +6712,9 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
                 <ol>
@@ -6482,9 +6739,9 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
                 Use the Riemann condition to show that <m>f \in \mathcal{R}_{\alpha}[0,2]</m> where <m>f(x)=\tan (\pi x / 4)</m> and
@@ -6502,9 +6759,9 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
                 Determine all the values of <m>x \in \mathbb{R}</m> for which the series below converges
@@ -6518,9 +6775,9 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
                 Let <m>(M, d)</m> be a metric space. 
@@ -6548,13 +6805,13 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
 
         </paragraphs>
 
         <paragraphs><title>Spring 2022</title>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
                 <ol>
@@ -6580,9 +6837,9 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
                 Let <m>(X, \rho)</m> be a metric space. 
@@ -6600,9 +6857,9 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
                 Consider the sequence <m>\left\{x_{n}\right\}_{n \geq 1}</m> defined by <m>0&lt;x_{1}&lt;1</m> and <m>x_{n+1}=1-\sqrt{1-x_{n}}</m> for <m>n=</m> <m>1,2, \ldots</m>. 
@@ -6615,9 +6872,9 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
                 Use the Riemann condition to show that <m>f \in \mathcal{R}_{\alpha}[0,3]</m> where <m>f(x)=\ln (2 x+1)</m> and
@@ -6635,9 +6892,9 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
                 Find the domain of convergence and the sum of the series
@@ -6653,9 +6910,9 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
                 Show that
@@ -6670,13 +6927,13 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
           
         </paragraphs>
 
         <paragraphs><title>Winter 2022</title>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
                 Suppose <m>a, b \in \mathbb{R}</m> with <m>a&lt;b</m> and let <m>f:[a, b] \rightarrow \mathbb{R}</m> be a differentiable function such that <m>f^{\prime}:[a, b] \rightarrow \mathbb{R}</m> is continuous. 
@@ -6691,9 +6948,9 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
                 Let <m>X</m> and <m>Y</m> be metric spaces and let <m>f: X \rightarrow Y</m> be a continuous bijection.
@@ -6717,9 +6974,9 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
                 Compute, with proof, <m>\lim _{k \rightarrow \infty} \sum_{n=1}^{\infty} n^{-k}</m>.
@@ -6730,9 +6987,9 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
                 <ol>
@@ -6757,9 +7014,9 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
                 Prove the following special case of Dini's Theorem: 
@@ -6772,9 +7029,9 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
                 Let <m>f:[0,1] \rightarrow \mathbb{R}</m> be a continuous function.
@@ -6798,13 +7055,13 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
           
         </paragraphs>  
 
         <paragraphs><title>Spring 2021</title>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
                 Suppose that <m>X</m> is a compact metric space, <m>\left(x_{n}\right)_{n=1}^{\infty} \subseteq X, x \in X</m>, and every convergent subsequence of <m>\left(x_{n}\right)_{n=1}^{\infty}</m> converges to <m>x</m>. 
@@ -6816,9 +7073,9 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
                 <ol>
@@ -6841,9 +7098,9 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
                 Suppose that <m>f: \mathbb{R} \rightarrow \mathbb{R}</m> is a differentiable function such that there is no <m>x \in \mathbb{R}</m> with <m>f(x)=f^{\prime}(x)=0</m>. 
@@ -6855,9 +7112,9 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
                 Let <m>X</m> be a metric space. 
@@ -6870,7 +7127,7 @@
                     <p>
                       Let <m>A \subseteq X</m> be a set and define
                       <me>
-                        \chi_{A}: X \rightarrow \mathbb{R}: x \mapsto \begin{cases}1 &amp; x \in A \\ 0 &amp; x \notin A .\end{cases}
+                        \chi_{A}: X \rightarrow \mathbb{R}: x \mapsto \begin{cases}1 &amp; x \in A \\ 0 &amp; x \notin A.\end{cases}
                       </me>
                       Show that <m>\chi_{A}</m> is lower semicontinuous if and only if <m>A</m> is open.
                     </p>
@@ -6892,9 +7149,9 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
                 Suppose that <m>\left(a_{n}\right)_{n=1}^{\infty}</m> and <m>\left(b_{n}\right)_{n=1}^{\infty}</m> are sequences of strictly positive real numbers such that <m>\sum_{n=1}^{\infty} b_{n}</m> converges, and suppose that for each integer <m>n \geq 1</m>, we have <m>\frac{a_{n+1}}{a_{n}} \leq \frac{b_{n+1}}{b_{n}}</m>. 
@@ -6906,9 +7163,9 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
                 A function <m>f:[0,1] \rightarrow \mathbb{R}</m> is called Lipschitz if there is a constant <m>C&gt;0</m> such that for all <m>x, y \in[0,1]</m>, we have
@@ -6917,7 +7174,7 @@
                 </me>
                 Let <m>\operatorname{Lip}([0,1])</m> denote the set of all Lipschitz functions <m>[0,1] \rightarrow \mathbb{R}</m> with the uniform metric
                 <me>
-                  d_{\infty}(f, g)=\sup \{|f(t)-g(t)|: 0 \leq t \leq 1\}, \quad f, g \in \operatorname{Lip}([0,1]) .
+                  d_{\infty}(f, g)=\sup \{|f(t)-g(t)|: 0 \leq t \leq 1\}, \quad f, g \in \operatorname{Lip}([0,1]).
                 </me>
                 Show that <m>\operatorname{Lip}([0,1])</m> is a countable union of compact sets.
               </p>
@@ -6927,13 +7184,13 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
           
         </paragraphs>
 
         <paragraphs><title>Winter 2021</title>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
                 Suppose: <m>(X, d)</m> and <m>(Y, \rho)</m> are metric spaces; <m>(Y, \rho)</m> is compact; and <m>\phi: Y \rightarrow X</m> is a continuous and onto function.
@@ -6959,15 +7216,15 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
                 Let <m>\left(a_{n}\right)_{n=1}^{\infty}</m> be a bounded sequence of real numbers. 
                 Being sure to include all details, prove that
                 <me>
-                  \liminf _{n \rightarrow \infty} a_{n} \leq \liminf _{n \rightarrow \infty} \frac{a_{1}+a_{2}+\cdots+a_{n}}{n} .
+                  \liminf _{n \rightarrow \infty} a_{n} \leq \liminf _{n \rightarrow \infty} \frac{a_{1}+a_{2}+\cdots+a_{n}}{n}.
                 </me>
               </p>
             </statement>
@@ -6984,9 +7241,9 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
                 Suppose <m>f:[a, b] \rightarrow \mathbb{R}</m> is Riemann integrable and <m>\int_{a}^{b}|f(t)| d t=0</m>.
@@ -7010,9 +7267,9 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
                 Let <m>Y \subseteq[0,1]</m> be the usual Cantor <m>\operatorname{set}^{1}</m> and let <m>C(Y)</m> be the collection of all continuous complex-valued functions on <m>Y</m>.
@@ -7020,7 +7277,7 @@
                 A function <m>p \in C(Y)</m> is a projection if for every <m>y \in Y, p(y)^{2}=p(y)</m>.
                 Given <m>f \in C(Y)</m> and <m>\varepsilon&gt;0</m>, prove that there exists <m>n \in \mathbb{N}</m>, projections <m>\left\{p_{k}\right\}_{k=1}^{n} \subseteq C(Y)</m> and complex numbers <m>\left\{\alpha_{k}\right\}_{k=1}^{n}</m> such that for every <m>y \in Y</m>,
                 <me>
-                  \left|f(y)-\sum_{k=1}^{n} \alpha_{k} p_{k}(y)\right|&lt;\varepsilon .
+                  \left|f(y)-\sum_{k=1}^{n} \alpha_{k} p_{k}(y)\right|&lt;\varepsilon.
                 </me>
               </p>
             </statement>
@@ -7029,9 +7286,9 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
                 Suppose <m>\left(a_{n}\right)</m> is a decreasing sequence of real numbers and <m>\sum_{n=1}^{\infty} a_{n}</m> converges. 
@@ -7043,9 +7300,9 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
                 For <m>x \in \mathbb{R}</m>, consider the series, <m>\sum_{n=1}^{\infty} \frac{1}{n^{2}+x^{2}}</m>.
@@ -7071,13 +7328,13 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
           
         </paragraphs>   
 
         <paragraphs><title>Spring 2020</title>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
                 Suppose for each <m>n \in \mathbb{N}, f_{n}:[0,1] \rightarrow \mathbb{R}</m> is continuous and satisfies <m>\sup \left\{\left|f_{n}(x)\right|: x \in[0,1]\right\} \leq 2020</m>. 
@@ -7122,9 +7379,9 @@
                 so <m>\{{g_n}\,:\,{n\geq 1}\}</m> is equicontinuous.
               </p>
             </solution>
-          </problem>
+          </exploration>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
                 Suppose <m>f: \mathbb{R} \rightarrow \mathbb{R}</m> is twice differentiable and that <m>f^{\prime \prime}(t)&lt;0</m> for every <m>t \in \mathbb{R}</m>. 
@@ -7139,9 +7396,9 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
                 Suppose <m>(X, d)</m> is a compact metric space.
@@ -7167,9 +7424,9 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
                 Suppose <m>f:[0, \infty) \rightarrow \mathbb{R}</m> is a uniformly continuous function. 
@@ -7184,9 +7441,9 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
                 The following questions are not related.
@@ -7213,9 +7470,9 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
                 Suppose <m>f:[0,1] \rightarrow[0,1]</m> is a function such that <m>f(0)=0, f(1)=1</m>, has a continuous derivative, and <m>f^{\prime}(x)&gt;0</m> for every <m>x \in[0,1]</m>.
@@ -7227,13 +7484,13 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
           
         </paragraphs>
 
         <paragraphs><title>Winter 2020</title>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
                 Let <m>\left\{a_{n}\right\}_{n=1}^{\infty} \subset(0, \infty)</m> and <m>c&gt;0</m> be given. 
@@ -7246,9 +7503,9 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
                 Let <m>\left\{a_{n}\right\}_{n=1}^{\infty},\left\{b_{n}\right\}_{n=1}^{\infty} \subset \mathbb{R}</m> be bounded sequences, and define the sets
@@ -7283,14 +7540,14 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
                 Let <m>(X, \rho)</m> be a metric space and define <m>\sigma: X \times X \rightarrow[0, \infty)</m> by
                 <me>
-                  \sigma(x, y):=\min \{1, \rho(x, y)\} .
+                  \sigma(x, y):=\min \{1, \rho(x, y)\}.
                 </me>
                 <ol>
                   <li>
@@ -7312,9 +7569,9 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
                 With <m>a&lt;b</m>, let <m>\mathcal{C}([a, b])</m> denote the family of all <m>\mathbb{R}</m>-valued functions that are continuous on the interval <m>[a, b]</m>.
@@ -7331,7 +7588,7 @@
                     <p>
                       Let a uniformly bounded sequence of functions <m>\left\{g_{n}\right\}_{n=1}^{\infty} \subset \mathcal{C}([0,1])</m> be given. For each <m>n=1,2, \ldots</m>, define <m>f_{n}:[0,1] \rightarrow \mathbb{R}</m> by
                       <me>
-                        f_{n}(x):= \begin{cases}0, &amp; x=0 \\ \frac{1}{x} \int_{0}^{x} s g_{n}(s) \mathrm{d} s, &amp; 0&lt;x \leq 1 .\end{cases}
+                        f_{n}(x):= \begin{cases}0, &amp; x=0 \\ \frac{1}{x} \int_{0}^{x} s g_{n}(s) \mathrm{d} s, &amp; 0&lt;x \leq 1.\end{cases}
                       </me>
                       Prove that there exists a subsequence of <m>\left\{f_{n}\right\}_{n=1}^{\infty}</m> that converges uniformly on <m>[0,1]</m> to some <m>f \in \mathcal{C}([0,1])</m>.
                     </p>
@@ -7344,9 +7601,9 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
                 <ol>
@@ -7371,19 +7628,19 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
-                The parts of this problem are not connected.
+                The parts of this exploration are not connected.
                 <ol>
                   <li>
                     <p>
                       Let <m>\left\{a_{n}\right\}_{n=1}^{\infty} \subset \mathbb{R}</m> and a strictly increasing sequence <m>\left\{x_{n}\right\}_{n=1}^{\infty} \subset(0,1)</m> be given. 
                       Assume that <m>\sum_{n=1}^{\infty} a_{n}</m> is absolutely convergent, and define <m>\alpha:[0,1] \rightarrow \mathbb{R}</m> by
                       <me>
-                        \alpha(x):= \begin{cases}a_{n}, &amp; x=x_{n} \\ 0, &amp; \text { otherwise } .\end{cases}
+                        \alpha(x):= \begin{cases}a_{n}, &amp; x=x_{n} \\ 0, &amp; \text { otherwise }.\end{cases}
                       </me>
                       Prove or disprove: <m>\alpha</m> has bounded variation on <m>[0,1]</m>.
                     </p>
@@ -7403,31 +7660,31 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
           
-        </paragraphs>
-
-        <!--
+        </paragraphs> 
         
         <paragraphs><title>Spring 2019</title>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
-                
-              </p>
-            </statement>
-            <solution>
-              <p>
-                Coming (not so) soon!
-              </p>
-            </solution>
-          </problem>
+                Let <m>\left(M, d_{M}\right)</m> and <m>\left(N, d_{N}\right)</m> be metric spaces. 
+                Define <m>d_{M \times N}:(M \times N) \times(M \times N) \rightarrow \mathbb{R}</m> by <m>d_{M \times N}\left(\left(x_{1}, y_{1}\right),\left(x_{2}, y_{2}\right)\right):=d_{M}\left(x_{1}, x_{2}\right)+d_{N}\left(y_{1}, y_{2}\right), \quad</m> for all <m>x_{1}, x_{2} \in M</m> and <m>y_{1}, y_{2} \in N</m>.
+                <ol>
+                  <li>
+                    <p>
+                      Prove that <m>\left(M \times N, d_{M \times N}\right)</m> is a metric space.
+                    </p>
+                  </li>
 
-          <problem>
-            <statement>
-              <p>
-                
+                  <li>
+                    <p>
+                      Let <m>S \subseteq M</m> and <m>T \subseteq N</m> be compact sets in <m>\left(M, d_{M}\right)</m> and <m>\left(N, d_{N}\right)</m>, respectively. 
+                      Prove that <m>S \times T</m> is a compact set in <m>\left(M \times N, d_{M \times N}\right)</m>.
+                    </p>
+                  </li>
+                </ol>
               </p>
             </statement>
             <solution>
@@ -7435,12 +7692,29 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
-                
+                Let <m>\left\{a_{n}\right\}_{n=1}^{\infty} \subset(0, \infty)</m> be given, and assume that <m>\sum_{n=1}^{\infty} a_{n}</m> converges.
+                <ol>
+                  <li>
+                    <p>
+                      Show that
+                      <me>
+                        \sum_{n=1}^{\infty} \frac{a_{n}}{1+a_{n}} \text { converges and } \sum_{n=1}^{\infty} \frac{1}{1+a_{n}} \text { diverges. }
+                      </me>
+                    </p>
+                  </li>
+                  
+                  <li>
+                    <p>
+                      Suppose that <m>\left\{b_{n}\right\}_{n=1}^{\infty} \subset \mathbb{R}</m> satisfies <m>\left|b_{n+1}-b_{n}\right| \leq a_{n}</m>, for every <m>n \in \mathbb{N}</m>. 
+                      Prove <m>\left\{b_{n}\right\}_{n=1}^{\infty}</m> is convergent.
+                    </p>
+                  </li>
+                </ol>
               </p>
             </statement>
             <solution>
@@ -7448,38 +7722,34 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
-                
-              </p>
-            </statement>
-            <solution>
-              <p>
-                Coming (not so) soon!
-              </p>
-            </solution>
-          </problem>
+                Let <m>f:[0, \infty) \rightarrow \mathbb{R}</m> be continuous on <m>[0, \infty)</m>, and define <m>F:(0, \infty) \rightarrow \mathbb{R}</m> by
+                <me>
+                  F(x):=\sup _{0 \leq s&lt;x} f(s)=\operatorname{lub}\{f(s): 0 \leq s&lt;x\}.
+                </me>
+                <ol>
+                  <li>
+                    <p>
+                      Show that <m>\lim _{x \rightarrow 0^{+}} F(x)</m> exists.
+                    </p>
+                  </li>
 
-          <problem>
-            <statement>
-              <p>
-                
-              </p>
-            </statement>
-            <solution>
-              <p>
-                Coming (not so) soon!
-              </p>
-            </solution>
-          </problem>
+                  <li>
+                    <p>
+                      Prove that <m>F</m> is continuous on <m>(0, \infty)</m>.
+                    </p>
+                  </li>
 
-          <problem>
-            <statement>
-              <p>
-                
+                  <li>
+                    <p>
+                      Suppose that <m>f</m> is bounded, as well as continuous, on <m>[0, \infty)</m>. Prove that <m>F</m> is uniformly continuous on <m>[0, \infty)</m>.
+                    </p>
+                  </li>
+                </ol>
               </p>
             </statement>
             <solution>
@@ -7487,29 +7757,135 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
+
+          <exploration>
+            <statement>
+              <p>
+                Consider the formal series
+                <me>\sum_{n=0}^{\infty} \mathrm{e}^{-2 n x}\left(1-\mathrm{e}^{-x}\right).</me>
+                Prove or disprove each of the following statements.
+                <ol>
+                  <li>
+                    <p>
+                      The series converges uniformly on the interval <m>[1, \infty)</m>.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      The series converges uniformly on the interval <m>[0,1]</m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </exploration>
+
+          <exploration>
+            <statement>
+              <p>
+                <ol>
+                  <li>
+                    <p>
+                      Let <m>\alpha:[0,1] \rightarrow \mathbb{R}</m> be an increasing function that is continuous at 0, and let <m>f:[0,1] \rightarrow \mathbb{R}</m> be a bounded function. 
+                      Suppose that, for each <m>0&lt;c&lt;1</m>, the function <m>f</m> is Riemann-Stieltjes integrable with respect to <m>\alpha</m> over <m>[c, 1]</m>. 
+                      Prove that <m>f</m> is Riemann-Stieljes integrable with respect to <m>\alpha</m> over <m>[0,1]</m>.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Let <m>\left\{q_{n}\right\}_{n=1}^{\infty} \subset[0,1]</m> be an enumeration of <m>\mathbb{Q} \cap[0,1]</m>, the rational numbers in <m>[0,1]</m>. 
+                      Define <m>\beta:[0,1] \rightarrow \mathbb{R}</m> by
+                      <me>
+                        \beta(x):= \begin{cases}\frac{1}{n}, &amp; x=q_{n}, \\ 0, &amp; x \notin \mathbb{Q} \cap[0,1].\end{cases}
+                      </me>
+                      Prove or disprove: <m>\beta</m> has bounded variation on <m>[0,1]</m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </exploration>
+
+          <exploration>
+            <statement>
+              <p>
+                Suppose that <m>f:[0,2] \rightarrow \mathbb{R}</m> has the following properties:
+                <ul>
+                  <li>
+                    <p>
+                      <m>f</m> is continuous on <m>[0,2]</m> and differentiable on <m>(0,2)</m>;
+                    </p>
+                  </li>
+            
+                  <li>
+                    <p>
+                      <m>f(0)=f(2)=0</m>
+                    </p>
+                  </li>
+            
+                  <li>
+                    <p>
+                      there exists <m>x_{0} \in(0,2)</m> such that <m>\left|f\left(x_{0}\right)\right| \geq 1</m>.
+                    </p>
+                  </li>
+                </ul>
+                <ol>
+                  <li>
+                    <p>
+                      Prove that there exists <m>c \in(0,2)</m> such that <m>\left|f^{\prime}(c)\right| \geq 1</m>.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      There exists <m>k&gt;1</m> such that for each <m>\gamma \in[0, k]</m>, there exists some <m>c_{\gamma} \in(0,2)</m> such that <m>\left|f^{\prime}\left(c_{\gamma}\right)\right|=\gamma</m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </exploration>
           
         </paragraphs>
 
         <paragraphs><title>Winter 2019</title>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
-                
-              </p>
-            </statement>
-            <solution>
-              <p>
-                Coming (not so) soon!
-              </p>
-            </solution>
-          </problem>
+                <ol>
+                  <li>
+                    <p>
+                      Let <m>f_{n}(x)=\frac{1}{1+n^{2} x^{2}}</m> and <m>g_{n}(x)=n x(1-x)^{n}</m> for <m>x \in[0,1]</m>. 
+                      Prove that <m>\left\{f_{n}\right\}</m> and <m>\left\{g_{n}\right\}</m> converge pointwise but not uniformly on <m>[0,1]</m>.
+                    </p>
+                  </li>
 
-          <problem>
-            <statement>
-              <p>
-                
+                  <li>
+                    <p>
+                      Are the families <m>\left\{f_{n}\right\}</m>, respectively <m>\left\{g_{n}\right\}</m> given in part (a) equicontinuous? 
+                      Clearly motivate your answer.
+                    </p>
+                  </li>
+                </ol>
               </p>
             </statement>
             <solution>
@@ -7517,38 +7893,34 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
-                
-              </p>
-            </statement>
-            <solution>
-              <p>
-                Coming (not so) soon!
-              </p>
-            </solution>
-          </problem>
+                Consider the following subset of the metric space <m>\left(\mathcal{C}_{\mathrm{b}}([0,1]), \rho_{\infty}\right)</m>:
+                <me>
+                  A:=\left\{f \in \mathcal{C}_{\mathrm{b}}([0,1]): f([0,1]) \subseteq[0,1]\right\}.
+                </me>
+                <ol>
+                  <li>
+                    <p>
+                      Determine whether <m>A</m> is bounded, and if so what is its diameter.
+                    </p>
+                  </li>
 
-          <problem>
-            <statement>
-              <p>
-                
-              </p>
-            </statement>
-            <solution>
-              <p>
-                Coming (not so) soon!
-              </p>
-            </solution>
-          </problem>
+                  <li>
+                    <p>
+                      Determine whether <m>A</m> is closed in <m>\mathcal{C}_{\mathrm{b}}([0,1])</m>.
+                    </p>
+                  </li>
 
-          <problem>
-            <statement>
-              <p>
-                
+                  <li>
+                    <p>
+                      Determine whether <m>A</m> is compact in <m>\mathcal{C}_{\mathrm{b}}([0,1])</m>.
+                    </p>
+                  </li>
+                </ol>
               </p>
             </statement>
             <solution>
@@ -7556,12 +7928,16 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
-                
+                Determine the values of <m>x \in \mathbb{R}</m> for which
+                <me>
+                  \sum_{n=1}^{\infty} \frac{x^{n}}{1+n|x|^{n}}
+                </me>
+                converges.
               </p>
             </statement>
             <solution>
@@ -7569,29 +7945,81 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
+
+          <exploration>
+            <statement>
+              <p>
+                Suppose that <m>f:[0,1] \rightarrow \mathbb{R}</m> is differentiable and <m>f(0)=0</m>. 
+                Assume that there is a <m>k&gt;0</m> such that
+                <me>
+                  \left|f^{\prime}(x)\right| \leq k|f(x)|
+                </me>
+                for all <m>x \in[0,1]</m>. 
+                Prove that <m>f(x)=0</m> for all <m>x \in[0,1]</m>.
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </exploration>
+
+          <exploration>
+            <statement>
+              <p>
+                Use the Riemann condition to show that <m>f \in \mathcal{R}_{\alpha}[0,4]</m> where <m>f(x)=e^{2 x}</m> and
+                <me>
+                  \alpha(x)=\left\{\begin{array}{lc}
+                  x+1, &amp; 0 \leq x \leq 2 \\
+                  3 x-2, &amp; 2&lt;x \leq 4
+                  \end{array}\right.
+                </me>
+                Compute the value of the Riemann-Stieltjes integral <m>\int_{0}^{4} f(x) d \alpha</m>.
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </exploration>
+
+          <exploration>
+            <statement>
+              <p>
+                Use the Heine-Borel Theorem to prove that if <m>f</m> is continuous on <m>[a, b]</m> and <m>f(x)&gt;0</m> for every <m>x \in[a, b]</m> then there exists <m>\varepsilon&gt;0</m> such that <m>f(x) \geq \varepsilon</m> for every <m>x \in[a, b]</m>.
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </exploration>
           
         </paragraphs>
 
         <paragraphs><title>Spring 2018</title>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
-                
-              </p>
-            </statement>
-            <solution>
-              <p>
-                Coming (not so) soon!
-              </p>
-            </solution>
-          </problem>
+                Determine whether the following sequences converge and carefully justify your claims:
+                <ol>
+                  <li>
+                    <p>
+                      <m>x_{n}=\frac{2 n \cdot n !}{n^{n}} ;</m> 
+                    </p>
+                  </li>
 
-          <problem>
-            <statement>
-              <p>
-                
+                  <li>
+                    <p>
+                      <m>y_{n}=\sum_{k=1}^{n} \frac{\cos (k !)}{k(k+1)}</m>.
+                    </p>
+                  </li>
+                </ol> 
               </p>
             </statement>
             <solution>
@@ -7599,12 +8027,17 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
-                
+                Find the domain of convergence and the sum of the series
+                <me>
+                  \sum_{n \geq 0}(-1)^{n} \frac{x^{2 n+1}}{2 n+1}
+                </me>
+                Show how one may use the sum of the series to provide an approximation for <m>\pi</m> up to three decimals. 
+                Be sure to provide all technical details.
               </p>
             </statement>
             <solution>
@@ -7612,12 +8045,21 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
-                
+                Define <m>f, \alpha \in \mathcal{B}([-2,2])</m> by
+                <me>
+                  f(x):=\left\{\begin{array}{ll}
+                  -1, &amp; x \in[-2,0) ; \\
+                  3, &amp; x \in[0,2]
+                  \end{array} \quad \text { and } \quad \alpha(x):= \begin{cases}-2, &amp; x \in[-2,0] \\
+                  1, &amp; x \in(0,2]\end{cases}\right.
+                </me>
+                Determine whether <m>f</m> is Riemann-Stieltjes integrable with respect to <m>\alpha</m> over <m>[-1,1]</m>. 
+                If it is, evaluate <m>\int_{-1}^{1} f(x) \mathrm{d} \alpha(x)</m>
               </p>
             </statement>
             <solution>
@@ -7625,25 +8067,33 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
-                
-              </p>
-            </statement>
-            <solution>
-              <p>
-                Coming (not so) soon!
-              </p>
-            </solution>
-          </problem>
+                <ol>
+                  <li>
+                    <p>
+                      Given a set <m>S</m>, show that the function <m>\rho_{\infty}: \mathcal{B}(S) \times \mathcal{B}(S) \rightarrow \mathbb{R}</m> defined by
+                      <me>
+                        \rho_{\infty}(f, g):=\operatorname{lub}(\{|f(x)-g(x)|: x \in S\})
+                      </me>
+                      is a metric on <m>\mathcal{B}(S)</m>.
+                    </p>
+                  </li>
 
-          <problem>
-            <statement>
-              <p>
-                
+                  <li>
+                    <p>
+                      Let <m>M&gt;0</m> be given. 
+                      Set
+                      <me>
+                        S:=\left\{f \in \mathcal{C}_{\mathrm{b}}([0,1]): f(0)=0, f \text { is differentiable on }(0,1) \text {, and }\left|f^{\prime}(x)\right| \leq M \text { for each } x \in(0,1)\right\}
+                      </me>
+                      Determine whether the set <m>S</m> is compact in <m>\left(\mathcal{C}_{\mathrm{b}}([0,1]), \rho_{\infty}\right)</m>.
+                    </p>
+                  </li>
+                </ol>
               </p>
             </statement>
             <solution>
@@ -7651,16 +8101,131 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
+
+          <exploration>
+            <statement>
+              <p>
+                <ol>
+                  <li>
+                    <p>
+                      If <m>\left\{f_{n}\right\}_{n \geq 1}</m> is an equicontinuous sequence of functions on a compact interval and <m>f_{n} \rightarrow f</m> pointwise, prove that the convergence is uniform.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Let <m>\alpha, M&gt;0</m> be given, and suppose that <m>\left\{f_{n}\right\}_{n \geq 1}</m> satisfies <m>\left|f_{n}(x)-f_{n}(y)\right| \leq M|x-y|^{\alpha}</m>, for all <m>n \geq 1</m> and all <m>x, y</m> in an interval <m>[a, b]</m>. 
+                      Show that <m>\left\{f_{n}\right\}_{n \geq 1}</m> is equicontinuous.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+            <solution>
+              <p>
+                <ol>
+                  <li>
+                    <p>
+                      Claim: <m>(f_n)_{n=1}^\infty</m> is bounded. 
+                      If not, there is a subsequence <m>(f_{n_k})_{k=1}^\infty</m> of <m>(f_n)_{n=1}^\infty</m> so that <m>\lim_{k\rightarrow\infty}\left|{\left|{{f_{n_k}}}\right|}\right|=\infty</m>. 
+                      By the extreme value theroem, exists <m>x_k\in[a,b]</m> with <m>\left|{f_{n_k}(x_k)}\right|=\left|{\left|{{f_{n_k}}}\right|}\right|_\infty</m>. 
+                      Using that <m>[a,b]</m> is compact and passing to a subsequence, we may assume <m>(x_k)_{k=1}^\infty</m> converges to some <m>x\in[a,b]</m>. 
+                      We'll show that <m>\left|{f_{n_k}(x_k)}\right|\rightarrow\left|{f(x)}\right|</m>. 
+                      To this end, fix <m>\varepsilon&gt;0</m>. 
+                      Let <m>\delta&gt;0</m> be such that for all <m>k\geq 1, x,y\in[a,b]</m> with <m>\left|{x-y}\right|&lt;\delta,</m> we have 
+                      <me>
+                        \left|{f_{n_k}(x)-f_{n_k}(y)}\right|&lt;\varepsilon.
+                      </me> 
+                      Then choose <m>L\geq 1</m> so that for all <m>k\geq L</m>, we have <m>d(x_k,x)&lt;\delta</m> and <m>\left|{f_{n_k}(X)-f(x)}\right|&lt;\varepsilon</m>. 
+                      Then if <m>k\geq L</m>, we have 
+                      <me>
+                        \begin{aligned}
+                        \left|{f(x_k)-f(x)}\right|
+                        &lt;\left|{f_{n_k}(x_k)-f_{n_k}(x)}\right|+\left|{f_{n_k}(x)-f(x)}\right|
+                        &lt;2\varepsilon
+                        \end{aligned}
+                      </me> 
+                      where <m>\left|{f_{n_k}(x_k)-f_{n_k}(x)}\right|&lt;\varepsilon</m> since <m>d(x_k,x)&lt;\delta</m> (as <m>k\geq L</m>) and <m>\left|{f_{n_k}(x)-f(x)}\right|&lt;\varepsilon</m> since <m>k\geq L</m>. 
+                      Then 
+                      <me>
+                        \begin{aligned}
+                        f(x)
+                        =\lim_{k\rightarrow\infty}f_{n_k}(x_k).
+                        \end{aligned}
+                      </me> 
+                      In particular, 
+                      <me>
+                        \begin{aligned}
+                        \left|{f(x)}\right|
+                        =\lim_{k\rightarrow\infty}\left|{f_{n_k}(x_k)}\right|
+                        =\lim_{k\rightarrow\infty}\left|{\left|{{f_{n_k}}}\right|}\right|_\infty
+                        =\infty,     
+                        \end{aligned}
+                      </me> 
+                      a contradiction.
+                    </p>
+                  
+                    <p>
+                      Suppose <m>(f_n)_{n=1}^\infty</m> does not converge uniformly to <m>f</m>. 
+                      Then exists <m>\varepsilon&gt;0</m> such that for all <m>N\geq 1,\exists n\geq N</m> such that <m>\left|{\left|{{f-f_n}}\right|}\right|_\infty\geq \varepsilon</m>. 
+                      Let <m>\varepsilon&gt;0</m> as above. 
+                      Then exists subsequence <m>(f_{n_k})_{k=1}^\infty</m> so that for all <m>k\geq 1</m>, <m>\left|{\left|{{f-f_{n_k}}}\right|}\right|_\infty\geq \varepsilon</m>. 
+                      Then <m>(f_{n_k})_{k=1}^\infty</m> is bounded and equicontinuous. 
+                      By the Arzelá-Ascoli Theorem, <m>(f_{n_k})_{k=1}^\infty</m> has a subsequence <m>(f_{n_{k_l}})_{l=1}^\infty</m> converging to some <m>g\in C[a,b]</m>. 
+                      Then by above, we have <m>\left|{\left|{{f-g}}\right|}\right|_\infty\geq \varepsilon</m>. But <m>(f_{n_{k_l}})_{l=1}^\infty</m> converge pointwise to both <m>f</m> and <m>g</m> so <m>f=g</m> and <m>\left|{\left|{{f-g}}\right|}\right|_\infty=0</m>, a contradiction.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </solution>
+          </exploration>
+
+          <exploration>
+            <statement>
+              <p>
+                Let <m>f: \mathbb{R} \rightarrow \mathbb{R}</m> be a continuous function, and for all <m>n \geq 1</m>, put <m>f_{n}(x)=f\left(x+\frac{1}{n}\right)</m>.
+                <ol>
+                  <li>
+                    <p>
+                      Show that <m>f_{n}</m> converges uniformly, as <m>n \rightarrow \infty</m>, over any closed interval <m>[a, b]</m>.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Give an example of a continuous function <m>f</m> for which the convergence is not uniform on <m>\mathbb{R}</m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </exploration>
           
         </paragraphs>
 
         <paragraphs><title>Winter 2018</title>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
-                
+                Let <m>\alpha</m> be a monotonically increasing function on an interval <m>[a, b]</m> and assume <m>\alpha^{\prime}</m> is Riemann integrable in <m>[a, b]</m>. 
+                Let <m>f</m> be a bounded real function on <m>[a, b]</m>. 
+                Prove that <m>f \in \mathcal{R}(\alpha)</m> implies <m>f \alpha^{\prime} \in \mathcal{R}[a, b]</m>, and
+                <me>
+                  \int_{a}^{b} f d \alpha=\int_{a}^{b} f \alpha^{\prime} d x
+                </me>
               </p>
             </statement>
             <solution>
@@ -7668,12 +8233,13 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
-                
+                Let <m>X</m> be a metric space in which every infinite subset has a limit point. 
+                Prove that there is a countable subset <m>D</m> of <m>X</m> that is dense in <m>X</m>.
               </p>
             </statement>
             <solution>
@@ -7681,12 +8247,14 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
-                
+                Let <m>\left\{a_{n}^{\prime}\right\}</m> be any rearrangement of an infinite sequence <m>\left\{a_{n}\right\}</m>. 
+                Assume <m>\sum_{n=1}^{\infty} a_{n}</m> converges absolutely. 
+                Prove <m>\sum_{n=1}^{\infty} a_{n}^{\prime}=\sum_{n=1}^{\infty} a_{n}</m>.
               </p>
             </statement>
             <solution>
@@ -7694,12 +8262,15 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
-                
+                Suppose <m>f_{n} \rightarrow f</m> uniformly on <m>[0, \infty)</m> and <m>\lim _{x \rightarrow \infty} f_{n}(x)</m>
+                <me>
+                  \lim _{x \rightarrow \infty} \lim _{n \rightarrow \infty} f_{n}(x)=\lim _{n \rightarrow \infty} \lim _{x \rightarrow \infty} f_{n}(x)
+                </me>
               </p>
             </statement>
             <solution>
@@ -7707,12 +8278,13 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
-                
+                Let <m>f:[a, b] \rightarrow \mathbb{R}</m>. 
+                Suppose <m>f \in B V[a, b]</m>. Prove <m>f</m> is the difference of two increasing functions.
               </p>
             </statement>
             <solution>
@@ -7720,12 +8292,13 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
-                
+                Suppose that <m>f:[0,2] \rightarrow \mathbb{R}</m> is continuous on <m>[0,2]</m>, differentiable on <m>(0,2)</m>, satisfying <m>f(0)=</m> <m>f(2)=0</m> and <m>f(c)=1</m> for some <m>c \in(0,2)</m>. 
+                Prove that there is an <m>x \in(0,2)</m> such that <m>\left|f^{\prime}(x)\right|&gt;1</m>.
               </p>
             </statement>
             <solution>
@@ -7733,55 +8306,39 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
           
         </paragraphs>
 
         <paragraphs><title>Spring 2017</title>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
-                
+                Suppose that <m>f: \mathbb{R} \rightarrow \mathbb{R}</m> is given by: <m>f(x)=\frac{x^{3}}{1+x^{2}}</m>. 
+                By using the <m>\epsilon-\delta</m> definition only, prove that <m>f</m> is uniformly continuous on <m>\mathbb{R}</m>.
               </p>
             </statement>
-            <solution>
-              <p>
-                Coming (not so) soon!
-              </p>
-            </solution>
-          </problem>
 
-          <problem>
-            <statement>
+            <hint>
               <p>
-                
+                Hint: write <m>f(x)=x-\frac{x}{1+x^{2}}</m>.
               </p>
-            </statement>
-            <solution>
-              <p>
-                Coming (not so) soon!
-              </p>
-            </solution>
-          </problem>
+            </hint>
 
-          <problem>
-            <statement>
-              <p>
-                
-              </p>
-            </statement>
             <solution>
               <p>
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
-                
+                Let <m>(X, d)</m> be a metric space. 
+                A function <m>f: X \rightarrow \mathbb{R}</m> is said to be lower semicontinuous at <m>x_{0} \in X</m> if, for every <m>\epsilon&gt;0</m> there exists <m>\delta&gt;0</m> such that for all <m>x \in X</m> with <m>d\left(x, x_{0}\right)&lt;\delta</m>, then <m>f(x)-f\left(x_{0}\right)&gt;-\epsilon</m>. 
+                Prove: <m>f</m> is lower semicontinuous at <m>x_{0} \in X</m> if and only if <m>\liminf _{n \rightarrow \infty} f\left(x_{n}\right) \geq f\left(x_{0}\right)</m> whenever <m>\left\{x_{n}\right\}_{n=1}^{\infty} \subset X</m> satisfies <m>\lim _{n \rightarrow \infty} x_{n}=x_{0}</m> in <m>X</m>.
               </p>
             </statement>
             <solution>
@@ -7789,12 +8346,14 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
-                
+                Let <m>(X, d)</m> be a compact metric space. 
+                Suppose that <m>f_{n}: X \rightarrow[0, \infty)</m> is a sequence of continuous functions with <m>f_{n}(x) \geq f_{n+1}(x)</m>, for all <m>n \in \mathbb{N}</m> and all <m>x \in X</m>, and such that <m>f_{n} \longrightarrow 0</m> point-wise on <m>X</m>.
+                 Prove <m>\left\{f_{n}\right\}_{n=1}^{\infty}</m> converges to zero uniformly on <m>X</m>.
               </p>
             </statement>
             <solution>
@@ -7802,12 +8361,17 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
-                
+                Let <m>f:[-1,1] \longrightarrow \mathbb{R}</m> be a function such that <m>f \in C^{2}([-1,1])</m>, i.e., <m>f</m> is twice-continuously differentiable on <m>[-1,1]</m>, and <m>f^{\prime \prime \prime}</m> exists on <m>(-1,1)</m> with <m>\left|f^{\prime \prime \prime}(x)\right| \leq 1</m> for all <m>x \in(-1,1)</m>. 
+                Let:
+                <me>
+                  a_{n}=n\left(f\left(\frac{1}{n}\right)-f\left(\frac{-1}{n}\right)\right)-2 f^{\prime}(0).
+                </me>
+                Prove that the series <m>\sum_{n=1}^{\infty} a_{n}</m> converges absolutely.
               </p>
             </statement>
             <solution>
@@ -7815,55 +8379,85 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
+
+          <exploration>
+            <statement>
+              <p>
+                Suppose that <m>f:[0,1] \rightarrow \mathbb{R}</m> is a continuous function which satisfies, for <m>n=0,1,2, \ldots</m>,
+                <me>
+                  \int_{0}^{1} f(\sqrt[2 n+1]{x}) d x=0
+                </me>
+                Prove that <m>f(x)=0</m> for all <m>x \in[0,1]</m>.
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </exploration>
+
+          <exploration>
+            <statement>
+              <p>
+                For each <m>n \in \mathbb{N}</m>, let <m>f_{n}:[0, \infty) \longrightarrow \mathbb{R}</m> be given by: <m>f_{n}(x)=\frac{\sin (n x)}{1+n x}</m>.
+                <ol>
+                  <li>
+                    <p>
+                      Prove <m>f_{n}</m> converges point-wise on <m>[0, \infty)</m> and find the point-wise limit <m>f</m>.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Show that <m>f_{n} \longrightarrow f</m> uniformly on <m>[a, \infty)</m> for every <m>a&gt;0</m>, but the convergence is not uniform on <m>[0, \infty)</m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </exploration>
           
         </paragraphs>
 
         <paragraphs><title>Winter 2017</title>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
-                
-              </p>
-            </statement>
-            <solution>
-              <p>
-                Coming (not so) soon!
-              </p>
-            </solution>
-          </problem>
+                Consider the series <m>\sum_{n=1}^{\infty} \frac{(-1)^{n}}{1+n x}, x \in \mathbb{R}</m>. 
+                Justify your answers to the following questions:
+                <ol>
+                  <li>
+                    <p>
+                      Does the series converge at <m>x=0</m>?
+                    </p>
+                  </li>
 
-          <problem>
-            <statement>
-              <p>
-                
-              </p>
-            </statement>
-            <solution>
-              <p>
-                Coming (not so) soon!
-              </p>
-            </solution>
-          </problem>
+                  <li>
+                    <p>
+                      Does the series converge on <m>(0, \infty)</m>?
+                    </p>
+                  </li>
 
-          <problem>
-            <statement>
-              <p>
-                
-              </p>
-            </statement>
-            <solution>
-              <p>
-                Coming (not so) soon!
-              </p>
-            </solution>
-          </problem>
+                  <li>
+                    <p>
+                      Does the series converge uniformly on <m>(0, \infty)</m>?
+                    </p>
+                  </li>
 
-          <problem>
-            <statement>
-              <p>
-                
+                  <li>
+                    <p>
+                      Does the series converge uniformly on <m>[a, \infty)</m> for any <m>a&gt;0</m>.
+                    </p>
+                  </li>
+                </ol>
               </p>
             </statement>
             <solution>
@@ -7871,12 +8465,17 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
-                
+                Prove: <m>f \in \mathcal{R}(\alpha)</m> on <m>[a, b] \Longleftrightarrow</m> 
+                For any <m>a&lt;c&lt;b, f \in \mathcal{R}(\alpha)</m> on <m>[a, c]</m> and on <m>[c, b]</m>. 
+                In addition, if either condition holds, then we always have
+                <me>
+                  \int_{a}^{c} f d \alpha+\int_{c}^{b} f d \alpha=\int_{a}^{b} f d \alpha
+                </me>
               </p>
             </statement>
             <solution>
@@ -7884,12 +8483,26 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
-                
+                Let <m>f(x)=\sum_{n=0}^{\infty} a_{n}(1-x) x^{n}</m>, where <m>\left\{a_{n}\right\}_{n=0}^{\infty} \subset \mathbb{R}</m>. 
+                Assume <m>\lim _{n \rightarrow \infty} a_{n}=a \in \mathbb{R}</m>.
+                <ol>
+                  <li>
+                    <p>
+                      Prove: <m>f(x)</m> converges absolutely for <m>|x|&lt;1</m>.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Prove: <m>\lim _{x \rightarrow 1^{-}} f(x)=a</m>.
+                    </p>
+                  </li>
+                </ol>
               </p>
             </statement>
             <solution>
@@ -7897,29 +8510,87 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
+
+          <exploration>
+            <statement>
+              <p>
+                Let <m>f \in C[0,1]</m>. 
+                Prove that there is a sequence of polynomials, <m>\left\{p_{n}\right\}</m>, of even degree monomials (i.e. every term in <m>p_{n}</m> is of the form <m>a_{k} x^{2 k}</m> for integer <m>k \geq 0</m> ) that converges to <m>f</m> uniformly on <m>[0,1]</m>.
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </exploration>
+
+          <exploration>
+            <statement>
+              <p>
+                Assume <m>\left\{f_{n}\right\}</m> is a sequence of monotonically increasing functions on <m>[a, b]</m>, and <m>f_{n} \rightarrow f</m> point-wise. 
+                Prove that if <m>f</m> is continuous then the convergence <m>f_{n} \rightarrow f</m> is uniform on <m>[a, b]</m>.
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </exploration>
+
+          <exploration>
+            <statement>
+              <p>
+                Let <m>(X, d)</m> be a metric space. 
+                A function <m>f: X \rightarrow \mathbb{R}</m> is said to be lower semi-continuous (l.s.c.) if <m>f^{-1}(a, \infty)=\{x \in X: f(x)&gt;a\}</m> is open in <m>X</m> for every <m>a \in \mathbb{R}</m>. 
+                Analogously, <m>f</m> is upper semi-continuous (u.s.c.) if <m>f^{-1}(-\infty, b)=\{x \in X: f(x)&lt;b\}</m> is open in <m>X</m> for every <m>b \in \mathbb{R}</m>.
+                <ol>
+                  <li>
+                    <p>
+                      Prove that a function <m>f: X \rightarrow \mathbb{R}</m> is continuous <m>\Longleftrightarrow f</m> is both l.s.c and u.s.c.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Prove that <m>f</m> is lower semi-continuous (l.s.c.) <m>\Longleftrightarrow \liminf _{n \rightarrow \infty} f\left(x_{n}\right) \geq f(x)</m> whenever <m>\left\{x_{n}\right\}_{n=1}^{\infty} \subset X</m> such that <m>x_{n} \rightarrow x</m> in <m>X</m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </exploration>
           
         </paragraphs>
 
         <paragraphs><title>Spring 2016</title>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
-                
-              </p>
-            </statement>
-            <solution>
-              <p>
-                Coming (not so) soon!
-              </p>
-            </solution>
-          </problem>
+                Consider the function: <m>f(x)=\frac{x}{1-x^{2}}, \quad x \in(0,1)</m>.
+                <ol>
+                  <li>
+                    <p>
+                      By using the <m>\epsilon-\delta</m> definition of the limit only, prove that <m>f</m> is continuous on <m>(0,1)</m>. 
+                      (Note: You are not allowed to trivialize the problem by using properties of limits).
+                    </p>
+                  </li>
 
-          <problem>
-            <statement>
-              <p>
-                
+                  <li>
+                    <p>
+                      Is <m>f</m> uniformly continuous on <m>(0,1)</m>? 
+                      Justify your answer.
+                    </p>
+                  </li>
+                </ol>
               </p>
             </statement>
             <solution>
@@ -7927,12 +8598,16 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
-                
+                Let <m>\left\{a_{k}\right\}_{k=1}^{\infty}</m> be a bounded sequence of real numbers and <m>E</m> be given by:
+                <me>
+                  E:=\left\{s \in \mathbb{R}: \text { the set }\left\{k \in \mathbb{N}: a_{k} \geq s\right\} \text { has at most finitely many elements }\right\}.
+                </me>
+                Prove that <m>\limsup _{k \rightarrow \infty} a_{k}=\inf E</m>.
               </p>
             </statement>
             <solution>
@@ -7940,25 +8615,26 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
-                
-              </p>
-            </statement>
-            <solution>
-              <p>
-                Coming (not so) soon!
-              </p>
-            </solution>
-          </problem>
+                Assume <m>(X, d)</m> is a compact metric space.
+                <ol>
+                  <li>
+                    <p>
+                      Prove that <m>X</m> is both complete and separable.
+                    </p>
+                  </li>
 
-          <problem>
-            <statement>
-              <p>
-                
+                  <li>
+                    <p>
+                      Suppose <m>\left\{x_{k}\right\}_{k=1}^{\infty} \subset X</m> is a sequence such that the series <m>\sum_{k=1}^{\infty} d\left(x_{k}, x_{k+1}\right)</m> is convergent. 
+                      Prove that the sequence <m>\left\{x_{k}\right\}_{k=1}^{\infty}</m> converges in <m>X</m>.
+                    </p>
+                  </li>
+                </ol>
               </p>
             </statement>
             <solution>
@@ -7966,12 +8642,13 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
 
-          <problem>
+          <exploration>
             <statement>
               <p>
-                
+                Suppose that <m>f:[0,2] \rightarrow \mathbb{R}</m> is continuous on <m>[0,2]</m>, differentiable on <m>(0,2)</m>, and such that <m>f(0)=f(2)=0, f(c)=1</m>, for some <m>c \in(0,2)</m>. 
+                Prove that there is an <m>x \in(0,2)</m> such that <m>\left|f^{\prime}(x)\right|&gt;1</m>
               </p>
             </statement>
             <solution>
@@ -7979,11 +8656,63 @@
                 Coming (not so) soon!
               </p>
             </solution>
-          </problem>
+          </exploration>
+
+          <exploration>
+            <statement>
+              <p>
+                Let <m>f_{n}(x)=n^{\beta} x\left(1-x^{2}\right)^{n}, x \in[0,1], n \in \mathbb{N}</m>.
+                <ol>
+                  <li>
+                    <p>
+                      Prove that <m>\left\{f_{n}\right\}_{n=1}^{\infty}</m> converges point-wise on <m>[0,1]</m> for every <m>\beta \in \mathbb{R}</m>.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Show that the convergence in part (a) is uniform on <m>[0,1]</m> for all <m>\beta&lt;\frac{1}{2}</m>, but not uniform for any <m>\beta \geq \frac{1}{2}</m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </exploration>
+
+          <exploration>
+            <statement>
+              <p>
+                <ol>
+                  <li>
+                    <p>
+                      Suppose <m>f:[-1,1] \longrightarrow \mathbb{R}</m> is a bounded function that is continuous at 0. 
+                      Let <m>\alpha(x)=-1</m> for <m>x \in[-1,0]</m> and <m>\alpha(x)=1</m> for <m>x \in(0,1]</m>. 
+                      Prove that <m>f \in \mathcal{R}(\alpha)[-1,1]</m>, i.e., <m>f</m> is Riemann integrable with respect to <m>\alpha</m> on <m>[-1,1]</m>, and <m>\int_{-1}^{1} f d \alpha=2 f(0)</m>.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Let <m>g:[0,1] \longrightarrow \mathbb{R}</m> be a continuous function such that <m>\int_{0}^{1} g(x) x^{3 k+2} d x=0</m>, for all <m>k=0,1,2, \cdots</m>. 
+                      Prove that <m>g(x)=0</m> for all <m>x \in[0,1]</m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming (not so) soon!
+              </p>
+            </solution>
+          </exploration>
           
         </paragraphs>
-
-        -->
 
       </appendix>
 

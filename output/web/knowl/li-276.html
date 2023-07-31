@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="li"><h3 class="heading">
+<span class="type">Item</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span>
+</h3>
+<div class="para logical">
+<div class="para">Claim: <span class="process-math">\((f_n)_{n=1}^\infty\)</span> is bounded. If not, there is a subsequence <span class="process-math">\((f_{n_k})_{k=1}^\infty\)</span> of <span class="process-math">\((f_n)_{n=1}^\infty\)</span> so that <span class="process-math">\(\lim_{k\rightarrow\infty}\left|{\left|{{f_{n_k}}}\right|}\right|=\infty\text{.}\)</span> By the extreme value theroem, exists <span class="process-math">\(x_k\in[a,b]\)</span> with <span class="process-math">\(\left|{f_{n_k}(x_k)}\right|=\left|{\left|{{f_{n_k}}}\right|}\right|_\infty\text{.}\)</span> Using that <span class="process-math">\([a,b]\)</span> is compact and passing to a subsequence, we may assume <span class="process-math">\((x_k)_{k=1}^\infty\)</span> converges to some <span class="process-math">\(x\in[a,b]\text{.}\)</span> We'll show that <span class="process-math">\(\left|{f_{n_k}(x_k)}\right|\rightarrow\left|{f(x)}\right|\text{.}\)</span> To this end, fix <span class="process-math">\(\varepsilon&gt;0\text{.}\)</span> Let <span class="process-math">\(\delta&gt;0\)</span> be such that for all <span class="process-math">\(k\geq 1, x,y\in[a,b]\)</span> with <span class="process-math">\(\left|{x-y}\right|&lt;\delta,\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\left|{f_{n_k}(x)-f_{n_k}(y)}\right|&lt;\varepsilon.
+\end{equation*}
+</div>
+<div class="para">Then choose <span class="process-math">\(L\geq 1\)</span> so that for all <span class="process-math">\(k\geq L\text{,}\)</span> we have <span class="process-math">\(d(x_k,x)&lt;\delta\)</span> and <span class="process-math">\(\left|{f_{n_k}(X)-f(x)}\right|&lt;\varepsilon\text{.}\)</span> Then if <span class="process-math">\(k\geq L\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+\left|{f(x_k)-f(x)}\right|
+&lt;\left|{f_{n_k}(x_k)-f_{n_k}(x)}\right|+\left|{f_{n_k}(x)-f(x)}\right|
+&lt;2\varepsilon
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(\left|{f_{n_k}(x_k)-f_{n_k}(x)}\right|&lt;\varepsilon\)</span> since <span class="process-math">\(d(x_k,x)&lt;\delta\)</span> (as <span class="process-math">\(k\geq L\)</span>) and <span class="process-math">\(\left|{f_{n_k}(x)-f(x)}\right|&lt;\varepsilon\)</span> since <span class="process-math">\(k\geq L\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+f(x)
+=\lim_{k\rightarrow\infty}f_{n_k}(x_k).
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">In particular,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+\left|{f(x)}\right|
+=\lim_{k\rightarrow\infty}\left|{f_{n_k}(x_k)}\right|
+=\lim_{k\rightarrow\infty}\left|{\left|{{f_{n_k}}}\right|}\right|_\infty
+=\infty,     
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">a contradiction.</div>
+</div>
+<div class="para">Suppose <span class="process-math">\((f_n)_{n=1}^\infty\)</span> does not converge uniformly to <span class="process-math">\(f\text{.}\)</span> Then exists <span class="process-math">\(\varepsilon&gt;0\)</span> such that for all <span class="process-math">\(N\geq 1,\exists n\geq N\)</span> such that <span class="process-math">\(\left|{\left|{{f-f_n}}\right|}\right|_\infty\geq \varepsilon\text{.}\)</span> Let <span class="process-math">\(\varepsilon&gt;0\)</span> as above. Then exists subsequence <span class="process-math">\((f_{n_k})_{k=1}^\infty\)</span> so that for all <span class="process-math">\(k\geq 1\text{,}\)</span> <span class="process-math">\(\left|{\left|{{f-f_{n_k}}}\right|}\right|_\infty\geq \varepsilon\text{.}\)</span> Then <span class="process-math">\((f_{n_k})_{k=1}^\infty\)</span> is bounded and equicontinuous. By the Arzelá-Ascoli Theorem, <span class="process-math">\((f_{n_k})_{k=1}^\infty\)</span> has a subsequence <span class="process-math">\((f_{n_{k_l}})_{l=1}^\infty\)</span> converging to some <span class="process-math">\(g\in C[a,b]\text{.}\)</span> Then by above, we have <span class="process-math">\(\left|{\left|{{f-g}}\right|}\right|_\infty\geq \varepsilon\text{.}\)</span> But <span class="process-math">\((f_{n_{k_l}})_{l=1}^\infty\)</span> converge pointwise to both <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> so <span class="process-math">\(f=g\)</span> and <span class="process-math">\(\left|{\left|{{f-g}}\right|}\right|_\infty=0\text{,}\)</span> a contradiction.</div></article><span class="incontext"><a href="appendix-1.html#li-276" class="internal">in-context</a></span>
+</body>
+</html>

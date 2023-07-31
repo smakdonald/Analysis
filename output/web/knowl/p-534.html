@@ -11,18 +11,36 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para logical"><ul class="disc">
-<li><div class="para">
-<span class="process-math">\(\mathbb{R}\)</span> is separable since <span class="process-math">\(\mathbb{Q}\subseteq \mathbb{R}\)</span> is countable and dense in <span class="process-math">\(\mathbb{R}\text{.}\)</span>
-</div></li>
-<li><div class="para">
-<span class="process-math">\(\mathbb{C}\)</span> is separable. <span class="process-math">\(\mathbb{Q}[i]=\{{a+ib}\,:\,{a,b\in\mathbb{Q}}\}\subseteq \mathbb{C}\)</span> is dense in <span class="process-math">\(\mathbb{C}\text{,}\)</span> and <span class="process-math">\(\mathbb{Q}[i]\)</span> is countable since <span class="process-math">\(\mathbb{Q}[i]\sim\mathbb{Q}\times \mathbb{Q}\)</span> by <span class="process-math">\((a,b)\mapsto a+ib\text{.}\)</span>
-</div></li>
-<li><div class="para">
-<span class="process-math">\(\mathbb{R}^n,\mathbb{C}^n\)</span> are separable.</div></li>
-<li><div class="para">If <span class="process-math">\(X\)</span> is an uncountable set with the discrete metric, then <span class="process-math">\(X\)</span> is not separable. In fact, <span class="process-math">\(X\)</span> is the only dense subset of <span class="process-math">\(X\text{,}\)</span> and <span class="process-math">\(X\)</span> is not countable.</div></li>
-</ul></div>
-<span class="incontext"><a href="sec-separability-completions.html#p-534" class="internal">in-context</a></span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">
+<dfn class="terminology">Case 1</dfn>: If <span class="process-math">\(x&lt;\delta\)</span> and <span class="process-math">\(y&lt;\delta\text{,}\)</span> then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+\left|{\sqrt{x}-\sqrt{y}}\right|
+\leq \sqrt{x}+\sqrt{y}
+&lt;2\sqrt{\delta}
+=\varepsilon
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">
+<dfn class="terminology">Case 2</dfn>: Suppose <span class="process-math">\(x\geq \delta\)</span> or <span class="process-math">\(y\geq \delta\text{.}\)</span> Wlog, <span class="process-math">\(x\geq \delta\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+\left|{\sqrt{x}-\sqrt{y}}\right|
+=\left|{\sqrt{x}-\sqrt{y}}\right|\frac{\sqrt{x}+\sqrt{y}}{\sqrt{x}+\sqrt{y}}
+=\frac{\left|{x-y}\right|}{\sqrt{x}+\sqrt{y}}
+&lt;\frac{\delta}{\sqrt{\delta}}
+=\sqrt{\delta}
+=\frac{\varepsilon}{2}
+&lt;\varepsilon.
+\end{aligned}
+\end{equation*}
+</div>
+</div>
+<span class="incontext"><a href="sec-uniform-continuity.html#p-534" class="internal">in-context</a></span>
 </body>
 </html>

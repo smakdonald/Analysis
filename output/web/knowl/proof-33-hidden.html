@@ -10,6 +10,26 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="hiddenproof"><div class="para">If <span class="process-math">\((x_n)_{n=1}^\infty\subseteq [a,b]\text{,}\)</span> there is a subsequence <span class="process-math">\((x_{n_k})_{k=1}^\infty\subseteq (x_n)_{n=1}^\infty\)</span> converging to some <span class="process-math">\(x\in \mathbb{R}\text{.}\)</span> (from Bolzano-Weierstrass Theorem, every bounded sequence has a convergent subsequence). Since <span class="process-math">\(a\leq x_{n_k}\leq b\)</span> for all <span class="process-math">\(k\geq 1\)</span> and <span class="process-math">\(x=\lim_{k\rightarrow\infty}x_{n_k}\text{,}\)</span> we have <span class="process-math">\(a\leq x\leq b\text{.}\)</span> So <span class="process-math">\(x\in[a,b]\text{.}\)</span>
+<body class="ignore-math"><article class="hiddenproof"><div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+\left|{\langle{x,y}\rangle}\right|
+&amp;=\left|{\sum_{i=1}^nx_i\bar{y_i}}\right|\\
+&amp;\leq \sum_{i=1}^n\left|{x_i}\right|\cdot{\left|{y_i}\right|}\\
+&amp;\leq \sum_{i=1}^n\frac{1}{2}(\left|{x_i}\right|^2+\left|{y_i}\right|^2)\\
+&amp;=\frac{1}{2}(\left|{\left|{{x}}\right|}\right|^2+\left|{\left|{{y}}\right|}\right|^2)
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">If <span class="process-math">\(x,y\neq 0\)</span> then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\left|{\langle{\frac{x}{\left|{\left|{{x}}\right|}\right|},\frac{y}{\left|{\left|{{y}}\right|}\right|}}\rangle}\right|\leq \frac{1}{2}(\left|{\left|{{\frac{x}{\left|{\left|{{x}}\right|}\right|}}}\right|}\right|^2+\left|{\left|{{\frac{y}{\left|{\left|{{y}}\right|}\right|}}}\right|}\right|^2=\frac{1}{2}(1^2+1^2)=1.
+\end{equation*}
+</div>
+<div class="para">Multiply by <span class="process-math">\(\left|{\left|{{x}}\right|}\right|\left|{\left|{{y}}\right|}\right|\)</span> to get <span class="process-math">\(\left|{\langle{x,y}\rangle}\right|\leq \left|{\left|{{x}}\right|}\right|\cdot\left|{\left|{{y}}\right|}\right|\text{.}\)</span>
+</div>
+</div> <div class="para">If <span class="process-math">\(x=0\)</span> or <span class="process-math">\(y=0\)</span> then <span class="process-math">\(\left|{\langle{x,y}\rangle}\right|=0=\left|{\left|{{x}}\right|}\right|\cdot\left|{\left|{{y}}\right|}\right|\)</span>
 </div></article></body>
 </html>

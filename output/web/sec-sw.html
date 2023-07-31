@@ -332,7 +332,15 @@ window.MathJax = {
 \newcommand{\fe}{{\mathfrak e}}
 \newcommand{\fm}{{\mathfrak m}} 
 \newcommand{\fp}{{\mathfrak p}} 
-\newcommand{\fq}{{\mathfrak q}} 
+\newcommand{\fq}{{\mathfrak q}}
+\newcommand{\fA}{{\mathfrak A}} 
+\newcommand{\fB}{{\mathfrak B}} 
+\newcommand{\fC}{{\mathfrak C}} 
+\newcommand{\fD}{{\mathfrak D}} 
+\newcommand{\fE}{{\mathfrak E}} 
+\newcommand{\fF}{{\mathfrak F}} 
+\newcommand{\fG}{{\mathfrak G}} 
+\newcommand{\fH}{{\mathfrak H}} 
 \newcommand{\fK}{{\mathfrak K}} 
 \newcommand{\fR}{{\mathfrak R}} 
 
@@ -517,7 +525,13 @@ window.MathJax = {
 <li>
 <div class="toc-item"><a href="ch-metric-spaces.html" class="internal"><span class="codenumber">4</span> <span class="title">Metric Spaces</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-topology-metric.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Topology and Metric Spaces</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-topology-metric.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Topology and Metric Spaces</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-topology-metric.html#subsec-inner" class="internal"><span class="title">Inner Products and Cauchy-Schwarz</span></a></div></li>
+<li><div class="toc-item"><a href="sec-topology-metric.html#subsec-matric" class="internal"><span class="title">Metric Spaces</span></a></div></li>
+</ul>
+</li>
 <li>
 <div class="toc-item"><a href="sec-open-closed.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Open and Closed Sets</span></a></div>
 <ul class="structural">
@@ -587,50 +601,50 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-sw"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">7.6</span> <span class="title">The Stone-Weierstrass Theorem</span>
 </h2>
-<div class="para" id="p-697">Basic problem: Approximate a continuous function <span class="process-math">\(f:X\rightarrow\mathbb{C}\)</span> uniformly by a “nice” sequence of functions <span class="process-math">\(f_n:X\rightarrow\mathbb{C}\text{.}\)</span>
+<div class="para" id="p-731">Basic problem: Approximate a continuous function <span class="process-math">\(f:X\rightarrow\mathbb{C}\)</span> uniformly by a “nice” sequence of functions <span class="process-math">\(f_n:X\rightarrow\mathbb{C}\text{.}\)</span>
 </div>
-<article class="convention remark-like" id="convention-15"><h3 class="heading">
+<article class="convention remark-like" id="convention-18"><h3 class="heading">
 <span class="type">Convention</span><span class="space"> </span><span class="codenumber">7.28</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-698">Let <span class="process-math">\(X\)</span> be a compact metric space. We'll write <span class="process-math">\(C(X)\)</span> for either <span class="process-math">\(C(X,\mathbb{C})\)</span> or <span class="process-math">\(C(X,\mathbb{R})\)</span> and view <span class="process-math">\(C(X)\)</span> as either a complex or real vector space, respectively.</div></article><article class="definition definition-like" id="def-subalgebra"><h3 class="heading">
+<div class="para" id="p-732">Let <span class="process-math">\(X\)</span> be a compact metric space. We'll write <span class="process-math">\(C(X)\)</span> for either <span class="process-math">\(C(X,\mathbb{C})\)</span> or <span class="process-math">\(C(X,\mathbb{R})\)</span> and view <span class="process-math">\(C(X)\)</span> as either a complex or real vector space, respectively.</div></article><article class="definition definition-like" id="def-subalgebra"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.29</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-699">
+<div class="para logical" id="p-733">
 <div class="para">A vector subspace <span class="process-math">\(A\subseteq C(X)\)</span> is called</div>
 <ul class="disc">
-<li id="li-191"><div class="para" id="p-700">A <dfn class="terminology">subalgebra</dfn> if <span class="process-math">\(f,g\in A\implies fg\in A\)</span>
+<li id="li-202"><div class="para" id="p-734">A <dfn class="terminology">subalgebra</dfn> if <span class="process-math">\(f,g\in A\implies fg\in A\)</span>
 </div></li>
-<li id="li-192"><div class="para" id="p-701">
+<li id="li-203"><div class="para" id="p-735">
 <dfn class="terminology">unital</dfn> if <span class="process-math">\(1\in A\)</span> (1=constant function <span class="process-math">\(x\mapsto 1\)</span>)</div></li>
-<li id="li-193"><div class="para" id="p-702">
+<li id="li-204"><div class="para" id="p-736">
 <dfn class="terminology">self-adjoint</dfn> if <span class="process-math">\(f\in A\implies\overline{f}\in A\text{.}\)</span>
 </div></li>
 </ul>
 </div></article><article class="remark remark-like" id="remark-20"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">7.30</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-703">In the real case, every subspace of <span class="process-math">\(C(X,\mathbb{R})\)</span> is self-adjoint.</div></article><article class="example example-like" id="example-42"><h3 class="heading">
+<div class="para" id="p-737">In the real case, every subspace of <span class="process-math">\(C(X,\mathbb{R})\)</span> is self-adjoint.</div></article><article class="example example-like" id="example-47"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">7.31</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-704"><ul class="disc">
-<li id="li-194"><div class="para" id="p-705">
+<div class="para logical" id="p-738"><ul class="disc">
+<li id="li-205"><div class="para" id="p-739">
 <span class="process-math">\(A=C(X)\)</span> is a subalebra of <span class="process-math">\(C(X)\)</span> and is unital, self-adjoint</div></li>
-<li id="li-195"><div class="para" id="p-706">
+<li id="li-206"><div class="para" id="p-740">
 <span class="process-math">\(\{{\text{constant functions}}\}\subseteq C(X)\)</span> is a unital self-adjoint subalgebra.</div></li>
-<li id="li-196"><div class="para" id="p-707">
+<li id="li-207"><div class="para" id="p-741">
 <span class="process-math">\(X=[a,b], \mathbb{F}\in\{{\mathbb{R},\mathbb{C}}\}\text{,}\)</span> <span class="process-math">\(A=\{{\text{polynomials }[a,b]\rightarrow \mathbb{F}}\}=\{{x\mapsto\sum_{n=0}^N a_nx^n}\,:\,{a_n\in \mathbb{F}, N\geq 0}\}\)</span> then <span class="process-math">\(A\)</span> is a unital subalgebra of <span class="process-math">\(C(X,\mathbb{F})\text{.}\)</span>
 </div></li>
-<li id="li-197"><div class="para" id="p-708">
+<li id="li-208"><div class="para" id="p-742">
 <span class="process-math">\(A_0=\{{\text{polynomials }p:[0,1]\rightarrow \mathbb{F}}\,:\,{p(0)=0}\}=\{{\sum_{n=1}^Na_nx^n}\,:\,{a_n\in F, N\geq 1}\}\)</span> then <span class="process-math">\(A_0\)</span> is a self-adjoint subalgebra of <span class="process-math">\(C(X,\mathbb{F})\)</span> whic is not unital.</div></li>
-<li id="li-198"><div class="para" id="p-709">Let <span class="process-math">\(X=\mathbb{T}=\{{z\in \mathbb{C}}\,:\,{\left|{z}\right|=1}\}, \mathbb{F}=\mathbb{C}\text{.}\)</span> Let <span class="process-math">\(A=\{{\text{polynomials }\mathbb{T}\rightarrow\mathbb{C}}\}=\{{z\mapsto\sum_{n=0}^Na_nz^n}\,:\,{a_n\in \mathbb{C}, N\geq 0}\}\text{.}\)</span> Then <span class="process-math">\(A\)</span> is a unital subalgebra of <span class="process-math">\(C(\mathbb{T})\text{.}\)</span> Claim: <span class="process-math">\(A\)</span> is not self adjoint.</div></li>
+<li id="li-209"><div class="para" id="p-743">Let <span class="process-math">\(X=\mathbb{T}=\{{z\in \mathbb{C}}\,:\,{\left|{z}\right|=1}\}, \mathbb{F}=\mathbb{C}\text{.}\)</span> Let <span class="process-math">\(A=\{{\text{polynomials }\mathbb{T}\rightarrow\mathbb{C}}\}=\{{z\mapsto\sum_{n=0}^Na_nz^n}\,:\,{a_n\in \mathbb{C}, N\geq 0}\}\text{.}\)</span> Then <span class="process-math">\(A\)</span> is a unital subalgebra of <span class="process-math">\(C(\mathbb{T})\text{.}\)</span> Claim: <span class="process-math">\(A\)</span> is not self adjoint.</div></li>
 </ul></div></article><article class="theorem theorem-like" id="thm-sw"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.32</span><span class="period">.</span><span class="space"> </span><span class="title">Stone-Weierstrass Theorem.</span>
 </h3>
-<div class="para" id="p-710">If <span class="process-math">\(A\subseteq C(X)\)</span> is a unital self-adjoint subalgebra, then <span class="process-math">\(\overline{A}=C(X)\)</span> (in the metric <span class="process-math">\(d_\infty\)</span>) iff <span class="process-math">\(A\)</span> <dfn class="terminology">separates points in <span class="process-math">\(X\)</span></dfn> ie for all <span class="process-math">\(x,y\in X, x\neq y\text{,}\)</span> then exists <span class="process-math">\(f\in A\)</span> such that <span class="process-math">\(f(x)\neq f(y)\text{.}\)</span>
+<div class="para" id="p-744">If <span class="process-math">\(A\subseteq C(X)\)</span> is a unital self-adjoint subalgebra, then <span class="process-math">\(\overline{A}=C(X)\)</span> (in the metric <span class="process-math">\(d_\infty\)</span>) iff <span class="process-math">\(A\)</span> <dfn class="terminology">separates points in <span class="process-math">\(X\)</span></dfn> ie for all <span class="process-math">\(x,y\in X, x\neq y\text{,}\)</span> then exists <span class="process-math">\(f\in A\)</span> such that <span class="process-math">\(f(x)\neq f(y)\text{.}\)</span>
 </div></article><article class="corollary theorem-like" id="cor-wat"><h3 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">7.33</span><span class="period">.</span><span class="space"> </span><span class="title">Weierstrass' Approximation Theorem.</span>
 </h3>
-<div class="para" id="p-711">If <span class="process-math">\(f\in C[a,b]\text{,}\)</span> then there is a sequence <span class="process-math">\((p_n[a,b]\rightarrow\mathbb{R})_{n=1}^\infty\)</span> of polynomial so that <span class="process-math">\(p_n\rightarrow f\)</span> uniformly on <span class="process-math">\([a,b]\text{.}\)</span>
+<div class="para" id="p-745">If <span class="process-math">\(f\in C[a,b]\text{,}\)</span> then there is a sequence <span class="process-math">\((p_n[a,b]\rightarrow\mathbb{R})_{n=1}^\infty\)</span> of polynomial so that <span class="process-math">\(p_n\rightarrow f\)</span> uniformly on <span class="process-math">\([a,b]\text{.}\)</span>
 </div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-equicontinuity.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>

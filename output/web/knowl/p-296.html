@@ -12,7 +12,17 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para">In general, <span class="process-math">\(\overline{B_r(a)}\neq \{{x\in X}\,:\,{d(a,x)\leq r}\}\)</span> (they are equal in <span class="process-math">\(\mathbb{R}^n\)</span>)</div>
-<span class="incontext"><a href="sec-open-closed.html#p-296" class="internal">in-context</a></span>
+<div class="para logical"><div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+\left|{\left|{{x+y}}\right|}\right|^2
+&amp;=\langle{x+y,x+y}\rangle\\
+&amp;=\langle{x,x}\rangle+\langle{x,y}\rangle+\langle{y,x}\rangle+\langle{y,y}\rangle\\
+&amp;=\left|{\left|{{x}}\right|}\right|^2+\langle{x,y}\rangle+\overline{\langle{x,y}\rangle}+\left|{\left|{{y}}\right|}\right|^2\\
+&amp;=\left|{\left|{{x}}\right|}\right|^2+2\text{Re}(\langle{x,y}\rangle)+\left|{\left|{{y}}\right|}\right|^2
+\end{aligned}
+\end{equation*}
+</div></div>
+<span class="incontext"><a href="sec-topology-metric.html#p-296" class="internal">in-context</a></span>
 </body>
 </html>

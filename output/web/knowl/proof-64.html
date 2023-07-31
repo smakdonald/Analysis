@@ -13,31 +13,19 @@
 <body class="ignore-math">
 <article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
 <div class="para logical">
-<div class="para">Suppose for all <span class="process-math">\(\varepsilon&gt;0\)</span> there exists <span class="process-math">\(P\in\mathcal{P}[a,b]\)</span> with</div>
-<div class="displaymath process-math">
-\begin{equation*}
-U(f,P)-L(f,P)&lt;\varepsilon.
-\end{equation*}
+<div class="para">We need to show that <span class="process-math">\(\lim_{x\rightarrow a}f(x)=f(a)\text{.}\)</span> If <span class="process-math">\(x\in S\setminus\{{a}\}\)</span>
 </div>
-<div class="para">Given <span class="process-math">\(\varepsilon&gt;0\text{,}\)</span> choose <span class="process-math">\(P\text{.}\)</span> Then <span class="process-math">\(\overline{\int_a^b}f(t)\,dt\leq U(f,P)\leq L(f,P)+\varepsilon&lt;\underline{\int_a^b}f(t)\,dt+\varepsilon\text{.}\)</span> Hence <span class="process-math">\(\overline{\int_a^b}f(t)\,dt\leq \underline{\int_a^b}f(t)\,dt\text{,}\)</span> so <span class="process-math">\(f\in\mathcal{R}[a,b]\text{.}\)</span>
-</div>
-</div> <div class="para logical">
-<div class="para">Conversely, suppose that <span class="process-math">\(f\in\mathcal{R}[a,b]\text{.}\)</span> Fix <span class="process-math">\(\varepsilon&gt;0\text{.}\)</span> There are <span class="process-math">\(P_1,P_2\in\mathcal{P}[a,b]\)</span> so that <span class="process-math">\(\overline{\int_a^b}f(t)\,dt&gt;U(f,P)-\frac{\varepsilon}{2}\)</span> and <span class="process-math">\(\int_a^bf(t)\,dt=\underline{\int_a^b}f(t)\,dt&lt;L(f,P_2)+\frac{\varepsilon}{2}\text{.}\)</span> Hence, <span class="process-math">\(L(f,P_2)+\frac{\varepsilon}{2}&gt;U(f,P_1)-\frac{\varepsilon}{2}\text{,}\)</span> or rearranging</div>
-<div class="displaymath process-math">
-\begin{equation*}
-U(f,P_1)-L(f,P_2)&lt;\varepsilon.
-\end{equation*}
-</div>
-<div class="para">Set <span class="process-math">\(P=P_1\cup P_2\in\mathcal{P}[a,b]\text{.}\)</span> Then</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \begin{aligned}
-U(f,P)&amp;\leq U(f,P_1)\\
-L(f,P)&amp;\geq L(f,P_2)\\
-\implies U(f,P)-L(f,P)&amp;&lt;\varepsilon.      
+f(x)
+&amp;=\frac{f(x)-f(a)}{x-a}(x-a)+f(a)\\
+\implies \lim_{x\rightarrow a}f(x)
+&amp;=f'(a)\cdot 0+f(a)
+=f(a).
 \end{aligned}
 \end{equation*}
 </div>
-</div></article><span class="incontext"><a href="sec-riemann.html#proof-64" class="internal">in-context</a></span>
+</div></article><span class="incontext"><a href="sec-derivative.html#proof-64" class="internal">in-context</a></span>
 </body>
 </html>

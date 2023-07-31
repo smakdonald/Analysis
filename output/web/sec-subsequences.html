@@ -332,7 +332,15 @@ window.MathJax = {
 \newcommand{\fe}{{\mathfrak e}}
 \newcommand{\fm}{{\mathfrak m}} 
 \newcommand{\fp}{{\mathfrak p}} 
-\newcommand{\fq}{{\mathfrak q}} 
+\newcommand{\fq}{{\mathfrak q}}
+\newcommand{\fA}{{\mathfrak A}} 
+\newcommand{\fB}{{\mathfrak B}} 
+\newcommand{\fC}{{\mathfrak C}} 
+\newcommand{\fD}{{\mathfrak D}} 
+\newcommand{\fE}{{\mathfrak E}} 
+\newcommand{\fF}{{\mathfrak F}} 
+\newcommand{\fG}{{\mathfrak G}} 
+\newcommand{\fH}{{\mathfrak H}} 
 \newcommand{\fK}{{\mathfrak K}} 
 \newcommand{\fR}{{\mathfrak R}} 
 
@@ -517,7 +525,13 @@ window.MathJax = {
 <li>
 <div class="toc-item"><a href="ch-metric-spaces.html" class="internal"><span class="codenumber">4</span> <span class="title">Metric Spaces</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-topology-metric.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Topology and Metric Spaces</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-topology-metric.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Topology and Metric Spaces</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-topology-metric.html#subsec-inner" class="internal"><span class="title">Inner Products and Cauchy-Schwarz</span></a></div></li>
+<li><div class="toc-item"><a href="sec-topology-metric.html#subsec-matric" class="internal"><span class="title">Metric Spaces</span></a></div></li>
+</ul>
+</li>
 <li>
 <div class="toc-item"><a href="sec-open-closed.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Open and Closed Sets</span></a></div>
 <ul class="structural">
@@ -588,48 +602,57 @@ window.MathJax = {
 <span class="type">Section</span> <span class="codenumber">2.2</span> <span class="title">Subsequences</span>
 </h2>
 <blockquote class="blockquote" id="blockquote-10">
-<div class="para" id="p-184">“Elegance comes from being as beautiful inside as outside.”</div> <cite class="attribution">―Coco Chanel</cite>
+<div class="para" id="p-174">“Elegance comes from being as beautiful inside as outside.”</div> <cite class="attribution">―Coco Chanel</cite>
 </blockquote>
 <article class="definition definition-like" id="def-subsequence"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.21</span><span class="period">.</span><span class="space"> </span><span class="title">Subsequence.</span>
-</h3> <div class="para" id="p-185">A subsequence of a given sequence \{a_n\}^\infty_{n=1} is any sequence of the form {ank }∞ k=1 where n1, n2, n3, . . . is any strictly increasing sequence of natural numbers — that is nk ∈ N and nk+1 &gt; nk for all k ∈ N, so that n1 &lt; n2 &lt; n3 &lt; · · · .</div></article><article class="remark remark-like" id="remark-4"><h3 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.22</span><span class="period">.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.18</span><span class="period">.</span><span class="space"> </span><span class="title">Subsequence.</span>
+</h3> <div class="para" id="p-175">Let <span class="process-math">\((x_n)_{n=1}^{\infty}\)</span> be a sequence (in any set <span class="process-math">\(S\)</span>). A <dfn class="terminology">subsequence</dfn> of <span class="process-math">\((x_n)_{n=1}^{\infty}\)</span> is a sequence <span class="process-math">\((x_{f(n)})_{n=1}^{\infty}\)</span> where <span class="process-math">\(f:\mathbb{Z}_{\geq 1}\rightarrow\mathbb{Z}_{\geq 1}\)</span> is a strictly increasing function</div></article><article class="example example-like" id="example-5"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.19</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-186">Note that k is the index of the subsequence; i.e., the first term in the subsequence is when k = 1, the second is when k = 2 and so on. The integer sequence {nk}∞ k=1 is the sequence of indices of the original sequence we choose to make the subsequence.</div></article><article class="lemma theorem-like" id="lem-subsequence-lemma"><h3 class="heading">
-<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">2.23</span><span class="period">.</span>
+<div class="para" id="p-176">
+<span class="process-math">\((x_{2n})_{n=1}^{\infty}\)</span> and <span class="process-math">\((x_{2n+1})_{n=1}^{\infty}\)</span> are subsequences of <span class="process-math">\((x_n)_{n=1}^{\infty}\text{.}\)</span>
+</div></article><article class="convention remark-like" id="convention-5"><h3 class="heading">
+<span class="type">Convention</span><span class="space"> </span><span class="codenumber">2.20</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-187">Let b1, b2, . . . be any strictly increasing sequence of natural numbers; that is, assume bk ∈ N for all k ∈ N and that bk &lt; bk+1 for all k ∈ N. Then bk ≥ k for all k.</div></article><article class="hiddenproof" id="proof-13"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-13"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-13"><article class="hiddenproof"><div class="para" id="p-188">Suppose b1, b2, . . . is a strictly increasing sequence of natural numbers. We prove bn ≥ n for all n by induction on n. That is, for each n ∈ N, let Pn be the statement that bn ≥ n.</div> <div class="para" id="p-189">P1 is true since b1 ∈ N and so b1 ≥ 1. Given k ∈ N, assume Pk is true; that is, assume bk ≥ k. Since bk+1 &gt; bk and both are natural numbers, we have bk+1 ≥ bk + 1 ≥ k + 1; that is, Pk+1 is true too. By induction, Pn is true for all n ∈ N.</div></article></div>
+<div class="para" id="p-177">We'll usually write <span class="process-math">\((x_{n_k})_{k=1}^{\infty}\)</span> for a subsequence of <span class="process-math">\((x_n)_{n=1}^{\infty}\text{.}\)</span> (Here <span class="process-math">\(({n_k})_{k=1}^{\infty}\)</span> is a strictly increasing set of positive integers)</div></article><article class="exercise exercise-like" id="exercise-2"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-2"><h3 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.21</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-2"><article class="exercise exercise-like"><div class="para" id="p-178">A subsequence of a subsequence of <span class="process-math">\((x_n)_{n=1}^{\infty}\)</span> is a subseqeuence of <span class="process-math">\((x_n)_{n=1}^{\infty}\text{.}\)</span>
+</div></article></div>
+<article class="lemma theorem-like" id="lem-subsequence-lemma"><h3 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">2.22</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-179">Let b1, b2,... be any strictly increasing sequence of natural numbers; that is, assume bk ∈ N for all k ∈ N and that bk &lt; bk+1 for all k ∈ N. Then bk ≥ k for all k.</div></article><article class="hiddenproof" id="proof-11"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-11"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-11"><article class="hiddenproof"><div class="para" id="p-180">Suppose b1, b2,... is a strictly increasing sequence of natural numbers. We prove bn ≥ n for all n by induction on n. That is, for each n ∈ N, let Pn be the statement that bn ≥ n.</div> <div class="para" id="p-181">P1 is true since b1 ∈ N and so b1 ≥ 1. Given k ∈ N, assume Pk is true; that is, assume bk ≥ k. Since bk+1 &gt; bk and both are natural numbers, we have bk+1 ≥ bk + 1 ≥ k + 1; that is, Pk+1 is true too. By induction, Pn is true for all n ∈ N.</div></article></div>
 <article class="theorem theorem-like" id="thm-subsequence-limits"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.24</span><span class="period">.</span><span class="space"> </span><span class="title">Subsequence Limits.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.23</span><span class="period">.</span><span class="space"> </span><span class="title">Subsequence Limits.</span>
 </h3>
-<div class="para" id="p-190">If a sequence \{a_n\}^\infty_{n=1} converges to L, then every subsequence of this sequence also converges to L.</div></article><article class="hiddenproof" id="proof-14"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-14"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-14"><article class="hiddenproof"><div class="para" id="p-191">Let the sequence \{a_n\}^\infty_{n=1} converge to L, and take a subsequence {ank }∞ k=1 for some strictly increasing sequence n1 &lt; n2 &lt; n3 &lt; · · · of natural numbers.</div> <div class="para" id="p-192">Let ε &gt; 0. Since \{a_n\}^\infty_{n=1} converges to L, there is some N ∈ R such that for all natural numbers n &gt; N we have |an − L| &lt; ε. We claim that the same N works to verify the definition of {ank }∞ k=1 converges to L for this ε. Indeed, if k &gt; N , then nk &gt; N , so |ank − L| &lt; ε. Thus, {ank }∞ k=1 converges to L.</div></article></div>
+<div class="para" id="p-182">If a sequence \{a_n\}^\infty_{n=1} converges to L, then every subsequence of this sequence also converges to L.</div></article><article class="hiddenproof" id="proof-12"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-12"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-12"><article class="hiddenproof"><div class="para" id="p-183">Let the sequence \{a_n\}^\infty_{n=1} converge to L, and take a subsequence {ank }∞ k=1 for some strictly increasing sequence n1 &lt; n2 &lt; n3 &lt; · · · of natural numbers.</div> <div class="para" id="p-184">Let ε &gt; 0. Since \{a_n\}^\infty_{n=1} converges to L, there is some N ∈ R such that for all natural numbers n &gt; N we have |an − L| &lt; ε. We claim that the same N works to verify the definition of {ank }∞ k=1 converges to L for this ε. Indeed, if k &gt; N, then nk &gt; N, so |ank − L| &lt; ε. Thus, {ank }∞ k=1 converges to L.</div></article></div>
 <article class="lemma theorem-like" id="lem-balzano-lemma"><h3 class="heading">
-<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">2.25</span><span class="period">.</span>
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">2.24</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-193">
+<div class="para logical" id="p-185">
 <div class="para">Let \{a_n\}^\infty_{n=1} be a sequence.</div>
 <ol class="decimal">
-<li id="li-89"><div class="para" id="p-194">If the set of values of the sequence {an | n ∈ N} does not have a maximum value, then \{a_n\}^\infty_{n=1} has a subsequence that is increasing.</div></li>
-<li id="li-90"><div class="para" id="p-195">If the set of values of the sequence {an | n ∈ N} does not have a minimum value, then \{a_n\}^\infty_{n=1} has a subsequence that is decreasing.</div></li>
+<li id="li-89"><div class="para" id="p-186">If the set of values of the sequence {an | n ∈ N} does not have a maximum value, then \{a_n\}^\infty_{n=1} has a subsequence that is increasing.</div></li>
+<li id="li-90"><div class="para" id="p-187">If the set of values of the sequence {an | n ∈ N} does not have a minimum value, then \{a_n\}^\infty_{n=1} has a subsequence that is decreasing.</div></li>
 </ol>
-</div></article><article class="hiddenproof" id="proof-15"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-15"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-15"><article class="hiddenproof"><div class="para logical" id="p-196"><ol class="decimal">
+</div></article><article class="hiddenproof" id="proof-13"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-13"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-13"><article class="hiddenproof"><div class="para logical" id="p-188"><ol class="decimal">
 <li id="li-91">
-<div class="para" id="p-197">Assume that the set of values {an | n ∈ N} does not have a maximum value.</div>
-<div class="para" id="p-198">We define a subsequence recursively. We will recursively choose natural numbers n1, n2, n3, . . . so that nk &lt; nk+1 for all k and ank ≤ ank+1 .</div>
-<div class="para" id="p-199">We start by setting n1 = 1.</div>
-<div class="para" id="p-200">If we have chosen nk, then let b = max{a1, . . . , ank }.</div>
-<div class="para" id="p-201">We claim that there is some m &gt; nk such that am &gt; b. To obtain a contradiction, suppose otherwise. Then for any n ∈ N, either n &gt; nk and an ≤ b by assumption, or n ≤ nk and an ≤ b, since an is on the list of things of which b was the maximum. Then b is the maximum of {an | n ∈ N}, which yields a contradiction. Thus, there is some m &gt; nk such that am &gt; b, and we can choose m = nk+1. Thus, we can define such a sequence recursively.</div>
+<div class="para" id="p-189">Assume that the set of values {an | n ∈ N} does not have a maximum value.</div>
+<div class="para" id="p-190">We define a subsequence recursively. We will recursively choose natural numbers n1, n2, n3,... so that nk &lt; nk+1 for all k and ank ≤ ank+1.</div>
+<div class="para" id="p-191">We start by setting n1 = 1.</div>
+<div class="para" id="p-192">If we have chosen nk, then let b = max{a1,..., ank }.</div>
+<div class="para" id="p-193">We claim that there is some m &gt; nk such that am &gt; b. To obtain a contradiction, suppose otherwise. Then for any n ∈ N, either n &gt; nk and an ≤ b by assumption, or n ≤ nk and an ≤ b, since an is on the list of things of which b was the maximum. Then b is the maximum of {an | n ∈ N}, which yields a contradiction. Thus, there is some m &gt; nk such that am &gt; b, and we can choose m = nk+1. Thus, we can define such a sequence recursively.</div>
 </li>
-<li id="li-92"><div class="para" id="p-202">Similar to (1), or apply (1) to {−an}∞n=1.</div></li>
+<li id="li-92"><div class="para" id="p-194">Similar to (1), or apply (1) to {−an}∞n=1.</div></li>
 </ol></div></article></div>
 <article class="theorem theorem-like" id="thm-balzano-weierstrass"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.26</span><span class="period">.</span><span class="space"> </span><span class="title">Balzano-Weierstrass.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.25</span><span class="period">.</span><span class="space"> </span><span class="title">Balzano-Weierstrass.</span>
 </h3>
-<div class="para" id="p-203">Every sequence has a monotone subsequence.</div></article><article class="hiddenproof" id="proof-16"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-16"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-16"><article class="hiddenproof"><div class="para" id="p-204">Let \{a_n\}^\infty_{n=1} be any sequence. Recall that our goal is to prove it either has an increasing subsequence or it has a decreasing subsequence. This is equivalent to showing that if it has no increasing subsequences, then it does have at least one decreasing subsequence. So, let us assume it has no increasing subsequences.</div> <div class="para" id="p-205">We will prove it has at least one decreasing subsequence by constructing the indices n1 &lt; n2 &lt; · · · of such a subsequence recursively. By the contrapositive of part (1) Lemma 16.4 , since \{a_n\}^\infty_{n=1} does not contain any increasing subsequences, we know that {an | n ∈ N} has a maximum value. That is, there exists a natural number n1 such that an1 ≥ am for all m ≥ 1.</div> <div class="para" id="p-206">For any k, given nk, the subsequence ank +1, ank +2, ank +3, . . . also has no increasing subsequence, since a subsequence of such a sequence is a subsequence of the original sequence too. Thus, it must have a maximum value again by part (1) Lemma 16.4; choose nk+1 such that ank+1 = max{ank +1, ank +2, ank +3, . . . }. By construction, we have nk+1 &gt; nk. Thus, this gives a recursive definition for nk.</div> <div class="para" id="p-207">For any k, note that ank is the maximum of a set that contains ank+1 (since it is later in the sequence). It follows that ank ≥ ank+1. That is, we have constructed a decreasing subsequence of the original sequence.</div></article></div>
+<div class="para" id="p-195">Every sequence has a monotone subsequence.</div></article><article class="hiddenproof" id="proof-14"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-14"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-14"><article class="hiddenproof"><div class="para" id="p-196">Let \{a_n\}^\infty_{n=1} be any sequence. Recall that our goal is to prove it either has an increasing subsequence or it has a decreasing subsequence. This is equivalent to showing that if it has no increasing subsequences, then it does have at least one decreasing subsequence. So, let us assume it has no increasing subsequences.</div> <div class="para" id="p-197">We will prove it has at least one decreasing subsequence by constructing the indices n1 &lt; n2 &lt; · · · of such a subsequence recursively. By the contrapositive of part (1) Lemma 16.4, since \{a_n\}^\infty_{n=1} does not contain any increasing subsequences, we know that {an | n ∈ N} has a maximum value. That is, there exists a natural number n1 such that an1 ≥ am for all m ≥ 1.</div> <div class="para" id="p-198">For any k, given nk, the subsequence ank +1, ank +2, ank +3,... also has no increasing subsequence, since a subsequence of such a sequence is a subsequence of the original sequence too. Thus, it must have a maximum value again by part (1) Lemma 16.4; choose nk+1 such that ank+1 = max{ank +1, ank +2, ank +3,... }. By construction, we have nk+1 &gt; nk. Thus, this gives a recursive definition for nk.</div> <div class="para" id="p-199">For any k, note that ank is the maximum of a set that contains ank+1 (since it is later in the sequence). It follows that ank ≥ ank+1. That is, we have constructed a decreasing subsequence of the original sequence.</div></article></div>
 <article class="corollary theorem-like" id="cor-balzano-corollary"><h3 class="heading">
-<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">2.27</span><span class="period">.</span>
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">2.26</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-208">Every bounded sequence has a convergent subsequence.</div></article><article class="hiddenproof" id="proof-17"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-17"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-17"><article class="hiddenproof"><div class="para" id="p-209">Suppose \{a_n\}^\infty_{n=1} is a bounded sequence. By the Bolzano-Weierstrass Theorem 16.3 it admits a monotone subsequence {ank }∞ k=1, and it too is bounded (since any subsequence of a bounded sequence is also bounded.) The result follows since every monotone bounded sequence converges by the Monotone Convergence Theorem 11.4.</div></article></div></section></div>
+<div class="para" id="p-200">Every bounded sequence has a convergent subsequence.</div></article><article class="hiddenproof" id="proof-15"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-15"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-15"><article class="hiddenproof"><div class="para" id="p-201">Suppose \{a_n\}^\infty_{n=1} is a bounded sequence. By the Bolzano-Weierstrass Theorem 16.3 it admits a monotone subsequence {ank }∞ k=1, and it too is bounded (since any subsequence of a bounded sequence is also bounded.) The result follows since every monotone bounded sequence converges by the Monotone Convergence Theorem 11.4.</div></article></div></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-sequences.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sec-lim-inf-sup.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

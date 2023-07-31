@@ -385,7 +385,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.1",
   "title": "Sequence Basics",
-  "body": "Sequence Basics  Sequences and Limits    A sequence works in a way a collection never can.   George Murray   Sequence   Let be a set. A sequence of elements of is a function from the set of positive integers into .  In particular, a real sequence (or sequence of real numbers) is a function from into . The usual notation for a real sequence is {an} , where a denotes the function from into and is the value of the function at the positive integer . The notations a1, a2, . . . and {an} are also used to denote a real sequence. The number an is called the nth term of the sequence.     A sequence may be defined by giving an explicit formula for the term. For example, the formula defines the sequence whose value at the positive integer is .    Sometimes we'll want a different index set for also refer to a function as a sequence and we'll write as .   Limit of a Sequence   A sequence  converges to  (written or ) if for all there exists such that for all with , . (if your sequence starts somewhere else, could have )    No matter how small a number you pick, so long as it is positive, if you go far enough out in the sequence, all of the terms from that point on will be within a distance of of the limiting value .  Convergent, Divergent Sequences   We say  converges if there exists some such that and we say  diverges otherwise.    Uniqueness of Sequence Limits   The limit of a sequence is unique.    Suppose and . We'll show for all . This will show . To this end, fix . Since , exists int such that for all have . Since , exists int such that for all have . Now let . Then since and since have      From now on, given a sequence \\{a_n\\}^\\infty_{n=1} and a real number , will we use the short-hand notation lim n→∞ an = L to mean that the given sequence converges to the given number.    Compute .   Fix , want to know for all large enough , . Start computing difference, see how big needs to be . We want . Hold if so as long as have what we want.  Let . Let be real int with (exists by Archimedian property of real numbers). Now if follow equalities and inequalities to     Bounded Sequences    I am not bound to win, but I am bound to be true.   Abraham Lincoln   Bounded Sequence   A sequence is bounded if exists such that .    Convergent Sequences are Bounded   If a sequence {an}∞n=1 converges then it is bounded.    Suppose the sequence {an}∞n=1 converges to the number L. Applying the definition of “converges to L” using the particular value ε = 1 gives the following fact: There is a real number N such that if n ∈ N and n > N , then |an −L| < 1. The latter inequality is equivalent to L − 1 < an < L + 1 for all n > N.  Let m be any natural number such that m > N , and consider the finite list of numbers a1, a2, . . . , am−1, L + 1. Let b be the largest element of this list. I claim the sequence is bounded above by b. For any n ∈ N, if 1 ≤ n ≤ m − 1, then an ≤ b since in this case an is a member of the above list and b is the largest element of this list. If n ≥ m then since m > N , we have n > N and hence an < L + 1 from above. We also have L + 1 ≤ b (since L + 1 is in the list) and thus an < b. This proves an ≤ b for all n as claimed.  Now take p to be the smallest number in the list a1, a2, . . . , am−1, L − 1. A similar argument shows that an ≥ p for all n ∈ N.      If then     By the triangle inequality, so . Also so .      If , then             If exists such that for all , and sequence converges to                            The Squeeze Theorem   Suppose \\{a_n\\}^\\infty_{n=1}, {bn}∞ n=1, and {cn}∞ n=1 are three sequences such that \\{a_n\\}^\\infty_{n=1} and {cn}∞ n=1 both converge to L, and an ≤ bn ≤ cn for all n. Then {bn}∞ n=1 also converges to L.    Assume \\{a_n\\}^\\infty_{n=1} and {cn}∞ n=1 both converge to L and that an ≤bn ≤ cn for all n ∈ N. We need to prove {bn}∞ n=1 converges to L. Pick ε > 0. Since \\{a_n\\}^\\infty_{n=1} converges to L there is a number N1 such that if n ∈ N and n > N1 then |an−L| < ε and hence L−ε < an < L+ε. Likewise, since {cn}∞ n=1 converges to L there is a number N2 such that if n ∈ N and n > N2 then L − ε < cn < L + ε. Let N = max{N1, N2}. If n ∈ N and n > N , then n > N1 and hence L − ε < an, and n > N2 and hence cn < L + ε, and also an ≤ bn ≤ cn. Combining these facts gives that for n ∈ N such that n > N , we have L − ε < bn < L + ε and hence |bn − L| < ε. This proves {bn}∞ n=1 converges to L.      Let {an} and {bn} be sequences such that {an} is bounded and limn→∞ bn = 0. Then limn→∞ anbn = 0.    There exists a positive number M such that an ≤ M for every positive integer n. Let > 0. There exists a positive integer N such that if n N, then |b_n|<\\e\/M If n N, then |a_nb_n|<M\\e\/M=\\e.     Monotonicity    I'm a stereo and she's just so monotone.   Nicki Minaj   Monotone Sequence   Suppose \\{a_n\\}^\\infty_{n=1} is any sequence.   We say \\{a_n\\}^\\infty_{n=1} is increasing if for all n ∈ N, an ≤ an+1. If this inequality is strict, we say \\{a_n\\}^\\infty_{n=1} is strictly increasing.    We say \\{a_n\\}^\\infty_{n=1} is decreasing if for all n ∈ N, an ≥ an+1. If this inequality is strict, we say \\{a_n\\}^\\infty_{n=1} is strictly decreasing.    We say \\{a_n\\}^\\infty_{n=1} is monotone if it is either decreasing or increasing. If this inequality is strict, we say \\{a_n\\}^\\infty_{n=1} is strictly monotone.        Be sure to interpret “monotone” correctly. It means (∀n ∈ N, an ≤ an+1) or (∀n ∈ N, an ≥ an+1); it does not mean ∀n ∈ N, (an ≤ an+1) or (an ≥ an+1). Do you see the difference?   Increasing and Bounded Sequence Converges   Every increasing, bounded above sequence converges.    Let S be the set of those real numbers that occur in this sequence. (This is technically different that the sequence itself, since sequences are allowed to have repetitions but sets are not. Also, sequences have an ordering to them, but sets do not.) The set S is clearly nonempty, and it is bounded above since we assume the sequence is bounded above. Therefore, by the Completeness Axiom, S has a supremum L. We will prove the sequence converges to L.  Pick ε > 0. Then L − ε < L and, since L is the supremum, L − ε is not an upper bound of S. This means that there is an element of S that is strictly bigger than L−ε. Every element of S is a member of the sequence, and so we get that there is an N ∈ N such that aN > L − ε.  (We will next show that this is the N that “works”. Note that, in the general definition of convergence of a sequence, N can be any real number, but in this proof it turns out to be a natural number.)  Let n be any natural number such that n > N. Since the sequence is increasing, aN ≤ an and hence L − ε < aN ≤ an. Also, an ≤ L since L is an upper bound for the sequence, and thus we have L − ε < an ≤ L. It follows that |an − L| < ε. We have proven the sequence converges to L.    Monotone Convergence   Every bounded monotone sequence converges.    If \\{a_n\\}^\\infty_{n=1} is increasing, then this is the content of Theorem 11.3. If \\{a_n\\}^\\infty_{n=1} is decreasing and bounded, consider the sequence {−an}∞ n=1. If an ≤ M for all n, then −an ≥ −M for all n, so {−an}∞ n=1 is bounded below. Also, since an ≥ an+1 for all n, we have −an ≤ −an+1 for all n, so {−an}∞ n=1 is increasing. Thus, by Theorem 11.3, {−an}∞ n=1 converges, say to L. Then by Theorem 10.2(1), \\{a_n\\}^\\infty_{n=1} = {−(−an)}∞ n=1 converges to −L.      Define by for (so . We'll find .     is increasing (strictly, but this not important. First note . Further if and , then   If and then and so bounded above by induction. Now we have that converges to something. Let . Since , we have . Now and so and .    Convergence to Real Numbers   For any real number r, there exists a strictly increasing sequence of rational numbers that converges to r.    We will construct a sequence of rational numbers {qn}∞ n=1 such that r− 1 n < qn < r for every n that is strictly increasing, and then show that this sequence converges to r. By Density of Rational Numbers, there exists a rational number q1 such that r − 1 < q < r. Given q1, . . . , qn, we define qn+1 recursively to be a rational number such that max{r − 1 n+1 , qn} < qn+1 < r again using Density of Rational Numbers. To see that this rule makes sense, we observe that if we have constructed q1, . . . , qn by this rule, then qn < r, so max{r − 1 n+1 , qn} < r, and hence Density of Rational number applies, so we can construct qn+1 (and hence we can construct qn for any n by this rule). Since qn ≤ max{r − 1 n + 1, qn} < qn+1 for every n, the sequence we obtain is strictly increasing. Since r − 1 n < qn < r for every n and {r − 1 n }∞ n=1 converges to r, by the Squeeze Theorem, the sequence {qn}∞ n=1 converges to r.     "
+  "body": "Sequence Basics  Sequences and Limits    A sequence works in a way a collection never can.   George Murray   Sequence   A sequence in a set is a function .     We'll usually write not , and in place of .    Sometimes we'll want a different index set for also refer to a function as a sequence and we'll write as    Limit of a Sequence   A sequence  converges to  (written or ) if for all there exists such that for all with , . (if your sequence starts somewhere else, could have )    No matter how small a number you pick, so long as it is positive, if you go far enough out in the sequence, all of the terms from that point on will be within a distance of of the limiting value .  Convergent, Divergent Sequences   We say  converges if there exists some such that and we say  diverges otherwise.    Uniqueness of Sequence Limits   The limit of a sequence is unique.    Suppose and . We'll show for all . This will show . To this end, fix . Since , exists int such that for all have . Since , exists int such that for all have . Now let . Then since and since have      Compute .   Fix , want to know for all large enough , . Start computing difference, see how big needs to be . We want . Hold if so as long as have what we want.  Let . Let be real int with (exists by Archimedian property of real numbers). Now if follow equalities and inequalities to     Bounded Sequences    I am not bound to win, but I am bound to be true.   Abraham Lincoln   Bounded Sequence   A sequence is bounded if exists such that .      If then     By the triangle inequality, so . Also so .      If , then             If exists such that for all , and sequence converges to                            The Squeeze Theorem   Suppose \\{a_n\\}^\\infty_{n=1}, {bn}∞ n=1, and {cn}∞ n=1 are three sequences such that \\{a_n\\}^\\infty_{n=1} and {cn}∞ n=1 both converge to L, and an ≤ bn ≤ cn for all n. Then {bn}∞ n=1 also converges to L.    Assume \\{a_n\\}^\\infty_{n=1} and {cn}∞ n=1 both converge to L and that an ≤bn ≤ cn for all n ∈ N. We need to prove {bn}∞ n=1 converges to L. Pick ε > 0. Since \\{a_n\\}^\\infty_{n=1} converges to L there is a number N1 such that if n ∈ N and n > N1 then |an−L| < ε and hence L−ε < an < L+ε. Likewise, since {cn}∞ n=1 converges to L there is a number N2 such that if n ∈ N and n > N2 then L − ε < cn < L + ε. Let N = max{N1, N2}. If n ∈ N and n > N, then n > N1 and hence L − ε < an, and n > N2 and hence cn < L + ε, and also an ≤ bn ≤ cn. Combining these facts gives that for n ∈ N such that n > N, we have L − ε < bn < L + ε and hence |bn − L| < ε. This proves {bn}∞ n=1 converges to L.      Let {an} and {bn} be sequences such that {an} is bounded and limn→∞ bn = 0. Then limn→∞ anbn = 0.    There exists a positive number M such that an ≤ M for every positive integer n. Let > 0. There exists a positive integer N such that if n N, then |b_n|<\\e\/M If n N, then |a_nb_n|<M\\e\/M=\\e.     Monotonicity    I'm a stereo and she's just so monotone.   Nicki Minaj   Monotone Sequence   Suppose \\{a_n\\}^\\infty_{n=1} is any sequence.   We say \\{a_n\\}^\\infty_{n=1} is increasing if for all n ∈ N, an ≤ an+1. If this inequality is strict, we say \\{a_n\\}^\\infty_{n=1} is strictly increasing.    We say \\{a_n\\}^\\infty_{n=1} is decreasing if for all n ∈ N, an ≥ an+1. If this inequality is strict, we say \\{a_n\\}^\\infty_{n=1} is strictly decreasing.    We say \\{a_n\\}^\\infty_{n=1} is monotone if it is either decreasing or increasing. If this inequality is strict, we say \\{a_n\\}^\\infty_{n=1} is strictly monotone.        Be sure to interpret “monotone” correctly. It means (∀n ∈ N, an ≤ an+1) or (∀n ∈ N, an ≥ an+1); it does not mean ∀n ∈ N, (an ≤ an+1) or (an ≥ an+1). Do you see the difference?   Monotone Convergence   Every bounded monotone sequence converges.    It's enough to show every bounded increasing sequence converges. Indeed, if is bounded, decreasing, then is bounded and increasing. Also, if then so does .  Now suppose is increasing and bounded. Since is bounded, it has a supremum. Set . Show is limit. (Remark: we'll often write ) We'll show . Fix . Since , there is an integer such that . Now for all , so so .      Define by for (so . We'll find .     is increasing (strictly, but this not important. First note . Further if and , then   If and then and so bounded above by induction. Now we have that converges to something. Let . Since , we have . Now and so and .    Convergence to Real Numbers   For any real number r, there exists a strictly increasing sequence of rational numbers that converges to r.    We will construct a sequence of rational numbers {qn}∞ n=1 such that r− 1 n < qn < r for every n that is strictly increasing, and then show that this sequence converges to r. By Density of Rational Numbers, there exists a rational number q1 such that r − 1 < q < r. Given q1,..., qn, we define qn+1 recursively to be a rational number such that max{r − 1 n+1, qn} < qn+1 < r again using Density of Rational Numbers. To see that this rule makes sense, we observe that if we have constructed q1,..., qn by this rule, then qn < r, so max{r − 1 n+1, qn} < r, and hence Density of Rational number applies, so we can construct qn+1 (and hence we can construct qn for any n by this rule). Since qn ≤ max{r − 1 n + 1, qn} < qn+1 for every n, the sequence we obtain is strictly increasing. Since r − 1 n < qn < r for every n and {r − 1 n }∞ n=1 converges to r, by the Squeeze Theorem, the sequence {qn}∞ n=1 converges to r.     "
 },
 {
   "id": "def-sequence",
@@ -394,7 +394,7 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "2.1",
   "title": "Sequence.",
-  "body": "Sequence   Let be a set. A sequence of elements of is a function from the set of positive integers into .  In particular, a real sequence (or sequence of real numbers) is a function from into . The usual notation for a real sequence is {an} , where a denotes the function from into and is the value of the function at the positive integer . The notations a1, a2, . . . and {an} are also used to denote a real sequence. The number an is called the nth term of the sequence.   "
+  "body": "Sequence   A sequence in a set is a function .   "
 },
 {
   "id": "convention-3",
@@ -403,16 +403,16 @@ var ptx_lunr_docs = [
   "type": "Convention",
   "number": "2.2",
   "title": "",
-  "body": " A sequence may be defined by giving an explicit formula for the term. For example, the formula defines the sequence whose value at the positive integer is .  "
+  "body": " We'll usually write not , and in place of .  "
 },
 {
-  "id": "remark-3",
+  "id": "convention-4",
   "level": "2",
-  "url": "sec-sequences.html#remark-3",
-  "type": "Remark",
+  "url": "sec-sequences.html#convention-4",
+  "type": "Convention",
   "number": "2.3",
   "title": "",
-  "body": " Sometimes we'll want a different index set for also refer to a function as a sequence and we'll write as .  "
+  "body": " Sometimes we'll want a different index set for also refer to a function as a sequence and we'll write as   "
 },
 {
   "id": "def-sequence-limit",
@@ -442,20 +442,11 @@ var ptx_lunr_docs = [
   "body": "Uniqueness of Sequence Limits   The limit of a sequence is unique.    Suppose and . We'll show for all . This will show . To this end, fix . Since , exists int such that for all have . Since , exists int such that for all have . Now let . Then since and since have    "
 },
 {
-  "id": "convention-4",
-  "level": "2",
-  "url": "sec-sequences.html#convention-4",
-  "type": "Convention",
-  "number": "2.7",
-  "title": "",
-  "body": " From now on, given a sequence \\{a_n\\}^\\infty_{n=1} and a real number , will we use the short-hand notation lim n→∞ an = L to mean that the given sequence converges to the given number.  "
-},
-{
   "id": "exercise-1",
   "level": "2",
   "url": "sec-sequences.html#exercise-1",
   "type": "Exploration",
-  "number": "2.8",
+  "number": "2.7",
   "title": "",
   "body": " Compute .   Fix , want to know for all large enough , . Start computing difference, see how big needs to be . We want . Hold if so as long as have what we want.  Let . Let be real int with (exists by Archimedian property of real numbers). Now if follow equalities and inequalities to   "
 },
@@ -464,25 +455,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sequences.html#def-bounded-sequence",
   "type": "Definition",
-  "number": "2.9",
+  "number": "2.8",
   "title": "Bounded Sequence.",
   "body": "Bounded Sequence   A sequence is bounded if exists such that .   "
-},
-{
-  "id": "thm-convergent-bounded",
-  "level": "2",
-  "url": "sec-sequences.html#thm-convergent-bounded",
-  "type": "Theorem",
-  "number": "2.10",
-  "title": "Convergent Sequences are Bounded.",
-  "body": "Convergent Sequences are Bounded   If a sequence {an}∞n=1 converges then it is bounded.    Suppose the sequence {an}∞n=1 converges to the number L. Applying the definition of “converges to L” using the particular value ε = 1 gives the following fact: There is a real number N such that if n ∈ N and n > N , then |an −L| < 1. The latter inequality is equivalent to L − 1 < an < L + 1 for all n > N.  Let m be any natural number such that m > N , and consider the finite list of numbers a1, a2, . . . , am−1, L + 1. Let b be the largest element of this list. I claim the sequence is bounded above by b. For any n ∈ N, if 1 ≤ n ≤ m − 1, then an ≤ b since in this case an is a member of the above list and b is the largest element of this list. If n ≥ m then since m > N , we have n > N and hence an < L + 1 from above. We also have L + 1 ≤ b (since L + 1 is in the list) and thus an < b. This proves an ≤ b for all n as claimed.  Now take p to be the smallest number in the list a1, a2, . . . , am−1, L − 1. A similar argument shows that an ≥ p for all n ∈ N.   "
 },
 {
   "id": "lem-reverse-triangle-inequality",
   "level": "2",
   "url": "sec-sequences.html#lem-reverse-triangle-inequality",
   "type": "Lemma",
-  "number": "2.11",
+  "number": "2.9",
   "title": "",
   "body": "  If then     By the triangle inequality, so . Also so .   "
 },
@@ -491,7 +473,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sequences.html#thm-limit-algebra",
   "type": "Theorem",
-  "number": "2.12",
+  "number": "2.10",
   "title": "",
   "body": "  If , then             If exists such that for all , and sequence converges to                           "
 },
@@ -500,16 +482,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sequences.html#thm-squeeze-theorem",
   "type": "Theorem",
-  "number": "2.13",
+  "number": "2.11",
   "title": "The Squeeze Theorem.",
-  "body": "The Squeeze Theorem   Suppose \\{a_n\\}^\\infty_{n=1}, {bn}∞ n=1, and {cn}∞ n=1 are three sequences such that \\{a_n\\}^\\infty_{n=1} and {cn}∞ n=1 both converge to L, and an ≤ bn ≤ cn for all n. Then {bn}∞ n=1 also converges to L.    Assume \\{a_n\\}^\\infty_{n=1} and {cn}∞ n=1 both converge to L and that an ≤bn ≤ cn for all n ∈ N. We need to prove {bn}∞ n=1 converges to L. Pick ε > 0. Since \\{a_n\\}^\\infty_{n=1} converges to L there is a number N1 such that if n ∈ N and n > N1 then |an−L| < ε and hence L−ε < an < L+ε. Likewise, since {cn}∞ n=1 converges to L there is a number N2 such that if n ∈ N and n > N2 then L − ε < cn < L + ε. Let N = max{N1, N2}. If n ∈ N and n > N , then n > N1 and hence L − ε < an, and n > N2 and hence cn < L + ε, and also an ≤ bn ≤ cn. Combining these facts gives that for n ∈ N such that n > N , we have L − ε < bn < L + ε and hence |bn − L| < ε. This proves {bn}∞ n=1 converges to L.   "
+  "body": "The Squeeze Theorem   Suppose \\{a_n\\}^\\infty_{n=1}, {bn}∞ n=1, and {cn}∞ n=1 are three sequences such that \\{a_n\\}^\\infty_{n=1} and {cn}∞ n=1 both converge to L, and an ≤ bn ≤ cn for all n. Then {bn}∞ n=1 also converges to L.    Assume \\{a_n\\}^\\infty_{n=1} and {cn}∞ n=1 both converge to L and that an ≤bn ≤ cn for all n ∈ N. We need to prove {bn}∞ n=1 converges to L. Pick ε > 0. Since \\{a_n\\}^\\infty_{n=1} converges to L there is a number N1 such that if n ∈ N and n > N1 then |an−L| < ε and hence L−ε < an < L+ε. Likewise, since {cn}∞ n=1 converges to L there is a number N2 such that if n ∈ N and n > N2 then L − ε < cn < L + ε. Let N = max{N1, N2}. If n ∈ N and n > N, then n > N1 and hence L − ε < an, and n > N2 and hence cn < L + ε, and also an ≤ bn ≤ cn. Combining these facts gives that for n ∈ N such that n > N, we have L − ε < bn < L + ε and hence |bn − L| < ε. This proves {bn}∞ n=1 converges to L.   "
 },
 {
-  "id": "theorem-15",
+  "id": "theorem-14",
   "level": "2",
-  "url": "sec-sequences.html#theorem-15",
+  "url": "sec-sequences.html#theorem-14",
   "type": "Theorem",
-  "number": "2.14",
+  "number": "2.12",
   "title": "",
   "body": "  Let {an} and {bn} be sequences such that {an} is bounded and limn→∞ bn = 0. Then limn→∞ anbn = 0.    There exists a positive number M such that an ≤ M for every positive integer n. Let > 0. There exists a positive integer N such that if n N, then |b_n|<\\e\/M If n N, then |a_nb_n|<M\\e\/M=\\e.   "
 },
@@ -518,7 +500,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sequences.html#def-monotone-sequence",
   "type": "Definition",
-  "number": "2.15",
+  "number": "2.13",
   "title": "Monotone Sequence.",
   "body": "Monotone Sequence   Suppose \\{a_n\\}^\\infty_{n=1} is any sequence.   We say \\{a_n\\}^\\infty_{n=1} is increasing if for all n ∈ N, an ≤ an+1. If this inequality is strict, we say \\{a_n\\}^\\infty_{n=1} is strictly increasing.    We say \\{a_n\\}^\\infty_{n=1} is decreasing if for all n ∈ N, an ≥ an+1. If this inequality is strict, we say \\{a_n\\}^\\infty_{n=1} is strictly decreasing.    We say \\{a_n\\}^\\infty_{n=1} is monotone if it is either decreasing or increasing. If this inequality is strict, we say \\{a_n\\}^\\infty_{n=1} is strictly monotone.      "
 },
@@ -527,34 +509,25 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sequences.html#warning-1",
   "type": "Warning",
-  "number": "2.16",
+  "number": "2.14",
   "title": "",
   "body": " Be sure to interpret “monotone” correctly. It means (∀n ∈ N, an ≤ an+1) or (∀n ∈ N, an ≥ an+1); it does not mean ∀n ∈ N, (an ≤ an+1) or (an ≥ an+1). Do you see the difference?  "
-},
-{
-  "id": "thm-increasing-bounded-sequence-converging",
-  "level": "2",
-  "url": "sec-sequences.html#thm-increasing-bounded-sequence-converging",
-  "type": "Theorem",
-  "number": "2.17",
-  "title": "Increasing and Bounded Sequence Converges.",
-  "body": "Increasing and Bounded Sequence Converges   Every increasing, bounded above sequence converges.    Let S be the set of those real numbers that occur in this sequence. (This is technically different that the sequence itself, since sequences are allowed to have repetitions but sets are not. Also, sequences have an ordering to them, but sets do not.) The set S is clearly nonempty, and it is bounded above since we assume the sequence is bounded above. Therefore, by the Completeness Axiom, S has a supremum L. We will prove the sequence converges to L.  Pick ε > 0. Then L − ε < L and, since L is the supremum, L − ε is not an upper bound of S. This means that there is an element of S that is strictly bigger than L−ε. Every element of S is a member of the sequence, and so we get that there is an N ∈ N such that aN > L − ε.  (We will next show that this is the N that “works”. Note that, in the general definition of convergence of a sequence, N can be any real number, but in this proof it turns out to be a natural number.)  Let n be any natural number such that n > N. Since the sequence is increasing, aN ≤ an and hence L − ε < aN ≤ an. Also, an ≤ L since L is an upper bound for the sequence, and thus we have L − ε < an ≤ L. It follows that |an − L| < ε. We have proven the sequence converges to L.   "
 },
 {
   "id": "thm-monotone-convergence",
   "level": "2",
   "url": "sec-sequences.html#thm-monotone-convergence",
   "type": "Theorem",
-  "number": "2.18",
+  "number": "2.15",
   "title": "Monotone Convergence.",
-  "body": "Monotone Convergence   Every bounded monotone sequence converges.    If \\{a_n\\}^\\infty_{n=1} is increasing, then this is the content of Theorem 11.3. If \\{a_n\\}^\\infty_{n=1} is decreasing and bounded, consider the sequence {−an}∞ n=1. If an ≤ M for all n, then −an ≥ −M for all n, so {−an}∞ n=1 is bounded below. Also, since an ≥ an+1 for all n, we have −an ≤ −an+1 for all n, so {−an}∞ n=1 is increasing. Thus, by Theorem 11.3, {−an}∞ n=1 converges, say to L. Then by Theorem 10.2(1), \\{a_n\\}^\\infty_{n=1} = {−(−an)}∞ n=1 converges to −L.   "
+  "body": "Monotone Convergence   Every bounded monotone sequence converges.    It's enough to show every bounded increasing sequence converges. Indeed, if is bounded, decreasing, then is bounded and increasing. Also, if then so does .  Now suppose is increasing and bounded. Since is bounded, it has a supremum. Set . Show is limit. (Remark: we'll often write ) We'll show . Fix . Since , there is an integer such that . Now for all , so so .   "
 },
 {
   "id": "example-4",
   "level": "2",
   "url": "sec-sequences.html#example-4",
   "type": "Example",
-  "number": "2.19",
+  "number": "2.16",
   "title": "",
   "body": "  Define by for (so . We'll find .     is increasing (strictly, but this not important. First note . Further if and , then   If and then and so bounded above by induction. Now we have that converges to something. Let . Since , we have . Now and so and .   "
 },
@@ -563,9 +536,9 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sequences.html#prop-real-limits-rational",
   "type": "Proposition",
-  "number": "2.20",
+  "number": "2.17",
   "title": "Convergence to Real Numbers.",
-  "body": "Convergence to Real Numbers   For any real number r, there exists a strictly increasing sequence of rational numbers that converges to r.    We will construct a sequence of rational numbers {qn}∞ n=1 such that r− 1 n < qn < r for every n that is strictly increasing, and then show that this sequence converges to r. By Density of Rational Numbers, there exists a rational number q1 such that r − 1 < q < r. Given q1, . . . , qn, we define qn+1 recursively to be a rational number such that max{r − 1 n+1 , qn} < qn+1 < r again using Density of Rational Numbers. To see that this rule makes sense, we observe that if we have constructed q1, . . . , qn by this rule, then qn < r, so max{r − 1 n+1 , qn} < r, and hence Density of Rational number applies, so we can construct qn+1 (and hence we can construct qn for any n by this rule). Since qn ≤ max{r − 1 n + 1, qn} < qn+1 for every n, the sequence we obtain is strictly increasing. Since r − 1 n < qn < r for every n and {r − 1 n }∞ n=1 converges to r, by the Squeeze Theorem, the sequence {qn}∞ n=1 converges to r.   "
+  "body": "Convergence to Real Numbers   For any real number r, there exists a strictly increasing sequence of rational numbers that converges to r.    We will construct a sequence of rational numbers {qn}∞ n=1 such that r− 1 n < qn < r for every n that is strictly increasing, and then show that this sequence converges to r. By Density of Rational Numbers, there exists a rational number q1 such that r − 1 < q < r. Given q1,..., qn, we define qn+1 recursively to be a rational number such that max{r − 1 n+1, qn} < qn+1 < r again using Density of Rational Numbers. To see that this rule makes sense, we observe that if we have constructed q1,..., qn by this rule, then qn < r, so max{r − 1 n+1, qn} < r, and hence Density of Rational number applies, so we can construct qn+1 (and hence we can construct qn for any n by this rule). Since qn ≤ max{r − 1 n + 1, qn} < qn+1 for every n, the sequence we obtain is strictly increasing. Since r − 1 n < qn < r for every n and {r − 1 n }∞ n=1 converges to r, by the Squeeze Theorem, the sequence {qn}∞ n=1 converges to r.   "
 },
 {
   "id": "sec-subsequences",
@@ -574,68 +547,86 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.2",
   "title": "Subsequences",
-  "body": "Subsequences    Elegance comes from being as beautiful inside as outside.   Coco Chanel   Subsequence   A subsequence of a given sequence \\{a_n\\}^\\infty_{n=1} is any sequence of the form {ank }∞ k=1 where n1, n2, n3, . . . is any strictly increasing sequence of natural numbers — that is nk ∈ N and nk+1 > nk for all k ∈ N, so that n1 < n2 < n3 < · · · .     Note that k is the index of the subsequence; i.e., the first term in the subsequence is when k = 1, the second is when k = 2 and so on. The integer sequence {nk}∞ k=1 is the sequence of indices of the original sequence we choose to make the subsequence.     Let b1, b2, . . . be any strictly increasing sequence of natural numbers; that is, assume bk ∈ N for all k ∈ N and that bk < bk+1 for all k ∈ N. Then bk ≥ k for all k.    Suppose b1, b2, . . . is a strictly increasing sequence of natural numbers. We prove bn ≥ n for all n by induction on n. That is, for each n ∈ N, let Pn be the statement that bn ≥ n.  P1 is true since b1 ∈ N and so b1 ≥ 1. Given k ∈ N, assume Pk is true; that is, assume bk ≥ k. Since bk+1 > bk and both are natural numbers, we have bk+1 ≥ bk + 1 ≥ k + 1; that is, Pk+1 is true too. By induction, Pn is true for all n ∈ N.    Subsequence Limits   If a sequence \\{a_n\\}^\\infty_{n=1} converges to L, then every subsequence of this sequence also converges to L.    Let the sequence \\{a_n\\}^\\infty_{n=1} converge to L, and take a subsequence {ank }∞ k=1 for some strictly increasing sequence n1 < n2 < n3 < · · · of natural numbers.  Let ε > 0. Since \\{a_n\\}^\\infty_{n=1} converges to L, there is some N ∈ R such that for all natural numbers n > N we have |an − L| < ε. We claim that the same N works to verify the definition of {ank }∞ k=1 converges to L for this ε. Indeed, if k > N , then nk > N , so |ank − L| < ε. Thus, {ank }∞ k=1 converges to L.      Let \\{a_n\\}^\\infty_{n=1} be a sequence.   If the set of values of the sequence {an | n ∈ N} does not have a maximum value, then \\{a_n\\}^\\infty_{n=1} has a subsequence that is increasing.    If the set of values of the sequence {an | n ∈ N} does not have a minimum value, then \\{a_n\\}^\\infty_{n=1} has a subsequence that is decreasing.          Assume that the set of values {an | n ∈ N} does not have a maximum value.  We define a subsequence recursively. We will recursively choose natural numbers n1, n2, n3, . . . so that nk < nk+1 for all k and ank ≤ ank+1 .  We start by setting n1 = 1.  If we have chosen nk, then let b = max{a1, . . . , ank }.  We claim that there is some m > nk such that am > b. To obtain a contradiction, suppose otherwise. Then for any n ∈ N, either n > nk and an ≤ b by assumption, or n ≤ nk and an ≤ b, since an is on the list of things of which b was the maximum. Then b is the maximum of {an | n ∈ N}, which yields a contradiction. Thus, there is some m > nk such that am > b, and we can choose m = nk+1. Thus, we can define such a sequence recursively.    Similar to (1), or apply (1) to {−an}∞n=1.       Balzano-Weierstrass   Every sequence has a monotone subsequence.    Let \\{a_n\\}^\\infty_{n=1} be any sequence. Recall that our goal is to prove it either has an increasing subsequence or it has a decreasing subsequence. This is equivalent to showing that if it has no increasing subsequences, then it does have at least one decreasing subsequence. So, let us assume it has no increasing subsequences.  We will prove it has at least one decreasing subsequence by constructing the indices n1 < n2 < · · · of such a subsequence recursively. By the contrapositive of part (1) Lemma 16.4 , since \\{a_n\\}^\\infty_{n=1} does not contain any increasing subsequences, we know that {an | n ∈ N} has a maximum value. That is, there exists a natural number n1 such that an1 ≥ am for all m ≥ 1.  For any k, given nk, the subsequence ank +1, ank +2, ank +3, . . . also has no increasing subsequence, since a subsequence of such a sequence is a subsequence of the original sequence too. Thus, it must have a maximum value again by part (1) Lemma 16.4; choose nk+1 such that ank+1 = max{ank +1, ank +2, ank +3, . . . }. By construction, we have nk+1 > nk. Thus, this gives a recursive definition for nk.  For any k, note that ank is the maximum of a set that contains ank+1 (since it is later in the sequence). It follows that ank ≥ ank+1. That is, we have constructed a decreasing subsequence of the original sequence.      Every bounded sequence has a convergent subsequence.    Suppose \\{a_n\\}^\\infty_{n=1} is a bounded sequence. By the Bolzano-Weierstrass Theorem 16.3 it admits a monotone subsequence {ank }∞ k=1, and it too is bounded (since any subsequence of a bounded sequence is also bounded.) The result follows since every monotone bounded sequence converges by the Monotone Convergence Theorem 11.4.    "
+  "body": "Subsequences    Elegance comes from being as beautiful inside as outside.   Coco Chanel   Subsequence   Let be a sequence (in any set ). A subsequence of is a sequence where is a strictly increasing function       and are subsequences of .     We'll usually write for a subsequence of . (Here is a strictly increasing set of positive integers)    A subsequence of a subsequence of is a subseqeuence of .     Let b1, b2,... be any strictly increasing sequence of natural numbers; that is, assume bk ∈ N for all k ∈ N and that bk < bk+1 for all k ∈ N. Then bk ≥ k for all k.    Suppose b1, b2,... is a strictly increasing sequence of natural numbers. We prove bn ≥ n for all n by induction on n. That is, for each n ∈ N, let Pn be the statement that bn ≥ n.  P1 is true since b1 ∈ N and so b1 ≥ 1. Given k ∈ N, assume Pk is true; that is, assume bk ≥ k. Since bk+1 > bk and both are natural numbers, we have bk+1 ≥ bk + 1 ≥ k + 1; that is, Pk+1 is true too. By induction, Pn is true for all n ∈ N.    Subsequence Limits   If a sequence \\{a_n\\}^\\infty_{n=1} converges to L, then every subsequence of this sequence also converges to L.    Let the sequence \\{a_n\\}^\\infty_{n=1} converge to L, and take a subsequence {ank }∞ k=1 for some strictly increasing sequence n1 < n2 < n3 < · · · of natural numbers.  Let ε > 0. Since \\{a_n\\}^\\infty_{n=1} converges to L, there is some N ∈ R such that for all natural numbers n > N we have |an − L| < ε. We claim that the same N works to verify the definition of {ank }∞ k=1 converges to L for this ε. Indeed, if k > N, then nk > N, so |ank − L| < ε. Thus, {ank }∞ k=1 converges to L.      Let \\{a_n\\}^\\infty_{n=1} be a sequence.   If the set of values of the sequence {an | n ∈ N} does not have a maximum value, then \\{a_n\\}^\\infty_{n=1} has a subsequence that is increasing.    If the set of values of the sequence {an | n ∈ N} does not have a minimum value, then \\{a_n\\}^\\infty_{n=1} has a subsequence that is decreasing.          Assume that the set of values {an | n ∈ N} does not have a maximum value.  We define a subsequence recursively. We will recursively choose natural numbers n1, n2, n3,... so that nk < nk+1 for all k and ank ≤ ank+1.  We start by setting n1 = 1.  If we have chosen nk, then let b = max{a1,..., ank }.  We claim that there is some m > nk such that am > b. To obtain a contradiction, suppose otherwise. Then for any n ∈ N, either n > nk and an ≤ b by assumption, or n ≤ nk and an ≤ b, since an is on the list of things of which b was the maximum. Then b is the maximum of {an | n ∈ N}, which yields a contradiction. Thus, there is some m > nk such that am > b, and we can choose m = nk+1. Thus, we can define such a sequence recursively.    Similar to (1), or apply (1) to {−an}∞n=1.       Balzano-Weierstrass   Every sequence has a monotone subsequence.    Let \\{a_n\\}^\\infty_{n=1} be any sequence. Recall that our goal is to prove it either has an increasing subsequence or it has a decreasing subsequence. This is equivalent to showing that if it has no increasing subsequences, then it does have at least one decreasing subsequence. So, let us assume it has no increasing subsequences.  We will prove it has at least one decreasing subsequence by constructing the indices n1 < n2 < · · · of such a subsequence recursively. By the contrapositive of part (1) Lemma 16.4, since \\{a_n\\}^\\infty_{n=1} does not contain any increasing subsequences, we know that {an | n ∈ N} has a maximum value. That is, there exists a natural number n1 such that an1 ≥ am for all m ≥ 1.  For any k, given nk, the subsequence ank +1, ank +2, ank +3,... also has no increasing subsequence, since a subsequence of such a sequence is a subsequence of the original sequence too. Thus, it must have a maximum value again by part (1) Lemma 16.4; choose nk+1 such that ank+1 = max{ank +1, ank +2, ank +3,... }. By construction, we have nk+1 > nk. Thus, this gives a recursive definition for nk.  For any k, note that ank is the maximum of a set that contains ank+1 (since it is later in the sequence). It follows that ank ≥ ank+1. That is, we have constructed a decreasing subsequence of the original sequence.      Every bounded sequence has a convergent subsequence.    Suppose \\{a_n\\}^\\infty_{n=1} is a bounded sequence. By the Bolzano-Weierstrass Theorem 16.3 it admits a monotone subsequence {ank }∞ k=1, and it too is bounded (since any subsequence of a bounded sequence is also bounded.) The result follows since every monotone bounded sequence converges by the Monotone Convergence Theorem 11.4.    "
 },
 {
   "id": "def-subsequence",
   "level": "2",
   "url": "sec-subsequences.html#def-subsequence",
   "type": "Definition",
-  "number": "2.21",
+  "number": "2.18",
   "title": "Subsequence.",
-  "body": "Subsequence   A subsequence of a given sequence \\{a_n\\}^\\infty_{n=1} is any sequence of the form {ank }∞ k=1 where n1, n2, n3, . . . is any strictly increasing sequence of natural numbers — that is nk ∈ N and nk+1 > nk for all k ∈ N, so that n1 < n2 < n3 < · · · .   "
+  "body": "Subsequence   Let be a sequence (in any set ). A subsequence of is a sequence where is a strictly increasing function   "
 },
 {
-  "id": "remark-4",
+  "id": "example-5",
   "level": "2",
-  "url": "sec-subsequences.html#remark-4",
-  "type": "Remark",
-  "number": "2.22",
+  "url": "sec-subsequences.html#example-5",
+  "type": "Example",
+  "number": "2.19",
   "title": "",
-  "body": " Note that k is the index of the subsequence; i.e., the first term in the subsequence is when k = 1, the second is when k = 2 and so on. The integer sequence {nk}∞ k=1 is the sequence of indices of the original sequence we choose to make the subsequence.  "
+  "body": "   and are subsequences of .   "
+},
+{
+  "id": "convention-5",
+  "level": "2",
+  "url": "sec-subsequences.html#convention-5",
+  "type": "Convention",
+  "number": "2.20",
+  "title": "",
+  "body": " We'll usually write for a subsequence of . (Here is a strictly increasing set of positive integers)  "
+},
+{
+  "id": "exercise-2",
+  "level": "2",
+  "url": "sec-subsequences.html#exercise-2",
+  "type": "Exploration",
+  "number": "2.21",
+  "title": "",
+  "body": " A subsequence of a subsequence of is a subseqeuence of .  "
 },
 {
   "id": "lem-subsequence-lemma",
   "level": "2",
   "url": "sec-subsequences.html#lem-subsequence-lemma",
   "type": "Lemma",
-  "number": "2.23",
+  "number": "2.22",
   "title": "",
-  "body": "  Let b1, b2, . . . be any strictly increasing sequence of natural numbers; that is, assume bk ∈ N for all k ∈ N and that bk < bk+1 for all k ∈ N. Then bk ≥ k for all k.    Suppose b1, b2, . . . is a strictly increasing sequence of natural numbers. We prove bn ≥ n for all n by induction on n. That is, for each n ∈ N, let Pn be the statement that bn ≥ n.  P1 is true since b1 ∈ N and so b1 ≥ 1. Given k ∈ N, assume Pk is true; that is, assume bk ≥ k. Since bk+1 > bk and both are natural numbers, we have bk+1 ≥ bk + 1 ≥ k + 1; that is, Pk+1 is true too. By induction, Pn is true for all n ∈ N.   "
+  "body": "  Let b1, b2,... be any strictly increasing sequence of natural numbers; that is, assume bk ∈ N for all k ∈ N and that bk < bk+1 for all k ∈ N. Then bk ≥ k for all k.    Suppose b1, b2,... is a strictly increasing sequence of natural numbers. We prove bn ≥ n for all n by induction on n. That is, for each n ∈ N, let Pn be the statement that bn ≥ n.  P1 is true since b1 ∈ N and so b1 ≥ 1. Given k ∈ N, assume Pk is true; that is, assume bk ≥ k. Since bk+1 > bk and both are natural numbers, we have bk+1 ≥ bk + 1 ≥ k + 1; that is, Pk+1 is true too. By induction, Pn is true for all n ∈ N.   "
 },
 {
   "id": "thm-subsequence-limits",
   "level": "2",
   "url": "sec-subsequences.html#thm-subsequence-limits",
   "type": "Theorem",
-  "number": "2.24",
+  "number": "2.23",
   "title": "Subsequence Limits.",
-  "body": "Subsequence Limits   If a sequence \\{a_n\\}^\\infty_{n=1} converges to L, then every subsequence of this sequence also converges to L.    Let the sequence \\{a_n\\}^\\infty_{n=1} converge to L, and take a subsequence {ank }∞ k=1 for some strictly increasing sequence n1 < n2 < n3 < · · · of natural numbers.  Let ε > 0. Since \\{a_n\\}^\\infty_{n=1} converges to L, there is some N ∈ R such that for all natural numbers n > N we have |an − L| < ε. We claim that the same N works to verify the definition of {ank }∞ k=1 converges to L for this ε. Indeed, if k > N , then nk > N , so |ank − L| < ε. Thus, {ank }∞ k=1 converges to L.   "
+  "body": "Subsequence Limits   If a sequence \\{a_n\\}^\\infty_{n=1} converges to L, then every subsequence of this sequence also converges to L.    Let the sequence \\{a_n\\}^\\infty_{n=1} converge to L, and take a subsequence {ank }∞ k=1 for some strictly increasing sequence n1 < n2 < n3 < · · · of natural numbers.  Let ε > 0. Since \\{a_n\\}^\\infty_{n=1} converges to L, there is some N ∈ R such that for all natural numbers n > N we have |an − L| < ε. We claim that the same N works to verify the definition of {ank }∞ k=1 converges to L for this ε. Indeed, if k > N, then nk > N, so |ank − L| < ε. Thus, {ank }∞ k=1 converges to L.   "
 },
 {
   "id": "lem-balzano-lemma",
   "level": "2",
   "url": "sec-subsequences.html#lem-balzano-lemma",
   "type": "Lemma",
-  "number": "2.25",
+  "number": "2.24",
   "title": "",
-  "body": "  Let \\{a_n\\}^\\infty_{n=1} be a sequence.   If the set of values of the sequence {an | n ∈ N} does not have a maximum value, then \\{a_n\\}^\\infty_{n=1} has a subsequence that is increasing.    If the set of values of the sequence {an | n ∈ N} does not have a minimum value, then \\{a_n\\}^\\infty_{n=1} has a subsequence that is decreasing.          Assume that the set of values {an | n ∈ N} does not have a maximum value.  We define a subsequence recursively. We will recursively choose natural numbers n1, n2, n3, . . . so that nk < nk+1 for all k and ank ≤ ank+1 .  We start by setting n1 = 1.  If we have chosen nk, then let b = max{a1, . . . , ank }.  We claim that there is some m > nk such that am > b. To obtain a contradiction, suppose otherwise. Then for any n ∈ N, either n > nk and an ≤ b by assumption, or n ≤ nk and an ≤ b, since an is on the list of things of which b was the maximum. Then b is the maximum of {an | n ∈ N}, which yields a contradiction. Thus, there is some m > nk such that am > b, and we can choose m = nk+1. Thus, we can define such a sequence recursively.    Similar to (1), or apply (1) to {−an}∞n=1.      "
+  "body": "  Let \\{a_n\\}^\\infty_{n=1} be a sequence.   If the set of values of the sequence {an | n ∈ N} does not have a maximum value, then \\{a_n\\}^\\infty_{n=1} has a subsequence that is increasing.    If the set of values of the sequence {an | n ∈ N} does not have a minimum value, then \\{a_n\\}^\\infty_{n=1} has a subsequence that is decreasing.          Assume that the set of values {an | n ∈ N} does not have a maximum value.  We define a subsequence recursively. We will recursively choose natural numbers n1, n2, n3,... so that nk < nk+1 for all k and ank ≤ ank+1.  We start by setting n1 = 1.  If we have chosen nk, then let b = max{a1,..., ank }.  We claim that there is some m > nk such that am > b. To obtain a contradiction, suppose otherwise. Then for any n ∈ N, either n > nk and an ≤ b by assumption, or n ≤ nk and an ≤ b, since an is on the list of things of which b was the maximum. Then b is the maximum of {an | n ∈ N}, which yields a contradiction. Thus, there is some m > nk such that am > b, and we can choose m = nk+1. Thus, we can define such a sequence recursively.    Similar to (1), or apply (1) to {−an}∞n=1.      "
 },
 {
   "id": "thm-balzano-weierstrass",
   "level": "2",
   "url": "sec-subsequences.html#thm-balzano-weierstrass",
   "type": "Theorem",
-  "number": "2.26",
+  "number": "2.25",
   "title": "Balzano-Weierstrass.",
-  "body": "Balzano-Weierstrass   Every sequence has a monotone subsequence.    Let \\{a_n\\}^\\infty_{n=1} be any sequence. Recall that our goal is to prove it either has an increasing subsequence or it has a decreasing subsequence. This is equivalent to showing that if it has no increasing subsequences, then it does have at least one decreasing subsequence. So, let us assume it has no increasing subsequences.  We will prove it has at least one decreasing subsequence by constructing the indices n1 < n2 < · · · of such a subsequence recursively. By the contrapositive of part (1) Lemma 16.4 , since \\{a_n\\}^\\infty_{n=1} does not contain any increasing subsequences, we know that {an | n ∈ N} has a maximum value. That is, there exists a natural number n1 such that an1 ≥ am for all m ≥ 1.  For any k, given nk, the subsequence ank +1, ank +2, ank +3, . . . also has no increasing subsequence, since a subsequence of such a sequence is a subsequence of the original sequence too. Thus, it must have a maximum value again by part (1) Lemma 16.4; choose nk+1 such that ank+1 = max{ank +1, ank +2, ank +3, . . . }. By construction, we have nk+1 > nk. Thus, this gives a recursive definition for nk.  For any k, note that ank is the maximum of a set that contains ank+1 (since it is later in the sequence). It follows that ank ≥ ank+1. That is, we have constructed a decreasing subsequence of the original sequence.   "
+  "body": "Balzano-Weierstrass   Every sequence has a monotone subsequence.    Let \\{a_n\\}^\\infty_{n=1} be any sequence. Recall that our goal is to prove it either has an increasing subsequence or it has a decreasing subsequence. This is equivalent to showing that if it has no increasing subsequences, then it does have at least one decreasing subsequence. So, let us assume it has no increasing subsequences.  We will prove it has at least one decreasing subsequence by constructing the indices n1 < n2 < · · · of such a subsequence recursively. By the contrapositive of part (1) Lemma 16.4, since \\{a_n\\}^\\infty_{n=1} does not contain any increasing subsequences, we know that {an | n ∈ N} has a maximum value. That is, there exists a natural number n1 such that an1 ≥ am for all m ≥ 1.  For any k, given nk, the subsequence ank +1, ank +2, ank +3,... also has no increasing subsequence, since a subsequence of such a sequence is a subsequence of the original sequence too. Thus, it must have a maximum value again by part (1) Lemma 16.4; choose nk+1 such that ank+1 = max{ank +1, ank +2, ank +3,... }. By construction, we have nk+1 > nk. Thus, this gives a recursive definition for nk.  For any k, note that ank is the maximum of a set that contains ank+1 (since it is later in the sequence). It follows that ank ≥ ank+1. That is, we have constructed a decreasing subsequence of the original sequence.   "
 },
 {
   "id": "cor-balzano-corollary",
   "level": "2",
   "url": "sec-subsequences.html#cor-balzano-corollary",
   "type": "Corollary",
-  "number": "2.27",
+  "number": "2.26",
   "title": "",
   "body": "  Every bounded sequence has a convergent subsequence.    Suppose \\{a_n\\}^\\infty_{n=1} is a bounded sequence. By the Bolzano-Weierstrass Theorem 16.3 it admits a monotone subsequence {ank }∞ k=1, and it too is bounded (since any subsequence of a bounded sequence is also bounded.) The result follows since every monotone bounded sequence converges by the Monotone Convergence Theorem 11.4.   "
 },
@@ -646,32 +637,32 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.3",
   "title": "Limit Infimums and Limit Supremums",
-  "body": "Limit Infimums and Limit Supremums    Only the pure in heart can make a good soup.   Ludwig Van Beethoven   Convergence to  A sequence converges to if , such that for all . In this case we'll write . Similarly iff such that for all .    If , we'll still call as a divergent sequence. (might say diverges to infinity)    Every monotone sequence in has a limit in .     Let be given.   The limit superior of is     Similarly the limit inferior of is          and always exist (so long as we allow )     For a sequence and the following are equivalent:         integer such that int , .         For any sequence , and iff exists and in this case .    For each integer , . Now take limit as . Now suppose exists. We'll assume (Exercise: modify the proof for ). We'll show and . Let be st for all . This implies for all . Now, and . Therefore, . Similarly, since (1) and (2) had for all . So . Conversely, suppose . We'll assume again that . Fix . Since and , there is an such that for all , and . But this means for all , so .     Often to show a sequence converges to one shows and .   "
+  "body": "Limit Infimums and Limit Supremums    Only the pure in heart can make a good soup.   Ludwig Van Beethoven   Convergence to  A sequence converges to if , such that for all . In this case we'll write . Similarly iff such that for all .    If , we'll still call as a divergent sequence. (might say diverges to infinity)    Every monotone sequence in has a limit in .     Let be given.   The limit superior of is     Similarly the limit inferior of is          and always exist (so long as we allow )     For a sequence and the following are equivalent:         integer such that int , .         For any sequence , and iff exists and in this case .    For each integer , . Now take limit as . Now suppose exists. We'll assume (Exercise: modify the proof for ). We'll show and . Let be st for all . This implies for all . Now, and . Therefore, . Similarly, since (1) and (2) had for all . So . Conversely, suppose . We'll assume again that . Fix . Since and , there is an such that for all , and . But this means for all , so .     Often to show a sequence converges to one shows and .     If is a sequence and , then     Second inequality is known (what we ended weds with). We'll prove the first – the third is similar. Note that and , and so . This implies that , , and so Taking the limit as , we have and .      If is a sequence, then converges iff every subsequence of converges. Moreover, in this case, for every subsequence      ( ) is trivial. is a subsequence of itself. ( ) and moreover : assume converges and write . Let be a subsequence. We'll show . By the previous result, So and hence .      The same result holds with in place of .    Indeed still trivial. Suppose and is a subsequence. We know converges to , and so the subsequence converges to . Similarly converges to . Now       For every sequence there are subsequences and of so that and (these could be ).    Suppose . Fix a strictly increasing sequence with (eg when , and when ). Claim: There is a subsequence of such that for all . Assume the claim for now (we'll come back to it). Then . So as required. Proof of claim : (constructed inductively) First note that . We have for all . In particular . There is an such that . Assume now we've constructed with for all . Since , we have for all . In particular, taking , . There is an with . This proves the claim.       has ,     Bolzano-Weierstrass Theorem   If , is bounded, then . Now apply the previous result. Now if is bounded, then is also bounded (as for all . So there is a subsequence of such that converges. Note that is bounded, and hence is bounded. So there is a subsequence of so that converges. As of and the latter sequence converges, so does the former. But now , so converges.    "
 },
 {
-  "id": "convention-5",
+  "id": "convention-6",
   "level": "2",
-  "url": "sec-lim-inf-sup.html#convention-5",
+  "url": "sec-lim-inf-sup.html#convention-6",
   "type": "Convention",
-  "number": "2.28",
+  "number": "2.27",
   "title": "Convergence to <span class=\"process-math\">\\(\\pm\\infty\\)<\/span>.",
   "body": "Convergence to  A sequence converges to if , such that for all . In this case we'll write . Similarly iff such that for all .  "
 },
 {
-  "id": "remark-5",
+  "id": "remark-3",
   "level": "2",
-  "url": "sec-lim-inf-sup.html#remark-5",
+  "url": "sec-lim-inf-sup.html#remark-3",
   "type": "Remark",
-  "number": "2.29",
+  "number": "2.28",
   "title": "",
   "body": " If , we'll still call as a divergent sequence. (might say diverges to infinity)  "
 },
 {
-  "id": "exercise-2",
+  "id": "exercise-3",
   "level": "2",
-  "url": "sec-lim-inf-sup.html#exercise-2",
+  "url": "sec-lim-inf-sup.html#exercise-3",
   "type": "Exploration",
-  "number": "2.30",
+  "number": "2.29",
   "title": "",
   "body": " Every monotone sequence in has a limit in .  "
 },
@@ -680,16 +671,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-lim-inf-sup.html#def-lim-sup-inf",
   "type": "Definition",
-  "number": "2.31",
+  "number": "2.30",
   "title": "",
   "body": "  Let be given.   The limit superior of is     Similarly the limit inferior of is       "
 },
 {
-  "id": "exercise-3",
+  "id": "exercise-4",
   "level": "2",
-  "url": "sec-lim-inf-sup.html#exercise-3",
+  "url": "sec-lim-inf-sup.html#exercise-4",
   "type": "Exploration",
-  "number": "2.32",
+  "number": "2.31",
   "title": "",
   "body": "  and always exist (so long as we allow )  "
 },
@@ -698,7 +689,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-lim-inf-sup.html#thm-lim-sup-characterization",
   "type": "Theorem",
-  "number": "2.33",
+  "number": "2.32",
   "title": "",
   "body": "  For a sequence and the following are equivalent:         integer such that int , .      "
 },
@@ -707,18 +698,72 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-lim-inf-sup.html#thm-lim-inf-sup-order",
   "type": "Theorem",
-  "number": "2.34",
+  "number": "2.33",
   "title": "",
   "body": "  For any sequence , and iff exists and in this case .    For each integer , . Now take limit as . Now suppose exists. We'll assume (Exercise: modify the proof for ). We'll show and . Let be st for all . This implies for all . Now, and . Therefore, . Similarly, since (1) and (2) had for all . So . Conversely, suppose . We'll assume again that . Fix . Since and , there is an such that for all , and . But this means for all , so .   "
 },
 {
-  "id": "remark-6",
+  "id": "remark-4",
   "level": "2",
-  "url": "sec-lim-inf-sup.html#remark-6",
+  "url": "sec-lim-inf-sup.html#remark-4",
   "type": "Remark",
-  "number": "2.35",
+  "number": "2.34",
   "title": "",
   "body": " Often to show a sequence converges to one shows and .  "
+},
+{
+  "id": "cor-lim-inf-sup-order",
+  "level": "2",
+  "url": "sec-lim-inf-sup.html#cor-lim-inf-sup-order",
+  "type": "Corollary",
+  "number": "2.35",
+  "title": "",
+  "body": "  If is a sequence and , then     Second inequality is known (what we ended weds with). We'll prove the first – the third is similar. Note that and , and so . This implies that , , and so Taking the limit as , we have and .   "
+},
+{
+  "id": "thm-seq-subseq-conv",
+  "level": "2",
+  "url": "sec-lim-inf-sup.html#thm-seq-subseq-conv",
+  "type": "Theorem",
+  "number": "2.36",
+  "title": "",
+  "body": "  If is a sequence, then converges iff every subsequence of converges. Moreover, in this case, for every subsequence      ( ) is trivial. is a subsequence of itself. ( ) and moreover : assume converges and write . Let be a subsequence. We'll show . By the previous result, So and hence .   "
+},
+{
+  "id": "cor-seq-subseq-conv",
+  "level": "2",
+  "url": "sec-lim-inf-sup.html#cor-seq-subseq-conv",
+  "type": "Corollary",
+  "number": "2.37",
+  "title": "",
+  "body": "  The same result holds with in place of .    Indeed still trivial. Suppose and is a subsequence. We know converges to , and so the subsequence converges to . Similarly converges to . Now    "
+},
+{
+  "id": "lem-bolzano",
+  "level": "2",
+  "url": "sec-lim-inf-sup.html#lem-bolzano",
+  "type": "Lemma",
+  "number": "2.38",
+  "title": "",
+  "body": "  For every sequence there are subsequences and of so that and (these could be ).    Suppose . Fix a strictly increasing sequence with (eg when , and when ). Claim: There is a subsequence of such that for all . Assume the claim for now (we'll come back to it). Then . So as required. Proof of claim : (constructed inductively) First note that . We have for all . In particular . There is an such that . Assume now we've constructed with for all . Since , we have for all . In particular, taking , . There is an with . This proves the claim.   "
+},
+{
+  "id": "example-6",
+  "level": "2",
+  "url": "sec-lim-inf-sup.html#example-6",
+  "type": "Example",
+  "number": "2.39",
+  "title": "",
+  "body": "   has ,    "
+},
+{
+  "id": "thm-balzano",
+  "level": "2",
+  "url": "sec-lim-inf-sup.html#thm-balzano",
+  "type": "Theorem",
+  "number": "2.40",
+  "title": "Bolzano-Weierstrass Theorem.",
+  "body": "Bolzano-Weierstrass Theorem   If , is bounded, then . Now apply the previous result. Now if is bounded, then is also bounded (as for all . So there is a subsequence of such that converges. Note that is bounded, and hence is bounded. So there is a subsequence of so that converges. As of and the latter sequence converges, so does the former. But now , so converges.   "
 },
 {
   "id": "sec-cauchy-complete",
@@ -734,16 +779,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cauchy-complete.html#def-cauchy",
   "type": "Definition",
-  "number": "2.36",
+  "number": "2.41",
   "title": "Cauchy Sequence.",
   "body": "Cauchy Sequence   Let (M, d) be a metric space. A sequence {xn} in M is a Cauchy sequence if for every ε > 0, there exists a positive integer N such that if m,n ≥ N, then d(xm, xn) < ε.  A sequence is Cauchy if for all , .   "
 },
 {
-  "id": "example-5",
+  "id": "example-7",
   "level": "2",
-  "url": "sec-cauchy-complete.html#example-5",
+  "url": "sec-cauchy-complete.html#example-7",
   "type": "Example",
-  "number": "2.37",
+  "number": "2.42",
   "title": "",
   "body": "  is an increasing sequence with . (eg ) Then is Cauchy (by the next result) but it will not converge in (In , .  "
 },
@@ -752,7 +797,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cauchy-complete.html#lem-cauchy-bounded-in-c",
   "type": "Lemma",
-  "number": "2.38",
+  "number": "2.43",
   "title": "",
   "body": "  Every Cauchy sequence in is bounded.    Fix such that for all , . Set then of and if .   "
 },
@@ -761,7 +806,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cauchy-complete.html#thm-cauchy-converges-in-c",
   "type": "Theorem",
-  "number": "2.39",
+  "number": "2.44",
   "title": "",
   "body": "  Every Cauchy sequence in converges.    Every cauchy sequence is bounded by the lemma, so has a convergent subsequence by the Bolzano-Weierstrass theorem, and then converges by assignment 3 number 1.   "
 },
@@ -770,16 +815,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cauchy-complete.html#warning-2",
   "type": "Warning",
-  "number": "2.40",
+  "number": "2.45",
   "title": "",
   "body": " A subsequence which satisfies does not imply is Cauchy.  "
 },
 {
-  "id": "example-6",
+  "id": "example-8",
   "level": "2",
-  "url": "sec-cauchy-complete.html#example-6",
+  "url": "sec-cauchy-complete.html#example-8",
   "type": "Example",
-  "number": "2.41",
+  "number": "2.46",
   "title": "",
   "body": " (short version: diverges) Consider . Then . We will show is unbounded, and hence it is not Cauchy. Note that So .  "
 },
@@ -788,7 +833,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cauchy-complete.html#thm-46.2",
   "type": "Theorem",
-  "number": "2.42",
+  "number": "2.47",
   "title": "",
   "body": "  If {xn} is a convergent sequence in a metric space, then {xn} is a Cauchy sequence.   "
 },
@@ -797,7 +842,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cauchy-complete.html#def-complete",
   "type": "Definition",
-  "number": "2.43",
+  "number": "2.48",
   "title": "Complete Metric Space.",
   "body": "Complete Metric Space   Let M be a metric space. If every Cauchy sequence in M is convergent, we say that M is a complete metric space.   "
 },
@@ -806,16 +851,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cauchy-complete.html#thm-rn-complete",
   "type": "Theorem",
-  "number": "2.44",
+  "number": "2.49",
   "title": "<span class=\"process-math\">\\(\\R^n\\)<\/span> is Complete.",
   "body": "is Complete   The metric space Rn is complete.   "
 },
 {
-  "id": "example-7",
+  "id": "example-9",
   "level": "2",
-  "url": "sec-cauchy-complete.html#example-7",
+  "url": "sec-cauchy-complete.html#example-9",
   "type": "Example",
-  "number": "2.45",
+  "number": "2.50",
   "title": "",
   "body": "  The metric space \\Q (viewed as a subspace of \\R) is not complete.       "
 },
@@ -824,7 +869,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cauchy-complete.html#prop-discrete-complete",
   "type": "Proposition",
-  "number": "2.46",
+  "number": "2.51",
   "title": "",
   "body": "  Any set X with the discrete metric is complete.   "
 },
@@ -901,9 +946,9 @@ var ptx_lunr_docs = [
   "body": "  Suppose and are series and converges absolutely. If for all , then converges absolutely.    Use Cauchy's criterion as above noting that if , then .   "
 },
 {
-  "id": "remark-7",
+  "id": "remark-5",
   "level": "2",
-  "url": "sec-convergence-tests.html#remark-7",
+  "url": "sec-convergence-tests.html#remark-5",
   "type": "Remark",
   "number": "3.7",
   "title": "",
@@ -979,7 +1024,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4.1",
   "title": "Topology and Metric Spaces",
-  "body": "Topology and Metric Spaces    Keep in mind, measurement is not just in numbers, but stories.   Pearl Zhu     Set and ( )     We'll often write in place of and in place of      Let be a set. A metric on is a function such that   Positive Definite      Symmetric      Triangle Inequality        A metric space is a pair where is a set and is a metric on . We'll typically write for a metric space where the metric is understood.    Euclidean Metric   The pair (R, d) is a metric space, where d is defined by d(x, y) = x − y. The metric d is called the usual (or absolute value or Euclidean) metric for R. The space R is understood to have the usual metric unless otherwise specified.    Discrete Metric   For a set , the discrete metric on is .       Subsets of metric spaces are metric spaces: If (X,d) is a metric space and Y\\subseteq X then (Y,d\\mid_{Y\\times Y}) is a metric space.    "
+  "body": "Topology and Metric Spaces  Inner Products and Cauchy-Schwarz    Keep in mind, measurement is not just in numbers, but stories.   Pearl Zhu   and   Set and ( )     We'll often write in place of and in place of    Inner Product, Norm   The inner product on is given by . Define the norm on by .     Sometimes people define . (especially physicists)   Properties of Inner Products        Positive definite : and ( ).     Conjugate symmetric :      Sesquilinearity :                    Sesquilinearity means 1 and a half linear. In real case it's bilinear.   Properties of Norms        Positive definite  and ( ).     Homogeneous :      Triangle inequality  . draw triangle w\/ x and y as vectors\/sides, vector going to is leq the other two added together         For          Cauchy-Schwarz Inequality   For      If then Multiply by to get .  If or then                   If  Square roots preserve inequalities so      Metric Spaces  We can use the norm to define a notion of distance: the distance from to is .    Let be a set. A metric on is a function such that   Positive Definite      Symmetric      Triangle Inequality        A metric space is a pair where is a set and is a metric on . We'll typically write for a metric space where the metric is understood.    Euclidean Metric   The pair (R, d) is a metric space, where d is defined by d(x, y) = x − y. The metric d is called the usual (or absolute value or Euclidean) metric for R. The space R is understood to have the usual metric unless otherwise specified.    Discrete Metric   For a set , the discrete metric on is .       Subsets of metric spaces are metric spaces: If (X,d) is a metric space and Y\\subseteq X then (Y,d\\mid_{Y\\times Y}) is a metric space.     "
 },
 {
   "id": "def-cn-rn",
@@ -987,42 +1032,123 @@ var ptx_lunr_docs = [
   "url": "sec-topology-metric.html#def-cn-rn",
   "type": "Definition",
   "number": "4.1",
-  "title": "",
-  "body": "  Set and ( )   "
+  "title": "<span class=\"process-math\">\\(C^n\\)<\/span> and <span class=\"process-math\">\\(R^n\\)<\/span>.",
+  "body": "and   Set and ( )   "
 },
 {
-  "id": "convention-6",
+  "id": "convention-7",
   "level": "2",
-  "url": "sec-topology-metric.html#convention-6",
+  "url": "sec-topology-metric.html#convention-7",
   "type": "Convention",
   "number": "4.2",
   "title": "",
   "body": " We'll often write in place of and in place of   "
 },
 {
+  "id": "def-c-inner-product",
+  "level": "2",
+  "url": "sec-topology-metric.html#def-c-inner-product",
+  "type": "Definition",
+  "number": "4.3",
+  "title": "Inner Product, Norm.",
+  "body": "Inner Product, Norm   The inner product on is given by . Define the norm on by .   "
+},
+{
+  "id": "convention-8",
+  "level": "2",
+  "url": "sec-topology-metric.html#convention-8",
+  "type": "Convention",
+  "number": "4.4",
+  "title": "",
+  "body": " Sometimes people define . (especially physicists)  "
+},
+{
+  "id": "thm-inner-product-properties",
+  "level": "2",
+  "url": "sec-topology-metric.html#thm-inner-product-properties",
+  "type": "Theorem",
+  "number": "4.5",
+  "title": "Properties of Inner Products.",
+  "body": "Properties of Inner Products        Positive definite : and ( ).     Conjugate symmetric :      Sesquilinearity :                  "
+},
+{
+  "id": "remark-6",
+  "level": "2",
+  "url": "sec-topology-metric.html#remark-6",
+  "type": "Remark",
+  "number": "4.6",
+  "title": "",
+  "body": " Sesquilinearity means 1 and a half linear. In real case it's bilinear.  "
+},
+{
+  "id": "thm-norm-properties",
+  "level": "2",
+  "url": "sec-topology-metric.html#thm-norm-properties",
+  "type": "Theorem",
+  "number": "4.7",
+  "title": "Properties of Norms.",
+  "body": "Properties of Norms        Positive definite  and ( ).     Homogeneous :      Triangle inequality  . draw triangle w\/ x and y as vectors\/sides, vector going to is leq the other two added together      "
+},
+{
+  "id": "lem-cauchy",
+  "level": "2",
+  "url": "sec-topology-metric.html#lem-cauchy",
+  "type": "Lemma",
+  "number": "4.8",
+  "title": "",
+  "body": "  For         "
+},
+{
+  "id": "thm-cauchy-schwarz",
+  "level": "2",
+  "url": "sec-topology-metric.html#thm-cauchy-schwarz",
+  "type": "Theorem",
+  "number": "4.9",
+  "title": "Cauchy-Schwarz Inequality.",
+  "body": "Cauchy-Schwarz Inequality   For      If then Multiply by to get .  If or then    "
+},
+{
+  "id": "lem-triangle",
+  "level": "2",
+  "url": "sec-topology-metric.html#lem-triangle",
+  "type": "Lemma",
+  "number": "4.10",
+  "title": "",
+  "body": "           "
+},
+{
+  "id": "thm-triangle",
+  "level": "2",
+  "url": "sec-topology-metric.html#thm-triangle",
+  "type": "Theorem",
+  "number": "4.11",
+  "title": "",
+  "body": "  If  Square roots preserve inequalities so    "
+},
+{
   "id": "def-metric",
   "level": "2",
   "url": "sec-topology-metric.html#def-metric",
   "type": "Definition",
-  "number": "4.3",
+  "number": "4.12",
   "title": "",
   "body": "  Let be a set. A metric on is a function such that   Positive Definite      Symmetric      Triangle Inequality        A metric space is a pair where is a set and is a metric on . We'll typically write for a metric space where the metric is understood.   "
 },
 {
-  "id": "example-8",
+  "id": "example-10",
   "level": "2",
-  "url": "sec-topology-metric.html#example-8",
+  "url": "sec-topology-metric.html#example-10",
   "type": "Example",
-  "number": "4.4",
+  "number": "4.13",
   "title": "Euclidean Metric.",
   "body": "Euclidean Metric   The pair (R, d) is a metric space, where d is defined by d(x, y) = x − y. The metric d is called the usual (or absolute value or Euclidean) metric for R. The space R is understood to have the usual metric unless otherwise specified.   "
 },
 {
-  "id": "example-9",
+  "id": "example-11",
   "level": "2",
-  "url": "sec-topology-metric.html#example-9",
+  "url": "sec-topology-metric.html#example-11",
   "type": "Example",
-  "number": "4.5",
+  "number": "4.14",
   "title": "Discrete Metric.",
   "body": "Discrete Metric   For a set , the discrete metric on is .    "
 },
@@ -1031,7 +1157,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-topology-metric.html#thm-metric-subsets",
   "type": "Theorem",
-  "number": "4.6",
+  "number": "4.15",
   "title": "",
   "body": "  Subsets of metric spaces are metric spaces: If (X,d) is a metric space and Y\\subseteq X then (Y,d\\mid_{Y\\times Y}) is a metric space.   "
 },
@@ -1042,115 +1168,34 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4.2",
   "title": "Open and Closed Sets",
-  "body": "Open and Closed Sets  Closed Sets    I can get money with my eyes closed.   Drake     Let M be a metric space, and let X be a subset of M. We say that a point x in M is a limit point of X if there is a sequence {xn} such that x_n\\in X for every positive integer n and limn→∞ xn = x.     On the real line 1 is a limit point of either of the sets [0, 1] or (0, 1)   Closed Set   Let M be a metric space, and let X be a subset of M. If every limit point of X belongs to X, we say that X is closed (in M).      Let M be a metric space and let x\\in M. Then M, \\es , and {x} are closed subsets of M.      Let X and Y be closed subsets of a metric space. Then X\\cup Y is closed.      If X1, X2, . . . , Xn are closed subsets of a metric space, then X_1\\cup X_2\\cup\\dots\\cup X_n is closed.    Infinite Unions Need Not Be Closed         Any finite subset of a metric space is closed.      Let \\fC be a collection of closed subsets of a metric space. Then \\bigcap\\fC is closed.     Open Sets    Let yourself be open and life will be easier.   Buddha     Let be a metric space. The open ball of radius with center is .      The open ball in R of radius ε centered at x is the open interval (x − ε, x + ε). An open ball in R2 is the interior of a disk and an open ball in R3 is the interior of a sphere.     In general, (they are equal in )      . is closed, . But       Let M be a metric space and let X be a subset of M. We say that X is open if for every x\\in X, there exists an open ball Bε(x) (centered at x) such that B_\\e(x)\\sse X.         An open interval (a, b) in R is open in R     , is not open since but is not contained in for any . Also is not closed since is a cluster point of but .         Let M be a metric space. Then M and \\es are open subsets of M.      Open balls are open. That is, if and , then is open.    Fix . Then . Let . It's enough to show that . Fix . Then and so . So and .    Properties of Open Sets   If is a metric space    and are open    If are open, then is open.    If is a collection of open subsets of , then is open.          1 is clear (already talked through)    Fix . Since and are open, there are such that and . Let . Then and . So .    If , then for some . As is open, there is an such that . But then .       Arbitrary Intersection Need Not Be Open   In .      A set could be both open and closed (such sets are often called clopen ).         In any metric space , and are both clopen.    If , every subset of is clopen, similarly if is any set with the discrete metric.     then is open and closed in .         Let M be a metric space and let X\\sse M. Then X is open if and only if X^C is closed.    ( ) Suppose is open and such that . We need to show that .  Suppose . Then exists so that . Since , there exists such that for all . But then, in particular,  , a contradiction.  Thus .  ( ) Suppose is not open. Then there exists an such that for all . For each integer , there is an . Then and for all . So . So is a cluster point of , but . Hence is not closed.    Sequential Characterization of Open Sets  Let be a metric space. A set is open iff whenever converges and , then there exists such that for all .    "
+  "body": "Open and Closed Sets  Closed Sets    I can get money with my eyes closed.   Drake     A cluster point of a subset in a metric space is an element such that there is a sequence with .      need not be in     Cluster points are often called limit points but the book uses the term limit point slightly differently allowing instead of .     Fix . Set . The set of cluster points of is .    Suppose first . We’ll show is a cluster point. Suppose . Fix an integer so that . Then and , so is a cluster point. For , consider where .  Now suppose is a cluster point of . We’ll show . We know such that . Since for all , we have . So .      For with , is the set of cluster points of    (basically same proof)                   Let be a metric space and let be a finite set. Then has no cluster points.    Suppose is a cluster point of . Then such that . Note that converges so it’s Cauchy. Let . Fix such that for all , . But then for all and in particular for all . Then , contradiction.     Almost the same proof as (3) shows that has no cluster points and if is a discrete metric space then has no cluster points.   Closed Set   If is a metric space and is a subset, then is closed if every cluster point of belongs to .      Let and be closed subsets of a metric space. Then is closed.      If are closed subsets of a metric space, then is closed.    Infinite Unions Need Not Be Closed         Any finite subset of a metric space is closed.      Let be a collection of closed subsets of a metric space. Then is closed.     Open Sets    Let yourself be open and life will be easier.   Buddha     Let be a metric space. The open ball of radius with center is .      The open ball in of radius ε centered at x is the open interval (x − ε, x + ε). An open ball in R2 is the interior of a disk and an open ball in R3 is the interior of a sphere.     In general, (they are equal in )      . is closed, . But       Let M be a metric space and let X be a subset of M. We say that X is open if for every x\\in X, there exists an open ball Bε(x) (centered at x) such that B_\\e(x)\\sse X.         An open interval (a, b) in R is open in R     , is not open since but is not contained in for any . Also is not closed since is a cluster point of but .         Let M be a metric space. Then M and \\es are open subsets of M.      Open balls are open. That is, if and , then is open.    Fix . Then . Let . It's enough to show that . Fix . Then and so . So and .    Properties of Open Sets   If is a metric space    and are open    If are open, then is open.    If is a collection of open subsets of , then is open.          1 is clear (already talked through)    Fix . Since and are open, there are such that and . Let . Then and . So .    If , then for some . As is open, there is an such that . But then .       Arbitrary Intersection Need Not Be Open   In .      A set could be both open and closed (such sets are often called clopen ).         In any metric space , and are both clopen.    If , every subset of is clopen, similarly if is any set with the discrete metric.     then is open and closed in .         Let M be a metric space and let X\\sse M. Then X is open if and only if X^C is closed.    ( ) Suppose is open and such that . We need to show that .  Suppose . Then exists so that . Since , there exists such that for all . But then, in particular,  , a contradiction.  Thus .  ( ) Suppose is not open. Then there exists an such that for all . For each integer , there is an . Then and for all . So . So is a cluster point of , but . Hence is not closed.    Sequential Characterization of Open Sets  Let be a metric space. A set is open iff whenever converges and , then there exists such that for all .    "
 },
 {
-  "id": "def-limit-point",
+  "id": "def-cluster-point",
   "level": "2",
-  "url": "sec-open-closed.html#def-limit-point",
-  "type": "Definition",
-  "number": "4.7",
-  "title": "",
-  "body": "  Let M be a metric space, and let X be a subset of M. We say that a point x in M is a limit point of X if there is a sequence {xn} such that x_n\\in X for every positive integer n and limn→∞ xn = x.   "
-},
-{
-  "id": "exercise-4",
-  "level": "2",
-  "url": "sec-open-closed.html#exercise-4",
-  "type": "Exploration",
-  "number": "4.8",
-  "title": "",
-  "body": " On the real line 1 is a limit point of either of the sets [0, 1] or (0, 1)  "
-},
-{
-  "id": "def-closed-set",
-  "level": "2",
-  "url": "sec-open-closed.html#def-closed-set",
-  "type": "Definition",
-  "number": "4.9",
-  "title": "Closed Set.",
-  "body": "Closed Set   Let M be a metric space, and let X be a subset of M. If every limit point of X belongs to X, we say that X is closed (in M).   "
-},
-{
-  "id": "thm-closet-sets",
-  "level": "2",
-  "url": "sec-open-closed.html#thm-closet-sets",
-  "type": "Theorem",
-  "number": "4.10",
-  "title": "",
-  "body": "  Let M be a metric space and let x\\in M. Then M, \\es , and {x} are closed subsets of M.   "
-},
-{
-  "id": "thm-closed-union",
-  "level": "2",
-  "url": "sec-open-closed.html#thm-closed-union",
-  "type": "Theorem",
-  "number": "4.11",
-  "title": "",
-  "body": "  Let X and Y be closed subsets of a metric space. Then X\\cup Y is closed.   "
-},
-{
-  "id": "cor-closed-unions",
-  "level": "2",
-  "url": "sec-open-closed.html#cor-closed-unions",
-  "type": "Corollary",
-  "number": "4.12",
-  "title": "",
-  "body": "  If X1, X2, . . . , Xn are closed subsets of a metric space, then X_1\\cup X_2\\cup\\dots\\cup X_n is closed.   "
-},
-{
-  "id": "example-10",
-  "level": "2",
-  "url": "sec-open-closed.html#example-10",
-  "type": "Example",
-  "number": "4.13",
-  "title": "Infinite Unions Need Not Be Closed.",
-  "body": "Infinite Unions Need Not Be Closed      "
-},
-{
-  "id": "cor-finite-closed",
-  "level": "2",
-  "url": "sec-open-closed.html#cor-finite-closed",
-  "type": "Corollary",
-  "number": "4.14",
-  "title": "",
-  "body": "  Any finite subset of a metric space is closed.   "
-},
-{
-  "id": "thm-intersections-closed",
-  "level": "2",
-  "url": "sec-open-closed.html#thm-intersections-closed",
-  "type": "Theorem",
-  "number": "4.15",
-  "title": "",
-  "body": "  Let \\fC be a collection of closed subsets of a metric space. Then \\bigcap\\fC is closed.   "
-},
-{
-  "id": "def-open-ball",
-  "level": "2",
-  "url": "sec-open-closed.html#def-open-ball",
+  "url": "sec-open-closed.html#def-cluster-point",
   "type": "Definition",
   "number": "4.16",
   "title": "",
-  "body": "  Let be a metric space. The open ball of radius with center is .   "
+  "body": "  A cluster point of a subset in a metric space is an element such that there is a sequence with .   "
 },
 {
-  "id": "example-11",
+  "id": "remark-7",
   "level": "2",
-  "url": "sec-open-closed.html#example-11",
-  "type": "Example",
+  "url": "sec-open-closed.html#remark-7",
+  "type": "Remark",
   "number": "4.17",
   "title": "",
-  "body": "  The open ball in R of radius ε centered at x is the open interval (x − ε, x + ε). An open ball in R2 is the interior of a disk and an open ball in R3 is the interior of a sphere.   "
+  "body": "  need not be in   "
 },
 {
-  "id": "warning-3",
+  "id": "convention-9",
   "level": "2",
-  "url": "sec-open-closed.html#warning-3",
-  "type": "Warning",
+  "url": "sec-open-closed.html#convention-9",
+  "type": "Convention",
   "number": "4.18",
   "title": "",
-  "body": " In general, (they are equal in )  "
+  "body": " Cluster points are often called limit points but the book uses the term limit point slightly differently allowing instead of .  "
 },
 {
   "id": "example-12",
@@ -1159,6 +1204,123 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "4.19",
   "title": "",
+  "body": "  Fix . Set . The set of cluster points of is .    Suppose first . We’ll show is a cluster point. Suppose . Fix an integer so that . Then and , so is a cluster point. For , consider where .  Now suppose is a cluster point of . We’ll show . We know such that . Since for all , we have . So .   "
+},
+{
+  "id": "example-13",
+  "level": "2",
+  "url": "sec-open-closed.html#example-13",
+  "type": "Example",
+  "number": "4.20",
+  "title": "",
+  "body": "  For with , is the set of cluster points of    (basically same proof)                "
+},
+{
+  "id": "example-14",
+  "level": "2",
+  "url": "sec-open-closed.html#example-14",
+  "type": "Example",
+  "number": "4.21",
+  "title": "",
+  "body": "  Let be a metric space and let be a finite set. Then has no cluster points.    Suppose is a cluster point of . Then such that . Note that converges so it’s Cauchy. Let . Fix such that for all , . But then for all and in particular for all . Then , contradiction.   "
+},
+{
+  "id": "exercise-5",
+  "level": "2",
+  "url": "sec-open-closed.html#exercise-5",
+  "type": "Exploration",
+  "number": "4.22",
+  "title": "",
+  "body": " Almost the same proof as (3) shows that has no cluster points and if is a discrete metric space then has no cluster points.  "
+},
+{
+  "id": "def-closed-set",
+  "level": "2",
+  "url": "sec-open-closed.html#def-closed-set",
+  "type": "Definition",
+  "number": "4.23",
+  "title": "Closed Set.",
+  "body": "Closed Set   If is a metric space and is a subset, then is closed if every cluster point of belongs to .   "
+},
+{
+  "id": "thm-closed-union",
+  "level": "2",
+  "url": "sec-open-closed.html#thm-closed-union",
+  "type": "Theorem",
+  "number": "4.24",
+  "title": "",
+  "body": "  Let and be closed subsets of a metric space. Then is closed.   "
+},
+{
+  "id": "cor-closed-unions",
+  "level": "2",
+  "url": "sec-open-closed.html#cor-closed-unions",
+  "type": "Corollary",
+  "number": "4.25",
+  "title": "",
+  "body": "  If are closed subsets of a metric space, then is closed.   "
+},
+{
+  "id": "example-15",
+  "level": "2",
+  "url": "sec-open-closed.html#example-15",
+  "type": "Example",
+  "number": "4.26",
+  "title": "Infinite Unions Need Not Be Closed.",
+  "body": "Infinite Unions Need Not Be Closed      "
+},
+{
+  "id": "cor-finite-closed",
+  "level": "2",
+  "url": "sec-open-closed.html#cor-finite-closed",
+  "type": "Corollary",
+  "number": "4.27",
+  "title": "",
+  "body": "  Any finite subset of a metric space is closed.   "
+},
+{
+  "id": "thm-intersections-closed",
+  "level": "2",
+  "url": "sec-open-closed.html#thm-intersections-closed",
+  "type": "Theorem",
+  "number": "4.28",
+  "title": "",
+  "body": "  Let be a collection of closed subsets of a metric space. Then is closed.   "
+},
+{
+  "id": "def-open-ball",
+  "level": "2",
+  "url": "sec-open-closed.html#def-open-ball",
+  "type": "Definition",
+  "number": "4.29",
+  "title": "",
+  "body": "  Let be a metric space. The open ball of radius with center is .   "
+},
+{
+  "id": "example-16",
+  "level": "2",
+  "url": "sec-open-closed.html#example-16",
+  "type": "Example",
+  "number": "4.30",
+  "title": "",
+  "body": "  The open ball in of radius ε centered at x is the open interval (x − ε, x + ε). An open ball in R2 is the interior of a disk and an open ball in R3 is the interior of a sphere.   "
+},
+{
+  "id": "warning-3",
+  "level": "2",
+  "url": "sec-open-closed.html#warning-3",
+  "type": "Warning",
+  "number": "4.31",
+  "title": "",
+  "body": " In general, (they are equal in )  "
+},
+{
+  "id": "example-17",
+  "level": "2",
+  "url": "sec-open-closed.html#example-17",
+  "type": "Example",
+  "number": "4.32",
+  "title": "",
   "body": "   . is closed, . But    "
 },
 {
@@ -1166,16 +1328,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-open-closed.html#def-open-set",
   "type": "Definition",
-  "number": "4.20",
+  "number": "4.33",
   "title": "",
   "body": "  Let M be a metric space and let X be a subset of M. We say that X is open if for every x\\in X, there exists an open ball Bε(x) (centered at x) such that B_\\e(x)\\sse X.   "
 },
 {
-  "id": "example-13",
+  "id": "example-18",
   "level": "2",
-  "url": "sec-open-closed.html#example-13",
+  "url": "sec-open-closed.html#example-18",
   "type": "Example",
-  "number": "4.21",
+  "number": "4.34",
   "title": "",
   "body": "     An open interval (a, b) in R is open in R     , is not open since but is not contained in for any . Also is not closed since is a cluster point of but .      "
 },
@@ -1184,7 +1346,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-open-closed.html#thm-open-sets",
   "type": "Theorem",
-  "number": "4.22",
+  "number": "4.35",
   "title": "",
   "body": "  Let M be a metric space. Then M and \\es are open subsets of M.   "
 },
@@ -1193,7 +1355,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-open-closed.html#thm-open-balls-open",
   "type": "Theorem",
-  "number": "4.23",
+  "number": "4.36",
   "title": "",
   "body": "  Open balls are open. That is, if and , then is open.    Fix . Then . Let . It's enough to show that . Fix . Then and so . So and .   "
 },
@@ -1202,16 +1364,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-open-closed.html#thm-properties-of-open-sets",
   "type": "Theorem",
-  "number": "4.24",
+  "number": "4.37",
   "title": "Properties of Open Sets.",
   "body": "Properties of Open Sets   If is a metric space    and are open    If are open, then is open.    If is a collection of open subsets of , then is open.          1 is clear (already talked through)    Fix . Since and are open, there are such that and . Let . Then and . So .    If , then for some . As is open, there is an such that . But then .      "
 },
 {
-  "id": "example-14",
+  "id": "example-19",
   "level": "2",
-  "url": "sec-open-closed.html#example-14",
+  "url": "sec-open-closed.html#example-19",
   "type": "Example",
-  "number": "4.25",
+  "number": "4.38",
   "title": "Arbitrary Intersection Need Not Be Open.",
   "body": "Arbitrary Intersection Need Not Be Open   In .   "
 },
@@ -1220,16 +1382,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-open-closed.html#def-clopen",
   "type": "Definition",
-  "number": "4.26",
+  "number": "4.39",
   "title": "",
   "body": "  A set could be both open and closed (such sets are often called clopen ).   "
 },
 {
-  "id": "example-15",
+  "id": "example-20",
   "level": "2",
-  "url": "sec-open-closed.html#example-15",
+  "url": "sec-open-closed.html#example-20",
   "type": "Example",
-  "number": "4.27",
+  "number": "4.40",
   "title": "",
   "body": "     In any metric space , and are both clopen.    If , every subset of is clopen, similarly if is any set with the discrete metric.     then is open and closed in .      "
 },
@@ -1238,16 +1400,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-open-closed.html#thm-open-closed-complement",
   "type": "Theorem",
-  "number": "4.28",
+  "number": "4.41",
   "title": "",
   "body": "  Let M be a metric space and let X\\sse M. Then X is open if and only if X^C is closed.    ( ) Suppose is open and such that . We need to show that .  Suppose . Then exists so that . Since , there exists such that for all . But then, in particular,  , a contradiction.  Thus .  ( ) Suppose is not open. Then there exists an such that for all . For each integer , there is an . Then and for all . So . So is a cluster point of , but . Hence is not closed.   "
 },
 {
-  "id": "exercise-5",
+  "id": "exercise-6",
   "level": "2",
-  "url": "sec-open-closed.html#exercise-5",
+  "url": "sec-open-closed.html#exercise-6",
   "type": "Exploration",
-  "number": "4.29",
+  "number": "4.42",
   "title": "Sequential Characterization of Open Sets.",
   "body": "Sequential Characterization of Open Sets  Let be a metric space. A set is open iff whenever converges and , then there exists such that for all .  "
 },
@@ -1265,7 +1427,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-compactness.html#def-compact",
   "type": "Definition",
-  "number": "4.30",
+  "number": "4.43",
   "title": "Compact.",
   "body": "Compact   A metric space is compact if every sequence has a convergent subsequence.  A subset is compact if is a compact metric space with the induced metric; ie every sequence has a subsequence which converges in .   "
 },
@@ -1274,16 +1436,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-compactness.html#prop-closer-interval",
   "type": "Proposition",
-  "number": "4.31",
+  "number": "4.44",
   "title": "Closed Intervals are Compact.",
   "body": "Closed Intervals are Compact   A closed interval is compact.    If , there is a subsequence converging to some . (from Bolzano-Weierstrass Theorem, every bounded sequence has a convergent subsequence). Since for all and , we have . So .   "
 },
 {
-  "id": "exercise-6",
+  "id": "exercise-7",
   "level": "2",
-  "url": "sec-compactness.html#exercise-6",
+  "url": "sec-compactness.html#exercise-7",
   "type": "Exploration",
-  "number": "4.32",
+  "number": "4.45",
   "title": "",
   "body": "  is not compact.    has no subsequence which converges in .  "
 },
@@ -1292,7 +1454,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-compactness.html#thm-compact-subsets-closed",
   "type": "Theorem",
-  "number": "4.33",
+  "number": "4.46",
   "title": "Compactness and Closed Subsets.",
   "body": "Compactness and Closed Subsets   If is a metric space and is compact, then is closed. Conversely, if is closed and is compact, then is also compact.    If is not closed let . Then exists with . Any subsequence of converges to , so no subsequence of converges to a point in .  Further, suppose is closed and is compact. Let be a sequence. There is a subsequence which converges in . Since is closed, .   "
 },
@@ -1301,7 +1463,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-compactness.html#thm-compact-complete",
   "type": "Theorem",
-  "number": "4.34",
+  "number": "4.47",
   "title": "Compact Implies Complete.",
   "body": "Compact Implies Complete   If is a compact metric space, then is complete.    Suppose is Cauchy. Since is compact, has a convergent subsequence. Now, every Cauchy sequence with a convergent subsequence converges. So converges.   "
 },
@@ -1310,7 +1472,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-compactness.html#remark-8",
   "type": "Remark",
-  "number": "4.35",
+  "number": "4.48",
   "title": "",
   "body": " The converse is false! is complete, but not compact. For ex, has no convergent subsequence.  "
 },
@@ -1319,16 +1481,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-compactness.html#def-bounded-metric",
   "type": "Definition",
-  "number": "4.36",
+  "number": "4.49",
   "title": "Bounded Metric Space.",
   "body": "Bounded Metric Space   A metric space is bounded if there exists such that for all . Equivalently (when ), .  A subset is bounded if is bounded as a metric space with the induced metric. ie exists .   "
 },
 {
-  "id": "exercise-7",
+  "id": "exercise-8",
   "level": "2",
-  "url": "sec-compactness.html#exercise-7",
+  "url": "sec-compactness.html#exercise-8",
   "type": "Exploration",
-  "number": "4.37",
+  "number": "4.50",
   "title": "Discrete Bounds.",
   "body": "Discrete Bounds  Discrete metric is bounded always, but not compact.  "
 },
@@ -1337,7 +1499,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-compactness.html#lem-compact-bounded",
   "type": "Lemma",
-  "number": "4.38",
+  "number": "4.51",
   "title": "Converging Distances.",
   "body": "Converging Distances   If is a metric space and converge, then     Set . Then . So .  Similarly, . So .   "
 },
@@ -1346,7 +1508,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-compactness.html#thm-compact-bounded",
   "type": "Theorem",
-  "number": "4.39",
+  "number": "4.52",
   "title": "Compact Implies Bounded.",
   "body": "Compact Implies Bounded   Every compact metric space is bounded.    Suppose is an unbounded metric space, so . Then for all with . If is compact, there exist convergent subsequences and of . But then converges and hence is bounded, but for all .   "
 },
@@ -1355,7 +1517,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-compactness.html#thm-heine-borel",
   "type": "Theorem",
-  "number": "4.40",
+  "number": "4.53",
   "title": "Heine-Borel Theorem.",
   "body": "Heine-Borel Theorem   If , then is compact iff is closed and bounded.    ( ) Let be a sequence in and write . Note that for any , and any , we have . In particular, since is bounded, is also bounded. By the Bolzano-Weierstrass theorem, has a convergent subsequence. Call it (so by strictly increasing.) Let . Then is a bounded sequence and hence is bounded. So has a convergent subsequence converging to some .  Note that is a subsequence of , so and .  Continue in this way choosing to be a subsequence of for . To arrange for to be convergent and set for . Then set for each . Then is a subsequence of (in fact a subsubsub...subsequence (  subs )).  So converges to for all . Then if , we have . Since is closed and each , we have . So every sequence in has a subsequence converging in . This shows that is compact.   "
 },
@@ -1364,7 +1526,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-compactness.html#cor-heine-borel-real",
   "type": "Corollary",
-  "number": "4.41",
+  "number": "4.54",
   "title": "Heine-Borel for <span class=\"process-math\">\\(\\R^n\\)<\/span>.",
   "body": "Heine-Borel for   If , then is compact iff is closed and bounded.    ( ) same as for .  ( ) is closed, and so if is closed in then is also closed in . So is compact by the Heine-Borel Theorem.   "
 },
@@ -1373,16 +1535,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-compactness.html#def-diameter",
   "type": "Definition",
-  "number": "4.42",
+  "number": "4.55",
   "title": "Diameter.",
   "body": "Diameter   For a metric space , define the diameter of to be .   "
 },
 {
-  "id": "exercise-8",
+  "id": "exercise-9",
   "level": "2",
-  "url": "sec-compactness.html#exercise-8",
+  "url": "sec-compactness.html#exercise-9",
   "type": "Exploration",
-  "number": "4.43",
+  "number": "4.56",
   "title": "",
   "body": "  is bounded. Similarly, for a subset .  "
 },
@@ -1391,25 +1553,25 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-compactness.html#def-totally-bounded",
   "type": "Definition",
-  "number": "4.44",
+  "number": "4.57",
   "title": "Totally Bounded Metric.",
   "body": "Totally Bounded Metric   A metric space is totally bounded if for all there exists for some with and .   "
 },
 {
-  "id": "example-16",
+  "id": "example-21",
   "level": "2",
-  "url": "sec-compactness.html#example-16",
+  "url": "sec-compactness.html#example-21",
   "type": "Example",
-  "number": "4.45",
+  "number": "4.58",
   "title": "Closed Interval is Totally Bounded.",
   "body": "Closed Interval is Totally Bounded    is totally bounded. For all  and for all .   "
 },
 {
-  "id": "exercise-9",
+  "id": "exercise-10",
   "level": "2",
-  "url": "sec-compactness.html#exercise-9",
+  "url": "sec-compactness.html#exercise-10",
   "type": "Exploration",
-  "number": "4.46",
+  "number": "4.59",
   "title": "Bounded Sets in <span class=\"process-math\">\\(\\R^n\\)<\/span> Totally Bounded.",
   "body": "Bounded Sets in Totally Bounded  Any bounded set in is totally bounded.  "
 },
@@ -1418,16 +1580,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-compactness.html#prop-discrete-totally-bounded",
   "type": "Proposition",
-  "number": "4.47",
+  "number": "4.60",
   "title": "Bounded but not Totally Bounded.",
   "body": "Bounded but not Totally Bounded   If is an infinite set with the discrete metric then is bounded ( ) but not totally bounded.    If , any set with contains at most one point. So if we could write with , then would have at most points. So would be finite.   "
 },
 {
-  "id": "exercise-10",
+  "id": "exercise-11",
   "level": "2",
-  "url": "sec-compactness.html#exercise-10",
+  "url": "sec-compactness.html#exercise-11",
   "type": "Exploration",
-  "number": "4.48",
+  "number": "4.61",
   "title": "",
   "body": " Let be a metric space.   If is totally bounded, then is bounded.     is totally bounded iff there exist with . (This is the book's definition of totally bounded.)    A subset of a totally bounded set is totally bounded.     "
 },
@@ -1436,7 +1598,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-compactness.html#thm-totally-bounded-characterization",
   "type": "Theorem",
-  "number": "4.49",
+  "number": "4.62",
   "title": "Totally Bounded and Cauchy Subsequences.",
   "body": "Totally Bounded and Cauchy Subsequences   A metric space is totally bounded iff every sequence in has a Cauchy subsequence.    ( ) [totally bounded implies every sequence has a Cauchy subsequence] Suppose is a totally bounded metric space. Let be a sequence. We'll first construct a sequence of subsets of such that              is infinite for all .     Let . Assuming has been constructed, note that is totally bounded (subset of totally bounded set is totally bounded). So with and . Since is infinite, there is an such that is infinite. Set . Now construct as follows: Since is infinite, it's not empty, so there exist with . Now if has been constructed, then is infinite, and hence is non-empty. Choose with and . Then is a subsequence of with for all .  We now show is Cauchy. Fix . Choose with . Fix , . Then and (by condition (i)). So (condition (ii)). So is Cauchy.  ( ) [wts every sequence has a Cauchy subsequence implies totally bounded]  Suppose is not totally bounded. Then exists such that for all with we have . Let . (note: since is totally bounded) Assume we've constructed with for all with . Since for all (triangle inequality) we have so exists with . So we've constructed a sequence with for all so has no Cauchy subsequence.   "
 },
@@ -1445,7 +1607,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-compactness.html#cor-compact-iff-complete-totally-bounded",
   "type": "Corollary",
-  "number": "4.50",
+  "number": "4.63",
   "title": "Compact iff Complete and Totally Bounded.",
   "body": "Compact iff Complete and Totally Bounded   A metric space is compact iff it is complete and totally bounded.   "
 },
@@ -1454,7 +1616,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-compactness.html#cor-cn-bounded-subsets",
   "type": "Corollary",
-  "number": "4.51",
+  "number": "4.64",
   "title": "Totally Bounded Subsets of <span class=\"process-math\">\\(\\C^n\\)<\/span>.",
   "body": "Totally Bounded Subsets of   If , then is bounded iff it is totally bounded.    ( ) holds for all metric spaces.  ( ) If is bounded, then every sequence is bounded, and so has a subsequence in by the Bolzano-Weierstrass Theorem (or by the Heine-Borel theorem applied to ). So has a Cauchy subsequence.   "
 },
@@ -1463,7 +1625,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-compactness.html#def-finite-intersection-property",
   "type": "Definition",
-  "number": "4.52",
+  "number": "4.65",
   "title": "Finite Intersection Property.",
   "body": "Finite Intersection Property   A collection of sets has the finite intersection property if whenever is finite, .   "
 },
@@ -1472,7 +1634,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-compactness.html#thm-borel-lebesgue",
   "type": "Theorem",
-  "number": "4.53",
+  "number": "4.66",
   "title": "Borel-Lebesgue Theorem.",
   "body": "Borel-Lebesgue Theorem   For a metric space , the following are equivalent:    is compact.     is complete and totally bounded.    Every open cover of has a finite subcover. More often how compactness is defined.    Every family of closed subsets of with the finite intersection property has nonempty intersection.    Every infinite subset of has a cluster point.          (1) (2) already shown    (2) (3) S uppose is totally bounded and complete. Also, suppose (3) fails and fix an open cover of with no finite subcover.   Claim 1 : there is a sequence of points such that for all finite, .  We'll construct by induction on . To construct : Since is totally bounded, there is a finite set with . Then also, . Suppose ftsoc that for all finite with . Then if then is finite and . So exists such that is not covered by finitely many . Suppose have been constructed so that is not covered by finitely many . Since is totally bounded, exists finite set with . Then   Since is not covered by finitely many and is finite, there is a so that is not covered by finitely many .   Claim 2 : is Cauchy.  Fix . Let be such that . Suppose . Since is not covered by finitely many , we have is not empty. In particular, . Fix . Then .   Claim 3 : Exists , so that .  Note: This implies is covered by finitely many . This contradicts step 1, which will finish the proof.  As is complete (by (2)) and is Cauchy by claim 2, we can define . Then , so exists with . Fix with . Fix such that for all we have . Then fix with . We'll show that as claimed. Fix . Then and , and so . This shows that and so .  thus (2) (3)    (3) (4) (proved by contrapositive)  Suppose (3) holds. To show (4) suppose is a collection of closed sets with . We want to show that there is a finite set with . Then is open for all and . So is an open cover of . By (3), there is a finite set with . Then and so     Suppose is an infinite set. Let and let for . We'll show has the finite intersection property. Suppose . Then . Since is infinite and is finite, . We show If then is a cluster point for . Suppose . We need to show . If , then . ( ). As so . If , then . ( ) By (a) and (4), . Then by (b) has a cluster point. Hence (5) holds.    (5) (1) Assume (5) and is a sequence. If has a constant subsequence, then it has a convergent subsequence.  Suppose has no constant subsequence. Therefore is infinite. By (5), has a cluster point . Note first that such that since otherwise there would be a subsequence of such that for all but we've assumed has no constant subsequence. Note also that for all , . Then since exists with .  Now since , exists with . Continue inductively to produce with . Then is a subsequence of and .      "
 },
@@ -1490,16 +1652,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-connected.html#def-connected",
   "type": "Definition",
-  "number": "4.54",
+  "number": "4.67",
   "title": "Connected, Disconnected.",
   "body": "Connected, Disconnected   A metric space is disconnected if there are nonempty open sets such that and .  A metric space is connected if it is not disconnected.   "
 },
 {
-  "id": "example-17",
+  "id": "example-22",
   "level": "2",
-  "url": "sec-connected.html#example-17",
+  "url": "sec-connected.html#example-22",
   "type": "Example",
-  "number": "4.55",
+  "number": "4.68",
   "title": "",
   "body": "   is disconnected, and the sphere is connected.   "
 },
@@ -1508,25 +1670,25 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-connected.html#def-path-connected",
   "type": "Definition",
-  "number": "4.56",
+  "number": "4.69",
   "title": "Path Connected.",
   "body": "Path Connected   A metric space is path-connected if for any there is a continuous function so that .   "
 },
 {
-  "id": "exercise-11",
+  "id": "exercise-12",
   "level": "2",
-  "url": "sec-connected.html#exercise-11",
+  "url": "sec-connected.html#exercise-12",
   "type": "Exploration",
-  "number": "4.57",
+  "number": "4.70",
   "title": "",
   "body": " Every path-connected metric space is connected, but the converse is false.  "
 },
 {
-  "id": "example-18",
+  "id": "example-23",
   "level": "2",
-  "url": "sec-connected.html#example-18",
+  "url": "sec-connected.html#example-23",
   "type": "Example",
-  "number": "4.58",
+  "number": "4.71",
   "title": "",
   "body": "   is connected for .    We'll show it's path-connected. Define by . Then is continuous, .   "
 },
@@ -1535,7 +1697,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-connected.html#thm-connected-characterization",
   "type": "Theorem",
-  "number": "4.59",
+  "number": "4.72",
   "title": "Connected Characterization.",
   "body": "Connected Characterization   Let be a metric space, let be a subset, and view as a metric space with the induced metric. Then is disconnected iff exist open sets such that  , and    "
 },
@@ -1544,7 +1706,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-connected.html#prop-connected-real-subsets",
   "type": "Proposition",
-  "number": "4.60",
+  "number": "4.73",
   "title": "Connected Real Subsets.",
   "body": "Connected Real Subsets   If is a nonempty connected set, then either                          Consider , . It suffices to show , since then and . To this end, suppose . Then . Both and are open sets. Since with . Then so nonempty. Similarly, . This shows is disconnected, a contradiction. Hence .   "
 },
@@ -1553,7 +1715,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-connected.html#prop-closed-interval-connected",
   "type": "Proposition",
-  "number": "4.61",
+  "number": "4.74",
   "title": "Closed Unit Interval Connected in <span class=\"process-math\">\\(\\R\\)<\/span>.",
   "body": "Closed Unit Interval Connected in    is connected.    Suppose ftsoc that is disconnected. Then there exist open sets such that and . Wlog, (has to be in one of them). Let . It's enough to show , since then and , a contradiction. Note that so . Let .  Claim 1: . Suppose not. Then . As so that and . Then for all , and so . This implies (since ). So . Since with . Let . Note that since . Then . Also, . So , and hence .  Claim 2: . Suppose . As such that . Let . Then and . Note that and as . So . Now, and , a contradiction.  This shows . Hence a contradiction   "
 },
@@ -1562,7 +1724,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-connected.html#remark-9",
   "type": "Remark",
-  "number": "4.62",
+  "number": "4.75",
   "title": "",
   "body": " Using this, one can show that every path-connected metric space is connected. Using this, one can then show that all the intervals in the previous example are connected.  "
 },
@@ -1571,7 +1733,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-connected.html#thm-connected-images",
   "type": "Theorem",
-  "number": "4.63",
+  "number": "4.76",
   "title": "Continuous Images of Connected Spaces are Connected..",
   "body": "Continuous Images of Connected Spaces are Connected.   Let be metric spaces and let be continuous and surjective. If is connected then is connected.    Suppose is disconnected. There are open sets such that . Then are open as is continuous. Then and . To show is disconnected, we need to show and . As is nonempty, exists . Since is surjective, exists with . Then . This shows . Similarly, .   "
 },
@@ -1580,7 +1742,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-connected.html#thm-ivt",
   "type": "Theorem",
-  "number": "4.64",
+  "number": "4.77",
   "title": "Intermediate Value Theorem.",
   "body": "Intermediate Value Theorem   Suppose and is continuous. If with either or then exists such that .    WLOG let . As is continuous and is connected, is connected by the previous theorem. So is an interval. So . So if there is with .   "
 },
@@ -1589,7 +1751,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-connected.html#thm-disconnected-subsets",
   "type": "Theorem",
-  "number": "4.65",
+  "number": "4.78",
   "title": "Disconnected Subsets.",
   "body": "Disconnected Subsets   If is a metric space and , then is disconnected in iff is disconnected as a metric space.    ( ) Suppose is disconnected in . So exist open with . Then are open subsets of (open in ). Also, , so is disconnected as a metric space.  ( ) Suppose is disconnected as a metric space. There are open sets with .   Exercise : Exist open sets with , .  Then . (If , we're done.) Since we have that . As is open, is closed, and so . Therefore, . In particular, . Similarly, . Apply the key lemma with to get open sets with , and . Then . Also, since , we have . Similarly . So is disconnected in . ◻   "
 },
@@ -1607,7 +1769,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-function-limits.html#def-limit",
   "type": "Definition",
-  "number": "4.66",
+  "number": "4.79",
   "title": "Limit of a Function.",
   "body": "Limit of a Function   Let and be metric spaces and let be a subset. If is a function, is a cluster point of , and , we write if for all .   "
 },
@@ -1616,25 +1778,25 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-function-limits.html#thm-limits-sequences-function",
   "type": "Theorem",
-  "number": "4.67",
+  "number": "4.80",
   "title": "Function Limits and Sequence Limits.",
   "body": "Function Limits and Sequence Limits   Let be metric spaces and let . Suppose is a function, is a cluster point of , and . Then iff for all sequences .    ( ) Suppose . Let . Fix . Fix such that if and then . Now exists such that for all . Then if . So .  ( , contrapositive) Suppose . Then exists such that for all exists and . Fix such an . Then for each such that . Now , and does not converge to . (remark this is maybe a bit pedantic  doesn't really make sense since the left hand side doesn't have to exist. If you're writing you're assuming it exists.)   "
 },
 {
-  "id": "example-19",
+  "id": "example-24",
   "level": "2",
-  "url": "sec-function-limits.html#example-19",
+  "url": "sec-function-limits.html#example-24",
   "type": "Example",
-  "number": "4.68",
+  "number": "4.81",
   "title": "",
   "body": "   with . We'll show does not exist by constructing sequences and converging in so that the sequences and converge to different values.  Take then , and take then . So does not exist.  (If then for any sequence converging to ,   .)   "
 },
 {
-  "id": "example-20",
+  "id": "example-25",
   "level": "2",
-  "url": "sec-function-limits.html#example-20",
+  "url": "sec-function-limits.html#example-25",
   "type": "Example",
-  "number": "4.69",
+  "number": "4.82",
   "title": "Topologist's Sine Curve.",
   "body": "Topologist's Sine Curve   Define by (oscillates wildly near origin). Called topologist's sine curve . For any there is a sequence such that and . In particular does not exist.   "
 },
@@ -1652,34 +1814,34 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-continuous-functions.html#def-continuous-function",
   "type": "Definition",
-  "number": "4.70",
+  "number": "4.83",
   "title": "",
   "body": "  Let , be metric spaces. Let be a function. We say is continuous at a point  if for all such that for all with we have .  A function is continuous if is continuous at every point .   "
 },
 {
-  "id": "convention-7",
+  "id": "convention-10",
   "level": "2",
-  "url": "sec-continuous-functions.html#convention-7",
+  "url": "sec-continuous-functions.html#convention-10",
   "type": "Convention",
-  "number": "4.71",
+  "number": "4.84",
   "title": "",
   "body": " We'll often use to denote both the metric on and the metric on when it causes no confusion.  "
 },
 {
-  "id": "exercise-12",
+  "id": "exercise-13",
   "level": "2",
-  "url": "sec-continuous-functions.html#exercise-12",
+  "url": "sec-continuous-functions.html#exercise-13",
   "type": "Exploration",
-  "number": "4.72",
+  "number": "4.85",
   "title": "",
   "body": " If is a cluster point of then is continuous at iff .  "
 },
 {
-  "id": "example-21",
+  "id": "example-26",
   "level": "2",
-  "url": "sec-continuous-functions.html#example-21",
+  "url": "sec-continuous-functions.html#example-26",
   "type": "Example",
-  "number": "4.73",
+  "number": "4.86",
   "title": "",
   "body": "  If is given by then is continuous.    Fix and . Let . If and then    "
 },
@@ -1688,25 +1850,25 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-continuous-functions.html#remark-10",
   "type": "Remark",
-  "number": "4.74",
+  "number": "4.87",
   "title": "",
   "body": "  can depend on and , but not on   "
 },
 {
-  "id": "example-22",
+  "id": "example-27",
   "level": "2",
-  "url": "sec-continuous-functions.html#example-22",
+  "url": "sec-continuous-functions.html#example-27",
   "type": "Example",
-  "number": "4.75",
+  "number": "4.88",
   "title": "",
   "body": "  The function , is continuous.    For and . Let .  Fix with . Since , we have . Now, . Continue (from above): so is continuous.   "
 },
 {
-  "id": "exercise-13",
+  "id": "exercise-14",
   "level": "2",
-  "url": "sec-continuous-functions.html#exercise-13",
+  "url": "sec-continuous-functions.html#exercise-14",
   "type": "Exploration",
-  "number": "4.76",
+  "number": "4.89",
   "title": "",
   "body": " If and , then is continuous.  "
 },
@@ -1715,7 +1877,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-continuous-functions.html#prop-popcorn-function",
   "type": "Proposition",
-  "number": "4.77",
+  "number": "4.90",
   "title": "The Popcorn Function.",
   "body": "The Popcorn Function   There is a function such that is continuous at every irrational number and discontinuous at every rational number. Note: since .    Fix . We need such that and . Write with so that . Set . Fix . Let be irrational (know exists from next lemma). Then .  Fix and . Let with . Define .  Then is a finite set and hence is closed. Also as and , we have . Since is open, exists such that .  Fix with . We want .   Case 1 : If then .   Case 2 : Suppose . As we have and so and .   "
 },
@@ -1724,16 +1886,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-continuous-functions.html#thm-continuous-characterization",
   "type": "Theorem",
-  "number": "4.78",
+  "number": "4.91",
   "title": "Characterizations of Continuity.",
   "body": "Characterizations of Continuity   Let and be metric spaces and let be a function. TFAE:    is continuous.    For cluster points .    If is a convergent sequence, then .    If is an open set, then is open (where ).    If is a closed set, then is closed.    For all sets , .          (1 6) Suppose is continuous and . We want . Fix . Fix . We want . Since is continuous, exists so that for all . Since . Let . Then . Now .    Suppose is closed. Then . Then . So so is closed.    (5 4) Assume 5 holds. Assume is open. Have is closed, and so by 5 is closed. So is open.    (4 3) Suppose converges and let . Fix . Then is open. By 4, is open. Also , and hence exists with . Since such that for all . If then . So for all . Hence .    (3 2) Let be a cluster point. If , , then by 3 . By earlier result, this implies     (2 1) We know that is continuous at each isolated point in . Suppose then that is a cluster point. Fix . By 2, , and so exists so that for all , we have . Also holds if . So for all so is continuous.      "
 },
 {
-  "id": "example-23",
+  "id": "example-28",
   "level": "2",
-  "url": "sec-continuous-functions.html#example-23",
+  "url": "sec-continuous-functions.html#example-28",
   "type": "Example",
-  "number": "4.79",
+  "number": "4.92",
   "title": "",
   "body": "  Let is a closed subset of .    Let by is continuous. Also, is closed, so is closed.   "
 },
@@ -1742,7 +1904,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-continuous-functions.html#thm-continuous-compact",
   "type": "Theorem",
-  "number": "4.80",
+  "number": "4.93",
   "title": "",
   "body": "  If and are metric spaces, is compact, and is continuous, then is compact.   "
 },
@@ -1751,7 +1913,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-continuous-functions.html#cor-continuous-compact",
   "type": "Corollary",
-  "number": "4.81",
+  "number": "4.94",
   "title": "",
   "body": "  Let be a continuous function between metric spaces and assume is compact. Then if is closed, we have is also closed.    If is compact and is closed, then is compact (closed subset of a compact space). Then is compact by the previous result. So is closed.   "
 },
@@ -1760,7 +1922,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-continuous-functions.html#cor-continuous-inverses",
   "type": "Corollary",
-  "number": "4.82",
+  "number": "4.95",
   "title": "",
   "body": "  Suppose and are metric spaces and is a continuous bijection. If is compact, then is continuous.    Let . If is closed, then the preimage of under equals . So is closed by the previous corollary. Hence is continuous.   "
 },
@@ -1769,7 +1931,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-continuous-functions.html#thm-extreme-value",
   "type": "Theorem",
-  "number": "4.83",
+  "number": "4.96",
   "title": "Extreme Value Theorem.",
   "body": "Extreme Value Theorem   If is a nonempty compact metric space and is continuous, then there are points such that     We know that is compact and in particular is closed and bounded. Since is bounded and nonempty, . Then there is a sequence with (indeed for , choose with . Then since , we have .) Since is closed and for all we have . Now, fix with . Note that is continuous, so exists with .   "
 },
@@ -1787,7 +1949,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-uniform-continuity.html#def-uniformly-continuous",
   "type": "Definition",
-  "number": "4.84",
+  "number": "4.97",
   "title": "Uniform Continuity.",
   "body": "Uniform Continuity   Let be metric spaces and let be a function. We say is uniformly continuous if for all exists such that for all .   "
 },
@@ -1796,43 +1958,43 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-uniform-continuity.html#remark-11",
   "type": "Remark",
-  "number": "4.85",
+  "number": "4.98",
   "title": "",
   "body": " For regular continuity, depends on both and , but doesn't depend on for uniform continuity. We can choose uniformly for all .  "
-},
-{
-  "id": "exercise-14",
-  "level": "2",
-  "url": "sec-uniform-continuity.html#exercise-14",
-  "type": "Exploration",
-  "number": "4.86",
-  "title": "",
-  "body": " Uniform continuity implies continuity.  "
-},
-{
-  "id": "example-24",
-  "level": "2",
-  "url": "sec-uniform-continuity.html#example-24",
-  "type": "Example",
-  "number": "4.87",
-  "title": "",
-  "body": "   is continuous but not uniformly continuous.     is continuous: Note that for all . Given set . If and , then so is continuous.  Note: If we knew then we could take and we'd have for all . For our choice of .   is not uniformly continuous. We must show exists such that for all exists with and . Set . Fix . Let . Then and .   "
-},
-{
-  "id": "example-25",
-  "level": "2",
-  "url": "sec-uniform-continuity.html#example-25",
-  "type": "Example",
-  "number": "4.88",
-  "title": "",
-  "body": "   is uniformly continuous.    Fix . Set . Fix with .   Case 1 : If and , then  Case 2 : Suppose or . Wlog, . Then    "
 },
 {
   "id": "exercise-15",
   "level": "2",
   "url": "sec-uniform-continuity.html#exercise-15",
   "type": "Exploration",
-  "number": "4.89",
+  "number": "4.99",
+  "title": "",
+  "body": " Uniform continuity implies continuity.  "
+},
+{
+  "id": "example-29",
+  "level": "2",
+  "url": "sec-uniform-continuity.html#example-29",
+  "type": "Example",
+  "number": "4.100",
+  "title": "",
+  "body": "   is continuous but not uniformly continuous.     is continuous: Note that for all . Given set . If and , then so is continuous.  Note: If we knew then we could take and we'd have for all . For our choice of .   is not uniformly continuous. We must show exists such that for all exists with and . Set . Fix . Let . Then and .   "
+},
+{
+  "id": "example-30",
+  "level": "2",
+  "url": "sec-uniform-continuity.html#example-30",
+  "type": "Example",
+  "number": "4.101",
+  "title": "",
+  "body": "   is uniformly continuous.    Fix . Set . Fix with .   Case 1 : If and , then  Case 2 : Suppose or . Wlog, . Then    "
+},
+{
+  "id": "exercise-16",
+  "level": "2",
+  "url": "sec-uniform-continuity.html#exercise-16",
+  "type": "Exploration",
+  "number": "4.102",
   "title": "",
   "body": "  is not uniformly continuous, but for all , is uniformly continuous.  "
 },
@@ -1841,16 +2003,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-uniform-continuity.html#thm-uniform-compact",
   "type": "Theorem",
-  "number": "4.90",
+  "number": "4.103",
   "title": "Continuous is Uniform From Compact Spaces.",
   "body": "Continuous is Uniform From Compact Spaces   If are metric spaces with compact, then any continuous function is uniformly continuous.   "
 },
 {
-  "id": "example-26",
+  "id": "example-31",
   "level": "2",
-  "url": "sec-uniform-continuity.html#example-26",
+  "url": "sec-uniform-continuity.html#example-31",
   "type": "Example",
-  "number": "4.91",
+  "number": "4.104",
   "title": "",
   "body": "  Let be given by . Then is continuous but not uniformly continuous.     Continuity : If , fix with either or . Note that if with , then .   Not uniformly continuous : For , let and . Then and .   "
 },
@@ -1859,7 +2021,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-uniform-continuity.html#thm-uniform-cauchy",
   "type": "Theorem",
-  "number": "4.92",
+  "number": "4.105",
   "title": "Uniform Convergence and Cauchy Sequences.",
   "body": "Uniform Convergence and Cauchy Sequences   If is a uniformly continuous function, then for any Cauchy sequence , the sequence is also Cauchy.    Let be Cauchy. Fix . Fix so that whenever with we have (using that is uniformly continuous). Since is Cauchy, exists such that for all , by the choice of .   "
 },
@@ -1868,16 +2030,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-uniform-continuity.html#remark-12",
   "type": "Remark",
-  "number": "4.93",
+  "number": "4.106",
   "title": "",
   "body": " The converse is false! (I think ”converse\" here means just continuous) is a counterexample.  "
 },
 {
-  "id": "exercise-16",
+  "id": "exercise-17",
   "level": "2",
-  "url": "sec-uniform-continuity.html#exercise-16",
+  "url": "sec-uniform-continuity.html#exercise-17",
   "type": "Exploration",
-  "number": "4.94",
+  "number": "4.107",
   "title": "",
   "body": " If is a function between metric spaces and , then preserves Cauchy sequences as in the proposition iff is uniformly continuous on totally bounded sets (ie for all totally bounded is uniformly continuous).  "
 },
@@ -1886,7 +2048,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-uniform-continuity.html#thm-ump-uniform",
   "type": "Theorem",
-  "number": "4.95",
+  "number": "4.108",
   "title": "UMP for Complete Metric Spaces.",
   "body": "UMP for Complete Metric Spaces   Let be metric spaces with complete. Let and let be uniformly continuous. Then continuous function so the for all . Further, is uniformly continuous.     Uniqueness (this won't require that is uniformly continuous): Suppose are continuous and for all . If such that . So so .   Existence Suppose . Let be such that . Then is Cauchy. Since is uniformly continuous, is Cauchy. Since is complete, converges. Define by .    is well defined, ie if and with , then .  Let . To show we'll show for any . Let . Since is uniformly continuous, exists such that if . If then exists such that for all . Then for all . So for all , we have . Now, . Since this holds for all we have .     for all .  Note that (constant sequence ) and . So .     is uniformly continuous.  Fix . Since is uniformly continuous, exists such that for all . Now fix with . We'll show that . Fix sequences and such that and . So and . Note that . So exists such that for all , . So for all . Letting .      "
 },
@@ -1904,7 +2066,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separability-completions.html#def-dense",
   "type": "Definition",
-  "number": "4.96",
+  "number": "4.109",
   "title": "Dense.",
   "body": "Dense   Let be a metric space. A set is dense if .   "
 },
@@ -1913,16 +2075,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separability-completions.html#def-isometry",
   "type": "Definition",
-  "number": "4.97",
+  "number": "4.110",
   "title": "Isometry.",
   "body": "Isometry   A function between metric spaces is an isometry (or is isometric ) if for .   "
 },
 {
-  "id": "exercise-17",
+  "id": "exercise-18",
   "level": "2",
-  "url": "sec-separability-completions.html#exercise-17",
+  "url": "sec-separability-completions.html#exercise-18",
   "type": "Exploration",
-  "number": "4.98",
+  "number": "4.111",
   "title": "",
   "body": " An isometry is injective.   Suppose is an isometry. If and , then . So .  "
 },
@@ -1931,7 +2093,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separability-completions.html#def-iso-iso",
   "type": "Definition",
-  "number": "4.99",
+  "number": "4.112",
   "title": "Isometric Isomorphism.",
   "body": "Isometric Isomorphism   An isometric isomorphism between metric spaces and is a surjective isometry . In this case, is bijective and is also an isometry. and are isometrically isomorphic if exists an isometric isomorphism .   "
 },
@@ -1940,16 +2102,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separability-completions.html#def-completion",
   "type": "Definition",
-  "number": "4.100",
+  "number": "4.113",
   "title": "Completion.",
   "body": "Completion   A completion of a metric space is a pair where is a complete metric space and is an isometry such that is dense in .   "
 },
 {
-  "id": "example-27",
+  "id": "example-32",
   "level": "2",
-  "url": "sec-separability-completions.html#example-27",
+  "url": "sec-separability-completions.html#example-32",
   "type": "Example",
-  "number": "4.101",
+  "number": "4.114",
   "title": "",
   "body": "     If , then is a completion of .    If , then is a completion of .     , then where is a completion of .    If is a complete metric space, then is a completion of .      "
 },
@@ -1958,7 +2120,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separability-completions.html#thm-completion",
   "type": "Theorem",
-  "number": "4.102",
+  "number": "4.115",
   "title": "Completion Existence.",
   "body": "Completion Existence   Let be a metric space.    has a completion     Let , be completions of . Then there is a unique isometric isomorphism such that .      "
 },
@@ -1967,16 +2129,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separability-completions.html#def-separable",
   "type": "Definition",
-  "number": "4.103",
+  "number": "4.116",
   "title": "Separable.",
   "body": "Separable   A metric space is seperable if there is a countable dense (recall dense means ) set .   "
 },
 {
-  "id": "example-28",
+  "id": "example-33",
   "level": "2",
-  "url": "sec-separability-completions.html#example-28",
+  "url": "sec-separability-completions.html#example-33",
   "type": "Example",
-  "number": "4.104",
+  "number": "4.117",
   "title": "",
   "body": "      is separable since is countable and dense in .     is separable. is dense in , and is countable since by .     are separable.    If is an uncountable set with the discrete metric, then is not separable. In fact, is the only dense subset of , and is not countable.      "
 },
@@ -1985,7 +2147,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separability-completions.html#thm-compact-separable",
   "type": "Theorem",
-  "number": "4.105",
+  "number": "4.118",
   "title": "Compact Implies Separable.",
   "body": "Compact Implies Separable   Every compact metric space is separable.   "
 },
@@ -1994,7 +2156,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separability-completions.html#lem-separable",
   "type": "Lemma",
-  "number": "4.106",
+  "number": "4.119",
   "title": "Separable Lemma.",
   "body": "Separable Lemma   A metric space is separable iff there exists a countable set of open sets in such that for all , and all open with , there exists so that .    ( ) Suppose is given. We may assume by replacing with if needed. For each , let , and let The function is surjective, and is countable, so is also countable. I claim that is also dense in . Suppose . Fix . Then by property of taking , we can find with . Then and , a contradiction.  ( ) Let be a countable set with . Let Then there is a surjective function by . Since and are countable, is also countable. Suppose now that is open, and . We need to find with . Fix such that . Now let Since , we have . So exists with . Now Then and , so , set .   "
 },
@@ -2003,7 +2165,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separability-completions.html#remark-13",
   "type": "Remark",
-  "number": "4.107",
+  "number": "4.120",
   "title": "",
   "body": " In the language of topology, this says a metric space is separable iff it is second countable.  "
 },
@@ -2012,7 +2174,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separability-completions.html#thm-separable-subsets",
   "type": "Theorem",
-  "number": "4.108",
+  "number": "4.121",
   "title": "Separable Subsets.",
   "body": "Separable Subsets   If is a separable metric space and , then is separable.    Suppose is separable, and let be given as in the lemma above. Let . Then is a collection of open subsets of and is countable since is countable and the function is surjective. Let be an open set and let with . We need a with . Since is open in , there is an open set such that . Since , there exists such that . Let and note . Apply the lemma again to , and is separable.   "
 },
@@ -2134,18 +2296,18 @@ var ptx_lunr_docs = [
   "body": "Partition   A partition of a closed interval is a finite set so that .   "
 },
 {
-  "id": "convention-8",
+  "id": "convention-11",
   "level": "2",
-  "url": "sec-riemann.html#convention-8",
+  "url": "sec-riemann.html#convention-11",
   "type": "Convention",
   "number": "6.3",
   "title": "",
   "body": " Abusing notation, we'll often write let be a partition of . Let be the set of all partitions of .  "
 },
 {
-  "id": "convention-9",
+  "id": "convention-12",
   "level": "2",
-  "url": "sec-riemann.html#convention-9",
+  "url": "sec-riemann.html#convention-12",
   "type": "Convention",
   "number": "6.4",
   "title": "",
@@ -2179,18 +2341,18 @@ var ptx_lunr_docs = [
   "body": "Riemann Integral   A function is called Riemann integrable if , and we'll define We'll write for the set of all Riemann integrable functions .   "
 },
 {
-  "id": "exercise-18",
+  "id": "exercise-19",
   "level": "2",
-  "url": "sec-riemann.html#exercise-18",
+  "url": "sec-riemann.html#exercise-19",
   "type": "Exploration",
   "number": "6.8",
   "title": "",
   "body": " A bounded function is called Riemann integrable if its real and imaginary parts are, and in this case   "
 },
 {
-  "id": "example-29",
+  "id": "example-34",
   "level": "2",
-  "url": "sec-riemann.html#example-29",
+  "url": "sec-riemann.html#example-34",
   "type": "Example",
   "number": "6.9",
   "title": "",
@@ -2224,9 +2386,9 @@ var ptx_lunr_docs = [
   "body": "Lower and Upper Darboux Integrals   For any , In particular,      Fix partitions . It's enough to show that since the result then follows by taking the supremum over and the infemum over . Note that is a refinement of both and . So    "
 },
 {
-  "id": "example-30",
+  "id": "example-35",
   "level": "2",
-  "url": "sec-riemann.html#example-30",
+  "url": "sec-riemann.html#example-35",
   "type": "Example",
   "number": "6.13",
   "title": "",
@@ -2242,9 +2404,9 @@ var ptx_lunr_docs = [
   "body": "Riemann's Condition   Suppose . Then for all there exists with     Suppose for all there exists with Given , choose . Then . Hence , so .  Conversely, suppose that . Fix . There are so that and . Hence, , or rearranging Set . Then    "
 },
 {
-  "id": "convention-10",
+  "id": "convention-13",
   "level": "2",
-  "url": "sec-riemann.html#convention-10",
+  "url": "sec-riemann.html#convention-13",
   "type": "Convention",
   "number": "6.15",
   "title": "",
@@ -2278,9 +2440,9 @@ var ptx_lunr_docs = [
   "body": "Integrable Functions Form Vector Space   If and , then and In other words, is a vector space (over ) and the function where is linear.    Clearly is bounded since and are. Also, So, all the inequalities are equalities.   "
 },
 {
-  "id": "exercise-19",
+  "id": "exercise-20",
   "level": "2",
-  "url": "sec-riemann.html#exercise-19",
+  "url": "sec-riemann.html#exercise-20",
   "type": "Exploration",
   "number": "6.19",
   "title": "",
@@ -2359,18 +2521,18 @@ var ptx_lunr_docs = [
   "body": "  If , then , and for all     "
 },
 {
-  "id": "example-31",
+  "id": "example-36",
   "level": "2",
-  "url": "sec-riemann-stieltjes.html#example-31",
+  "url": "sec-riemann-stieltjes.html#example-36",
   "type": "Example",
   "number": "6.27",
   "title": "",
   "body": "  The Heaviside function is given by    "
 },
 {
-  "id": "p-614",
+  "id": "p-648",
   "level": "2",
-  "url": "sec-riemann-stieltjes.html#p-614",
+  "url": "sec-riemann-stieltjes.html#p-648",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -2413,9 +2575,9 @@ var ptx_lunr_docs = [
   "body": "  Suppose is differentiable, and . Then and    "
 },
 {
-  "id": "example-32",
+  "id": "example-37",
   "level": "2",
-  "url": "sec-riemann-stieltjes.html#example-32",
+  "url": "sec-riemann-stieltjes.html#example-37",
   "type": "Example",
   "number": "6.32",
   "title": "",
@@ -2440,18 +2602,18 @@ var ptx_lunr_docs = [
   "body": "Bounded Variation   Given and a partition , define Then define the variation of over to be We say has bounded variation if .   "
 },
 {
-  "id": "convention-11",
+  "id": "convention-14",
   "level": "2",
-  "url": "sec-bounded-variation.html#convention-11",
+  "url": "sec-bounded-variation.html#convention-14",
   "type": "Convention",
   "number": "6.34",
   "title": "",
   "body": " Let be the set of all functions on with bounded variation.  "
 },
 {
-  "id": "example-33",
+  "id": "example-38",
   "level": "2",
-  "url": "sec-bounded-variation.html#example-33",
+  "url": "sec-bounded-variation.html#example-38",
   "type": "Example",
   "number": "6.35",
   "title": "",
@@ -2503,9 +2665,9 @@ var ptx_lunr_docs = [
   "body": "  If is differentiable and is continuous, then .   "
 },
 {
-  "id": "example-34",
+  "id": "example-39",
   "level": "2",
-  "url": "sec-bounded-variation.html#example-34",
+  "url": "sec-bounded-variation.html#example-39",
   "type": "Example",
   "number": "6.41",
   "title": "",
@@ -2584,36 +2746,36 @@ var ptx_lunr_docs = [
   "body": "  Let be a set and let be a metric space. For functions and , we say     converges to  point-wise if for all and all there exists such that for all :       converges to  uniformly if for all there exists such that fr all and :       "
 },
 {
-  "id": "exercise-20",
+  "id": "exercise-21",
   "level": "2",
-  "url": "sec-pointwise-uniform.html#exercise-20",
+  "url": "sec-pointwise-uniform.html#exercise-21",
   "type": "Exploration",
   "number": "7.2",
   "title": "",
   "body": " If uniformly, then point-wise.  "
 },
 {
-  "id": "example-35",
+  "id": "example-40",
   "level": "2",
-  "url": "sec-pointwise-uniform.html#example-35",
+  "url": "sec-pointwise-uniform.html#example-40",
   "type": "Example",
   "number": "7.3",
   "title": "",
   "body": "  Let     Get and if then for all with , we have . So . Then pointwise and is not continuous.   "
 },
 {
-  "id": "example-36",
+  "id": "example-41",
   "level": "2",
-  "url": "sec-pointwise-uniform.html#example-36",
+  "url": "sec-pointwise-uniform.html#example-41",
   "type": "Example",
   "number": "7.4",
   "title": "",
   "body": " Another example: ,   "
 },
 {
-  "id": "example-37",
+  "id": "example-42",
   "level": "2",
-  "url": "sec-pointwise-uniform.html#example-37",
+  "url": "sec-pointwise-uniform.html#example-42",
   "type": "Example",
   "number": "7.5",
   "title": "",
@@ -2629,9 +2791,9 @@ var ptx_lunr_docs = [
   "body": "  If are metric spaces and is a sequence of continuous functions, is a function, and uniformly, then is continuous. Further, if each is uniformly continuous, then so is .   "
 },
 {
-  "id": "convention-12",
+  "id": "convention-15",
   "level": "2",
-  "url": "sec-pointwise-uniform.html#convention-12",
+  "url": "sec-pointwise-uniform.html#convention-15",
   "type": "Convention",
   "number": "7.7",
   "title": "",
@@ -2647,9 +2809,9 @@ var ptx_lunr_docs = [
   "body": "  Define by . This is called the -norm of (aka supremum norm or uniform norm    "
 },
 {
-  "id": "convention-13",
+  "id": "convention-16",
   "level": "2",
-  "url": "sec-pointwise-uniform.html#convention-13",
+  "url": "sec-pointwise-uniform.html#convention-16",
   "type": "Convention",
   "number": "7.9",
   "title": "",
@@ -2683,27 +2845,27 @@ var ptx_lunr_docs = [
   "body": "Dini's Theorem   Suppose is a compact metric space , pointwise and pointwise. Then uniformly.   "
 },
 {
-  "id": "exercise-21",
+  "id": "exercise-22",
   "level": "2",
-  "url": "sec-pointwise-uniform.html#exercise-21",
+  "url": "sec-pointwise-uniform.html#exercise-22",
   "type": "Exploration",
   "number": "7.13",
   "title": "",
   "body": " Dini's theorem holds for decreasing functions as well.  "
 },
 {
-  "id": "example-38",
+  "id": "example-43",
   "level": "2",
-  "url": "sec-pointwise-uniform.html#example-38",
+  "url": "sec-pointwise-uniform.html#example-43",
   "type": "Example",
   "number": "7.14",
   "title": "",
   "body": "      "
 },
 {
-  "id": "example-39",
+  "id": "example-44",
   "level": "2",
-  "url": "sec-pointwise-uniform.html#example-39",
+  "url": "sec-pointwise-uniform.html#example-44",
   "type": "Example",
   "number": "7.15",
   "title": "",
@@ -2746,18 +2908,18 @@ var ptx_lunr_docs = [
   "body": " This is a slightly non-standard version of the theorem. Combining this version with the comparison test gives the usual statement: If and so that   for all have         then converges uniformly.  "
 },
 {
-  "id": "example-40",
+  "id": "example-45",
   "level": "2",
-  "url": "sec-series-functions.html#example-40",
+  "url": "sec-series-functions.html#example-45",
   "type": "Example",
   "number": "7.19",
   "title": "",
   "body": "  The series converges uniformly over .    Let . Then for all and , so by the Weierstass -test, converges uniformly over .   "
 },
 {
-  "id": "exercise-22",
+  "id": "exercise-23",
   "level": "2",
-  "url": "sec-series-functions.html#exercise-22",
+  "url": "sec-series-functions.html#exercise-23",
   "type": "Exploration",
   "number": "7.20",
   "title": "",
@@ -2818,27 +2980,27 @@ var ptx_lunr_docs = [
   "body": "  A set is called (uniformly) equicontinuous if for all there exists a such that for all and for all , (so doesn't depend on ).  We could define to be equicontinuous at if for all exists such that for all and all , , and pointwise equicontinuous if is equicontinuous at each point in (so depends on but not ).   "
 },
 {
-  "id": "convention-14",
+  "id": "convention-17",
   "level": "2",
-  "url": "sec-equicontinuity.html#convention-14",
+  "url": "sec-equicontinuity.html#convention-17",
   "type": "Convention",
   "number": "7.24",
   "title": "",
   "body": " We won't need pointwise equicontinuous, sop we'll only work with uniform version and just call it equicontinuity.  "
 },
 {
-  "id": "example-41",
+  "id": "example-46",
   "level": "2",
-  "url": "sec-equicontinuity.html#example-41",
+  "url": "sec-equicontinuity.html#example-46",
   "type": "Example",
   "number": "7.25",
   "title": "",
   "body": "  If is finite, then is equicontinuous iff each is uniformly continuous (take in the notation above).   "
 },
 {
-  "id": "exercise-23",
+  "id": "exercise-24",
   "level": "2",
-  "url": "sec-equicontinuity.html#exercise-23",
+  "url": "sec-equicontinuity.html#exercise-24",
   "type": "Exploration",
   "number": "7.26",
   "title": "",
@@ -2863,9 +3025,9 @@ var ptx_lunr_docs = [
   "body": "The Stone-Weierstrass Theorem  Basic problem: Approximate a continuous function uniformly by a nice sequence of functions .   Let be a compact metric space. We'll write for either or and view as either a complex or real vector space, respectively.     A vector subspace is called   A subalgebra if      unital if (1=constant function )     self-adjoint if .        In the real case, every subspace of is self-adjoint.         is a subalebra of and is unital, self-adjoint     is a unital self-adjoint subalgebra.     , then is a unital subalgebra of .     then is a self-adjoint subalgebra of whic is not unital.    Let . Let . Then is a unital subalgebra of . Claim: is not self adjoint.       Stone-Weierstrass Theorem   If is a unital self-adjoint subalgebra, then (in the metric ) iff  separates points in ie for all , then exists such that .    Weierstrass' Approximation Theorem   If , then there is a sequence of polynomial so that uniformly on .    "
 },
 {
-  "id": "convention-15",
+  "id": "convention-18",
   "level": "2",
-  "url": "sec-sw.html#convention-15",
+  "url": "sec-sw.html#convention-18",
   "type": "Convention",
   "number": "7.28",
   "title": "",
@@ -2890,9 +3052,9 @@ var ptx_lunr_docs = [
   "body": " In the real case, every subspace of is self-adjoint.  "
 },
 {
-  "id": "example-42",
+  "id": "example-47",
   "level": "2",
-  "url": "sec-sw.html#example-42",
+  "url": "sec-sw.html#example-47",
   "type": "Example",
   "number": "7.31",
   "title": "",
@@ -2923,385 +3085,763 @@ var ptx_lunr_docs = [
   "type": "Appendix",
   "number": "A",
   "title": "Qualifying Exams",
-  "body": "Qualifying Exams  Winter 2023    Suppose that is differentiable at . Let and be sequences that both converge to . Prove that (You may assume that ).    Coming (not so) soon!      Let be given.   Assume that . Prove there exists such that , for all .    Suppose the sequence converges in . Must be finite?       Coming (not so) soon!         Suppose that is a Cauchy sequence from . Determine whether must be uniformly equicontinuous.    Suppose that is closed and bounded but not uniformly equicontinuous. Prove that is not compact in .       Coming (not so) soon!      Use the Riemann condition to show that where and Compute the value of the Riemann-Stieltjes integral .    Coming (not so) soon!      Determine all the values of for which the series below converges     Coming (not so) soon!      Let be a metric space. Define the functions by    Show that are both metrics.    Show that are equivalent metrics on the space .       Coming (not so) soon!     Spring 2022       Let for . Prove that converges pointwise and determine if it converges uniformly on . Is equicontinuous? Clearly motivate your answer.    Prove that in general, if is an equicontinuous sequence of functions on a compact interval and pointwise, then the convergence is uniform.       Coming (not so) soon!      Let be a metric space. Suppose that . For each , set Suppose that is continuous and is compact for all . Prove that is compact.    Coming (not so) soon!      Consider the sequence defined by and for  . Show that as . Also, show that .    Coming (not so) soon!      Use the Riemann condition to show that where and Compute the value of the Riemann-Stieltjes integral .    Coming (not so) soon!      Find the domain of convergence and the sum of the series Show how one may use the sum of the series to provide an approximation for up to three decimals. Be sure to provide all technical details.    Coming (not so) soon!      Show that are metrics on , but are not equivalent on .    Coming (not so) soon!     Winter 2022    Suppose with and let be a differentiable function such that is continuous. Show that for every , there is a such that for every with , we have     Coming (not so) soon!      Let and be metric spaces and let be a continuous bijection.   Show by example that need not be continuous.    Show that if is compact, then is continuous.       Coming (not so) soon!      Compute, with proof, .    Coming (not so) soon!         Let be a continuous function. If for all integers , show that .    Let be a differentiable function such that is continuous. If for all integers , show that is constant.       Coming (not so) soon!      Prove the following special case of Dini's Theorem: if is decreasing sequence of continuous functions such that for all , then converges uniformly to 0. (You should not use any form of Dini's theorem without proof.)    Coming (not so) soon!      Let be a continuous function.   Show .    If for all , show .       Coming (not so) soon!     Spring 2021    Suppose that is a compact metric space, , and every convergent subsequence of converges to . Show that converges to .    Coming (not so) soon!         Show that if is a differentiable function and is bounded, then has bounded variation.    Construct, with proof, a continuous function which does not have bounded variation.       Coming (not so) soon!      Suppose that is a differentiable function such that there is no with . Show that if with , then is a finite set.    Coming (not so) soon!      Let be a metric space. A function is called lower semicontinuous if for every convergent sequence , we have    Let be a set and define Show that is lower semicontinuous if and only if is open.    Show that if is a compact metric space and is lower semicontinuous, then there is a such that        Coming (not so) soon!      Suppose that and are sequences of strictly positive real numbers such that converges, and suppose that for each integer , we have . Show that converges.    Coming (not so) soon!      A function is called Lipschitz if there is a constant such that for all , we have Let denote the set of all Lipschitz functions with the uniform metric Show that is a countable union of compact sets.    Coming (not so) soon!     Winter 2021    Suppose: and are metric spaces; is compact; and is a continuous and onto function.   A well-known theorem states that if is compact, then is also compact. Prove this theorem, and conclude that is a compact metric space.    Suppose and is an open set. Prove that is an open set.       Coming (not so) soon!      Let be a bounded sequence of real numbers. Being sure to include all details, prove that     Notice that for and . Approximate in terms of and examine what happens if you hold fixed and let grow.    Coming (not so) soon!      Suppose is Riemann integrable and .   If is continuous, prove that for every .    Give an example (with proof) of a non-zero Riemann integrable function such that .       Coming (not so) soon!      Let be the usual Cantor and let be the collection of all continuous complex-valued functions on . Recall this is the set obtained by removing from , then removing the middle third from the remaining intervals, etc. A function is a projection if for every . Given and , prove that there exists , projections and complex numbers such that for every ,     Coming (not so) soon!      Suppose is a decreasing sequence of real numbers and converges. Prove that .    Coming (not so) soon!      For , consider the series, .   Prove this series converges for every .    Set . Prove that is differentiable at each . Also, find a formula for (in terms of a series), being sure to justify that your formula is correct.       Coming (not so) soon!     Spring 2020    Suppose for each is continuous and satisfies . Put . Prove that there is a subsequence of which converges uniformly on .    It's enough to show that is compact. By the Arzelá-Ascoli Theorem, is bounded and equicontinuous.  Bounded: If , Then for all , so is bounded by 2020.  Equicontinuous: Fix and let . Then if with and , so is equicontinuous.      Suppose is twice differentiable and that for every . Prove that for any real numbers satisfying ,     Coming (not so) soon!      Suppose is a compact metric space.   Let be a closed subset of and for , define . Show that if , then .    Suppose is an isometry, that is, for every . Prove that .       Coming (not so) soon!      Suppose is a uniformly continuous function. Prove there are real numbers and such that for every ,     Coming (not so) soon!      The following questions are not related.   Let Evaluate     Suppose is continuous. Evaluate . Give a complete proof of your answer.       Coming (not so) soon!      Suppose is a function such that , has a continuous derivative, and for every . Prove there exists a sequence of polynomials such that converges uniformly to and such that for every , is strictly increasing, , and .    Coming (not so) soon!     Winter 2020    Let and be given. Suppose that and diverges. Prove that there exists a subsequence such that .    Coming (not so) soon!      Let be bounded sequences, and define the sets Prove or provide a counterexample each of the following statements.   If is a limit point for and is a limit point for , then is a limit point for . (Here limit point means accumulation or cluster point.)    If , then there exists and such that .    If for all , then .       Coming (not so) soon!      Let be a metric space and define by    Prove that is a metric on .    Prove that is complete if and only if is complete.       Coming (not so) soon!      With , let denote the family of all -valued functions that are continuous on the interval .   Let and be given. Assume that each is differentiable on and satisfies and for all . Prove that is equicontinuous on .    Let a uniformly bounded sequence of functions be given. For each , define by Prove that there exists a subsequence of that converges uniformly on to some .       Coming (not so) soon!         Let , with , be given, and suppose that is differentiable on and that both exists and is finite, for all . Prove that is continuously differentiable on .    Produce a function that is everywhere differentiable and such that is discontinuous at some . Justify your claim.       Coming (not so) soon!      The parts of this problem are not connected.   Let and a strictly increasing sequence be given. Assume that is absolutely convergent, and define by Prove or disprove: has bounded variation on .    Suppose that is Riemann-Stieltjes integrable with respect to a nondecreasing function . Prove that is Riemann-Stieltjes integrable with respect to the function .       Coming (not so) soon!      "
+  "body": "Qualifying Exams  Winter 2023    Suppose that is differentiable at . Let and be sequences that both converge to . Prove that (You may assume that ).    Coming (not so) soon!      Let be given.   Assume that . Prove there exists such that , for all .    Suppose the sequence converges in . Must be finite?       Coming (not so) soon!         Suppose that is a Cauchy sequence from . Determine whether must be uniformly equicontinuous.    Suppose that is closed and bounded but not uniformly equicontinuous. Prove that is not compact in .       Coming (not so) soon!      Use the Riemann condition to show that where and Compute the value of the Riemann-Stieltjes integral .    Coming (not so) soon!      Determine all the values of for which the series below converges     Coming (not so) soon!      Let be a metric space. Define the functions by    Show that are both metrics.    Show that are equivalent metrics on the space .       Coming (not so) soon!     Spring 2022       Let for . Prove that converges pointwise and determine if it converges uniformly on . Is equicontinuous? Clearly motivate your answer.    Prove that in general, if is an equicontinuous sequence of functions on a compact interval and pointwise, then the convergence is uniform.       Coming (not so) soon!      Let be a metric space. Suppose that . For each , set Suppose that is continuous and is compact for all . Prove that is compact.    Coming (not so) soon!      Consider the sequence defined by and for  . Show that as . Also, show that .    Coming (not so) soon!      Use the Riemann condition to show that where and Compute the value of the Riemann-Stieltjes integral .    Coming (not so) soon!      Find the domain of convergence and the sum of the series Show how one may use the sum of the series to provide an approximation for up to three decimals. Be sure to provide all technical details.    Coming (not so) soon!      Show that are metrics on , but are not equivalent on .    Coming (not so) soon!     Winter 2022    Suppose with and let be a differentiable function such that is continuous. Show that for every , there is a such that for every with , we have     Coming (not so) soon!      Let and be metric spaces and let be a continuous bijection.   Show by example that need not be continuous.    Show that if is compact, then is continuous.       Coming (not so) soon!      Compute, with proof, .    Coming (not so) soon!         Let be a continuous function. If for all integers , show that .    Let be a differentiable function such that is continuous. If for all integers , show that is constant.       Coming (not so) soon!      Prove the following special case of Dini's Theorem: if is decreasing sequence of continuous functions such that for all , then converges uniformly to 0. (You should not use any form of Dini's theorem without proof.)    Coming (not so) soon!      Let be a continuous function.   Show .    If for all , show .       Coming (not so) soon!     Spring 2021    Suppose that is a compact metric space, , and every convergent subsequence of converges to . Show that converges to .    Coming (not so) soon!         Show that if is a differentiable function and is bounded, then has bounded variation.    Construct, with proof, a continuous function which does not have bounded variation.       Coming (not so) soon!      Suppose that is a differentiable function such that there is no with . Show that if with , then is a finite set.    Coming (not so) soon!      Let be a metric space. A function is called lower semicontinuous if for every convergent sequence , we have    Let be a set and define Show that is lower semicontinuous if and only if is open.    Show that if is a compact metric space and is lower semicontinuous, then there is a such that        Coming (not so) soon!      Suppose that and are sequences of strictly positive real numbers such that converges, and suppose that for each integer , we have . Show that converges.    Coming (not so) soon!      A function is called Lipschitz if there is a constant such that for all , we have Let denote the set of all Lipschitz functions with the uniform metric Show that is a countable union of compact sets.    Coming (not so) soon!     Winter 2021    Suppose: and are metric spaces; is compact; and is a continuous and onto function.   A well-known theorem states that if is compact, then is also compact. Prove this theorem, and conclude that is a compact metric space.    Suppose and is an open set. Prove that is an open set.       Coming (not so) soon!      Let be a bounded sequence of real numbers. Being sure to include all details, prove that     Notice that for and . Approximate in terms of and examine what happens if you hold fixed and let grow.    Coming (not so) soon!      Suppose is Riemann integrable and .   If is continuous, prove that for every .    Give an example (with proof) of a non-zero Riemann integrable function such that .       Coming (not so) soon!      Let be the usual Cantor and let be the collection of all continuous complex-valued functions on . Recall this is the set obtained by removing from , then removing the middle third from the remaining intervals, etc. A function is a projection if for every . Given and , prove that there exists , projections and complex numbers such that for every ,     Coming (not so) soon!      Suppose is a decreasing sequence of real numbers and converges. Prove that .    Coming (not so) soon!      For , consider the series, .   Prove this series converges for every .    Set . Prove that is differentiable at each . Also, find a formula for (in terms of a series), being sure to justify that your formula is correct.       Coming (not so) soon!     Spring 2020    Suppose for each is continuous and satisfies . Put . Prove that there is a subsequence of which converges uniformly on .    It's enough to show that is compact. By the Arzelá-Ascoli Theorem, is bounded and equicontinuous.  Bounded: If , Then for all , so is bounded by 2020.  Equicontinuous: Fix and let . Then if with and , so is equicontinuous.      Suppose is twice differentiable and that for every . Prove that for any real numbers satisfying ,     Coming (not so) soon!      Suppose is a compact metric space.   Let be a closed subset of and for , define . Show that if , then .    Suppose is an isometry, that is, for every . Prove that .       Coming (not so) soon!      Suppose is a uniformly continuous function. Prove there are real numbers and such that for every ,     Coming (not so) soon!      The following questions are not related.   Let Evaluate     Suppose is continuous. Evaluate . Give a complete proof of your answer.       Coming (not so) soon!      Suppose is a function such that , has a continuous derivative, and for every . Prove there exists a sequence of polynomials such that converges uniformly to and such that for every , is strictly increasing, , and .    Coming (not so) soon!     Winter 2020    Let and be given. Suppose that and diverges. Prove that there exists a subsequence such that .    Coming (not so) soon!      Let be bounded sequences, and define the sets Prove or provide a counterexample each of the following statements.   If is a limit point for and is a limit point for , then is a limit point for . (Here limit point means accumulation or cluster point.)    If , then there exists and such that .    If for all , then .       Coming (not so) soon!      Let be a metric space and define by    Prove that is a metric on .    Prove that is complete if and only if is complete.       Coming (not so) soon!      With , let denote the family of all -valued functions that are continuous on the interval .   Let and be given. Assume that each is differentiable on and satisfies and for all . Prove that is equicontinuous on .    Let a uniformly bounded sequence of functions be given. For each , define by Prove that there exists a subsequence of that converges uniformly on to some .       Coming (not so) soon!         Let , with , be given, and suppose that is differentiable on and that both exists and is finite, for all . Prove that is continuously differentiable on .    Produce a function that is everywhere differentiable and such that is discontinuous at some . Justify your claim.       Coming (not so) soon!      The parts of this exploration are not connected.   Let and a strictly increasing sequence be given. Assume that is absolutely convergent, and define by Prove or disprove: has bounded variation on .    Suppose that is Riemann-Stieltjes integrable with respect to a nondecreasing function . Prove that is Riemann-Stieltjes integrable with respect to the function .       Coming (not so) soon!     Spring 2019    Let and be metric spaces. Define by for all and .   Prove that is a metric space.    Let and be compact sets in and , respectively. Prove that is a compact set in .       Coming (not so) soon!      Let be given, and assume that converges.   Show that     Suppose that satisfies , for every . Prove is convergent.       Coming (not so) soon!      Let be continuous on , and define by    Show that exists.    Prove that is continuous on .    Suppose that is bounded, as well as continuous, on . Prove that is uniformly continuous on .       Coming (not so) soon!      Consider the formal series Prove or disprove each of the following statements.   The series converges uniformly on the interval .    The series converges uniformly on the interval .       Coming (not so) soon!         Let be an increasing function that is continuous at 0, and let be a bounded function. Suppose that, for each , the function is Riemann-Stieltjes integrable with respect to over . Prove that is Riemann-Stieljes integrable with respect to over .    Let be an enumeration of , the rational numbers in . Define by Prove or disprove: has bounded variation on .       Coming (not so) soon!      Suppose that has the following properties:    is continuous on and differentiable on ;         there exists such that .      Prove that there exists such that .    There exists such that for each , there exists some such that .       Coming (not so) soon!     Winter 2019       Let and for . Prove that and converge pointwise but not uniformly on .    Are the families , respectively given in part (a) equicontinuous? Clearly motivate your answer.       Coming (not so) soon!      Consider the following subset of the metric space :    Determine whether is bounded, and if so what is its diameter.    Determine whether is closed in .    Determine whether is compact in .       Coming (not so) soon!      Determine the values of for which converges.    Coming (not so) soon!      Suppose that is differentiable and . Assume that there is a such that for all . Prove that for all .    Coming (not so) soon!      Use the Riemann condition to show that where and Compute the value of the Riemann-Stieltjes integral .    Coming (not so) soon!      Use the Heine-Borel Theorem to prove that if is continuous on and for every then there exists such that for every .    Coming (not so) soon!     Spring 2018    Determine whether the following sequences converge and carefully justify your claims:         .       Coming (not so) soon!      Find the domain of convergence and the sum of the series Show how one may use the sum of the series to provide an approximation for up to three decimals. Be sure to provide all technical details.    Coming (not so) soon!      Define by Determine whether is Riemann-Stieltjes integrable with respect to over . If it is, evaluate     Coming (not so) soon!         Given a set , show that the function defined by is a metric on .    Let be given. Set Determine whether the set is compact in .       Coming (not so) soon!         If is an equicontinuous sequence of functions on a compact interval and pointwise, prove that the convergence is uniform.    Let be given, and suppose that satisfies , for all and all in an interval . Show that is equicontinuous.          Claim: is bounded. If not, there is a subsequence of so that . By the extreme value theroem, exists with . Using that is compact and passing to a subsequence, we may assume converges to some . We'll show that . To this end, fix . Let be such that for all with we have Then choose so that for all , we have and . Then if , we have where since (as ) and since . Then In particular, a contradiction.  Suppose does not converge uniformly to . Then exists such that for all such that . Let as above. Then exists subsequence so that for all , . Then is bounded and equicontinuous. By the Arzelá-Ascoli Theorem, has a subsequence converging to some . Then by above, we have . But converge pointwise to both and so and , a contradiction.             Let be a continuous function, and for all , put .   Show that converges uniformly, as , over any closed interval .    Give an example of a continuous function for which the convergence is not uniform on .       Coming (not so) soon!     Winter 2018    Let be a monotonically increasing function on an interval and assume is Riemann integrable in . Let be a bounded real function on . Prove that implies , and     Coming (not so) soon!      Let be a metric space in which every infinite subset has a limit point. Prove that there is a countable subset of that is dense in .    Coming (not so) soon!      Let be any rearrangement of an infinite sequence . Assume converges absolutely. Prove .    Coming (not so) soon!      Suppose uniformly on and      Coming (not so) soon!      Let . Suppose . Prove is the difference of two increasing functions.    Coming (not so) soon!      Suppose that is continuous on , differentiable on , satisfying  and for some . Prove that there is an such that .    Coming (not so) soon!     Spring 2017    Suppose that is given by: . By using the definition only, prove that is uniformly continuous on .    Hint: write .    Coming (not so) soon!      Let be a metric space. A function is said to be lower semicontinuous at if, for every there exists such that for all with , then . Prove: is lower semicontinuous at if and only if whenever satisfies in .    Coming (not so) soon!      Let be a compact metric space. Suppose that is a sequence of continuous functions with , for all and all , and such that point-wise on . Prove converges to zero uniformly on .    Coming (not so) soon!      Let be a function such that , i.e., is twice-continuously differentiable on , and exists on with for all . Let: Prove that the series converges absolutely.    Coming (not so) soon!      Suppose that is a continuous function which satisfies, for , Prove that for all .    Coming (not so) soon!      For each , let be given by: .   Prove converges point-wise on and find the point-wise limit .    Show that uniformly on for every , but the convergence is not uniform on .       Coming (not so) soon!     Winter 2017    Consider the series . Justify your answers to the following questions:   Does the series converge at ?    Does the series converge on ?    Does the series converge uniformly on ?    Does the series converge uniformly on for any .       Coming (not so) soon!      Prove: on For any on and on . In addition, if either condition holds, then we always have     Coming (not so) soon!      Let , where . Assume .   Prove: converges absolutely for .    Prove: .       Coming (not so) soon!      Let . Prove that there is a sequence of polynomials, , of even degree monomials (i.e. every term in is of the form for integer ) that converges to uniformly on .    Coming (not so) soon!      Assume is a sequence of monotonically increasing functions on , and point-wise. Prove that if is continuous then the convergence is uniform on .    Coming (not so) soon!      Let be a metric space. A function is said to be lower semi-continuous (l.s.c.) if is open in for every . Analogously, is upper semi-continuous (u.s.c.) if is open in for every .   Prove that a function is continuous is both l.s.c and u.s.c.    Prove that is lower semi-continuous (l.s.c.) whenever such that in .       Coming (not so) soon!     Spring 2016    Consider the function: .   By using the definition of the limit only, prove that is continuous on . (Note: You are not allowed to trivialize the problem by using properties of limits).    Is uniformly continuous on ? Justify your answer.       Coming (not so) soon!      Let be a bounded sequence of real numbers and be given by: Prove that .    Coming (not so) soon!      Assume is a compact metric space.   Prove that is both complete and separable.    Suppose is a sequence such that the series is convergent. Prove that the sequence converges in .       Coming (not so) soon!      Suppose that is continuous on , differentiable on , and such that , for some . Prove that there is an such that     Coming (not so) soon!      Let .   Prove that converges point-wise on for every .    Show that the convergence in part (a) is uniform on for all , but not uniform for any .       Coming (not so) soon!         Suppose is a bounded function that is continuous at 0. Let for and for . Prove that , i.e., is Riemann integrable with respect to on , and .    Let be a continuous function such that , for all . Prove that for all .       Coming (not so) soon!     "
 },
 {
-  "id": "problem-1",
+  "id": "exploration-1",
   "level": "2",
-  "url": "appendix-1.html#problem-1",
+  "url": "appendix-1.html#exploration-1",
   "type": "Problem",
   "number": "A.1",
   "title": "",
   "body": "  Suppose that is differentiable at . Let and be sequences that both converge to . Prove that (You may assume that ).    Coming (not so) soon!   "
 },
 {
-  "id": "problem-2",
+  "id": "exploration-2",
   "level": "2",
-  "url": "appendix-1.html#problem-2",
+  "url": "appendix-1.html#exploration-2",
   "type": "Problem",
   "number": "A.2",
   "title": "",
   "body": "  Let be given.   Assume that . Prove there exists such that , for all .    Suppose the sequence converges in . Must be finite?       Coming (not so) soon!   "
 },
 {
-  "id": "problem-3",
+  "id": "exploration-3",
   "level": "2",
-  "url": "appendix-1.html#problem-3",
+  "url": "appendix-1.html#exploration-3",
   "type": "Problem",
   "number": "A.3",
   "title": "",
   "body": "     Suppose that is a Cauchy sequence from . Determine whether must be uniformly equicontinuous.    Suppose that is closed and bounded but not uniformly equicontinuous. Prove that is not compact in .       Coming (not so) soon!   "
 },
 {
-  "id": "problem-4",
+  "id": "exploration-4",
   "level": "2",
-  "url": "appendix-1.html#problem-4",
+  "url": "appendix-1.html#exploration-4",
   "type": "Problem",
   "number": "A.4",
   "title": "",
   "body": "  Use the Riemann condition to show that where and Compute the value of the Riemann-Stieltjes integral .    Coming (not so) soon!   "
 },
 {
-  "id": "problem-5",
+  "id": "exploration-5",
   "level": "2",
-  "url": "appendix-1.html#problem-5",
+  "url": "appendix-1.html#exploration-5",
   "type": "Problem",
   "number": "A.5",
   "title": "",
   "body": "  Determine all the values of for which the series below converges     Coming (not so) soon!   "
 },
 {
-  "id": "problem-6",
+  "id": "exploration-6",
   "level": "2",
-  "url": "appendix-1.html#problem-6",
+  "url": "appendix-1.html#exploration-6",
   "type": "Problem",
   "number": "A.6",
   "title": "",
   "body": "  Let be a metric space. Define the functions by    Show that are both metrics.    Show that are equivalent metrics on the space .       Coming (not so) soon!   "
 },
 {
-  "id": "problem-7",
+  "id": "exploration-7",
   "level": "2",
-  "url": "appendix-1.html#problem-7",
+  "url": "appendix-1.html#exploration-7",
   "type": "Problem",
   "number": "A.7",
   "title": "",
   "body": "     Let for . Prove that converges pointwise and determine if it converges uniformly on . Is equicontinuous? Clearly motivate your answer.    Prove that in general, if is an equicontinuous sequence of functions on a compact interval and pointwise, then the convergence is uniform.       Coming (not so) soon!   "
 },
 {
-  "id": "problem-8",
+  "id": "exploration-8",
   "level": "2",
-  "url": "appendix-1.html#problem-8",
+  "url": "appendix-1.html#exploration-8",
   "type": "Problem",
   "number": "A.8",
   "title": "",
   "body": "  Let be a metric space. Suppose that . For each , set Suppose that is continuous and is compact for all . Prove that is compact.    Coming (not so) soon!   "
 },
 {
-  "id": "problem-9",
+  "id": "exploration-9",
   "level": "2",
-  "url": "appendix-1.html#problem-9",
+  "url": "appendix-1.html#exploration-9",
   "type": "Problem",
   "number": "A.9",
   "title": "",
   "body": "  Consider the sequence defined by and for  . Show that as . Also, show that .    Coming (not so) soon!   "
 },
 {
-  "id": "problem-10",
+  "id": "exploration-10",
   "level": "2",
-  "url": "appendix-1.html#problem-10",
+  "url": "appendix-1.html#exploration-10",
   "type": "Problem",
   "number": "A.10",
   "title": "",
   "body": "  Use the Riemann condition to show that where and Compute the value of the Riemann-Stieltjes integral .    Coming (not so) soon!   "
 },
 {
-  "id": "problem-11",
+  "id": "exploration-11",
   "level": "2",
-  "url": "appendix-1.html#problem-11",
+  "url": "appendix-1.html#exploration-11",
   "type": "Problem",
   "number": "A.11",
   "title": "",
   "body": "  Find the domain of convergence and the sum of the series Show how one may use the sum of the series to provide an approximation for up to three decimals. Be sure to provide all technical details.    Coming (not so) soon!   "
 },
 {
-  "id": "problem-12",
+  "id": "exploration-12",
   "level": "2",
-  "url": "appendix-1.html#problem-12",
+  "url": "appendix-1.html#exploration-12",
   "type": "Problem",
   "number": "A.12",
   "title": "",
   "body": "  Show that are metrics on , but are not equivalent on .    Coming (not so) soon!   "
 },
 {
-  "id": "problem-13",
+  "id": "exploration-13",
   "level": "2",
-  "url": "appendix-1.html#problem-13",
+  "url": "appendix-1.html#exploration-13",
   "type": "Problem",
   "number": "A.13",
   "title": "",
   "body": "  Suppose with and let be a differentiable function such that is continuous. Show that for every , there is a such that for every with , we have     Coming (not so) soon!   "
 },
 {
-  "id": "problem-14",
+  "id": "exploration-14",
   "level": "2",
-  "url": "appendix-1.html#problem-14",
+  "url": "appendix-1.html#exploration-14",
   "type": "Problem",
   "number": "A.14",
   "title": "",
   "body": "  Let and be metric spaces and let be a continuous bijection.   Show by example that need not be continuous.    Show that if is compact, then is continuous.       Coming (not so) soon!   "
 },
 {
-  "id": "problem-15",
+  "id": "exploration-15",
   "level": "2",
-  "url": "appendix-1.html#problem-15",
+  "url": "appendix-1.html#exploration-15",
   "type": "Problem",
   "number": "A.15",
   "title": "",
   "body": "  Compute, with proof, .    Coming (not so) soon!   "
 },
 {
-  "id": "problem-16",
+  "id": "exploration-16",
   "level": "2",
-  "url": "appendix-1.html#problem-16",
+  "url": "appendix-1.html#exploration-16",
   "type": "Problem",
   "number": "A.16",
   "title": "",
   "body": "     Let be a continuous function. If for all integers , show that .    Let be a differentiable function such that is continuous. If for all integers , show that is constant.       Coming (not so) soon!   "
 },
 {
-  "id": "problem-17",
+  "id": "exploration-17",
   "level": "2",
-  "url": "appendix-1.html#problem-17",
+  "url": "appendix-1.html#exploration-17",
   "type": "Problem",
   "number": "A.17",
   "title": "",
   "body": "  Prove the following special case of Dini's Theorem: if is decreasing sequence of continuous functions such that for all , then converges uniformly to 0. (You should not use any form of Dini's theorem without proof.)    Coming (not so) soon!   "
 },
 {
-  "id": "problem-18",
+  "id": "exploration-18",
   "level": "2",
-  "url": "appendix-1.html#problem-18",
+  "url": "appendix-1.html#exploration-18",
   "type": "Problem",
   "number": "A.18",
   "title": "",
   "body": "  Let be a continuous function.   Show .    If for all , show .       Coming (not so) soon!   "
 },
 {
-  "id": "problem-19",
+  "id": "exploration-19",
   "level": "2",
-  "url": "appendix-1.html#problem-19",
+  "url": "appendix-1.html#exploration-19",
   "type": "Problem",
   "number": "A.19",
   "title": "",
   "body": "  Suppose that is a compact metric space, , and every convergent subsequence of converges to . Show that converges to .    Coming (not so) soon!   "
 },
 {
-  "id": "problem-20",
+  "id": "exploration-20",
   "level": "2",
-  "url": "appendix-1.html#problem-20",
+  "url": "appendix-1.html#exploration-20",
   "type": "Problem",
   "number": "A.20",
   "title": "",
   "body": "     Show that if is a differentiable function and is bounded, then has bounded variation.    Construct, with proof, a continuous function which does not have bounded variation.       Coming (not so) soon!   "
 },
 {
-  "id": "problem-21",
+  "id": "exploration-21",
   "level": "2",
-  "url": "appendix-1.html#problem-21",
+  "url": "appendix-1.html#exploration-21",
   "type": "Problem",
   "number": "A.21",
   "title": "",
   "body": "  Suppose that is a differentiable function such that there is no with . Show that if with , then is a finite set.    Coming (not so) soon!   "
 },
 {
-  "id": "problem-22",
+  "id": "exploration-22",
   "level": "2",
-  "url": "appendix-1.html#problem-22",
+  "url": "appendix-1.html#exploration-22",
   "type": "Problem",
   "number": "A.22",
   "title": "",
   "body": "  Let be a metric space. A function is called lower semicontinuous if for every convergent sequence , we have    Let be a set and define Show that is lower semicontinuous if and only if is open.    Show that if is a compact metric space and is lower semicontinuous, then there is a such that        Coming (not so) soon!   "
 },
 {
-  "id": "problem-23",
+  "id": "exploration-23",
   "level": "2",
-  "url": "appendix-1.html#problem-23",
+  "url": "appendix-1.html#exploration-23",
   "type": "Problem",
   "number": "A.23",
   "title": "",
   "body": "  Suppose that and are sequences of strictly positive real numbers such that converges, and suppose that for each integer , we have . Show that converges.    Coming (not so) soon!   "
 },
 {
-  "id": "problem-24",
+  "id": "exploration-24",
   "level": "2",
-  "url": "appendix-1.html#problem-24",
+  "url": "appendix-1.html#exploration-24",
   "type": "Problem",
   "number": "A.24",
   "title": "",
   "body": "  A function is called Lipschitz if there is a constant such that for all , we have Let denote the set of all Lipschitz functions with the uniform metric Show that is a countable union of compact sets.    Coming (not so) soon!   "
 },
 {
-  "id": "problem-25",
+  "id": "exploration-25",
   "level": "2",
-  "url": "appendix-1.html#problem-25",
+  "url": "appendix-1.html#exploration-25",
   "type": "Problem",
   "number": "A.25",
   "title": "",
   "body": "  Suppose: and are metric spaces; is compact; and is a continuous and onto function.   A well-known theorem states that if is compact, then is also compact. Prove this theorem, and conclude that is a compact metric space.    Suppose and is an open set. Prove that is an open set.       Coming (not so) soon!   "
 },
 {
-  "id": "problem-26",
+  "id": "exploration-26",
   "level": "2",
-  "url": "appendix-1.html#problem-26",
+  "url": "appendix-1.html#exploration-26",
   "type": "Problem",
   "number": "A.26",
   "title": "",
   "body": "  Let be a bounded sequence of real numbers. Being sure to include all details, prove that     Notice that for and . Approximate in terms of and examine what happens if you hold fixed and let grow.    Coming (not so) soon!   "
 },
 {
-  "id": "problem-27",
+  "id": "exploration-27",
   "level": "2",
-  "url": "appendix-1.html#problem-27",
+  "url": "appendix-1.html#exploration-27",
   "type": "Problem",
   "number": "A.27",
   "title": "",
   "body": "  Suppose is Riemann integrable and .   If is continuous, prove that for every .    Give an example (with proof) of a non-zero Riemann integrable function such that .       Coming (not so) soon!   "
 },
 {
-  "id": "problem-28",
+  "id": "exploration-28",
   "level": "2",
-  "url": "appendix-1.html#problem-28",
+  "url": "appendix-1.html#exploration-28",
   "type": "Problem",
   "number": "A.28",
   "title": "",
   "body": "  Let be the usual Cantor and let be the collection of all continuous complex-valued functions on . Recall this is the set obtained by removing from , then removing the middle third from the remaining intervals, etc. A function is a projection if for every . Given and , prove that there exists , projections and complex numbers such that for every ,     Coming (not so) soon!   "
 },
 {
-  "id": "problem-29",
+  "id": "exploration-29",
   "level": "2",
-  "url": "appendix-1.html#problem-29",
+  "url": "appendix-1.html#exploration-29",
   "type": "Problem",
   "number": "A.29",
   "title": "",
   "body": "  Suppose is a decreasing sequence of real numbers and converges. Prove that .    Coming (not so) soon!   "
 },
 {
-  "id": "problem-30",
+  "id": "exploration-30",
   "level": "2",
-  "url": "appendix-1.html#problem-30",
+  "url": "appendix-1.html#exploration-30",
   "type": "Problem",
   "number": "A.30",
   "title": "",
   "body": "  For , consider the series, .   Prove this series converges for every .    Set . Prove that is differentiable at each . Also, find a formula for (in terms of a series), being sure to justify that your formula is correct.       Coming (not so) soon!   "
 },
 {
-  "id": "problem-31",
+  "id": "exploration-31",
   "level": "2",
-  "url": "appendix-1.html#problem-31",
+  "url": "appendix-1.html#exploration-31",
   "type": "Problem",
   "number": "A.31",
   "title": "",
   "body": "  Suppose for each is continuous and satisfies . Put . Prove that there is a subsequence of which converges uniformly on .    It's enough to show that is compact. By the Arzelá-Ascoli Theorem, is bounded and equicontinuous.  Bounded: If , Then for all , so is bounded by 2020.  Equicontinuous: Fix and let . Then if with and , so is equicontinuous.   "
 },
 {
-  "id": "problem-32",
+  "id": "exploration-32",
   "level": "2",
-  "url": "appendix-1.html#problem-32",
+  "url": "appendix-1.html#exploration-32",
   "type": "Problem",
   "number": "A.32",
   "title": "",
   "body": "  Suppose is twice differentiable and that for every . Prove that for any real numbers satisfying ,     Coming (not so) soon!   "
 },
 {
-  "id": "problem-33",
+  "id": "exploration-33",
   "level": "2",
-  "url": "appendix-1.html#problem-33",
+  "url": "appendix-1.html#exploration-33",
   "type": "Problem",
   "number": "A.33",
   "title": "",
   "body": "  Suppose is a compact metric space.   Let be a closed subset of and for , define . Show that if , then .    Suppose is an isometry, that is, for every . Prove that .       Coming (not so) soon!   "
 },
 {
-  "id": "problem-34",
+  "id": "exploration-34",
   "level": "2",
-  "url": "appendix-1.html#problem-34",
+  "url": "appendix-1.html#exploration-34",
   "type": "Problem",
   "number": "A.34",
   "title": "",
   "body": "  Suppose is a uniformly continuous function. Prove there are real numbers and such that for every ,     Coming (not so) soon!   "
 },
 {
-  "id": "problem-35",
+  "id": "exploration-35",
   "level": "2",
-  "url": "appendix-1.html#problem-35",
+  "url": "appendix-1.html#exploration-35",
   "type": "Problem",
   "number": "A.35",
   "title": "",
   "body": "  The following questions are not related.   Let Evaluate     Suppose is continuous. Evaluate . Give a complete proof of your answer.       Coming (not so) soon!   "
 },
 {
-  "id": "problem-36",
+  "id": "exploration-36",
   "level": "2",
-  "url": "appendix-1.html#problem-36",
+  "url": "appendix-1.html#exploration-36",
   "type": "Problem",
   "number": "A.36",
   "title": "",
   "body": "  Suppose is a function such that , has a continuous derivative, and for every . Prove there exists a sequence of polynomials such that converges uniformly to and such that for every , is strictly increasing, , and .    Coming (not so) soon!   "
 },
 {
-  "id": "problem-37",
+  "id": "exploration-37",
   "level": "2",
-  "url": "appendix-1.html#problem-37",
+  "url": "appendix-1.html#exploration-37",
   "type": "Problem",
   "number": "A.37",
   "title": "",
   "body": "  Let and be given. Suppose that and diverges. Prove that there exists a subsequence such that .    Coming (not so) soon!   "
 },
 {
-  "id": "problem-38",
+  "id": "exploration-38",
   "level": "2",
-  "url": "appendix-1.html#problem-38",
+  "url": "appendix-1.html#exploration-38",
   "type": "Problem",
   "number": "A.38",
   "title": "",
   "body": "  Let be bounded sequences, and define the sets Prove or provide a counterexample each of the following statements.   If is a limit point for and is a limit point for , then is a limit point for . (Here limit point means accumulation or cluster point.)    If , then there exists and such that .    If for all , then .       Coming (not so) soon!   "
 },
 {
-  "id": "problem-39",
+  "id": "exploration-39",
   "level": "2",
-  "url": "appendix-1.html#problem-39",
+  "url": "appendix-1.html#exploration-39",
   "type": "Problem",
   "number": "A.39",
   "title": "",
   "body": "  Let be a metric space and define by    Prove that is a metric on .    Prove that is complete if and only if is complete.       Coming (not so) soon!   "
 },
 {
-  "id": "problem-40",
+  "id": "exploration-40",
   "level": "2",
-  "url": "appendix-1.html#problem-40",
+  "url": "appendix-1.html#exploration-40",
   "type": "Problem",
   "number": "A.40",
   "title": "",
   "body": "  With , let denote the family of all -valued functions that are continuous on the interval .   Let and be given. Assume that each is differentiable on and satisfies and for all . Prove that is equicontinuous on .    Let a uniformly bounded sequence of functions be given. For each , define by Prove that there exists a subsequence of that converges uniformly on to some .       Coming (not so) soon!   "
 },
 {
-  "id": "problem-41",
+  "id": "exploration-41",
   "level": "2",
-  "url": "appendix-1.html#problem-41",
+  "url": "appendix-1.html#exploration-41",
   "type": "Problem",
   "number": "A.41",
   "title": "",
   "body": "     Let , with , be given, and suppose that is differentiable on and that both exists and is finite, for all . Prove that is continuously differentiable on .    Produce a function that is everywhere differentiable and such that is discontinuous at some . Justify your claim.       Coming (not so) soon!   "
 },
 {
-  "id": "problem-42",
+  "id": "exploration-42",
   "level": "2",
-  "url": "appendix-1.html#problem-42",
+  "url": "appendix-1.html#exploration-42",
   "type": "Problem",
   "number": "A.42",
   "title": "",
-  "body": "  The parts of this problem are not connected.   Let and a strictly increasing sequence be given. Assume that is absolutely convergent, and define by Prove or disprove: has bounded variation on .    Suppose that is Riemann-Stieltjes integrable with respect to a nondecreasing function . Prove that is Riemann-Stieltjes integrable with respect to the function .       Coming (not so) soon!   "
+  "body": "  The parts of this exploration are not connected.   Let and a strictly increasing sequence be given. Assume that is absolutely convergent, and define by Prove or disprove: has bounded variation on .    Suppose that is Riemann-Stieltjes integrable with respect to a nondecreasing function . Prove that is Riemann-Stieltjes integrable with respect to the function .       Coming (not so) soon!   "
+},
+{
+  "id": "exploration-43",
+  "level": "2",
+  "url": "appendix-1.html#exploration-43",
+  "type": "Problem",
+  "number": "A.43",
+  "title": "",
+  "body": "  Let and be metric spaces. Define by for all and .   Prove that is a metric space.    Let and be compact sets in and , respectively. Prove that is a compact set in .       Coming (not so) soon!   "
+},
+{
+  "id": "exploration-44",
+  "level": "2",
+  "url": "appendix-1.html#exploration-44",
+  "type": "Problem",
+  "number": "A.44",
+  "title": "",
+  "body": "  Let be given, and assume that converges.   Show that     Suppose that satisfies , for every . Prove is convergent.       Coming (not so) soon!   "
+},
+{
+  "id": "exploration-45",
+  "level": "2",
+  "url": "appendix-1.html#exploration-45",
+  "type": "Problem",
+  "number": "A.45",
+  "title": "",
+  "body": "  Let be continuous on , and define by    Show that exists.    Prove that is continuous on .    Suppose that is bounded, as well as continuous, on . Prove that is uniformly continuous on .       Coming (not so) soon!   "
+},
+{
+  "id": "exploration-46",
+  "level": "2",
+  "url": "appendix-1.html#exploration-46",
+  "type": "Problem",
+  "number": "A.46",
+  "title": "",
+  "body": "  Consider the formal series Prove or disprove each of the following statements.   The series converges uniformly on the interval .    The series converges uniformly on the interval .       Coming (not so) soon!   "
+},
+{
+  "id": "exploration-47",
+  "level": "2",
+  "url": "appendix-1.html#exploration-47",
+  "type": "Problem",
+  "number": "A.47",
+  "title": "",
+  "body": "     Let be an increasing function that is continuous at 0, and let be a bounded function. Suppose that, for each , the function is Riemann-Stieltjes integrable with respect to over . Prove that is Riemann-Stieljes integrable with respect to over .    Let be an enumeration of , the rational numbers in . Define by Prove or disprove: has bounded variation on .       Coming (not so) soon!   "
+},
+{
+  "id": "exploration-48",
+  "level": "2",
+  "url": "appendix-1.html#exploration-48",
+  "type": "Problem",
+  "number": "A.48",
+  "title": "",
+  "body": "  Suppose that has the following properties:    is continuous on and differentiable on ;         there exists such that .      Prove that there exists such that .    There exists such that for each , there exists some such that .       Coming (not so) soon!   "
+},
+{
+  "id": "exploration-49",
+  "level": "2",
+  "url": "appendix-1.html#exploration-49",
+  "type": "Problem",
+  "number": "A.49",
+  "title": "",
+  "body": "     Let and for . Prove that and converge pointwise but not uniformly on .    Are the families , respectively given in part (a) equicontinuous? Clearly motivate your answer.       Coming (not so) soon!   "
+},
+{
+  "id": "exploration-50",
+  "level": "2",
+  "url": "appendix-1.html#exploration-50",
+  "type": "Problem",
+  "number": "A.50",
+  "title": "",
+  "body": "  Consider the following subset of the metric space :    Determine whether is bounded, and if so what is its diameter.    Determine whether is closed in .    Determine whether is compact in .       Coming (not so) soon!   "
+},
+{
+  "id": "exploration-51",
+  "level": "2",
+  "url": "appendix-1.html#exploration-51",
+  "type": "Problem",
+  "number": "A.51",
+  "title": "",
+  "body": "  Determine the values of for which converges.    Coming (not so) soon!   "
+},
+{
+  "id": "exploration-52",
+  "level": "2",
+  "url": "appendix-1.html#exploration-52",
+  "type": "Problem",
+  "number": "A.52",
+  "title": "",
+  "body": "  Suppose that is differentiable and . Assume that there is a such that for all . Prove that for all .    Coming (not so) soon!   "
+},
+{
+  "id": "exploration-53",
+  "level": "2",
+  "url": "appendix-1.html#exploration-53",
+  "type": "Problem",
+  "number": "A.53",
+  "title": "",
+  "body": "  Use the Riemann condition to show that where and Compute the value of the Riemann-Stieltjes integral .    Coming (not so) soon!   "
+},
+{
+  "id": "exploration-54",
+  "level": "2",
+  "url": "appendix-1.html#exploration-54",
+  "type": "Problem",
+  "number": "A.54",
+  "title": "",
+  "body": "  Use the Heine-Borel Theorem to prove that if is continuous on and for every then there exists such that for every .    Coming (not so) soon!   "
+},
+{
+  "id": "exploration-55",
+  "level": "2",
+  "url": "appendix-1.html#exploration-55",
+  "type": "Problem",
+  "number": "A.55",
+  "title": "",
+  "body": "  Determine whether the following sequences converge and carefully justify your claims:         .       Coming (not so) soon!   "
+},
+{
+  "id": "exploration-56",
+  "level": "2",
+  "url": "appendix-1.html#exploration-56",
+  "type": "Problem",
+  "number": "A.56",
+  "title": "",
+  "body": "  Find the domain of convergence and the sum of the series Show how one may use the sum of the series to provide an approximation for up to three decimals. Be sure to provide all technical details.    Coming (not so) soon!   "
+},
+{
+  "id": "exploration-57",
+  "level": "2",
+  "url": "appendix-1.html#exploration-57",
+  "type": "Problem",
+  "number": "A.57",
+  "title": "",
+  "body": "  Define by Determine whether is Riemann-Stieltjes integrable with respect to over . If it is, evaluate     Coming (not so) soon!   "
+},
+{
+  "id": "exploration-58",
+  "level": "2",
+  "url": "appendix-1.html#exploration-58",
+  "type": "Problem",
+  "number": "A.58",
+  "title": "",
+  "body": "     Given a set , show that the function defined by is a metric on .    Let be given. Set Determine whether the set is compact in .       Coming (not so) soon!   "
+},
+{
+  "id": "exploration-59",
+  "level": "2",
+  "url": "appendix-1.html#exploration-59",
+  "type": "Problem",
+  "number": "A.59",
+  "title": "",
+  "body": "     If is an equicontinuous sequence of functions on a compact interval and pointwise, prove that the convergence is uniform.    Let be given, and suppose that satisfies , for all and all in an interval . Show that is equicontinuous.          Claim: is bounded. If not, there is a subsequence of so that . By the extreme value theroem, exists with . Using that is compact and passing to a subsequence, we may assume converges to some . We'll show that . To this end, fix . Let be such that for all with we have Then choose so that for all , we have and . Then if , we have where since (as ) and since . Then In particular, a contradiction.  Suppose does not converge uniformly to . Then exists such that for all such that . Let as above. Then exists subsequence so that for all , . Then is bounded and equicontinuous. By the Arzelá-Ascoli Theorem, has a subsequence converging to some . Then by above, we have . But converge pointwise to both and so and , a contradiction.          "
+},
+{
+  "id": "exploration-60",
+  "level": "2",
+  "url": "appendix-1.html#exploration-60",
+  "type": "Problem",
+  "number": "A.60",
+  "title": "",
+  "body": "  Let be a continuous function, and for all , put .   Show that converges uniformly, as , over any closed interval .    Give an example of a continuous function for which the convergence is not uniform on .       Coming (not so) soon!   "
+},
+{
+  "id": "exploration-61",
+  "level": "2",
+  "url": "appendix-1.html#exploration-61",
+  "type": "Problem",
+  "number": "A.61",
+  "title": "",
+  "body": "  Let be a monotonically increasing function on an interval and assume is Riemann integrable in . Let be a bounded real function on . Prove that implies , and     Coming (not so) soon!   "
+},
+{
+  "id": "exploration-62",
+  "level": "2",
+  "url": "appendix-1.html#exploration-62",
+  "type": "Problem",
+  "number": "A.62",
+  "title": "",
+  "body": "  Let be a metric space in which every infinite subset has a limit point. Prove that there is a countable subset of that is dense in .    Coming (not so) soon!   "
+},
+{
+  "id": "exploration-63",
+  "level": "2",
+  "url": "appendix-1.html#exploration-63",
+  "type": "Problem",
+  "number": "A.63",
+  "title": "",
+  "body": "  Let be any rearrangement of an infinite sequence . Assume converges absolutely. Prove .    Coming (not so) soon!   "
+},
+{
+  "id": "exploration-64",
+  "level": "2",
+  "url": "appendix-1.html#exploration-64",
+  "type": "Problem",
+  "number": "A.64",
+  "title": "",
+  "body": "  Suppose uniformly on and      Coming (not so) soon!   "
+},
+{
+  "id": "exploration-65",
+  "level": "2",
+  "url": "appendix-1.html#exploration-65",
+  "type": "Problem",
+  "number": "A.65",
+  "title": "",
+  "body": "  Let . Suppose . Prove is the difference of two increasing functions.    Coming (not so) soon!   "
+},
+{
+  "id": "exploration-66",
+  "level": "2",
+  "url": "appendix-1.html#exploration-66",
+  "type": "Problem",
+  "number": "A.66",
+  "title": "",
+  "body": "  Suppose that is continuous on , differentiable on , satisfying  and for some . Prove that there is an such that .    Coming (not so) soon!   "
+},
+{
+  "id": "exploration-67",
+  "level": "2",
+  "url": "appendix-1.html#exploration-67",
+  "type": "Problem",
+  "number": "A.67",
+  "title": "",
+  "body": "  Suppose that is given by: . By using the definition only, prove that is uniformly continuous on .    Hint: write .    Coming (not so) soon!   "
+},
+{
+  "id": "exploration-68",
+  "level": "2",
+  "url": "appendix-1.html#exploration-68",
+  "type": "Problem",
+  "number": "A.68",
+  "title": "",
+  "body": "  Let be a metric space. A function is said to be lower semicontinuous at if, for every there exists such that for all with , then . Prove: is lower semicontinuous at if and only if whenever satisfies in .    Coming (not so) soon!   "
+},
+{
+  "id": "exploration-69",
+  "level": "2",
+  "url": "appendix-1.html#exploration-69",
+  "type": "Problem",
+  "number": "A.69",
+  "title": "",
+  "body": "  Let be a compact metric space. Suppose that is a sequence of continuous functions with , for all and all , and such that point-wise on . Prove converges to zero uniformly on .    Coming (not so) soon!   "
+},
+{
+  "id": "exploration-70",
+  "level": "2",
+  "url": "appendix-1.html#exploration-70",
+  "type": "Problem",
+  "number": "A.70",
+  "title": "",
+  "body": "  Let be a function such that , i.e., is twice-continuously differentiable on , and exists on with for all . Let: Prove that the series converges absolutely.    Coming (not so) soon!   "
+},
+{
+  "id": "exploration-71",
+  "level": "2",
+  "url": "appendix-1.html#exploration-71",
+  "type": "Problem",
+  "number": "A.71",
+  "title": "",
+  "body": "  Suppose that is a continuous function which satisfies, for , Prove that for all .    Coming (not so) soon!   "
+},
+{
+  "id": "exploration-72",
+  "level": "2",
+  "url": "appendix-1.html#exploration-72",
+  "type": "Problem",
+  "number": "A.72",
+  "title": "",
+  "body": "  For each , let be given by: .   Prove converges point-wise on and find the point-wise limit .    Show that uniformly on for every , but the convergence is not uniform on .       Coming (not so) soon!   "
+},
+{
+  "id": "exploration-73",
+  "level": "2",
+  "url": "appendix-1.html#exploration-73",
+  "type": "Problem",
+  "number": "A.73",
+  "title": "",
+  "body": "  Consider the series . Justify your answers to the following questions:   Does the series converge at ?    Does the series converge on ?    Does the series converge uniformly on ?    Does the series converge uniformly on for any .       Coming (not so) soon!   "
+},
+{
+  "id": "exploration-74",
+  "level": "2",
+  "url": "appendix-1.html#exploration-74",
+  "type": "Problem",
+  "number": "A.74",
+  "title": "",
+  "body": "  Prove: on For any on and on . In addition, if either condition holds, then we always have     Coming (not so) soon!   "
+},
+{
+  "id": "exploration-75",
+  "level": "2",
+  "url": "appendix-1.html#exploration-75",
+  "type": "Problem",
+  "number": "A.75",
+  "title": "",
+  "body": "  Let , where . Assume .   Prove: converges absolutely for .    Prove: .       Coming (not so) soon!   "
+},
+{
+  "id": "exploration-76",
+  "level": "2",
+  "url": "appendix-1.html#exploration-76",
+  "type": "Problem",
+  "number": "A.76",
+  "title": "",
+  "body": "  Let . Prove that there is a sequence of polynomials, , of even degree monomials (i.e. every term in is of the form for integer ) that converges to uniformly on .    Coming (not so) soon!   "
+},
+{
+  "id": "exploration-77",
+  "level": "2",
+  "url": "appendix-1.html#exploration-77",
+  "type": "Problem",
+  "number": "A.77",
+  "title": "",
+  "body": "  Assume is a sequence of monotonically increasing functions on , and point-wise. Prove that if is continuous then the convergence is uniform on .    Coming (not so) soon!   "
+},
+{
+  "id": "exploration-78",
+  "level": "2",
+  "url": "appendix-1.html#exploration-78",
+  "type": "Problem",
+  "number": "A.78",
+  "title": "",
+  "body": "  Let be a metric space. A function is said to be lower semi-continuous (l.s.c.) if is open in for every . Analogously, is upper semi-continuous (u.s.c.) if is open in for every .   Prove that a function is continuous is both l.s.c and u.s.c.    Prove that is lower semi-continuous (l.s.c.) whenever such that in .       Coming (not so) soon!   "
+},
+{
+  "id": "exploration-79",
+  "level": "2",
+  "url": "appendix-1.html#exploration-79",
+  "type": "Problem",
+  "number": "A.79",
+  "title": "",
+  "body": "  Consider the function: .   By using the definition of the limit only, prove that is continuous on . (Note: You are not allowed to trivialize the problem by using properties of limits).    Is uniformly continuous on ? Justify your answer.       Coming (not so) soon!   "
+},
+{
+  "id": "exploration-80",
+  "level": "2",
+  "url": "appendix-1.html#exploration-80",
+  "type": "Problem",
+  "number": "A.80",
+  "title": "",
+  "body": "  Let be a bounded sequence of real numbers and be given by: Prove that .    Coming (not so) soon!   "
+},
+{
+  "id": "exploration-81",
+  "level": "2",
+  "url": "appendix-1.html#exploration-81",
+  "type": "Problem",
+  "number": "A.81",
+  "title": "",
+  "body": "  Assume is a compact metric space.   Prove that is both complete and separable.    Suppose is a sequence such that the series is convergent. Prove that the sequence converges in .       Coming (not so) soon!   "
+},
+{
+  "id": "exploration-82",
+  "level": "2",
+  "url": "appendix-1.html#exploration-82",
+  "type": "Problem",
+  "number": "A.82",
+  "title": "",
+  "body": "  Suppose that is continuous on , differentiable on , and such that , for some . Prove that there is an such that     Coming (not so) soon!   "
+},
+{
+  "id": "exploration-83",
+  "level": "2",
+  "url": "appendix-1.html#exploration-83",
+  "type": "Problem",
+  "number": "A.83",
+  "title": "",
+  "body": "  Let .   Prove that converges point-wise on for every .    Show that the convergence in part (a) is uniform on for all , but not uniform for any .       Coming (not so) soon!   "
+},
+{
+  "id": "exploration-84",
+  "level": "2",
+  "url": "appendix-1.html#exploration-84",
+  "type": "Problem",
+  "number": "A.84",
+  "title": "",
+  "body": "     Suppose is a bounded function that is continuous at 0. Let for and for . Prove that , i.e., is Riemann integrable with respect to on , and .    Let be a continuous function such that , for all . Prove that for all .       Coming (not so) soon!   "
 },
 {
   "id": "colophon-2",

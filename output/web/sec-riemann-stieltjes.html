@@ -332,7 +332,15 @@ window.MathJax = {
 \newcommand{\fe}{{\mathfrak e}}
 \newcommand{\fm}{{\mathfrak m}} 
 \newcommand{\fp}{{\mathfrak p}} 
-\newcommand{\fq}{{\mathfrak q}} 
+\newcommand{\fq}{{\mathfrak q}}
+\newcommand{\fA}{{\mathfrak A}} 
+\newcommand{\fB}{{\mathfrak B}} 
+\newcommand{\fC}{{\mathfrak C}} 
+\newcommand{\fD}{{\mathfrak D}} 
+\newcommand{\fE}{{\mathfrak E}} 
+\newcommand{\fF}{{\mathfrak F}} 
+\newcommand{\fG}{{\mathfrak G}} 
+\newcommand{\fH}{{\mathfrak H}} 
 \newcommand{\fK}{{\mathfrak K}} 
 \newcommand{\fR}{{\mathfrak R}} 
 
@@ -517,7 +525,13 @@ window.MathJax = {
 <li>
 <div class="toc-item"><a href="ch-metric-spaces.html" class="internal"><span class="codenumber">4</span> <span class="title">Metric Spaces</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-topology-metric.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Topology and Metric Spaces</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-topology-metric.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Topology and Metric Spaces</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-topology-metric.html#subsec-inner" class="internal"><span class="title">Inner Products and Cauchy-Schwarz</span></a></div></li>
+<li><div class="toc-item"><a href="sec-topology-metric.html#subsec-matric" class="internal"><span class="title">Metric Spaces</span></a></div></li>
+</ul>
+</li>
 <li>
 <div class="toc-item"><a href="sec-open-closed.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Open and Closed Sets</span></a></div>
 <ul class="structural">
@@ -587,7 +601,7 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-riemann-stieltjes"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">6.2</span> <span class="title">Riemann-Stieltjes Integrals</span>
 </h2>
-<div class="para logical" id="p-608">
+<div class="para logical" id="p-642">
 <div class="para">Given bounded functions <span class="process-math">\(f,g\in\mathcal{B}[a,b]\text{,}\)</span> the Riemann-Stieltjes Integral <span class="process-math">\(\int_a^b f(x)\,dg(x)\text{,}\)</span> when it exists will represent a “weighted sum” of <span class="process-math">\(f\)</span> over <span class="process-math">\([a,b]\)</span> with weights determined by “the derivative” of <span class="process-math">\(g\text{.}\)</span> (although <span class="process-math">\(g\)</span> won't always be differentiable!) Under suitible conditions, we will have</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -599,7 +613,7 @@ window.MathJax = {
 <article class="definition definition-like" id="def-rs-sum"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.23</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-609">
+<div class="para logical" id="p-643">
 <div class="para">For functions <span class="process-math">\(f,g\in\mathcal{B}[a,b]\text{,}\)</span> a partition <span class="process-math">\(P=\{{a=x_0&lt;\dots&lt;x_n=b}\}\)</span> and an evaluation sequence <span class="process-math">\(X\)</span> for <span class="process-math">\(P\text{,}\)</span> define the <dfn class="terminology">Riemann-Stieltjes Sum</dfn>
 </div>
 <div class="displaymath process-math">
@@ -610,11 +624,11 @@ I(f,P,X,g)=\sum_{i=1}^nf(x_i^*)(g(x_i)-g(x_{i-1})).
 </div></article><article class="remark remark-like" id="remark-16"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">6.24</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-610">If <span class="process-math">\(g(x)=x\text{,}\)</span> then <span class="process-math">\(I(f,P,X,g)=I(f,P,X)\text{.}\)</span>
+<div class="para" id="p-644">If <span class="process-math">\(g(x)=x\text{,}\)</span> then <span class="process-math">\(I(f,P,X,g)=I(f,P,X)\text{.}\)</span>
 </div></article><article class="definition definition-like" id="def-rs-int"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.25</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-611">
+<div class="para logical" id="p-645">
 <div class="para">For bounded functions <span class="process-math">\(f,g:[a,b]\rightarrow\mathbb{R}\text{,}\)</span> we say that <span class="process-math">\(f\)</span> is <dfn class="terminology">Riemann-Stieltjes integrable</dfn> over <span class="process-math">\([a,b]\)</span> with respect to <span class="process-math">\(g\)</span> if there is an <span class="process-math">\(A\in\mathbb{R}\)</span> so that for all <span class="process-math">\(\varepsilon&gt;0\)</span> there is a partition <span class="process-math">\(P\in\mathcal{P}[a,b]\)</span> so that for all partitions <span class="process-math">\(Q\in\mathcal{P}[a,b]\)</span> with <span class="process-math">\(P\subseteq Q\)</span> and evaluation sequences <span class="process-math">\(X\)</span> for <span class="process-math">\(Q\text{,}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -633,7 +647,7 @@ A=\int_a^b f(x)\,dg(x).
 </div></article><article class="fact theorem-like" id="fact-rs-fact"><h3 class="heading">
 <span class="type">Fact</span><span class="space"> </span><span class="codenumber">6.26</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-612">
+<div class="para logical" id="p-646">
 <div class="para">If <span class="process-math">\(g(x)=x\text{,}\)</span> then <span class="process-math">\(\mathcal{R}[a,b]=\mathcal{R}([a,b],g)\text{,}\)</span> and for all <span class="process-math">\(f\in \mathcal{R}[a,b]\)</span>
 </div>
 <div class="displaymath process-math">
@@ -641,10 +655,10 @@ A=\int_a^b f(x)\,dg(x).
 \int_a^b f(x)\,dx=\int_a^b f(x)\,dg(x).
 \end{equation*}
 </div>
-</div></article><article class="example example-like" id="example-31"><h3 class="heading">
+</div></article><article class="example example-like" id="example-36"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">6.27</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-613">
+<div class="para logical" id="p-647">
 <div class="para">The <dfn class="terminology">Heaviside function</dfn> is given by</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -657,19 +671,19 @@ H(x)
 \end{aligned}
 \end{equation*}
 </div>
-</div></article><div class="para" id="p-614">Recall: a function <span class="process-math">\(f:\mathbb{R}\rightarrow \mathbb{R}\)</span> is <dfn class="terminology">right continuous</dfn> at <span class="process-math">\(c\in \mathbb{R}\)</span> if <span class="process-math">\(\lim_{x\rightarrow c^+}f(x)=f(c)\text{.}\)</span>
+</div></article><div class="para" id="p-648">Recall: a function <span class="process-math">\(f:\mathbb{R}\rightarrow \mathbb{R}\)</span> is <dfn class="terminology">right continuous</dfn> at <span class="process-math">\(c\in \mathbb{R}\)</span> if <span class="process-math">\(\lim_{x\rightarrow c^+}f(x)=f(c)\text{.}\)</span>
 </div>
 <article class="proposition theorem-like" id="prop-rc-prop"><h3 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">6.28</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-615">
+<div class="para logical" id="p-649">
 <div class="para">Let <span class="process-math">\(a,b,c\in\mathbb{R}\)</span> with <span class="process-math">\(a\leq C&lt;b\)</span> and let <span class="process-math">\(g(x)=H(x-c)\text{.}\)</span> If <span class="process-math">\(f:[a,b]\rightarrow \mathbb{R}\)</span> is right continuous at <span class="process-math">\(c\text{,}\)</span> then</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \int_a^b f(x)\,dg(x)=f(c).
 \end{equation*}
 </div>
-</div></article><article class="hiddenproof" id="proof-69"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-69"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-69"><article class="hiddenproof"><div class="para logical" id="p-616">
+</div></article><article class="hiddenproof" id="proof-74"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-74"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-74"><article class="hiddenproof"><div class="para logical" id="p-650">
 <div class="para">Let <span class="process-math">\(\varepsilon&gt;0\text{.}\)</span> Fix <span class="process-math">\(\delta&gt;0\)</span> such that for all <span class="process-math">\(x\in(c,c+\delta)\)</span> with <span class="process-math">\(x\in[a,b]\)</span> we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -694,7 +708,7 @@ g(x_i)-g(x_{i-1})
 <article class="theorem theorem-like" id="thm-in-by-parts"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.29</span><span class="period">.</span><span class="space"> </span><span class="title">Integration by Parts.</span>
 </h3>
-<div class="para logical" id="p-617">
+<div class="para logical" id="p-651">
 <div class="para">Let <span class="process-math">\(f,g\in\mathcal{B}[a,b]\text{.}\)</span> Then</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -710,7 +724,7 @@ f\in\mathcal{R}([a,b],g)\iff g\in\mathcal{R}([a,b],f),
 </div></article><article class="remark remark-like" id="remark-17"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">6.30</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-618">
+<div class="para logical" id="p-652">
 <div class="para">Continuous functions are not necessarily Riemann-Stieltjes integrable! Let <span class="process-math">\(f(x)=x\)</span> and</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -725,17 +739,17 @@ g(x)=\begin{cases}
 </div></article><article class="theorem theorem-like" id="thm-rsi-thm"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.31</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-619">
+<div class="para logical" id="p-653">
 <div class="para">Suppose <span class="process-math">\(f\in\mathcal{R}[a,b],g:[a,b]\rightarrow\mathbb{R}\)</span> is differentiable, and <span class="process-math">\(g'\in\mathcal{R}[a,b]\text{.}\)</span> Then <span class="process-math">\(f\in\mathcal{R}([a,b],g)\)</span> and</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \int_a^b f(x)\,dg(x)=\int_a^b f(x)g'(x)\,dx.
 \end{equation*}
 </div>
-</div></article><article class="example example-like" id="example-32"><h3 class="heading">
+</div></article><article class="example example-like" id="example-37"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">6.32</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-620">
+<div class="para" id="p-654">
 <span class="process-math">\(f(x)=x^2, g(x)=\begin{cases}
 x^2 &amp; 0\leq x\le 1\\
 e^x &amp; 1&lt;x\le 2\\
@@ -743,7 +757,7 @@ e^x &amp; 1&lt;x\le 2\\
 \end{cases}\)</span> Compute <span class="process-math">\(\int_0^3 f(x)\,dg(x)\text{.}\)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-15" id="solution-15"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-15"><div class="solution solution-like"><div class="para logical" id="p-621">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-17" id="solution-17"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-17"><div class="solution solution-like"><div class="para logical" id="p-655">
 <div class="para">Have <span class="process-math">\(g\in \mathcal{R}[0,3]\)</span> as is bounded and has only finitely many discontinuities. Also <span class="process-math">\(f\)</span> is differentiable and <span class="process-math">\(f'\in \mathcal{R}[0,3]\text{.}\)</span> So <span class="process-math">\(g\in\mathcal{R}([0,3],f)\)</span> and</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -763,7 +777,7 @@ e^x &amp; 1&lt;x\le 2\\
 \end{equation*}
 </div>
 </div></div></div>
-</div></article><div class="para" id="p-622">To get a reasonable theory of integration, we'll want to impose more conditions on <span class="process-math">\(g\)</span> when defining <span class="process-math">\(\int_a^bf(x)\,dg(x)\text{.}\)</span>
+</div></article><div class="para" id="p-656">To get a reasonable theory of integration, we'll want to impose more conditions on <span class="process-math">\(g\)</span> when defining <span class="process-math">\(\int_a^bf(x)\,dg(x)\text{.}\)</span>
 </div></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-riemann.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sec-bounded-variation.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>

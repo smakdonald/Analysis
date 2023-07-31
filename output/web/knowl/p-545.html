@@ -11,8 +11,25 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para">Suppose <span class="process-math">\(X\)</span> is separable, and let <span class="process-math">\(\mathcal{S}\)</span> be given as in the lemma above. Let <span class="process-math">\(\mathcal{S}'=\{{V\cap Y}\,:\,{V\in \mathcal{S}}\}\text{.}\)</span> Then <span class="process-math">\(\mathcal{S}'\)</span> is a collection of open subsets of <span class="process-math">\(Y\)</span> and <span class="process-math">\(\mathcal{S}'\)</span> is countable since <span class="process-math">\(\mathcal{S}\)</span> is countable and the function <span class="process-math">\(\mathcal{S}\rightarrow\mathcal{S}':V\rightarrow V\cap Y\)</span> is surjective. Let <span class="process-math">\(Y'\subseteq Y\)</span> be an open set and let <span class="process-math">\(y\in Y\)</span> with <span class="process-math">\(y\in U'\text{.}\)</span> We need a <span class="process-math">\(V'\in\mathcal{S}'\)</span> with <span class="process-math">\(y\in V'\subseteq U'\text{.}\)</span> Since <span class="process-math">\(U'\)</span> is open in <span class="process-math">\(Y\text{,}\)</span> there is an open set <span class="process-math">\(U\subseteq X\)</span> such that <span class="process-math">\(U'=U\cap Y\text{.}\)</span> Since <span class="process-math">\(y\in U\text{,}\)</span> there exists <span class="process-math">\(V\in\mathcal{S}\)</span> such that <span class="process-math">\(y\in V\subseteq U\text{.}\)</span> Let <span class="process-math">\(V'=V\cap Y\in \mathcal{S}'\)</span> and note <span class="process-math">\(y\in V'\subseteq U'\text{.}\)</span> Apply the lemma again to <span class="process-math">\(Y\text{,}\)</span> and <span class="process-math">\(Y\)</span> is separable.</div>
-<span class="incontext"><a href="sec-separability-completions.html#p-545" class="internal">in-context</a></span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">
+<dfn class="terminology">Uniqueness</dfn> (this won't require that <span class="process-math">\(f\)</span> is uniformly continuous): Suppose <span class="process-math">\(g,h:\overline{A}\rightarrow Y\)</span> are continuous and <span class="process-math">\(g(a)=h(a)\)</span> for all <span class="process-math">\(a\in A\text{.}\)</span> If <span class="process-math">\(a\in\overline{A}, \exists \,(a_n)_{n=1}^\infty\subseteq A\)</span> such that <span class="process-math">\(a=\lim_{n\rightarrow\infty}a_n\text{.}\)</span> So</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+g(a)
+&amp;=\lim_{n\rightarrow\infty} g(a_n)
+=\lim_{n\rightarrow\infty}h(a_n)
+\text{ (since } a_n\in A)
+\\
+&amp;=h(a)
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">so <span class="process-math">\(g=h\text{.}\)</span>
+</div>
+</div>
+<span class="incontext"><a href="sec-uniform-continuity.html#p-545" class="internal">in-context</a></span>
 </body>
 </html>

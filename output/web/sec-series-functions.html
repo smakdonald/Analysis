@@ -332,7 +332,15 @@ window.MathJax = {
 \newcommand{\fe}{{\mathfrak e}}
 \newcommand{\fm}{{\mathfrak m}} 
 \newcommand{\fp}{{\mathfrak p}} 
-\newcommand{\fq}{{\mathfrak q}} 
+\newcommand{\fq}{{\mathfrak q}}
+\newcommand{\fA}{{\mathfrak A}} 
+\newcommand{\fB}{{\mathfrak B}} 
+\newcommand{\fC}{{\mathfrak C}} 
+\newcommand{\fD}{{\mathfrak D}} 
+\newcommand{\fE}{{\mathfrak E}} 
+\newcommand{\fF}{{\mathfrak F}} 
+\newcommand{\fG}{{\mathfrak G}} 
+\newcommand{\fH}{{\mathfrak H}} 
 \newcommand{\fK}{{\mathfrak K}} 
 \newcommand{\fR}{{\mathfrak R}} 
 
@@ -517,7 +525,13 @@ window.MathJax = {
 <li>
 <div class="toc-item"><a href="ch-metric-spaces.html" class="internal"><span class="codenumber">4</span> <span class="title">Metric Spaces</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-topology-metric.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Topology and Metric Spaces</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-topology-metric.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Topology and Metric Spaces</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-topology-metric.html#subsec-inner" class="internal"><span class="title">Inner Products and Cauchy-Schwarz</span></a></div></li>
+<li><div class="toc-item"><a href="sec-topology-metric.html#subsec-matric" class="internal"><span class="title">Metric Spaces</span></a></div></li>
+</ul>
+</li>
 <li>
 <div class="toc-item"><a href="sec-open-closed.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Open and Closed Sets</span></a></div>
 <ul class="structural">
@@ -590,31 +604,31 @@ window.MathJax = {
 <article class="definition definition-like" id="def-series-convergence"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.16</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-673">Let <span class="process-math">\((f_n)_{n=1}^\infty\subseteq\mathcal{B}(X)\)</span> for a set <span class="process-math">\(X\text{.}\)</span> We'll say <span class="process-math">\(\sum_{n=1}^\infty f_n\)</span> <dfn class="terminology">converges uniformly (pointwise)</dfn> if <span class="process-math">\((\sum_{n=1}^N f_n)_{N=1}^\infty \subseteq\mathcal{B}(X)\)</span> converges uniformly (pointwise).</div></article><article class="theorem theorem-like" id="thm-weierstrass-m-test"><h3 class="heading">
+<div class="para" id="p-707">Let <span class="process-math">\((f_n)_{n=1}^\infty\subseteq\mathcal{B}(X)\)</span> for a set <span class="process-math">\(X\text{.}\)</span> We'll say <span class="process-math">\(\sum_{n=1}^\infty f_n\)</span> <dfn class="terminology">converges uniformly (pointwise)</dfn> if <span class="process-math">\((\sum_{n=1}^N f_n)_{N=1}^\infty \subseteq\mathcal{B}(X)\)</span> converges uniformly (pointwise).</div></article><article class="theorem theorem-like" id="thm-weierstrass-m-test"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.17</span><span class="period">.</span><span class="space"> </span><span class="title">Weierstrass M-test.</span>
 </h3>
-<div class="para" id="p-674">If <span class="process-math">\((f_n)_{n=1}^\infty\subseteq\mathcal{B}(X)\)</span> for a set <span class="process-math">\(X\)</span> and <span class="process-math">\(\sum_{n=1}^\infty \left|{\left|{{f_n}}\right|}\right|_\infty\)</span> converges, then <span class="process-math">\(\sum_{n=1}^\infty f_n\)</span> converges uniformly (or, equivalently, converges wrt <span class="process-math">\(d_\infty\)</span>).</div></article><article class="remark remark-like" id="remark-19"><h3 class="heading">
+<div class="para" id="p-708">If <span class="process-math">\((f_n)_{n=1}^\infty\subseteq\mathcal{B}(X)\)</span> for a set <span class="process-math">\(X\)</span> and <span class="process-math">\(\sum_{n=1}^\infty \left|{\left|{{f_n}}\right|}\right|_\infty\)</span> converges, then <span class="process-math">\(\sum_{n=1}^\infty f_n\)</span> converges uniformly (or, equivalently, converges wrt <span class="process-math">\(d_\infty\)</span>).</div></article><article class="remark remark-like" id="remark-19"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">7.18</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-675">
+<div class="para logical" id="p-709">
 <div class="para">This is a slightly non-standard version of the theorem. Combining this version with the comparison test gives the usual statement: If <span class="process-math">\((f_n)_{n=1}^\infty\subseteq\mathcal{B}(X)\)</span> and <span class="process-math">\((M_n)_{n=1}^\infty\subseteq[0,\infty)\)</span> so that</div>
 <ol class="decimal">
-<li id="li-185"><div class="para" id="p-676">for all <span class="process-math">\(x\in \mathbb{R},n\geq 1\)</span> have <span class="process-math">\(\left|{f_n(x)}\right|\leq M_n\)</span>
+<li id="li-196"><div class="para" id="p-710">for all <span class="process-math">\(x\in \mathbb{R},n\geq 1\)</span> have <span class="process-math">\(\left|{f_n(x)}\right|\leq M_n\)</span>
 </div></li>
-<li id="li-186"><div class="para" id="p-677"><span class="process-math">\(\displaystyle \sum_{n=1}^\infty M_n&lt;\infty\)</span></div></li>
+<li id="li-197"><div class="para" id="p-711"><span class="process-math">\(\displaystyle \sum_{n=1}^\infty M_n&lt;\infty\)</span></div></li>
 </ol>
 <div class="para">then <span class="process-math">\(\sum_{n=1}^\infty f_n\)</span> converges uniformly.</div>
-</div></article><article class="example example-like" id="example-40"><h3 class="heading">
+</div></article><article class="example example-like" id="example-45"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">7.19</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-678">The series <span class="process-math">\(\sum_{n=1}^\infty \frac{1}{n^2+x^2}\)</span> converges uniformly over <span class="process-math">\(x\in\mathbb{R}\text{.}\)</span>
+<div class="para" id="p-712">The series <span class="process-math">\(\sum_{n=1}^\infty \frac{1}{n^2+x^2}\)</span> converges uniformly over <span class="process-math">\(x\in\mathbb{R}\text{.}\)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-17" id="solution-17"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-17"><div class="solution solution-like"><div class="para" id="p-679">Let <span class="process-math">\(M_n=\frac{1}{n^2}\text{.}\)</span> Then <span class="process-math">\(\left|{\frac{1}{n^2+x^2}}\right|\leq \frac{1}{n^2}\)</span> for all <span class="process-math">\(x\in \mathbb{R}\)</span> and <span class="process-math">\(\sum_{n=1}^\infty\frac{1}{n^2}=\frac{\pi^2}{6}&lt;\infty\text{,}\)</span> so by the Weierstass <span class="process-math">\(M\)</span>-test, <span class="process-math">\(\sum_{n=1}^\infty\frac{1}{n^2+x^2}\)</span> converges uniformly over <span class="process-math">\(x\in \mathbb{R}\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-19" id="solution-19"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-19"><div class="solution solution-like"><div class="para" id="p-713">Let <span class="process-math">\(M_n=\frac{1}{n^2}\text{.}\)</span> Then <span class="process-math">\(\left|{\frac{1}{n^2+x^2}}\right|\leq \frac{1}{n^2}\)</span> for all <span class="process-math">\(x\in \mathbb{R}\)</span> and <span class="process-math">\(\sum_{n=1}^\infty\frac{1}{n^2}=\frac{\pi^2}{6}&lt;\infty\text{,}\)</span> so by the Weierstass <span class="process-math">\(M\)</span>-test, <span class="process-math">\(\sum_{n=1}^\infty\frac{1}{n^2+x^2}\)</span> converges uniformly over <span class="process-math">\(x\in \mathbb{R}\text{.}\)</span>
 </div></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-22"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-22"><h3 class="heading">
+</div></article><article class="exercise exercise-like" id="exercise-23"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-23"><h3 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">7.20</span><span class="period">.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-22"><article class="exercise exercise-like"><div class="para" id="p-680">For any <span class="process-math">\(r&gt;0\text{,}\)</span> the series <span class="process-math">\(\sum_{n=0}^\infty \frac{z^n}{n!}\)</span> converges uniformly on <span class="process-math">\(\{{z\in\mathbb{C}}\,:\,{\left|{z}\right|\leq r}\}\text{,}\)</span> but <span class="process-math">\(\sum_{n=0}^\infty\frac{z^n}{n!}\)</span> does not converge uniformly on <span class="process-math">\(\mathbb{C}\text{.}\)</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-23"><article class="exercise exercise-like"><div class="para" id="p-714">For any <span class="process-math">\(r&gt;0\text{,}\)</span> the series <span class="process-math">\(\sum_{n=0}^\infty \frac{z^n}{n!}\)</span> converges uniformly on <span class="process-math">\(\{{z\in\mathbb{C}}\,:\,{\left|{z}\right|\leq r}\}\text{,}\)</span> but <span class="process-math">\(\sum_{n=0}^\infty\frac{z^n}{n!}\)</span> does not converge uniformly on <span class="process-math">\(\mathbb{C}\text{.}\)</span>
 </div></article></div></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-pointwise-uniform.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sec-power-series.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
